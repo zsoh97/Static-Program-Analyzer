@@ -1,0 +1,3 @@
+Select BOOLEAN
+BOOLEAN with 1 clause (such that/ pattern/ with)
+Scale number of clauses up to 5 depending if theres time

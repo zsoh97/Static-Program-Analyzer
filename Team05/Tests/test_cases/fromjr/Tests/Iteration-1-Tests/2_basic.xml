@@ -1,0 +1,15 @@
+<?xml-stylesheet type="text/xsl" href="analysis.xsl"?>
+<test_results>
+<info>
+<name>iteration-1-tests</name><parsing_time_taken>48.000000</parsing_time_taken>
+</info>
+<queries>
+<query>
+<id ReturnTuple="1" CondNum="1" RelNum="0" comment="Valid. Select procedure">1001</id><querystr><![CDATA[procedure p; variable v; stmt s; while w; if i; assign a; call c; read r; print pr; Select p]]></querystr>
+<stuans>procedure</stuans>
+<correct>procedure</correct>
+<time_taken>55.000000</time_taken>
+<passed/>
+</query>
+</queries>
+</test_results>

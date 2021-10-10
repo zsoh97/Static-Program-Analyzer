@@ -1,0 +1,56 @@
+procedure ifInsideIf {
+    a = 1;
+    if (b == 2) then {
+        c = 3;
+        if (d == 4) then {
+            e = 5;
+        } else {
+            f = 6;
+        }
+        g = 7;
+    } else {
+        h = 8;
+    }
+    i = 9;
+}
+
+procedure whileInsideIf {
+    j = 10;
+    if (k == 11) then {
+        l = 12;
+        while (m == 13) {
+            n = 14;
+        }
+        o = 15;
+    } else {
+        p = 16;
+    }
+    q = 17;
+}
+
+procedure ifInsideWhile {
+    r = 18;
+    while (s == 19) {
+        t = 20;
+        if (u == 21) then {
+            v = 22;
+        } else {
+            w = 23;
+        }
+        x = 24;
+    }
+    y = 25;
+}
+
+procedure whileInsideWhile {
+    z = 26;
+    while (aa == 27) {
+        ab = 28;
+        while (ac == 29) {
+            ad = 30;
+        }
+        ae = 31;
+    }
+    af = 32;
+}
+

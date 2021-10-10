@@ -1,0 +1,107 @@
+procedure A {
+1     a = 1;
+2     b = 3;
+3     read x;
+4     read y;
+5     print z;
+6     while (i != 0) {
+7         i = 0;
+8         while ((x % 5) == y) {
+9             y = 50;
+10            z = a + b;
+11            x = a + b + c;
+12            while (a >= 5 + x) {
+13                read a;
+14                c = 1;
+15                call C;
+              }
+16            a = c;
+17            if ((b * 3) < 2) then {
+18                a = a % b / c;
+19                b = 20 / c;
+20                c = c + 20;
+              } else {
+21                c = d;
+              }
+22            d = 1;
+          }
+23        if (c != d) then {
+24            print c;
+25            while (1 && 2) {
+26                a = 1;
+27                b = 2;
+28                c = 3;
+              }
+29            x = 4;
+30            y = 5;
+31            call C;
+          } else {
+32            y = y + z;
+33            z = a + 1;
+34            if (!(y > d)) then {
+35                a = z;
+36                b = c;
+37                read d;
+              } else {
+38                y = 1;
+39                c = 5;
+              }
+          }
+40        print x;
+      }
+
+41    if ((a + d > 10) || (a - d) + y > 20) then {
+42        if (c / b == 10) then {
+43            y = 5;
+44            if (!(a >= c)) then {
+45                d = 1;
+46                c = d + 20;
+              } else {
+47                read d;
+48                b = d + c + y / 2;
+              }
+          } else {
+49            while (z + x + y != 20) {
+50                z = 4;
+51                a = 20;
+              }
+          }
+52        c = 1;
+      } else {
+53        print c;
+54        while (5 % a == 0) {
+55            y = 5;
+56            if (a + b > 10 && c + d < 50) then {
+57                a = b;
+              } else {
+58                b = c;
+              }
+59            c = d;
+60            while (e + e < 20) {
+61                z = a / b % c;
+62                read x;
+              }
+63            print z;
+64            call B;
+          }
+      }
+  }
+
+procedure B {
+65    read x;
+66    x = 3 + y;
+67    z = x / y;
+68    call C;
+}
+
+procedure C {
+69    print z;
+70    a = a + b + c;
+71    c = 3;
+72    call D;
+}
+
+procedure D {
+73    y = a;
+74    c = d;
+}

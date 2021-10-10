@@ -1,0 +1,45 @@
+procedure iter2 {
+    i = 0;
+    while (i < 10000) {
+        j = 0;
+        while (j < 100) {
+            if (j % 2 == 0) then {
+                j = j + 3;
+            } else {
+                j = j + 1 - 8 + foo * baz - bar;
+                call callee;
+            }
+        }
+        i = i + 1;
+    }
+}
+
+procedure callee {
+    v = 0;
+    if (1 != 1) then {
+        read noway;
+    } else {
+        while (1 == 1) {
+            xx = 999;
+            print infinite;
+        }
+        read ooohhhh;
+        print huh;
+    }
+    modified = v;
+    call goodgame;
+}
+
+procedure goodgame {
+    yy = 888;
+    print notdone;
+    call someguy;
+}
+
+procedure someguy {
+    print done;
+}
+
+procedure anothercaller {
+    call goodgame;
+}

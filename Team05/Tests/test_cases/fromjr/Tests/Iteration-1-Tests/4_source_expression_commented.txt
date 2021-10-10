@@ -1,0 +1,21 @@
+procedure pattern {
+    if (aa > 33) then { #1
+        read cc; #2
+        while (((cc >= bb) && (bb == bb)) || (((cc <= bb) || (0 != dd)) && ((aa - 22) < 0))) { #3
+            aa = (  (aa - (   (     11     *   33    ) / (22   +   44   *    aa) )  )   +  bb); #4
+            bb = aa; #5
+        }
+        print cc; #6
+    } else {
+        dd = bb + (((11 + 33) % (33 % 6))) - (aa - ((bb / aa))); #7
+    }
+    while (!(cc < 0)) { #8
+        print aa; #9
+        if ((dd/44%(0-22)) != 33*(bb%aa)) then { #10
+            dd = ((aa * bb) + 0 ) / (33 * bb) + (cc / dd * ((bb - (aa - cc)) % 44)); #11
+        } else {
+            aa = bb; #12
+        }
+        read aa; #13
+    }
+}

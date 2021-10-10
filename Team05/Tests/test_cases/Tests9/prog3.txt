@@ -1,0 +1,626 @@
+procedure TestA {
+	read a;
+	call transportation;
+	read b;
+	sum = a + b;
+	print sum;
+	minus1 = a - b;
+	minus2 = b - a;
+	if (minus1 == minus2) then {
+		sum = sum + minus1;
+		call transportation;
+	} else {
+		call oneCall;
+		minus1 = minus1 / minus2; 
+	}
+	minus2 = sum - 2 * minus2;
+	call procedure;
+	while (sum > minus2) {
+		call oneCall;
+		sum = sum - 1;
+	}
+	print sum;
+} 
+
+procedure TestB {
+	read a;
+	call TestA;
+	read b;
+	sum = a + b;
+	minus = a - b;
+	times = a * b;
+	div = b / a;
+	if( minus == times  )  then{
+		c = sum + times * a * b - divide * minus;
+		if  (a==b)then  {
+			b = sum + divide;
+			while(b<=times){
+				a = a - sum;
+				call transportation;
+				if(((!(a > div + 2 / (a + 2))) || (a <= div)) || ((!((a / div >= 2) && (a + div < 2))) && ((a - div) != (a * (div + a) - (div - a)/2 + a % div))))then {
+					div = 2;
+					call procedure;
+					sum = times * a;
+				} else {
+					call country;
+					a = times;
+				}
+			}
+		}else{
+			a = div / 2;
+			if(a>=div)then{
+				a = a;
+			} else {
+				while (b != div) {
+					call procedure;
+					times = times * div + minus * sum;
+					b = b + 1;
+				}
+			}
+			print times;
+		}
+		d = sum / a - times + divide * b / minus;
+	} else {
+		c = sum - 2 * minus;
+		call procedure;
+		minus = b - a; 
+		d = times * sum + divide;
+		while  (sum > minus)  {
+			sum = sum - 1;
+			if(a  ==b)then{
+				b = sum + divide;
+				while (b <= times) {
+					a = a - sum;
+					call TestA;
+					call country;
+					if (a == div) then {
+						div = 2;
+						sum = times * a;
+					} else {
+						a = div * 5;
+						call procedure;
+						div = a * 5;
+					}
+				}
+			} else {
+				call TenWhileLoop;
+				a = sum + 6;
+			}
+			a = b + div;
+		}
+	}
+	call transportation;
+	print sum;
+} 
+
+procedure TestC {
+	read x;
+	call fruits;
+	call procedure;
+	if (b < 15) then {
+		call fruits;
+		while (c <= x) {
+			x = x + a;
+			c = 16;
+			call fruits;
+		}
+	} else {
+		call transportation;
+		while (b >= c) {
+			c = 7 * (a - b);
+			call TestA;
+			a = b + c;
+			call TenWhileLoop;
+		}
+		call fruits;
+	}
+	x = c;
+	call fruits;
+	k = x + a - b + a * a;
+	call oneCall;
+	print k;
+	call TenWhileLoop;
+}
+
+procedure TenWhileLoop {
+	read x;
+	call country;
+	if(b<15)then {
+		call colours;
+		while    (c   <=    x){
+			x = x + a + b + a + a + b + a + c;
+			c = 12345678;
+			call Pr0c3dUr3;
+		}
+	} else {			
+		while ((((b>=c) && (b>a)) && ((a==1) && (a!=2))) && (a != ((0+(0*0)/4)%1))) {
+			c = 7*(a - b);
+			call Pr0c3dUr3;
+			a = b+c;
+		}
+	}
+	x = c;
+	k = x+   a-b  +a* a;
+	while (b < 10) {
+		while (b < 9) {
+			call colours;
+			c = c + d;
+			print c;
+			while (b < 8) {
+				call colours;
+				while (b < 7) {
+					z = x + 5;
+					read r;
+					x = 6 + m;
+					print m;
+					call colours;
+					while (b < 6) {
+						b = b + c;
+						call colours;
+						while (b < 5) {
+							while (b < 4) {
+								print b;
+								read b;
+								b = b + 6;
+								while (b < 3) {
+									read c;
+									call country;
+									while (b < 2) {
+										call Pr0c3dUr3;
+										while (b < 1) {
+											b = 1;
+											call colours;
+										}
+										b = 2;
+									}
+								}
+								call Pr0c3dUr3;
+								b = 3;
+								print b;
+							}
+							read r;
+							b = print + r;
+						}
+						while ( c == c) {
+							c = c + 1;
+							print c;
+							call country;
+						}
+						call country;
+						d = d + 5;
+					}
+					print b;
+					call country;
+					b = b % 7; 
+				}
+			}
+			print b;
+			call Pr0c3dUr3;
+			c = c + b;
+			read c;
+		}
+	}
+	read s;
+}
+
+procedure procedure {
+	if(a == a) then {
+		while (a > 0) {
+			read a;
+		}
+	} else {
+		call fruits;
+		while (a != 0) {
+			if (b>c) then {
+				if ( (b == c) && (b>=9) ) then {
+					while ( (d < a) || (c != a) ) {
+						call fruits;
+						while (!(c == 4)) {
+							print a;
+						}
+					}
+					call fruits;
+				} else {
+					if (f != g) then {
+						call oneCall;
+						while (g >= (a + b * k)) { 
+							while ((c * g / d % f - c) != a) {
+								while ((b- a)==(a -b)) {
+									if (i < j) then {
+										read i;
+										call oneCall;
+									} else { 
+										while (1 == 1){
+											print j;
+										}
+									}
+								}
+								call oneCall;
+							}
+						}
+					} else {
+						read p;
+						print q; 
+					}
+				}
+			} else {
+				a=b+c-d*e/f%g;
+				d = b * ((g*k)/f);
+				call oneCall;
+				j = ((k * e)+h) / e;
+				m = j + (h - (i* (j - k)/(f % a)-k)+m) * d;
+			}
+		}
+	}
+	read f;
+	call fruits;
+	read read;
+	print l;
+	a = h*k + d *(k);
+	print x;
+	j = while*1;
+	procedure = 341242 * if + 8248;
+	if((!((procedure > statement)||((read < print )&&(print >= call)))) && (while <= ((if - (k) % (7)) * 0)) )then{
+		then = read;
+		print = call * k +h-h%j;
+	} else{
+		print print;
+	}
+}
+
+procedure fruits {
+	while (apple > banana) {
+		apple = 1;
+		read pear; 
+		call Pr0c3dUr3;
+		if (banana == pear) then {
+			banana = banana - banana;
+			banana = banana * 12345;
+			print pear;
+		} else {
+			read banana;
+			banana = banana;
+			pear = banana;
+			while (banana != 1) {
+				pear = banana;
+				banana = banana + 0;
+				pear = pear % 0;
+				pear = pear / 1;
+				read pear;
+			}
+		}
+		read grape;
+		while ( 	((apple > grape) && (grape > apple)) || (call > print)) {
+			read grape;
+			call country;
+			grape = grape + banana * 1 * 100 - apple * pear;
+		}
+	}
+	print grape;
+	grape = orange;
+	if ((grape >= banana) && (grape != pear)) then {
+		orange = grape + 670;
+		call TenWhileLoop;
+		pear = banana + orange * grape;
+		read orange;
+	} else {
+		read avocado;
+		avocado = 0 + cherry / 0 * cherry;
+		print cherry;
+		cherry = cherry + cherry;
+	}
+	avocado = cherry * cherry;
+	print avocado;
+	if (((avocado >= cherry) && (banana > avocado)) || (((banana + 1) % 2) > 0)) then {
+		while (grape == orange) {
+			orange = orange + 1;
+			banana = orange;
+			call colours;
+			read grape;
+			orange = pear + 123 * pear;
+		}
+		print grape;
+		grape = grape * orange / orange * 123 + 15;
+		if (kiwi == kiwi) then {
+			kiwi = kiwi + 5;
+			orange = orange + kiwi;
+			while ((kiwi > 67) && (orange > (pear * 3 % 2 + banana))) {
+				kiwi = orange * pear;
+				pear = orange;
+				pear = pear + 1;
+				orange = orange + banana;
+				banana = orange + banana;
+				call oneCall;
+				read kiwi;
+			}
+		} else {
+			read avocado;
+			avocado = 0 + cherry / 0 * cherry;
+			print cherry;
+			avocado = banana * 12 + banana / banana;
+			banana = banana;
+		}
+	} else {
+		read cherry;
+		while (orange == 1) {
+			orange = 1;
+			banana = orange;
+			read grape;
+			orange = pear + 123 * pear;
+		}
+	}
+	read banana;
+	read kiwi;
+	orange = orange + grape;
+	print orange;
+}
+
+procedure colours{
+	if ((red >= blue) && (((blue % 3) > green) || (yellow == pink))) then {
+		while (pink != 3) {
+			pink = pink + purple;
+			read purple;
+			purple = green * 15 + (green % 17) - ((((green - 1) * 7) % 6) + 123) * (blue % 6) + blue + blue + pink * yellow;
+			print yellow;
+			if (yellow > 8) then {
+				while (yellow == pink) {
+					read pink;
+					pink = red + red;
+					red = pink;
+					yellow = yellow + 1;
+					blue = blue - 127;
+				}
+				print blue;
+				read red;
+				red = yellow + black;
+			} else {
+				green = green + 2;
+				pink = brown * purple;
+				read brown;
+				purple = purple / purple * blue;
+				pink = blue / blue;
+				while (blue != 1) {
+					blue = blue;
+				}
+				while (green > yellow) {
+					yellow = green;
+					green = green + 5;
+					while (yellow > green) {
+						green = green + black + 1 * black + (black % 6);
+						white = white;
+						print white;
+						read red;
+						print red;
+					}
+					print red;
+				}
+			}
+			read black;
+			black = black + black * 156 + 1 * black + (black % 6) + ((black / black) % white + black + 8);
+			print black;
+		}
+		print black;
+		read pink;
+		pink = black + 123;
+		pink = pink + pink + pink + pink + pink + red + red + red + red + red + (red % 126) + red * blue + green / yellow - yellow;
+		yellow = yellow * 1;
+		yellow = yellow / 1;
+		yellow = yellow + 1;
+		yellow = yellow;
+	} else {
+		print black;
+		read blue;
+		pink = purple + 123;
+		yellow = yellow * 1;
+		yellow = yellow / 1;
+		yellow = yellow + 1;
+		yellow = yellow;
+		while (yellow > blue) {
+			yellow = yellow - 1;
+			while (blue == 1) {
+				blue = blue + 5;
+				red = blue;
+				read red;
+				print yellow;
+				while (yellow != 1) {
+					print yellow;
+				}
+				red = red + 6;
+			}
+			blue = red + pink + red + (red % 0) + blue * blue + yellow / yellow - yellow * purple + (purple % 0 + pink);
+		}
+	}
+	print red;
+	red = red;
+	while (yellow != blue) {
+		print grey;
+		grey = grey * blue * green;
+		while (green == green) {
+			yellow = yellow;
+			red = red + 1;
+			red = blue;
+			print red;
+			read red;
+		}
+		read green;
+	}
+}
+
+procedure Pr0c3dUr3 {
+	while (if == while) {
+		while = while + 1;
+		read while;
+		if = 123 + 567 + 8 * 9 / 1;
+		print if;
+		if (while  !=    if) then {
+			while = while + while;
+			if = 1;
+			if = 2;
+			read = print;
+			print = read + read + print;
+		} else {
+			read print;
+			while (print != ((print % 1) + print)) {
+				print read;
+				read = while + else;
+				else = 1;
+				while (else > while) {
+					if = 1;
+				}
+			}
+			print read;
+			while = else;
+		}
+		while (read > 0) {
+			read = read;
+		}
+		print print;
+		print = print + 12 / 6 * read + 67;
+		print read;
+		if (if != if) then {
+			if = 12345;
+			print = read * 12 * 12;
+			if (print > while) then {
+				while = print;
+				print while;
+				while (while == while) {
+					print = print;
+					print print;
+					read = read % 17;
+					while (while == while) {
+						read while;
+						while = while + 123;
+						else = else;
+						read read;
+						if (while == 123) then {
+							read while;
+							while = print;
+							print = print * print;
+							print print;
+						} else {
+							read print;
+							read = read % 0;
+						}
+					}
+				}
+			} else {
+				while = print + 1 + print * print / while / if;
+				else = else / print + print;
+				while (print != print) {
+					print while;
+					while = 1;
+				}
+			}
+		} else {
+			if (while > print) then {
+				print = while;
+				while = while + while;
+				while = 1;
+				read read;
+			} else {
+				while (while > while) {
+					print while;
+					read print;
+					else = else + if;
+				}
+				else = else + 1;
+			}
+		}
+	}
+}
+
+procedure oneCall {
+	call transportation;
+}
+
+procedure transportation {
+	call country;
+	if (bus > (taxi - 1)) then {
+		read bus;
+		bus = taxi + motorcycle;
+		mrt = mrt;
+		while (mrt == mrt) {
+			mrt = 1 + mrt;
+			motorcycle = 1 * 9 % 9 / motorcycle;
+		}
+		bike = car + grab;
+		gojek = gojek;
+	} else {
+		read gojek;
+		print grab;
+		while (grab != gojek) {
+			bike = gojek;
+			bike = bike + 1;
+			if ((uber != gojek) || (gojek > grab)) then {
+				grab = grab * 0 + gojek / 123 * 9 - 2 + 6 + (2 + 5 + 9 / 0);
+				grab = grab;
+				print train;
+			} else {
+				mrt = 1;
+				print gojek;
+				grab = bike;
+				read bus;
+			}
+		}
+		print uber;
+	}
+	while (uber > 0) {
+		bus = 1;
+		car = car % train;
+		read train;
+		train = train;
+	}
+	call TenWhileLoop;
+}
+
+procedure country {
+	uk = uk + 5;
+	print uk;
+	while (france > uk) {
+		uk = france + usa;
+		usa = germany;
+		while (germany == 1) {
+			spain = germany;
+			print spain;
+			spain = spain * 0;
+		}
+		while (russia > 0) {
+			russia = 0;
+			read brazil;
+			brazil = 9;
+			read spain;
+			brazil = brazil + india + singapore + malaysia + indonesia;
+			read malaysia;
+		}
+		if (thailand > indonesia) then {
+			malaysia = 1;
+			while (malaysia > spain) {
+				spain = spain;
+			}
+			thailand = thailand + thailand * malaysia;
+		} else {
+			japan = japan + 7;
+			print japan;
+			read india;
+			read singapore;
+			while (laos > vietnam) {
+				print laos;
+				if (((vietnam != brazil) && ((indonesia == 1) || (6 > malaysia))) || ((china - 1) == japan)) then {
+					vietnam = vietnam + brazil * indonesia - laos;
+					laos = laos + brazil;
+					uk = uk / uk;
+				} else {
+					usa = uk + usa;
+					print uk;
+					read usa;
+				}
+				uk = japan;
+			}
+			read malaysia;
+			print brazil;
+		}
+	}
+	print usa;
+	read japan;
+	japan = japan + 1;
+}

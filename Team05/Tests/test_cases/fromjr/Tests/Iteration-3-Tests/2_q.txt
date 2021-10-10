@@ -1,0 +1,10 @@
+2316 - Valid. 1 wildcard 1 constant, suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(_, 10)
+TRUE
+5000
+2318 - Valid. 1 constant 1 wildcard, suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(10, _)
+TRUE
+5000

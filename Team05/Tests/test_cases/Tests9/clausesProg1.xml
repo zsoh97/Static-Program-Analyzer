@@ -1,0 +1,40 @@
+<?xml-stylesheet type="text/xsl" href="analysis.xsl"?>
+<test_results>
+<info>
+<name>tests9</name><parsing_time_taken>42.000000</parsing_time_taken>
+</info>
+<queries>
+<query>
+<id ReturnTuple="1" Affects="7" SuchThat="1" CondNum="9" RelNum="7" comment="7 Affects, tuple, related">1</id><querystr><![CDATA[stmt s, s1, s2, s3; assign a, a1, a2, a3; Select <s, a, s1, a1, s2, a2, s3, a3> such that Affects(s, a) and Affects(a, s1) and Affects(s1, a1) and Affects(a1, s2) and Affects(s2, a2) and Affects(a2, s3) and Affects(s3, a3)]]></querystr>
+<stuans>33 35 36 37 38 40 41 42,43 35 36 37 38 40 41 42,35 36 37 38 40 41 42 43,36 37 38 40 41 42 43 35,36 37 38 40 41 42 43 44,37 38 40 41 42 43 35 36,38 40 41 42 43 35 36 37,40 41 42 43 35 36 37 38,41 42 43 35 36 37 38 40,42 43 35 36 37 38 40 41,48 51 51 51 51 51 51 51,51 51 51 51 51 51 51 51,9 8 9 8 9 8 9 8,8 9 8 9 8 9 8 9</stuans>
+<correct>8 9 8 9 8 9 8 9,9 8 9 8 9 8 9 8,33 35 36 37 38 40 41 42,35 36 37 38 40 41 42 43,36 37 38 40 41 42 43 44,36 37 38 40 41 42 43 35,37 38 40 41 42 43 35 36,38 40 41 42 43 35 36 37,40 41 42 43 35 36 37 38,41 42 43 35 36 37 38 40,42 43 35 36 37 38 40 41,43 35 36 37 38 40 41 42</correct>
+<time_taken>95.000000</time_taken>
+<failed>
+<missing></missing>
+<additional>48 51 51 51 51 51 51 51,51 51 51 51 51 51 51 51</additional>
+<summary>
+<expected>12</expected>
+<matched>12</matched>
+<missing>0</missing>
+<additional>2</additional>
+</summary>
+</failed>
+</query>
+<query>
+<id ReturnTuple="1" Affects="7" SuchThat="1" CondNum="9" RelNum="7" comment="7 Affects, related">2</id><querystr><![CDATA[stmt s, s1, s2, s3; assign a, a1, a2, a3; Select s such that Affects(s, a) and Affects(a, s1) and Affects(s1, a1) and Affects(a1, s2) and Affects(s2, a2) and Affects(a2, s3) and Affects(s3, a3)]]></querystr>
+<stuans>33,43,35,36,37,38,40,41,42,48,51,9,8</stuans>
+<correct>8,9,33,35,36,37,38,40,41,42,43</correct>
+<time_taken>77.000000</time_taken>
+<failed>
+<missing></missing>
+<additional>48,51</additional>
+<summary>
+<expected>11</expected>
+<matched>11</matched>
+<missing>0</missing>
+<additional>2</additional>
+</summary>
+</failed>
+</query>
+<query>
+<id ReturnTuple="1" Affectsstar="3" Followsstar="1" Nextstar="1" SuchThat="1" CondNum="7" RelNum="5" comment="Scattered related Affects*, maximum three synonyms for Affects*, unrelated group** queries, stress test">3</id><querystr><![CDATA[stmt s, s1, s2, s3; assign a, a1, a2, a3; Select s such that Affects*(s, s1) and Next*(a1, s2) and Affects*(a, s1) and Follows*(a1, s2) and Affects*(s, a)]]></querystr>

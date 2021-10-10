@@ -1,0 +1,316 @@
+<?xml-stylesheet type="text/xsl" href="analysis.xsl"?>
+<test_results>
+<info>
+<name>tests</name><parsing_time_taken>30.000000</parsing_time_taken>
+</info>
+<queries>
+<query>
+<id ReturnTuple="1" Uses="1" SuchThat="1" CondNum="3" RelNum="1" comment="Select stmt such that Uses (stmt, variable)">1</id><querystr><![CDATA[stmt s; variable v; Select s such that Uses (s, v)]]></querystr>
+<stuans>10,11,12,13,15,17,18,19,20,21,4,5,6,7,8,9</stuans>
+<correct>4,5,6,7,8,9,10,11,12,13,15,17,18,19,20,21</correct>
+<time_taken>43.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Uses="1" SuchThat="1" CondNum="3" RelNum="1" comment="Select assign such that Uses (assign, variable)">3</id><querystr><![CDATA[assign a; variable v; Select a such that Uses (a, v)]]></querystr>
+<stuans>11,15,17,18,19,20,5,6,8,9</stuans>
+<correct>5,6,8,9,11,15,17,18,19,20</correct>
+<time_taken>47.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Uses="1" SuchThat="1" CondNum="3" RelNum="1" comment="Select print such that Uses (print, variable)">4</id><querystr><![CDATA[print pn; variable v; Select pn such that Uses (pn, v)]]></querystr>
+<stuans>12,21,7</stuans>
+<correct>7,12,21</correct>
+<time_taken>37.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Uses="1" SuchThat="1" CondNum="3" RelNum="1" comment="Select procedure such that uses variable">5</id><querystr><![CDATA[procedure p; variable v; Select p such that Uses (p, v)]]></querystr>
+<stuans>P,Q,main</stuans>
+<correct>main,P,Q</correct>
+<time_taken>42.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Uses="1" SuchThat="1" With="1" CondNum="4" RelNum="1" comment="Select procedure with given name such that uses variable">6</id><querystr><![CDATA[procedure p; variable v; Select p such that Uses (p, v) with p.procName="R"]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>45.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Uses="1" SuchThat="1" With="1" CondNum="4" RelNum="1" comment="Select procedure such that uses variable with given name">7</id><querystr><![CDATA[procedure p; variable v; Select p such that Uses (p, v) with v.varName="a"]]></querystr>
+<stuans>P,Q,main</stuans>
+<correct>main,P,Q</correct>
+<time_taken>46.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Uses="1" SuchThat="1" CondNum="3" RelNum="1" comment="Select procedure such that uses variable with given name">8</id><querystr><![CDATA[procedure p; Select p such that Uses (p, "a")]]></querystr>
+<stuans>P,Q,main</stuans>
+<correct>main,P,Q</correct>
+<time_taken>43.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Uses="1" SuchThat="1" CondNum="3" RelNum="1" comment="Select variables used by procedure with given name">9</id><querystr><![CDATA[variable v; Select v such that Uses ("Q", v)]]></querystr>
+<stuans>a,b,c,x</stuans>
+<correct>x,a,b,c</correct>
+<time_taken>42.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Uses="1" SuchThat="1" CondNum="3" RelNum="1" comment="Procedure with Variable">10</id><querystr><![CDATA[procedure p; variable v; Select p such that Uses (p, v)]]></querystr>
+<stuans>P,Q,main</stuans>
+<correct>main,P,Q</correct>
+<time_taken>39.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" Uses="1" SuchThat="1" CondNum="4" RelNum="1" comment="Procedure with Underscore">11</id><querystr><![CDATA[procedure p; variable v; Select p such that Uses (p, _)]]></querystr>
+<stuans>main,P,Q</stuans>
+<correct>main,P,Q</correct>
+<time_taken>42.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Uses="1" SuchThat="1" CondNum="3" RelNum="1" comment="Procedure with Fixed">12</id><querystr><![CDATA[procedure p; variable v; Select p such that Uses (p, "x")]]></querystr>
+<stuans>P,Q,main</stuans>
+<correct>main,P,Q</correct>
+<time_taken>42.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" Uses="1" SuchThat="1" CondNum="4" RelNum="1" comment="Stmt with Variable">13</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; variable v; Select s such that Uses (s, v)]]></querystr>
+<stuans>10,11,12,13,15,17,18,19,20,21,4,5,6,7,8,9</stuans>
+<correct>4,5,6,7,8,9,10,11,12,13,15,17,18,19,20,21</correct>
+<time_taken>44.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" Uses="1" SuchThat="1" CondNum="4" RelNum="1" comment="Assign with Variable">14</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; variable v; Select a such that Uses (a, v)]]></querystr>
+<stuans>11,15,17,18,19,20,5,6,8,9</stuans>
+<correct>5,6,8,9,11,15,17,18,19,20</correct>
+<time_taken>43.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" Uses="1" SuchThat="1" CondNum="4" RelNum="1" comment="Call with Variable">15</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; variable v; Select v such that Uses (cl, v)]]></querystr>
+<stuans>a,b,c,x</stuans>
+<correct>x,a,b,c</correct>
+<time_taken>41.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" Uses="1" SuchThat="1" CondNum="4" RelNum="1" comment="Print with Variable">16</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; variable v; Select p such that Uses (p, v)]]></querystr>
+<stuans>12,21,7</stuans>
+<correct>7,12,21</correct>
+<time_taken>40.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" Uses="1" SuchThat="1" CondNum="4" RelNum="1" comment="Read with Variable">17</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; variable v; Select v such that Uses (r, v)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>38.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" Uses="1" SuchThat="1" CondNum="4" RelNum="1" comment="Progline with Variable">18</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; variable v; Select v such that Uses (n, v)]]></querystr>
+<stuans>a,b,c,x</stuans>
+<correct>x,a,b,c</correct>
+<time_taken>42.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" Uses="1" SuchThat="1" CondNum="4" RelNum="1" comment="While with Variable">19</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; variable v; Select v such that Uses (w, v)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>41.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" Uses="1" SuchThat="1" CondNum="4" RelNum="1" comment="If with Variable">20</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; variable v; Select v such that Uses (ifs, v)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>47.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="2" Uses="1" SuchThat="1" CondNum="5" RelNum="1" comment="Stmt with Underscore">21</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; variable v; Select s such that Uses (s, _)]]></querystr>
+<stuans>10,11,12,13,15,17,18,19,20,21,4,5,6,7,8,9</stuans>
+<correct>4,5,6,7,8,9,10,11,12,13,15,17,18,19,20,21</correct>
+<time_taken>44.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="2" Uses="1" SuchThat="1" CondNum="5" RelNum="1" comment="Assign with Underscore">22</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; variable v; Select a such that Uses (a, _)]]></querystr>
+<stuans>5,19,20,6,8,9,11,15,17,18</stuans>
+<correct>5,6,8,9,11,15,17,18,19,20</correct>
+<time_taken>43.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="2" Uses="1" SuchThat="1" CondNum="5" RelNum="1" comment="Call with Underscore">23</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; variable v; Select cl such that Uses (cl, _)]]></querystr>
+<stuans>4,10,13</stuans>
+<correct>4,10,13</correct>
+<time_taken>48.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="2" Uses="1" SuchThat="1" CondNum="5" RelNum="1" comment="Print with Underscore">24</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; variable v; Select p such that Uses (p, _)]]></querystr>
+<stuans>7,12,21</stuans>
+<correct>7,12,21</correct>
+<time_taken>49.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="2" Uses="1" SuchThat="1" CondNum="5" RelNum="1" comment="Read with Underscore">25</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; variable v; Select r such that Uses (r, _)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>47.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="2" Uses="1" SuchThat="1" CondNum="5" RelNum="1" comment="Progline with Underscore">26</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; variable v; Select n such that Uses (n, _)]]></querystr>
+<stuans>10,11,12,13,15,17,18,19,20,21,4,5,6,7,8,9</stuans>
+<correct>4,5,6,7,8,9,10,11,12,13,15,17,18,19,20,21</correct>
+<time_taken>55.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="2" Uses="1" SuchThat="1" CondNum="5" RelNum="1" comment="While with Underscore">27</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; variable v; Select w such that Uses (w, _)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>44.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="2" Uses="1" SuchThat="1" CondNum="5" RelNum="1" comment="If with Underscore">28</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; variable v; Select ifs such that Uses (ifs, _)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>43.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" Uses="1" SuchThat="1" CondNum="4" RelNum="1" comment="Stmt with Fixed">29</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; variable v; Select s such that Uses (s, "a")]]></querystr>
+<stuans>10,11,13,15,17,20,4,5,6,8,9</stuans>
+<correct>4,5,6,8,9,10,11,13,15,17,20</correct>
+<time_taken>41.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" Uses="1" SuchThat="1" CondNum="4" RelNum="1" comment="Assign with Fixed">30</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; variable v; Select a such that Uses (a, "a")]]></querystr>
+<stuans>11,15,17,20,5,6,8,9</stuans>
+<correct>5,6,8,9,11,15,17,20</correct>
+<time_taken>42.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" Uses="1" SuchThat="1" CondNum="4" RelNum="1" comment="Call with Fixed">31</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; variable v; Select cl such that Uses (cl, "a")]]></querystr>
+<stuans>10,13,4</stuans>
+<correct>4,10,13</correct>
+<time_taken>43.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" Uses="1" SuchThat="1" CondNum="4" RelNum="1" comment="Print with Fixed">32</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; variable v; Select p such that Uses (p, "a")]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>40.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" Uses="1" SuchThat="1" CondNum="4" RelNum="1" comment="Read with Fixed">33</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; variable v; Select r such that Uses (r, "a")]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>41.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" Uses="1" SuchThat="1" CondNum="4" RelNum="1" comment="Progline with Fixed">34</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; variable v; Select n such that Uses (n, "a")]]></querystr>
+<stuans>10,11,13,15,17,20,4,5,6,8,9</stuans>
+<correct>4,5,6,8,9,10,11,13,15,17,20</correct>
+<time_taken>52.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" Uses="1" SuchThat="1" CondNum="4" RelNum="1" comment="While with Fixed">35</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; variable v; Select w such that Uses (w, "a")]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>51.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" Uses="1" SuchThat="1" CondNum="4" RelNum="1" comment="If with Fixed">36</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; variable v; Select ifs such that Uses (ifs, "a")]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>47.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Uses="1" SuchThat="1" CondNum="3" RelNum="1" comment="Fixed (procedure) with Variable">37</id><querystr><![CDATA[procedure p; variable v; Select v such that Uses ("P", v)]]></querystr>
+<stuans>a,b,c,x</stuans>
+<correct>a,b,c,x</correct>
+<time_taken>58.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" UnnamedVar="1" Uses="1" SuchThat="1" CondNum="4" RelNum="1" comment="Fixed (procedure) with Underscore">38</id><querystr><![CDATA[procedure p; variable v; Select BOOLEAN such that Uses ("Q", _)]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>50.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Uses="1" SuchThat="1" CondNum="3" RelNum="1" comment="Fixed (procedure) with Fixed">39</id><querystr><![CDATA[procedure p; variable v; Select BOOLEAN such that Uses ("P", "c")]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>43.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Uses="1" SuchThat="1" CondNum="3" RelNum="1" comment="Fixed (stmt) with Variable">40</id><querystr><![CDATA[procedure p; variable v; Select v such that Uses (3, v)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>51.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Uses="1" SuchThat="1" CondNum="3" RelNum="1" comment="Fixed (stmt) with Variable">41</id><querystr><![CDATA[procedure p; variable v; Select v such that Uses (9, v)]]></querystr>
+<stuans>a,b</stuans>
+<correct>a,b</correct>
+<time_taken>48.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" UnnamedVar="1" Uses="1" SuchThat="1" CondNum="4" RelNum="1" comment="Fixed (stmt) with Underscore">42</id><querystr><![CDATA[procedure p; variable v; Select BOOLEAN such that Uses (14, _)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>50.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Uses="1" SuchThat="1" CondNum="3" RelNum="1" comment="Fixed (stmt) with Fixed">43</id><querystr><![CDATA[procedure p; variable v; Select BOOLEAN such that Uses (20, "b")]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>46.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="3" Uses="1" SuchThat="1" CondNum="6" RelNum="1" comment="Invalid">44</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; variable v; Select v such that Uses (_, _)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>48.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" UnnamedVar="2" Uses="1" SuchThat="1" CondNum="5" RelNum="1" comment="Invalid">45</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; variable v; Select BOOLEAN such that Uses (_, "a")]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>51.000000</time_taken>
+<passed/>
+</query>
+</queries>
+</test_results>

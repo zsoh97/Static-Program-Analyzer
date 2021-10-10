@@ -1,0 +1,10 @@
+21 - select tuple read.stmt# read.varName followsStar next modifies one synonym
+read r;
+Select <     r.stmt#    ,  r.varName    > such   that  Follows*(186, r) and   Next(r, 189)  and    Modifies(r, "read")
+188 read
+5000
+22 - select print parentStar next uses one synonym
+print p;
+Select p.stmt# such that Parent*(222, p) and Next(228, p) and Uses(p, "cherry") with 6 = 6 and "cherry" = "cherry" with "random" = "random"
+229
+5000

@@ -1,0 +1,365 @@
+<?xml-stylesheet type="text/xsl" href="analysis.xsl"?>
+<test_results>
+<info>
+<name>tests</name><parsing_time_taken>8.000000</parsing_time_taken>
+</info>
+<queries>
+<query>
+<id ReturnBoolean="1" With="1" CondNum="2" RelNum="0" comment="Boolean with procedure procName">1</id><querystr><![CDATA[procedure p; Select BOOLEAN with p.procName = "A"]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>38.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" With="2" CondNum="3" RelNum="0" comment="Boolean with multiple procedure procName (Syntactic Invalid with after and)">2</id><querystr><![CDATA[procedure p; Select BOOLEAN with p.procName = "A" and with p.procName = "B"]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>40.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" With="1" CondNum="2" RelNum="0" comment="Boolean with multiple procedure procName of same procedure">3</id><querystr><![CDATA[procedure p; Select BOOLEAN with p.procName = "A" and p.procName = "B"]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>41.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" With="1" CondNum="2" RelNum="0" comment="Synonym with procedure procName">4</id><querystr><![CDATA[procedure p; Select p with p.procName = "A"]]></querystr>
+<stuans>A</stuans>
+<correct>A</correct>
+<time_taken>37.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" With="1" CondNum="2" RelNum="0" comment="Synonym with multiple procedure procName (SEMANTIC INVALID)">5</id><querystr><![CDATA[procedure p; Select p with p.procName = "A" and p.procName = "B"]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>39.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" With="1" CondNum="2" RelNum="0" comment="Select procName with procedure procName">6</id><querystr><![CDATA[procedure p; Select p.procName with p.procName = "A"]]></querystr>
+<stuans>A</stuans>
+<correct>A</correct>
+<time_taken>38.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" CondNum="1" RelNum="0" comment="Select procName with no constraints">7</id><querystr><![CDATA[procedure p; Select p.procName]]></querystr>
+<stuans>A,B</stuans>
+<correct>A,B</correct>
+<time_taken>36.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" CondNum="1" RelNum="0" comment="Select tuples of procNames and synonym of same proc with no constraints">8</id><querystr><![CDATA[procedure p; Select <p, p.procName>]]></querystr>
+<stuans>A A,B B</stuans>
+<correct>A A,B B</correct>
+<time_taken>37.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" CondNum="1" RelNum="0" comment="Select tuples of procNames and synonym of diff proc with no constraints">9</id><querystr><![CDATA[procedure p, q; Select <p, q.procName>]]></querystr>
+<stuans>A A,A B,B A,B B</stuans>
+<correct>A A,A B,B A,B B</correct>
+<time_taken>47.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" With="1" CondNum="2" RelNum="0" comment="Select tuples of procNames and synonym of diff proc with constraint p = q">10</id><querystr><![CDATA[procedure p, q; Select <p, q.procName> with p.procName = q.procName]]></querystr>
+<stuans>A A,B B</stuans>
+<correct>A A,B B</correct>
+<time_taken>42.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" With="1" CondNum="2" RelNum="0" comment="Boolean with call procName">11</id><querystr><![CDATA[call cl; Select BOOLEAN with cl.procName = "B"]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>40.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" With="1" CondNum="2" RelNum="0" comment="Boolean with open procNames">12</id><querystr><![CDATA[procedure p; call cl; Select BOOLEAN with cl.procName = p.procName]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>38.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" With="1" CondNum="2" RelNum="0" comment="Semantically invalid - should not evaluate... (AttrRef = Synonym)">13</id><querystr><![CDATA[procedure p; call cl; Select BOOLEAN with cl.procName = p and p.procName = "B"]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>39.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" With="1" CondNum="2" RelNum="0" comment="Semantically invalid - should not evaluate... (AttrRef = Synonym)">14</id><querystr><![CDATA[procedure p; call cl; Select cl.procName with cl.procName = p and p.procName = "B"]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>40.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" CondNum="1" RelNum="0" comment="Select tuples of procNames and synonym of same proc with no constraints">15</id><querystr><![CDATA[call cl; Select <cl, cl.procName>]]></querystr>
+<stuans>5 B</stuans>
+<correct>5 B</correct>
+<time_taken>38.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" With="1" CondNum="2" RelNum="0" comment="Select tuples of procNames and synonym of diff proc with constraint">16</id><querystr><![CDATA[procedure p; call cl; Select <p, cl.procName> with cl.procName = p.procName]]></querystr>
+<stuans>B B</stuans>
+<correct>B B</correct>
+<time_taken>42.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" With="1" CondNum="2" RelNum="0" comment="Select boolean of varName">17</id><querystr><![CDATA[variable v; Select BOOLEAN with v.varName = "one"]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>39.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" With="1" CondNum="2" RelNum="0" comment="Invalid varName (Invalid syntactic)">18</id><querystr><![CDATA[variable v; Select BOOLEAN with v.varName = "1"]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>40.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" With="1" CondNum="2" RelNum="0" comment="Invalid type of varName (Invalid semantic)">19</id><querystr><![CDATA[variable v; Select BOOLEAN with v.varName = 1]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>40.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" With="1" CondNum="2" RelNum="0" comment="Select synonym of varName">20</id><querystr><![CDATA[variable v; Select v with v.varName = "one"]]></querystr>
+<stuans>one</stuans>
+<correct>one</correct>
+<time_taken>39.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" With="1" CondNum="2" RelNum="0" comment="Invalid varName (Invalid syntactic)">21</id><querystr><![CDATA[variable v; Select v with v.varName = "1"]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>38.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" With="1" CondNum="2" RelNum="0" comment="Invalid type of varName (Invalid semantic)">22</id><querystr><![CDATA[variable v; Select v with v.varName = one]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>39.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" CondNum="1" RelNum="0" comment="Select varName with no constraints">23</id><querystr><![CDATA[variable v; Select v.varName]]></querystr>
+<stuans>One,four,one,seven,six,three,two</stuans>
+<correct>one,One,two,three,four,six,seven</correct>
+<time_taken>42.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" With="1" CondNum="2" RelNum="0" comment="Select tuples of varName">24</id><querystr><![CDATA[variable v; Select <v, v.varName> with v.varName = "One"]]></querystr>
+<stuans>One One</stuans>
+<correct>One One</correct>
+<time_taken>38.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" With="1" CondNum="2" RelNum="0" comment="Select boolean of read varName">25</id><querystr><![CDATA[read r; Select BOOLEAN with r.varName = "one"]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>40.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" With="1" CondNum="2" RelNum="0" comment="Select boolean of read varName">26</id><querystr><![CDATA[read r; Select BOOLEAN with r.varName = "two"]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>40.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" With="1" CondNum="2" RelNum="0" comment="Select synonym of read varName">27</id><querystr><![CDATA[read r; Select r with r.varName = "two"]]></querystr>
+<stuans>2</stuans>
+<correct>2</correct>
+<time_taken>40.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" CondNum="1" RelNum="0" comment="Select read varName">28</id><querystr><![CDATA[read r; Select r.varName]]></querystr>
+<stuans>two</stuans>
+<correct>two</correct>
+<time_taken>39.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" CondNum="1" RelNum="0" comment="Select tuple read varName">29</id><querystr><![CDATA[read r; Select <r, r.varName>]]></querystr>
+<stuans>2 two</stuans>
+<correct>2 two</correct>
+<time_taken>40.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" With="1" CondNum="2" RelNum="0" comment="Select boolean of print varName">30</id><querystr><![CDATA[print p; Select BOOLEAN with p.varName = "one"]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>38.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" With="1" CondNum="2" RelNum="0" comment="Select boolean of print varName">31</id><querystr><![CDATA[print p; Select BOOLEAN with p.varName = "three"]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>40.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" With="1" CondNum="2" RelNum="0" comment="Select synonym of print varName">32</id><querystr><![CDATA[print p; Select p with p.varName = "three"]]></querystr>
+<stuans>3</stuans>
+<correct>3</correct>
+<time_taken>39.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" CondNum="1" RelNum="0" comment="Select print varName">33</id><querystr><![CDATA[print p; Select p.varName]]></querystr>
+<stuans>three,six</stuans>
+<correct>three,six</correct>
+<time_taken>39.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" CondNum="1" RelNum="0" comment="Select tuple print varName">34</id><querystr><![CDATA[print p; Select <p, p.varName>]]></querystr>
+<stuans>3 three,6 six</stuans>
+<correct>3 three,6 six</correct>
+<time_taken>39.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" With="1" CondNum="2" RelNum="0" comment="Select boolean for constant value constraint">35</id><querystr><![CDATA[constant c; Select BOOLEAN with c.value = 1]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>42.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" With="1" CondNum="2" RelNum="0" comment="Select boolean for constant value constraint">36</id><querystr><![CDATA[constant c; Select BOOLEAN with c.value = 7]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>40.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" With="1" CondNum="2" RelNum="0" comment="Syntactically invalid "IDENT" on the right">37</id><querystr><![CDATA[constant c; Select BOOLEAN with c.value = "1"]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>41.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" With="1" CondNum="2" RelNum="0" comment="Semantically invalid (constant.value = v.varName)">38</id><querystr><![CDATA[variable v; constant c; Select c.value with c.value = v.varName]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>40.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" With="1" CondNum="2" RelNum="0" comment="constant value = another constant value with stmt#">39</id><querystr><![CDATA[stmt s; constant c1, c2; Select c1.value with c2.value = s.stmt# and c1.value = c2.value]]></querystr>
+<stuans>1,4</stuans>
+<correct>1,4</correct>
+<time_taken>41.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" With="1" CondNum="2" RelNum="0" comment="(Is this semantically wrong?) constant value = 0">40</id><querystr><![CDATA[constant c; Select c1.value with c1.value = 0]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>40.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" With="1" CondNum="2" RelNum="0" comment="Semantically invalid (stmt# = 0)">41</id><querystr><![CDATA[stmt s; Select BOOLEAN with s.stmt# = 0]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>42.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" CondNum="1" RelNum="0" comment="Syntactically invalid (wrong refAttribute)">42</id><querystr><![CDATA[read r; Select r.procName]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>41.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" With="1" CondNum="3" RelNum="0" comment="Syntactically invalid (wildcard not accepted)">43</id><querystr><![CDATA[stmt s; Select s with s.stmt# = _]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>40.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="2" With="1" CondNum="4" RelNum="0" comment="Syntactically invalid (wildcard not accepted)">44</id><querystr><![CDATA[stmt s; Select s with _ = _]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>42.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" With="1" CondNum="2" RelNum="0" comment="Syntactically invalid (wrong identifier)">45</id><querystr><![CDATA[stmt s; if ifs; constant c; Select s with s.stmt# = c.value = ifs.stmt#]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>39.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" CondNum="1" RelNum="0" comment="statement.stmt#">46</id><querystr><![CDATA[stmt s; Select s.stmt#]]></querystr>
+<stuans>1,2,3,4,5,6,7</stuans>
+<correct>1,2,3,4,5,6,7</correct>
+<time_taken>51.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" CondNum="1" RelNum="0" comment="read.stmt#">47</id><querystr><![CDATA[read r; Select <r, r.stmt#, r.varName>]]></querystr>
+<stuans>2 2 two</stuans>
+<correct>2 2 two</correct>
+<time_taken>42.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" CondNum="1" RelNum="0" comment="print.stmt#">48</id><querystr><![CDATA[print pn; Select <pn, pn.stmt#, pn.varName>]]></querystr>
+<stuans>3 3 three,6 6 six</stuans>
+<correct>3 3 three,6 6 six</correct>
+<time_taken>45.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" CondNum="1" RelNum="0" comment="call.stmt#">49</id><querystr><![CDATA[call cl; Select <cl, cl.stmt#, cl.procName>]]></querystr>
+<stuans>5 5 B</stuans>
+<correct>5 5 B</correct>
+<time_taken>42.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" CondNum="1" RelNum="0" comment="if.stmt#">50</id><querystr><![CDATA[if ifs; Select <ifs, ifs.stmt#>]]></querystr>
+<stuans>1 1</stuans>
+<correct>1 1</correct>
+<time_taken>41.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" CondNum="1" RelNum="0" comment="Syntactically invalid (procedure doesnt have stmt#)">51</id><querystr><![CDATA[procedure p; Select p.stmt#]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>39.000000</time_taken>
+<passed/>
+</query>
+</queries>
+</test_results>

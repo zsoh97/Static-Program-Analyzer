@@ -1,0 +1,165 @@
+1 - Next* in same procedure
+stmt s;
+Select BOOLEAN such that Next*(1, 3)
+TRUE
+5000
+2 - Next* in same procedure
+stmt s;
+Select BOOLEAN such that Next(1, 2)
+TRUE
+5000
+3 - Next* in same procedure
+stmt s;
+Select BOOLEAN such that Next*(1, 2)
+TRUE
+5000
+4 - Next* in different procedure
+stmt s;
+Select BOOLEAN such that Next*(2,4)
+FALSE
+5000
+5 - Next of last line in procedure
+stmt s;
+Select BOOLEAN such that Next(3, _)
+FALSE
+5000
+6 - Next* of last line in procedure
+stmt s;
+Select s such that Next*(3, s)
+none
+5000
+7 - Next of last line in procedure
+stmt s;
+Select BOOLEAN such that Next(3, s)
+FALSE
+5000
+8 - Next from if branch to else
+stmt s;
+Select BOOLEAN such that Next(5, 6)
+FALSE
+5000
+9 - Next* from  else branch to if branch
+stmt s;
+Select BOOLEAN such that Next*(6, 5)
+FALSE
+5000
+10 - Next from if branch to else
+stmt s;
+Select BOOLEAN such that Next(4, 5)
+TRUE
+5000
+11 - Next* from  else branch to if branch
+stmt s;
+Select BOOLEAN such that Next(4, 6)
+TRUE
+5000
+12 - Next* in different procedure
+stmt s;
+Select BOOLEAN such that Next*(2, 5)
+FALSE
+5000
+13 - Next* from  same procedure
+stmt s;
+Select BOOLEAN such that Next(7, 8)
+TRUE
+5000
+14 - Next* in  same procedure
+stmt s;
+Select BOOLEAN such that Next*(8, 9)
+TRUE
+5000
+15 - Next* inside while loop to header
+stmt s;
+Select BOOLEAN such that Next*(9, 7)
+TRUE
+5000
+16 - Next* inside while loop to header
+stmt s;
+Select s such that Next*(9, s)
+7,8,9
+5000
+17 - Next inside while loop to header
+stmt s;
+Select BOOLEAN such that Next(7, 9)
+FALSE
+5000
+18 - Next transition to if else
+stmt s;
+Select BOOLEAN such that Next(10, 12)
+FALSE
+5000
+19 - Next inside while loop to header
+stmt s;
+Select BOOLEAN such that Next(12, 13)
+FALSE
+5000
+20 - Next* transition to if else
+stmt s;
+Select BOOLEAN such that Next*(10, 12)
+TRUE
+5000
+21 - Next* transition to if else
+stmt s;
+Select s such that Next*(10, s)
+11,12,13,14
+5000
+22 - Next* transition to if else
+stmt s; assign a;
+Select a such that Next*(10, a)
+12,13,14
+5000
+23 - Next* transition to if else
+stmt s;
+Select BOOLEAN such that Next*(10, s)
+TRUE
+5000
+24 - Next* transition through if else
+stmt s;
+Select BOOLEAN such that Next*(11, 14)
+TRUE
+5000
+25 - last Next* in  procedure
+stmt s;
+Select BOOLEAN such that Next*(25, s)
+FALSE
+5000
+26 - last Next* in same procedure
+stmt s;
+Select BOOLEAN such that Next*(25, _)
+FALSE
+5000
+27 - last Next* in same procedure
+stmt s;
+Select BOOLEAN such that Next*(29, 30)
+FALSE
+5000
+28 - last Next* in if else
+stmt s;
+Select BOOLEAN such that Next*(29, _)
+TRUE
+5000
+29 - Next* inside while while
+stmt s;
+Select BOOLEAN such that Next*(40, 34)
+TRUE
+5000
+30 - Next* inside while
+stmt s;
+Select BOOLEAN such that Next*(43, 39)
+TRUE
+5000
+31 - Next* inside while while
+stmt s;
+Select BOOLEAN such that Next*(39, 37)
+TRUE
+5000
+32 - Next inside while
+stmt s;
+Select BOOLEAN such that Next(43, 44)
+FALSE
+5000
+33 - Next* inside while
+stmt s;
+Select BOOLEAN such that Next(38, 44)
+FALSE
+5000

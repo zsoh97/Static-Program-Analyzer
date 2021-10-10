@@ -1,0 +1,35 @@
+1 - multiple such that with no common synonym
+while w; if ifs;
+Select <w, ifs> such that Follows(4,10) and Parent(ifs, w)
+16 11, 26 22
+5000
+2 - multiple such that with 3 common synonyms in each relationship
+stmt s; assign a; while w;
+Select w such that Parent(w, s) and Follows*(w, a) and Next*(s, a)
+4, 26
+5000
+3 - multiple pattern with no common synonym
+assign a1, a2;
+Select BOOLEAN pattern a1 ("eew"," wee   ") and a2(_, _"c  +1"_)
+TRUE
+5000
+4 - multiple such that then pattern with 1 common synonyms
+stmt s; assign a;
+Select s such that Follows*(a, s) and Parent*(22, a) pattern a ("oops", _)
+26, 29
+5000
+5 - multiple pattern then such that with 2 common synonyms
+assign a1, a2; variable v;
+Select <a1, v> pattern a1(_, _"good    "_) and a2(v, _) such that Follows*(a1, a2)
+14 horrible
+5000
+6 - multiple pattern with 1 common synonym
+assign a1, a2; variable v;
+Select <a1, v, a2> pattern a1 (v, _"2"_) and a2 (v, _)
+3 b 3, 3 b 12, 3 b 18, 18 b 3, 18 b 12, 18 b 18,  7 eew 7, 7 eew 9, 15 horrible 15, 28 oops 25, 28 oops 28
+5000
+7 - multiple clauses, invalid use of and
+stmt s; assign a;
+Select s such that Follows*(a, s) and Parent*(22, a) and pattern a ("oops", _)
+
+5000

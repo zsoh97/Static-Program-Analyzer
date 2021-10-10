@@ -1,0 +1,132 @@
+procedure nesting {
+    while (cc < 0) {  #01
+        if ((aa == bb) || (0 != 22)) then {  #02
+            if ((cc != (8 + (11 * 11))) && (22 == (bb - 22))) then {  #03
+                if (aa > 22) then {  #04
+                    cc = cc % bb + aa * bb;  #05
+                    while (cc >= aa) {  #06
+                        bb = bb + 44;  #07
+                        if (cc > aa) then {  #08
+                            aa = bb * 33;  #09
+                            while (aa != aa) {  #10
+                                print bb;  #11
+                                aa = aa * (bb + 11);  #12
+                            }
+                        } else {
+                            while (bb == (cc + aa) ) {  #13
+                                while ((cc + (aa + bb)) == 44) {  #14
+                                    cc = cc + aa;  #15
+                                    while (bb < (cc + (aa % 11))) {  #16
+                                        expression = expression + 33;  #17
+                                        call expression;  #18
+                                    }
+                                    aa = bb;  #19
+                                    bb = aa;  #20
+                                }
+                                read cc;  #21
+                            }
+                            cc = aa % bb;  #22
+                        }
+                    }
+                    aa = cc / 11;  #23
+                } else {
+                    cc = cc;  #24
+                }
+            } else {
+                cc = bb - (cc + 11);  #25
+            }
+            bb = aa * bb * cc * aa;  #26
+        } else {
+            if (0 > 0) then {  #27
+                if ((bb != (cc + aa)) || (bb != (cc + aa))) then {  #28
+                    while ((aa == cc) && (aa != cc)) {  #29
+                        aa = 44 + (aa - cc) % 11 / aa;  #30
+                        print aa;  #31
+                    }
+                } else {
+                    assignment = assignment + cc;  #32
+                    call assignment;  #33
+                }
+            } else {
+                bb = (bb - bb);  #34
+            }
+        }
+        read cc;  #35
+        print bb;  #36
+    }
+}
+
+procedure expression {
+    if (aa > 33) then {  #37
+        read cc;  #38
+        while (((cc >= bb) && (bb == bb)) || (((cc <= bb) || (0 != dd)) && ((aa - 22) < 0))) {  #39
+            aa = (  (aa - (   (     11     *   33    ) / (22   +   44   *    aa) )  )   +  bb);  #40
+            bb = aa;  #41
+        }
+        print expression;  #42
+    } else {
+        dd = bb + (((11 + 33) % (33 % 6))) - (aa - ((bb / aa)));  #43
+    }
+    while (!(cc < 0)) {  #44
+        print aa;  #45
+        if ((dd/44%(0-22))!=33*(bb%aa)) then {  #46
+            dd = ((aa * bb) + 0 ) / (33 * bb) + (cc / dd * ((bb - (aa - cc)) % 44));  #47
+        } else {
+            aa = bb;  #48
+        }
+        read expression;  #49
+    }
+    call assignment;  #50
+}
+
+procedure assignment {
+    read cc;  #51
+    print cc;  #52
+    while (!(cc < 6)) {  #53
+        cc = bb % 7;  #54
+        aa = cc / aa;  #55
+        if ((cc + 6) == 7) then {  #56
+            aa = bb;  #57
+            bb = cc;  #58
+            cc = dd;  #59
+            dd = ee;  #60
+            ee = ff;  #61
+            ff = gg;  #62
+            gg = hh;  #63
+            hh = ii;  #64
+            ii = jj;  #65
+            jj = kk;  #66
+            kk = ll;  #67
+            ll = mm;  #68
+            mm = nn;  #69
+            nn = oo;  #70
+            oo = pp;  #71
+            cc = aa + bb % aa;  #72
+        } else {
+            bb = aa / 0;  #73
+            aa = aa * cc - aa;  #74
+            cc = aa;  #75
+            aa = cc;  #76
+            bb = cc;  #77
+            aa = bb;  #78
+            read cc;  #79
+            print aa;  #80
+            while (cc == aa) {  #81
+                cc = 7 + 6;  #82
+                aa = cc;  #83
+            }
+            print v1;  #84
+        }
+        aa = aa;  #85
+        cc = aa;  #86
+        if (aa == 7) then {  #87
+            print aa;  #88
+            aa = aa % 6 + aa;  #89
+        } else {
+            read aa;  #90
+        }
+        aa = aa / aa;  #91
+        print aa;  #92
+    }
+    print aa;  #93
+}

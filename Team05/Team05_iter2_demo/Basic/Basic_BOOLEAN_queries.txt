@@ -1,0 +1,75 @@
+1 - Select BOOLEAN without clauses
+
+Select BOOLEAN
+TRUE
+5000
+2 - Select BOOLEAN with Follows true
+
+Select BOOLEAN such that Follows(1, 2)
+TRUE
+5000
+3 - Select BOOLEAN with Follows(*) true
+
+Select BOOLEAN such that Follows(1, 2)
+TRUE
+5000
+4 - Select BOOLEAN with Follows false
+
+Select BOOLEAN such that Follows(2, 2)
+FALSE
+5000
+5 - Select BOOLEAN with Follows* false
+
+Select BOOLEAN such that Follows(2, 2)
+FALSE
+5000
+6 - Select BOOLEAN with Parent true
+
+Select BOOLEAN such that Parent(2, 3)
+TRUE
+5000
+7 - Select BOOLEAN with Parent* true
+
+Select BOOLEAN such that Parent(2, 3)
+TRUE
+5000
+8 - Select BOOLEAN with Parent false
+
+Select BOOLEAN such that Parent(1, 2)
+FALSE
+5000
+9 - Select BOOLEAN with Parent* false
+
+Select BOOLEAN such that Parent(2, 2)
+FALSE
+5000
+10 - Select BOOLEAN with Uses true
+
+Select BOOLEAN such that Uses(2, "b")
+TRUE
+5000
+11 - Select BOOLEAN with Uses false
+
+Select BOOLEAN such that Uses(1, "b")
+FALSE
+5000
+12 - Select BOOLEAN with Modifies true
+
+Select BOOLEAN such that Modifies(4, "f")
+TRUE
+5000
+13 - Select BOOLEAN with Modifies false
+
+Select BOOLEAN such that Modifies(2, "b")
+FALSE
+5000
+14 - Select BOOLEAN with Next true
+
+Select BOOLEAN such that Next(1, 2)
+TRUE
+5000
+15 - Select BOOLEAN with Next* false
+
+Select BOOLEAN such that Next*(4, 2)
+FALSE
+5000

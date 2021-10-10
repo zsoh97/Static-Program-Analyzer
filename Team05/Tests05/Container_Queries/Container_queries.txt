@@ -1,0 +1,55 @@
+1 - ifInsideIf nesting for Parent*
+stmt s;
+Select s such that Parent*(2, s)
+3,4,5,6,7,8
+5000
+2 - ifInsideIf nesting for Parent
+stmt s;
+Select s such that Parent(2, s)
+3,4,7,8
+5000
+3 - container uses Invalid
+if ifs;
+Select ifs such that Uses(ifs, "14")
+
+5000
+4 - Parents
+if ifs; while w;
+Select ifs such that Parent(ifs, w)
+11
+5000
+5 - Parents
+if ifs; while w;
+Select w such that Parent(w, ifs)
+19
+5000
+6 - Parents
+if ifs, ifs2;
+Select ifs such that Parent(ifs, ifs2)
+2
+5000
+7 - Parents
+while w, w2;
+Select w such that Parent(w, w2)
+27
+5000
+8 - Uses Invalid
+stmt s;
+Select s such that Uses(s, "30")
+
+5000
+9 - Modifies
+stmt s;
+Select s such that Modifies(s, "n")
+11,13,14
+5000
+10 - Uses
+stmt s;
+Select s such that Uses(s, "k")
+11
+5000
+11 - Uses
+stmt s; variable v;
+Select s such that Uses(s, v)
+2,4,11,13,19,21,27,29
+5000

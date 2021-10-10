@@ -1,0 +1,2383 @@
+Query Categories: 
+
+FOR each query, should label if it is invalid syntactically or if it's just an empty query.mediu 
+
+Select with no clause 
+
+Select with 1 clause 
+
+Modifies 
+
+2nd param unknown 
+
+1st param: assign | read | procedure | while | if | call | statement 
+
+Can be known or unknown, e.g. synonym or “a”/7 
+
+Wrong cases: 
+
+1st param unknown 
+
+1st param print  
+
+Invalid param, “x”, but “x” does not exist in source 
+
+Can be variable/procedure/statement_num 
+
+2nd param is a synonym other than v 
+
+Uses 
+
+2nd param unknown 
+
+1st param: assign | print | procedure | while | if | call | statement 
+
+Can be known or unknown, e.g. synonym or “a”/7 
+
+Wrong cases: 
+
+1st param unknown 
+
+1st param read  
+
+Invalid param, “x” but “x” does not exist in source 
+
+Can be variable/procedure/statement_num 
+
+2nd param is a synonym other than v 
+
+Follows(*) 
+
+1st param _, 2nd param _, both param _, neither param _ 
+
+Wrong cases 
+
+Statement number out of index (negative number or > no. of lines) 
+
+Statement s1 > statement s2  
+
+consider if a var_name or proc_name is passed 
+
+Follows(“x”, 3) 
+
+1st and 2nd param differ in nesting 
+
+Parent(*) 
+
+1st param _, 2nd param _, both param _, neither param _ 
+
+1st and 2nd param differ in nesting 
+
+Wrong cases 
+
+Statement number out of index (negative number or > no. of lines) 
+
+Statement s1 > statement s2  
+
+consider if a var_name or proc_name is passed 
+
+Follows(“x”, 3) 
+
+Pattern 
+
+Both param _, either param _, neither param _ 
+
+no _”expression”_ 
+
+Wrong cases: 
+
+1st param is not assignment 
+
+Pass synonym 
+
+Pass invalid “var” 
+
+1st param does not have  “” 
+
+_”expression” or “expression”_ on the LHS 
+
+Combination of clauses 
+
+5C2 * 2! = 20 
+
+Modifies + Pattern/Uses/Follows/Parent 
+
+Uses + Pattern/Follows/Parent/Modifies 
+
+Follows + Pattern/Uses/Paren/Modifies 
+
+Parent + Pattern/Uses/Modifies/Parent 
+
+Pattern + Uses/Follows/Parent/Modifies 
+
+For the big source, should have 10 combinations 
+
+Wrong cases 
+
+Syntactically incorrect 
+
+Spaces 
+
+Synonym declaration 
+
+‘;’ at end of query 
+
+ 
+ 
+
+ 
+ 
+ 
+ 
+
+Parser Categories: 
+
+ 
+ 
+
+Positive Category: 
+
+Empty stmtList procedure 
+
+Empty stmtList if / while 
+
+Statement blocks 
+
+Level of nesting 
+
+2 Nested 
+
+While-while 
+
+While-if 
+
+If-while 
+
+If-if 
+
+Deeper levels…? Idk how much to test 
+
+Varying statements before and after statement blocks 
+
+Position of nested container 
+
+If … { statements if/while statements } 
+
+If () { if statements} 
+
+If () {statements if }} 
+
+ 
+ 
+
+Amount of white space e.g. correct program but everything on one line 
+
+No white space 
+
+A lot extra white space 
+
+White space between the ‘tokens’ 
+
+ 
+ 
+ 
+
+ 
+ 
+
+Negative Category: 
+
+Invalid variable / procedure names 
+
+No variable name 
+
+Variable names with invalid keywords  
+
+White space inside x 5 = hello; 
+
+If / while block with invalid expressions 
+
+Missing brackets 
+
+Extra brackets 
+
+Extra shit before / after the expressions e.g. if ishouldnotbehere (x = 5) test{} 
+
+Statement outside of statement list 
+
+E.g. x = 5; 
+
+Proc {....} x = hello; 
+
+Invalid keywords spelt wrongly 
+
+Procedure  
+
+While  
+
+If Print 
+
+Read 
+
+Call 
+
+Got extra tokens procedure hello moshi moshi { …. } 
+
+Invalid expressions 
+
+Extra characters present x = x_5; or x = x ++5; 
+
+Extra white space X = 5 4;  
+
+Empty program 
+
+ 
+
+Page Break
+ 
+
+ 
+
+Second System Test:  
+
+whileinsidewhileinsidewhile 
+
+Source Code: 
+
+procedure whileInsideWhileInsideWhile { 
+
+    while = 3; 
+
+    read if; 
+
+    else = if / while; 
+
+    print else; 
+
+    call = 5; 
+
+    print = else / call; 
+
+    read = print * 4; 
+
+    while (((((((((((while > 1))))))))))) { 
+
+ pattern = ((if * while) * else) + read * print * call; 
+
+        while (pattern < 50) { 
+
+            while ((pattern > call) && ((read <= pattern) || (else != if))) { 
+
+         read print; 
+
+                while (print > 0) { 
+
+      print = print – pattern; 
+
+  }  
+
+            } 
+
+        } 
+
+    } 
+
+} 
+
+Queries: 
+
+while w, w1;  
+
+Select w such that Parent*(w, w1) 
+
+8 10 
+
+5000 
+
+ 
+
+print p; while w; 
+
+Select p such that Parent(w, p) 
+
+12 
+
+5000 
+
+ 
+
+IfInsideIfinsideif 
+
+ 
+
+ 
+
+Page Break
+ 
+
+Source: 
+
+procedure ifInsideIf { 
+    a = 1; 
+    if (b == 2) then { 
+        c = 3; 
+        if (d == 4) then { 
+            e = 5; 
+        } else { 
+            f = 6; 
+        } 
+        g = 7; 
+    } else { 
+        h = 8; 
+    } 
+    i = 9; 
+} 
+ 
+procedure whileInsideIf { 
+    j = 10; 
+    if (k == 11) then { 
+        l = 12; 
+        while (m == 13) { 
+            n = 14; 
+        } 
+        o = 15; 
+    } else { 
+        p = 16; 
+    } 
+    q = 17; 
+} 
+ 
+procedure ifInsideWhile { 
+    r = 18; 
+    while (s == 19) { 
+        t = 20; 
+        if (u == 21) then { 
+            v = 22; 
+        } else { 
+            w = 23; 
+        } 
+        x = 24; 
+    } 
+    y = 25; 
+} 
+ 
+procedure whileInsideWhile { 
+    z = 26; 
+    while (aa == 27) { 
+        ab = 28; 
+        while (ac == 29) { 
+            ad = 30; 
+        } 
+        ae = 31; 
+    } 
+    af = 32; 
+} 
+ 
+
+Queries 
+1 - ifInsideIf nesting for Parent* 
+stmt s; 
+Select s such that Parent*(2, s) 
+3,4,5,6,7,8 
+5000 
+2 - ifInsideIf nesting for Parent 
+stmt s; 
+Select s such that Parent(2, s) 
+3,4,7,8 
+5000 
+3 - container uses 
+if ifs; 
+Select ifs such that Uses(ifs, "14") 
+11 
+5000 
+4 - Parents 
+if ifs; while w; 
+Select ifs such that Parent(ifs, w) 
+11 
+5000 
+5 - Parents 
+if ifs; while w; 
+Select w such that Parent(w, ifs) 
+19 
+5000 
+6 - Parents 
+if ifs, ifs2; 
+Select ifs such that Parent(ifs, ifs2) 
+2 
+5000 
+
+7 - Parents 
+while w, w2; 
+Select w such that Parent(w, w2) 
+27 
+5000 
+8 - Uses 
+stmt s; 
+Select s such that Uses(s, "30") 
+27,29, 30 
+5000 
+9 - Modifies 
+stmt s; 
+Select s such that Modifies(s, "n") 
+11,13,14 
+5000 
+10 - Uses 
+stmt s; 
+Select s such that Uses(s, "k") 
+11 
+5000 
+
+ 
+
+Uses.txt 
+
+1 – Uses with 2 known parameters 
+
+stmt s; 
+
+Select s such that Uses(1,”x”) 
+
+1,2,3,4,5,6,7,8,9,10,11,12 
+
+5000 
+
+2 – Uses with left known and right unknown 
+
+variable v; 
+
+Select s such that Uses(5, v) 
+
+x 
+
+5000 
+
+3 – Uses with left unknown and right known 
+
+stmt s; 
+
+Select s such that Uses(s, “x”) 
+
+5, 6, 7, 8, 9 
+
+5000 
+
+4 – Uses with both unknown 
+
+stmt s; 
+
+Select s such that Uses(s, _) 
+
+4, 5, 6, 7, 8, 9, 11, 12 
+
+5000 
+
+5 - Incorrect uses 
+
+stmt s; 
+
+Select s such that Uses(s, "a”) 
+
+ 
+
+5000 
+
+ 
+
+Modifies.txt 
+
+1 – Modifies with 2 known parameters 
+
+stmt s; 
+
+Select s such that Modifies(1,”x”) 
+
+1,2,3,4,5,6,7,8,9,10,11,12 
+
+5000 
+
+2 – Modifies with left known and right unknown 
+
+var v; 
+
+Select v such that Modifies(1, v) 
+
+x 
+
+5000 
+
+3 – Modifies with left unknown and right known 
+
+stmt s; 
+
+Select s such that Modifies(s, “x”) 
+
+1, 4, 5, 9 
+
+5000 
+
+4 – Modifies with both unknown 
+
+stmt s; 
+
+Select s such that Modifies(s, _) 
+
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 
+
+5000 
+
+5 – Incorrect Modifies 
+
+stmt s; 
+
+Select s such that Modifies(s, “a”) 
+
+ 
+
+5000 
+
+ 
+
+Pattern.txt 
+
+1 - Pattern with both fixed, neither _ 
+
+assign a; 
+
+Select a Pattern a(x, “x - 1”) 
+
+5 
+
+5000 
+
+2 – Pattern with left fixed and right fixed, right _ 
+
+assign a; 
+
+Select a Pattern a(z, _”z + x”_) 
+
+9 
+
+5000 
+
+3 - Pattern with left fixed and right unfixed, right _ 
+
+assign a; 
+
+Select a Pattern a(z, _) 
+
+2, 7, 9 
+
+4 – Pattern with right fixed, left unfixed, left and right _ 
+
+assign a; 
+
+Select a Pattern a(_, _”i”_) 
+
+9, 11 
+
+5 – Pattern with right fixed, left unfixed, left _ 
+
+Select a Pattern a(_, “i - 1”) 
+
+11 
+
+5000 
+
+6- Pattern with both left and right unfixed, left and right _ 
+
+assign a; 
+
+Select a Pattern a(_, _) 
+
+1, 2, 3, 5, 7, 8, 9, 11 
+
+7 - Pattern with invalid synonym on left 
+
+Assign a; while w; 
+
+select a Pattern a(w, _) 
+
+ 
+
+5000 
+
+8 – Pattern with invalid variable on left 
+
+assign a; 
+
+select a Pattern a(hello, _) 
+
+ 
+
+5000 
+
+9 – Pattern without invalid syntax on left 
+
+assign a; 
+
+select a Pattern a(“x”, _) 
+
+ 
+
+5000 
+
+10 – Pattern with null string on right, right _ 
+
+assign a; 
+
+select a Pattern a(_, _“”_) 
+
+1, 2, 3, 5, 7, 8, 9, 11 
+
+5000 
+
+ 
+
+Parent.txt 
+
+1 - Parent with 2 known variables 
+
+stmt s; 
+Select s such that Parent(4, 5) 
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 
+5000 
+2 – Parent* with 2 known variables 
+
+Select s such that Parent*(4, 7) 
+stmt s; 
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 
+5000 
+3 - Parent with s1 known and s2 unknown 
+stmt s; 
+Select s such that Parent(4, s) 
+5, 6, 9, 10, 11 
+5000 
+
+4 – Parent* with s1 known and s2 unknown 
+stmt s; 
+Select s such that Parent*(4, s) 
+5, 6, 7, 8, 9, 10, 11 
+5000 
+5- Parent with s1 unknown and s2 known 
+stmt s; 
+Select s such that Parent(s, 7) 
+6 
+5000 
+
+6. Parent* with s1 unknown and s2 known 
+stmt s; 
+Select s such that Parent*(s, 7) 
+4, 6 
+5000 
+7 - Parent with both unknown 
+
+stmt s; 
+Select s such that Parent(_, _) 
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 
+5000 
+8- Parent with both unknown 
+
+stmt s; 
+Select s such that Parent*(_, _) 
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 
+5000 
+
+9 - Incorrect Parent with s2 out of range 
+stmt s; 
+Select s such that Parent(_, 13) 
+ 
+5000 
+10 - Incorrect Parent* with s2 out of range 
+stmt s; 
+Select s such that Parent*(_, 13) 
+ 
+5000 
+
+11 - Incorrect Parent with s1 > s2 
+stmt s; 
+Select s such that Parent(5, 4) 
+ 
+5000 
+12 - Incorrect Parent* with s1 > s2 
+stmt s; 
+Select s such that Parent*(5, 4) 
+ 
+5000 
+
+Follows.txt 
+
+ 
+
+1 – Follows with first parameter _ 
+stmt s; 
+Select s such that Follows (_, s) 
+2, 3, 4, 6, 9, 10, 11, 12 
+5000 
+
+2 – Follows* with first parameter _ 
+stmt s; 
+Select s such that Follows* (_, s) 
+2, 3, 4, 6, 9, 10, 11, 12 
+5000 
+
+3 – Follows with second parameter _ 
+stmt s; 
+Select s such that Follows (s, _) 
+1, 2, 3, 4, 5, 6, 9, 10 
+5000 
+
+4 – Follows* with second parameter _ 
+stmt s; 
+Select s such that Follows* (s, _) 
+1, 2, 3, 4, 5, 6, 9, 10 
+5000 
+
+5 – Follows with both parameters _ 
+stmt s; 
+Select s such that Follows (_, _) 
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 
+5000 
+
+6 – Follows* with both parameters _ 
+stmt s; 
+Select s such that Follows* (_, _) 
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 
+5000 
+
+7 – Follows with both parameters having same synonym 
+stmt s; 
+Select s such that Follows (s, s) 
+none 
+5000 
+
+8 – Follows* with both parameters having same synonym 
+stmt s; 
+Select s such that Follows* (s, s) 
+none 
+5000 
+
+9 – Follows forward 
+stmt s; 
+Select s such that Follows (4, s) 
+12 
+5000 
+
+10 – Follows* forward 
+stmt s; 
+Select s such that Follows* (4, s) 
+12 
+5000 
+
+11 – Follows inverse 
+stmt s; 
+Select s such that Follows (s, 9) 
+6 
+5000 
+
+12 – Follows* inverse 
+stmt s; 
+Select s such that Follows* (s, 9) 
+5, 6 
+5000 
+
+13 – Follows with both numbers 
+stmt s; 
+Select s such that Follows (6, 9) 
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 
+5000 
+
+14 – Follows* with both numbers 
+stmt s; 
+Select s such that Follows* (5, 11) 
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 
+5000 
+
+15 – Follows with more than number of statements 
+stmt s; 
+Select s such that Follows (13, s) 
+none 
+5000 
+
+16 – Follows* with more than number of statements 
+stmt s; 
+Select s such that Follows* (13, s) 
+none 
+5000 
+
+17 – Follows with negative numbers 
+stmt s; 
+Select s such that Follows (-1, s) 
+none 
+5000 
+
+18 – Follows* with negative numbers 
+stmt s; 
+Select s such that Follows* (-1, s) 
+none 
+5000 
+
+19 – Follows with first more than second 
+stmt s; 
+Select s such that Follows (7, 6) 
+none 
+5000 
+
+20 – Follows* with first more than second 
+stmt s; 
+Select s such that Follows* (7, 6) 
+none 
+5000 
+
+21 – Follows with differing nesting 
+stmt s; 
+Select s such that Follows (6, 7) 
+none 
+5000 
+
+22 – Follows* with differing nesting 
+stmt s; 
+Select s such that Follows* (6, 7) 
+none 
+5000 
+
+23 – Follows with numbers in then and else 
+stmt s; 
+Select s such that Follows (7, 8) 
+none 
+5000 
+
+24 – Follows* with numbers in then and else 
+stmt s; 
+Select s such that Follows* (7, 8) 
+none 
+5000 
+
+ 
+
+ 
+
+ 
+
+Multiple_clauses.txt 
+
+1 – Follows + Pattern, no common synonyms 
+
+variable v; stmt s, s1; assign a; 
+
+Select s such that Follows (s, s1) pattern a (v, _“x”_) 
+
+none 
+
+5000 
+
+2 – Follows + Pattern, 1 common synonym that is the select entity 
+
+variable v; stmt s; assign a; 
+
+Select a such that Follows (s, a) pattern a (v, _“x”_) 
+
+none 
+
+5000 
+
+3 – Follows + Pattern, 1 common synonym that is not the select entity 
+
+variable v; stmt s; assign a; 
+
+Select s such that Follows (s, a) pattern a (v, _“x”_) 
+
+none 
+
+5000 
+
+4 – Follows* + Pattern, no common synonyms 
+
+variable v; stmt s, s1, s2; assign a; 
+
+Select s such that Follows* (s, s1) pattern a (v, _“x”_) 
+
+none 
+
+5000 
+
+5 – Follows* + Pattern, 1 common synonym that is the select entity 
+
+variable v; stmt s; assign a; 
+
+Select a such that Follows* (s, a) pattern a (v, _“x”_) 
+
+none 
+
+5000 
+
+6 – Follows* + Pattern, 1 common synonym that is not the select entity 
+
+variable v; stmt s; assign a; 
+
+Select s such that Follows* (s, a) pattern a (v, _“x”_) 
+
+none 
+
+5000 
+
+7 – Parent + Pattern, no common synonyms 
+
+variable v; stmt s, s1; assign a; 
+
+Select s such that Parent (s, s1) pattern a (v, _“x”_) 
+
+none 
+
+5000 
+
+8 – Parent + Pattern, 1 common synonym that is the select entity 
+
+variable v; stmt s; assign a; 
+
+Select a such that Parent (s, a) pattern a (v, _“x”_) 
+
+none 
+
+5000 
+
+9 – Parent + Pattern, 1 common synonym that is not the select entity 
+
+variable v; stmt s; assign a; 
+
+Select s such that Parent (s, a) pattern a (v, _“x”_) 
+
+none 
+
+5000 
+
+10 – Parent* + Pattern, no common synonyms 
+
+variable v; stmt s, s1; assign a; 
+
+Select s such that Parent* (s, s1) pattern a (v, _“x”_) 
+
+none 
+
+5000 
+
+11 – Parent* + Pattern, 1 common synonym that is the select entity 
+
+variable v; stmt s; assign a; 
+
+Select a such that Parent* (s, a) pattern a (v, _“x”_) 
+
+none 
+
+5000 
+
+12 – Parent* + Pattern, 1 common synonym that is not the select entity 
+
+variable v; stmt s; assign a; 
+
+Select s such that Parent* (s, a) pattern a (v, _“x”_) 
+
+none 
+
+5000 
+
+13 – Modifies + Pattern, no common synonyms 
+
+variable v, v1; stmt s; assign a; 
+
+Select s such that Modifies (s, v) pattern a (v1, _“x”_) 
+
+none 
+
+5000 
+
+14 – Modifies + Pattern, 1 common synonym that is the select entity 
+
+variable v; stmt s; assign a; 
+
+Select v such that Modifies (s, v) pattern a (v, _“x”_) 
+
+none 
+
+5000 
+
+15 – Modifies + Pattern, 1 common synonym that is not the select entity 
+
+variable v; stmt s; assign a; 
+
+Select a such that Modifies (s, v) pattern a (v, _“x”_) 
+
+none 
+
+5000 
+
+16 – Modifies + Pattern, 2 common synonyms 
+
+variable v; stmt s; assign a; 
+
+Select a such that Modifies (a, v) pattern a (v, _“x”_) 
+
+none 
+
+5000 
+
+17 – Uses + Pattern, no common synonyms 
+
+variable v, v1; stmt s; assign a; 
+
+Select s such that Uses (s, v) pattern a (v1, _“i”_) 
+
+none 
+
+5000 
+
+18 – Uses + Pattern, 1 common synonym that is the select entity 
+
+variable v; stmt s; assign a; 
+
+Select v such that Uses (s, v) pattern a (v, _“i”_) 
+
+none 
+
+5000 
+
+19 – Uses + Pattern, 1 common synonym that is not the select entity 
+
+variable v; stmt s; assign a; 
+
+Select a such that Uses (s, v) pattern a (v, _“i”_) 
+
+none 
+
+5000 
+
+20 – Uses + Pattern, 2 common synonyms 
+
+variable v; stmt s; assign a; 
+
+Select a such that Uses (a, v) pattern a (v, _“i”_) 
+
+none 
+
+5000 
+
+Page Break
+ 
+
+Basic Source: 
+
+procedure ABC { 
+
+    a = 1; 
+
+    while (b == 2) { 
+
+        read c;} 
+
+    if (d == 4) then { 
+
+        print e; 
+
+    } else { 
+
+        f = 6; 
+
+    } 
+
+} 
+
+Page Break
+ 
+
+Medium Source: 
+
+ 
+
+procedure ABC { 
+
+    call GHI;     //1 
+
+    this = that; 
+
+    b = 2; 
+
+    while ((b == 2) && (!(b >= 2))) { 
+
+        if ( !(((c + 1) <= 3) || (c != 3)))  then {      //5 
+
+            call DEF; 
+
+        } else { 
+
+            eew =  (c + 1 ) / 2; 
+
+            wee = eew + 1; 
+
+            eew = wee; 
+
+        } 
+
+    } 
+
+    that = this;        //10 
+
+} 
+
+  
+
+procedure DEF { 
+
+    if (((f > 6) && (f < 6)) || (f >= 6)) then {    //11 
+
+ b = 5; 
+
+        good = 7; 
+
+        good = good; 
+
+        horrible = (4 + 6) * dog - 2 / good;     //15 
+
+        while ((h > 8) && ((h < 8) || (h >= 8))) { 
+
+            call GHI; 
+
+        }    
+
+    } else { 
+
+ b = 2; 
+
+        read justiceleague; 
+
+        print justiceleague;      //20 
+
+    }  
+
+    call GHI; 
+
+} 
+
+  
+
+procedure GHI { 
+
+    if (!(((l > 12) && (l < 12)) || (l >= 12))) then {      //22 
+
+        me =        pattern * (13 -  spaces * operator    ); 
+
+    } else { 
+
+        you = 14; 
+
+ oops = 20;     //25 
+
+        while (((oops > 10) && (oops < 15)) || (!(oops >= 15))){ 
+
+            read p; 
+
+     oops = oops – 2; 
+
+        }    
+
+        quick = pattern * (16 + spaces * operator); 
+
+    } 
+
+    red = x / (((((17 * 17)))));      //30 
+
+} 
+
+ 
+
+Test Cases: 
+
+- 2 levels of nesting 
+
+- nesting calls within conditional blocks 
+
+- medium complexity of conditional statements, include at least 2 !/||/&& per conditional 
+
+- conditional variables include identifier keywords and procedure names. 
+
+- vary position of if and while to achieve different possible Next results 
+
+    - nesting at the start 
+
+    - nesting at the middle 
+
+    - nesting at the end 
+
+- medium complexity assignment on RHS. 
+
+Testing Uses_procedure/call, Modifies_procedure/call, Next(*), Calls(*) 
+
+*possible to test multi-clause functionality with the involved design abstraction. e.g. s.t. Uses and Modifies and Next (Permutations or include with other earlier functionality) 
+
+*Select clause of these clauses could be boolean/tuple 
+
+Test Cases: 
+
+Multiple clause: 
+
+Calls(*) 
+
+Uses 
+
+Modifies 
+
+Next(*) 
+
+Page Break
+ 
+
+CALLS(*): GRANT WILL BE BACK, FIXING Q.E. BUGS 
+
+1 - Calls with 2 known procedures 
+
+ 
+
+Select BOOLEAN such that Calls(“DEF”, “ABC”) 
+
+FALSE 
+
+5000 
+
+2 - Calls forward with 1 known procedure 
+
+procedure p; 
+
+Select p such that Calls(“DEF”, p) 
+
+GHI 
+
+5000 
+
+3 - Calls backward with 1 known procedure 
+
+procedure p; 
+
+Select p such that Calls(p, “DEF”) 
+
+ABC 
+
+5000 
+
+4 - Calls with 2 unknown procedures 
+
+procedure p1, p2; 
+
+Select <p1, p2> such that Calls(p1, p2) 
+
+ABC DEF, DEF GHI 
+
+5000 
+
+5 – Calls* with 2 known procedures 
+
+ 
+
+Select BOOLEAN such that Calls*(“ABC”, “GHI”) 
+
+TRUE 
+
+5000 
+
+6 – Calls* forward with 1 known procedure 
+
+procedure p; 
+
+Select BOOLEAN such that Calls*(“GHI”, p) 
+
+ 
+
+5000 
+
+7 – Calls* backward with 1 known procedure 
+
+procedure p; 
+
+Select p such that Calls*(p, “GHI”) 
+
+ABC, DEF 
+
+5000 
+
+8 – Calls* with 2 unknown procedures 
+
+procedure p; 
+
+Select p such that Calls*(p, _) 
+
+ABC, DEF 
+
+5000 
+
+9 – Calls with 1 param, invalid 
+
+stmt s; 
+
+Select s such that Calls(“DEF”) 
+
+ 
+
+5000 
+
+10 - Calls with 3 param, invalid 
+
+procedure p; 
+
+Select p such that Calls*(p, “ABC”, “GHI”) 
+
+ 
+
+5000 
+
+11 – Calls with wrong param 
+
+variable v; procedure p; 
+
+Select p such that Calls(p, v) 
+
+ 
+
+5000 
+
+ 
+
+NEXT(*): 
+
+1 – Next* with 2 known stmts 
+
+ 
+
+Select BOOLEAN such that Next*(1, 5) 
+
+TRUE 
+
+5000 
+
+2 – Next* with left known, right unknown 
+
+stmt s; 
+
+Select s such that Next*(12, s) 
+
+13, 14, 15, 16, 17, 21 
+
+5000 
+
+3 – Next* with right known, left unknown 
+
+stmt s; 
+
+Select s such that Next*(s, 29) 
+
+22, 24, 25, 26, 27, 28 
+
+5000 
+
+4 – Next* with both unknown 
+
+stmt s1, s2; 
+
+Select <s1, s2> such that Next*(s1, s2) and Parent(s1, s2) 
+
+4 5, 5 6, 5 7, 5 8, 5 9, 11 12, 11 13, 11 14, 11 15, 11 16, 16 17, 11 18, 11 19, 11 20, 22 23, 22 24, 22 25, 22 26, 22 29, 26 27, 26 28 
+
+5000 
+
+5 – Next with 2 known stmts 
+
+ 
+
+Select BOOLEAN such that Next(21, 22) 
+
+FALSE 
+
+5000 
+
+6 – Next with left known, right unknown 
+
+stmt s; 
+
+Select s such that Next(4, s) 
+
+5, 10 
+
+5000 
+
+7 – Next with left unknown, right known 
+
+stmt s; 
+
+Select s such that Next(s, 16) 
+
+15, 17 
+
+5000 
+
+8 – Next with 2 unknown stmts 
+
+stmt s1, s2; 
+
+Select <s1, s2> such that Next(s1, s2) and Follows*(s2, s1) 
+
+ 
+
+5000 
+
+9 – Invalid Next with only one param 
+
+prog_line n; 
+
+Select n such that Next(n) 
+
+ 
+
+5000 
+
+10 – Invalid Next with wrong param 
+
+procedure p; 
+
+Select n such that Next(3, p) 
+
+ 
+
+5000 
+
+11 – Invalid Next, wrong argument 
+
+variable v; stmt s; 
+
+Select s such that Next(s, v) 
+
+ 
+
+5000 
+
+12 – Invalid Next, wrong argument 
+
+procedure p; stmt s; 
+
+Select s such that Next(s, p) 
+
+ 
+
+5000 
+
+13 – Invalid Next, wrong argument 
+
+constant c; stmt s; 
+
+Select s such that Next(s, c) 
+
+ 
+
+5000 
+
+ 
+
+ 
+
+USES:    ADD CALL STATEMENTS 
+
+0 – No clause 
+
+call c1, c2; 
+
+Select <c1, c2> 
+
+(all pairs) 
+
+5000 
+
+1 - Uses for single procedure 
+
+variable v; 
+
+Select v such that Uses ("GHI", v) 
+
+l, spaces, pattern, operator, oops, x 
+
+5000 
+
+2 - Uses for procedure which calls another procedure 
+
+variable v; 
+
+Select v such that Uses ("DEF", v) 
+
+f, good, dog, justiceleague, l, spaces, pattern, operator, oops, x 
+
+5000 
+
+4 - Uses procedure used by variable 
+
+procedure p; 
+
+Select p such that Uses (p, "eew") 
+
+ABC 
+
+5000 
+
+5 - Uses variable _ 
+
+procedure p; 
+
+Select p such that Uses (p, _) 
+
+ABC, DEF, GHI 
+
+5000 
+
+6 - Uses for procedure with variable not in source 
+
+procedure p; 
+
+Select p such that Uses(p, “nonExistent”) 
+
+ 
+
+5000 
+
+7 – Uses for procedure that does not use variable in source 
+
+procedure p; 
+
+Select BOOLEAN such that Uses(“ABC”, “oops”) 
+
+FALSE 
+
+5000 
+
+8 – procedure tuple 
+
+procedure p1, p2; 
+
+Select <p1, p2> 
+
+ 
+
+5000 
+
+9- Uses call statement for single procedure 
+
+variable v; 
+
+Select v such that Uses (21, v) 
+
+l, spaces, pattern, operator, oops, x 
+
+5000 
+
+10 - Uses call statement for procedure which calls another procedure 
+
+variable v; 
+
+Select v such that Uses (6, v) 
+
+f, good, dog, justiceleague, l, spaces, pattern, operator, oops, x 
+
+5000 
+
+11 - Uses variable in call statement 
+
+call c; 
+
+Select c such that Uses (c, "oops") 
+
+1, 17, 21 
+
+5000 
+
+12 - Uses variable _ 
+
+call c; 
+
+Select c such that Uses (c, _) 
+
+1, 6, 17, 21 
+
+5000 
+
+13 - Uses for call statement with variable not in source 
+
+call c; 
+
+Select c such that Uses(c, “nonExistent”) 
+
+ 
+
+5000 
+
+14 – Uses for call statement that does not use variable in source 
+
+call c; 
+
+Select BOOLEAN such that Uses(6, “oops”) 
+
+FALSE 
+
+5000 
+
+15 - Uses invalid string statement 
+
+variable v; 
+
+Select v such that Uses ("6", v) 
+
+ 
+
+5000 
+
+16 – Uses, invalid number of params, too few params 
+
+variable v; 
+
+Select v such that Uses(v) 
+
+ 
+
+5000 
+
+17 – Uses, invalid number of params, too many params 
+
+variable v; 
+
+Select v such that Uses(“6”, v, v, v, v, v, v, v) 
+
+ 
+
+5000 
+
+ 
+
+MODIFIES: ADD CALL STATEMENTS 
+
+1 - 1st param assign 
+
+assign a; 
+
+Select a such that Modifies(a, “b”) 
+
+3, 12, 18 
+
+5000 
+
+2 – 1st param read 
+
+read r; 
+
+Select r such that Modifies (r, “p”) 
+
+27 
+
+5000 
+
+3 – 1st param procedure 
+
+procedure p; 
+
+Select p such that Modifies (p, "b") 
+
+ABC, DEF 
+
+5000 
+
+4 - 1st param while 
+
+while w; 
+
+Select w such that Modifies(w, “oops”) 
+
+4, 16, 26 
+
+5000 
+
+5 – 1st param if 
+
+if ifs; 
+
+Select ifs such that Modifies(ifs, “eew”) 
+
+5 
+
+5000 
+
+6 – 1st param call 
+
+call c; 
+
+Select c such that Modifies(c, “quick”) 
+
+1, 6, 17, 21 
+
+5000 
+
+7 – 1st param statement 
+
+stmt s; 
+
+Select s such that Modifies(s, “justiceleague”) 
+
+4, 5, 6, 11, 19 
+
+5000 
+
+8 – 1st param proc name, select variable 
+
+variable v; 
+
+Select v such that Modifies(“DEF”, v) 
+
+b, good, horrible, justiceleague, me, you, oops, p, quick, red 
+
+5000 
+
+9 – 1st param statement number with valid relationship, select variable 
+
+variable v; 
+
+Select v such that modifies(19, v) 
+
+justiceleague 
+
+5000 
+
+10 – 1st param statement number with incorrect relationship, select variable 
+
+variable v; 
+
+Select v such that Modifies (20, v) 
+
+ 
+
+5000 
+
+11 – 1st param print with incorrect relationship, select print 
+
+Print pn; 
+
+Select pn such that Modifies(pn, “eew”) 
+
+ 
+
+5000 
+
+12 – 2nd param not variable name or variable synonym 
+
+assign a; call c; 
+
+Select a such that Modifies(a, c) 
+
+ 
+
+5000 
+
+13 – Invalid, only 1 parameter 
+
+assign a; 
+
+Select a such that Modifies(a) 
+
+ 
+
+5000 
+
+14 – Invalid, more than 1 parameter 
+
+assign a; 
+
+Select a such that Modifies(a, “red”, a) 
+
+ 
+
+5000 
+
+15 - Call statement modifies 
+
+variable v; 
+
+Select v such that Modifies (1, v) 
+
+me, you, oops, p, quick, red 
+
+5000 
+
+16 - Call procedure which calls procedure modifies 
+
+variable v; 
+
+Select v such that Modifies (6, v) 
+
+b, good, horrible, justiceleague, me, you, oops, p, quick, red 
+
+5000 
+
+17 - Calls which modify variables 
+
+call cl; 
+
+Select cl such that Modifies (cl, _) 
+
+1, 6, 17, 21 
+
+5000 
+
+18 – Procedure that modifies variable  
+
+variable v; 
+
+Select v such that Modifies ("ABC", v) 
+
+this, b, eew, wee, that, good, horrible, justiceleague, me, you, oops, p, quick, red 
+
+5000 
+
+ 
+
+MULTIPLE CLAUSES: ADD MORE OF EACH CASE 
+
+ 
+
+1 - multiple such that with no common synonym 
+while w; if ifs; 
+
+Select <w, ifs> such that Follows(4,10) and Parent(ifs, w) 
+
+16 11, 26 22 
+
+5000 
+
+2 – multiple such that with 3 common synonyms in each relationship 
+
+stmt s; assign a; while w; 
+
+Select w such that Parent(w, s) and Follows*(w, a) and Follows(s, a) 
+
+4, 26 
+
+5000 
+
+3 - multiple pattern with no common synonym 
+
+assign a1, a2; Select BOOLEAN pattern a1 ("eew"," wee   ") and a2(_, _"c  +1"_) 
+TRUE 
+
+5000 
+
+4 – multiple pattern with 1 common synonym 
+
+assign a1, a2; variable v; 
+
+Select <a1, v, a2> pattern a1 (v, _“2”_) and a2 (v, _) 
+
+7 eew 8, 28 oops 25, 28 oops 28  
+
+5000 
+
+5 - multiple such that then pattern with 1 common synonyms 
+
+stmt s; assign a; 
+
+Select s such that Follows*(a, s) and Parent*(22, a) pattern a (“     oops”, _) 
+
+26, 29 
+
+5000 
+
+6 - multiple pattern then such that with 2 common synonyms 
+
+assign a1, a2; variable v; 
+
+Select <a1, v> pattern a1(_, _"good   "_) and a2(v, _) such that Follows*(a1, a2) 
+
+14 horrible 
+
+5000 
+
+7 – multiple clauses, invalid use of and 
+
+stmt s; assign a; 
+
+Select s such that Follows*(a, s) and Parent*(22, a) and pattern a (“     oops”, _) 
+
+ 
+
+5000 
+
+Page Break
+ 
+
+COMPLEX SOURCE  
+
+procedure procedure { 
+
+one = 1 + one; 
+
+while (((two == 2 * (two + two) - two) || (two == 2)) && (two == 2)) { 
+
+if ((three != 3) || (three == three)) then { 
+
+four = 4 + four; 
+
+while (!(five == (five + 5))) { 
+
+print six; 
+
+if ((seven != seven) && (seven != 7)) then { 
+
+eight = 8 + eight; 
+
+call proc1; 
+
+read ten; 
+
+} else { 
+
+eleven = 11 + eleven; 
+
+call proc2; 
+
+thirteen = 13 + thirteen; 
+
+} 
+
+} 
+
+call proc3; 
+
+fifteen = 15 + fifteen; 
+
+} else { 
+
+sixteen = 16 + sixteen; 
+
+call proc4; 
+
+} 
+
+eighteen = 18 + eighteen; 
+
+call proc5; 
+
+} 
+
+read twenty; 
+
+} 
+
+ 
+
+procedure proc1 { 
+
+twentyone = 21; 
+
+while (twentytwo == twentytwo) { 
+
+call proc2; 
+
+if(twentyfour != twentyfour) then { 
+
+call proc3; 
+
+} else { 
+
+call proc4; 
+
+while (twentyseven == 27) { 
+
+while (twentyeight == 28) { 
+
+call proc5; 
+
+} 
+
+if (thirty == 30) then { 
+
+thirtyone = 31; 
+
+thirtytwo = 32; 
+
+} else { 
+
+thirtythree = 33; 
+
+thirtyfour = 34; 
+
+} 
+
+} 
+
+thirtyfive = 35; 
+
+} 
+
+if (thirtysix == 36) then { 
+
+call proc5; 
+
+} else { 
+
+call proc6; 
+
+} 
+
+} 
+
+thirtynine = 39; 
+
+forty = 40; 
+
+} 
+
+ 
+
+procedure proc2 { 
+
+if ((!(fortyone == 41) && (41 == fortyone))) then { 
+
+if (fortytwo == 42) then { 
+
+call proc4; 
+
+} else { 
+
+if (fortyfour == 44) then { 
+
+fortyfive = 45; 
+
+} else { 
+
+if (fortysix == 46) then { 
+
+call proc6; 
+
+} else { 
+
+call proc6; 
+
+} 
+
+} 
+
+} 
+
+} else { 
+
+call proc4; 
+
+fifty = 50; 
+
+} 
+
+} 
+
+ 
+
+procedure proc3 { 
+
+if (fiftyone == 51) then { 
+
+if (fiftytwo != 52) then { 
+
+if (fiftythree == 53) then { 
+
+if (fiftyfour == 54) then { 
+
+call proc6; 
+
+} else { 
+
+fiftysix = 56; 
+
+} 
+
+} else { 
+
+fiftyseven = 57; 
+
+} 
+
+} else { 
+
+fiftyeight = 58; 
+
+} 
+
+} else { 
+
+fiftynine = 59; 
+
+} 
+
+sixty = 60; 
+
+} 
+
+ 
+
+procedure proc4 { 
+
+while (sixtyone == 61) { 
+
+while (sixtytwo == 62) { 
+
+while (sixtythree == 63) { 
+
+while (sixtyfour == 64) { 
+
+sixtyfive = 65; 
+
+read sixtysix; 
+
+read sixtyseven; 
+
+read sixtyeight; 
+
+read sixtynine; 
+
+read seventy; 
+
+} 
+
+} 
+
+} 
+
+} 
+
+} 
+
+ 
+
+procedure proc5 { 
+
+if (seventyone == 71) then { 
+
+Seventytwo = 72; 
+
+} else { 
+
+while (73 == seventythree) { 
+
+if (74 == seventyfour) then { 
+
+if (75 == seventyfive) then { 
+
+seventysix = 76; 
+
+} else { 
+
+seventyseven = 77; 
+
+} 
+
+} else { 
+
+seventyeight = 78; 
+
+} 
+
+} 
+
+Seventynine = 79; 
+
+} 
+
+eighty = 80; 
+
+} 
+
+ 
+
+procedure proc6 { 
+
+eightyone = (81 % 81 / 81 + 81) * 81 - (81 * 81); 
+
+eightytwo = (82 * 82) 
+
+eightythree = 83 - 81 + (81 * 81); 
+
+eightyfour = 84*(81*81); 
+
+eightyfive = 85+ 82 * 82; 
+
+eigthtysix = 86-86; 
+
+eightyseven = 87+87; 
+
+eigthyeight = 88/88; 
+
+eightynine = 89%89; 
+
+} 
+
+ 
+
+procedure caller { 
+
+call callee; 
+
+} 
+
+ 
+
+procedure callee { 
+
+call print; 
+
+call read; 
+
+} 
+
+ 
+
+procedure print { 
+
+print if; 
+
+print while; 
+
+print read; 
+
+print procedure; 
+
+print assignment; 
+
+print call; 
+
+print print; 
+
+print Uses; 
+
+} 
+
+ 
+
+procedure read { 
+
+read if; 
+
+read while; 
+
+read read; 
+
+read procedure; 
+
+read assignment; 
+
+read call; 
+
+read print; 
+
+read Modifies; 
+
+read Parent; 
+
+read Patterns 
+
+}
+Page Break
+ 
+
+1 – Testing tuples and multiple synonyms and multiple and (next and parent) 
+
+stmt s1; while w; assign a; 
+
+Select s1 such that Parent(w, s1) and Next(s1, w) and Next(a, s1) 
+
+19 
+
+5000 
+
+2 – Testing one common synonym and multiple "and” and Uses 
+
+stmt s1, s2; variable v; 
+
+Select <s1, v> such that Uses(“proc1”, v) and Uses(“proc2”, v) and Uses(s1, v) and Uses(s2, v) 
+
+41 fortyone, 42 fortytwo, 44 fortyfour, 46 fortysix, 61 sixtyone, 62 sixtytwo, 63 sixtythree, 64 sixtyfour 
+
+5000 
+
+3 – Testing tuples with triangular Calls relationship 
+
+procedure p1, p2, p3; 
+
+Select <p1, p2, p3> such that Calls(p1, p2) and Calls(p2, p3) and Calls(p1, p3) 
+
+procedure proc1 proc2, procedure proc1 proc3, procedure proc1 proc4, procedure proc1 proc5, procedure proc2 proc4, procedure proc2 proc6, proc1 proc2 proc4, proc1 proc2 proc6, proc1 proc3 proc6 
+
+5000 
+
+4 – Testing multiple common synonyms and multiple and (next and parent) 
+
+stmt s1; while w; 
+
+Select s1 such that Parent(w, s1) and Next(s1, w) and Next(w, s1) 
+
+29, 62, 63, 64 
+
+5000 
+
+5 – Testing multiple ands and whether parent of call stmts are updated with Uses 
+
+while w; if ifs; 
+
+Select ifs such that Parent(w, ifs) and Uses(ifs, “seventyfour”) 
+
+36, 74  
+
+5000 
+
+6 – Testing NO common synonym and multiple "and” and Uses 
+
+stmt s1, s2; variable v; 
+
+Select s1 such that Uses(“proc1”, v) and Uses(“proc2”, v) and Uses(s1, v) and Uses(s2, v) 
+
+41, 42, 44, 46, 61, 62, 63, 64 
+
+5000 
+
+7 – Testing multiple ands and whether parent of call stmts are updated with Modifies 
+
+while w; if ifs; 
+
+Select ifs such that Parent(w, ifs) and Modifies(ifs, “seventyeight”) 
+
+36, 74  
+
+5000 
+
+8 – Testing combination of all such that and pattern clauses that are currently supported (excluding star) 
+
+procedure p; variable v; assign a; while w; stmt s; 
+
+Select a such that Calls(“proc2”, p) and Modifies(p, v) and Uses(p, v) and Follows(a, s) and Next*(a, a) and Parent(w, a) pattern a(v, _) 
+
+65 
+
+5000 
+
+9 – pattern in tuple with 1 common synonym 
+
+assign a; variable v; 
+
+Select <a, v> pattern a (_, _“ 81 * 81)”_) and a(v, _) 
+
+81 eightyone, 83 eightythree, 84 eightyfour 
+
+5000 
+
+10 – Testing calls stmt and multiple relations 
+
+procedure p; variable v; 
+
+Select v such that Uses(p, v) and Modifies(p, v) and Calls(caller, p) 
+
+if, while, read, procedure, assignment, call print 
+
+5000 

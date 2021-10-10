@@ -1,0 +1,318 @@
+<?xml-stylesheet type="text/xsl" href="analysis.xsl"?>
+<test_results>
+<info>
+<name>tests</name><parsing_time_taken>55.000000</parsing_time_taken>
+</info>
+<queries>
+<query>
+<id ReturnBoolean="1" With="1" CondNum="2" RelNum="0" comment="Find procedure with given name">1</id><querystr><![CDATA[procedure p; Select BOOLEAN with p.procName = "R"]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>66.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" With="1" CondNum="2" RelNum="0" comment="Find procedure with given name">2</id><querystr><![CDATA[procedure p; Select p with p.procName = "P"]]></querystr>
+<stuans>P</stuans>
+<correct>P</correct>
+<time_taken>68.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" With="1" CondNum="2" RelNum="0" comment="Find variable with given variable name">3</id><querystr><![CDATA[variable v; read r; Select r with v.varName = "a"]]></querystr>
+<stuans>1,14,2,3</stuans>
+<correct>1,2,3,14</correct>
+<time_taken>58.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" With="1" CondNum="2" RelNum="0" comment="Find variable with given name">4</id><querystr><![CDATA[variable v; print pt; Select pt with v.varName = "y"]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>53.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" With="1" CondNum="2" RelNum="0" comment="Find call-variable tuple with given name and stmt number">5</id><querystr><![CDATA[variable v; call cl; Select <cl, v> with v.varName = "x" and cl.stmt# = 13]]></querystr>
+<stuans>13 x</stuans>
+<correct>13 x</correct>
+<time_taken>48.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" With="1" CondNum="2" RelNum="0" comment="Find stmt with given number that does not exist">6</id><querystr><![CDATA[stmt s; Select s with s.stmt# = 13 and s.stmt# = 14]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>58.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" With="1" CondNum="2" RelNum="0" comment="Find constant with value">7</id><querystr><![CDATA[constant c; Select c with c.value = 16]]></querystr>
+<stuans>16</stuans>
+<correct>16</correct>
+<time_taken>51.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" With="1" CondNum="2" RelNum="0" comment="Find invalid constant with value">8</id><querystr><![CDATA[constant c; Select c with c.value = "a"]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>67.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" With="1" CondNum="2" RelNum="0" comment="Select stmt by constant value">9</id><querystr><![CDATA[constant c; stmt s; Select s with s.stmt#=c.value]]></querystr>
+<stuans>16,5,7</stuans>
+<correct>5,7,16</correct>
+<time_taken>59.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" With="1" CondNum="2" RelNum="0" comment="Select boolean by assignment stmt number">10</id><querystr><![CDATA[assign a; Select BOOLEAN with a.stmt# = 6]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>52.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" With="1" CondNum="2" RelNum="0" comment="Identifier with Identifier (same)">11</id><querystr><![CDATA[assign a; Select BOOLEAN with "x" = "x"]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>51.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" With="1" CondNum="2" RelNum="0" comment="Identifier with Identifier (diff)">12</id><querystr><![CDATA[assign a; Select BOOLEAN with "y" = "x"]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>64.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" With="1" CondNum="2" RelNum="0" comment="Identifier with Constant">13</id><querystr><![CDATA[assign a; Select a with "x" = 2]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>48.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" UnnamedVar="1" With="1" CondNum="3" RelNum="0" comment="Identifier with Progline">14</id><querystr><![CDATA[prog_line n; Select BOOLEAN with "x" = n]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>47.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" With="1" CondNum="2" RelNum="0" comment="Identifier with AttrRef (same type)">15</id><querystr><![CDATA[read r; Select r with "x" = r.varName]]></querystr>
+<stuans>14</stuans>
+<correct>14</correct>
+<time_taken>49.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" With="1" CondNum="2" RelNum="0" comment="Identifier with AttrRef (diff type)">16</id><querystr><![CDATA[read r; Select r with "x" = r.stmt#]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>51.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" With="1" CondNum="2" RelNum="0" comment="Constant with Identifier">17</id><querystr><![CDATA[read r; Select r with 1 = "abc"]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>52.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" With="1" CondNum="2" RelNum="0" comment="Constant with Constant (same)">18</id><querystr><![CDATA[read r; Select r with 1 = 12]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>48.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" With="1" CondNum="2" RelNum="0" comment="Constant with Constant (diff)">19</id><querystr><![CDATA[read r; Select r with 12 = 12]]></querystr>
+<stuans>1,14,2,3</stuans>
+<correct>1,2,3,14</correct>
+<time_taken>64.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" With="1" CondNum="3" RelNum="0" comment="Constant with Progline">20</id><querystr><![CDATA[prog_line n; Select n with 12 = n]]></querystr>
+<stuans>12</stuans>
+<correct>12</correct>
+<time_taken>49.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" With="1" CondNum="2" RelNum="0" comment="Constant with AttrRef (same type)">21</id><querystr><![CDATA[print pt; Select pt with 12 = pt.stmt#]]></querystr>
+<stuans>12</stuans>
+<correct>12</correct>
+<time_taken>48.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" With="1" CondNum="2" RelNum="0" comment="Constant with AttrRef (diff type)">22</id><querystr><![CDATA[print pt; Select pt with 12 = pt.varName]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>51.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" With="1" CondNum="3" RelNum="0" comment="Progline with String">23</id><querystr><![CDATA[prog_line n; Select n with n = "x"]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>59.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" With="1" CondNum="3" RelNum="0" comment="Progline with Constant">24</id><querystr><![CDATA[prog_line n; Select n with n = 3]]></querystr>
+<stuans>3</stuans>
+<correct>3</correct>
+<time_taken>55.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" With="1" CondNum="3" RelNum="0" comment="Progline with Constant (does not exist)">25</id><querystr><![CDATA[prog_line n; Select n with n = 100]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>56.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" With="1" CondNum="3" RelNum="0" comment="Progline with Progline (same)">26</id><querystr><![CDATA[prog_line n; Select n with n = n]]></querystr>
+<stuans>1,10,11,12,13,14,15,16,17,18,19,2,20,21,3,4,5,6,7,8,9</stuans>
+<correct>1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21</correct>
+<time_taken>53.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" With="1" CondNum="3" RelNum="0" comment="Progline with Progline (diff)">27</id><querystr><![CDATA[prog_line n, n1; Select n with n = n1]]></querystr>
+<stuans>1,10,11,12,13,14,15,16,17,18,19,2,20,21,3,4,5,6,7,8,9</stuans>
+<correct>1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21</correct>
+<time_taken>58.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" With="1" CondNum="3" RelNum="0" comment="Progline with AttrRef (same type)">28</id><querystr><![CDATA[prog_line n; call cl; Select n with n = cl.stmt#]]></querystr>
+<stuans>10,13,4</stuans>
+<correct>4,10,13</correct>
+<time_taken>52.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" With="1" CondNum="3" RelNum="0" comment="Progline with AttrRef (diff type)">29</id><querystr><![CDATA[prog_line n; call cl; Select n with n = cl.varName]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>52.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" With="1" CondNum="2" RelNum="0" comment="AttrRef with String (same type)">30</id><querystr><![CDATA[print pt; Select pt with pt.varName = "b"]]></querystr>
+<stuans>12,7</stuans>
+<correct>7,12</correct>
+<time_taken>52.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" With="1" CondNum="2" RelNum="0" comment="AttrRef with String (diff type)">31</id><querystr><![CDATA[print pt; Select pt with pt.stmt# = "b"]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>54.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" With="1" CondNum="2" RelNum="0" comment="AttrRef with Const (same type)">32</id><querystr><![CDATA[print pt; Select pt with pt.stmt# = 21]]></querystr>
+<stuans>21</stuans>
+<correct>21</correct>
+<time_taken>54.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" With="1" CondNum="2" RelNum="0" comment="AttrRef with Const (diff type)">33</id><querystr><![CDATA[print pt; Select pt with pt.varName = 21]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>53.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" With="1" CondNum="3" RelNum="0" comment="AttrRef with Progline (same type)">34</id><querystr><![CDATA[print pt; prog_line n; Select pt with pt.stmt# = n]]></querystr>
+<stuans>12,21,7</stuans>
+<correct>7,12,21</correct>
+<time_taken>52.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" With="1" CondNum="3" RelNum="0" comment="AttrRef with Progline (diff type)">35</id><querystr><![CDATA[print pt; prog_line n; Select pt with pt.varName = n]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>62.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" With="1" CondNum="2" RelNum="0" comment="AttrRef with AttrRef (same type)">36</id><querystr><![CDATA[print pt; read rd; Select pt with pt.varName = rd.varName]]></querystr>
+<stuans>12,21,7</stuans>
+<correct>7,12,21</correct>
+<time_taken>55.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" With="1" CondNum="2" RelNum="0" comment="AttrRef with AttrRef (diff type)">37</id><querystr><![CDATA[print pt; Select pt with pt.varName = pt.stmt#]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>57.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" With="1" CondNum="2" RelNum="0" comment="AttrRef with AttrRef (diff type)">38</id><querystr><![CDATA[print pt; const c; Select pt with pt.stmt# = c.value and 7 = c]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>65.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" With="1" CondNum="3" RelNum="0" comment="Multiple with restriction">39</id><querystr><![CDATA[prog_line n; read rd; Select n with n = 3 and n = rd.stmt#]]></querystr>
+<stuans>3</stuans>
+<correct>3</correct>
+<time_taken>58.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" With="1" CondNum="2" RelNum="0" comment="Multiple with restriction">40</id><querystr><![CDATA[stmt s; constant c; assign a; Select s with s.stmt# = c.value and a.stmt# = s.stmt#]]></querystr>
+<stuans>16,5</stuans>
+<correct>5,16</correct>
+<time_taken>61.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" With="1" CondNum="3" RelNum="0" comment="Multiple with one clause no answer">41</id><querystr><![CDATA[prog_line n; variable v; procedure p; Select n with v.varName = p.procName and n = 2]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>67.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" With="1" CondNum="3" RelNum="0" comment="Multiple with one clause invalid">42</id><querystr><![CDATA[prog_line n; assign a; Select n with 10 = n and a = 6]]></querystr>
+<stuans>10</stuans>
+<correct></correct>
+<time_taken>56.000000</time_taken>
+<failed>
+<missing></missing>
+<additional>10</additional>
+<summary>
+<expected>0</expected>
+<matched>0</matched>
+<missing>0</missing>
+<additional>1</additional>
+</summary>
+</failed>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" With="1" CondNum="3" RelNum="0" comment="Multiple with no answer">43</id><querystr><![CDATA[prog_line n; read rd; stmt s; print pt; Select rd with s.stmt# = rd.stmt# and n.stmt# = pt.stmt# and rd.stmt# = pt.stmt#]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>56.000000</time_taken>
+<passed/>
+</query>
+</queries>
+</test_results>

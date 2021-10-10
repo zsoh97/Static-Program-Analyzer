@@ -1,0 +1,90 @@
+1 - 1st param assign
+assign a;
+Select a such that Modifies(a, "b")
+3, 12, 18
+5000
+2 - 1st param read
+read r;
+Select r such that Modifies (r, "p")
+27
+5000
+3 - 1st param procedure
+procedure p;
+Select p such that Modifies (p, "b")
+ABC, DEF
+5000
+4 - 1st param while
+while w;
+Select w such that Modifies(w, "oops")
+4, 16, 26
+5000
+5 - 1st param if
+if ifs;
+Select ifs such that Modifies(ifs, "eew")
+5
+5000
+6 - 1st param call
+call c;
+Select c such that Modifies(c, "quick")
+1, 6, 17, 21
+5000
+7 - 1st param statement
+stmt s;
+Select s such that Modifies(s, "justiceleague")
+4, 5, 6, 11, 19
+5000
+8 - 1st param proc name, select variable
+variable v;
+Select v such that Modifies("DEF", v)
+b, good, horrible, justiceleague, me, you, oops, p, quick, red
+5000
+9 - 1st param statement number with valid relationship, select variable
+variable v;
+Select v such that Modifies(19, v)
+justiceleague
+5000
+10 - 1st param statement number with incorrect relationship, select variable
+variable v;
+Select v such that Modifies (20, v)
+
+5000
+11 - 1st param print with incorrect relationship, select print
+print pn;
+Select pn such that Modifies(pn, "eew")
+
+5000
+12 - 2nd param not variable name or variable synonym
+assign a; call c;
+Select a such that Modifies(a, c)
+
+5000
+13 - Invalid, only 1 parameter
+assign a;
+Select a such that Modifies(a)
+
+5000
+14 - Invalid, more than 1 parameter
+assign a;
+Select a such that Modifies(a, "red", a)
+
+5000
+15 - Call statement modifies
+variable v;
+Select v such that Modifies (1, v)
+me, you, oops, p, quick, red
+5000
+16 - Call procedure which calls procedure modifies
+variable v;
+Select v such that Modifies (6, v)
+b, good, horrible, justiceleague, me, you, oops, p, quick, red
+5000
+17 - Calls which modify variables
+call cl;
+Select cl such that Modifies (cl, _)
+1, 6, 17, 21
+5000
+18 - Calls with
+variable v;
+Select v such that Modifies ("ABC", v)
+this, b, eew, wee, that, good, horrible, justiceleague, me, you, oops, p, quick, red
+5000

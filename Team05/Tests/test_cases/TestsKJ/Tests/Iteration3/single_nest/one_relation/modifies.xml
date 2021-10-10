@@ -1,0 +1,85 @@
+<?xml-stylesheet type="text/xsl" href="analysis.xsl"?>
+<test_results>
+<info>
+<name>tests</name><parsing_time_taken>128.000000</parsing_time_taken>
+</info>
+<queries>
+<query>
+<id ReturnTuple="1" Modifies="1" SuchThat="1" CondNum="3" RelNum="1" comment="Select variable modified in if container">1</id><querystr><![CDATA[variable v; if ifs; Select v such that Modifies (ifs, v)]]></querystr>
+<stuans>a,c,x</stuans>
+<correct>a,c,x</correct>
+<time_taken>44.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Modifies="1" SuchThat="1" CondNum="3" RelNum="1" comment="Select variable modified in while container">2</id><querystr><![CDATA[variable v; while w; Select v such that Modifies (w, v)]]></querystr>
+<stuans>a,c</stuans>
+<correct>a,c</correct>
+<time_taken>55.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Modifies="1" SuchThat="1" CondNum="3" RelNum="1" comment="Select stmt modifies certain variable">3</id><querystr><![CDATA[stmt s; Select s such that Modifies (s, "z")]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>57.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Modifies="1" SuchThat="1" CondNum="3" RelNum="1" comment="Select variable modified in specified stmt">4</id><querystr><![CDATA[variable v; Select v such that Modifies (4, v)]]></querystr>
+<stuans>a,b,c,k,x</stuans>
+<correct>a,b,c,k,x</correct>
+<time_taken>51.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Modifies="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Select assign modifies any variable">5</id><querystr><![CDATA[assign a; Select a such that Modifies (a, _)]]></querystr>
+<stuans>10,11,12,14,15,16,19,20,21,22,24,25,26,28,5,6,7,8</stuans>
+<correct>10,11,12,14,15,16,19,20,21,22,24,25,26,28,5,6,7,8</correct>
+<time_taken>51.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Modifies="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid query">6</id><querystr><![CDATA[assign a; Select a such that Modifies (_, a)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>51.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Modifies="1" UnnamedVar="1" Pattern="1" SuchThat="1" CondNum="5" RelNum="1" comment="Select variable inside if container with certain assignment pattern">7</id><querystr><![CDATA[if ifs; assign a; variable v; Select v such that Modifies (ifs, v) pattern a (v, _"x"_)]]></querystr>
+<stuans>x</stuans>
+<correct>x</correct>
+<time_taken>49.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Modifies="1" UnnamedVar="1" Pattern="1" SuchThat="1" CondNum="5" RelNum="1" comment="Select assign with certain pattern inside if container that doesn't exist">8</id><querystr><![CDATA[if ifs; assign a; variable v; Select a such that Modifies (ifs, v) pattern a (v, _"x"_)]]></querystr>
+<stuans>10,19</stuans>
+<correct>10,19</correct>
+<time_taken>60.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Modifies="1" UnnamedVar="1" Pattern="1" SuchThat="1" CondNum="5" RelNum="1" comment="Select variable modified in while container with pattern">9</id><querystr><![CDATA[while w; assign a; variable v; Select v such that Modifies (w, v) pattern a (v, _"x"_)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>51.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Modifies="1" UnnamedVar="1" Pattern="1" SuchThat="1" CondNum="5" RelNum="1" comment="Select variable modified in assign with pattern">10</id><querystr><![CDATA[assign a; variable v; Select v such that Modifies (a, v) pattern a (v, _"x"_)]]></querystr>
+<stuans>x,k</stuans>
+<correct>k,x</correct>
+<time_taken>73.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Modifies="1" UnnamedVar="3" Pattern="1" SuchThat="1" CondNum="7" RelNum="1" comment="Select while that modifies a variable if pattern is true">11</id><querystr><![CDATA[while w; assign a; Select w such that Modifies (w, _) pattern a (_, _"x"_)]]></querystr>
+<stuans>13,23</stuans>
+<correct>13,23</correct>
+<time_taken>56.000000</time_taken>
+<passed/>
+</query>
+</queries>
+</test_results>

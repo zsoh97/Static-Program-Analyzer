@@ -1,0 +1,50 @@
+procedure PR0C1 {
+    print assign;  #01
+    if ((aa != variable) || (cc == if)) then {  #02
+        read assign;  #03
+    } else {
+        aa = if - (constant / 22) * 11 % 22;  #04
+    }
+    while (!(cc != 22)) {  #05
+        cc = cc - 33;  #06
+        read cc;  #07
+        if ((cc > if) && ((0 < bb) || (cc + 33 == 22))) then {  #08
+            bb = if;  #09
+            read aa;  #10
+        } else {
+            bb = while;  #11
+            print bb;  #12
+        }
+    }
+    cc = variable - 2;  #13
+    if ((cc % bb + 0 * assign <= aa * bb) || (constant >= 22)) then {  #14
+        call call;  #15
+    } else {
+        call procedure;  #16
+    }
+    read call;  #17
+}
+
+procedure   procedure     {
+    if      ((stmt   -   read    +   print   *   call    /   while   %   if - assign + variable * constant / 1) ==     0) then {  #18
+        print       call;  #19
+        read        stmt;  #20
+    }       else        {
+        while       (if   !=  if)   {  #21
+            read        read;  #22
+            print       print;  #23
+        }
+    }
+    bb  =   if     +   (11  *   bb) %   (   aa - 22 )    %   cc  +   22;  #24
+}
+
+procedure call {
+    read while;  #25
+    while(((if==while)&&(!(stmt!=constant)))||(read>=print)){  #26
+        read variable;  #27
+        print constant;  #28
+        call procedure;  #29
+    }
+    constant=(if/print)%(read*(11-if)%if)*assign;  #30
+    print print;  #31
+}

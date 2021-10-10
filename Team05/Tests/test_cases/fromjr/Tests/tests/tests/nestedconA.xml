@@ -1,0 +1,162 @@
+<?xml-stylesheet type="text/xsl" href="analysis.xsl"?>
+<test_results>
+<info>
+<name>tests</name><parsing_time_taken>872.000000</parsing_time_taken>
+</info>
+<queries>
+<query>
+<id Affects="1" ReturnBoolean="1" SuchThat="1" CondNum="3" RelNum="1" comment="Affects single clause (num, num)">45</id><querystr><![CDATA[stmt s; Select BOOLEAN such that Affects (22, 39)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>130.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" SuchThat="1" CondNum="3" RelNum="1" comment="Affects single clause (num, s)">46</id><querystr><![CDATA[stmt s; Select s such that Affects (2, s)]]></querystr>
+<stuans>10,11,18,57,61</stuans>
+<correct>18,10,11,57,61</correct>
+<time_taken>166.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id Affects="1" ReturnBoolean="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Affects single clause (_, num)">47</id><querystr><![CDATA[ Select BOOLEAN such that Affects (_, 1)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>125.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Affects single clause (s, _)">48</id><querystr><![CDATA[assign a; Select a such that Affects (a, _)]]></querystr>
+<stuans>1,10,16,18,19,2,20,21,22,27,32,33,35,36,38,39,43,45,57,58,59,66,9</stuans>
+<correct>21,18,10,9,36,1,35,2,16,19,20,57,22,27,32,33,38,39,43,45,58,59,66</correct>
+<time_taken>103.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="2" SuchThat="1" CondNum="5" RelNum="1" comment="Affects single clause (_, _)">49</id><querystr><![CDATA[variable v; Select v such that Affects (_, _)]]></querystr>
+<stuans>a,b,c,d,e,i,x,y,z</stuans>
+<correct>a,b,c,d,e,i,x,y,z</correct>
+<time_taken>96.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" SuchThat="1" CondNum="3" RelNum="1" comment="Affects single clause (s, s)">50</id><querystr><![CDATA[stmt s; Select s such that Affects (s, s)]]></querystr>
+<stuans>20,32</stuans>
+<correct>20,32</correct>
+<time_taken>97.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" Followsstar="1" UnnamedVar="1" SuchThat="1" CondNum="5" RelNum="2" comment="Affects multi clause (_, s)">51</id><querystr><![CDATA[stmt s; Select s such that Affects (_, s) and Follows* (s, 68)]]></querystr>
+<stuans>67</stuans>
+<correct>67</correct>
+<time_taken>84.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="1" SuchThat="1" With="1" CondNum="5" RelNum="1" comment="Affects multi clause (n, s)">52</id><querystr><![CDATA[prog_line n; assign a; Select <n, a> such that Affects(n, a) with n = a.stmt#]]></querystr>
+<stuans>20 20,32 32</stuans>
+<correct>32 32,20 20</correct>
+<time_taken>92.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="2" Uses="1" Pattern="1" SuchThat="1" With="1" CondNum="8" RelNum="2" comment="Affects multi clause (with, such that, pattern) (s, s)">53</id><querystr><![CDATA[assign a; variable v; stmt s1, s2; Select s1 such that Affects (s1, s2) and Uses(s1, v) with v.varName = "x" pattern a (v, _"a + b"_)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>89.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" Uses="2" SuchThat="1" CondNum="5" RelNum="3" comment="Affects multi clause (with, such that, pattern) (s, s)">54</id><querystr><![CDATA[print pn; assign a; variable v; if ifs; stmt s; Select <s, pn> such that Affects (s1, s2) and Uses(s2, v) and Uses (pn, v)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>73.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="1" SuchThat="1" With="1" CondNum="5" RelNum="1" comment="Affects multi clause (multi with) (_, s)">55</id><querystr><![CDATA[read re; variable v; stmt s; Select v such that Affects (_, s) with v.varName = re.varName and s.stmt# = re.stmt#]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>80.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="4" Pattern="3" SuchThat="1" CondNum="10" RelNum="1" comment="Affects multi clause (multi pattern)">56</id><querystr><![CDATA[while w; if ifs; assign a; variable v; Select <w.stmt#, ifs.stmt#> such that Affects (a, a) pattern a (v, _) and pattern w (v, _) pattern ifs (v, _, _)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>78.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affectsstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="Affects* single clause (num, s)">57</id><querystr><![CDATA[stmt s; Select s such that Affects* (61, s)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>92.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id Affectsstar="1" ReturnBoolean="1" UnnamedVar="2" SuchThat="1" CondNum="5" RelNum="1" comment="Affects* single clause (_, _)">58</id><querystr><![CDATA[ Select BOOLEAN such that Affects* (_, _)]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>86.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affectsstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="Affects* single clause (s, s)">59</id><querystr><![CDATA[stmt s; Select s such that Affects* (s, s)]]></querystr>
+<stuans>20,32,33,35</stuans>
+<correct>20,32,33,35</correct>
+<time_taken>102.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affectsstar="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Affects* single clause (_, s)">60</id><querystr><![CDATA[stmt s; Select s such that Affects* (_, s)]]></querystr>
+<stuans>10,11,16,18,19,20,21,32,33,35,36,46,48,57,58,59,61,67</stuans>
+<correct>18,21,10,19,20,11,16,32,33,35,36,46,48,57,58,59,61,67</correct>
+<time_taken>101.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affectsstar="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Affects* single clause (num, _)">61</id><querystr><![CDATA[variable v; Select v such that Affects* (30, _)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>83.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affectsstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="Affects* single clause (num, num)">62</id><querystr><![CDATA[stmt s; Select s such that Affects* (16, 61)]]></querystr>
+<stuans>1,10,11,12,13,14,15,16,17,18,19,2,20,21,22,23,24,25,26,27,28,29,3,30,31,32,33,34,35,36,37,38,39,4,40,41,42,43,44,45,46,47,48,49,5,50,51,52,53,54,55,56,57,58,59,6,60,61,62,63,64,65,66,67,68,69,7,70,71,72,73,74,8,9</stuans>
+<correct>36,1,35,2,34,3,33,4,5,32,6,31,7,30,8,64,9,10,29,11,28,12,13,14,58,15,59,16,17,18,21,54,19,20,55,22,57,23,56,24,51,25,50,26,53,27,52,37,38,63,39,62,40,41,42,43,44,45,46,47,48,49,60,61,65,66,67,68,69,70,71,72,73,74</correct>
+<time_taken>96.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affectsstar="1" UnnamedVar="2" Pattern="1" SuchThat="1" CondNum="6" RelNum="1" comment="Affects* multi clause">63</id><querystr><![CDATA[prog_line n; assign a; Select n pattern a (_, "a + b + c") such that Affects*(n, a)]]></querystr>
+<stuans>1,16,18,19,2,20,21,22,27,33,35,36,39</stuans>
+<correct>21,18,36,1,22,35,2,16,19,20,27,33,39</correct>
+<time_taken>100.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affectsstar="1" UnnamedVar="2" Uses="1" Pattern="1" SuchThat="1" With="1" CondNum="8" RelNum="2" comment="Affects* multi clause (with, such that, pattern)">64</id><querystr><![CDATA[assign a; stmt s; if ifs; variable v; Select s pattern ifs (v, _, _) such that Affects* (a, s) and Uses (s, v) with s.stmt# = a.stmt#]]></querystr>
+<stuans>20,32,33</stuans>
+<correct>20,33,32</correct>
+<time_taken>93.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affectsstar="1" UnnamedVar="2" SuchThat="1" With="2" CondNum="7" RelNum="1" comment="Affects* multi clause (multi with)">65</id><querystr><![CDATA[read re; prog_line n; variable v; constant c; Select <re.stmt#, v.varName, c.value> such that Affects* (_, 15) with re.varName = v.varName with c.value = re.stmt#]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>85.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affectsstar="1" UnnamedVar="4" Pattern="1" SuchThat="1" CondNum="8" RelNum="1" comment="Affects* multi clause (multi pattern)">66</id><querystr><![CDATA[while w; if ifs; assign a; variable v; Select a such that Affects* (a, a) pattern a (v, _) and ifs (v, _, _) and w (v, _)]]></querystr>
+<stuans>32,35</stuans>
+<correct>35,32</correct>
+<time_taken>112.000000</time_taken>
+<passed/>
+</query>
+</queries>
+</test_results>

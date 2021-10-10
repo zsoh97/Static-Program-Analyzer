@@ -1,0 +1,316 @@
+<?xml-stylesheet type="text/xsl" href="analysis.xsl"?>
+<test_results>
+<info>
+<name>tests</name><parsing_time_taken>18.000000</parsing_time_taken>
+</info>
+<queries>
+<query>
+<id ReturnTuple="1" Parentstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="parent* single clause">1</id><querystr><![CDATA[stmt s; Select s such that Parent* (1, s)]]></querystr>
+<stuans>10,11,2,3,4,5,6,7,8,9</stuans>
+<correct>2,3,4,5,6,7,8,9,10,11</correct>
+<time_taken>56.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Parent="1" SuchThat="1" CondNum="3" RelNum="1" comment="parent single clause">2</id><querystr><![CDATA[stmt s; Select s such that Parent (1, s)]]></querystr>
+<stuans>2,3,4,5</stuans>
+<correct>2,3,4,5</correct>
+<time_taken>66.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Parentstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="parent* single clause">3</id><querystr><![CDATA[stmt s; Select s such that Parent* (s, 9)]]></querystr>
+<stuans>1,5,7</stuans>
+<correct>1,5,7</correct>
+<time_taken>58.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Parent="1" SuchThat="1" CondNum="3" RelNum="1" comment="parent single clause">4</id><querystr><![CDATA[stmt s; Select s such that Parent (s, 9)]]></querystr>
+<stuans>7</stuans>
+<correct>7</correct>
+<time_taken>51.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Parentstar="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="wild card parent*">5</id><querystr><![CDATA[stmt s; Select s such that Parent* (s, _)]]></querystr>
+<stuans>1,12,5,7</stuans>
+<correct>1,5,7,12</correct>
+<time_taken>61.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Parent="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="wild card parent">6</id><querystr><![CDATA[stmt s; Select s such that Parent (s, _)]]></querystr>
+<stuans>1,12,5,7</stuans>
+<correct>1,5,7,12</correct>
+<time_taken>42.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Parentstar="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="wild card parent*">7</id><querystr><![CDATA[stmt s; Select s such that Parent* (_, s)]]></querystr>
+<stuans>10,11,13,14,2,3,4,5,6,7,8,9</stuans>
+<correct>2,3,4,5,6,7,8,9,10,11,13,14</correct>
+<time_taken>47.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Parent="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="wild card parent">8</id><querystr><![CDATA[stmt s; Select s such that Parent (_, s)]]></querystr>
+<stuans>10,11,13,14,2,3,4,5,6,7,8,9</stuans>
+<correct>2,3,4,5,6,7,8,9,10,11,13,14</correct>
+<time_taken>58.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Parent="1" UnnamedVar="1" Pattern="1" SuchThat="1" CondNum="5" RelNum="1" comment="such that parent and pattern">9</id><querystr><![CDATA[stmt s; assign a; Select s such that Parent (1, s) pattern a ("x", _"y"_)]]></querystr>
+<stuans>2,3,4,5</stuans>
+<correct>2,3,4,5</correct>
+<time_taken>57.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Parentstar="1" UnnamedVar="1" Pattern="1" SuchThat="1" CondNum="5" RelNum="1" comment="parent and pattern">10</id><querystr><![CDATA[stmt s; assign a; Select s such that Parent* (1, s) pattern a ("x", _"y"_)]]></querystr>
+<stuans>10,11,2,3,4,5,6,7,8,9</stuans>
+<correct>2,3,4,5,6,7,8,9,10,11</correct>
+<time_taken>51.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Follows="1" SuchThat="1" CondNum="3" RelNum="1" comment="single follows clause">11</id><querystr><![CDATA[stmt s; Select s such that Follows (1, s)]]></querystr>
+<stuans>12</stuans>
+<correct>12</correct>
+<time_taken>50.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Follows="1" SuchThat="1" CondNum="3" RelNum="1" comment="single follows clause">12</id><querystr><![CDATA[stmt s, s1; Select s such that Follows (s, s1)]]></querystr>
+<stuans>1,2,3,4,6,8,9</stuans>
+<correct>1,2,3,4,6,8,9</correct>
+<time_taken>47.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Follows="1" SuchThat="1" CondNum="3" RelNum="1" comment="single follows clause">13</id><querystr><![CDATA[stmt s; Select s such that Follows (s, 13)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>42.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Followsstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="single Follows* clause">14</id><querystr><![CDATA[stmt s; Select s such that Follows* (1, s)]]></querystr>
+<stuans>12</stuans>
+<correct>12</correct>
+<time_taken>51.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Followsstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="single Follows* clause">15</id><querystr><![CDATA[stmt s, s1; Select s such that Follows* (s, s1)]]></querystr>
+<stuans>1,2,3,4,6,8,9</stuans>
+<correct>1,2,3,4,6,8,9</correct>
+<time_taken>57.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Followsstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="single Follows* clause">16</id><querystr><![CDATA[stmt s; Select s such that Follows* (s, 10)]]></querystr>
+<stuans>8,9</stuans>
+<correct>8,9</correct>
+<time_taken>51.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" Uses="1" Pattern="1" SuchThat="1" CondNum="5" RelNum="1" comment="such that uses pattern, select partial shared synonym">17</id><querystr><![CDATA[stmt s; variable v; assign a; Select v pattern a (v, _) such that Uses (a, v)]]></querystr>
+<stuans>z</stuans>
+<correct>z</correct>
+<time_taken>52.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Uses="1" SuchThat="1" CondNum="3" RelNum="1" comment="such that uses">18</id><querystr><![CDATA[stmt s; variable v; Select v such that Uses (s, v)]]></querystr>
+<stuans>x,y,z</stuans>
+<correct>z,y,x</correct>
+<time_taken>45.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Modifies="1" UnnamedVar="1" Pattern="1" SuchThat="1" CondNum="5" RelNum="1" comment="pattern such that modifies, select shared synonym">19</id><querystr><![CDATA[stmt s; variable v; assign a; Select a pattern a (v, _) such that Modifies (a, v)]]></querystr>
+<stuans>13,14,3,9</stuans>
+<correct>3,9,13,14</correct>
+<time_taken>45.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Modifies="1" UnnamedVar="1" Pattern="1" SuchThat="1" CondNum="5" RelNum="1" comment="pattern such that modifies, select partial shared synonym">20</id><querystr><![CDATA[stmt s; variable v; assign a; Select a pattern a (v, _) such that Modifies (s, v)]]></querystr>
+<stuans>13,14,3,9</stuans>
+<correct>3,9,13,14</correct>
+<time_taken>52.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Modifies="1" UnnamedVar="1" Pattern="1" SuchThat="1" CondNum="5" RelNum="1" comment="pattern such that modifies, select partial shared synonym">21</id><querystr><![CDATA[stmt s; variable v; assign a; Select s pattern a (v, _) such that Modifies (s, v)]]></querystr>
+<stuans>1,11,12,13,3,4,5,7,14,8,9</stuans>
+<correct>1,3,4,5,7,8,9,11,12,13,14</correct>
+<time_taken>51.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Modifies="1" SuchThat="1" CondNum="3" RelNum="1" comment="modifies single clause">22</id><querystr><![CDATA[stmt s; variable v; Select s such that Modifies (s, "x")]]></querystr>
+<stuans>1,5,7,9</stuans>
+<correct>9,7,5,1</correct>
+<time_taken>45.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="2" Uses="1" Pattern="1" SuchThat="1" CondNum="6" RelNum="1" comment="such that uses pattern, select partial shared synonym">23</id><querystr><![CDATA[stmt s; variable v; assign a; Select s pattern a (v, _"z + 1"_) such that Uses (s, v)]]></querystr>
+<stuans>1,10,5,7,9</stuans>
+<correct>9,10,7,5,1</correct>
+<time_taken>59.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" Uses="1" Pattern="1" SuchThat="1" CondNum="5" RelNum="1" comment="such that uses pattern, select shared synonym">24</id><querystr><![CDATA[stmt s; variable v; assign a; Select v such that Uses (5, v) pattern a (v, _"y"_)]]></querystr>
+<stuans>x</stuans>
+<correct>x</correct>
+<time_taken>52.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" Uses="1" SuchThat="1" CondNum="4" RelNum="1" comment="such that uses single clause">25</id><querystr><![CDATA[stmt s; variable v; Select s such that Uses (s, _)]]></querystr>
+<stuans>1,10,12,13,14,2,3,5,6,7,9</stuans>
+<correct>1,2,3,5,6,7,9,10,12,13,14</correct>
+<time_taken>57.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" Uses="1" SuchThat="1" CondNum="4" RelNum="1" comment="such that uses single clause (semantic error)">26</id><querystr><![CDATA[stmt s; variable v; Select s such that Uses (_, v)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>52.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Modifies="1" SuchThat="1" CondNum="3" RelNum="1" comment="such that modifies single clause">27</id><querystr><![CDATA[stmt s; variable v; Select v such that Modifies (5, v)]]></querystr>
+<stuans>x,y,z</stuans>
+<correct>x,y,z</correct>
+<time_taken>45.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Modifies="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="such that modifies single clause (semantic error)">28</id><querystr><![CDATA[stmt s; variable v; Select s such that Modifies (_, "x")]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>49.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Parentstar="1" UnnamedVar="1" Pattern="1" SuchThat="1" CondNum="5" RelNum="1" comment="such that parent* pattern, select shared synonym">29</id><querystr><![CDATA[stmt s; variable v; assign a; Select a pattern a (v, _) such that Parent* (5, a)]]></querystr>
+<stuans>9</stuans>
+<correct>9</correct>
+<time_taken>48.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Parent="1" UnnamedVar="1" Pattern="1" SuchThat="1" CondNum="5" RelNum="1" comment="such that parent pattern, select partial shared synonym">30</id><querystr><![CDATA[stmt s; variable v; assign a; Select v such that Parent (s, 6) pattern a (v, _"y"_)]]></querystr>
+<stuans>x</stuans>
+<correct>x</correct>
+<time_taken>46.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Parentstar="1" UnnamedVar="1" Pattern="1" SuchThat="1" CondNum="5" RelNum="1" comment="such that parent* pattern, select partial shared synonym">31</id><querystr><![CDATA[stmt s; variable v; assign a; Select s such that Parent* (s, 6) pattern a (v, _"x"_)]]></querystr>
+<stuans>1,5</stuans>
+<correct>1,5</correct>
+<time_taken>41.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Parentstar="1" UnnamedVar="1" Pattern="1" SuchThat="1" CondNum="5" RelNum="1" comment="such that parent* pattern">32</id><querystr><![CDATA[stmt s; variable v; assign a; Select s such that Parent* (s, 9) pattern a ("x", _)]]></querystr>
+<stuans>1,5,7</stuans>
+<correct>1,5,7</correct>
+<time_taken>45.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Parent="1" UnnamedVar="2" Pattern="1" SuchThat="1" CondNum="6" RelNum="1" comment="such that parent* pattern, select partial shared synonym">33</id><querystr><![CDATA[stmt s; variable v; assign a; Select a such that Parent (s, a) pattern a (_, _"x"_)]]></querystr>
+<stuans>13,3</stuans>
+<correct>3,13</correct>
+<time_taken>49.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Parentstar="1" UnnamedVar="1" Pattern="1" SuchThat="1" CondNum="5" RelNum="1" comment="such that parent pattern, select partial shared synonym">34</id><querystr><![CDATA[stmt s; variable v; assign a; Select a pattern a (v, _) such that Parent* (5, a)]]></querystr>
+<stuans>9</stuans>
+<correct>9</correct>
+<time_taken>56.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Parentstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="Parent* (s, s1)">35</id><querystr><![CDATA[stmt s, s1; assign a; Select a such that Parent* (s, s1)]]></querystr>
+<stuans>13,14,3,9</stuans>
+<correct>3,9,13,14</correct>
+<time_taken>55.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Follows="1" UnnamedVar="1" Pattern="1" SuchThat="1" CondNum="5" RelNum="1" comment="Follows, select shared other synonym">36</id><querystr><![CDATA[stmt s; read re; print pn; variable v; assign a; Select re such that Follows (re, a) pattern a ("x", _)]]></querystr>
+<stuans>8</stuans>
+<correct>8</correct>
+<time_taken>51.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Followsstar="1" UnnamedVar="2" Pattern="1" SuchThat="1" CondNum="6" RelNum="1" comment="Follows*, select other synonym">37</id><querystr><![CDATA[stmt s; read re; print pn; variable v; assign a; Select a such that Follows* (a, pn) pattern a (_, _)]]></querystr>
+<stuans>9</stuans>
+<correct>9</correct>
+<time_taken>51.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Follows="1" SuchThat="1" CondNum="3" RelNum="1" comment="Follows, select other synonym">38</id><querystr><![CDATA[stmt s; read re; constant c; assign a; Select s such that Follows (c, a)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>45.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Followsstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="Follows*, select other synonym">39</id><querystr><![CDATA[stmt s; read re; constant c; Select s such that Follows* (c, re)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>50.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Follows="1" SuchThat="1" CondNum="3" RelNum="1" comment="Follows, select other synonym">40</id><querystr><![CDATA[stmt s; read re; variable v; Select v such that Follows (v, s)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>52.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Follows="1" SuchThat="1" CondNum="3" RelNum="1" comment="seman invalid Follows (s,s)">41</id><querystr><![CDATA[if ifs; variable v; stmt s; assign a; Select s such that Follows (s,s)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>53.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Follows="1" SuchThat="1" CondNum="3" RelNum="1" comment="seman invalid Follows with space in between one integer">42</id><querystr><![CDATA[if ifs; variable v; stmt s; assign a; Select s such that Follows (s,1 2)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>54.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Next="1" UnnamedVar="2" SuchThat="1" CondNum="5" RelNum="1" comment="Next">43</id><querystr><![CDATA[prog_line n; Select n such that Next (_, n)]]></querystr>
+<stuans>1,10,11,12,13,14,2,3,4,5,6,7,8,9</stuans>
+<correct>1,2,3,4,5,6,7,8,9,10,11,12,13,14</correct>
+<time_taken>51.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Next*">44</id><querystr><![CDATA[prog_line n; stmt s; Select n such that Next* (n, s)]]></querystr>
+<stuans>1,10,11,12,2,3,4,5,6,7,8,9</stuans>
+<correct>1,2,3,4,5,6,7,8,9,10,11,12</correct>
+<time_taken>65.000000</time_taken>
+<passed/>
+</query>
+</queries>
+</test_results>

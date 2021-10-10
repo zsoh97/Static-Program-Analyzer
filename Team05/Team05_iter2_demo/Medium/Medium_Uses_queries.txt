@@ -1,0 +1,140 @@
+0 - No clause
+call c1, c2;
+Select <c1, c2>
+1 1, 1 6, 1 17,1 21,6 1, 6 6,6 17, 6 21, 17 1, 17 6, 17 17, 17 21, 21 1, 21 6, 21 17, 21 21
+5000
+1 - 1st param assign
+assign a;
+Select a such that Uses(a, "oops")
+28
+5000
+2 - 1st param print
+print p;
+Select p such that Uses(p, "justiceleague")
+20
+5000
+3 - 1st param stmt
+stmt s;
+Select s such that Uses(s, "c")
+4, 5, 7
+5000
+4 - 1st param procedure
+procedure p;
+Select p such that Uses(p, "operator")
+ABC, DEF, GHI
+5000
+5 - 1st param if
+if ifs;
+Select ifs such that Uses(ifs, "c")
+5
+5000
+6 - 1st param while
+while w;
+Select w such that Uses(w, "b")
+4
+5000
+7 - 1st param call
+call c;
+Select c such that Uses(c, "oops")
+1, 6, 17, 21
+5000
+8 - 1st param proc name, select variable
+variable v;
+Select v such that Uses("ABC", v)
+that, b, c, eew, wee, this, f, good, dog, justiceleague, l, h, spaces, pattern, operator, oops, x
+5000
+9 - 1st param with incorrect relationship, select read
+read r;
+Select r such that Uses(r, "justiceleague")
+
+5000
+10 - 2nd param not variable
+print p;
+Select p such that Uses("ABC", p)
+
+5000
+11 - 2nd param not variable name
+
+Select p such that Uses("ABC", "GHI")
+
+5000
+12 - Uses for single procedure
+variable v;
+Select v such that Uses ("GHI", v)
+l, spaces, pattern, operator, oops, x
+5000
+13 - Uses for procedure which calls another procedure
+variable v;
+Select v such that Uses ("DEF", v)
+f, good, dog, justiceleague, l, h, spaces, pattern, operator, oops, x
+5000
+14 - Uses procedure used by variable
+procedure p;
+Select p such that Uses (p, "eew")
+ABC
+5000
+15 - Uses variable _
+procedure p;
+Select p such that Uses (p, _)
+ABC, DEF, GHI
+5000
+16 - Uses for procedure with variable not in source
+procedure p;
+Select p such that Uses(p, "nonExistent")
+
+5000
+17 - Uses for procedure that does not use variable in source
+
+Select BOOLEAN such that Uses("GHI", "eew")
+FALSE
+5000
+18 - procedure tuple
+procedure p1, p2;
+Select <p1, p2>
+ABC ABC, ABC DEF, ABC GHI, DEF ABC, DEF DEF, DEF GHI, GHI ABC, GHI DEF, GHI GHI
+5000
+19 - Uses call statement for single procedure
+variable v;
+Select v such that Uses (21, v)
+l, spaces, pattern, operator, oops, x
+5000
+20 - Uses call statement for procedure which calls another procedure
+variable v;
+Select v such that Uses (6, v)
+f, good, dog, justiceleague, l, h, spaces, pattern, operator, oops, x
+5000
+21 - Uses variable in call statement
+call c;
+Select c such that Uses (c, "oops")
+1, 6, 17, 21
+5000
+22 - Uses variable _
+call c;
+Select c such that Uses (c, _)
+1, 6, 17, 21
+5000
+23 - Uses for call statement with variable not in source
+call c;
+Select c such that Uses(c, "nonExistent")
+
+5000
+24 - Uses for call statement that does not use variable in source
+
+Select BOOLEAN such that Uses(1, "juticeleague")
+FALSE
+5000
+25 - Uses invalid string statement
+variable v;
+Select v such that Uses ("6", v)
+
+5000
+26 - Uses, invalid number of params, too few params
+variable v;
+Select v such that Uses(v)
+
+5000
+27 - Uses, invalid number of params, too many params
+variable v;
+Select v such that Uses("6", v, v, v, v, v, v, v)
+
+5000

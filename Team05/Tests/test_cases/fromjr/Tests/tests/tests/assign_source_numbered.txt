@@ -1,0 +1,47 @@
+procedure branching {
+1     a = 1;
+2     if (x > 2) then {
+3         a = (x + y) / z;
+      } else {
+4         z = 1 / a * c;
+5         y = 1 + y / (x * 4 % z) - 10;
+6         x = 5 * (a - 2 - b / 10) / (123 / 2 / 3);
+      }
+7     z = (a * b / c) - d * ((g - h) + i % j);
+8     read a;
+9     while (y <= z) {
+10        d = b * b + c;
+11        b = a;
+12        a = a + 1;
+13        c = b;
+14        b = b % 2 / a;
+      }
+15    call modifies;
+16    a = y + a;
+}
+
+procedure modifies {
+17    read x;
+18    read y;
+19    read z;
+}
+
+procedure uses {
+20    print a;
+21    print b;
+22    print c;
+}
+
+procedure assign {
+23    a = 1;
+24    a = a + b + c;
+25    b = a + b + c;
+26    c = b - 1;
+27    print c;
+28    a = c * c * c;
+29    call uses;
+30    d = 10 % a;
+31    e = d;
+32    f = e;
+33    f = f / f + f;
+}

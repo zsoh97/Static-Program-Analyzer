@@ -1,0 +1,12 @@
+procedure Example {
+
+ if( x == 2) then {
+   x = 3;
+   x = 4;
+   x = 5;
+ } else {
+   y = 2;
+   y = 3; 
+   y = 4;
+ }
+}

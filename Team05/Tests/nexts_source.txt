@@ -1,0 +1,128 @@
+procedure whileAndIfWithNoStmtAfter {
+    while (x == one) {
+        if ( x == two) then {
+            x = three;
+        } else {
+            x = four;
+        }
+    }
+}
+
+procedure whileWithNoStmtAfterIfWithStmtAfter {
+    while (x == five) {
+        if ( x == six) then {
+            x = seven;
+        } else {
+            x = eight;
+        }
+        x = 9;
+    }
+}
+
+procedure whileWithStmtAfter {
+    while (x == ten) {
+        if ( x == eleven) then {
+            x = twelve;
+        } else {
+            x = thirteen;
+        }
+    }
+    x = fourteen;
+}
+
+procedure ifWithNoStatementAfter {
+    if ( x == 15) then{
+        x = sixteen;
+    } else {
+        x = seventeen;
+    }
+}
+
+procedure ifWithStatementAfter {
+    if ( x == 18) then {
+            x = nineteen;
+        } else {
+            x = 20;}
+            x = twentyone;
+
+}
+
+procedure whileIfWhileNoStmtsAfter {
+    while (x == 22) {
+        if (x == 23) then {
+            while (x == 24) {
+                x = 25;
+            }
+        } else {
+            x = 26;
+        }
+    }
+}
+
+procedure ifIfIf {
+    if (x ==  27) then {
+        if (x == 28) then {
+            x = 29;
+        } else {
+            x = 30;
+        }
+    } else {
+        if (x == 31) then {
+            x = 32;
+        } else {
+            if (x == 33) then {
+                x = 34;
+            } else {
+                x = 35;
+            }
+        }
+    }
+}
+
+procedure whileWhile {
+    while (x == 36) {
+        while (x == 37) {
+            print thirtyeight;
+            read thirtynine;
+            x = 40;
+            call ifIfIf;
+        }
+        print forty2;
+        read forty3;
+        x = 44;
+        call ifIfIf;
+    }
+}
+
+procedure NestedComplex {
+    print fortysix;
+	if(x == 47) then {
+		x = 48;
+		if(x == fortynine) then {
+			call ifIfIf;
+			read fifty1;
+		} else {
+			call ifIfIf;
+			print fifty3;
+		}
+	} else {
+		x = 54;
+		while(fifty5 == fiftyfive) {
+			x = 56;
+			x = 57;
+			call ifIfIf;
+			if(fiftynine == x) then {
+				while( sixty == x ) {
+					call ifIfIf;
+					while (x == sixty2){
+						print sixtythree;
+					}
+				}
+			} else {
+				print sixty4;
+			}
+		}
+		x = 65;
+	}
+	call ifIfIf;
+}

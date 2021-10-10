@@ -1,0 +1,155 @@
+<?xml-stylesheet type="text/xsl" href="analysis.xsl"?>
+<test_results>
+<info>
+<name>iteration-1-tests</name><parsing_time_taken>24.000000</parsing_time_taken>
+</info>
+<queries>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" Pattern="1" CondNum="3" RelNum="0" comment="Valid. Pattern, 1 constant, select while">3001</id><querystr><![CDATA[while w; Select w pattern w("aa",_)]]></querystr>
+<stuans>3</stuans>
+<correct>3</correct>
+<time_taken>42.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" Pattern="1" CondNum="3" RelNum="0" comment="Valid. Pattern, 2 constants, select if">3002</id><querystr><![CDATA[if ifs; Select ifs pattern ifs("aa",_,_)]]></querystr>
+<stuans>1,10</stuans>
+<correct>1,10</correct>
+<time_taken>50.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Pattern="1" CondNum="2" RelNum="0" comment="Valid. Pattern, 2 constants, select assign">3003</id><querystr><![CDATA[assign a1; assign a2; Select a1 pattern a2("bb","aa")]]></querystr>
+<stuans>11,12,4,5,7</stuans>
+<correct>4,5,7,11,12</correct>
+<time_taken>48.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" Pattern="1" CondNum="3" RelNum="0" comment="Valid. Pattern, 1 constant 1 constant wildcard, select assign">3004</id><querystr><![CDATA[assign a; Select a pattern a("aa", _"aa"_)]]></querystr>
+<stuans>4</stuans>
+<correct>4</correct>
+<time_taken>43.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" Pattern="1" CondNum="3" RelNum="0" comment="Valid. Pattern, 1 synonym 1 constant wildcard, select assign">3005</id><querystr><![CDATA[assign a; variable v; Select a pattern a(v, _"aa"_)]]></querystr>
+<stuans>11,4,5,7</stuans>
+<correct>4,5,7,11</correct>
+<time_taken>45.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" Pattern="1" CondNum="3" RelNum="0" comment="Valid. Pattern, 1 synonym 1 constant wildcard, select while">3006</id><querystr><![CDATA[assign a; variable v; while w; Select w pattern a(v, _"aa"_)]]></querystr>
+<stuans>3,8</stuans>
+<correct>3,8</correct>
+<time_taken>44.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" Pattern="1" CondNum="3" RelNum="0" comment="Valid. Pattern, 1 synonym 1 constant wildcard, select if">3007</id><querystr><![CDATA[assign a; variable v; if ifs; Select ifs pattern a(v, _"aa"_)]]></querystr>
+<stuans>1,10</stuans>
+<correct>1,10</correct>
+<time_taken>65.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" Pattern="1" CondNum="3" RelNum="0" comment="Valid. Pattern, 1 synonym 1 constant wildcard, select variable">3008</id><querystr><![CDATA[assign a; variable v; Select v pattern a(v, _"aa"_)]]></querystr>
+<stuans>dd,aa,bb</stuans>
+<correct>aa,bb,dd</correct>
+<time_taken>46.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="2" Pattern="1" CondNum="4" RelNum="0" comment="Valid. Pattern, 1 wildcard 1 constant wildcard, select assign">3009</id><querystr><![CDATA[assign a; variable v; Select a pattern a(_, _"aa"_)]]></querystr>
+<stuans>11,4,5,7</stuans>
+<correct>4,5,7,11</correct>
+<time_taken>59.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="2" Pattern="1" CondNum="4" RelNum="0" comment="Valid. Pattern, 1 wildcard 1 constant wildcard, select while">3010</id><querystr><![CDATA[assign a; variable v; while w; Select w pattern a(_, _"aa"_)]]></querystr>
+<stuans>3,8</stuans>
+<correct>3,8</correct>
+<time_taken>66.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="2" Pattern="1" CondNum="4" RelNum="0" comment="Valid. Pattern, 1 wildcard 1 constant wildcard, select if">3011</id><querystr><![CDATA[assign a; variable v; if ifs; Select ifs pattern a(_, _"aa"_)]]></querystr>
+<stuans>1,10</stuans>
+<correct>1,10</correct>
+<time_taken>52.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="2" Pattern="1" CondNum="4" RelNum="0" comment="Valid. Pattern, 1 wildcard 1 constant wildcard, select variable">3012</id><querystr><![CDATA[assign a; variable v; Select v pattern a(_, _"aa"_)]]></querystr>
+<stuans>aa,bb,cc,dd</stuans>
+<correct>aa,bb,cc,dd</correct>
+<time_taken>56.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="2" Pattern="1" CondNum="4" RelNum="0" comment="Valid. Spacing between expr and underscores">3013</id><querystr><![CDATA[assign a; print p; variable v; Select p pattern a(v, _  "aa"  _)]]></querystr>
+<stuans>6,9</stuans>
+<correct>6,9</correct>
+<time_taken>60.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="2" Pattern="1" CondNum="4" RelNum="0" comment="Valid. Pattern, 2 wildcards">3014</id><querystr><![CDATA[assign a; variable v; Select v pattern a(_, _)]]></querystr>
+<stuans>aa,bb,cc,dd</stuans>
+<correct>aa,bb,cc,dd</correct>
+<time_taken>110.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="2" Pattern="1" CondNum="4" RelNum="0" comment="Invalid. Pattern, underscore within inverted commas">3015</id><querystr><![CDATA[assign a; Select a pattern a(_, "_33_")]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>59.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="2" Pattern="1" CondNum="4" RelNum="0" comment="Invalid. Pattern, expr ends with operator">3016</id><querystr><![CDATA[assign a; Select a pattern a(_, _"33-"_)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>49.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="2" Pattern="1" CondNum="4" RelNum="0" comment="Invalid. Pattern, expr is empty">3017</id><querystr><![CDATA[assign a; Select a pattern a(_, _"-33"_)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>46.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="2" Pattern="1" CondNum="4" RelNum="0" comment="Invalid. Pattern, empty expr">3018</id><querystr><![CDATA[assign a; Select a pattern a(_, _""_)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>46.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="2" Pattern="1" CondNum="4" RelNum="0" comment="Invalid. Pattern, nonexistant constant">3019</id><querystr><![CDATA[assign a; Select a pattern a(_, _"nonexistant"_)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>47.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="2" Pattern="1" CondNum="4" RelNum="0" comment="Invalid. Pattern, double underscores on right">3020</id><querystr><![CDATA[assign a; Select a pattern a(_, __)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>45.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="2" Pattern="1" CondNum="4" RelNum="0" comment="Invalid. Pattern, double underscores on left">3021</id><querystr><![CDATA[assign a; Select a pattern a(__, _)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>45.000000</time_taken>
+<passed/>
+</query>
+</queries>
+</test_results>

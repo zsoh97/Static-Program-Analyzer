@@ -1,0 +1,245 @@
+1 - BOOLEAN without clause
+stmt s; variable v; procedure p; prog_line q;
+Select BOOLEAN
+TRUE
+5000
+2 - BOOLEAN with invalid stmt# clause, without synonym
+stmt s; variable v; procedure p; prog_line q;
+Select BOOLEAN with stmt# = 2
+FALSE
+5000
+3 - Query with group of clauses not related to select synonym
+stmt s, s1, s2; variable v, v1; procedure p; assign a, a1, a2;
+Select s2 such that Follows*(1, s) and Follows*(s, s1) and Parent*(s1, a2) and Uses(s1, v) with v.varName = "call"
+1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99
+5000
+4 - Tuples query with group of clauses related to the select synonym
+stmt s, s1, s2; variable v, v1; procedure p; assign a, a1;
+Select <s, s1> such that Follows*(1, s) and Follows*(s, s1) and Parent*(s1, a) and Uses(s1, v) with v.varName = "call"
+48 55,49 55,50 55,51 55,52 55,53 55,54 55
+5000
+5 - BOOLEAN Query with group of clauses related to the select synonym
+stmt s, s1, s2; variable v, v1; procedure p; assign a, a1;
+Select BOOLEAN such that Follows*(1, s) and Follows*(s, s1) and Parent*(s1, a) and Uses(s1, v) with v.varName = "call"
+TRUE
+5000
+6 - BOOLEAN Query with group of clauses with no synonym
+stmt s, s1, s2; variable v, v1; procedure p; assign a, a1;
+Select BOOLEAN such that Follows(48, 49) and Follows*(1, 48) and Parent*(55, 57) and Uses(57, "call")
+TRUE
+5000
+12 - Query group is All Parent
+stmt s, s1, s2; variable v, v1; assign a, a1; procedure p, q; if ifs; while w; read r; print pr, pr1; call c;
+Select c such that Parent*(ifs, w) and Parent*(w, s) and Parent(ifs, c) and Parent(w, pr) pattern w ("d", _) with pr.varName = "d"
+12
+5000
+14 - Query group is All Modifies
+stmt s, s1, s2; variable v, v1; assign a, a1; procedure p, q; if ifs; while w; read r; print pr, pr1; call c;
+Select s such that Modifies(s, "a") and Modifies(s, "read") and Modifies(s, "call")
+1,7,9,11,18,19,20,21,62,63,64,69,70,77,78,79,80,84,88,91
+5000
+15 - Query group is All Uses
+stmt s, s1, s2; variable v, v1; assign a, a1; procedure p, q; if ifs; while w; read r; print pr, pr1; call c;
+Select s such that Uses(s, "a") and Uses(s, "read") and Uses(s, "call")
+1,7,9,11,18,19,20,21,22,24,62,63,64,69,70,77,78,79,80,84,88,91
+5000
+16 - Tuples Query, Scatter clauses with no synonyms around the query
+stmt s, s1, s2; variable v, v1; assign a, a1; procedure p, q; if ifs; while w; read r; print pr, pr1; call c;
+Select <s, r> such that Follows*(1, 48) and Calls("call", "procedure") and Next*(1, s) and Parent(s, r)
+2 3,9 10,18 40,20 39,21 38,24 28,24 30,24 32,55 58
+5000
+17 - Query Uses
+stmt s, s1, s2; variable v, v1; assign a, a1; procedure p, q; if ifs; while w; read r; print pr, pr1; call c;
+Select <p,v> such that Uses(p,v) and Calls(p,q) and Uses(q,v) and Parent(w,a) pattern a(v, _)
+call a,raymarch a,moreProc a,moreProc print,call read,procedure2 a,anotherProc a,raymarch read,procedure2 call,moreProc read,anotherProc read,procedure2 read,call print,raymarch print,anotherProc print,call call,procedure2 print,procedure print,raymarch call,moreProc call,anotherProc call,procedure4 call,procedure5 call
+5000
+18 - Query Uses
+stmt s, s1, s2; variable v, v1; assign a, a1; procedure p, q; if ifs; while w; read r; print pr, pr1; call c;
+Select <p,v> such that Uses(p,v) and Calls(p,q) and Uses(q,v) and Parent(w,a) pattern a(v, _)
+call a,raymarch a,moreProc a,moreProc print,call read,procedure2 a,anotherProc a,raymarch read,procedure2 call,moreProc read,anotherProc read,procedure2 read,call print,raymarch print,anotherProc print,call call,procedure2 print,procedure print,raymarch call,moreProc call,anotherProc call,procedure4 call,procedure5 call
+5000
+20 - Query with members grouped together, procName = varName
+stmt s, s1, s2; variable v, v1; assign a, a1; procedure p, q; if ifs; while w; read r; print pr, pr1; call c;
+Select s such that Modifies(s, "read") and Follows*(1, s) and Next*(s, ifs) and Uses(ifs, v) and Uses(p, v) and Calls(p, q) with q.procName = v.varName
+49
+5000
+21 - Query with members scattered, procName = varName
+stmt s, s1, s2; variable v, v1; assign a, a1; procedure p, q; if ifs; while w; read r; print pr, pr1; call c;
+Select s such that Uses(p, v) and Modifies(s, "read") and Uses(ifs, v) and Follows*(1, s) and Calls(p, q) and Next*(s, ifs) with q.procName = v.varName
+49
+5000
+22 - Query with members grouped together
+stmt s, s1, s2; variable v, v1; assign a, a1; procedure p, q; if ifs; while w; read r; print pr, pr1; call c;
+Select s such that Parent*(s, pr) and Uses(pr, v) and Uses(a, v) with v.varName = "d"
+1,7,9,11,13,46
+5000
+23 - Query with members scattered
+stmt s, s1, s2; variable v, v1; assign a, a1; procedure p, q; if ifs; while w; read r; print pr, pr1; call c;
+Select s such that Uses(a, v) and Parent*(s, pr) and Uses(pr, v) with v.varName = "d"
+1,7,9,11,13,46
+5000
+24 - Query testing interchangeability of and and specific clauses part 1
+stmt s, s1, s2; variable v, v1; assign a, a1; procedure p, q; if ifs; while w; read r; print pr, pr1; call c;
+Select s such that Follows*(1, 48) such that Calls("call", q) with q.procName = "procedure" such that Next*(1, s) and Parent(s, r)
+2,9,18,20,21,24,55
+5000
+25 - Query testing interchangeability of and and specific clauses part 2
+stmt s, s1, s2; variable v, v1; assign a, a1; procedure p, q; if ifs; while w; read r; print pr, pr1; call c;
+Select s such that Follows*(1, 48) and Calls("call", q) with q.procName = "procedure" such that Next*(1, s) and Parent(s, r)
+2,9,18,20,21,24,55
+5000
+26 - Tuple, procedure ifs, with clause
+stmt s, s1, s2; variable v, v1; assign a, a1; procedure p, q; if ifs; while w; read r; print pr, pr1; call c;
+Select <p, ifs> such that Next*(1, ifs) with "procedure" = p.procName
+procedure 9, procedure 11, procedure 18, procedure 22, procedure 55
+5000
+27 - Tuple
+stmt s, s1, s2; variable v, v1; assign a, a1; procedure p, q; if ifs; while w; read r; print pr, pr1; call c;
+Select <p, p, p>
+procedure procedure procedure,raymarch raymarch raymarch,moreProc moreProc moreProc,anotherProc anotherProc anotherProc,procedure2 procedure2 procedure2,call call call,procedure3 procedure3 procedure3,procedure4 procedure4 procedure4,procedure5 procedure5 procedure5,lastProc lastProc lastProc,finalProc finalProc finalProc,finalFinalProc finalFinalProc finalFinalProc 
+5000
+28 - Tuple
+stmt s, s1, s2; variable v, v1; assign a, a1; procedure p, q; if ifs; while w; read r; print pr, pr1; call c;
+Select <p, p, p> with "call" = p.procName
+call call call
+5000
+29 - Tuple, multiple with clauses
+stmt s, s1, s2; variable v, v1; assign a, a1; procedure p, q; if ifs; while w; read r; print pr, pr1; call c;
+Select <p, p, p> such that Uses(p, v) with p.procName = v.varName
+call call call,procedure procedure procedure,moreProc moreProc moreProc,anotherProc anotherProc anotherProc
+5000
+30 - Tuple, lengthy clauses
+stmt s, s1, s2; variable v, v1; assign a, a1; procedure p, q; if ifs; while w; read r; print pr, pr1; call c;
+Select <s, s1, v, p, q> such that Follows(s, s1) and Uses(s1, v) with v.varName = p.procName such that Calls(p, q) with "procedure3" = q.procName
+54 55 procedure procedure procedure3,61 62 procedure procedure procedure3,62 63 procedure procedure procedure3,68 69 procedure procedure procedure3,74 77 procedure procedure procedure3,77 79 procedure procedure procedure3,79 80 procedure procedure procedure3,81 84 procedure procedure procedure3,87 88 procedure procedure procedure3,90 91 procedure procedure procedure3
+5000
+31 - Tuple, all variables in stmt
+stmt s, s1, s2; variable v, v1; assign a, a1; procedure p, q; if ifs; while w; read r; print pr, pr1; call c;
+Select <s, v> such that Uses(s, v) with 45 = s.stmt#
+45 j,45 h,45 i,45 k, 45 f,45 a,45 d,45 m
+5000
+32 - Simple Affects
+stmt s, s1, s2; variable v, v1; assign a, a1; procedure p, q; if ifs; while w; read r; print pr, pr1; call c;
+Select s such that Affects(s, a)
+1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99
+5000
+33 - Simple Affects*
+stmt s, s1, s2; variable v, v1; assign a, a1; procedure p, q; if ifs; while w; read r; print pr, pr1; call c;
+Select s such that Affects*(s, a)
+1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99
+5000
+34 - Affects* Lengthy Query
+stmt s, s1, s2; variable v, v1; assign a, a1; procedure p, q; if ifs; while w; read r; print pr, pr1; call c;
+Select <s, a> such that Affects*(s, a) and Parent*(ifs, w) and Uses(a, v) and Parent*(w, s) and Modifies(s, v)
+33 36
+5000
+35 - Stress Test Tuple Query with members scattered, procName = varName
+stmt s, s1, s2; variable v, v1; assign a, a1; procedure p, q; if ifs; while w; read r; print pr, pr1; call c;
+Select <p, v, s, ifs, q> such that Uses(p, v) and Modifies(s, "read") and Uses(ifs, v) and Follows*(1, s) and Calls(p, q) and Next*(s, ifs) with q.procName = v.varName
+procedure2 call 49 55 call,call procedure 49 55 procedure,procedure procedure3 49 55 procedure3
+5000
+36 - Stress Test Tuple Query with members scattered, procName = varName, one unused synonym in select
+stmt s, s1, s2; variable v, v1; assign a, a1; procedure p, q; if ifs; while w; read r; print pr, pr1; call c;
+Select <p, v, s, ifs, q, w> such that Uses(p, v) and Modifies(s, "read") and Uses(ifs, v) and Follows*(1, s) and Calls(p, q) and Next*(s, ifs) with q.procName = v.varName
+procedure2 call 49 55 call 2,procedure2 call 49 55 call 4,procedure2 call 49 55 call 7,procedure2 call 49 55 call 13,procedure2 call 49 55 call 15,procedure2 call 49 55 call 19,procedure2 call 49 55 call 20,procedure2 call 49 55 call 21,procedure2 call 49 55 call 24,procedure2 call 49 55 call 46,procedure2 call 49 55 call 63,procedure2 call 49 55 call 77,call procedure 49 55 procedure 2,call procedure 49 55 procedure 4,call procedure 49 55 procedure 7,call procedure 49 55 procedure 13,call procedure 49 55 procedure 15,call procedure 49 55 procedure 19,call procedure 49 55 procedure 20,call procedure 49 55 procedure 21,call procedure 49 55 procedure 24,call procedure 49 55 procedure 46,call procedure 49 55 procedure 63,call procedure 49 55 procedure 77,procedure procedure3 49 55 procedure3 2,procedure procedure3 49 55 procedure3 4,procedure procedure3 49 55 procedure3 7,procedure procedure3 49 55 procedure3 13,procedure procedure3 49 55 procedure3 15,procedure procedure3 49 55 procedure3 19,procedure procedure3 49 55 procedure3 20,procedure procedure3 49 55 procedure3 21,procedure procedure3 49 55 procedure3 24,procedure procedure3 49 55 procedure3 46,procedure procedure3 49 55 procedure3 63,procedure procedure3 49 55 procedure3 77
+5000
+37 - Tuple with reference
+stmt s, s1, s2; variable v, v1; assign a, a1; procedure p, q; if ifs; while w; read r; print pr, pr1; call c;
+Select <p, p.procName, p> with "call" = p.procName
+call call call
+5000
+38 - Tuples with references
+stmt s, s1, s2; variable v, v1; procedure p; assign a, a1;
+Select < s.stmt# ,  s1 > such that Follows*(1, s) and Follows*(s, s1) and Parent*(s1, a) and Uses(s1, v) with v.varName = "call"
+48 55,49 55,50 55,51 55,52 55,53 55,54 55
+5000
+39 - Single synonym with reference
+stmt s, s1, s2; variable v, v1; procedure p; assign a, a1, a2;
+Select s2.stmt# such that Follows*(1, s) and Follows*(s, s1) and Parent*(s1, a2) and Uses(s1, v) with v.varName = "call"
+1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99
+5000
+40 - Single synonym with reference
+stmt s, s1, s2; variable v, v1; assign a, a1; procedure p, q; if ifs; while w; read r; print pr, pr1; call c;
+Select v.varName such that Parent*(s, pr) and Uses(pr, v) and Uses(a, v) with v.varName = "d"
+d
+5000
+41 - tuple with references
+stmt s, s1, s2; variable v, v1; assign a, a1; procedure p, q; if ifs; while w; read r; print pr, pr1; call c;
+Select < v.varName , s.stmt# > such that Parent*(s, pr) and Uses(pr, v) and Uses(a, v) with v.varName = "d"
+d 1,d 7,d 9,d 11,d 13,d 46
+5000
+42 - Semantic error in parent relation
+stmt s, s1, s2; variable v, v1; assign a, a1; procedure p, q; if ifs; while w; read r; print pr, pr1; call c;
+Select < v.varName , s.stmt# > such that Parent*(v, pr) and Uses(pr, v) and Uses(a, v) with v.varName = "d"
+none
+5000
+43 - Select BOOLEAN with semantic error in parent relation
+stmt s, s1, s2; variable v, v1; assign a, a1; procedure p, q; if ifs; while w; read r; print pr, pr1; call c;
+Select BOOLEAN such that Parent*(v, pr) and Uses(pr, v) and Uses(a, v) with v.varName = "d"
+FALSE
+5000
+44 - Select BOOLEAN with semantic error in with clause
+stmt s, s1, s2; variable v, v1; assign a, a1; procedure p, q; if ifs; while w; read r; print pr, pr1; call c;
+Select BOOLEAN such that Parent*(v, pr) and Uses(pr, v) and Uses(a, v) with v.procName = "d"
+FALSE
+5000
+45 - Select BOOLEAN with semantic error in with clause
+stmt s, s1, s2; variable v, v1; assign a, a1; procedure p, q; if ifs; while w; read r; print pr, pr1; call c;
+Select BOOLEAN such that Parent*(s, pr) and Uses(pr, v) and Uses(a, v) with "blah" = "d"
+FALSE
+5000
+46 - Select BOOLEAN with semantic error in with clause
+stmt s, s1, s2; variable v, v1; assign a, a1; procedure p, q; if ifs; while w; read r; print pr, pr1; call c;
+Select BOOLEAN such that Parent*(s, pr) and Uses(pr, v) and Uses(a, v) with "blah" = "d"
+FALSE
+5000
+47 - Select BOOLEAN with semantic error with non-matching data types in with clause
+stmt s, s1, s2; variable v, v1; assign a, a1; procedure p, q; if ifs; while w; read r; print pr, pr1; call c;
+Select BOOLEAN such that Parent*(s, pr) and Uses(pr, v) and Uses(a, v) with 93 = "d"
+FALSE
+5000
+48 - Select BOOLEAN with semantic error in pattern clause
+stmt s, s1, s2; variable v, v1; assign a, a1; procedure p, q; if ifs; while w; read r; print pr, pr1; call c;
+Select BOOLEAN such that Uses(p,v) and Calls(p,q) and Uses(q,v) and Parent(w,a) pattern a(c, _)
+FALSE
+5000
+49 - Select BOOLEAN with semantic error in pattern clause
+stmt s, s1, s2; variable v, v1; assign a, a1; procedure p, q; if ifs; while w; read r; print pr, pr1; call c;
+Select BOOLEAN such that Uses(p,v) and Calls(p,q) and Uses(q,v) and Parent(w,a) pattern p(v, _)
+FALSE
+5000
+50 - Select BOOLEAN with semantic error in suchThat clause
+stmt s, s1, s2; variable v, v1; assign a, a1; procedure p, q; if ifs; while w; read r; print pr, pr1; call c;
+Select BOOLEAN such that Uses(p,v) and Calls(a,q) and Uses(q,v) and Parent(w,a) pattern p(v, _)
+FALSE
+5000
+51 - Select BOOLEAN with semantic error in suchThat clause
+stmt s, s1, s2; variable v, v1; assign a, a1; procedure p, q; if ifs; while w; read r; print pr, pr1; call c;
+Select BOOLEAN such that Uses(p,v) and Calls(p,q) and Uses(v1,v) and Parent(w,a) pattern p(v, _)
+FALSE
+5000
+52 - Select BOOLEAN with semantic error in suchThat parent clause with same inputs
+stmt s, s1, s2; variable v, v1; assign a, a1; procedure p, q; if ifs; while w; read r; print pr, pr1; call c;
+Select BOOLEAN such that Uses(p,v) and Calls(p,q) and Uses(v1,v) and Parent(w,w) pattern p(v, _)
+FALSE
+5000
+53 - synonym declared as BOOLEAN
+stmt BOOLEAN, s1, s2; variable v, v1; assign a, a1; procedure p, q; if ifs; while w; read r; print pr, pr1; call c;
+Select BOOLEAN such that Modifies(BOOLEAN, "a") and Modifies(BOOLEAN, "read") and Modifies(BOOLEAN, "call")
+1,7,9,11,18,19,20,21,62,63,64,69,70,77,78,79,80,84,88,91
+5000
+54 - Select BOOLEAN with semantic error undeclared synonym
+stmt s, s1, s2; variable v1; assign a, a1; procedure p, q; if ifs; while w; read r; print pr, pr1; call c;
+Select BOOLEAN such that Uses(p,v) and Calls(p,q) and Uses(v1,v) and Parent(w,a) pattern p(v, _)
+FALSE
+5000
+55 - Select tuple with undeclared synonym
+stmt s, s1, s2; variable v, v1; assign a, a1; procedure p, q; if ifs; while w; read r; print pr, pr1; call c;
+Select <    s5, s11, wr.stmt# >  such that Uses(p,v) and Calls(p,q) and Uses(v1,v) and Parent(w,a) pattern p(v, _)
+none
+5000
+56 - Select undeclared synonyms
+stmt s, s1, s2; variable v, v1; assign a, a1; procedure p, q; if ifs; while w; read r; print pr, pr1; call c;
+Select    wr.stmt#   such that Uses(p,v) and Calls(p,q) and Uses(v1,v) and Parent(w,a) pattern p(v, _)
+none
+5000

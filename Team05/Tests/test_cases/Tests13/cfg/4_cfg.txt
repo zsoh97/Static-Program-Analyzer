@@ -1,0 +1,11 @@
+procedure Example {
+
+  if( x == 2 ) then {
+    while( x == 2){
+      x = 3;
+    }
+  } else {
+    x = 4;
+  }
+
+}

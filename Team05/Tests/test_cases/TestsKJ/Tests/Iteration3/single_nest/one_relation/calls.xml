@@ -1,0 +1,29 @@
+<?xml-stylesheet type="text/xsl" href="analysis.xsl"?>
+<test_results>
+<info>
+<name>tests</name><parsing_time_taken>136.000000</parsing_time_taken>
+</info>
+<queries>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="Select all procedure that calls Q">1</id><querystr><![CDATA[procedure p; Select p such that Calls (p, "Q")]]></querystr>
+<stuans>main</stuans>
+<correct>main</correct>
+<time_taken>55.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Callsstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="Select all procedures called by main">2</id><querystr><![CDATA[procedure p; Select p.procName such that Calls* ("main", p)]]></querystr>
+<stuans>P,Q</stuans>
+<correct>Q,P</correct>
+<time_taken>55.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Callsstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="Select procedure tuples that calls another procedure">3</id><querystr><![CDATA[procedure p, q; Select <p, q> such that Calls* (p, q)]]></querystr>
+<stuans>Q P,main P,main Q</stuans>
+<correct>main Q,main P,Q P</correct>
+<time_taken>57.000000</time_taken>
+<passed/>
+</query>
+</queries>
+</test_results>

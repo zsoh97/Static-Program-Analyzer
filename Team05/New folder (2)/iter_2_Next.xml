@@ -1,0 +1,64 @@
+<?xml-stylesheet type="text/xsl" href="analysis.xsl"?>
+<test_results>
+<info>
+<name>tests</name><parsing_time_taken>79.000000</parsing_time_taken>
+</info>
+<queries>
+<query>
+<id ReturnBoolean="1" Nextstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="Next* with 2 known stmts">1</id><querystr><![CDATA[ Select BOOLEAN such that Next*(1, 5)]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>48.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="Next* with left known, right unknown">2</id><querystr><![CDATA[stmt s; Select s such that Next*(12, s)]]></querystr>
+<stuans>10,11,12,13,14,8,9</stuans>
+<correct>8,9,10,11,12,13,14</correct>
+<time_taken>57.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="Next* with right known, left unknown">3</id><querystr><![CDATA[stmt s; Select s such that Next*(s, 19)]]></querystr>
+<stuans>15,16,17,18,19,20</stuans>
+<correct>15,16,17,18,19,20</correct>
+<time_taken>54.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" Parent="1" SuchThat="1" CondNum="4" RelNum="2" comment="Next* with both unknown">4</id><querystr><![CDATA[stmt s1, s2; Select <s1, s2> such that Next*(s1, s2) and Parent(s1, s2)]]></querystr>
+<stuans>10 11,10 12,12 13,17 18,17 19,17 20,2 3,22 23,22 24,22 25,22 26,26 27,26 28,26 29,26 30,30 31,6 7,6 8,8 10,8 9</stuans>
+<correct>2 3,6 7,6 8,8 9,8 10,10 11,10 12,12 13,17 18,17 19,17 20,22 23,22 24,22 25,22 26,26 27,26 28,26 29,26 30,30 31</correct>
+<time_taken>156.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Next="1" SuchThat="1" CondNum="3" RelNum="1" comment="Next with 2 known stmts">5</id><querystr><![CDATA[ Select BOOLEAN such that Next(14, 15)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>47.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Next="1" SuchThat="1" CondNum="3" RelNum="1" comment="Next with left known, right unknown">6</id><querystr><![CDATA[stmt s; Select s such that Next(6, s)]]></querystr>
+<stuans>7,8</stuans>
+<correct>7,8</correct>
+<time_taken>47.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Next="1" SuchThat="1" CondNum="3" RelNum="1" comment="Next with left unknown, right known">7</id><querystr><![CDATA[stmt s; Select s such that Next(s, 8)]]></querystr>
+<stuans>11,12,6</stuans>
+<correct>6,11,12</correct>
+<time_taken>50.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Followsstar="1" Next="1" SuchThat="1" CondNum="4" RelNum="2" comment="Next with 2 unknown stmts">8</id><querystr><![CDATA[stmt s1, s2; Select <s1, s2> such that Next(s1, s2) and Follows*(s2, s1)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>59.000000</time_taken>
+<passed/>
+</query>
+</queries>
+</test_results>

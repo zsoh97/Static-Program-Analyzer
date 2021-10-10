@@ -1,0 +1,166 @@
+procedure procedure {
+    one = 1 + one;
+    while (((two == 2 * (two + two) - two) || (two == 2)) && (two == 2)) {
+        if ((three != 3) || (three == three)) then {
+            four = 4 + four;
+            while (!(five == (five + 5))) {
+                print six;
+                if (((seven != seven) && (seven != 7)) || ((seven >= seven) && (seven >= 7))) then {
+                    eight = 8 + eight;
+                    call proc1;
+                    read ten;
+                } else {
+                    eleven = 11 + eleven;
+                    call proc2;
+                    thirteen = 13 + thirteen;
+                }
+            }
+            call proc3;
+            fifteen = 15 + fifteen;
+        } else {
+            sixteen = 16 + sixteen;
+            call proc4;
+        }
+        eighteen = 18 + eighteen;
+        call proc5;
+    }
+    read twenty;
+}
+
+procedure proc1 {
+    twentyone = 21;
+    while (((!(twentytwo == twentytwo)) || (twentytwo != twentytwo)) && ((twentytwo <= twentytwo) || (twentytwo < twentytwo))) {
+        call proc2;
+        if(twentyfour != twentyfour) then {
+            call proc3;
+        } else {
+            call proc4;
+            while ((((((((((twentyseven == 27)))))))))) {
+                while ((twentyeight == 28) || (!(twentyeight == 28))) {
+                    call proc5;
+                }
+                if (thirty == 30) then {
+                    thirtyone = 31;
+                    thirtytwo = 32;
+                } else {
+                    thirtythree = 33;
+                    thirtyfour = 34;}}
+            thirtyfive = 35;}
+        if ((!(((thirtysix == 36))))) then {
+            call proc5;
+        } else {
+            call proc6;}}
+    thirtynine = 39;
+    forty = 40;
+}
+
+
+
+procedure proc2 {
+    if ((((!(fortyone == 41)) && (41 != fortyone)) || ((!(fortyone >= 41)) && (41 <= fortyone))) || ((!(fortyone > 41)) && (41 < fortyone))) then {
+        if (fortytwo == 42) then {
+            call proc4;
+        } else {
+            if (fortyfour == 44) then {
+                fortyfive = 45;
+            } else {
+                if ( ( ! ( ! ( ! ( ! ( ! ( fortysix == 46) ) ) ) ) ) ) then {
+                    call proc6;
+                } else {
+                    call proc6;}}}
+    } else {
+        call proc4;
+        fifty = 50;}
+}
+
+procedure proc3 {
+    if (!(fiftyone == 51)) then {
+        if ( ( ! (  !                                  ( fiftytwo != 52)))) then {
+            if ((fiftythree == 53) && (fiftythree !=53)) then {
+                if (fiftyfour == 54) then {
+                    call proc6;
+                } else {
+                    fiftysix = 56;}
+            } else {
+                fiftyseven = 57;}
+        } else {
+            fiftyeight = 58;}
+    } else {
+        fiftynine = 59;}
+    sixty = 60;}
+
+procedure proc4 {
+    while (((sixtyone == 61) || (sixtyone == 61)) && (!(((sixtyone == 61))))) {
+        while (sixtytwo == 62) {
+            while (!((!((!(sixtythree == 63)))))) {
+                while (sixtyfour == 64) {
+                    sixtyfive = 65;
+                    read sixtysix;
+                    read sixtyseven;
+                    read sixtyeight;
+                    read sixtynine;
+                    read seventy;}}}}}
+
+
+
+procedure proc5 {
+    if (seventyone == 71) then {
+        Seventytwo = 72;
+    } else {
+        while ((((((73 == seventythree) || (73 == seventythree)) && (73 == seventythree)) || (73 == seventythree)) &&  (73 == seventythree)) || (73 == seventythree)) {
+            if (74 == seventyfour) then {
+                if (((75 == seventyfive))) then {
+                    seventysix = 76;
+                } else {
+                    seventyseven = 77;}
+            } else {
+                seventyeight = 78;}}
+        Seventynine = 79;}
+    eighty = 80;}
+
+
+
+procedure proc6 {
+    eightyone = (81 % 81 / 81 + 81) * 81 - (81 * 81);
+    eightytwo = (82 * 82);
+    eightythree = 83 - 81 + (81 * 81);
+    eightyfour = 84*(81*81);
+    eightyfive = 85+ 82 * 82;
+    eigthtysix = 86-86;
+    eightyseven = 87+87;
+    eigthyeight = 88/88;
+    eightynine = 89%89;
+}
+
+procedure caller {
+    call callee;
+}
+
+procedure callee {
+    call print;
+    call read;
+}
+
+procedure print {
+    print if;
+    print while;
+    print read;
+    print procedure;
+    print assignment;
+    print call;
+    print print;
+    print Uses;
+}
+
+procedure read {
+    read if;
+    read while;
+    read read;
+    read procedure;
+    read assignment;
+    read call;
+    read print;
+    read Modifies;
+    read Parent;
+    read Patterns;
+}

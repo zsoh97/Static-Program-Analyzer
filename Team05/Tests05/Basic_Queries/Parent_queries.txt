@@ -1,0 +1,90 @@
+1 - Parent with 2 known variables
+stmt s;
+Select s such that Parent(4, 5)
+1,2,3,4,5,6,7,8,9,10,11,12
+5000
+2 - Parent* with 2 known variables
+stmt s;
+Select s such that Parent*(4, 7)
+1,2,3,4,5,6,7,8,9,10,11,12
+5000
+3 - Parent with s1 known and s2 unknown
+stmt s;
+Select s such that Parent(4, s)
+5,6,9,10,11
+5000
+4 - Parent* with s1 known and s2 unknown
+stmt s;
+Select s such that Parent*(4, s)
+5,6,7,8,9,10,11
+5000
+5 - Parent with s1 unknown and s2 known
+stmt s;
+Select s such that Parent(s, 7)
+6
+5000
+6 - Parent* with s1 unknown and s2 known
+stmt s;
+Select s such that Parent*(s, 7)
+4, 6
+5000
+7 - Parent with left _
+stmt s;
+Select s such that Parent(_, s)
+5, 6, 7, 8, 9, 10 ,11
+5000
+8 - Parent * with left _
+stmt s;
+Select s such that Parent*(_, s)
+5, 6, 7, 8, 9, 10 ,11
+5000
+9 - Parent with right _
+stmt s;
+Select s such that Parent(s, _)
+4, 6
+5000
+10 - Parent * with right _
+stmt s;
+Select s such that Parent*(s, _)
+4, 6
+5000
+11 - Parent with same synonym
+stmt s;
+Select s such that Parent(s, s)
+
+5000
+12 - Parent * with same synonym
+stmt s;
+Select s such that Parent*(s, s)
+
+5000
+13 - Parent with both unknown
+stmt s;
+Select s such that Parent(_, _)
+1,2,3,4,5,6,7,8,9,10,11,12
+5000
+14 - Parent with both unknown
+stmt s;
+Select s such that Parent*(_, _)
+1,2,3,4,5,6,7,8,9,10,11,12
+5000
+15 - Incorrect Parent with s2 out of range
+stmt s;
+Select s such that Parent(_, 13)
+
+5000
+16 - Incorrect Parent* with s2 out of range
+stmt s;
+Select s such that Parent*(_, 13)
+
+5000
+17 - Incorrect Parent with s1 > s2
+stmt s;
+Select s such that Parent(5, 4)
+
+5000
+18 - Incorrect Parent* with s1 > s2
+stmt s;
+Select s such that Parent*(5, 4)
+
+5000

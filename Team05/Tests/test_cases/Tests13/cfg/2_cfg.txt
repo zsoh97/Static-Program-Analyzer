@@ -1,0 +1,11 @@
+procedure Example {
+
+  while( x == 1){
+    while( x == 2){
+      while( x == 3){
+        x = 4;
+      }
+    }
+  }
+
+}

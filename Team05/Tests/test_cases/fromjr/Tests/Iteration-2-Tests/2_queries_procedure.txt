@@ -1,0 +1,665 @@
+2001 - Invalid. Case sensitive, suchthat-cl Calls
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that calls(proc1, proc2)
+
+5000
+2002 - Invalid. Wrong argument, suchthat-cl Calls
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls(proc, s)
+FALSE
+5000
+2003 - Invalid. Wrong argument, suchthat-cl Calls
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls(proc, cl)
+FALSE
+5000
+2004 - Invalid. Wrong argument, suchthat-cl Calls
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls(proc, v)
+FALSE
+5000
+2005 - Invalid. Wrong argument, suchthat-cl Calls
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls(proc, r)
+FALSE
+5000
+2006 - Invalid. Wrong argument, suchthat-cl Calls
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls(proc, p)
+FALSE
+5000
+2007 - Invalid. Wrong argument, suchthat-cl Calls
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls(proc, c)
+FALSE
+5000
+2008 - Invalid. Wrong argument, suchthat-cl Calls
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls(proc, w)
+FALSE
+5000
+2009 - Invalid. Wrong argument, suchthat-cl Calls
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls(proc, ifs)
+FALSE
+5000
+2010 - Invalid. Wrong argument, suchthat-cl Calls
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls(proc, a)
+FALSE
+5000
+2011 - Invalid. Wrong argument, suchthat-cl Calls
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls(proc, n)
+FALSE
+5000
+2012 - Invalid. Wrong argument, suchthat-cl Calls
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls(s, proc)
+FALSE
+5000
+2013 - Invalid. Wrong argument, suchthat-cl Calls
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls(cl, proc)
+FALSE
+5000
+2014 - Invalid. Wrong argument, suchthat-cl Calls
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls(v, proc)
+FALSE
+5000
+2015 - Invalid. Wrong argument, suchthat-cl Calls
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls(r, proc)
+FALSE
+5000
+2016 - Invalid. Wrong argument, suchthat-cl Calls
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls(p, proc)
+FALSE
+5000
+2017 - Invalid. Wrong argument, suchthat-cl Calls
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls(c, proc)
+FALSE
+5000
+2018 - Invalid. Wrong argument, suchthat-cl Calls
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls(w, proc)
+FALSE
+5000
+2019 - Invalid. Wrong argument, suchthat-cl Calls
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls(ifs, proc)
+FALSE
+5000
+2020 - Invalid. Wrong argument, suchthat-cl Calls
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls(a, proc)
+FALSE
+5000
+2021 - Invalid. Wrong argument, suchthat-cl Calls
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls(n, proc)
+FALSE
+5000
+2022 - Invalid. Same synonym, suchthat-cl Calls
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls (proc, proc)
+FALSE
+5000
+2023 - Invalid. Same constant, suchthat-cl Calls
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls ("proc3", "proc3")
+FALSE
+5000
+2024 - Valid. Extra space, suchthat-cl Calls
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls (proc1, proc2)
+TRUE
+5000
+2025 - Valid. 2 wildcards, suchthat-cl Calls
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls(_, _)
+TRUE
+5000
+2026 - Valid. 1 wildcard 1 synonym, suchthat-cl Calls
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls(_, proc)
+TRUE
+5000
+2027 - Valid. 1 wildcard 1 constant, suchthat-cl Calls
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls(_, "proc3")
+TRUE
+5000
+2028 - Valid. 1 synonym 1 wildcard, suchthat-cl Calls
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls(proc, _)
+TRUE
+5000
+2029 - Valid. 1 constant 1 wildcard, suchthat-cl Calls
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls("proc3", _)
+TRUE
+5000
+2030 - Valid. 2 synonyms, suchthat-cl Calls
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls(proc1, proc2)
+TRUE
+5000
+2031 - Valid. 1 synonym 1 constant, suchthat-cl Calls
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls(proc, "proc1")
+TRUE
+5000
+2032 - Valid. 1 constant 1 synonym, suchthat-cl Calls
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls("proc3", proc)
+TRUE
+5000
+2033 - Valid. 2 constants, suchthat-cl Calls
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls("proc3", "proc1")
+TRUE
+5000
+2034 - Invalid. Case sensitive, suchthat-cl Calls*
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that calls*(proc1, proc2)
+
+5000
+2035 - Invalid. Space between Calls and *, suchthat-cl Calls*
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls *(proc1, proc2)
+
+5000
+2036 - Invalid. Wrong argument, suchthat-cl Calls*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls*(proc, s)
+FALSE
+5000
+2037 - Invalid. Wrong argument, suchthat-cl Calls*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls*(proc, cl)
+FALSE
+5000
+2038 - Invalid. Wrong argument, suchthat-cl Calls*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls*(proc, v)
+FALSE
+5000
+2039 - Invalid. Wrong argument, suchthat-cl Calls*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls*(proc, r)
+FALSE
+5000
+2040 - Invalid. Wrong argument, suchthat-cl Calls*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls*(proc, p)
+FALSE
+5000
+2041 - Invalid. Wrong argument, suchthat-cl Calls*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls*(proc, c)
+FALSE
+5000
+2042 - Invalid. Wrong argument, suchthat-cl Calls*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls*(proc, w)
+FALSE
+5000
+2043 - Invalid. Wrong argument, suchthat-cl Calls*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls*(proc, ifs)
+FALSE
+5000
+2044 - Invalid. Wrong argument, suchthat-cl Calls*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls*(proc, a)
+FALSE
+5000
+2045 - Invalid. Wrong argument, suchthat-cl Calls*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls*(proc, n)
+FALSE
+5000
+2046 - Invalid. Wrong argument, suchthat-cl Calls*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls*(s, proc)
+FALSE
+5000
+2047 - Invalid. Wrong argument, suchthat-cl Calls*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls*(cl, proc)
+FALSE
+5000
+2048 - Invalid. Wrong argument, suchthat-cl Calls*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls*(v, proc)
+FALSE
+5000
+2049 - Invalid. Wrong argument, suchthat-cl Calls*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls*(r, proc)
+FALSE
+5000
+2050 - Invalid. Wrong argument, suchthat-cl Calls*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls*(p, proc)
+FALSE
+5000
+2051 - Invalid. Wrong argument, suchthat-cl Calls*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls*(c, proc)
+FALSE
+5000
+2052 - Invalid. Wrong argument, suchthat-cl Calls*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls*(w, proc)
+FALSE
+5000
+2053 - Invalid. Wrong argument, suchthat-cl Calls*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls*(ifs, proc)
+FALSE
+5000
+2054 - Invalid. Wrong argument, suchthat-cl Calls*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls*(a, proc)
+FALSE
+5000
+2055 - Invalid. Wrong argument, suchthat-cl Calls*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls*(n, proc)
+FALSE
+5000
+2056 - Invalid. Same synonym, suchthat-cl Calls*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls* (proc, proc)
+FALSE
+5000
+2057 - Invalid. Same constant, suchthat-cl Calls*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls* ("proc3", "proc3")
+FALSE
+5000
+2058 - Valid. Extra space, suchthat-cl Calls*
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls* (proc1, proc2)
+TRUE
+5000
+2059 - Valid. 2 wildcards, suchthat-cl Calls*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls*(_, _)
+TRUE
+5000
+2060 - Valid. 1 wildcard 1 synonym, suchthat-cl Calls*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls*(_, proc)
+TRUE
+5000
+2061 - Valid. 1 wildcard 1 constant, suchthat-cl Calls*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls*(_, "proc3")
+TRUE
+5000
+2062 - Valid. 1 synonym 1 wildcard, suchthat-cl Calls*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls*(proc, _)
+TRUE
+5000
+2063 - Valid. 1 constant 1 wildcard, suchthat-cl Calls*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls*("proc3", _)
+TRUE
+5000
+2064 - Valid. 2 synonyms, suchthat-cl Calls*
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls*(proc1, proc2)
+TRUE
+5000
+2065 - Valid. 1 synonym 1 constant, suchthat-cl Calls*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls*(proc, "proc1")
+TRUE
+5000
+2066 - Valid. 1 constant 1 synonym, suchthat-cl Calls*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls*("proc3", proc)
+TRUE
+5000
+2067 - Valid. 2 constants, suchthat-cl Calls*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls*("proc3", "proc1")
+TRUE
+5000
+2068 - Invalid. Case sensitive, suchthat-cl UsesP
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that uses(proc, v)
+
+5000
+2069 - Invalid. Wrong argument, suchthat-cl UsesP
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Uses(proc1, proc2)
+FALSE
+5000
+2070 - Invalid. Wrong argument, suchthat-cl UsesP
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Uses(proc, s)
+FALSE
+5000
+2071 - Invalid. Wrong argument, suchthat-cl UsesP
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Uses(proc, cl)
+FALSE
+5000
+2072 - Invalid. Wrong argument, suchthat-cl UsesP
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Uses(proc, r)
+FALSE
+5000
+2073 - Invalid. Wrong argument, suchthat-cl UsesP
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Uses(proc, p)
+FALSE
+5000
+2074 - Invalid. Wrong argument, suchthat-cl UsesP
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Uses(proc, c)
+FALSE
+5000
+2075 - Invalid. Wrong argument, suchthat-cl UsesP
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Uses(proc, w)
+FALSE
+5000
+2076 - Invalid. Wrong argument, suchthat-cl UsesP
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Uses(proc, ifs)
+FALSE
+5000
+2077 - Invalid. Wrong argument, suchthat-cl UsesP
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Uses(proc, a)
+FALSE
+5000
+2078 - Invalid. Wrong argument, suchthat-cl UsesP
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Uses(proc, n)
+FALSE
+5000
+2079 - Invalid. Wrong argument, suchthat-cl UsesP
+procedure proc; call cl; variable v1, v2; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Uses(v1, v2)
+FALSE
+5000
+2080 - Valid. Wrong argument for UsesP, but correct argument for UsesS, suchthat-cl UsesP
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Uses(s, v)
+TRUE
+5000
+2081 - Valid. Wrong argument for UsesP, but correct argument for UsesS, suchthat-cl UsesP
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Uses(cl, v)
+TRUE
+5000
+2082 - Valid. Wrong argument for UsesP, but correct argument for UsesS, suchthat-cl UsesP
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Uses(r, v)
+FALSE
+5000
+2083 - Valid. Wrong argument for UsesP, but correct argument for UsesS, suchthat-cl UsesP
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Uses(p, v)
+TRUE
+5000
+2084 - Invalid. Wrong argument, suchthat-cl UsesP
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Uses(c, v)
+FALSE
+5000
+2085 - Valid. Wrong argument for UsesP, but correct argument for UsesS, suchthat-cl UsesP
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Uses(w, v)
+TRUE
+5000
+2086 - Valid. Wrong argument for UsesP, but correct argument for UsesS, suchthat-cl UsesP
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Uses(ifs, v)
+TRUE
+5000
+2087 - Valid. Wrong argument for UsesP, but correct argument for UsesS, suchthat-cl UsesP
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Uses(a, v)
+TRUE
+5000
+2088 - Valid. Wrong argument for UsesP, but correct argument for UsesS, suchthat-cl UsesP
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Uses(n, v)
+TRUE
+5000
+2089 - Valid. Extra space, suchthat-cl UsesP
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Uses (proc, v)
+TRUE
+5000
+2090 - Invalid. 2 wildcards, suchthat-cl UsesP
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Uses(_, _)
+
+5000
+2091 - Invalid. 1 wildcard 1 synonym, suchthat-cl UsesP
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Uses(_, v)
+
+5000
+2092 - Invalid. 1 wildcard 1 constant, suchthat-cl UsesP
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Uses(_, "ee")
+
+5000
+2093 - Valid. 1 synonym 1 wildcard, suchthat-cl UsesP
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Uses(proc, _)
+TRUE
+5000
+2094 - Valid. 1 constant 1 wildcard, suchthat-cl UsesP
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Uses("proc3", _)
+TRUE
+5000
+2095 - Valid. 1 constant 1 wildcard, suchthat-cl UsesP
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Uses("proc100", _)
+FALSE
+5000
+2096 - Valid. 2 synonyms, suchthat-cl UsesP
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Uses(proc, v)
+TRUE
+5000
+2097 - Valid. 1 synonym 1 constant, suchthat-cl UsesP
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Uses(proc, "ee")
+TRUE
+5000
+2098 - Valid. 1 constant 1 synonym, suchthat-cl UsesP
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Uses("proc3", v)
+TRUE
+5000
+2099 - Valid. 2 constants, suchthat-cl UsesP
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Uses("proc3", "ee")
+TRUE
+5000
+2100 - Valid. 2 constants, suchthat-cl UsesP
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Uses("proc100", "zz")
+FALSE
+5000
+2101 - Invalid. Case sensitive, suchthat-cl ModifiesP
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that modifies(proc, v)
+
+5000
+2102 - Invalid. Wrong argument, suchthat-cl ModifiesP
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Modifies(proc1, proc2)
+FALSE
+5000
+2103 - Invalid. Wrong argument, suchthat-cl ModifiesP
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Modifies(proc, s)
+FALSE
+5000
+2104 - Invalid. Wrong argument, suchthat-cl ModifiesP
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Modifies(proc, cl)
+FALSE
+5000
+2105 - Invalid. Wrong argument, suchthat-cl ModifiesP
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Modifies(proc, r)
+FALSE
+5000
+2106 - Invalid. Wrong argument, suchthat-cl ModifiesP
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Modifies(proc, p)
+FALSE
+5000
+2107 - Invalid. Wrong argument, suchthat-cl ModifiesP
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Modifies(proc, c)
+FALSE
+5000
+2108 - Invalid. Wrong argument, suchthat-cl ModifiesP
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Modifies(proc, w)
+FALSE
+5000
+2109 - Invalid. Wrong argument, suchthat-cl ModifiesP
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Modifies(proc, ifs)
+FALSE
+5000
+2110 - Invalid. Wrong argument, suchthat-cl ModifiesP
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Modifies(proc, a)
+FALSE
+5000
+2111 - Invalid. Wrong argument, suchthat-cl ModifiesP
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Modifies(proc, n)
+FALSE
+5000
+2112 - Invalid. Wrong argument, suchthat-cl ModifiesP
+procedure proc; call cl; variable v1, v2; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Modifies(v1, v2)
+FALSE
+5000
+2113 - Valid. Wrong argument for ModifiesP, but correct argument for ModifiesS, suchthat-cl ModifiesP
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Modifies(s, v)
+TRUE
+5000
+2114 - Valid. Wrong argument for ModifiesP, but correct argument for ModifiesS, suchthat-cl ModifiesP
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Modifies(cl, v)
+TRUE
+5000
+2115 - Valid. Wrong argument for ModifiesP, but correct argument for ModifiesS,, suchthat-cl ModifiesP
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Modifies(r, v)
+TRUE
+5000
+2116 - Valid. Wrong argument for ModifiesP, but correct argument for ModifiesS, suchthat-cl ModifiesP
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Modifies(p, v)
+FALSE
+5000
+2117 - Invalid. Wrong argument, suchthat-cl ModifiesP
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Modifies(c, v)
+FALSE
+5000
+2118 - Valid. Wrong argument for ModifiesP, but correct argument for ModifiesS, suchthat-cl ModifiesP
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Modifies(w, v)
+TRUE
+5000
+2119 - Valid. Wrong argument for ModifiesP, but correct argument for ModifiesS, suchthat-cl ModifiesP
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Modifies(ifs, v)
+TRUE
+5000
+2120 - Valid. Wrong argument for ModifiesP, but correct argument for ModifiesS,, suchthat-cl ModifiesP
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Modifies(a, v)
+TRUE
+5000
+2121 - Valid. Wrong argument for ModifiesP, but correct argument for ModifiesS, suchthat-cl ModifiesP
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Modifies(n, v)
+TRUE
+5000
+2122 - Valid. Extra space, suchthat-cl ModifiesP
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Modifies (proc, v)
+TRUE
+5000
+2123 - Invalid. 2 wildcards, suchthat-cl ModifiesP
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Modifies(_, _)
+
+5000
+2124 - Invalid. 1 wildcard 1 synonym, suchthat-cl ModifiesP
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Modifies(_, v)
+
+5000
+2125 - Invalid. 1 wildcard 1 constant, suchthat-cl ModifiesP
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Modifies(_, "ee")
+
+5000
+2126 - Valid. 1 synonym 1 wildcard, suchthat-cl ModifiesP
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Modifies(proc, _)
+TRUE
+5000
+2127 - Valid. 1 constant 1 wildcard, suchthat-cl ModifiesP
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Modifies("proc3", _)
+TRUE
+5000
+2128 - Valid. 1 constant 1 wildcard, suchthat-cl ModifiesP
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Modifies("proc100", _)
+FALSE
+5000
+2129 - Valid. 2 synonyms, suchthat-cl ModifiesP
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Modifies(proc, v)
+TRUE
+5000
+2130 - Valid. 1 synonym 1 constant, suchthat-cl ModifiesP
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Modifies(proc, "cc")
+TRUE
+5000
+2131 - Valid. 1 constant 1 synonym, suchthat-cl ModifiesP
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Modifies("proc3", v)
+TRUE
+5000
+2132 - Valid. 2 constants, suchthat-cl ModifiesP
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Modifies("proc3", "cc")
+TRUE
+5000
+2133 - Valid. 2 constants, suchthat-cl ModifiesP
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Modifies("proc100", "zz")
+FALSE
+5000

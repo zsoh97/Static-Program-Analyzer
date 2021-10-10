@@ -1,0 +1,115 @@
+1 - select assign follows parent pattern one synonym
+assign a;
+Select a pattern a ("black", _"black % 6"_) such that Follows(301, a) and Follows(a, 303) such that Parent(269, a)
+302
+5000
+2 - select call followsStar follows parent one synonym
+call c; while w;
+Select c such that Follows*(199, c) and Follows(200, c) and Parent(w, c)
+201
+5000
+3 - select read followsStar next modifies one synonym
+read r;
+Select r such that Follows*(186, r) and Next(r, 189) and Modifies(r, "read")
+188
+5000
+4 - select print parentStar next uses one synonym
+print p;
+Select p such that Parent*(222, p) and Next(228, p) and Uses(p, "cherry")
+229
+5000
+5 - select ifs uses next parent one synonym
+if ifs;
+Select ifs such that Uses(ifs, "yellow") and Next(273, ifs) and Parent(269, ifs)
+274
+5000
+6 - select while uses follows one synonym 
+while w;
+Select w such that Uses(w, "pink") and Follows(w, 304)
+269
+5000
+7 - select procedure uses calls one synonym returns none
+procedure p;
+Select p such that Uses(p, "thisIsANonExistentProcedure") and Calls(p, "colours")
+none
+5000
+8 - select procedure modifies calls one synonym returns none
+procedure p;
+Select p such that Modifies(p, "thisIsANonExistentProcedure") and Calls(p, "country")
+none
+5000
+9 - select assign pattern follows one synonym
+assign a;
+Select a such that pattern a("thisIsANonExistentAssign", _) such that Follows(a, _) and Parent*(_, _)
+none
+5000
+10 - select ifs.stmt# uses next parent one synonym
+if ifs;
+Select ifs.stmt# such that Uses(ifs, "yellow") and Next(273, ifs) and Parent(269, ifs)
+274
+5000
+11 - select tuple ifs uses next parent one synonym
+if ifs;
+Select <    ifs.stmt# > such that Uses(ifs, "yellow") and Next(273, ifs) and Parent(269, ifs)
+274
+5000
+12 - select BOOLEAN uses next parent one synonym
+if ifs;
+Select BOOLEAN  such that Uses(ifs, "yellow") and Next(273, ifs) and Parent(269, ifs)
+TRUE
+5000
+13 - select call followsStar follows parent one synonym
+call c; while w; if ifs;
+Select < c.stmt# ,  ifs.stmt# >  such that Follows*(199, c) and Follows(200, c) and Parent(w, c) such that Uses(ifs, "yellow") and Next(273, ifs) and Parent(269, ifs)
+201 274
+5000
+14 - select call followsStar follows parent one synonym
+call c; while w; if ifs;
+Select BOOLEAN  such that Follows*(199, c) and Follows(200, c) and Parent(w, c) such that Uses(ifs, "yellow") and Next(273, ifs) and Parent(269, ifs)
+TRUE
+5000
+15 - select if declared as BOOLEAN uses next parent one synonym
+if BOOLEAN;
+Select BOOLEAN  such that Uses(BOOLEAN, "yellow") and Next(273, BOOLEAN) and Parent(269, BOOLEAN)
+274
+5000
+16 - select repeated tuple ifs.stmt#, ifs.stmt# uses next parent one synonym
+if ifs;
+Select <    ifs.stmt# , ifs.stmt# > such that Uses(ifs, "yellow") and Next(273, ifs) and Parent(269, ifs)
+274 274
+5000
+17 - select repeated tuple ifs uses next parent one synonym
+if ifs;
+Select <    ifs , ifs > such that Uses(ifs, "yellow") and Next(273, ifs) and Parent(269, ifs)
+274 274
+5000
+18 - select repeated tuple ifs uses next parent one synonym
+if ifs;
+Select <    ifs , ifs.stmt# > such that Uses(ifs, "yellow") and Next(273, ifs) and Parent(269, ifs)
+274 274
+5000
+19 - select assign follows parent pattern one synonym
+assign a;
+Select a.stmt# pattern a ("black", _"black % 6"_) such that Follows(301, a) and Follows(a, 303) such that Parent(269, a)
+302
+5000
+20 - select tuple read.varName followsStar next modifies one synonym
+read r;
+Select < r.varName > such that Follows*(186, r) and Next(r, 189) and Modifies(r, "read")
+read
+5000
+21 - select tuple read.stmt# read.varName followsStar next modifies one synonym
+read r;
+Select <     r.stmt#    ,  r.varName    > such   that  Follows*(186, r) and   Next(r, 189)  and    Modifies(r, "read")
+188 read
+5000
+22 - select print parentStar next uses one synonym
+print p;
+Select p.stmt# such that Parent*(222, p) and Next(228, p) and Uses(p, "cherry") with 6 = 6 and "cherry" = "cherry" with "random" = "random"
+229
+5000
+23 - select print false attribute
+print p;
+Select p.stmt# such that Parent*(222, p) and Next(228, p) and Uses(p, "cherry") with 6 = 6 and "cherry" = "cherry" with "randomasd" = "random"
+none
+5000

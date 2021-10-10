@@ -1,0 +1,45 @@
+1 - Statement Synonym
+stmt s;
+Select s
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12
+5000
+2 - Assignment Synonym
+assign a;
+Select a
+1, 2, 3, 5, 7, 8, 9, 11
+5000
+3 - While Synonym
+while w;
+Select w
+4
+5000
+4 - If Synonym;
+if ifs;
+Select ifs
+6
+5000
+5 - Variable Synonym;
+variable v;
+Select v
+i, x, y, z
+5000
+6 - Constant Synonym;
+constant c;
+Select c
+1, 2, 3, 5
+5000
+7 - Procedure Synonym;
+procedure p;
+Select p
+Example
+5000
+8 - Read Synonym;
+read re;
+Select re
+10
+5000
+9 - Print Synonym;
+print pn;
+Select pn
+12
+5000

@@ -1,0 +1,44 @@
+Calls:
+1 - Calls(p, p)
+should not return anything but currently returns some value
+2 - Calls(*)(_, p) ; first param _ returning invalid
+
+Next:
+Next(s1, s1) returning true - there should be no scenario for this given that conditional blocks are not allowed to be empty
+if () then {
+	if () then {
+		while () { <------------------- (0)
+			x = 1;} <-------------- (1)
+	} else {
+		y = 2;} <-------------------(2)
+	while () {  <-----------------------(3)
+		z = 3; <--------------------(4)
+	}
+} else {
+
+Currently, our program returns 1, 2, 4 for Next (s1, (3)), should be 0, 2, 4. Next relationship is not correctly accounting for stmt in while.
+
+while() { <--------------------(0)
+	x =10; <--------------------(1)
+	if() then { <--------------------(2)
+		while( bD == 4321 ) { <------------------(3)
+			call ABC; <----------------------(4)
+			while (){ <----------------------(5)
+				print a; <---------------(6)
+			}
+		}
+	} else {
+		print a; <------------------(7)
+	}
+}
+x = 2; <-----------------------(8)
+
+Next (s1, (0)) returns 7 only currently. should be 3 and 7
+Next (s1, (3)) is returning 0 and 7, when it should only return 0
+Next ((6), s1) returns 5 and 8 when it should only be 5.
+Next ((3), s1) returns 4 only. It should return 0 and 4.
+Next* ((3), s1) returns 3, 4, 5, 6, 8 but not the statements from 0, 1, 2 and 7. It does not account for going into the parent while loop and also if the program executes into the else block instead.
+Next* (s1, (0)) does not return 3 to 6.
+Select w such that Next* (w, ifs) does not return 3 and 5.
+
+

@@ -1,0 +1,150 @@
+1 - test invalid synonym
+variable 1;
+Select v such that Uses("c", v)
+none
+5000
+2 - test invalid stmtRef
+variable v;
+Select v such that Uses("abc", v)
+none
+5000
+3 - query variables with assignment stmtRef, variable entRef. empty result. 
+variable v;
+Select v such that Uses(2, v)
+none
+5000
+4 - query variables with assignment stmtRef, variable entRef. existing variables in result.
+variable v;
+Select v such that Uses(8, v)
+I, k, j1k, chArlie
+5000
+5 - query statements with assignment entRef, NAME entRef. Name given does not exist. 
+assign a;
+Select a such that Uses(a, "abd")
+none
+5000
+6 - query statements with assignment entRef, NAME entRef. assignment required exists. 
+assign a;
+Select a such that Uses(a, "x")
+10, 18
+5000
+7 - query statements with assignment entRef, _ entRef. 
+assign a;
+Select a such that Uses(a, _)
+3, 6, 8, 10, 13, 15, 17, 18
+5000
+8 - query variables with if stmtRef, variable entRef. existing variables in result.
+variable v;
+Select v such that Uses(11, v)
+left, right, Romeo, delta, l, width, c, x
+5000
+9 - query statements with if stmtRef, NAME entRef. Name given does not exist. 
+if ifstmt;
+Select ifstmt such that Uses(ifstmt, "abd")
+none
+5000
+10 - query statements with if stmtRef, NAME entRef. assignment required exists. 
+if ifstmt;
+Select ifstmt such that Uses(ifstmt, "Romeo")
+4, 11
+5000
+11 - query statements with if stmtRef, _ entRef. 
+if ifstmt;
+Select ifstmt such that Uses(ifstmt, _)
+4, 11
+5000
+12 - query variables with while stmtRef, variable entRef. existing variables in result.
+variable v;
+Select v such that Uses(9, v)
+x, left, right, Romeo, delta, l, width, c
+5000
+13 - query statements with while stmtRef, NAME entRef. Name given does not exist. 
+while w;
+Select w such that Uses(w, "abd")
+none
+5000
+14 - query statements with while stmtRef, NAME entRef. assignment required exists. 
+while w;
+Select w such that Uses(w, "Romeo")
+9, 12
+5000
+15 - query statements with while stmtRef, _ entRef. 
+while w;
+Select w such that Uses(w, _)
+5, 7, 9, 12, 16
+5000
+16 - query statements with stmt stmtRef, NAME entRef. Name given does not exist. 
+stmt s;
+Select s such that Uses(s, "abd")
+none
+5000
+17 - query statements with stmt stmtRef, NAME entRef. assignment required exists. 
+stmt s;
+Select s such that Uses(s, "Romeo")
+4, 9, 11, 12, 13, 15
+5000
+18 - query statements with stmt stmtRef, _ entRef. 
+stmt s;
+Select s such that Uses(s, _)
+3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15, 16, 17, 18
+5000
+19 - query statements with DIGIT+ stmtRef, variable entRef. True condition.
+stmt s; variable v;
+Select s such that Uses(3, v)
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19
+5000
+20 - query statements with DIGIT+ stmtRef, variable entRef. False condition.
+stmt s; variable v;
+Select s such that Uses(1, v)
+none
+5000
+21 - query statements with DIGIT+ stmtRef, _ entRef. True condition.
+stmt s;
+Select s such that Uses(3, _)
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19
+5000
+22 - query statements with DIGIT+ stmtRef, _ entRef. False condition.
+stmt s;
+Select s such that Uses(1, _)
+none
+5000
+23 - query statements with DIGIT+ stmtRef, NAME entRef. True condition.
+stmt s; 
+Select s such that Uses(3, "a")
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19
+5000
+24 - query statements with DIGIT+ stmtRef, NAME entRef. False condition.
+stmt s;
+Select s such that Uses(1, "a")
+none
+5000
+25 - query variables with DIGIT+ stmtRef, NAME entRef. True condition.
+variable v;
+Select v such that Uses(3, "a")
+i, b, c, a, beta, oSCar, tmp, I, k, j1k, chArlie, x, left, right, Romeo, delta, l, width
+5000
+26 - query variables with DIGIT+ stmtRef, NAME entRef. False condition.
+variable v;
+Select v such that Uses(1, "a")
+none
+5000
+27 - query statements with _ stmtRef, variable entRef. True condition.
+stmt s; variable v;
+Select s such that Uses(_, v)
+none
+5000
+28 - query statements with integer stmtRef, integer entRef. Invalid parameters.
+stmt s;
+Select s such that Uses(2, 3)
+none
+5000
+29 - query statements with _ stmtRef, _ entRef.
+stmt s;
+Select s such that Uses(_, _)
+none
+5000
+30 - test incomplete query
+stmt s;
+Selec s such Uses(3, "a")
+none
+5000

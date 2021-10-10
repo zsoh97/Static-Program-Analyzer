@@ -1,0 +1,21 @@
+procedure expression {
+    if (aa > 33) then {
+        read cc;
+        while (((cc >= bb) && (bb == bb)) || (((cc <= bb) || (0 != dd)) && ((aa - 22) < 0))) {
+            aa = (  (aa - (   (     11     *   33    ) / (22   +   44   *    aa) )  )   +  bb);
+            bb = aa;
+        }
+        print cc;
+    } else {
+        dd = bb + (((11 + 33) % (33 % 6))) - (aa - ((bb / aa)));
+    }
+    while (!(cc < 0)) {
+        print aa;
+        if ((dd/44%(0-22)) != 33*(bb%aa)) then {
+            dd = ((aa * bb) + 0 ) / (33 * bb) + (cc / dd * ((bb - (aa - cc)) % 44));
+        } else {
+            aa = bb;
+        }
+        read aa;
+    }
+}

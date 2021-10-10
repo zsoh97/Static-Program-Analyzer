@@ -1,0 +1,51 @@
+procedure FollowsUsesModifies {
+    read cc; #1
+    print cc; #2
+    while (!(cc < 6)) { #3
+        cc = bb % 7; #4
+        aa = cc / aa; #5
+        if ((cc + 6) == 7) then { #6
+            aa = bb; #7
+            bb = cc; #8
+            cc = dd; #9
+            dd = ee; #10
+            ee = ff; #11
+            ff = gg; #12
+            gg = hh; #13
+            hh = ii; #14
+            ii = jj; #15
+            jj = kk; #16
+            kk = ll; #17
+            ll = mm; #18
+            mm = nn; #19
+            nn = oo; #20
+            oo = pp; #21
+            cc = aa + bb % aa; #22
+        } else {
+            bb = aa / 0; #23
+            aa = aa * cc - aa; #24
+            cc = aa; #25
+            aa = cc; #26
+            bb = cc; #27
+            aa = bb; #28
+            read cc; #29
+            print aa; #30
+            while (cc == aa) { #31
+                cc = 7 + 6; #32
+                aa = cc; #33
+            }
+            print v1; #34
+        }
+        aa = aa; #35
+        cc = aa; #36
+        if (aa == 7) then { #37
+            print aa; #38
+            aa = aa % 6 + aa; #39
+        } else {
+            read aa; #40
+        }
+        aa = aa / aa; #41
+        print aa; #42
+    }
+    print aa; #43
+}

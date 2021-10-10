@@ -1,0 +1,64 @@
+<?xml-stylesheet type="text/xsl" href="analysis.xsl"?>
+<test_results>
+<info>
+<name>tests</name><parsing_time_taken>76.000000</parsing_time_taken>
+</info>
+<queries>
+<query>
+<id ReturnBoolean="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="Calls with 2 known procedures">1</id><querystr><![CDATA[ Select BOOLEAN such that Calls("Example", "GroupProject")]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>46.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="Calls forward with 1 known procedure">2</id><querystr><![CDATA[procedure p; Select p such that Calls("GroupProject", p)]]></querystr>
+<stuans>Smelly,fishy</stuans>
+<correct>Smelly,fishy</correct>
+<time_taken>54.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="Calls backward with 1 known procedure">3</id><querystr><![CDATA[procedure p; Select p such that Calls(p, "fishy")]]></querystr>
+<stuans>GroupProject,Smelly</stuans>
+<correct>Smelly,GroupProject</correct>
+<time_taken>48.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="Calls with 2 unknown procedures">4</id><querystr><![CDATA[procedure p1, p2; Select <p1, p2> such that Calls(p1, p2)]]></querystr>
+<stuans>Example GroupProject,GroupProject Smelly,GroupProject fishy,Smelly doggie,Smelly fishy,Smelly grant,bel jeunhoe,chengyi seventhmember,eeter chengyi,eeter zeke,grant bel,jeunhoe eeter</stuans>
+<correct>Example GroupProject,GroupProject Smelly,GroupProject fishy,Smelly fishy,Smelly doggie,Smelly grant,grant bel,bel jeunhoe,jeunhoe eeter,eeter zeke,eeter chengyi,chengyi seventhmember</correct>
+<time_taken>51.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Callsstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="Calls* with 2 known procedures">5</id><querystr><![CDATA[ Select BOOLEAN such that Calls*("jeunhoe", "Example")]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>46.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Callsstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="Calls* forward with 1 known procedure">6</id><querystr><![CDATA[procedure p; Select p such that Calls*("eeter", p)]]></querystr>
+<stuans>chengyi,seventhmember,zeke</stuans>
+<correct>zeke,chengyi,seventhmember</correct>
+<time_taken>53.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Callsstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="Calls* backward with 1 known procedure">7</id><querystr><![CDATA[procedure p; Select p such that Calls*(p, "Example")]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>49.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Callsstar="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Calls* with 2 unknown procedures">8</id><querystr><![CDATA[procedure p; Select p such that Calls*(p, _)]]></querystr>
+<stuans>Example,chengyi,Smelly,GroupProject,grant,bel,jeunhoe,eeter</stuans>
+<correct>Example,GroupProject,Smelly,grant,bel,jeunhoe,eeter,chengyi</correct>
+<time_taken>55.000000</time_taken>
+<passed/>
+</query>
+</queries>
+</test_results>

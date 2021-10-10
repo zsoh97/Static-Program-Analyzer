@@ -1,0 +1,42 @@
+procedure testSimple {
+	a = 1;
+	b = 2;
+	c = 3;
+	R = 4;
+	f = 5;
+	q = 6;
+	p = 4;
+	a = p * 2;	
+	b = b + 1;				
+	c = c - 4;				
+	q = q / 5;				
+	m = a * b * c + p / q - f * R;	
+
+	read R;					
+	print R;				
+	f = 789120748901275890417589 * f; 		  
+	c5 = 23;				  
+	Fe2 = 22;				
+	print Fe2;				
+
+	y = 3;					     
+	magic = 0;				
+	if(a > b) then {			
+		flag= 1;			
+		magic = magic + 2;		
+		read c;				
+		print c;			
+	}else {
+		flag =0;			
+		magic = magic + 1;		
+		read p;				
+		print p;			
+	}
+
+	i = 5;					
+	x = 6;					
+	while (i != 0) {			
+		x = 2;				
+		i = i - 1;			
+	}
+}

@@ -1,0 +1,10 @@
+procedure ABC {
+    a = 1;
+    while (b == 2) {
+        read c;}
+    if (d == 4) then {
+        print e;
+    } else {
+        f = 6;
+    }
+}

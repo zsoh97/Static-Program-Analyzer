@@ -1,0 +1,35 @@
+1 - Pattern with both fixed, neither _
+assign a;
+Select a pattern a("x", "x - 1")
+5
+5000
+2 - Pattern with left fixed and right fixed, right _
+assign a;
+Select a pattern a("z", _"z + x"_)
+9
+5000
+3 - Pattern with left fixed and right unfixed, right _
+assign a;
+Select a pattern a("z", _)
+2, 7, 9
+5000
+4 - Pattern with right fixed, left unfixed, left and right _
+assign a;
+Select a pattern a(_, _"i"_)
+9, 11
+5000
+5 - Pattern with right fixed, left unfixed, left _
+assign a;
+Select a pattern a(_, "i - 1")
+11
+5000
+6- Pattern with both left and right unfixed, left and right _
+assign a;
+Select a pattern a(_, _)
+1,2,3,5,7,8,9,11
+5000
+7 - Pattern with non-existent variable on left
+assign a;
+Select a pattern a("hello", _)
+none
+5000

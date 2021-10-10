@@ -1,0 +1,65 @@
+1 - Select ifs stmt num with only variable
+if ifs; variable v;
+Select ifs pattern ifs(v, _, _)
+1, 4, 7, 9, 11, 14, 18, 20
+5000
+2 - Select ifs variable with only variable
+if ifs; variable v;
+Select v pattern ifs(v, _, _)
+x, c, v
+5000
+3 - Select ifs stmt num with IDENT/varname
+if ifs;
+Select ifs pattern ifs("x", _, _)
+1, 7, 18, 20
+5000
+4 - Select ifs stmt num with only constant
+if ifs;
+Select ifs pattern ifs(4, _, _)
+
+5000
+5 - Semantically incorrect first variable
+if ifs; print pn;
+Select ifs pattern ifs(pn, _, _)
+
+5000
+6 - Syntactically invalid, variable in param 2
+if ifs; variable v, v1;
+Select ifs pattern ifs(v, v1, _)
+
+5000
+7 - Syntactically invalid, constant in param 3
+if ifs; variable v;
+Select ifs pattern ifs(v, _, 4)
+
+5000
+8 - Syntactically invalid, wrong number of params
+if ifs; variable v;
+Select v pattern ifs(v, _, _, _)
+
+5000
+9 - Syntactically invalid, expression as first param
+if ifs;
+Select ifs pattern ifs("x + 1", _, _)
+
+5000
+10 - Syntactically invalid, attrRef as param
+if ifs; variable v;
+Select ifs pattern ifs(v.procName, _, _)
+
+5000
+11 - Select attrRef
+if ifs;
+Select ifs.procName pattern ifs("x", _, _)
+patternIf
+5000
+12 - Select BOOLEAN
+if ifs; variable v;
+Select BOOLEAN pattern ifs(v, _, _)
+TRUE
+5000
+13 - Select tuple
+if ifs; variable v;
+Select <ifs, v> pattern ifs(v, _, _)
+1 x, 7 x, 9 c, 11 v, 14 c, 18 x, 20 x
+5000

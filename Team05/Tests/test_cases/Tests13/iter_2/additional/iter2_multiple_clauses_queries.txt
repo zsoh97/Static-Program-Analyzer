@@ -1,0 +1,85 @@
+1 - multiple clauses - such that
+stmt s1, s2, s3;
+Select s3 such that Parent(s1, s2) and Parent(s2, s3)
+5
+5000
+2 - multiple clauses - such that
+assign a; stmt s; call c;
+Select c such that Parent*(s, c) and Uses(a, j) and Follows(a, c)
+8
+5000
+3 - multiple clauses - such that with attribute
+assign a; call c;
+Select c.procName such that Follows*(a, c) and Follows(10, a) and Modifies(a, _)
+goodgame
+5000
+4 - multiple clauses - such that
+stmt s1, s2;
+Select s1 such that Uses(s2,"j") and Next*(s2, s1)
+4,5,6,7,8
+5000
+5 - multiple clauses - with
+stmt s; constant c;
+Select c with s.stmt# = c.value and c.value = 4
+none
+5000
+6 - multiple clauses - with
+assign a; prog_line n;
+Select a with a.stmt# = n and n = 14 and 12 = 12
+14
+5000
+7 - multiple clauses - with
+assign a; print pr;
+Select pr with a.stmt# = 18 and pr.varName ="huh"
+17
+5000
+8 - multiple clauses - pattern
+assign a;
+Select a pattern a("modified", _) and a(_,"888")
+none
+5000
+9 - multiple clauses - pattern
+assign a; variable v;
+Select v pattern a(v, _) and a(_, _"j"_)
+j
+5000
+10 - multiple clauses - pattern
+assign a; variable v;
+Select a pattern a(v, _) and a(_, _"foo * baz"_)
+7
+5000
+11 - multiple clauses - pattern
+assign a;
+Select BOOLEAN pattern a("modified", _) and a(_, _"j + 3"_)
+FALSE
+5000
+12 - multiple clauses - select tuple
+stmt s1, s2, s3; prog_line n;
+Select <s1, s2> such that Parent*(s1, s2) and Uses(s1, j) with s3.stmt# = n and n = 8 such that Follows(s2, s3)
+4 7, 5 7
+5000
+13 - multiple clauses - select boolean
+assign a; stmt s1, s2
+Select BOOLEAN pattern a(_, _) and a(_, _"3"_) such that Follows*(1, 2) and Parent(s1, s2) and Modifies (a, "j")
+TRUE
+5000
+14 - multiple clauses - p/s/w
+procedure p; call c; while w;
+Select p such that Calls("iter2", p) and Parent (w, c) with c.procName = p. procName
+callee
+5000
+15 - multiple clauses - p/s/w
+stmt s1, s2;
+Select <s1, s2, a, c, re> such that Follows(a, s1) and Parent(s2, a) with c.procName ="goodgame" pattern a(_"8"_)
+8 5 7 12 19, 8 5 7 12 24, 8 5 7 16 19, 8 5 7 16 24
+5000
+16 - multiple clauses - p/s/w
+procedure p; stmt s1, s2, s3; prog_line n; assign a;
+Select p such that Parent(s1, s2) and Parent(s2, s3) with s3.stmt# = n pattern a("modified", _)
+iter2, callee, goodgame, someguy, anothercaller
+5000
+17 - multiple clauses - p/s/w
+stmt s1; call s2;
+Select v.varName such that Uses(s1, v) and Modifies("iter2", v) with s2.procName ="callee" such that Parent*(s1, s2)
+i, j
+5000

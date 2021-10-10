@@ -1,0 +1,52 @@
+<?xml-stylesheet type="text/xsl" href="analysis.xsl"?>
+<test_results>
+<info>
+<name>legacy</name><parsing_time_taken>59.000000</parsing_time_taken>
+</info>
+<queries>
+<query>
+<id ReturnTuple="1" Follows="1" Parentstar="1" UnnamedVar="1" Uses="1" SuchThat="1" CondNum="6" RelNum="3" comment="">101</id><querystr><![CDATA[stmt s, s1; assign a, a1, a2; while w; if ifs; variable v; procedure p, q; call c; constant const; print pn, pn2; read rd; Select v such that Follows (s, _) and Uses (s, v) and Parent* (s, c)]]></querystr>
+<stuans>a,b,m,n,p</stuans>
+<correct>m,n,p,a,b</correct>
+<time_taken>48.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Modifies="1" Next="1" UnnamedVar="3" Pattern="1" SuchThat="1" CondNum="8" RelNum="2" comment="">102</id><querystr><![CDATA[stmt s, s1; assign a, a1, a2; while w; if ifs; variable v; procedure p, q; call c; constant const; print pn, pn2; read rd; Select a such that Modifies (s, v) and Next (a, s) pattern w (v, _) and ifs (v, _, _)]]></querystr>
+<stuans>11,15</stuans>
+<correct>11,15</correct>
+<time_taken>69.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" Modifies="1" UnnamedVar="2" Pattern="1" SuchThat="2" With="1" CondNum="9" RelNum="2" comment="">103</id><querystr><![CDATA[stmt s, s1; assign a, a1, a2; while w; if ifs; variable v; procedure p, q; call c; constant const; print pn, pn2; read rd; Select <const, p, a, v> such that Modifies (a, v) pattern a (_, _"n-p"_) with c.stmt# = const.value and q.procName = c.procName such that Calls (p, q)]]></querystr>
+<stuans>13 functionExe 16 m,7 functionCompute 16 m,13 functionExe 9 m,7 functionCompute 9 m</stuans>
+<correct>7 functionCompute 9 m,13 functionExe 9 m</correct>
+<time_taken>58.000000</time_taken>
+<failed>
+<missing></missing>
+<additional>13 functionExe 16 m,7 functionCompute 16 m</additional>
+<summary>
+<expected>2</expected>
+<matched>2</matched>
+<missing>0</missing>
+<additional>2</additional>
+</summary>
+</failed>
+</query>
+<query>
+<id ReturnTuple="1" Affectsstar="1" Next="1" Nextstar="1" SuchThat="1" CondNum="5" RelNum="3" comment="">104</id><querystr><![CDATA[stmt s, s1; assign a, a1, a2; while w; if ifs; variable v; procedure p, q; call c; constant const; print pn, pn2; read rd; Select <s, s1> such that Affects* (s, s1) and Next (ifs, s) and Next* (s, pn)]]></querystr>
+<stuans>11 12,11 15,11 16,11 18,11 9</stuans>
+<correct>11 9,11 12,11 15,11 16,11 18</correct>
+<time_taken>49.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="2" Nextstar="1" SuchThat="1" CondNum="5" RelNum="3" comment="">105</id><querystr><![CDATA[stmt s, s1; assign a, a1, a2; while w; if ifs; variable v; procedure p, q; call c; constant const; print pn, pn2; read rd; Select <a, a2> such that Next* (a2, a) and Affects (a, a1) and Affects (a1, a2)]]></querystr>
+<stuans>24 26,26 27,27 24,5 5,5 6,6 6,6 5</stuans>
+<correct>5 5,5 6,6 5,6 6,24 26,27 24,26 27</correct>
+<time_taken>59.000000</time_taken>
+<passed/>
+</query>
+</queries>
+</test_results>

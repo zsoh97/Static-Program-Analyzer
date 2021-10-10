@@ -1,0 +1,15 @@
+procedure oneLevel {
+  read x;
+  while ((x != 3) && (x <= 6)) {
+    print x;
+    read y;
+    y = x + 2;
+  }
+  print y;
+  if ((y >= 5) || (x > y)) then {
+    x = 1;
+  } else {
+    y = x;
+  }
+  y = 1;
+}

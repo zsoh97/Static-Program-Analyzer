@@ -1,0 +1,796 @@
+<?xml-stylesheet type="text/xsl" href="analysis.xsl"?>
+<test_results>
+<info>
+<name>iteration-1-tests</name><parsing_time_taken>12.000000</parsing_time_taken>
+</info>
+<queries>
+<query>
+<id ReturnTuple="1" CondNum="1" RelNum="0" comment="Valid. Select variable">1001</id><querystr><![CDATA[variable v; procedure p; stmt s; constant c; Select v]]></querystr>
+<stuans>aa,bb,cc,dd,false,true</stuans>
+<correct>aa,bb,cc,dd,true,false</correct>
+<time_taken>46.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" CondNum="1" RelNum="0" comment="Valid. Select procedure">1002</id><querystr><![CDATA[variable v; procedure p; stmt s; constant c; Select p]]></querystr>
+<stuans>basic</stuans>
+<correct>basic</correct>
+<time_taken>58.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" CondNum="1" RelNum="0" comment="Valid. Select stmt">1003</id><querystr><![CDATA[variable v; procedure p; stmt s; constant c; Select s]]></querystr>
+<stuans>1,10,11,2,3,4,5,6,7,8,9</stuans>
+<correct>1,2,3,4,5,6,7,8,9,10,11</correct>
+<time_taken>45.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" CondNum="1" RelNum="0" comment="Valid. Select constant">1004</id><querystr><![CDATA[variable v; procedure p; stmt s; constant c; Select c]]></querystr>
+<stuans>0,10,11,12,13,14,15,16,17,9</stuans>
+<correct>0,9,10,11,12,13,14,15,16,17</correct>
+<time_taken>45.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" CondNum="1" RelNum="0" comment="Valid. Select read">1005</id><querystr><![CDATA[read r; print p; call c; while w; if ifs; assign a; Select r]]></querystr>
+<stuans>1,3,8</stuans>
+<correct>1,3,8</correct>
+<time_taken>43.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" CondNum="1" RelNum="0" comment="Valid. Select print">1006</id><querystr><![CDATA[read r; print p; call c; while w; if ifs; assign a; Select p]]></querystr>
+<stuans>11</stuans>
+<correct>11</correct>
+<time_taken>52.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" CondNum="1" RelNum="0" comment="Valid. Select call">1007</id><querystr><![CDATA[read r; print p; call c; while w; if ifs; assign a; Select c]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>43.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" CondNum="1" RelNum="0" comment="Valid. Select while">1008</id><querystr><![CDATA[read r; print p; call c; while w; if ifs; assign a; Select w]]></querystr>
+<stuans>5</stuans>
+<correct>5</correct>
+<time_taken>44.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" CondNum="1" RelNum="0" comment="Valid. Select if">1009</id><querystr><![CDATA[read r; print p; call c; while w; if ifs; assign a; Select ifs]]></querystr>
+<stuans>2,7</stuans>
+<correct>2,7</correct>
+<time_taken>45.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" CondNum="1" RelNum="0" comment="Valid. Select assign">1010</id><querystr><![CDATA[read r; print p; call c; while w; if ifs; assign a; Select a]]></querystr>
+<stuans>10,4,6,9</stuans>
+<correct>4,6,9,10</correct>
+<time_taken>44.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" CondNum="1" RelNum="0" comment="Invalid. No synonym declaration">1011</id><querystr><![CDATA[ Select a]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>59.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" CondNum="1" RelNum="0" comment="Invalid. Synonym must start with a letter">1012</id><querystr><![CDATA[assign 0; Select a]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>56.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" CondNum="2" RelNum="0" comment="Invalid. Synonym cannot have symbol">1013</id><querystr><![CDATA[assign a_; Select a]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>54.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" CondNum="1" RelNum="0" comment="Invalid. Select clause cannot select multiple">1014</id><querystr><![CDATA[assign a; print c; Select a, c]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>41.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" CondNum="1" RelNum="0" comment="Invalid. No semicolon after declaration">1015</id><querystr><![CDATA[assign a Select a]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>47.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" CondNum="1" RelNum="0" comment="Invalid. Select clause cannot end with semicolon">1016</id><querystr><![CDATA[assign a Select a;]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>45.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" CondNum="1" RelNum="0" comment="Invalid. Select clause keyword misspelt">1017</id><querystr><![CDATA[assign a Selec a]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>44.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" CondNum="1" RelNum="0" comment="Invalid. Multiple declaration of same synonym">1019</id><querystr><![CDATA[call c; constant c; Select c]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>42.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Follows="1" UnnamedVar="1" Pattern="1" SuchThat="1" CondNum="5" RelNum="1" comment="Valid. Follows, 1 such that, 1 pattern, no common synonym">1019</id><querystr><![CDATA[assign a; if ifs; while w; Select a such that Follows(ifs, w) pattern a("cc", _)]]></querystr>
+<stuans>10</stuans>
+<correct>10</correct>
+<time_taken>45.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Follows="1" UnnamedVar="1" Pattern="1" SuchThat="1" CondNum="5" RelNum="1" comment="Valid. Follows, 1 such that, 1 pattern, no common synonym (different order)">1020</id><querystr><![CDATA[assign a; if ifs; while w; Select a pattern a("cc", _) such that Follows(ifs, w)]]></querystr>
+<stuans>10</stuans>
+<correct>10</correct>
+<time_taken>43.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Follows="1" Pattern="1" SuchThat="1" CondNum="4" RelNum="1" comment="Valid. Follows, 1 such that, 1 pattern (no match), no common synonym">1021</id><querystr><![CDATA[assign a; if ifs; while w; Select a pattern a("bb","dd") such that Follows(ifs, w)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>46.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Follows="1" UnnamedVar="1" Pattern="1" SuchThat="1" CondNum="5" RelNum="1" comment="Valid. Follows, 1 such that (no match), 1 pattern, no common synonym">1022</id><querystr><![CDATA[assign a; if ifs; while w; Select a pattern a("bb", _) such that Follows(p, w)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>45.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Follows="1" Pattern="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid. Follows, 1 such that, 1 pattern (and keyword used), no common synonym">1023</id><querystr><![CDATA[assign a; if ifs; while w; Select a such that Follows(ifs, w) and pattern a("cc","0+009")]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>44.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Follows="1" SuchThat="1" CondNum="3" RelNum="1" comment="Invalid. Follows, 1 such that, 1 pattern (pattern keyword missing), no common synonym">1024</id><querystr><![CDATA[assign a; if ifs; while w; Select a such that Follows(ifs, w) a("cc","0+009")]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>45.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Follows="1" Pattern="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid. Follows, 1 such that, 1 pattern (synonym keyword missing), no common synonym">1025</id><querystr><![CDATA[assign a; if ifs; while w; Select a such that Follows(ifs, w) pattern ("cc","0+009")]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>46.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Followsstar="1" UnnamedVar="1" Pattern="1" SuchThat="1" CondNum="5" RelNum="1" comment="Valid. Follows*, 1 such that, 1 pattern, no common synonym">1026</id><querystr><![CDATA[assign a; if ifs; print p; Select a such that Follows*(ifs, p) pattern a("cc", _)]]></querystr>
+<stuans>10</stuans>
+<correct>10</correct>
+<time_taken>48.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Followsstar="1" UnnamedVar="1" Pattern="1" SuchThat="1" CondNum="5" RelNum="1" comment="Valid. Follows*, 1 such that, 1 pattern, no common synonym (different order)">1027</id><querystr><![CDATA[assign a; if ifs; print p; Select a pattern a("cc", _) such that Follows*(ifs, p)]]></querystr>
+<stuans>10</stuans>
+<correct>10</correct>
+<time_taken>58.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Followsstar="1" Pattern="1" SuchThat="1" CondNum="4" RelNum="1" comment="Valid. Follows*, 1 such that, 1 pattern (no match), no common synonym">1028</id><querystr><![CDATA[assign a; if ifs; print p; Select a pattern a("cc","aa") such that Follows*(ifs, p)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>46.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Followsstar="1" UnnamedVar="1" Pattern="1" SuchThat="1" CondNum="5" RelNum="1" comment="Valid. Follows*, 1 such that (no match), 1 pattern, no common synonym">1029</id><querystr><![CDATA[assign a; if ifs; print p; Select a pattern a("bb", _) such that Follows*(p, ifs)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>44.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Followsstar="1" Pattern="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid. Follows*, 1 such that, 1 pattern (and keyword used), no common synonym">1030</id><querystr><![CDATA[assign a; if ifs; print p; Select a such that Follows*(ifs, p) and pattern a("cc","0+009")]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>42.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Followsstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="Invalid. Follows*, 1 such that, 1 pattern (pattern keyword missing), no common synonym">1031</id><querystr><![CDATA[assign a; if ifs; print p; Select a such that Follows*(ifs, p) a("cc","0+009")]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>46.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Followsstar="1" Pattern="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid. Follows*, 1 such that, 1 pattern (synonym keyword missing), no common synonym">1032</id><querystr><![CDATA[assign a; if ifs; print p; Select a such that Follows*(ifs, p) pattern a("cc","0+009")]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>44.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Parent="1" UnnamedVar="1" Pattern="1" SuchThat="1" CondNum="5" RelNum="1" comment="Valid. Parent, 1 such that, 1 pattern, no common synonym">1033</id><querystr><![CDATA[assign a; if ifs; read r; Select ifs such that Parent(ifs, r) pattern a("bb", _)]]></querystr>
+<stuans>2,7</stuans>
+<correct>2,7</correct>
+<time_taken>45.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Parent="1" UnnamedVar="1" Pattern="1" SuchThat="1" CondNum="5" RelNum="1" comment="Valid. Parent, 1 such that, 1 pattern, no common synonym (different order)">1034</id><querystr><![CDATA[assign a; if ifs; read r; Select ifs pattern a("bb", _) such that Parent(ifs, r)]]></querystr>
+<stuans>2,7</stuans>
+<correct>2,7</correct>
+<time_taken>47.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Parent="1" Pattern="1" SuchThat="1" CondNum="4" RelNum="1" comment="Valid. Parent, 1 such that, 1 pattern (no match), no common synonym">1035</id><querystr><![CDATA[assign a; if ifs; read r; Select ifs pattern a("bb","cc") such that Parent(ifs, r)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>45.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Parent="1" UnnamedVar="1" Pattern="1" SuchThat="1" CondNum="5" RelNum="1" comment="Valid. Parent, 1 such that (no match), 1 pattern, no common synonym">1036</id><querystr><![CDATA[assign a; if ifs; while w; Select ifs pattern a("bb", _) such that Parent(ifs, w)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>45.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Parent="1" UnnamedVar="1" Pattern="1" SuchThat="1" CondNum="5" RelNum="1" comment="Invalid. Parent, 1 such that, 1 pattern (and keyword used), no common synonym">1037</id><querystr><![CDATA[assign a; if ifs; read r; Select ifs such that Parent(ifs, r) and pattern a("bb", _)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>47.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Parent="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid. Parent, 1 such that, 1 pattern (pattern keyword missing), no common synonym">1038</id><querystr><![CDATA[assign a; if ifs; read r; Select ifs such that Parent(ifs, r) a("bb", _)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>43.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Parent="1" UnnamedVar="1" Pattern="1" SuchThat="1" CondNum="5" RelNum="1" comment="Invalid. Parent, 1 such that, 1 pattern (synonym keyword missing), no common synonym">1039</id><querystr><![CDATA[assign a; if ifs; read r; Select ifs such that Parent(ifs, r) pattern ("bb", _)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>44.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Parentstar="1" UnnamedVar="1" Pattern="1" SuchThat="1" CondNum="5" RelNum="1" comment="Valid. Parent*, 1 such that, 1 pattern, no common synonym">1040</id><querystr><![CDATA[assign a; read r; while w; Select w such that Parent*(w, r) pattern a("bb", _)]]></querystr>
+<stuans>5</stuans>
+<correct>5</correct>
+<time_taken>47.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Parentstar="1" UnnamedVar="1" Pattern="1" SuchThat="1" CondNum="5" RelNum="1" comment="Valid. Parent*, 1 such that, 1 pattern, no common synonym (different order)">1041</id><querystr><![CDATA[assign a; read r; while w; Select w pattern a("bb", _) such that Parent*(w, r)]]></querystr>
+<stuans>5</stuans>
+<correct>5</correct>
+<time_taken>63.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Parentstar="1" Pattern="1" SuchThat="1" CondNum="4" RelNum="1" comment="Valid. Parent*, 1 such that, 1 pattern (no match), no common synonym">1042</id><querystr><![CDATA[assign a; read r; while w; Select w pattern a("bb", "cc") such that Parent*(w, r)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>57.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Parentstar="1" UnnamedVar="1" Pattern="1" SuchThat="1" CondNum="5" RelNum="1" comment="Valid. Parent*, 1 such that (no match), 1 pattern, no common synonym">1043</id><querystr><![CDATA[assign a; if ifs; while w; Select w pattern a("bb", _) such that Parent*(ifs, w)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>58.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Parentstar="1" UnnamedVar="1" Pattern="1" SuchThat="1" CondNum="5" RelNum="1" comment="Invalid. Parent*, 1 such that, 1 pattern (and keyword used), no common synonym">1044</id><querystr><![CDATA[assign a; read r; while w; Select w such that Parent*(w, r) and pattern a("bb", _)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>53.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Parentstar="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid. Parent*, 1 such that, 1 pattern (pattern keyword missing), no common synonym">1045</id><querystr><![CDATA[assign a; read r; while w; Select w such that Parent*(w, r) a("bb", _)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>59.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Parentstar="1" UnnamedVar="1" Pattern="1" SuchThat="1" CondNum="5" RelNum="1" comment="Invalid. Parent*, 1 such that, 1 pattern (synonym keyword missing), no common synonym">1046</id><querystr><![CDATA[assign a; read r; while w; Select w such that Parent*(w, r) pattern ("bb", _)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>41.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" Uses="1" Pattern="1" SuchThat="1" CondNum="5" RelNum="1" comment="Valid. Uses, 1 such that, 1 pattern, no common synonym">1047</id><querystr><![CDATA[assign a; if ifs; Select ifs such that Uses(ifs, "aa") pattern a("bb", _)]]></querystr>
+<stuans>2,7</stuans>
+<correct>2,7</correct>
+<time_taken>43.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" Uses="1" Pattern="1" SuchThat="1" CondNum="5" RelNum="1" comment="Valid. Uses, 1 such that, 1 pattern, no common synonym (different order)">1048</id><querystr><![CDATA[assign a; if ifs; Select ifs pattern a("bb", _) such that Uses(ifs, "aa")]]></querystr>
+<stuans>2,7</stuans>
+<correct>2,7</correct>
+<time_taken>51.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Uses="1" Pattern="1" SuchThat="1" CondNum="4" RelNum="1" comment="Valid. Uses, 1 such that, 1 pattern (no match), no common synonym">1049</id><querystr><![CDATA[assign a; if ifs; Select ifs pattern a("bb", "cc") such that Uses(ifs, "aa")]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>46.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Uses="1" Pattern="1" SuchThat="1" CondNum="4" RelNum="1" comment="Valid. Uses, 1 such that (no match), 1 pattern, no common synonym">1050</id><querystr><![CDATA[assign a; if ifs; Select ifs pattern a("bb", "cc") such that Uses(ifs, "dd")]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>47.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" Uses="1" Pattern="1" SuchThat="1" CondNum="5" RelNum="1" comment="Invalid. Uses, 1 such that, 1 pattern (and keyword used), no common synonym">1051</id><querystr><![CDATA[assign a; if ifs; Select ifs such that Uses(ifs, "aa") and pattern a("bb", _)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>46.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" Uses="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid. Uses, 1 such that, 1 pattern (pattern keyword missing), no common synonym">1052</id><querystr><![CDATA[assign a; if ifs; Select ifs such that Uses(ifs, "aa") a("bb", _)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>49.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" Uses="1" Pattern="1" SuchThat="1" CondNum="5" RelNum="1" comment="Invalid. Uses, 1 such that, 1 pattern (synonym keyword missing), no common synonym">1053</id><querystr><![CDATA[assign a; if ifs; Select ifs such that Uses(ifs, "aa") pattern ("bb", _)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>48.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Modifies="1" UnnamedVar="1" Pattern="1" SuchThat="1" CondNum="5" RelNum="1" comment="Valid. Modifies, 1 such that, 1 pattern, no common synonym">1054</id><querystr><![CDATA[assign a; while w; Select w such that Modifies(w, "false") pattern a("bb",  _)]]></querystr>
+<stuans>5</stuans>
+<correct>5</correct>
+<time_taken>47.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Modifies="1" UnnamedVar="1" Pattern="1" SuchThat="1" CondNum="5" RelNum="1" comment="Valid. Modifies, 1 such that, 1 pattern, no common synonym (different order)">1055</id><querystr><![CDATA[assign a; while w; Select w pattern a("bb",  _) such that Modifies(w, "false")]]></querystr>
+<stuans>5</stuans>
+<correct>5</correct>
+<time_taken>47.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Modifies="1" Pattern="1" SuchThat="1" CondNum="4" RelNum="1" comment="Valid. Modifies, 1 such that, 1 pattern (no match), no common synonym">1056</id><querystr><![CDATA[assign a; while w; Select w pattern a("bb","cc") such that Modifies(w, "false")]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>45.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Modifies="1" UnnamedVar="1" Pattern="1" SuchThat="1" CondNum="5" RelNum="1" comment="Valid. Modifies, 1 such that (no match), 1 pattern, no common synonym">1057</id><querystr><![CDATA[assign a; while w; Select w pattern a("bb", _) such that Modifies(w, "true")]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>47.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Modifies="1" UnnamedVar="1" Pattern="1" SuchThat="1" CondNum="5" RelNum="1" comment="Invalid. Modifies, 1 such that, 1 pattern (and keyword used), no common synonym">1058</id><querystr><![CDATA[assign a; while w; Select w such that Modifies(w, "false") and pattern a("bb",  _)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>46.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Modifies="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid. Modifies, 1 such that, 1 pattern (pattern keyword missing), no common synonym">1059</id><querystr><![CDATA[assign a; while w; Select w such that Modifies(w, "false") a("bb",  _)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>47.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Modifies="1" UnnamedVar="1" Pattern="1" SuchThat="1" CondNum="5" RelNum="1" comment="Invalid. Modifies, 1 such that, 1 pattern (synonym keyword missing), no common synonym">1060</id><querystr><![CDATA[assign a; while w; Select w such that Modifies(w, "false") pattern ("bb",  _)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>48.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Follows="1" UnnamedVar="1" Pattern="1" SuchThat="1" CondNum="5" RelNum="1" comment="Valid. Follows, 1 such that, 1 pattern, common synonym">1061</id><querystr><![CDATA[assign a; print p; Select a such that Follows(a, p) pattern a("cc", _"9"_)]]></querystr>
+<stuans>10</stuans>
+<correct>10</correct>
+<time_taken>47.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Follows="1" UnnamedVar="1" Pattern="1" SuchThat="1" CondNum="5" RelNum="1" comment="Valid. Follows, 1 such that, 1 pattern, common synonym (different order)">1062</id><querystr><![CDATA[assign a; print p; Select a pattern a("cc", _"9"_) such that Follows(a, p)]]></querystr>
+<stuans>10</stuans>
+<correct>10</correct>
+<time_taken>47.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Follows="1" Pattern="1" SuchThat="1" CondNum="4" RelNum="1" comment="Valid. Follows, 1 such that, 1 pattern (no match), common synonym">1063</id><querystr><![CDATA[assign a; print p; Select a pattern a("bb", "cc") such that Follows(a, p)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>50.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Follows="1" UnnamedVar="1" Pattern="1" SuchThat="1" CondNum="5" RelNum="1" comment="Valid. Follows, 1 such that (no match), 1 pattern, common synonym">1064</id><querystr><![CDATA[assign a; print p; Select a pattern a("cc", _"9"_) such that Follows(a, r)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>49.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Follows="1" UnnamedVar="1" Pattern="1" SuchThat="1" CondNum="5" RelNum="1" comment="Invalid. Follows, 1 such that, 1 pattern (and keyword used), common synonym">1065</id><querystr><![CDATA[assign a; print p; Select a such that Follows(a, p) and pattern a("cc", _"9"_)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>51.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Follows="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid. Follows, 1 such that, 1 pattern (pattern keyword missing), common synonym">1066</id><querystr><![CDATA[assign a; print p; Select a such that Follows(a, p) a("cc", _"9"_)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>45.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Follows="1" UnnamedVar="1" Pattern="1" SuchThat="1" CondNum="5" RelNum="1" comment="Invalid. Follows, 1 such that, 1 pattern (synonym keyword missing), common synonym">1067</id><querystr><![CDATA[assign a; print p; Select a such that Follows(a, p) pattern ("cc", _"9"_)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>46.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Followsstar="1" UnnamedVar="1" Pattern="1" SuchThat="1" CondNum="5" RelNum="1" comment="Valid. Follows*, 1 such that, 1 pattern, common synonym">1068</id><querystr><![CDATA[assign a; read r; Select a such that Follows*(r, a) pattern a("cc", _"0"_)]]></querystr>
+<stuans></stuans>
+<correct>10</correct>
+<time_taken>50.000000</time_taken>
+<failed>
+<missing>10</missing>
+<additional></additional>
+<summary>
+<expected>1</expected>
+<matched>0</matched>
+<missing>1</missing>
+<additional>0</additional>
+</summary>
+</failed>
+</query>
+<query>
+<id ReturnTuple="1" Followsstar="1" UnnamedVar="1" Pattern="1" SuchThat="1" CondNum="5" RelNum="1" comment="Valid. Follows*, 1 such that, 1 pattern, common synonym (different order)">1069</id><querystr><![CDATA[assign a; read r; Select a pattern a("cc", _"0"_) such that Follows*(r, a)]]></querystr>
+<stuans></stuans>
+<correct>10</correct>
+<time_taken>46.000000</time_taken>
+<failed>
+<missing>10</missing>
+<additional></additional>
+<summary>
+<expected>1</expected>
+<matched>0</matched>
+<missing>1</missing>
+<additional>0</additional>
+</summary>
+</failed>
+</query>
+<query>
+<id ReturnTuple="1" Followsstar="1" Pattern="1" SuchThat="1" CondNum="4" RelNum="1" comment="Valid. Follows*, 1 such that, 1 pattern (no match), common synonym">1070</id><querystr><![CDATA[assign a; read r; Select a pattern a("cc", "bb") such that Follows*(r, a)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>43.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Followsstar="1" UnnamedVar="1" Pattern="1" SuchThat="1" CondNum="5" RelNum="1" comment="Valid. Follows*, 1 such that (no match), 1 pattern, common synonym">1071</id><querystr><![CDATA[assign a; read r; Select a pattern a("cc", _"0"_) such that Follows*(10, a)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>44.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Followsstar="1" UnnamedVar="1" Pattern="1" SuchThat="1" CondNum="5" RelNum="1" comment="Invalid. Follows*, 1 such that, 1 pattern (and keyword used), common synonym">1072</id><querystr><![CDATA[assign a; read r; Select a such that Follows*(r, a) and pattern a("cc", _"0"_)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>54.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Followsstar="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid. Follows*, 1 such that, 1 pattern (pattern keyword missing), common synonym">1073</id><querystr><![CDATA[assign a; read r; Select a such that Follows*(r, a) a("cc", _"0"_)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>51.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Followsstar="1" UnnamedVar="1" Pattern="1" SuchThat="1" CondNum="5" RelNum="1" comment="Invalid. Follows*, 1 such that, 1 pattern (synonym keyword missing), common synonym">1074</id><querystr><![CDATA[assign a; read r; Select a such that Follows*(r, a) pattern ("cc", _"0"_)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>46.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Parent="1" UnnamedVar="1" Pattern="1" SuchThat="1" CondNum="5" RelNum="1" comment="Valid. Parent, 1 such that, 1 pattern, common synonym">1075</id><querystr><![CDATA[assign a; if ifs; Select ifs such that Parent(ifs, a) pattern a("dd", _)]]></querystr>
+<stuans>7</stuans>
+<correct>7</correct>
+<time_taken>55.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Parent="1" UnnamedVar="1" Pattern="1" SuchThat="1" CondNum="5" RelNum="1" comment="Valid. Parent, 1 such that, 1 pattern, common synonym (different order)">1076</id><querystr><![CDATA[assign a; if ifs; Select ifs pattern a("dd", _) such that Parent(ifs, a)]]></querystr>
+<stuans>7</stuans>
+<correct>7</correct>
+<time_taken>46.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Parent="1" Pattern="1" SuchThat="1" CondNum="4" RelNum="1" comment="Valid. Parent, 1 such that, 1 pattern (no match), common synonym">1077</id><querystr><![CDATA[assign a; if ifs; Select ifs pattern a("dd", "aa") such that Parent(ifs, a)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>45.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Parent="1" UnnamedVar="1" Pattern="1" SuchThat="1" CondNum="5" RelNum="1" comment="Valid. Parent, 1 such that (no match), 1 pattern, common synonym">1078</id><querystr><![CDATA[assign a; if ifs; Select ifs pattern a("dd", _) such that Parent(10, a)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>47.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Parent="1" UnnamedVar="1" Pattern="1" SuchThat="1" CondNum="5" RelNum="1" comment="Invalid. Parent, 1 such that, 1 pattern (and keyword used), common synonym">1079</id><querystr><![CDATA[assign a; if ifs; Select ifs such that Parent(ifs, a) and pattern a("dd", _)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>43.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Parent="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid. Parent, 1 such that, 1 pattern (pattern keyword missing), common synonym">1080</id><querystr><![CDATA[assign a; if ifs; Select ifs such that Parent(ifs, a) a("dd", _)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>43.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Parent="1" UnnamedVar="1" Pattern="1" SuchThat="1" CondNum="5" RelNum="1" comment="Invalid. Parent, 1 such that, 1 pattern (synonym keyword missing), common synonym">1081</id><querystr><![CDATA[assign a; if ifs; Select ifs such that Parent(ifs, a) pattern ("dd", _)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>42.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Parentstar="1" UnnamedVar="1" Pattern="1" SuchThat="1" CondNum="5" RelNum="1" comment="Valid. Parent*, 1 such that, 1 pattern, common synonym">1082</id><querystr><![CDATA[assign a; while w; Select w such that Parent*(w, a) pattern a("dd", _)]]></querystr>
+<stuans>5</stuans>
+<correct>5</correct>
+<time_taken>45.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Parentstar="1" UnnamedVar="1" Pattern="1" SuchThat="1" CondNum="5" RelNum="1" comment="Valid. Parent*, 1 such that, 1 pattern, common synonym (different order)">1083</id><querystr><![CDATA[assign a; while w; Select w pattern a("dd", _) such that Parent*(w, a)]]></querystr>
+<stuans>5</stuans>
+<correct>5</correct>
+<time_taken>45.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Parentstar="1" Pattern="1" SuchThat="1" CondNum="4" RelNum="1" comment="Valid. Parent*, 1 such that, 1 pattern (no match), common synonym">1084</id><querystr><![CDATA[assign a; while w; Select w pattern a("dd", "aa") such that Parent*(w, a)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>44.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Parentstar="1" UnnamedVar="1" Pattern="1" SuchThat="1" CondNum="5" RelNum="1" comment="Valid. Parent*, 1 such that (no match), 1 pattern, common synonym">1085</id><querystr><![CDATA[assign a; while w; Select w pattern a("dd", _) such that Parent*(10, a)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>47.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Parentstar="1" UnnamedVar="1" Pattern="1" SuchThat="1" CondNum="5" RelNum="1" comment="Invalid. Parent*, 1 such that, 1 pattern (and keyword used), common synonym">1086</id><querystr><![CDATA[assign a; while w; Select w such that Parent*(w, a) and pattern a("dd", _)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>46.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Parentstar="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid. Parent*, 1 such that, 1 pattern (pattern keyword missing), common synonym">1087</id><querystr><![CDATA[assign a; while w; Select w such that Parent*(w, a) a("dd", _)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>54.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Parentstar="1" UnnamedVar="1" Pattern="1" SuchThat="1" CondNum="5" RelNum="1" comment="Invalid. Parent*, 1 such that, 1 pattern (synonym keyword missing), common synonym">1088</id><querystr><![CDATA[assign a; while w; Select w such that Parent*(w, a) pattern ("dd", _)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>44.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" Uses="1" Pattern="1" SuchThat="1" CondNum="5" RelNum="1" comment="Valid. Uses, 1 such that, 1 pattern, common synonym">1089</id><querystr><![CDATA[assign a; if ifs; variable v; Select v such that Uses(ifs, v) pattern a(v, _)]]></querystr>
+<stuans>bb,aa,dd</stuans>
+<correct>bb,dd,aa</correct>
+<time_taken>49.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" Uses="1" Pattern="1" SuchThat="1" CondNum="5" RelNum="1" comment="Valid. Uses, 1 such that, 1 pattern, common synonym (different order)">1090</id><querystr><![CDATA[assign a; if ifs; variable v; Select v pattern a(v, _) such that Uses(ifs, v)]]></querystr>
+<stuans>bb,aa,dd</stuans>
+<correct>bb,dd,aa</correct>
+<time_taken>46.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" Uses="1" Pattern="1" SuchThat="1" CondNum="5" RelNum="1" comment="Valid. Uses, 1 such that, 1 pattern (no match), common synonym">1091</id><querystr><![CDATA[assign a; if ifs; variable v; Select v pattern a(v, _"cc"_) such that Uses(ifs, v)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>49.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" Uses="1" Pattern="1" SuchThat="1" CondNum="5" RelNum="1" comment="Valid. Uses, 1 such that (no match), 1 pattern, common synonym">1092</id><querystr><![CDATA[assign a; if ifs; variable v; Select v pattern a(v, _) such that Uses(a, "x")]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>47.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" Uses="1" Pattern="1" SuchThat="1" CondNum="5" RelNum="1" comment="Invalid. Uses, 1 such that, 1 pattern (and keyword used), common synonym">1093</id><querystr><![CDATA[assign a; if ifs; variable v; Select v such that Uses(ifs, v) and pattern a(v, _)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>49.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" Uses="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid. Uses, 1 such that, 1 pattern (pattern keyword missing), common synonym">1094</id><querystr><![CDATA[assign a; if ifs; variable v; Select v such that Uses(ifs, v) a(v, _)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>47.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" Uses="1" Pattern="1" SuchThat="1" CondNum="5" RelNum="1" comment="Invalid. Uses, 1 such that, 1 pattern (synonym keyword missing), common synonym">1095</id><querystr><![CDATA[assign a; if ifs; variable v; Select v such that Uses(ifs, v) pattern (v, _)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>45.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Modifies="1" UnnamedVar="1" Pattern="1" SuchThat="1" CondNum="5" RelNum="1" comment="Valid. Modifies, 1 such that, 1 pattern, common synonym">1096</id><querystr><![CDATA[assign a; while w; variable v; Select v such that Modifies(w, v) pattern a(v, _)]]></querystr>
+<stuans>aa,dd</stuans>
+<correct>aa,dd</correct>
+<time_taken>48.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Modifies="1" UnnamedVar="1" Pattern="1" SuchThat="1" CondNum="5" RelNum="1" comment="Valid. Modifies, 1 such that, 1 pattern, common synonym (different order)">1097</id><querystr><![CDATA[assign a; while w; variable v; Select v pattern a(v, _) such that Modifies(w, v)]]></querystr>
+<stuans>aa,dd</stuans>
+<correct>aa,dd</correct>
+<time_taken>47.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Modifies="1" UnnamedVar="1" Pattern="1" SuchThat="1" CondNum="5" RelNum="1" comment="Valid. Modifies, 1 such that, 1 pattern (no match), common synonym">1098</id><querystr><![CDATA[assign a; while w; variable v; Select v pattern a(v, _"cc"_) such that Modifies(w, v)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>45.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Modifies="1" UnnamedVar="1" Pattern="1" SuchThat="1" CondNum="5" RelNum="1" comment="Valid. Modifies, 1 such that (no match), 1 pattern, common synonym">1099</id><querystr><![CDATA[assign a; while w; variable v; Select v pattern a(v, _) such that Modifies(a, "x")]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>46.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Modifies="1" UnnamedVar="1" Pattern="1" SuchThat="1" CondNum="5" RelNum="1" comment="Invalid. Modifies, 1 such that, 1 pattern (and keyword used), common synonym">1100</id><querystr><![CDATA[assign a; while w; variable v; Select v such that Modifies(w, v) and pattern a(v, _)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>47.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Modifies="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid. Modifies, 1 such that, 1 pattern (pattern keyword missing), common synonym">1101</id><querystr><![CDATA[assign a; while w; variable v; Select v such that Modifies(w, v) a(v, _)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>47.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Modifies="1" UnnamedVar="1" Pattern="1" SuchThat="1" CondNum="5" RelNum="1" comment="Invalid. Modifies, 1 such that, 1 pattern (synonym keyword missing), common synonym">1102</id><querystr><![CDATA[assign a; while w; variable v; Select v such that Modifies(w, v) pattern (v, _)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>48.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Modifies="1" UnnamedVar="1" Pattern="1" SuchThat="1" CondNum="5" RelNum="1" comment="Valid. Using tabs instead of spaces">1103</id><querystr><![CDATA[assign  a;  while   w;  variable    v; Select  v   such that    Modifies(w, v)  pattern a(v,    _)]]></querystr>
+<stuans>aa,dd</stuans>
+<correct>aa,dd</correct>
+<time_taken>47.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="2" Pattern="1" CondNum="4" RelNum="0" comment="Invalid. Variable does not exists">1104</id><querystr><![CDATA[assign a;  while w;  variable v; Select a pattern a(_, _"a"_)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>49.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="2" Pattern="1" CondNum="4" RelNum="0" comment="Invalid. Variable does not exists">1105</id><querystr><![CDATA[assign a;  while w;  variable v; Select a pattern a(_, _"aaa"_)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>46.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" Pattern="1" CondNum="3" RelNum="0" comment="Invalid. Variable does not exists">1106</id><querystr><![CDATA[assign a;  while w;  variable v; Select a pattern a(_, "a")]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>50.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" Pattern="1" CondNum="3" RelNum="0" comment="Invalid. Variable does not exists">1107</id><querystr><![CDATA[assign a;  while w;  variable v; Select a pattern a(_, "aaa")]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>50.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="3" Pattern="1" CondNum="5" RelNum="0" comment="Invalid. Variable does not exists">1108</id><querystr><![CDATA[assign a;  while w;  variable v; Select a pattern a(_, _"(a / 15) * 16"_)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>51.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="3" Pattern="1" CondNum="5" RelNum="0" comment="Invalid. Variable does not exists">1109</id><querystr><![CDATA[assign a;  while w;  variable v; Select a pattern a(_, _"(aaa / 15) * 16"_)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>49.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="3" Pattern="1" CondNum="5" RelNum="0" comment="Valid. Variable does not exists">1110</id><querystr><![CDATA[assign a;  while w;  variable v; Select a pattern a(_, _"(aa / 15) * 16"_)]]></querystr>
+<stuans>4</stuans>
+<correct>4</correct>
+<time_taken>51.000000</time_taken>
+<passed/>
+</query>
+</queries>
+</test_results>

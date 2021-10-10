@@ -1,0 +1,190 @@
+1 - All Calls
+procedure p, q;
+Select p such that Calls(p, q)
+procedure, raymarch, moreProc, anotherProc, procedure2, procedure4, procedure5, call
+5000
+2 - All Called
+procedure p, q;
+Select q such that Calls(p, q)
+procedure, moreProc, anotherProc, procedure2, procedure3, procedure5, call, lastProc, finalFinalProc
+5000
+3 - Call, with procName clause
+procedure p, q;
+Select p such that Calls(p, q) with q.procName = "procedure2"
+anotherProc, raymarch, moreProc
+5000
+4 - Call check for finalProc, called
+procedure p, q;
+Select p such that Calls(p, "finalProc")
+none
+5000
+5 - Call check for finalProc, call
+procedure p, q;
+Select q such that Calls("finalProc", q)
+none
+5000
+6 - Call check for finalFinalProc, called
+procedure p, q;
+Select p such that Calls(p, "finalFinalProc")
+anotherProc
+5000
+7 - Call check for finalFinalProc, call
+procedure p, q;
+Select q such that Calls("finalFinalProc", q)
+none
+5000
+8 - Call check for raymarch, called
+procedure p, q;
+Select p such that Calls(p, "raymarch")
+none
+5000
+9 - Call check for raymarch, call
+procedure p, q;
+Select q such that Calls("raymarch", q)
+procedure2, moreProc
+5000
+10 - Call check for procedure2, called
+procedure p, q;
+Select p such that Calls(p, "procedure2")
+raymarch, anotherProc, moreProc
+5000
+11 - Call check for procedure2, call
+procedure p, q;
+Select q such that Calls("procedure2", q)
+call
+5000
+12 - Call check for moreProc, called
+procedure p, q;
+Select p such that Calls(p, "moreProc")
+raymarch
+5000
+13 - Call check for moreProc, call
+procedure p, q;
+Select q such that Calls("moreProc", q)
+anotherProc, procedure2
+5000
+14 - Call check for anotherProc, called
+procedure p, q;
+Select p such that Calls(p, "anotherProc")
+moreProc
+5000
+15 - Call check for anotherProc, call
+procedure p, q;
+Select q such that Calls("anotherProc", q)
+finalFinalProc, procedure2
+5000
+16 - Call check for call, called
+procedure p, q;
+Select p such that Calls(p, "call")
+procedure2
+5000
+17 - Call check for call, call
+procedure p, q;
+Select q such that Calls("call", q)
+procedure
+5000
+18 - Call check for procedure, called
+procedure p, q;
+Select p such that Calls(p, "procedure")
+call
+5000
+19 - Call check for procedure, call
+procedure p, q;
+Select q such that Calls("procedure", q)
+procedure3
+5000
+20 - Call check for procedure3, called
+procedure p, q;
+Select p such that Calls(p, "procedure3")
+procedure
+5000
+21 - Call check for procedure3, call
+procedure p, q;
+Select q such that Calls("procedure3", q)
+none
+5000
+22 - Call check for procedure4, called
+procedure p, q;
+Select p such that Calls(p, "procedure4")
+none
+5000
+23 - Call check for procedure4, call
+procedure p, q;
+Select q such that Calls("procedure4", q)
+procedure5, lastProc
+5000
+24 - Call check for procedure5, called
+procedure p, q;
+Select p such that Calls(p, "procedure5")
+procedure4
+5000
+25 - Call check for procedure5, call
+procedure p, q;
+Select q such that Calls("procedure5", q)
+lastProc
+5000
+26 - Call check for lastProc, called
+procedure p, q;
+Select p such that Calls(p, "lastProc")
+procedure5, procedure4
+5000
+27 - Call check for lastProc, call
+procedure p, q;
+Select q such that Calls("lastProc", q)
+none
+5000
+28 - Call check, BOOLEAN
+procedure p, q;
+Select BOOLEAN such that Calls("procedure4", "procedure5")
+TRUE
+5000
+29 - Call check, BOOLEAN, synonym second
+procedure p, q;
+Select BOOLEAN such that Calls("procedure4", q)
+TRUE
+5000
+30 - Called check, BOOLEAN, synonym first
+procedure p, q;
+Select BOOLEAN such that Calls(p, "procedure5")
+TRUE
+5000
+31 - Call check, BOOLEAN, wildcard both
+procedure p, q;
+Select BOOLEAN such that Calls(_, _)
+TRUE
+5000
+32 - Call check, BOOLEAN, wildcard second
+procedure p, q;
+Select BOOLEAN such that Calls("procedure4", _)
+TRUE
+5000
+33 - Called check, BOOLEAN, wildcard first
+procedure p, q;
+Select BOOLEAN such that Calls(_, "procedure5")
+TRUE
+5000
+34 - Invalid version of 3, such that clause
+procedure p, q;
+Select p such that Calls(p, q) such that q.procName = "procedure3"
+none
+5000
+35 - Invalid version of 3, with varName clause
+procedure p, q;
+Select p such that Calls(p, q) with q.varName = "procedure3"
+none
+5000
+36 - Invalid version of 3, with value clause
+procedure p, q;
+Select p such that Calls(p, q) with q.value = "procedure3"
+none
+5000
+37 - Invalid version of 3, with stmt# clause
+procedure p, q;
+Select p such that Calls(p, q) with q.stmt# = "procedure3"
+none
+5000
+38 - Invalid version of 3, with stmt# clause
+procedure p, q;
+Select p such that Calls(p, q) with q.stmt# = 1
+none
+5000

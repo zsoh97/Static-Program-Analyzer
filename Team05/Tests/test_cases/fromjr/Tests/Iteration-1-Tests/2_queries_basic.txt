@@ -1,0 +1,5 @@
+1001 - Valid. Select procedure
+procedure p; variable v; stmt s; while w; if i; assign a; call c; read r; print pr;
+Select p
+procedure
+5000

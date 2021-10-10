@@ -1,0 +1,435 @@
+<?xml-stylesheet type="text/xsl" href="analysis.xsl"?>
+<test_results>
+<info>
+<name>tests</name><parsing_time_taken>38.000000</parsing_time_taken>
+</info>
+<queries>
+<query>
+<id ReturnTuple="1" Next="1" SuchThat="1" CondNum="3" RelNum="1" comment="simple Next query with statement as 1st param and 2nd param INTEGER">1</id><querystr><![CDATA[stmt s; assign a; procedure p; Select s such that Next(s, 23)]]></querystr>
+<stuans>22,24</stuans>
+<correct>22,24</correct>
+<time_taken>55.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Next="1" SuchThat="1" CondNum="3" RelNum="1" comment="simple Next query with assign as 1st param and 2nd param INTEGER">2</id><querystr><![CDATA[stmt s; assign a; procedure p; Select a such that Next(a, 23)]]></querystr>
+<stuans>22</stuans>
+<correct>22</correct>
+<time_taken>50.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Next="1" SuchThat="1" CondNum="3" RelNum="1" comment="semantically invalid, simple Next query with procedure as 1st param and 2nd param INTEGER">3</id><querystr><![CDATA[stmt s; assign a; procedure p; Select p such that Next(p, 23)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>42.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Next="1" SuchThat="1" CondNum="3" RelNum="1" comment="simple Next query with read as 1st param and 2nd param INTEGER">4</id><querystr><![CDATA[stmt s; assign a; procedure p; read re; Select re such that Next(re, 28)]]></querystr>
+<stuans>27</stuans>
+<correct>27</correct>
+<time_taken>42.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Next="1" SuchThat="1" CondNum="3" RelNum="1" comment="simple Next query with print as 1st param and 2nd param INTEGER">5</id><querystr><![CDATA[stmt s; assign a; procedure p; print pr; Select pr such that Next(pr, 28)]]></querystr>
+<stuans>26</stuans>
+<correct>26</correct>
+<time_taken>41.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Next="1" SuchThat="1" CondNum="3" RelNum="1" comment="simple Next query with ifs as 1st param and 2nd param first line of if stmt block">6</id><querystr><![CDATA[stmt s; assign a; procedure p; if ifs; Select ifs such that Next(ifs, 26)]]></querystr>
+<stuans>25</stuans>
+<correct>25</correct>
+<time_taken>45.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Next="1" SuchThat="1" CondNum="3" RelNum="1" comment="simple Next query with ifs as 1st param and 2nd param first line of else stmt block">7</id><querystr><![CDATA[stmt s; assign a; procedure p; if ifs; Select ifs such that Next(ifs, 27)]]></querystr>
+<stuans>25</stuans>
+<correct>25</correct>
+<time_taken>49.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Next="1" SuchThat="1" CondNum="3" RelNum="1" comment="simple Next query with while as 1st param and 2nd param INTEGER">8</id><querystr><![CDATA[stmt s; assign a; procedure p; while w; Select w such that Next(w, 24)]]></querystr>
+<stuans>23</stuans>
+<correct>23</correct>
+<time_taken>54.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Next="1" SuchThat="1" CondNum="3" RelNum="1" comment="simple Next query with call as 1st param and 2nd param INTEGER">9</id><querystr><![CDATA[stmt s; assign a; procedure p; call c; Select c such that Next(c, 23)]]></querystr>
+<stuans>24</stuans>
+<correct>24</correct>
+<time_taken>44.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Next="1" SuchThat="1" CondNum="3" RelNum="1" comment="invalid, simple Next query with constant as 1st param and 2nd param INTEGER">10</id><querystr><![CDATA[stmt s; assign a; procedure p; constant c; Select c such that Next(c, 24)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>50.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Next="1" SuchThat="1" CondNum="3" RelNum="1" comment="simple Next query with both param INTEGER in same block">11</id><querystr><![CDATA[stmt s; assign a; procedure p; if ifs; Select BOOLEAN such that Next(23, 25)]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>43.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Next="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="simple Next query with _ as 1st param and 2nd param INTEGER">12</id><querystr><![CDATA[stmt s; assign a; procedure p; if ifs; Select s such that Next(_, 23)]]></querystr>
+<stuans>1,10,11,12,13,14,15,16,17,18,19,2,20,21,22,23,24,25,26,27,28,29,3,30,31,32,33,34,35,36,37,38,39,4,40,41,42,43,44,45,46,47,48,49,5,6,7,8,9</stuans>
+<correct>1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49</correct>
+<time_taken>55.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Next="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="valid query but empty result with wildcard as 1st param and 2nd param is INTEGER first line of procedure">13</id><querystr><![CDATA[stmt s; assign a; procedure p; if ifs; Select s such that Next(_, 22)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>45.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Next="1" SuchThat="1" CondNum="3" RelNum="1" comment="simple Next query with statement as 2nd param and 1st param INTEGER">14</id><querystr><![CDATA[stmt s; assign a; procedure p; Select s such that Next(22, s)]]></querystr>
+<stuans>23</stuans>
+<correct>23</correct>
+<time_taken>46.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Next="1" SuchThat="1" CondNum="3" RelNum="1" comment="simple Next query with assign as 2nd param and 1st param INTEGER">15</id><querystr><![CDATA[stmt s; assign a; procedure p; Select a such that Next(26, a)]]></querystr>
+<stuans>28</stuans>
+<correct>28</correct>
+<time_taken>44.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Next="1" SuchThat="1" CondNum="3" RelNum="1" comment="semantically invalid, simple Next query with procedure as 2nd param and 1st param INTEGER">16</id><querystr><![CDATA[stmt s; assign a; procedure p; Select p such that Next(22, p)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>47.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Next="1" SuchThat="1" CondNum="3" RelNum="1" comment="simple Next query with read as 2nd param and 1st param INTEGER">17</id><querystr><![CDATA[stmt s; assign a; procedure p; read re; Select re such that Next(25, re)]]></querystr>
+<stuans>27</stuans>
+<correct>27</correct>
+<time_taken>48.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Next="1" SuchThat="1" CondNum="3" RelNum="1" comment="simple Next query with print as 2nd param and 1st param INTEGER">18</id><querystr><![CDATA[stmt s; assign a; procedure p; print pr; Select pr such that Next(25, pr)]]></querystr>
+<stuans>26</stuans>
+<correct>26</correct>
+<time_taken>49.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Next="1" SuchThat="1" CondNum="3" RelNum="1" comment="simple Next query with ifs as 2nd param and 1st param INTEGER">19</id><querystr><![CDATA[stmt s; assign a; procedure p; if ifs; Select ifs such that Next(23, ifs)]]></querystr>
+<stuans>25</stuans>
+<correct>25</correct>
+<time_taken>49.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Next="1" SuchThat="1" CondNum="3" RelNum="1" comment="simple Next query with while as 2nd param and 1st param INTEGER">20</id><querystr><![CDATA[stmt s; assign a; procedure p; while w; Select w such that Next(22, w)]]></querystr>
+<stuans>23</stuans>
+<correct>23</correct>
+<time_taken>44.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Next="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="simple Next query with wildcard as 2nd param and 1st param INTEGER">21</id><querystr><![CDATA[stmt s; assign a; procedure p; if ifs; Select s such that Next(22, _)]]></querystr>
+<stuans>1,10,11,12,13,14,15,16,17,18,19,2,20,21,22,23,24,25,26,27,28,29,3,30,31,32,33,34,35,36,37,38,39,4,40,41,42,43,44,45,46,47,48,49,5,6,7,8,9</stuans>
+<correct>1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49</correct>
+<time_taken>54.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Next="1" SuchThat="1" CondNum="3" RelNum="1" comment="simple Next query with call as 1st param and 2nd param INTEGER">22</id><querystr><![CDATA[stmt s; assign a; procedure p; call c; Select c such that Next(c, 23)]]></querystr>
+<stuans>24</stuans>
+<correct>24</correct>
+<time_taken>45.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Next="1" SuchThat="1" CondNum="3" RelNum="1" comment="invalid, simple Next query with constant as 1st param and 2nd param INTEGER">23</id><querystr><![CDATA[stmt s; assign a; procedure p; constant c; Select c such that Next(c, 24)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>46.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Next="1" SuchThat="1" CondNum="3" RelNum="1" comment="both param INTEGER, 1st param smaller 2nd param in procedure stmt block">24</id><querystr><![CDATA[stmt s; assign a; procedure p; Select BOOLEAN such that Next(22, 23)]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>45.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Next="1" SuchThat="1" CondNum="3" RelNum="1" comment="both param INTEGER, 1st param greater 2nd param in procedure stmt block">25</id><querystr><![CDATA[stmt s; assign a; procedure p; Select BOOLEAN such that Next(25, 23)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>47.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Next="1" SuchThat="1" CondNum="3" RelNum="1" comment="both param INTEGER, both param 0, semantically invalid">26</id><querystr><![CDATA[stmt s; assign a; procedure p; Select s such that Next(0, 0)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>44.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Next="1" SuchThat="1" CondNum="3" RelNum="1" comment="both param INTEGER, 1st param 0, semantically invalid">27</id><querystr><![CDATA[stmt s; assign a; procedure p; Select s such that Next(0, 1)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>45.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Next="1" SuchThat="1" CondNum="3" RelNum="1" comment="both param INTEGER, 2nd param 0, semantically invalid">28</id><querystr><![CDATA[stmt s; assign a; procedure p; Select s such that Next(1, 0)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>44.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Next="1" SuchThat="1" CondNum="3" RelNum="1" comment="both param INTEGER, 1st param INTEGER out of index">29</id><querystr><![CDATA[stmt s; assign a; procedure p; Select s such that Next(99, 2)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>44.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Next="1" SuchThat="1" CondNum="3" RelNum="1" comment="both param INTEGER, 2nd param INTEGER out of index">30</id><querystr><![CDATA[stmt s; assign a; procedure p; Select s such that Next(2, 99)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>47.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Next="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="1st param INTEGER out of index, 2nd param wildcard">31</id><querystr><![CDATA[stmt s; assign a; procedure p; Select s such that Next(99, _)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>45.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Next="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="2nd param INTEGER out of index, 1st param wildcard">32</id><querystr><![CDATA[stmt s; assign a; procedure p; Select s such that Next(_, 99)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>49.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Next="1" SuchThat="1" CondNum="3" RelNum="1" comment="1st param INTEGER out of index, 2nd param synonym">33</id><querystr><![CDATA[stmt s; assign a; procedure p; Select s such that Next(99, s)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>47.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Next="1" SuchThat="1" CondNum="3" RelNum="1" comment="2nd param INTEGER out of index, 1st param synonym">34</id><querystr><![CDATA[stmt s; assign a; procedure p; Select s such that Next(s, 99)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>47.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Next="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="1st param last line of procedure but not in while stmt block, 2nd param prog_line">35</id><querystr><![CDATA[prog_line n; assign a; procedure p; Select n such that Next(14, n)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>54.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Next="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="1st param last line of procedure but in while stmt block, 2nd param prog_line">36</id><querystr><![CDATA[prog_line n; assign a; procedure p; Select n such that Next(9, n)]]></querystr>
+<stuans>5</stuans>
+<correct>5</correct>
+<time_taken>49.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Next="1" SuchThat="1" CondNum="3" RelNum="1" comment="both param INTEGER, 1st param greater than 2nd param, not in while stmt block">37</id><querystr><![CDATA[stmt s; assign a; procedure p; Select BOOLEAN such that Next(14, 10)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>45.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Next="1" SuchThat="1" CondNum="3" RelNum="1" comment="both param INTEGER, 1st param > 2nd param, in while stmt block">38</id><querystr><![CDATA[stmt s; assign a; procedure p; Select BOOLEAN such that Next(9, 5)]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>45.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Next="1" UnnamedVar="3" SuchThat="1" CondNum="6" RelNum="1" comment="both param _">39</id><querystr><![CDATA[prog_line n; assign a; procedure p; Select n such that Next(_, _)]]></querystr>
+<stuans>1,10,11,12,13,14,15,16,17,18,19,2,20,21,22,23,24,25,26,27,28,29,3,30,31,32,33,34,35,36,37,38,39,4,40,41,42,43,44,45,46,47,48,49,5,6,7,8,9</stuans>
+<correct>1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49</correct>
+<time_taken>190.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Next="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="2nd param synonym with 1st param last line of execution in if block with no statements after">40</id><querystr><![CDATA[prog_line n; assign a; procedure p; Select n such that Next(16, n)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>44.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Next="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="2nd param synonym with 1st param last line of execution in if block with statements after">41</id><querystr><![CDATA[prog_line n; assign a; procedure p; Select n such that Next(19, n)]]></querystr>
+<stuans>21</stuans>
+<correct>21</correct>
+<time_taken>45.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Next="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="2nd param statement synonym with 1st param last line of execution in else block with no statements after">42</id><querystr><![CDATA[prog_line n; assign a; procedure p; Select n such that Next(17, n)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>45.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Next="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="2nd param statement synonym with 1st param last line of execution in else block with statements after">43</id><querystr><![CDATA[prog_line n; assign a; procedure p; Select n such that Next(20, n)]]></querystr>
+<stuans>21</stuans>
+<correct>21</correct>
+<time_taken>47.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Next="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="1st param, parent while loop, 2nd param progline synonym, if block directly nested in while block with no stmt after while block">44</id><querystr><![CDATA[prog_line n; Select n such that Next(3, n)]]></querystr>
+<stuans>1</stuans>
+<correct>1</correct>
+<time_taken>45.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Next="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="1st param, parent while loop, 2nd param progline synonym, else block directly nested in while block with no stmt after while block">45</id><querystr><![CDATA[prog_line n; Select n such that Next(4, n)]]></querystr>
+<stuans>1</stuans>
+<correct>1</correct>
+<time_taken>46.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Next="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="1st param, parent while loop, 2nd param progline synonym, if block directly nested in while block with stmt after while block">46</id><querystr><![CDATA[prog_line n; Select n such that Next(12, n)]]></querystr>
+<stuans>10</stuans>
+<correct>10</correct>
+<time_taken>46.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Next="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="1st param, parent while loop, 2nd param progline synonym, else block directly nested in while block with stmt after while block">47</id><querystr><![CDATA[prog_line n; Select n such that Next(13, n)]]></querystr>
+<stuans>10</stuans>
+<correct>10</correct>
+<time_taken>46.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Next="1" SuchThat="1" CondNum="3" RelNum="1" comment="both param INTEGER from different procedures">48</id><querystr><![CDATA[ Select BOOLEAN such that Next(1, 15)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>50.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Next="1" UnnamedVar="3" SuchThat="1" CondNum="6" RelNum="1" comment="both param wildcard from different procedures">49</id><querystr><![CDATA[prog_line n; Select n such that Next(_, _)]]></querystr>
+<stuans>1,10,11,12,13,14,15,16,17,18,19,2,20,21,22,23,24,25,26,27,28,29,3,30,31,32,33,34,35,36,37,38,39,4,40,41,42,43,44,45,46,47,48,49,5,6,7,8,9</stuans>
+<correct>1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49</correct>
+<time_taken>175.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Next="1" SuchThat="1" CondNum="3" RelNum="1" comment="tuple with both param statement synonym">50</id><querystr><![CDATA[stmt s1, s2; Select <s1, s2> such that Next(s1, s2)]]></querystr>
+<stuans>1 2,10 11,10 14,11 12,11 13,12 10,13 10,15 16,15 17,18 19,18 20,19 21,2 3,2 4,20 21,22 23,23 24,23 25,24 23,25 26,25 27,26 28,27 28,29 30,3 1,30 31,31 32,32 33,33 34,34 35,35 36,37 38,38 37,38 39,39 38,4 1,40 41,40 44,41 42,41 43,45 46,45 47,47 48,47 49,5 6,6 7,6 8,7 9,8 9,9 5</stuans>
+<correct>1 2,10 11,10 14,11 12,11 13,12 10,13 10,15 16,15 17,18 19,18 20,19 21,2 3,2 4,20 21,22 23,23 24,23 25,24 23,25 26,25 27,26 28,27 28,3 1,4 1,5 6,6 7,6 8,7 9,8 9,9 5,29 30,30 31,31 32,32 33,33 34,34 35,35 36,37 38,38 37,38 39,39 38,40 41,40 44,41 42,41 43,45 46,45 47,47 48,47 49</correct>
+<time_taken>60.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Next="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="tuple with both param progline synonym">51</id><querystr><![CDATA[prog_line n1, n2; Select <n1, n2> such that Next(n1, n2)]]></querystr>
+<stuans>1 2,10 11,10 14,11 12,11 13,12 10,13 10,15 16,15 17,18 19,18 20,19 21,2 3,2 4,20 21,22 23,23 24,23 25,24 23,25 26,25 27,26 28,27 28,29 30,3 1,30 31,31 32,32 33,33 34,34 35,35 36,37 38,38 37,38 39,39 38,4 1,40 41,40 44,41 42,41 43,45 46,45 47,47 48,47 49,5 6,6 7,6 8,7 9,8 9,9 5</stuans>
+<correct>1 2,10 11,10 14,11 12,11 13,12 10,13 10,15 16,15 17,18 19,18 20,19 21,2 3,2 4,20 21,22 23,23 24,23 25,24 23,25 26,25 27,26 28,27 28,3 1,4 1,5 6,6 7,6 8,7 9,8 9,9 5,29 30,30 31,31 32,32 33,33 34,34 35,35 36,37 38,38 37,38 39,39 38,40 41,40 44,41 42,41 43,45 46,45 47,47 48,47 49</correct>
+<time_taken>57.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Next="1" SuchThat="1" CondNum="3" RelNum="1" comment="tuple with both param assign synonym">52</id><querystr><![CDATA[assign a1, a2; Select <a1, a2> such that Next(a1, a2)]]></querystr>
+<stuans>19 21,20 21,35 36,7 9,8 9</stuans>
+<correct>7 9,8 9,19 21,20 21,35 36</correct>
+<time_taken>49.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Next="1" SuchThat="1" CondNum="3" RelNum="1" comment="tuple with both param procedure synonym">53</id><querystr><![CDATA[procedure p1, p2; Select <p1, p2> such that Next(p1, p2)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>44.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Next="1" SuchThat="1" CondNum="3" RelNum="1" comment="tuple with both param ifs synonym">54</id><querystr><![CDATA[if ifs1, ifs2; Select <ifs1, ifs2> such that Next(ifs1, ifs2)]]></querystr>
+<stuans>40 41,45 47</stuans>
+<correct>40 41,45 47</correct>
+<time_taken>46.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Next="1" SuchThat="1" CondNum="3" RelNum="1" comment="tuple with both param while synonym">55</id><querystr><![CDATA[while w1, w2; Select <w1, w2> such that Next(w1, w2)]]></querystr>
+<stuans>37 38,38 37</stuans>
+<correct>37 38,38 37</correct>
+<time_taken>51.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Next="1" SuchThat="1" CondNum="3" RelNum="1" comment="tuple with both param call synonym">56</id><querystr><![CDATA[call c1, c2; Select <c1, c2> such that Next(c1, c2)]]></querystr>
+<stuans>29 30</stuans>
+<correct>29 30</correct>
+<time_taken>47.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Next="1" SuchThat="1" CondNum="3" RelNum="1" comment="invalid, tuple with both param constant synonym">57</id><querystr><![CDATA[constant c1, c2; Select <c1, c2> such that Next(c1, c2)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>44.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Next="1" SuchThat="1" CondNum="3" RelNum="1" comment="tuple with both param read synonym">58</id><querystr><![CDATA[read re1, re2; Select <re1, re2> such that Next(re1, re2)]]></querystr>
+<stuans>33 34</stuans>
+<correct>33 34</correct>
+<time_taken>45.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Next="1" SuchThat="1" CondNum="3" RelNum="1" comment="tuple with both param print synonym">59</id><querystr><![CDATA[print p1, p2; Select <p1, p2> such that Next(p1, p2)]]></querystr>
+<stuans>31 32</stuans>
+<correct>31 32</correct>
+<time_taken>51.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Next="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="both param same synonym, semantically invalid">60</id><querystr><![CDATA[prog_line n; Select n such that Next(n, n)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>49.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Next="1" SuchThat="1" CondNum="3" RelNum="1" comment="stmts executed before returning to while block">61</id><querystr><![CDATA[stmt s; while w; Select s such that Next(s, w)]]></querystr>
+<stuans>12,13,22,24,3,37,38,39,4,9</stuans>
+<correct>12,13,22,24,3,37,38,39,4,9</correct>
+<time_taken>49.000000</time_taken>
+<passed/>
+</query>
+</queries>
+</test_results>

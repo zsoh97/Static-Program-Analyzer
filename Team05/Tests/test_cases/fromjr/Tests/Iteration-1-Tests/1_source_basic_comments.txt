@@ -1,0 +1,18 @@
+procedure basic {
+    read aa; #1
+    if ((bb < false) && (aa > 14)) then { #2
+        read cc; #3
+    } else {
+        bb = (aa / 15) * 16 + false % 17; #4
+    }
+    while (aa >= 10) { #5
+        aa = aa - 11; #6
+        if ((!(aa != false)) && ((11 <= dd) || (12 + 13 == aa))) then { #7
+            read false; #8
+        } else {
+            dd = true; #9
+        }
+    }
+    cc = 0 + 9; #10
+    print cc; #11
+}

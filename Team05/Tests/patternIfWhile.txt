@@ -1,0 +1,28 @@
+source code considerations:
+Pattern-if:
+if-condition statements with only variables
+if-condition statements with only IDENT/varnames
+if-condition statements with only constants
+if-condition statements varying variables/constants/IDENTS
+Pattern-while:
+while-condition statements with only variables
+while-condition statements with only IDENT/varnames
+while-condition statements with only constants
+while-condition statements varying variables/constants/IDENTS
+can vary varname as synonym
+Query construction:
+Select-cl can return attrRef/BOOLEAN/tuple(with attrRef and synonym variation) and synonym
+synonym in select clause can be related or non-related to pattern query
+entRef : synonym | ‘_’ | ‘"’ IDENT ‘"’
+first param wildcard/IDENT/variable(synonym)
+Incorrect:
+IDENT not in source
+
+semantically invalid:
+1st param stmt/print/read/if/while/prog_line synonym
+
+syntacticalyl Invalid:
+param 2 and 3(if-only) is IDENT/constant/variable(synonym)
+wrong number of params
+invalid param, i.e. attrRef as param
+expression as 1st param or any other param

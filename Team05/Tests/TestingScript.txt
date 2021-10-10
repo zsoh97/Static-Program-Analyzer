@@ -1,0 +1,203 @@
+(slide 27) 
+Thank you Jeun Hoe. Hi, I’m Zeke, the testing IC and I 
+will be telling you about how we tested the correctness and 
+efficiency of our program.
+
+slide(28)
+To ensure the correctness of our program, 
+we isolated testing of each 
+individual clause type by constructing clause specific source and
+queries relating to the clause under test. As illustrated in the 
+slide we have follows source and follows queries and so on
+(next slide)
+
+(slide 29)
+Let me give you a brief walkthrough of the process:
+- During our weekly team meetings, in addition to the team 
+discusses the edge cases of the clause deliverables for the week.
+
+- We have 2 teams responsible for testing source team and a 
+query team.
+The source team will primarily consist of the Parser team 
+and a member of the PKB team.
+The other PKB member along with the PQL component team will make
+up the query team.
+
+With the edge cases identified earlier in mind, the source team 
+will come up with the source considerations for the clause under test
+while keeping in mind to vary the source syntax to support any newly
+implemented validation. 
+
+The query team will discuss the query
+considerations with reference to the edge cases identified. 
+The query consideration will also aim to include support for the 
+testing of any other deliverables that supports the semantic and
+ syntactic validation of query grammar. Upon receiving the source,
+ the query team will generate queries with reference to the source.
+
+As the testing of each clause is isolated from that of other clauses,
+ it ensures that any failed test cases are specific to the clause 
+under test. 
+By following this process, we are able to ensure the correctness 
+of the queries.
+
+(slide 30)
+Next would be the testing of Iteration Correctness. For this we again
+ created iteration specific source and query to test the deliverables 
+up to the current iteration. 
+
+For iteration 1, the iteration Correctness was pattern + such that. 
+The testing purpose of the iteration aims to verify if the results 
+from a such that Clause and pattern clause were able to be combined
+ and output correctly. The process described earlier was also used 
+to produce a test 
+Source and query with the combination of all edge cases up to 
+this point in the iteration.
+
+Next, for iteration 2, the iteration Correctness required that 
+our program be able to support multiple clauses with the use of 
+the 'and' identifier. Testing for this was done similar to iteration
+ 1.
+
+Finally, the iteration correctness for iteration 3 is optimization. 
+(segways into efficiency). 
+ 
+Implementation of optimization of the program was essentially
+ grouping and sorting the clauses in the most efficient manner. 
+For our implementation, we followed closely what was discussed 
+in the slides provided in. Efficiency test queries were designed 
+and written for each optimization process adapted from the slides. 
+
+(slide 31)
+The first optimization consideration we included in our program
+ was the division of clauses into 2 groups. The first group with 
+the highest priority comprises of (click), 
+
+(slide 32)
+clauses with no synonyms. This is as the results from evaluation
+ of these clauses return TRUE or FALSE and can result in early
+ termination.
+
+(slide 33)
+The remaining clauses are grouped according to their shared 
+synonyms. During evaluation, the intermediate results for each
+ group is maintained and the relevant columns are finally joined
+ together to obtain the Select results.
+
+(slide 34)
+Given a source the query team will come up with a sub optimal clause:
+Let's refer to the following example
+
+For this example, I have omitted clauses with no synonym as their
+ evaluation is trivial.
+
+If we were to simply implement sequential evaluation.
+Uses and Affects* have no common synonym, so cross product needs to be performed.
+
+(slide 35)
+We attain the following intermediate table of size 100.
+
+Next we evaluate Modifies. As there is a common synonym, n, 
+there is no need to perform cross product.
+
+(slide 36)
+This gives us an intermediate table of size 40.
+
+Finally we evaluate the with clause and attain our final results
+ table of size 20.
+
+(slide 37)
+Firstly, we grouped clauses that have connected synonyms together.  
+
+The query team now forms the query by grouping the Affects, modifies 
+and with clauses to form a group as they share common synonym. 
+The uses clause forms its own individual group. Let’s call them 
+group1 and group 2 respectively. 
+
+Lets starts with the first group, we  have Affects and Modifies 
+with a connected synonym, n.
+
+(slide 38)
+This evaluation results in a intermediate table of size 4. 
+Much smaller than the sequential 100. 
+Next, is the evaluation of the with clause
+
+(slide 39)
+We attain a intermediate results table of size 2, as 
+there are no other clauses, this is also the intermediate 
+results table for group1.
+
+(slide 40)
+Next, as uses is the only clause for group2, it is also the 
+group’s intermediate table.
+
+(slide 41)
+Finally, since the synonyms in G2 is not connected to any of the 
+synonyms of G1, there is no need to perform any cross product and we
+ return G1 as our final results table.
+
+This optimization consideration alone has allowed us to reduce 
+the number of cross products to 0 and the maximum intermediate 
+table size to be 4.
+
+(slide 42)
+The next optimization consideration was clause priority withing the 
+groups created.  
+Priority of clause is dependent on restrictiveness of the clause,
+Parameters of the clause 
+And finally, the number of results the clause produces
+
+(slide 43)
+This table indicates our clause type prioritization.
+
+(slide 44)
+Taking the earlier example, the query team now writes a query 
+reordering the clauses within the group based on their priorities. 
+As seen in the example, the with clause has been rearranged to
+ the beginning of the group and affects* to the end.
+
+(slide 45)
+The size of the first intermediate results table we return is only 2. Even smaller than the 4 we obtained earlier. 
+Evaluation of the modifies clause will result in no change in the 
+intermediate results table.
+Again, we ignore the results for the uses group and now have
+ the final result with no need for cross product and a maximum
+ intermediate table of size 2.
+ 
+Our optimizer is a separate component from evaluator and can be 
+toggled. By toggling the Query optimizer during testing we would 
+be able to see the effects of the optimizer on the query evaluation
+ time.
+
+Finally, I also exchanged test cases with other teams 
+and also ran our program against our senior's test cases.
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

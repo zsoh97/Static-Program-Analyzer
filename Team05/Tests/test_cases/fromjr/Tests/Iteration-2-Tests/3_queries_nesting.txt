@@ -1,0 +1,2520 @@
+3001 - Invalid. Case sensitive, suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select BOOLEAN such that next(n1, n2)
+
+5000
+3002 - Invalid. Wrong argument, suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(n, proc)
+FALSE
+5000
+3003 - Valid. suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(n, cl)
+TRUE
+5000
+3004 - Invalid. Wrong argument, suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(n, v)
+FALSE
+5000
+3005 - Valid. suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(n, r)
+TRUE
+5000
+3006 - Valid. suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(n, p)
+TRUE
+5000
+3007 - Invalid. Wrong argument, suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(n, c)
+FALSE
+5000
+3008 - Valid. suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(n, s)
+TRUE
+5000
+3009 - Valid. suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(n, w)
+TRUE
+5000
+3010 - Valid. suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(n, ifs)
+TRUE
+5000
+3011 - Valid. suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(n, a)
+TRUE
+5000
+3012 - Valid. suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select BOOLEAN such that Next(n1, n2)
+TRUE
+5000
+3013 - Invalid. Wrong argument, suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(proc, n)
+FALSE
+5000
+3014 - Valid. suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(cl, n)
+TRUE
+5000
+3015 - Invalid. Wrong argument, suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(v, n)
+FALSE
+5000
+3016 - Valid. suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(r, n)
+TRUE
+5000
+3017 - Valid. suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(p, n)
+TRUE
+5000
+3018 - Invalid. Wrong argument, suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(c, n)
+FALSE
+5000
+3019 - Valid. suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(s, n)
+TRUE
+5000
+3020 - Valid. suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(w, n)
+TRUE
+5000
+3021 - Valid. suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(ifs, n)
+TRUE
+5000
+3022 - Valid. suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(a, n)
+TRUE
+5000
+3023 - Valid. suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next (n, n)
+FALSE
+5000
+3024 - Valid. suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next (10, 10)
+FALSE
+5000
+3025 - Valid. Extra space, suchthat-cl Next
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select BOOLEAN such that Next (n1, n2)
+TRUE
+5000
+3026 - Valid. 2 wildcards, suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(_, _)
+TRUE
+5000
+3027 - Valid. 1 wildcard 1 synonym, suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(_, n)
+TRUE
+5000
+3028 - Valid. 1 wildcard 1 constant, suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(_, 10)
+TRUE
+5000
+3029 - Valid. 1 synonym 1 wildcard, suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(n, _)
+TRUE
+5000
+3030 - Valid. 1 constant 1 wildcard, suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(10, _)
+TRUE
+5000
+3031 - Valid. 2 synonyms, suchthat-cl Next
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select BOOLEAN such that Next(n1, n2)
+TRUE
+5000
+3032 - Valid. 1 synonym 1 constant, suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(n, 27)
+TRUE
+5000
+3033 - Valid. 1 constant 1 synonym, suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(2, n)
+TRUE
+5000
+3034 - Valid. 2 constants, suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(2, 27)
+TRUE
+5000
+3035 - Valid. 2 constants, suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(10, 1)
+FALSE
+5000
+3036 - Valid. non-container-stmt, non-container-stmt, suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select n such that Next(51, n)
+52
+5000
+3037 - Valid. non-container-stmt, while-parent, suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select n such that Next(52, n)
+53
+5000
+3038 - Valid. non-container-stmt, if-parent, suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select n such that Next(55, n)
+56
+5000
+3039 - Valid. while-parent, after-while-container or while-child, suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select n such that Next(53, n)
+54, 93
+5000
+3040 - Valid. while-parent, after-while-container or while-parent, suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select n such that Next(13, n)
+14, 22
+5000
+3041 - Valid. while-parent, after-while-container or if-parent, suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select n such that Next(1, n)
+2
+5000
+3042 - Valid. if-parent, if-child or else-child, suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select n such that Next(37, n)
+38, 43
+5000
+3043 - Valid. if-parent, if-parent or else-child, suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select n such that Next(27, n)
+28, 34
+5000
+3044 - Valid. if-parent, while-parent or else-child, suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select n such that Next(28, n)
+29, 32
+5000
+3045 - Valid. while-child, while child, suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select n such that Next(30, n)
+31
+5000
+3046 - Valid. while-child, while-parent, suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select n such that Next(31, n)
+29
+5000
+3047 - Valid. if-child, if-child, suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select n such that Next(57, n)
+58
+5000
+3048 - Valid. if-child, after-if-container, suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select n such that Next(47, n)
+49
+5000
+3049 - Valid. if-child, while-parent, suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select n such that Next(38, n)
+39
+5000
+3050 - Valid. else-child, else-child, suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select n such that Next(73, n)
+74
+5000
+3051 - Valid. else-child, after-if-container, suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select n such that Next(48, n)
+49
+5000
+3052 - Valid. else-child, while-parent, suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select n such that Next(22, n)
+6
+5000
+3053 - Valid. No common synonyms, suchthat-cl Follows, with-cl procedure.procName
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2, s3; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Follows(s1, s2) with proc.procName = "nesting"
+TRUE
+5000
+3054 - Valid. No common synonyms, suchthat-cl Follows, with-cl call.procName
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2, s3; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Follows(s1, s2) with cl.procName = "expression"
+TRUE
+5000
+3055 - Valid. No common synonyms, suchthat-cl Follows, with-cl variable.varName
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2, s3; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Follows(s1, s2) with v.varName = "aa"
+TRUE
+5000
+3056 - Valid. No common synonyms, suchthat-cl Follows, with-cl read.varName
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2, s3; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Follows(s1, s2) with r.varName = "cc"
+TRUE
+5000
+3057 - Valid. No common synonyms, suchthat-cl Follows, with-cl print.varName
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2, s3; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Follows(s1, s2) with p.varName = "bb"
+TRUE
+5000
+3058 - Valid. No common synonyms, suchthat-cl Follows, with-cl constant.value
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2, s3; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Follows(s1, s2) with c.value = 11
+TRUE
+5000
+3059 - Valid. No common synonyms, suchthat-cl Follows, with-cl stmt.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2, s3; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Follows(s1, s2) with s3.stmt# = 93
+TRUE
+5000
+3060 - Valid. No common synonyms, suchthat-cl Follows, with-cl read.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2, s3; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Follows(s1, s2) with r.stmt# = 90
+TRUE
+5000
+3061 - Valid. No common synonyms, suchthat-cl Follows, with-cl print.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2, s3; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Follows(s1, s2) with p.stmt# = 92
+TRUE
+5000
+3062 - Valid. No common synonyms, suchthat-cl Follows, with-cl call.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2, s3; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Follows(s1, s2) with cl.stmt# = 50
+TRUE
+5000
+3063 - Valid. No common synonyms, suchthat-cl Follows, with-cl while.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2, s3; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Follows(s1, s2) with w.stmt# = 16
+TRUE
+5000
+3064 - Valid. No common synonyms, suchthat-cl Follows, with-cl if.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2, s3; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Follows(s1, s2) with ifs.stmt# = 4
+TRUE
+5000
+3065 - Valid. No common synonyms, suchthat-cl Follows, with-cl assign.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2, s3; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Follows(s1, s2) with a.stmt# = 30
+TRUE
+5000
+3066 - Valid. No common synonyms, suchthat-cl Follows, with-cl prog_line
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2, s3; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Follows(s1, s2) with n = 30
+TRUE
+5000
+3067 - Valid. No common synonyms, suchthat-cl Follows*, with-cl procedure.procName
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2, s3; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Follows*(s1, s2) with proc.procName = "nesting"
+TRUE
+5000
+3068 - Valid. No common synonyms, suchthat-cl Follows*, with-cl call.procName
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2, s3; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Follows*(s1, s2) with cl.procName = "expression"
+TRUE
+5000
+3069 - Valid. No common synonyms, suchthat-cl Follows*, with-cl variable.varName
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2, s3; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Follows*(s1, s2) with v.varName = "aa"
+TRUE
+5000
+3070 - Valid. No common synonyms, suchthat-cl Follows*, with-cl read.varName
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2, s3; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Follows*(s1, s2) with r.varName = "cc"
+TRUE
+5000
+3071 - Valid. No common synonyms, suchthat-cl Follows*, with-cl print.varName
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2, s3; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Follows*(s1, s2) with p.varName = "bb"
+TRUE
+5000
+3072 - Valid. No common synonyms, suchthat-cl Follows*, with-cl constant.value
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2, s3; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Follows*(s1, s2) with c.value = 11
+TRUE
+5000
+3073 - Valid. No common synonyms, suchthat-cl Follows*, with-cl stmt.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2, s3; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Follows*(s1, s2) with s3.stmt# = 93
+TRUE
+5000
+3074 - Valid. No common synonyms, suchthat-cl Follows*, with-cl read.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2, s3; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Follows*(s1, s2) with r.stmt# = 90
+TRUE
+5000
+3075 - Valid. No common synonyms, suchthat-cl Follows*, with-cl print.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2, s3; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Follows*(s1, s2) with p.stmt# = 92
+TRUE
+5000
+3076 - Valid. No common synonyms, suchthat-cl Follows*, with-cl call.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2, s3; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Follows*(s1, s2) with cl.stmt# = 50
+TRUE
+5000
+3077 - Valid. No common synonyms, suchthat-cl Follows*, with-cl while.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2, s3; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Follows*(s1, s2) with w.stmt# = 16
+TRUE
+5000
+3078 - Valid. No common synonyms, suchthat-cl Follows*, with-cl if.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2, s3; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Follows*(s1, s2) with ifs.stmt# = 4
+TRUE
+5000
+3079 - Valid. No common synonyms, suchthat-cl Follows*, with-cl assign.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2, s3; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Follows*(s1, s2) with a.stmt# = 30
+TRUE
+5000
+3080 - Valid. No common synonyms, suchthat-cl Follows*, with-cl prog_line
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2, s3; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Follows*(s1, s2) with n = 30
+TRUE
+5000
+3081 - Valid. No common synonyms, suchthat-cl Parent, with-cl procedure.procName
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2, s3; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Parent(s1, s2) with proc.procName = "nesting"
+TRUE
+5000
+3082 - Valid. No common synonyms, suchthat-cl Parent, with-cl call.procName
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2, s3; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Parent(s1, s2) with cl.procName = "expression"
+TRUE
+5000
+3083 - Valid. No common synonyms, suchthat-cl Parent, with-cl variable.varName
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2, s3; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Parent(s1, s2) with v.varName = "aa"
+TRUE
+5000
+3084 - Valid. No common synonyms, suchthat-cl Parent, with-cl read.varName
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2, s3; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Parent(s1, s2) with r.varName = "cc"
+TRUE
+5000
+3085 - Valid. No common synonyms, suchthat-cl Parent, with-cl print.varName
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2, s3; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Parent(s1, s2) with p.varName = "bb"
+TRUE
+5000
+3086 - Valid. No common synonyms, suchthat-cl Parent, with-cl constant.value
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2, s3; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Parent(s1, s2) with c.value = 11
+TRUE
+5000
+3087 - Valid. No common synonyms, suchthat-cl Parent, with-cl stmt.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2, s3; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Parent(s1, s2) with s3.stmt# = 93
+TRUE
+5000
+3088 - Valid. No common synonyms, suchthat-cl Parent, with-cl read.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2, s3; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Parent(s1, s2) with r.stmt# = 90
+TRUE
+5000
+3089 - Valid. No common synonyms, suchthat-cl Parent, with-cl print.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2, s3; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Parent(s1, s2) with p.stmt# = 92
+TRUE
+5000
+3090 - Valid. No common synonyms, suchthat-cl Parent, with-cl call.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2, s3; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Parent(s1, s2) with cl.stmt# = 50
+TRUE
+5000
+3091 - Valid. No common synonyms, suchthat-cl Parent, with-cl while.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2, s3; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Parent(s1, s2) with w.stmt# = 16
+TRUE
+5000
+3092 - Valid. No common synonyms, suchthat-cl Parent, with-cl if.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2, s3; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Parent(s1, s2) with ifs.stmt# = 4
+TRUE
+5000
+3093 - Valid. No common synonyms, suchthat-cl Parent, with-cl assign.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2, s3; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Parent(s1, s2) with a.stmt# = 30
+TRUE
+5000
+3094 - Valid. No common synonyms, suchthat-cl Parent, with-cl prog_line
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2, s3; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Parent(s1, s2) with n = 30
+TRUE
+5000
+3095 - Valid. No common synonyms, suchthat-cl Parent*, with-cl procedure.procName
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2, s3; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Parent*(s1, s2) with proc.procName = "nesting"
+TRUE
+5000
+3096 - Valid. No common synonyms, suchthat-cl Parent*, with-cl call.procName
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2, s3; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Parent*(s1, s2) with cl.procName = "expression"
+TRUE
+5000
+3097 - Valid. No common synonyms, suchthat-cl Parent*, with-cl variable.varName
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2, s3; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Parent*(s1, s2) with v.varName = "aa"
+TRUE
+5000
+3098 - Valid. No common synonyms, suchthat-cl Parent*, with-cl read.varName
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2, s3; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Parent*(s1, s2) with r.varName = "cc"
+TRUE
+5000
+3099 - Valid. No common synonyms, suchthat-cl Parent*, with-cl print.varName
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2, s3; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Parent*(s1, s2) with p.varName = "bb"
+TRUE
+5000
+3100 - Valid. No common synonyms, suchthat-cl Parent*, with-cl constant.value
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2, s3; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Parent*(s1, s2) with c.value = 11
+TRUE
+5000
+3101 - Valid. No common synonyms, suchthat-cl Parent*, with-cl stmt.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2, s3; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Parent*(s1, s2) with s3.stmt# = 93
+TRUE
+5000
+3102 - Valid. No common synonyms, suchthat-cl Parent*, with-cl read.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2, s3; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Parent*(s1, s2) with r.stmt# = 90
+TRUE
+5000
+3103 - Valid. No common synonyms, suchthat-cl Parent*, with-cl print.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2, s3; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Parent*(s1, s2) with p.stmt# = 92
+TRUE
+5000
+3104 - Valid. No common synonyms, suchthat-cl Parent*, with-cl call.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2, s3; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Parent*(s1, s2) with cl.stmt# = 50
+TRUE
+5000
+3105 - Valid. No common synonyms, suchthat-cl Parent*, with-cl while.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2, s3; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Parent*(s1, s2) with w.stmt# = 16
+TRUE
+5000
+3106 - Valid. No common synonyms, suchthat-cl Parent*, with-cl if.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2, s3; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Parent*(s1, s2) with ifs.stmt# = 4
+TRUE
+5000
+3107 - Valid. No common synonyms, suchthat-cl Parent*, with-cl assign.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2, s3; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Parent*(s1, s2) with a.stmt# = 30
+TRUE
+5000
+3108 - Valid. No common synonyms, suchthat-cl Parent*, with-cl prog_line
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2, s3; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Parent*(s1, s2) with n = 30
+TRUE
+5000
+3109 - Valid. No common synonyms, suchthat-cl UsesS, with-cl procedure.procName
+procedure proc; call cl; variable v1, v2; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Uses(s1, v1) with proc.procName = "nesting"
+TRUE
+5000
+3110 - Valid. No common synonyms, suchthat-cl UsesS, with-cl call.procName
+procedure proc; call cl; variable v1, v2; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Uses(s1, v1) with cl.procName = "expression"
+TRUE
+5000
+3111 - Valid. No common synonyms, suchthat-cl UsesS, with-cl variable.varName
+procedure proc; call cl; variable v1, v2; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Uses(s1, v1) with v2.varName = "aa"
+TRUE
+5000
+3112 - Valid. No common synonyms, suchthat-cl UsesS, with-cl read.varName
+procedure proc; call cl; variable v1, v2; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Uses(s1, v1) with r.varName = "cc"
+TRUE
+5000
+3113 - Valid. No common synonyms, suchthat-cl UsesS, with-cl print.varName
+procedure proc; call cl; variable v1, v2; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Uses(s1, v1) with p.varName = "bb"
+TRUE
+5000
+3114 - Valid. No common synonyms, suchthat-cl UsesS, with-cl constant.value
+procedure proc; call cl; variable v1, v2; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Uses(s1, v1) with c.value = 11
+TRUE
+5000
+3115 - Valid. No common synonyms, suchthat-cl UsesS, with-cl stmt.stmt#
+procedure proc; call cl; variable v1, v2; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Uses(s1, v1) with s2.stmt# = 72
+TRUE
+5000
+3116 - Valid. No common synonyms, suchthat-cl UsesS, with-cl read.stmt#
+procedure proc; call cl; variable v1, v2; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Uses(s1, v1) with r.stmt# = 90
+TRUE
+5000
+3117 - Valid. No common synonyms, suchthat-cl UsesS, with-cl print.stmt#
+procedure proc; call cl; variable v1, v2; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Uses(s1, v1) with p.stmt# = 92
+TRUE
+5000
+3118 - Valid. No common synonyms, suchthat-cl UsesS, with-cl call.stmt#
+procedure proc; call cl; variable v1, v2; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Uses(s1, v1) with cl.stmt# = 50
+TRUE
+5000
+3119 - Valid. No common synonyms, suchthat-cl UsesS, with-cl while.stmt#
+procedure proc; call cl; variable v1, v2; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Uses(s1, v1) with w.stmt# = 16
+TRUE
+5000
+3120 - Valid. No common synonyms, suchthat-cl UsesS, with-cl if.stmt#
+procedure proc; call cl; variable v1, v2; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Uses(s1, v1) with ifs.stmt# = 4
+TRUE
+5000
+3121 - Valid. No common synonyms, suchthat-cl UsesS, with-cl assign.stmt#
+procedure proc; call cl; variable v1, v2; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Uses(s1, v1) with a.stmt# = 30
+TRUE
+5000
+3122 - Valid. No common synonyms, suchthat-cl UsesS, with-cl prog_line
+procedure proc; call cl; variable v1, v2; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Uses(s1, v1) with n = 30
+TRUE
+5000
+3123 - Valid. No common synonyms, suchthat-cl UsesP, with-cl procedure.procName
+procedure proc1, proc2; call cl; variable v1, v2; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Uses(proc1, v1) with proc2.procName = "nesting"
+TRUE
+5000
+3124 - Valid. No common synonyms, suchthat-cl UsesP, with-cl call.procName
+procedure proc1, proc2; call cl; variable v1, v2; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Uses(proc1, v1) with cl.procName = "expression"
+TRUE
+5000
+3125 - Valid. No common synonyms, suchthat-cl UsesP, with-cl variable.varName
+procedure proc1, proc2; call cl; variable v1, v2; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Uses(proc1, v1) with v2.varName = "aa"
+TRUE
+5000
+3126 - Valid. No common synonyms, suchthat-cl UsesP, with-cl read.varName
+procedure proc1, proc2; call cl; variable v1, v2; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Uses(proc1, v1) with r.varName = "cc"
+TRUE
+5000
+3127 - Valid. No common synonyms, suchthat-cl UsesP, with-cl print.varName
+procedure proc1, proc2; call cl; variable v1, v2; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Uses(proc1, v1) with p.varName = "bb"
+TRUE
+5000
+3128 - Valid. No common synonyms, suchthat-cl UsesP, with-cl constant.value
+procedure proc1, proc2; call cl; variable v1, v2; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Uses(proc1, v1) with c.value = 11
+TRUE
+5000
+3129 - Valid. No common synonyms, suchthat-cl UsesP, with-cl stmt.stmt#
+procedure proc1, proc2; call cl; variable v1, v2; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Uses(proc1, v1) with s.stmt# = 93
+TRUE
+5000
+3130 - Valid. No common synonyms, suchthat-cl UsesP, with-cl read.stmt#
+procedure proc1, proc2; call cl; variable v1, v2; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Uses(proc1, v1) with r.stmt# = 90
+TRUE
+5000
+3131 - Valid. No common synonyms, suchthat-cl UsesP, with-cl print.stmt#
+procedure proc1, proc2; call cl; variable v1, v2; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Uses(proc1, v1) with p.stmt# = 92
+TRUE
+5000
+3132 - Valid. No common synonyms, suchthat-cl UsesP, with-cl call.stmt#
+procedure proc1, proc2; call cl; variable v1, v2; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Uses(proc1, v1) with cl.stmt# = 50
+TRUE
+5000
+3133 - Valid. No common synonyms, suchthat-cl UsesP, with-cl while.stmt#
+procedure proc1, proc2; call cl; variable v1, v2; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Uses(proc1, v1) with w.stmt# = 16
+TRUE
+5000
+3134 - Valid. No common synonyms, suchthat-cl UsesP, with-cl if.stmt#
+procedure proc1, proc2; call cl; variable v1, v2; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Uses(proc1, v1) with ifs.stmt# = 4
+TRUE
+5000
+3135 - Valid. No common synonyms, suchthat-cl UsesP, with-cl assign.stmt#
+procedure proc1, proc2; call cl; variable v1, v2; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Uses(proc1, v1) with a.stmt# = 30
+TRUE
+5000
+3136 - Valid. No common synonyms, suchthat-cl UsesP, with-cl prog_line
+procedure proc1, proc2; call cl; variable v1, v2; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Uses(proc1, v1) with n = 30
+TRUE
+5000
+3137 - Valid. No common synonyms, suchthat-cl ModifiesS, with-cl procedure.procName
+procedure proc; call cl; variable v1, v2; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Modifies(s1, v1) with proc.procName = "nesting"
+TRUE
+5000
+3138 - Valid. No common synonyms, suchthat-cl ModifiesS, with-cl call.procName
+procedure proc; call cl; variable v1, v2; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Modifies(s1, v1) with cl.procName = "expression"
+TRUE
+5000
+3139 - Valid. No common synonyms, suchthat-cl ModifiesS, with-cl variable.varName
+procedure proc; call cl; variable v1, v2; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Modifies(s1, v1) with v2.varName = "aa"
+TRUE
+5000
+3140 - Valid. No common synonyms, suchthat-cl ModifiesS, with-cl read.varName
+procedure proc; call cl; variable v1, v2; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Modifies(s1, v1) with r.varName = "cc"
+TRUE
+5000
+3141 - Valid. No common synonyms, suchthat-cl ModifiesS, with-cl print.varName
+procedure proc; call cl; variable v1, v2; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Modifies(s1, v1) with p.varName = "bb"
+TRUE
+5000
+3142 - Valid. No common synonyms, suchthat-cl ModifiesS, with-cl constant.value
+procedure proc; call cl; variable v1, v2; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Modifies(s1, v1) with c.value = 11
+TRUE
+5000
+3143 - Valid. No common synonyms, suchthat-cl ModifiesS, with-cl stmt.stmt#
+procedure proc; call cl; variable v1, v2; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Modifies(s1, v1) with s2.stmt# = 72
+TRUE
+5000
+3144 - Valid. No common synonyms, suchthat-cl ModifiesS, with-cl read.stmt#
+procedure proc; call cl; variable v1, v2; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Modifies(s1, v1) with r.stmt# = 90
+TRUE
+5000
+3145 - Valid. No common synonyms, suchthat-cl ModifiesS, with-cl print.stmt#
+procedure proc; call cl; variable v1, v2; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Modifies(s1, v1) with p.stmt# = 92
+TRUE
+5000
+3146 - Valid. No common synonyms, suchthat-cl ModifiesS, with-cl call.stmt#
+procedure proc; call cl; variable v1, v2; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Modifies(s1, v1) with cl.stmt# = 50
+TRUE
+5000
+3147 - Valid. No common synonyms, suchthat-cl ModifiesS, with-cl while.stmt#
+procedure proc; call cl; variable v1, v2; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Modifies(s1, v1) with w.stmt# = 16
+TRUE
+5000
+3148 - Valid. No common synonyms, suchthat-cl ModifiesS, with-cl if.stmt#
+procedure proc; call cl; variable v1, v2; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Modifies(s1, v1) with ifs.stmt# = 4
+TRUE
+5000
+3149 - Valid. No common synonyms, suchthat-cl ModifiesS, with-cl assign.stmt#
+procedure proc; call cl; variable v1, v2; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Modifies(s1, v1) with a.stmt# = 30
+TRUE
+5000
+3150 - Valid. No common synonyms, suchthat-cl ModifiesS, with-cl prog_line
+procedure proc; call cl; variable v1, v2; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Modifies(s1, v1) with n = 30
+TRUE
+5000
+3151 - Valid. No common synonyms, suchthat-cl ModifiesP, with-cl procedure.procName
+procedure proc1, proc2; call cl; variable v1, v2; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Modifies(proc1, v1) with proc2.procName = "nesting"
+TRUE
+5000
+3152 - Valid. No common synonyms, suchthat-cl ModifiesP, with-cl call.procName
+procedure proc1, proc2; call cl; variable v1, v2; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Modifies(proc1, v1) with cl.procName = "expression"
+TRUE
+5000
+3153 - Valid. No common synonyms, suchthat-cl ModifiesP, with-cl variable.varName
+procedure proc1, proc2; call cl; variable v1, v2; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Modifies(proc1, v1) with v2.varName = "aa"
+TRUE
+5000
+3154 - Valid. No common synonyms, suchthat-cl ModifiesP, with-cl read.varName
+procedure proc1, proc2; call cl; variable v1, v2; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Modifies(proc1, v1) with r.varName = "cc"
+TRUE
+5000
+3155 - Valid. No common synonyms, suchthat-cl ModifiesP, with-cl print.varName
+procedure proc1, proc2; call cl; variable v1, v2; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Modifies(proc1, v1) with p.varName = "bb"
+TRUE
+5000
+3156 - Valid. No common synonyms, suchthat-cl ModifiesP, with-cl constant.value
+procedure proc1, proc2; call cl; variable v1, v2; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Modifies(proc1, v1) with c.value = 11
+TRUE
+5000
+3157 - Valid. No common synonyms, suchthat-cl ModifiesP, with-cl stmt.stmt#
+procedure proc1, proc2; call cl; variable v1, v2; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Modifies(proc1, v1) with s.stmt# = 93
+TRUE
+5000
+3158 - Valid. No common synonyms, suchthat-cl ModifiesP, with-cl read.stmt#
+procedure proc1, proc2; call cl; variable v1, v2; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Modifies(proc1, v1) with r.stmt# = 90
+TRUE
+5000
+3159 - Valid. No common synonyms, suchthat-cl ModifiesP, with-cl print.stmt#
+procedure proc1, proc2; call cl; variable v1, v2; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Modifies(proc1, v1) with p.stmt# = 92
+TRUE
+5000
+3160 - Valid. No common synonyms, suchthat-cl ModifiesP, with-cl call.stmt#
+procedure proc1, proc2; call cl; variable v1, v2; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Modifies(proc1, v1) with cl.stmt# = 50
+TRUE
+5000
+3161 - Valid. No common synonyms, suchthat-cl ModifiesP, with-cl while.stmt#
+procedure proc1, proc2; call cl; variable v1, v2; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Modifies(proc1, v1) with w.stmt# = 16
+TRUE
+5000
+3162 - Valid. No common synonyms, suchthat-cl ModifiesP, with-cl if.stmt#
+procedure proc1, proc2; call cl; variable v1, v2; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Modifies(proc1, v1) with ifs.stmt# = 4
+TRUE
+5000
+3163 - Valid. No common synonyms, suchthat-cl ModifiesP, with-cl assign.stmt#
+procedure proc1, proc2; call cl; variable v1, v2; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Modifies(proc1, v1) with a.stmt# = 30
+TRUE
+5000
+3164 - Valid. No common synonyms, suchthat-cl ModifiesP, with-cl prog_line
+procedure proc1, proc2; call cl; variable v1, v2; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Modifies(proc1, v1) with n = 30
+TRUE
+5000
+3165 - Valid. No common synonyms, suchthat-cl Calls, with-cl procedure.procName
+procedure proc1, proc2, proc3; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls(proc1, proc2) with proc3.procName = "nesting"
+TRUE
+5000
+3166 - Valid. No common synonyms, suchthat-cl Calls, with-cl call.procName
+procedure proc1, proc2, proc3; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls(proc1, proc2) with cl.procName = "expression"
+TRUE
+5000
+3167 - Valid. No common synonyms, suchthat-cl Calls, with-cl variable.varName
+procedure proc1, proc2, proc3; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls(proc1, proc2) with v.varName = "aa"
+TRUE
+5000
+3168 - Valid. No common synonyms, suchthat-cl Calls, with-cl read.varName
+procedure proc1, proc2, proc3; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls(proc1, proc2) with r.varName = "cc"
+TRUE
+5000
+3169 - Valid. No common synonyms, suchthat-cl Calls, with-cl print.varName
+procedure proc1, proc2, proc3; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls(proc1, proc2) with p.varName = "bb"
+TRUE
+5000
+3170 - Valid. No common synonyms, suchthat-cl Calls, with-cl constant.value
+procedure proc1, proc2, proc3; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls(proc1, proc2) with c.value = 11
+TRUE
+5000
+3171 - Valid. No common synonyms, suchthat-cl Calls, with-cl stmt.stmt#
+procedure proc1, proc2, proc3; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls(proc1, proc2) with s.stmt# = 93
+TRUE
+5000
+3172 - Valid. No common synonyms, suchthat-cl Calls, with-cl read.stmt#
+procedure proc1, proc2, proc3; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls(proc1, proc2) with r.stmt# = 90
+TRUE
+5000
+3173 - Valid. No common synonyms, suchthat-cl Calls, with-cl print.stmt#
+procedure proc1, proc2, proc3; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls(proc1, proc2) with p.stmt# = 92
+TRUE
+5000
+3174 - Valid. No common synonyms, suchthat-cl Calls, with-cl call.stmt#
+procedure proc1, proc2, proc3; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls(proc1, proc2) with cl.stmt# = 50
+TRUE
+5000
+3175 - Valid. No common synonyms, suchthat-cl Calls, with-cl while.stmt#
+procedure proc1, proc2, proc3; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls(proc1, proc2) with w.stmt# = 16
+TRUE
+5000
+3176 - Valid. No common synonyms, suchthat-cl Calls, with-cl if.stmt#
+procedure proc1, proc2, proc3; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls(proc1, proc2) with ifs.stmt# = 4
+TRUE
+5000
+3177 - Valid. No common synonyms, suchthat-cl Calls, with-cl assign.stmt#
+procedure proc1, proc2, proc3; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls(proc1, proc2) with a.stmt# = 30
+TRUE
+5000
+3178 - Valid. No common synonyms, suchthat-cl Calls, with-cl prog_line
+procedure proc1, proc2, proc3; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls(proc1, proc2) with n = 30
+TRUE
+5000
+3179 - Valid. No common synonyms, suchthat-cl Calls*, with-cl procedure.procName
+procedure proc1, proc2, proc3; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls*(proc1, proc2) with proc3.procName = "nesting"
+TRUE
+5000
+3180 - Valid. No common synonyms, suchthat-cl Calls*, with-cl call.procName
+procedure proc1, proc2, proc3; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls*(proc1, proc2) with cl.procName = "expression"
+TRUE
+5000
+3181 - Valid. No common synonyms, suchthat-cl Calls*, with-cl variable.varName
+procedure proc1, proc2, proc3; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls*(proc1, proc2) with v.varName = "aa"
+TRUE
+5000
+3182 - Valid. No common synonyms, suchthat-cl Calls*, with-cl read.varName
+procedure proc1, proc2, proc3; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls*(proc1, proc2) with r.varName = "cc"
+TRUE
+5000
+3183 - Valid. No common synonyms, suchthat-cl Calls*, with-cl print.varName
+procedure proc1, proc2, proc3; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls*(proc1, proc2) with p.varName = "bb"
+TRUE
+5000
+3184 - Valid. No common synonyms, suchthat-cl Calls*, with-cl constant.value
+procedure proc1, proc2, proc3; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls*(proc1, proc2) with c.value = 11
+TRUE
+5000
+3185 - Valid. No common synonyms, suchthat-cl Calls*, with-cl stmt.stmt#
+procedure proc1, proc2, proc3; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls*(proc1, proc2) with s.stmt# = 93
+TRUE
+5000
+3186 - Valid. No common synonyms, suchthat-cl Calls*, with-cl read.stmt#
+procedure proc1, proc2, proc3; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls*(proc1, proc2) with r.stmt# = 90
+TRUE
+5000
+3187 - Valid. No common synonyms, suchthat-cl Calls*, with-cl print.stmt#
+procedure proc1, proc2, proc3; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls*(proc1, proc2) with p.stmt# = 92
+TRUE
+5000
+3188 - Valid. No common synonyms, suchthat-cl Calls*, with-cl call.stmt#
+procedure proc1, proc2, proc3; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls*(proc1, proc2) with cl.stmt# = 50
+TRUE
+5000
+3189 - Valid. No common synonyms, suchthat-cl Calls*, with-cl while.stmt#
+procedure proc1, proc2, proc3; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls*(proc1, proc2) with w.stmt# = 16
+TRUE
+5000
+3190 - Valid. No common synonyms, suchthat-cl Calls*, with-cl if.stmt#
+procedure proc1, proc2, proc3; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls*(proc1, proc2) with ifs.stmt# = 4
+TRUE
+5000
+3191 - Valid. No common synonyms, suchthat-cl Calls*, with-cl assign.stmt#
+procedure proc1, proc2, proc3; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls*(proc1, proc2) with a.stmt# = 30
+TRUE
+5000
+3192 - Valid. No common synonyms, suchthat-cl Calls*, with-cl prog_line
+procedure proc1, proc2, proc3; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls*(proc1, proc2) with n = 30
+TRUE
+5000
+3193 - Valid. No common synonyms, suchthat-cl Next, with-cl procedure.procName
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select BOOLEAN such that Next(n1, n2) with proc.procName = "nesting"
+TRUE
+5000
+3194 - Valid. No common synonyms, suchthat-cl Next, with-cl call.procName
+procedure proc1; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select BOOLEAN such that Next(n1, n2) with cl.procName = "expression"
+TRUE
+5000
+3195 - Valid. No common synonyms, suchthat-cl Next, with-cl variable.varName
+procedure proc1; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select BOOLEAN such that Next(n1, n2) with v.varName = "aa"
+TRUE
+5000
+3196 - Valid. No common synonyms, suchthat-cl Next, with-cl read.varName
+procedure proc1; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select BOOLEAN such that Next(n1, n2) with r.varName = "cc"
+TRUE
+5000
+3197 - Valid. No common synonyms, suchthat-cl Next, with-cl print.varName
+procedure proc1; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select BOOLEAN such that Next(n1, n2) with p.varName = "bb"
+TRUE
+5000
+3198 - Valid. No common synonyms, suchthat-cl Next, with-cl constant.value
+procedure proc1; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select BOOLEAN such that Next(n1, n2) with c.value = 11
+TRUE
+5000
+3199 - Valid. No common synonyms, suchthat-cl Next, with-cl stmt.stmt#
+procedure proc1; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select BOOLEAN such that Next(n1, n2) with s.stmt# = 93
+TRUE
+5000
+3200 - Valid. No common synonyms, suchthat-cl Next, with-cl read.stmt#
+procedure proc1; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select BOOLEAN such that Next(n1, n2) with r.stmt# = 90
+TRUE
+5000
+3201 - Valid. No common synonyms, suchthat-cl Next, with-cl print.stmt#
+procedure proc1; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select BOOLEAN such that Next(n1, n2) with p.stmt# = 92
+TRUE
+5000
+3202 - Valid. No common synonyms, suchthat-cl Next, with-cl call.stmt#
+procedure proc1; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select BOOLEAN such that Next(n1, n2) with cl.stmt# = 50
+TRUE
+5000
+3203 - Valid. No common synonyms, suchthat-cl Next, with-cl while.stmt#
+procedure proc1; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select BOOLEAN such that Next(n1, n2) with w.stmt# = 16
+TRUE
+5000
+3204 - Valid. No common synonyms, suchthat-cl Next, with-cl if.stmt#
+procedure proc1; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select BOOLEAN such that Next(n1, n2) with ifs.stmt# = 4
+TRUE
+5000
+3205 - Valid. No common synonyms, suchthat-cl Next, with-cl assign.stmt#
+procedure proc1; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select BOOLEAN such that Next(n1, n2) with a.stmt# = 30
+TRUE
+5000
+3206 - Valid. No common synonyms, suchthat-cl Next, with-cl prog_line
+procedure proc1; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select BOOLEAN such that Next(n1, n2) with n1 = 30
+TRUE
+5000
+3207 - Valid. One common synonym, suchthat-cl Follows, with-cl constant.value
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Follows(s1, s2) with c.value = s1.stmt#
+TRUE
+5000
+3208 - Valid. One common synonym, suchthat-cl Follows, with-cl stmt.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Follows(s1, s2) with s1.stmt# = 60
+TRUE
+5000
+3209 - Valid. One common synonym, suchthat-cl Follows, with-cl read.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Follows(s1, s2) with r.stmt# = s1.stmt#
+TRUE
+5000
+3210 - Valid. One common synonym, suchthat-cl Follows, with-cl print.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Follows(s1, s2) with p.stmt# = s1.stmt#
+TRUE
+5000
+3211 - Valid. One common synonym, suchthat-cl Follows, with-cl call.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Follows(s1, s2) with cl.stmt# = s1.stmt#
+FALSE
+5000
+3212 - Valid. One common synonym, suchthat-cl Follows, with-cl while.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Follows(s1, s2) with w.stmt# = s1.stmt#
+TRUE
+5000
+3213 - Valid. One common synonym, suchthat-cl Follows, with-cl if.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Follows(s1, s2) with ifs.stmt# = s1.stmt#
+TRUE
+5000
+3214 - Valid. One common synonym, suchthat-cl Follows, with-cl assign.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Follows(s1, s2) with a.stmt# = s1.stmt#
+TRUE
+5000
+3215 - Valid. One common synonym, suchthat-cl Follows, with-cl prog_line
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Follows(s1, s2) with n = s1.stmt#
+TRUE
+5000
+3216 - Valid. One common synonym, suchthat-cl Follows*, with-cl constant.value
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Follows*(s1, s2) with c.value = s1.stmt#
+TRUE
+5000
+3217 - Valid. One common synonym, suchthat-cl Follows*, with-cl stmt.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Follows*(s1, s2) with s1.stmt# = 60
+TRUE
+5000
+3218 - Valid. One common synonym, suchthat-cl Follows*, with-cl read.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Follows*(s1, s2) with r.stmt# = s1.stmt#
+TRUE
+5000
+3219 - Valid. One common synonym, suchthat-cl Follows*, with-cl print.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Follows*(s1, s2) with p.stmt# = s1.stmt#
+TRUE
+5000
+3220 - Valid. One common synonym, suchthat-cl Follows*, with-cl call.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Follows*(s1, s2) with cl.stmt# = s1.stmt#
+FALSE
+5000
+3221 - Valid. One common synonym, suchthat-cl Follows*, with-cl while.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Follows*(s1, s2) with w.stmt# = s1.stmt#
+TRUE
+5000
+3222 - Valid. One common synonym, suchthat-cl Follows*, with-cl if.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Follows*(s1, s2) with ifs.stmt# = s1.stmt#
+TRUE
+5000
+3223 - Valid. One common synonym, suchthat-cl Follows*, with-cl assign.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Follows*(s1, s2) with a.stmt# = s1.stmt#
+TRUE
+5000
+3224 - Valid. One common synonym, suchthat-cl Follows*, with-cl prog_line
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Follows*(s1, s2) with n = s1.stmt#
+TRUE
+5000
+3225 - Valid. One common synonym, suchthat-cl Parent, with-cl constant.value
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Parent(s1, s2) with c.value = s1.stmt#
+TRUE
+5000
+3226 - Valid. One common synonym, suchthat-cl Parent, with-cl stmt.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Parent(s1, s2) with s1.stmt# = 8
+TRUE
+5000
+3227 - Valid. One common synonym, suchthat-cl Parent, with-cl read.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Parent(s1, s2) with r.stmt# = s1.stmt#
+FALSE
+5000
+3228 - Valid. One common synonym, suchthat-cl Parent, with-cl print.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Parent(s1, s2) with p.stmt# = s1.stmt#
+FALSE
+5000
+3229 - Valid. One common synonym, suchthat-cl Parent, with-cl call.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Parent(s1, s2) with cl.stmt# = s1.stmt#
+FALSE
+5000
+3230 - Valid. One common synonym, suchthat-cl Parent, with-cl while.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Parent(s1, s2) with w.stmt# = s1.stmt#
+TRUE
+5000
+3231 - Valid. One common synonym, suchthat-cl Parent, with-cl if.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Parent(s1, s2) with ifs.stmt# = s1.stmt#
+TRUE
+5000
+3232 - Valid. One common synonym, suchthat-cl Parent, with-cl assign.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Parent(s1, s2) with a.stmt# = s1.stmt#
+FALSE
+5000
+3233 - Valid. One common synonym, suchthat-cl Parent, with-cl prog_line
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Parent(s1, s2) with n = s1.stmt#
+TRUE
+5000
+3234 - Valid. One common synonym, suchthat-cl Parent*, with-cl constant.value
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Parent*(s1, s2) with c.value = s1.stmt#
+TRUE
+5000
+3235 - Valid. One common synonym, suchthat-cl Parent*, with-cl stmt.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Parent*(s1, s2) with s1.stmt# = 8
+TRUE
+5000
+3236 - Valid. One common synonym, suchthat-cl Parent*, with-cl read.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Parent*(s1, s2) with r.stmt# = s1.stmt#
+FALSE
+5000
+3237 - Valid. One common synonym, suchthat-cl Parent*, with-cl print.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Parent*(s1, s2) with p.stmt# = s1.stmt#
+FALSE
+5000
+3238 - Valid. One common synonym, suchthat-cl Parent*, with-cl call.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Parent*(s1, s2) with cl.stmt# = s1.stmt#
+FALSE
+5000
+3239 - Valid. One common synonym, suchthat-cl Parent*, with-cl while.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Parent*(s1, s2) with w.stmt# = s1.stmt#
+TRUE
+5000
+3240 - Valid. One common synonym, suchthat-cl Parent*, with-cl if.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Parent*(s1, s2) with ifs.stmt# = s1.stmt#
+TRUE
+5000
+3241 - Valid. One common synonym, suchthat-cl Parent*, with-cl assign.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Parent*(s1, s2) with a.stmt# = s1.stmt#
+FALSE
+5000
+3242 - Valid. One common synonym, suchthat-cl Parent*, with-cl prog_line
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Parent*(s1, s2) with n = s1.stmt#
+TRUE
+5000
+3243 - Valid. One common synonym, suchthat-cl UsesS, with-cl procedure.procName
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Uses(s, v) with proc.procName = v.varName
+TRUE
+5000
+3244 - Valid. One common synonym, suchthat-cl UsesS, with-cl call.procName
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Uses(s, v) with cl.procName = v.varName
+TRUE
+5000
+3245 - Valid. One common synonym, suchthat-cl UsesS, with-cl variable.varName
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Uses(s, v) with v.varName = "aa"
+TRUE
+5000
+3246 - Valid. One common synonym, suchthat-cl UsesS, with-cl read.varName
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Uses(s, v) with r.varName = v.varName
+TRUE
+5000
+3247 - Valid. One common synonym, suchthat-cl UsesS, with-cl print.varName
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Uses(s, v) with p.varName = v.varName
+TRUE
+5000
+3248 - Valid. One common synonym, suchthat-cl UsesS, with-cl constant.value
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Uses(s, v) with c.value = s.stmt#
+TRUE
+5000
+3249 - Valid. One common synonym, suchthat-cl UsesS, with-cl stmt.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Uses(s, v) with s.stmt# = 72
+TRUE
+5000
+3250 - Valid. One common synonym, suchthat-cl UsesS, with-cl read.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Uses(s, v) with r.stmt# = s.stmt#
+FALSE
+5000
+3251 - Valid. One common synonym, suchthat-cl UsesS, with-cl print.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Uses(s, v) with p.stmt# = s.stmt#
+TRUE
+5000
+3252 - Valid. One common synonym, suchthat-cl UsesS, with-cl call.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Uses(s, v) with cl.stmt# = s.stmt#
+TRUE
+5000
+3253 - Valid. One common synonym, suchthat-cl UsesS, with-cl while.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Uses(s, v) with w.stmt# = s.stmt#
+TRUE
+5000
+3254 - Valid. One common synonym, suchthat-cl UsesS, with-cl if.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Uses(s, v) with ifs.stmt# = s.stmt#
+TRUE
+5000
+3255 - Valid. One common synonym, suchthat-cl UsesS, with-cl assign.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Uses(s, v) with a.stmt# = s.stmt#
+TRUE
+5000
+3256 - Valid. One common synonym, suchthat-cl UsesS, with-cl prog_line
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Uses(s, v) with n = s.stmt#
+TRUE
+5000
+3257 - Valid. One common synonym, suchthat-cl UsesP, with-cl procedure.procName
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Uses(proc, v) with proc.procName = "expression"
+TRUE
+5000
+3258 - Valid. One common synonym, suchthat-cl UsesP, with-cl call.procName
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Uses(proc, v) with cl.procName = v.varName
+TRUE
+5000
+3259 - Valid. One common synonym, suchthat-cl UsesP, with-cl variable.varName
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Uses(proc, v) with v.varName = "bb"
+TRUE
+5000
+3260 - Valid. One common synonym, suchthat-cl UsesP, with-cl read.varName
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Uses(proc, v) with r.varName = v.varName
+TRUE
+5000
+3261 - Valid. One common synonym, suchthat-cl UsesP, with-cl print.varName
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Uses(proc, v) with p.varName = v.varName
+TRUE
+5000
+3262 - Valid. One common synonym, suchthat-cl ModifiesS, with-cl procedure.procName
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Modifies(s, v) with proc.procName = v.varName
+TRUE
+5000
+3263 - Valid. One common synonym, suchthat-cl ModifiesS, with-cl call.procName
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Modifies(s, v) with cl.procName = v.varName
+TRUE
+5000
+3264 - Valid. One common synonym, suchthat-cl ModifiesS, with-cl variable.varName
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Modifies(s, v) with v.varName = "aa"
+TRUE
+5000
+3265 - Valid. One common synonym, suchthat-cl ModifiesS, with-cl read.varName
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Modifies(s, v) with r.varName = v.varName
+TRUE
+5000
+3266 - Valid. One common synonym, suchthat-cl ModifiesS, with-cl print.varName
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Modifies(s, v) with p.varName = v.varName
+TRUE
+5000
+3267 - Valid. One common synonym, suchthat-cl ModifiesS, with-cl constant.value
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Modifies(s, v) with c.value = s.stmt#
+TRUE
+5000
+3268 - Valid. One common synonym, suchthat-cl ModifiesS, with-cl stmt.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Modifies(s, v) with s.stmt# = 72
+TRUE
+5000
+3269 - Valid. One common synonym, suchthat-cl ModifiesS, with-cl read.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Modifies(s, v) with r.stmt# = s.stmt#
+TRUE
+5000
+3270 - Valid. One common synonym, suchthat-cl ModifiesS, with-cl print.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Modifies(s, v) with p.stmt# = s.stmt#
+FALSE
+5000
+3271 - Valid. One common synonym, suchthat-cl ModifiesS, with-cl call.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Modifies(s, v) with cl.stmt# = s.stmt#
+TRUE
+5000
+3272 - Valid. One common synonym, suchthat-cl ModifiesS, with-cl while.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Modifies(s, v) with w.stmt# = s.stmt#
+TRUE
+5000
+3273 - Valid. One common synonym, suchthat-cl ModifiesS, with-cl if.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Modifies(s, v) with ifs.stmt# = s.stmt#
+TRUE
+5000
+3274 - Valid. One common synonym, suchthat-cl ModifiesS, with-cl assign.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Modifies(s, v) with a.stmt# = s.stmt#
+TRUE
+5000
+3275 - Valid. One common synonym, suchthat-cl ModifiesS, with-cl prog_line
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Modifies(s, v) with n = s.stmt#
+TRUE
+5000
+3276 - Valid. One common synonym, suchthat-cl ModifiesP, with-cl procedure.procName
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Modifies(proc, v) with proc.procName = "expression"
+TRUE
+5000
+3277 - Valid. One common synonym, suchthat-cl ModifiesP, with-cl call.procName
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Modifies(proc, v) with cl.procName = v.varName
+TRUE
+5000
+3278 - Valid. One common synonym, suchthat-cl ModifiesP, with-cl variable.varName
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Modifies(proc, v) with v.varName = "bb"
+TRUE
+5000
+3279 - Valid. One common synonym, suchthat-cl ModifiesP, with-cl read.varName
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Modifies(proc, v) with r.varName = v.varName
+TRUE
+5000
+3280 - Valid. One common synonym, suchthat-cl ModifiesP, with-cl print.varName
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Modifies(proc, v) with p.varName = v.varName
+TRUE
+5000
+3281 - Valid. One common synonym, suchthat-cl Calls, with-cl procedure.procName
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls(proc1, proc2) with proc1.procName = "expression"
+TRUE
+5000
+3282 - Valid. One common synonym, suchthat-cl Calls, with-cl call.procName
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls(proc1, proc2) with cl.procName = proc1.procName
+TRUE
+5000
+3283 - Valid. One common synonym, suchthat-cl Calls, with-cl variable.varName
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls(proc1, proc2) with v.varName = proc1.procName
+TRUE
+5000
+3284 - Valid. One common synonym, suchthat-cl Calls, with-cl read.varName
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls(proc1, proc2) with r.varName = proc1.procName
+TRUE
+5000
+3285 - Valid. One common synonym, suchthat-cl Calls, with-cl print.varName
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls(proc1, proc2) with p.varName = proc1.procName
+TRUE
+5000
+3286 - Valid. One common synonym, suchthat-cl Calls*, with-cl procedure.procName
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls*(proc1, proc2) with proc1.procName = "expression"
+TRUE
+5000
+3287 - Valid. One common synonym, suchthat-cl Calls*, with-cl call.procName
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls*(proc1, proc2) with cl.procName = proc1.procName
+TRUE
+5000
+3288 - Valid. One common synonym, suchthat-cl Calls*, with-cl variable.varName
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls*(proc1, proc2) with v.varName = proc1.procName
+TRUE
+5000
+3289 - Valid. One common synonym, suchthat-cl Calls*, with-cl read.varName
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls*(proc1, proc2) with r.varName = proc1.procName
+TRUE
+5000
+3290 - Valid. One common synonym, suchthat-cl Calls*, with-cl print.varName
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls*(proc1, proc2) with p.varName = proc1.procName
+TRUE
+5000
+3291 - Valid. One common synonym, suchthat-cl Next, with-cl constant.value
+procedure proc1; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select BOOLEAN such that Next(n1, n2) with c.value = n2
+TRUE
+5000
+3292 - Valid. One common synonym, suchthat-cl Next, with-cl stmt.stmt#
+procedure proc1; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select BOOLEAN such that Next(n1, n2) with s.stmt# = n2
+TRUE
+5000
+3293 - Valid. One common synonym, suchthat-cl Next, with-cl read.stmt#
+procedure proc1; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select BOOLEAN such that Next(n1, n2) with r.stmt# = n2
+TRUE
+5000
+3294 - Valid. One common synonym, suchthat-cl Next, with-cl print.stmt#
+procedure proc1; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select BOOLEAN such that Next(n1, n2) with p.stmt# = n2
+TRUE
+5000
+3295 - Valid. One common synonym, suchthat-cl Next, with-cl call.stmt#
+procedure proc1; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select BOOLEAN such that Next(n1, n2) with cl.stmt# = n2
+TRUE
+5000
+3296 - Valid. One common synonym, suchthat-cl Next, with-cl while.stmt#
+procedure proc1; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select BOOLEAN such that Next(n1, n2) with w.stmt# = n2
+TRUE
+5000
+3297 - Valid. One common synonym, suchthat-cl Next, with-cl if.stmt#
+procedure proc1; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select BOOLEAN such that Next(n1, n2) with ifs.stmt# = n2
+TRUE
+5000
+3298 - Valid. One common synonym, suchthat-cl Next, with-cl assign.stmt#
+procedure proc1; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select BOOLEAN such that Next(n1, n2) with a.stmt# = n2
+TRUE
+5000
+3299 - Valid. One common synonym, suchthat-cl Next, with-cl prog_line
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select BOOLEAN such that Next(n1, n2) with n1 = 10
+TRUE
+5000
+3300 - Valid. Two common synonyms, suchthat-cl Follows, with-cl stmt.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Follows(s1, s2) with s1.stmt# = s2.stmt#
+FALSE
+5000
+3301 - Valid. Two common synonyms, suchthat-cl Follows*, with-cl stmt.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Follows*(s1, s2) with s1.stmt# = s2.stmt#
+FALSE
+5000
+3302 - Valid. Two common synonyms, suchthat-cl Parent, with-cl stmt.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Parent(s1, s2) with s1.stmt# = s2.stmt#
+FALSE
+5000
+3303 - Valid. Two common synonyms, suchthat-cl Parent*, with-cl stmt.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Parent*(s1, s2) with s1.stmt# = s2.stmt#
+FALSE
+5000
+3304 - Valid. Two common synonyms, suchthat-cl UsesP, with-cl procedure.procName
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Uses(proc, v) with proc.procName = v.varName
+TRUE
+5000
+3305 - Valid. Two common synonyms, suchthat-cl ModifiesP, with-cl procedure.procName
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Modifies(proc, v) with proc.procName = v.varName
+TRUE
+5000
+3306 - Valid. Two common synonyms, suchthat-cl Calls, with-cl procedure.procName
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls(proc1, proc2) with proc1.procName = proc2.procName
+FALSE
+5000
+3307 - Valid. Two common synonyms, suchthat-cl Calls*, with-cl procedure.procName
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls*(proc1, proc2) with proc1.procName = proc2.procName
+FALSE
+5000
+3308 - Valid. Two common synonyms, suchthat-cl Next, with-cl prog_line
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select BOOLEAN such that Next(n1, n2) with n1 = n2
+FALSE
+5000
+3309 - Valid. No common synonyms, pattern-cl assign, with-cl procedure.procName
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN pattern a(_, _"33 * bb"_) with proc.procName = "expression"
+TRUE
+5000
+3310 - Valid. No common synonyms, pattern-cl assign, with-cl call.procName
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN pattern a(_, _"33 * bb"_) with cl.procName = "expression"
+TRUE
+5000
+3311 - Valid. No common synonyms, pattern-cl assign, with-cl variable.varName
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN pattern a(_, _"33 * bb"_) with v.varName = "aa"
+TRUE
+5000
+3312 - Valid. No common synonyms, pattern-cl assign, with-cl print.varName
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN pattern a(_, _"33 * bb"_) with p.varName = "aa"
+TRUE
+5000
+3313 - Valid. No common synonyms, pattern-cl assign, with-cl read.varName
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN pattern a(_, _"33 * bb"_) with r.varName = "aa"
+TRUE
+5000
+3314 - Valid. No common synonyms, pattern-cl assign, with-cl constant.value
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN pattern a(_, _"33 * bb"_) with c.value = 22
+TRUE
+5000
+3315 - Valid. No common synonyms, pattern-cl assign, with-cl stmt.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN pattern a(_, _"33 * bb"_) with s.stmt# = 90
+TRUE
+5000
+3316 - Valid. No common synonyms, pattern-cl assign, with-cl read.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN pattern a(_, _"33 * bb"_) with r.stmt# = 49
+TRUE
+5000
+3317 - Valid. No common synonyms, pattern-cl assign, with-cl print.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN pattern a(_, _"33 * bb"_) with p.stmt# = 42
+TRUE
+5000
+3318 - Valid. No common synonyms, pattern-cl assign, with-cl call.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN pattern a(_, _"33 * bb"_) with cl.stmt# = 50
+TRUE
+5000
+3319 - Valid. No common synonyms, pattern-cl assign, with-cl while.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN pattern a(_, _"33 * bb"_) with w.stmt# = 44
+TRUE
+5000
+3320 - Valid. No common synonyms, pattern-cl assign, with-cl if.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN pattern a(_, _"33 * bb"_) with ifs.stmt# = 46
+TRUE
+5000
+3321 - Valid. No common synonyms, pattern-cl assign, with-cl assign.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN pattern a(_, _"33 * bb"_) with a.stmt# = 47
+TRUE
+5000
+3322 - Valid. No common synonyms, pattern-cl assign, with-cl prog_line
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN pattern a(_, _"33 * bb"_) with n = 40
+TRUE
+5000
+3323 - Valid. No common synonyms, pattern-cl while, with-cl procedure.procName
+procedure proc; call cl; variable v1, v2; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN pattern w(v1, _) with proc.procName = "nesting"
+TRUE
+5000
+3324 - Valid. No common synonyms, pattern-cl while, with-cl call.procName
+procedure proc; call cl; variable v1, v2; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN pattern w(v1, _) with cl.procName = "expression"
+TRUE
+5000
+3325 - Valid. No common synonyms, pattern-cl while, with-cl variable.varName
+procedure proc; call cl; variable v1, v2; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN pattern w(v1, _) with v2.varName = "bb"
+TRUE
+5000
+3326 - Valid. No common synonyms, pattern-cl while, with-cl print.varName
+procedure proc; call cl; variable v1, v2; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN pattern w(v1, _) with p.varName = "bb"
+TRUE
+5000
+3327 - Valid. No common synonyms, pattern-cl while, with-cl read.varName
+procedure proc; call cl; variable v1, v2; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN pattern w(v1, _) with r.varName = "cc"
+TRUE
+5000
+3328 - Valid. No common synonyms, pattern-cl while, with-cl constant.value
+procedure proc; call cl; variable v1, v2; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN pattern w(v1, _) with c.value = 44
+TRUE
+5000
+3329 - Valid. No common synonyms, pattern-cl while, with-cl stmt.stmt#
+procedure proc; call cl; variable v1, v2; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN pattern w(v1, _) with s.stmt# = 90
+TRUE
+5000
+3330 - Valid. No common synonyms, pattern-cl while, with-cl read.stmt#
+procedure proc; call cl; variable v1, v2; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN pattern w(v1, _) with r.stmt# = 49
+TRUE
+5000
+3331 - Valid. No common synonyms, pattern-cl while, with-cl print.stmt#
+procedure proc; call cl; variable v1, v2; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN pattern w(v1, _) with p.stmt# = 42
+TRUE
+5000
+3332 - Valid. No common synonyms, pattern-cl while, with-cl call.stmt#
+procedure proc; call cl; variable v1, v2; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN pattern w(v1, _) with cl.stmt# = 50
+TRUE
+5000
+3333 - Valid. No common synonyms, pattern-cl while, with-cl while.stmt#
+procedure proc; call cl; variable v1, v2; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN pattern w(v1, _) with w.stmt# = 44
+TRUE
+5000
+3334 - Valid. No common synonyms, pattern-cl while, with-cl if.stmt#
+procedure proc; call cl; variable v1, v2; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN pattern w(v1, _) with ifs.stmt# = 46
+TRUE
+5000
+3335 - Valid. No common synonyms, pattern-cl while, with-cl assign.stmt#
+procedure proc; call cl; variable v1, v2; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN pattern w(v1, _) with a.stmt# = 47
+TRUE
+5000
+3336 - Valid. No common synonyms, pattern-cl while, with-cl prog_line
+procedure proc; call cl; variable v1, v2; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN pattern w(v1, _) with n = 14
+TRUE
+5000
+3337 - Valid. No common synonyms, pattern-cl if, with-cl procedure.procName
+procedure proc; call cl; variable v1, v2; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN pattern ifs(v1, _, _) with proc.procName = "assignment"
+TRUE
+5000
+3338 - Valid. No common synonyms, pattern-cl if, with-cl call.procName
+procedure proc; call cl; variable v1, v2; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN pattern ifs(v1, _, _) with cl.procName = "assignment"
+TRUE
+5000
+3339 - Valid. No common synonyms, pattern-cl if, with-cl variable.varName
+procedure proc; call cl; variable v1, v2; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN pattern ifs(v1, _, _) with v2.varName = "cc"
+TRUE
+5000
+3340 - Valid. No common synonyms, pattern-cl if, with-cl print.varName
+procedure proc; call cl; variable v1, v2; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN pattern ifs(v1, _, _) with p.varName = "cc"
+TRUE
+5000
+3341 - Valid. No common synonyms, pattern-cl if, with-cl read.varName
+procedure proc; call cl; variable v1, v2; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN pattern ifs(v1, _, _) with r.varName = "cc"
+TRUE
+5000
+3342 - Valid. No common synonyms, pattern-cl if, with-cl constant.value
+procedure proc; call cl; variable v1, v2; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN pattern ifs(v1, _, _) with c.value = 44
+TRUE
+5000
+3343 - Valid. No common synonyms, pattern-cl if, with-cl stmt.stmt#
+procedure proc; call cl; variable v1, v2; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN pattern ifs(v1, _, _) with s.stmt# = 90
+TRUE
+5000
+3344 - Valid. No common synonyms, pattern-cl if, with-cl read.stmt#
+procedure proc; call cl; variable v1, v2; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN pattern ifs(v1, _, _) with r.stmt# = 49
+TRUE
+5000
+3345 - Valid. No common synonyms, pattern-cl if, with-cl print.stmt#
+procedure proc; call cl; variable v1, v2; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN pattern ifs(v1, _, _) with p.stmt# = 42
+TRUE
+5000
+3346 - Valid. No common synonyms, pattern-cl if, with-cl call.stmt#
+procedure proc; call cl; variable v1, v2; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN pattern ifs(v1, _, _) with cl.stmt# = 50
+TRUE
+5000
+3347 - Valid. No common synonyms, pattern-cl if, with-cl while.stmt#
+procedure proc; call cl; variable v1, v2; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN pattern ifs(v1, _, _) with w.stmt# = 44
+TRUE
+5000
+3348 - Valid. No common synonyms, pattern-cl if, with-cl if.stmt#
+procedure proc; call cl; variable v1, v2; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN pattern ifs(v1, _, _) with ifs.stmt# = 46
+TRUE
+5000
+3349 - Valid. No common synonyms, pattern-cl if, with-cl assign.stmt#
+procedure proc; call cl; variable v1, v2; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN pattern ifs(v1, _, _) with a.stmt# = 47
+TRUE
+5000
+3350 - Valid. No common synonyms, pattern-cl if, with-cl prog_line
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN pattern ifs(v, _, _) with n = 2
+TRUE
+5000
+3351 - Valid. One common synonym, pattern-cl assign, with-cl procedure.procName
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN pattern a(v, _"cc"_) with proc.procName = v.varName
+TRUE
+5000
+3352 - Valid. One common synonym, pattern-cl assign, with-cl call.procName
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN pattern a(v, _"cc"_) with cl.procName = v.varName
+TRUE
+5000
+3353 - Valid. One common synonym, pattern-cl assign, with-cl variable.varName
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN pattern a(v, _"22   +   44   *    aa"_) with v.varName = "aa"
+TRUE
+5000
+3354 - Valid. One common synonym, pattern-cl assign, with-cl print.varName
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN pattern a(v, _"22   +   44   *    aa"_) with p.varName = v.varName
+TRUE
+5000
+3355 - Valid. One common synonym, pattern-cl assign, with-cl read.varName
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN pattern a(v, _"22   +   44   *    aa"_) with r.varName = v.varName
+TRUE
+5000
+3356 - Valid. One common synonym, pattern-cl assign, with-cl constant.value
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN pattern a(v, _"bb + 44"_) with c.value = a.stmt#
+TRUE
+5000
+3357 - Valid. One common synonym, pattern-cl assign, with-cl stmt.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN pattern a(v, _"22   +   44   *    aa"_) with s.stmt# = a.stmt#
+TRUE
+5000
+3358 - Valid. One common synonym, pattern-cl assign, with-cl read.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN pattern a(v, _"22   +   44   *    aa"_) with r.stmt# = a.stmt#
+FALSE
+5000
+3359 - Valid. One common synonym, pattern-cl assign, with-cl print.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN pattern a(v, _"22   +   44   *    aa"_) with p.stmt# = a.stmt#
+FALSE
+5000
+3360 - Valid. One common synonym, pattern-cl assign, with-cl call.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN pattern a(v, _"22   +   44   *    aa"_) with cl.stmt# = a.stmt#
+FALSE
+5000
+3361 - Valid. One common synonym, pattern-cl assign, with-cl while.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN pattern a(v, _"22   +   44   *    aa"_) with w.stmt# = a.stmt#
+FALSE
+5000
+3362 - Valid. One common synonym, pattern-cl assign, with-cl if.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN pattern a(v, _"22   +   44   *    aa"_) with ifs.stmt# = a.stmt#
+FALSE
+5000
+3363 - Valid. One common synonym, pattern-cl assign, with-cl assign.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN pattern a(v, _"22   +   44   *    aa"_) with a.stmt# = 40
+TRUE
+5000
+3364 - Valid. One common synonym, pattern-cl assign, with-cl prog_line
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN pattern a(v, _"22   +   44   *    aa"_) with n = a.stmt#
+TRUE
+5000
+3365 - Valid. One common synonym, pattern-cl while, with-cl procedure.procName
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN pattern w(v, _) with proc.procName = v.varName
+FALSE
+5000
+3366 - Valid. One common synonym, pattern-cl while, with-cl call.procName
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN pattern w(v, _) with cl.procName = v.varName
+FALSE
+5000
+3367 - Valid. One common synonym, pattern-cl while, with-cl variable.varName
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN pattern w(v, _) with v.varName = "aa"
+TRUE
+5000
+3368 - Valid. One common synonym, pattern-cl while, with-cl print.varName
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN pattern w(v, _) with p.varName = v.varName
+TRUE
+5000
+3369 - Valid. One common synonym, pattern-cl while, with-cl read.varName
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN pattern w(v, _) with r.varName = v.varName
+TRUE
+5000
+3370 - Valid. One common synonym, pattern-cl while, with-cl constant.value
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN pattern w(v, _) with c.value = w.stmt#
+TRUE
+5000
+3371 - Valid. One common synonym, pattern-cl while, with-cl stmt.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN pattern w(v, _) with s.stmt# = w.stmt#
+TRUE
+5000
+3372 - Valid. One common synonym, pattern-cl while, with-cl read.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN pattern w(v, _) with r.stmt# = w.stmt#
+FALSE
+5000
+3373 - Valid. One common synonym, pattern-cl while, with-cl print.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN pattern w(v, _) with p.stmt# = w.stmt#
+FALSE
+5000
+3374 - Valid. One common synonym, pattern-cl while, with-cl call.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN pattern w(v, _) with cl.stmt# = w.stmt#
+FALSE
+5000
+3375 - Valid. One common synonym, pattern-cl while, with-cl while.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN pattern w(v, _) with w.stmt# = 44
+TRUE
+5000
+3376 - Valid. One common synonym, pattern-cl while, with-cl if.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN pattern w(v, _) with ifs.stmt# = w.stmt#
+FALSE
+5000
+3377 - Valid. One common synonym, pattern-cl while, with-cl assign.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN pattern w(v, _) with a.stmt# = w.stmt#
+FALSE
+5000
+3378 - Valid. One common synonym, pattern-cl while, with-cl prog_line
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN pattern w(v, _) with n = w.stmt#
+TRUE
+5000
+3379 - Valid. One common synonym, pattern-cl if, with-cl procedure.procName
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN pattern ifs(v, _, _) with proc.procName = v.varName
+FALSE
+5000
+3380 - Valid. One common synonym, pattern-cl if, with-cl call.procName
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN pattern ifs(v, _, _) with cl.procName = v.varName
+FALSE
+5000
+3381 - Valid. One common synonym, pattern-cl if, with-cl variable.varName
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN pattern ifs(v, _, _) with v.varName = "cc"
+TRUE
+5000
+3382 - Valid. One common synonym, pattern-cl if, with-cl print.varName
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN pattern ifs(v, _, _) with p.varName = v.varName
+TRUE
+5000
+3383 - Valid. One common synonym, pattern-cl if, with-cl read.varName
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN pattern ifs(v, _, _) with r.varName = v.varName
+TRUE
+5000
+3384 - Valid. One common synonym, pattern-cl if, with-cl constant.value
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN pattern ifs(v, _, _) with c.value = ifs.stmt#
+TRUE
+5000
+3385 - Valid. One common synonym, pattern-cl if, with-cl stmt.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN pattern ifs(v, _, _) with s.stmt# = 90
+TRUE
+5000
+3386 - Valid. One common synonym, pattern-cl if, with-cl read.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN pattern ifs(v, _, _) with r.stmt# = ifs.stmt#
+FALSE
+5000
+3387 - Valid. One common synonym, pattern-cl if, with-cl print.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN pattern ifs(v, _, _) with p.stmt# = ifs.stmt#
+FALSE
+5000
+3388 - Valid. One common synonym, pattern-cl if, with-cl call.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN pattern ifs(v, _, _) with cl.stmt# = ifs.stmt#
+FALSE
+5000
+3389 - Valid. One common synonym, pattern-cl if, with-cl while.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN pattern ifs(v, _, _) with w.stmt# = ifs.stmt#
+FALSE
+5000
+3390 - Valid. One common synonym, pattern-cl if, with-cl if.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN pattern ifs(v, _, _) with ifs.stmt# = 46
+TRUE
+5000
+3391 - Valid. One common synonym, pattern-cl if, with-cl assign.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN pattern ifs(v, _, _) with a.stmt# = ifs.stmt#
+FALSE
+5000
+3392 - Valid. One common synonym, pattern-cl if, with-cl prog_line
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN pattern ifs(v, _, _) with n = ifs.stmt#
+TRUE
+5000
+3393 - Valid. No common synonyms, suchthat-cl Follows, pattern-cl assign
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Follows(s1, s2) pattern a(v, _)
+TRUE
+5000
+3394 - Valid. No common synonyms, suchthat-cl Follows, pattern-cl while
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Follows(s1, s2) pattern w(v, _)
+TRUE
+5000
+3395 - Valid. No common synonyms, suchthat-cl Follows, pattern-cl if
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Follows(s1, s2) pattern ifs(v, _, _)
+TRUE
+5000
+3396 - Valid. No common synonyms, suchthat-cl Follows*, pattern-cl assign
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Follows*(s1, s2) pattern a(v, _)
+TRUE
+5000
+3397 - Valid. No common synonyms, suchthat-cl Follows*, pattern-cl while
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Follows*(s1, s2) pattern w(v, _)
+TRUE
+5000
+3398 - Valid. No common synonyms, suchthat-cl Follows*, pattern-cl if
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Follows*(s1, s2) pattern ifs(v, _, _)
+TRUE
+5000
+3399 - Valid. No common synonyms, suchthat-cl Parent, pattern-cl assign
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Parent(s1, s2) pattern a(v, _)
+TRUE
+5000
+3400 - Valid. No common synonyms, suchthat-cl Parent, pattern-cl while
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Parent(s1, s2) pattern w(v, _)
+TRUE
+5000
+3401 - Valid. No common synonyms, suchthat-cl Parent, pattern-cl if
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Parent(s1, s2) pattern ifs(v, _, _)
+TRUE
+5000
+3402 - Valid. No common synonyms, suchthat-cl Parent*, pattern-cl assign
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Parent*(s1, s2) pattern a(v, _)
+TRUE
+5000
+3403 - Valid. No common synonyms, suchthat-cl Parent*, pattern-cl while
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Parent*(s1, s2) pattern w(v, _)
+TRUE
+5000
+3404 - Valid. No common synonyms, suchthat-cl Parent*, pattern-cl if
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Parent*(s1, s2) pattern ifs(v, _, _)
+TRUE
+5000
+3405 - Valid. No common synonyms, suchthat-cl UsesS, pattern-cl assign
+procedure proc; call cl; variable v1, v2; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Uses(s, v1) pattern a(v2, _)
+TRUE
+5000
+3406 - Valid. No common synonyms, suchthat-cl UsesS, pattern-cl while
+procedure proc; call cl; variable v1, v2; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Uses(s, v1) pattern w(v2, _)
+TRUE
+5000
+3407 - Valid. No common synonyms, suchthat-cl UsesS, pattern-cl if
+procedure proc; call cl; variable v1, v2; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Uses(s, v1) pattern ifs(v2, _, _)
+TRUE
+5000
+3408 - Valid. No common synonyms, suchthat-cl UsesP, pattern-cl assign
+procedure proc; call cl; variable v1, v2; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Uses(proc, v1) pattern a(v2, _)
+TRUE
+5000
+3409 - Valid. No common synonyms, suchthat-cl UsesP, pattern-cl while
+procedure proc; call cl; variable v1, v2; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Uses(proc, v1) pattern w(v2, _)
+TRUE
+5000
+3410 - Valid. No common synonyms, suchthat-cl UsesP, pattern-cl if
+procedure proc; call cl; variable v1, v2; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Uses(proc, v1) pattern ifs(v2, _, _)
+TRUE
+5000
+3411 - Valid. No common synonyms, suchthat-cl ModifiesS, pattern-cl assign
+procedure proc; call cl; variable v1, v2; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Modifies(s, v1) pattern a(v2, _)
+TRUE
+5000
+3412 - Valid. No common synonyms, suchthat-cl ModifiesS, pattern-cl while
+procedure proc; call cl; variable v1, v2; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Modifies(s, v1) pattern w(v2, _)
+TRUE
+5000
+3413 - Valid. No common synonyms, suchthat-cl ModifiesS, pattern-cl if
+procedure proc; call cl; variable v1, v2; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Modifies(s, v1) pattern ifs(v2, _, _)
+TRUE
+5000
+3414 - Valid. No common synonyms, suchthat-cl ModifiesP, pattern-cl assign
+procedure proc; call cl; variable v1, v2; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Modifies(proc, v1) pattern a(v2, _)
+TRUE
+5000
+3415 - Valid. No common synonyms, suchthat-cl ModifiesP, pattern-cl while
+procedure proc; call cl; variable v1, v2; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Modifies(proc, v1) pattern w(v2, _)
+TRUE
+5000
+3416 - Valid. No common synonyms, suchthat-cl ModifiesP, pattern-cl if
+procedure proc; call cl; variable v1, v2; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Modifies(proc, v1) pattern ifs(v2, _, _)
+TRUE
+5000
+3417 - Valid. No common synonyms, suchthat-cl Calls, pattern-cl assign
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls(proc1, proc2) pattern a(v, _)
+TRUE
+5000
+3418 - Valid. No common synonyms, suchthat-cl Calls, pattern-cl while
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls(proc1, proc2) pattern w(v, _)
+TRUE
+5000
+3419 - Valid. No common synonyms, suchthat-cl Calls, pattern-cl if
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls(proc1, proc2) pattern ifs(v, _, _)
+TRUE
+5000
+3420 - Valid. No common synonyms, suchthat-cl Calls*, pattern-cl assign
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls*(proc1, proc2) pattern a(v, _)
+TRUE
+5000
+3421 - Valid. No common synonyms, suchthat-cl Calls*, pattern-cl while
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls*(proc1, proc2) pattern w(v, _)
+TRUE
+5000
+3422 - Valid. No common synonyms, suchthat-cl Calls*, pattern-cl if
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls*(proc1, proc2) pattern ifs(v, _, _)
+TRUE
+5000
+3423 - Valid. No common synonyms, suchthat-cl Next, pattern-cl assign
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select BOOLEAN such that Next(n1, n2) pattern a(v, _)
+TRUE
+5000
+3424 - Valid. No common synonyms, suchthat-cl Next, pattern-cl while
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select BOOLEAN such that Next(n1, n2) pattern w(v, _)
+TRUE
+5000
+3425 - Valid. No common synonyms, suchthat-cl Next, pattern-cl if
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select BOOLEAN such that Next(n1, n2) pattern ifs(v, _, _)
+TRUE
+5000
+3426 - Valid. One common synonym, suchthat-cl UsesS, pattern-cl assign
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Uses(s, v) pattern a(v, _)
+TRUE
+5000
+3427 - Valid. One common synonym, suchthat-cl UsesS, pattern-cl while
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Uses(s, v) pattern w(v, _)
+TRUE
+5000
+3428 - Valid. One common synonym, suchthat-cl UsesS, pattern-cl if
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Uses(s, v) pattern ifs(v, _, _)
+TRUE
+5000
+3429 - Valid. One common synonym, suchthat-cl UsesP, pattern-cl assign
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Uses(proc, v) pattern a(v, _)
+TRUE
+5000
+3430 - Valid. One common synonym, suchthat-cl UsesP, pattern-cl while
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Uses(proc, v) pattern w(v, _)
+TRUE
+5000
+3431 - Valid. One common synonym, suchthat-cl UsesP, pattern-cl if
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Uses(proc, v) pattern ifs(v, _, _)
+TRUE
+5000
+3432 - Valid. One common synonym, suchthat-cl ModifiesS, pattern-cl assign
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Modifies(s, v) pattern a(v, _)
+TRUE
+5000
+3433 - Valid. One common synonym, suchthat-cl ModifiesS, pattern-cl while
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Modifies(s, v) pattern w(v, _)
+TRUE
+5000
+3434 - Valid. One common synonym, suchthat-cl ModifiesS, pattern-cl if
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Modifies(s, v) pattern ifs(v, _, _)
+TRUE
+5000
+3435 - Valid. One common synonym, suchthat-cl ModifiesP, pattern-cl assign
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Modifies(proc, v) pattern a(v, _)
+TRUE
+5000
+3436 - Valid. One common synonym, suchthat-cl ModifiesP, pattern-cl while
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Modifies(proc, v) pattern w(v, _)
+TRUE
+5000
+3437 - Valid. One common synonym, suchthat-cl ModifiesP, pattern-cl if
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Modifies(proc, v) pattern ifs(v, _, _)
+TRUE
+5000
+3438 - Valid. At least one common synonym, suchthat-cl Follows, suchthat-cl Follows, with-cl random, pattern-cl random
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2, s3; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Follows(s1, s2) and Follows(s2, s3) with s1.stmt# = 57 pattern ifs(v, _, _)
+TRUE
+5000
+3439 - Valid. At least one common synonym, suchthat-cl Follows, suchthat-cl Follows*, with-cl random, pattern-cl random
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2, s3; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Follows(s1, s2) and Follows*(s2, s3) with s1.stmt# = 57 pattern ifs(v, _, _)
+TRUE
+5000
+3440 - Valid. At least one common synonym, suchthat-cl Follows, suchthat-cl Parent, with-cl random, pattern-cl random
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2, s3; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Follows(s1, s2) and Parent(s2, s3) with s1.stmt# = 55 pattern ifs(v, _, _)
+TRUE
+5000
+3441 - Valid. At least one common synonym, suchthat-cl Follows, suchthat-cl Parent*, with-cl random, pattern-cl random
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2, s3; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Follows(s1, s2) and Parent*(s2, s3) with s1.stmt# = 5 pattern ifs(v, _, _)
+TRUE
+5000
+3442 - Valid. At least one common synonym, suchthat-cl Follows, suchthat-cl UsesS, with-cl random, pattern-cl random
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Follows(s1, s2) and Uses(s1, v) with s1.stmt# = 5 pattern a(v, _)
+TRUE
+5000
+3443 - Valid. At least one common synonym, suchthat-cl Follows, suchthat-cl UsesP, with-cl random, pattern-cl random
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2, s3; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Follows(s1, s2) and Uses(proc, v) with proc.procName = "expression" pattern a(v, _)
+TRUE
+5000
+3444 - Valid. At least one common synonym, suchthat-cl Follows, suchthat-cl ModifiesS, with-cl random, pattern-cl random
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Follows(s1, s2) and Modifies(s1, v) with s1.stmt# = 5 pattern a(v, _)
+TRUE
+5000
+3445 - Valid. At least one common synonym, suchthat-cl Follows, suchthat-cl ModifiesP, with-cl random, pattern-cl random
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Follows(s1, s2) and Modifies(proc, v) with proc.procName = "expression" pattern a(v, _)
+TRUE
+5000
+3446 - Valid. At least one common synonym, suchthat-cl Follows, suchthat-cl Calls, with-cl random, pattern-cl random
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Follows(s1, s2) and Calls(proc1, proc2) with proc1.procName = "nesting" pattern ifs(v, _, _)
+TRUE
+5000
+3447 - Valid. At least one common synonym, suchthat-cl Follows, suchthat-cl Calls*, with-cl random, pattern-cl random
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Follows(s1, s2) and Calls*(proc1, proc2) with proc1.procName = "nesting" pattern ifs(v, _, _)
+TRUE
+5000
+3448 - Valid. At least one common synonym, suchthat-cl Follows, suchthat-cl Next, with-cl random, pattern-cl random
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n1, n2;
+Select BOOLEAN such that Follows(s1, s2) and Next(n1, n2) with s1.stmt# = 5 pattern ifs(v, _, _)
+TRUE
+5000
+3449 - Valid. At least one common synonym, suchthat-cl Follows*, suchthat-cl Follows*, with-cl random, pattern-cl random
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2, s3; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Follows*(s1, s2) and Follows*(s2, s3) with s1.stmt# = 5 pattern w(v, _)
+TRUE
+5000
+3450 - Valid. At least one common synonym, suchthat-cl Follows*, suchthat-cl Parent, with-cl random, pattern-cl random
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2, s3; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Follows*(s1, s2) and Parent(s2, s3) with s1.stmt# = 5 pattern w(v, _)
+TRUE
+5000
+3451 - Valid. At least one common synonym, suchthat-cl Follows*, suchthat-cl Parent*, with-cl random, pattern-cl random
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2, s3; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Follows*(s1, s2) and Parent*(s2, s3) with s1.stmt# = 5 pattern w(v, _)
+TRUE
+5000
+3452 - Valid. At least one common synonym, suchthat-cl Follows*, suchthat-cl UsesS, with-cl random, pattern-cl random
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Follows*(s1, s2) and Uses(s1, v) with s1.stmt# = 5 pattern a(v, _)
+TRUE
+5000
+3453 - Valid. At least one common synonym, suchthat-cl Follows*, suchthat-cl UsesP, with-cl random, pattern-cl random
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Follows*(s1, s2) and Uses(proc, v) with proc.procName = "expression" pattern a(v, _)
+TRUE
+5000
+3454 - Valid. At least one common synonym, suchthat-cl Follows*, suchthat-cl ModifiesS, with-cl random, pattern-cl random
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Follows*(s1, s2) and Modifies(s1, v) with s1.stmt# = 5 pattern a(v, _)
+TRUE
+5000
+3455 - Valid. At least one common synonym, suchthat-cl Follows*, suchthat-cl ModifiesP, with-cl random, pattern-cl random
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Follows*(s1, s2) and Modifies(proc, v) with proc.procName = "expression" pattern a(v, _)
+TRUE
+5000
+3456 - Valid. At least one common synonym, suchthat-cl Follows*, suchthat-cl Calls, with-cl random, pattern-cl random
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Follows*(s1, s2) and Calls(proc1, proc2) with proc1.procName = "nesting" pattern w(v, _)
+TRUE
+5000
+3457 - Valid. At least one common synonym, suchthat-cl Follows*, suchthat-cl Calls*, with-cl random, pattern-cl random
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Follows*(s1, s2) and Calls*(proc1, proc2) with proc1.procName = "nesting" pattern w(v, _)
+TRUE
+5000
+3458 - Valid. At least one common synonym, suchthat-cl Follows*, suchthat-cl Next, with-cl random, pattern-cl random
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n1, n2;
+Select BOOLEAN such that Follows*(s1, s2) and Next(n1, n2) with s1.stmt# = 5 pattern w(v, _)
+TRUE
+5000
+3459 - Valid. At least one common synonym, suchthat-cl Parent, suchthat-cl Parent, with-cl random, pattern-cl random
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2, s3; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Parent(s1, s2) and Parent(s2, s3) with s1.stmt# = 6 pattern ifs(v, _, _)
+TRUE
+5000
+3460 - Valid. At least one common synonym, suchthat-cl Parent, suchthat-cl Parent*, with-cl random, pattern-cl random
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2, s3; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Parent(s1, s2) and Parent*(s2, s3) with s1.stmt# = 6 pattern ifs(v, _, _)
+TRUE
+5000
+3461 - Valid. At least one common synonym, suchthat-cl Parent, suchthat-cl UsesS, with-cl random, pattern-cl random
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Parent(s1, s2) and Uses(s1, v) with s1.stmt# = 6 pattern a(v, _)
+TRUE
+5000
+3462 - Valid. At least one common synonym, suchthat-cl Parent, suchthat-cl UsesP, with-cl random, pattern-cl random
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Parent(s1, s2) and Uses(proc, v) with proc.procName = "expression" pattern a(v, _)
+TRUE
+5000
+3463 - Valid. At least one common synonym, suchthat-cl Parent, suchthat-cl ModifiesS, with-cl random, pattern-cl random
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Parent(s1, s2) and Modifies(s1, v) with s1.stmt# = 6 pattern a(v, _)
+TRUE
+5000
+3464 - Valid. At least one common synonym, suchthat-cl Parent, suchthat-cl ModifiesP, with-cl random, pattern-cl random
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Parent(s1, s2) and Modifies(proc, v) with proc.procName = "expression" pattern a(v, _)
+TRUE
+5000
+3465 - Valid. At least one common synonym, suchthat-cl Parent, suchthat-cl Calls, with-cl random, pattern-cl random
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Parent(s1, s2) and Calls(proc1, proc2) with proc1.procName = "nesting" pattern a(v, _)
+TRUE
+5000
+3466 - Valid. At least one common synonym, suchthat-cl Parent, suchthat-cl Calls*, with-cl random, pattern-cl random
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Parent(s1, s2) and Calls*(proc1, proc2) with proc1.procName = "nesting" pattern a(v, _)
+TRUE
+5000
+3467 - Valid. At least one common synonym, suchthat-cl Parent, suchthat-cl Next, with-cl random, pattern-cl random
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n1, n2;
+Select BOOLEAN such that Parent(s1, s2) and Next(n1, n2) with s1.stmt# = 6 pattern ifs(v, _, _)
+TRUE
+5000
+3468 - Valid. At least one common synonym, suchthat-cl Parent*, suchthat-cl Parent*, with-cl random, pattern-cl random
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2, s3; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Parent*(s1, s2) and Parent*(s2, s3) with s1.stmt# = 6 pattern ifs(v, _, _)
+TRUE
+5000
+3469 - Valid. At least one common synonym, suchthat-cl Parent*, suchthat-cl UsesS, with-cl random, pattern-cl random
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Parent*(s1, s2) and Uses(s1, v) with s1.stmt# = 6 pattern a(v, _)
+TRUE
+5000
+3470 - Valid. At least one common synonym, suchthat-cl Parent*, suchthat-cl UsesP, with-cl random, pattern-cl random
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Parent*(s1, s2) and Uses(proc, v) with proc.procName = "expression" pattern a(v, _)
+TRUE
+5000
+3471 - Valid. At least one common synonym, suchthat-cl Parent*, suchthat-cl ModifiesS, with-cl random, pattern-cl random
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Parent*(s1, s2) and Modifies(s1, v) with s1.stmt# = 6 pattern a(v, _)
+TRUE
+5000
+3472 - Valid. At least one common synonym, suchthat-cl Parent*, suchthat-cl ModifiesP, with-cl random, pattern-cl random
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Parent*(s1, s2) and Modifies(proc, v) with proc.procName = "expression" pattern a(v, _)
+TRUE
+5000
+3473 - Valid. At least one common synonym, suchthat-cl Parent*, suchthat-cl Calls, with-cl random, pattern-cl random
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Parent*(s1, s2) and Calls(proc1, proc2) with proc1.procName = "nesting" pattern a(v, _)
+TRUE
+5000
+3474 - Valid. At least one common synonym, suchthat-cl Parent*, suchthat-cl Calls*, with-cl random, pattern-cl random
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Parent*(s1, s2) and Calls*(proc1, proc2) with proc1.procName = "nesting" pattern a(v, _)
+TRUE
+5000
+3475 - Valid. At least one common synonym, suchthat-cl Parent*, suchthat-cl Next, with-cl random, pattern-cl random
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n1, n2;
+Select BOOLEAN such that Parent*(s1, s2) and Next(n1, n2) with s1.stmt# = 6 pattern ifs(v, _, _)
+TRUE
+5000
+3476 - Valid. At least one common synonym, suchthat-cl UsesS, suchthat-cl UsesS, with-cl random, pattern-cl random
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Uses(s1, v) and Uses(s2, v) with v.varName = "cc" pattern a(v, _)
+TRUE
+5000
+3477 - Valid. At least one common synonym, suchthat-cl UsesS, suchthat-cl UsesP, with-cl random, pattern-cl random
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+TIMEOUT Select BOOLEAN such that Uses(s, v) and Uses(proc, v) with proc.procName = "expression" pattern a(v, _)
+TIMEOUT TRUE
+5000
+3478 - Valid. At least one common synonym, suchthat-cl UsesS, suchthat-cl ModifiesS, with-cl random, pattern-cl random
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Uses(s, v) and Modifies(s, v) with v.varName = "cc" pattern a(v, _)
+TRUE
+5000
+3479 - Valid. At least one common synonym, suchthat-cl UsesS, suchthat-cl ModifiesP, with-cl random, pattern-cl random
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+TIMEOUT Select BOOLEAN such that Uses(s, v) and Modifies(proc, v) with proc.procName = "expression" pattern a(v, _)
+TIMEOUT TRUE
+5000
+3480 - Valid. At least one common synonym, suchthat-cl UsesS, suchthat-cl Calls, with-cl random, pattern-cl random
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Uses(s, v) and Calls(proc1, proc2) with proc1.procName = "nesting" pattern a(v, _)
+TRUE
+5000
+3481 - Valid. At least one common synonym, suchthat-cl UsesS, suchthat-cl Calls*, with-cl random, pattern-cl random
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Uses(s, v) and Calls*(proc1, proc2) with proc1.procName = "nesting" pattern a(v, _)
+TRUE
+5000
+3482 - Valid. At least one common synonym, suchthat-cl UsesS, suchthat-cl Next, with-cl random, pattern-cl random
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select BOOLEAN such that Uses(s, v) and Next(n1, n2) with v.varName = "cc" pattern a(v, _)
+TRUE
+5000
+3483 - Valid. At least one common synonym, suchthat-cl UsesP, suchthat-cl UsesP, with-cl random, pattern-cl random
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Uses(proc1, v) and Uses(proc2, v) with proc1.procName = "expression" pattern a(v, _)
+TRUE
+5000
+3484 - Valid. At least one common synonym, suchthat-cl UsesP, suchthat-cl ModifiesS, with-cl random, pattern-cl random
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Uses(proc, v) and Modifies(s, v) with v.varName = "cc" pattern a(v, _)
+TRUE
+5000
+3485 - Valid. At least one common synonym, suchthat-cl UsesP, suchthat-cl ModifiesP, with-cl random, pattern-cl random
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Uses(proc, v) and Modifies(proc, v) with proc.procName = "expression" pattern a(v, _)
+TRUE
+5000
+3486 - Valid. At least one common synonym, suchthat-cl UsesP, suchthat-cl Calls, with-cl random, pattern-cl random
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Uses(proc1, v) and Calls(proc1, proc2) with proc1.procName = "nesting" pattern a(v, _)
+TRUE
+5000
+3487 - Valid. At least one common synonym, suchthat-cl UsesP, suchthat-cl Calls*, with-cl random, pattern-cl random
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Uses(proc1, v) and Calls*(proc1, proc2) with proc1.procName = "nesting" pattern a(v, _)
+TRUE
+5000
+3488 - Valid. At least one common synonym, suchthat-cl UsesP, suchthat-cl Next, with-cl random, pattern-cl random
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select BOOLEAN such that Uses(proc, v) and Next(n1, n2) with v.varName = "cc" pattern a(v, _)
+TRUE
+5000
+3489 - Valid. At least one common synonym, suchthat-cl ModifiesS, suchthat-cl ModifiesS, with-cl random, pattern-cl random
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Modifies(s1, v) and Modifies(s2, v) with v.varName = "cc" pattern a(v, _)
+TRUE
+5000
+3490 - Valid. At least one common synonym, suchthat-cl ModifiesS, suchthat-cl ModifiesP, with-cl random, pattern-cl random
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Modifies(s, v) and Modifies(proc, v) with proc.procName = "expression" pattern a(v, _)
+TRUE
+5000
+3491 - Valid. At least one common synonym, suchthat-cl ModifiesS, suchthat-cl Calls, with-cl random, pattern-cl random
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Modifies(s, v) and Calls(proc1, proc2) with proc1.procName = "nesting" pattern a(v, _)
+TRUE
+5000
+3492 - Valid. At least one common synonym, suchthat-cl ModifiesS, suchthat-cl Calls*, with-cl random, pattern-cl random
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Modifies(s, v) and Calls*(proc1, proc2) with proc1.procName = "nesting" pattern a(v, _)
+TRUE
+5000
+3493 - Valid. At least one common synonym, suchthat-cl ModifiesS, suchthat-cl Next, with-cl random, pattern-cl random
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select BOOLEAN such that Modifies(s, v) and Next(n1, n2) with v.varName = "cc" pattern a(v, _)
+TRUE
+5000
+3494 - Valid. At least one common synonym, suchthat-cl ModifiesP, suchthat-cl ModifiesP, with-cl random, pattern-cl random
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Modifies(proc1, v) and Modifies(proc2, v) with v.varName = "cc" pattern a(v, _)
+TRUE
+5000
+3495 - Valid. At least one common synonym, suchthat-cl ModifiesP, suchthat-cl Calls, with-cl random, pattern-cl random
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Modifies(proc1, v) and Calls(proc1, proc2) with proc1.procName = "nesting" pattern a(v, _)
+TRUE
+5000
+3496 - Valid. At least one common synonym, suchthat-cl ModifiesP, suchthat-cl Calls*, with-cl random, pattern-cl random
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Modifies(proc1, v) and Calls*(proc1, proc2) with proc1.procName = "nesting" pattern a(v, _)
+TRUE
+5000
+3497 - Valid. At least one common synonym, suchthat-cl ModifiesP, suchthat-cl Next, with-cl random, pattern-cl random
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select BOOLEAN such that Modifies(proc, v) and Next(n1, n2) with proc.procName = "expression" pattern a(v, _)
+TRUE
+5000
+3498 - Valid. At least one common synonym, suchthat-cl Calls, suchthat-cl Calls, with-cl random, pattern-cl random
+procedure proc1, proc2, proc3; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls(proc1, proc2) and Calls(proc2, proc3) with proc1.procName = "nesting" pattern a(v, _)
+TRUE
+5000
+3499 - Valid. At least one common synonym, suchthat-cl Calls, suchthat-cl Calls*, with-cl random, pattern-cl random
+procedure proc1, proc2, proc3; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls(proc1, proc2) and Calls*(proc2, proc3) with proc1.procName = "nesting" pattern a(v, _)
+TRUE
+5000
+3500 - Valid. At least one common synonym, suchthat-cl Calls, suchthat-cl Next, with-cl random, pattern-cl random
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select BOOLEAN such that Calls(proc1, proc2) and Next(n1, n2) with proc1.procName = "nesting" pattern a(v, _)
+TRUE
+5000
+3501 - Valid. At least one common synonym, suchthat-cl Calls*, suchthat-cl Calls*, with-cl random, pattern-cl random
+procedure proc1, proc2, proc3; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Calls*(proc1, proc2) and Calls*(proc2, proc3) with proc1.procName = "nesting" pattern a(v, _)
+TRUE
+5000
+3502 - Valid. At least one common synonym, suchthat-cl Calls*, suchthat-cl Next, with-cl random, pattern-cl random
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select BOOLEAN such that Calls*(proc1, proc2) and Next(n1, n2) with proc1.procName = "nesting" pattern a(v, _)
+TRUE
+5000
+3503 - Valid. At least one common synonym, suchthat-cl Next, suchthat-cl Next, with-cl random, pattern-cl random
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2, n3;
+Select BOOLEAN such that Next(n1, n2) and Next(n2, n3) with n1 = 1 pattern a(v, _)
+TRUE
+5000
+3504 - Valid. One common synonym, pattern-cl assign, pattern-cl while, pattern-cl if
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN pattern a(v, _) pattern w(v, _) pattern ifs(v, _, _)
+TRUE
+5000

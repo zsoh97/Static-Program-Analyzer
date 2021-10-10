@@ -1,0 +1,105 @@
+3001 - Valid. Pattern, 1 constant, select while
+while w;
+Select w pattern w("aa",_)
+3
+5000
+3002 - Valid. Pattern, 2 constants, select if
+if ifs;
+Select ifs pattern ifs("aa",_,_)
+1, 10
+5000
+3003 - Valid. Pattern, 2 constants, select assign
+assign a1; assign a2;
+Select a1 pattern a2("bb","aa")
+4, 5, 7, 11, 12
+5000
+3004 - Valid. Pattern, 1 constant 1 constant wildcard, select assign
+assign a;
+Select a pattern a("aa", _"aa"_)
+4
+5000
+3005 - Valid. Pattern, 1 synonym 1 constant wildcard, select assign
+assign a; variable v;
+Select a pattern a(v, _"aa"_)
+4, 5, 7, 11
+5000
+3006 - Valid. Pattern, 1 synonym 1 constant wildcard, select while
+assign a; variable v; while w;
+Select w pattern a(v, _"aa"_)
+3, 8
+5000
+3007 - Valid. Pattern, 1 synonym 1 constant wildcard, select if
+assign a; variable v; if ifs;
+Select ifs pattern a(v, _"aa"_)
+1, 10
+5000
+3008 - Valid. Pattern, 1 synonym 1 constant wildcard, select variable
+assign a; variable v;
+Select v pattern a(v, _"aa"_)
+aa, bb, dd
+5000
+3009 - Valid. Pattern, 1 wildcard 1 constant wildcard, select assign
+assign a; variable v;
+Select a pattern a(_, _"aa"_)
+4, 5, 7, 11
+5000
+3010 - Valid. Pattern, 1 wildcard 1 constant wildcard, select while
+assign a; variable v; while w;
+Select w pattern a(_, _"aa"_)
+3, 8
+5000
+3011 - Valid. Pattern, 1 wildcard 1 constant wildcard, select if
+assign a; variable v; if ifs;
+Select ifs pattern a(_, _"aa"_)
+1, 10
+5000
+3012 - Valid. Pattern, 1 wildcard 1 constant wildcard, select variable
+assign a; variable v;
+Select v pattern a(_, _"aa"_)
+aa, bb, cc, dd
+5000
+3013 - Valid. Spacing between expr and underscores
+assign a; print p; variable v;
+Select p pattern a(v, _  "aa"  _)
+6, 9
+5000
+3014 - Valid. Pattern, 2 wildcards
+assign a; variable v;
+Select v pattern a(_, _)
+aa, bb, cc, dd
+5000
+3015 - Invalid. Pattern, underscore within inverted commas
+assign a;
+Select a pattern a(_, "_33_")
+none
+5000
+3016 - Invalid. Pattern, expr ends with operator
+assign a;
+Select a pattern a(_, _"33-"_)
+none
+5000
+3017 - Invalid. Pattern, expr is empty
+assign a;
+Select a pattern a(_, _"-33"_)
+none
+5000
+3018 - Invalid. Pattern, empty expr
+assign a;
+Select a pattern a(_, _""_)
+
+5000
+3019 - Invalid. Pattern, nonexistant constant
+assign a;
+Select a pattern a(_, _"nonexistant"_)
+none
+5000
+3020 - Invalid. Pattern, double underscores on right
+assign a;
+Select a pattern a(_, __)
+none
+5000
+3021 - Invalid. Pattern, double underscores on left
+assign a;
+Select a pattern a(__, _)
+none
+5000

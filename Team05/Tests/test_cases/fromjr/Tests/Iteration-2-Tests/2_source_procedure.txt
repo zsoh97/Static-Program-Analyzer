@@ -1,0 +1,98 @@
+procedure proc1 {
+  ff = 00;
+  read gg;
+  while (ff != aa) {
+    dd = 00;
+    while (dd >= aa) {
+      dd = dd / 33;
+      if (gg < 22) then {
+        while (ff < dd) {
+          if (ff < dd / 55) then {
+            call proc6;
+          } else {
+            call proc4; 
+	        }
+        }
+        while (dd > ff) {
+          print gg;
+        }
+        aa = 22;
+      } else {
+        dd = 33 + dd;
+      }
+      aa = bb * dd;
+    }
+    ff = ff + 33;
+  }
+  print ff;
+}
+
+procedure proc2 {
+  read aa;
+  aa = aa + bb;
+  call proc4;
+  while (ee >= 00) {
+    if (aa > 00) then {
+      cc = cc % bb;
+    } else {
+      cc = cc / dd;
+    }
+    call proc1;
+  }
+  ee = 66;
+}
+
+procedure proc3 {
+  cc = ee + 44;
+  if (cc > 44) then {
+    call proc1;
+  } else {
+    call proc2;
+  }
+  print bb;
+}
+
+procedure proc4 {
+  if (cc % 55 == 00) then {
+    call proc7;
+  } else {
+    call proc8;
+  }
+}
+
+procedure proc5 {
+  call proc3;
+  if (aa == 33) then {
+    call proc7;
+    aa = cc + 22;
+  } else {
+    call proc1;
+    ee = 00;
+  }
+  cc = 00;
+}
+
+procedure proc6 {
+  print cc;
+  while (cc == 22) {
+    call proc7;
+    ff = ee * 55;
+  }
+  call proc4;
+}
+
+procedure proc7 {
+  cc = 33 % (cc + 44) * 55;
+  call proc8;
+}
+
+procedure proc8 {
+  print aa;
+  read aa;
+  print bb;
+  read bb;
+  print cc;
+  read cc;
+  print dd;
+  read dd;
+}

@@ -1,0 +1,25 @@
+1 - Modifies with 2 known parameters
+stmt s;
+Select s such that Modifies(1,"x")
+1,2,3,4,5,6,7,8,9,10,11,12
+5000
+2 - Modifies with left known and right unknown
+variable v;
+Select v such that Modifies(1, v)
+x
+5000
+3 - Modifies with left unknown and right known
+stmt s;
+Select s such that Modifies(s, "x")
+1, 4, 5, 10
+5000
+4 - Modifies with both unknown
+stmt s;
+Select s such that Modifies(s, _)
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11
+5000
+5 - Incorrect Modifies
+stmt s;
+Select s such that Modifies(s, "a")
+none
+5000

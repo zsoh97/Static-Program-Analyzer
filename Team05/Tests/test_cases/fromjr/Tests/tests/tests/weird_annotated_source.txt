@@ -1,0 +1,17 @@
+  procedure  weird   {
+1   read sE1sfun   ;
+2   read x;
+3   read y;
+4   print     ananascafe;
+5    ananascafe = ananascafe + 2512 * 5 + (ananascafe - 513)/9;
+6  x = y + x - (y * x) / y % 5;
+7   read bzbzbee;
+8   if(bzbzbee==ananascafe   )then{
+9     read w223hyyyIsThisSOFun;
+    } else {
+10    print iLovecs3203YaY;
+    }
+11  print ananascafe;
+12  print Ananascafe;
+13  print ananascafe;
+}

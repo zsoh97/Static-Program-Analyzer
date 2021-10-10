@@ -1,0 +1,57 @@
+<?xml-stylesheet type="text/xsl" href="analysis.xsl"?>
+<test_results>
+<info>
+<name>tests</name><parsing_time_taken>73.000000</parsing_time_taken>
+</info>
+<queries>
+<query>
+<id ReturnTuple="1" Uses="1" SuchThat="1" CondNum="3" RelNum="1" comment="Uses for simple procedure">1</id><querystr><![CDATA[variable v; Select v such that Uses ("zeke", v)]]></querystr>
+<stuans>yayilovetesting</stuans>
+<correct>yayilovetesting</correct>
+<time_taken>50.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Uses="1" SuchThat="1" CondNum="3" RelNum="1" comment="Uses for procedure which calls another procedure">2</id><querystr><![CDATA[variable v; Select v such that Uses ("chengyi", v)]]></querystr>
+<stuans>twooneohsix,wowrollbot,yes</stuans>
+<correct>yes,twooneohsix,wowrollbot</correct>
+<time_taken>58.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Uses="1" SuchThat="1" CondNum="3" RelNum="1" comment="Uses for complicated procedure">3</id><querystr><![CDATA[variable v; Select v such that Uses ("GroupProject", v)]]></querystr>
+<stuans>D,Y,fish,glubglubglub,h,hoe,immature,jeun,meeting,members,money,o,report,standard,testing,twooneohsix,u,woof,wowrollbot,x,y,yayilovetesting,yes</stuans>
+<correct>members,y,glubglubglub,o,D,Y,immature,jeun,hoe,money,x,h,u,yayilovetesting,yes,twooneohsix,wowrollbot,woof,fish,meeting,report,testing,standard</correct>
+<time_taken>56.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Uses="1" SuchThat="1" CondNum="3" RelNum="1" comment="Uses simple procedure used by variable">4</id><querystr><![CDATA[procedure p; Select p such that Uses (p, "c")]]></querystr>
+<stuans>Example</stuans>
+<correct>Example</correct>
+<time_taken>47.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Uses="1" SuchThat="1" CondNum="3" RelNum="1" comment="Uses procedure used by variable">5</id><querystr><![CDATA[procedure p; Select p such that Uses (p, "glubglubglub")]]></querystr>
+<stuans>Example,GroupProject,Smelly,fishy</stuans>
+<correct>fishy,Smelly,GroupProject,Example</correct>
+<time_taken>49.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Uses="1" SuchThat="1" CondNum="3" RelNum="1" comment="Uses procedure used by variable complicated">6</id><querystr><![CDATA[procedure p; Select p such that Uses (p, "yes")]]></querystr>
+<stuans>Example,GroupProject,Smelly,bel,chengyi,eeter,grant,jeunhoe</stuans>
+<correct>chengyi,eeter,jeunhoe,bel,grant,Smelly,GroupProject,Example</correct>
+<time_taken>55.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" Uses="1" SuchThat="1" CondNum="4" RelNum="1" comment="Uses variable _">7</id><querystr><![CDATA[procedure p; Select p such that Uses (p, _)]]></querystr>
+<stuans>Example,zeke,chengyi,seventhmember,Smelly,GroupProject,doggie,fishy,grant,bel,jeunhoe,eeter</stuans>
+<correct>Example,GroupProject,Smelly,doggie,fishy,grant,bel,jeunhoe,eeter,zeke,chengyi,seventhmember</correct>
+<time_taken>55.000000</time_taken>
+<passed/>
+</query>
+</queries>
+</test_results>

@@ -1,0 +1,93 @@
+procedure ABC {
+
+    call GHI;
+
+    this = that;
+
+    b = 2;
+
+    while ((b == 2) && (!(b >= 2))) {
+
+        if ( !(((c + 1) <= 3) || (c != 3)))  then {
+
+            call DEF;
+
+        } else {
+
+            eew =  (c + 1 ) / 2;
+
+            wee = eew + 1;
+
+            eew = wee;
+
+        }
+
+    }
+
+    that = this;
+
+}
+
+
+
+procedure DEF {
+
+    if (((f > 6) && (f < 6)) || (f >= 6)) then {
+
+ b = 5;
+
+        good = 7;
+
+        good = good;
+
+        horrible = (4 + 6) * dog - 2 / good;
+
+        while ((h > 8) && ((h < 8) || (h >= 8))) {
+
+            call GHI;
+
+        }
+
+    } else {
+
+ b = 2;
+
+        read justiceleague;
+
+        print justiceleague;
+
+    }
+
+    call GHI;
+
+}
+
+
+
+procedure GHI {
+
+    if (!(((l > 12) && (l < 12)) || (l >= 12))) then {
+
+        me =        pattern * (13 -  spaces * operator    );
+
+    } else {
+
+        you = 14;
+
+ oops = 20;
+
+        while (((oops > 10) && (oops < 15)) || (!(oops >= 15))){
+
+            read p;
+
+     oops = oops - 2;
+
+        }
+
+        quick = pattern * (16 + spaces * operator);
+
+    }
+
+    red = x / (((((17 * 17)))));
+
+}

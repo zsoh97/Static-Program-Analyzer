@@ -1,0 +1,2 @@
+Invoke-Expression -Command "autotester.exe ./Iteration3/special/special_source.txt ./Iteration3/special/special_queries.txt ./Iteration3/special/special.xml"
+Invoke-Expression -Command "autotester.exe ./Iteration3/special/test1_source.txt ./Iteration3/special/test1_queries.txt ./Iteration3/special/test1.xml"

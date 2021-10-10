@@ -1,0 +1,110 @@
+1 - Follows with first parameter _
+stmt s;
+Select s such that Follows (_, s)
+2, 3, 4, 6, 9, 10, 11, 12
+5000
+2 - Follows* with first parameter _
+stmt s;
+Select s such that Follows* (_, s)
+2, 3, 4, 6, 9, 10, 11, 12
+5000
+3 - Follows with second parameter _
+stmt s;
+Select s such that Follows (s, _)
+1, 2, 3, 4, 5, 6, 9, 10
+5000
+4 - Follows* with second parameter _
+stmt s;
+Select s such that Follows* (s, _)
+1, 2, 3, 4, 5, 6, 9, 10
+5000
+5 - Follows with both parameters _
+stmt s;
+Select s such that Follows (_, _)
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12
+5000
+6 - Follows* with both parameters _
+stmt s;
+Select s such that Follows* (_, _)
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12
+5000
+7 - Follows with both parameters having same synonym
+stmt s;
+Select s such that Follows (s, s)
+none
+5000
+8 - Follows* with both parameters having same synonym
+stmt s;
+Select s such that Follows* (s, s)
+none
+5000
+9 - Follows forward
+stmt s;
+Select s such that Follows (4, s)
+12
+5000
+10 - Follows* forward
+stmt s;
+Select s such that Follows* (4, s)
+12
+5000
+11 - Follows inverse
+stmt s;
+Select s such that Follows (s, 9)
+6
+5000
+12 - Follows* inverse
+stmt s;
+Select s such that Follows* (s, 9)
+5, 6
+5000
+13 - Follows with both numbers
+stmt s;
+Select s such that Follows (6, 9)
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12
+5000
+14 - Follows* with both numbers
+stmt s;
+Select s such that Follows* (5, 11)
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12
+5000
+15 - Follows with more than number of statements
+stmt s;
+Select s such that Follows (13, s)
+none
+5000
+16 - Follows* with more than number of statements
+stmt s;
+Select s such that Follows* (13, s)
+none
+5000
+17 - Follows with first more than second
+stmt s;
+Select s such that Follows (7, 6)
+none
+5000
+18 - Follows* with first more than second
+stmt s;
+Select s such that Follows* (7, 6)
+none
+5000
+19 - Follows with differing nesting
+stmt s;
+Select s such that Follows (6, 7)
+none
+5000
+20 - Follows* with differing nesting
+stmt s;
+Select s such that Follows* (6, 7)
+none
+5000
+21 - Follows with numbers in then and else
+stmt s;
+Select s such that Follows (7, 8)
+none
+5000
+22 - Follows* with numbers in then and else
+stmt s;
+Select s such that Follows* (7, 8)
+none
+5000

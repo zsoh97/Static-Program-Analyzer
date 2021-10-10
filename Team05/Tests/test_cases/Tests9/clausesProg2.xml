@@ -1,0 +1,432 @@
+<?xml-stylesheet type="text/xsl" href="analysis.xsl"?>
+<test_results>
+<info>
+<name>tests9</name><parsing_time_taken>424.000000</parsing_time_taken>
+</info>
+<queries>
+<query>
+<id ReturnBoolean="1" UnnamedVar="1" CondNum="2" RelNum="0" comment="BOOLEAN without clause">1</id><querystr><![CDATA[stmt s; variable v; procedure p; prog_line q; Select BOOLEAN]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>101.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" UnnamedVar="1" With="1" CondNum="3" RelNum="0" comment="BOOLEAN with invalid stmt# clause, without synonym">2</id><querystr><![CDATA[stmt s; variable v; procedure p; prog_line q; Select BOOLEAN with stmt# = 2]]></querystr>
+<stuans></stuans>
+<correct>FALSE</correct>
+<time_taken>84.000000</time_taken>
+<failed>
+<missing>FALSE</missing>
+<additional></additional>
+<summary>
+<expected>1</expected>
+<matched>0</matched>
+<missing>1</missing>
+<additional>0</additional>
+</summary>
+</failed>
+</query>
+<query>
+<id ReturnTuple="1" Followsstar="2" Parentstar="1" Uses="1" SuchThat="1" With="1" CondNum="7" RelNum="4" comment="Query with group of clauses not related to select synonym">3</id><querystr><![CDATA[stmt s, s1, s2; variable v, v1; procedure p; assign a, a1, a2; Select s2 such that Follows*(1, s) and Follows*(s, s1) and Parent*(s1, a2) and Uses(s1, v) with v.varName = "call"]]></querystr>
+<stuans>1,10,11,12,13,14,15,16,17,18,19,2,20,21,22,23,24,25,26,27,28,29,3,30,31,32,33,34,35,36,37,38,39,4,40,41,42,43,44,45,46,47,48,49,5,50,51,52,53,54,55,56,57,58,59,6,60,61,62,63,64,65,66,67,68,69,7,70,71,72,73,74,75,76,77,78,79,8,80,81,82,83,84,85,86,87,88,89,9,90,91,92,93,94,95,96,97,98,99</stuans>
+<correct>1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99</correct>
+<time_taken>364.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Followsstar="2" Parentstar="1" Uses="1" SuchThat="1" With="1" CondNum="7" RelNum="4" comment="Tuples query with group of clauses related to the select synonym">4</id><querystr><![CDATA[stmt s, s1, s2; variable v, v1; procedure p; assign a, a1; Select <s, s1> such that Follows*(1, s) and Follows*(s, s1) and Parent*(s1, a) and Uses(s1, v) with v.varName = "call"]]></querystr>
+<stuans>48 55,49 55,50 55,51 55,52 55,53 55,54 55</stuans>
+<correct>48 55,49 55,50 55,51 55,52 55,53 55,54 55</correct>
+<time_taken>247.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Followsstar="2" Parentstar="1" Uses="1" SuchThat="1" With="1" CondNum="7" RelNum="4" comment="BOOLEAN Query with group of clauses related to the select synonym">5</id><querystr><![CDATA[stmt s, s1, s2; variable v, v1; procedure p; assign a, a1; Select BOOLEAN such that Follows*(1, s) and Follows*(s, s1) and Parent*(s1, a) and Uses(s1, v) with v.varName = "call"]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>232.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Follows="1" Followsstar="1" Parentstar="1" Uses="1" SuchThat="1" CondNum="6" RelNum="4" comment="BOOLEAN Query with group of clauses with no synonym">6</id><querystr><![CDATA[stmt s, s1, s2; variable v, v1; procedure p; assign a, a1; Select BOOLEAN such that Follows(48, 49) and Follows*(1, 48) and Parent*(55, 57) and Uses(57, "call")]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>85.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Parent="2" Parentstar="2" UnnamedVar="1" Pattern="1" SuchThat="1" With="1" CondNum="9" RelNum="4" comment="Query group is All Parent">12</id><querystr><![CDATA[stmt s, s1, s2; variable v, v1; assign a, a1; procedure p, q; if ifs; while w; read r; print pr, pr1; call c; Select c such that Parent*(ifs, w) and Parent*(w, s) and Parent(ifs, c) and Parent(w, pr) pattern w ("d", _) with pr.varName = "d"]]></querystr>
+<stuans>12</stuans>
+<correct>12</correct>
+<time_taken>93.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Modifies="3" SuchThat="1" CondNum="5" RelNum="3" comment="Query group is All Modifies">14</id><querystr><![CDATA[stmt s, s1, s2; variable v, v1; assign a, a1; procedure p, q; if ifs; while w; read r; print pr, pr1; call c; Select s such that Modifies(s, "a") and Modifies(s, "read") and Modifies(s, "call")]]></querystr>
+<stuans>1,11,18,19,20,21,62,63,64,69,7,70,77,78,79,80,84,88,9,91</stuans>
+<correct>1,7,9,11,18,19,20,21,62,63,64,69,70,77,78,79,80,84,88,91</correct>
+<time_taken>93.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Uses="3" SuchThat="1" CondNum="5" RelNum="3" comment="Query group is All Uses">15</id><querystr><![CDATA[stmt s, s1, s2; variable v, v1; assign a, a1; procedure p, q; if ifs; while w; read r; print pr, pr1; call c; Select s such that Uses(s, "a") and Uses(s, "read") and Uses(s, "call")]]></querystr>
+<stuans>1,11,18,19,20,21,22,24,62,63,64,69,7,70,77,78,79,80,84,88,9,91</stuans>
+<correct>1,7,9,11,18,19,20,21,22,24,62,63,64,69,70,77,78,79,80,84,88,91</correct>
+<time_taken>94.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" Followsstar="1" Nextstar="1" Parent="1" SuchThat="1" CondNum="6" RelNum="4" comment="Tuples Query, Scatter clauses with no synonyms around the query">16</id><querystr><![CDATA[stmt s, s1, s2; variable v, v1; assign a, a1; procedure p, q; if ifs; while w; read r; print pr, pr1; call c; Select <s, r> such that Follows*(1, 48) and Calls("call", "procedure") and Next*(1, s) and Parent(s, r)]]></querystr>
+<stuans>9 10,24 28,2 3,24 30,24 32,21 38,20 39,18 40,55 58</stuans>
+<correct>2 3,9 10,18 40,20 39,21 38,24 28,24 30,24 32,55 58</correct>
+<time_taken>98.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" Parent="1" UnnamedVar="1" Uses="2" Pattern="1" SuchThat="1" CondNum="8" RelNum="4" comment="Query Uses">17</id><querystr><![CDATA[stmt s, s1, s2; variable v, v1; assign a, a1; procedure p, q; if ifs; while w; read r; print pr, pr1; call c; Select <p,v> such that Uses(p,v) and Calls(p,q) and Uses(q,v) and Parent(w,a) pattern a(v, _)]]></querystr>
+<stuans>anotherProc read,call read,moreProc read,procedure2 read,raymarch read,anotherProc call,call call,moreProc call,procedure2 call,procedure4 call,procedure5 call,raymarch call,anotherProc print,call print,moreProc print,procedure print,procedure2 print,raymarch print,anotherProc a,call a,moreProc a,procedure2 a,raymarch a</stuans>
+<correct>call a,raymarch a,moreProc a,moreProc print,call read,procedure2 a,anotherProc a,raymarch read,procedure2 call,moreProc read,anotherProc read,procedure2 read,call print,raymarch print,anotherProc print,call call,procedure2 print,procedure print,raymarch call,moreProc call,anotherProc call,procedure4 call,procedure5 call</correct>
+<time_taken>484.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" Parent="1" UnnamedVar="1" Uses="2" Pattern="1" SuchThat="1" CondNum="8" RelNum="4" comment="Query Uses">18</id><querystr><![CDATA[stmt s, s1, s2; variable v, v1; assign a, a1; procedure p, q; if ifs; while w; read r; print pr, pr1; call c; Select <p,v> such that Uses(p,v) and Calls(p,q) and Uses(q,v) and Parent(w,a) pattern a(v, _)]]></querystr>
+<stuans>anotherProc read,call read,moreProc read,procedure2 read,raymarch read,anotherProc call,call call,moreProc call,procedure2 call,procedure4 call,procedure5 call,raymarch call,anotherProc print,call print,moreProc print,procedure print,procedure2 print,raymarch print,anotherProc a,call a,moreProc a,procedure2 a,raymarch a</stuans>
+<correct>call a,raymarch a,moreProc a,moreProc print,call read,procedure2 a,anotherProc a,raymarch read,procedure2 call,moreProc read,anotherProc read,procedure2 read,call print,raymarch print,anotherProc print,call call,procedure2 print,procedure print,raymarch call,moreProc call,anotherProc call,procedure4 call,procedure5 call</correct>
+<time_taken>493.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" Followsstar="1" Modifies="1" Nextstar="1" Uses="2" SuchThat="1" With="1" CondNum="9" RelNum="6" comment="Query with members grouped together, procName = varName">20</id><querystr><![CDATA[stmt s, s1, s2; variable v, v1; assign a, a1; procedure p, q; if ifs; while w; read r; print pr, pr1; call c; Select s such that Modifies(s, "read") and Follows*(1, s) and Next*(s, ifs) and Uses(ifs, v) and Uses(p, v) and Calls(p, q) with q.procName = v.varName]]></querystr>
+<stuans>49</stuans>
+<correct>49</correct>
+<time_taken>154.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" Followsstar="1" Modifies="1" Nextstar="1" Uses="2" SuchThat="1" With="1" CondNum="9" RelNum="6" comment="Query with members scattered, procName = varName">21</id><querystr><![CDATA[stmt s, s1, s2; variable v, v1; assign a, a1; procedure p, q; if ifs; while w; read r; print pr, pr1; call c; Select s such that Uses(p, v) and Modifies(s, "read") and Uses(ifs, v) and Follows*(1, s) and Calls(p, q) and Next*(s, ifs) with q.procName = v.varName]]></querystr>
+<stuans>49</stuans>
+<correct>49</correct>
+<time_taken>152.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Parentstar="1" Uses="2" SuchThat="1" With="1" CondNum="6" RelNum="3" comment="Query with members grouped together">22</id><querystr><![CDATA[stmt s, s1, s2; variable v, v1; assign a, a1; procedure p, q; if ifs; while w; read r; print pr, pr1; call c; Select s such that Parent*(s, pr) and Uses(pr, v) and Uses(a, v) with v.varName = "d"]]></querystr>
+<stuans>1,11,13,7,9,46</stuans>
+<correct>1,7,9,11,13,46</correct>
+<time_taken>90.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Parentstar="1" Uses="2" SuchThat="1" With="1" CondNum="6" RelNum="3" comment="Query with members scattered">23</id><querystr><![CDATA[stmt s, s1, s2; variable v, v1; assign a, a1; procedure p, q; if ifs; while w; read r; print pr, pr1; call c; Select s such that Uses(a, v) and Parent*(s, pr) and Uses(pr, v) with v.varName = "d"]]></querystr>
+<stuans>1,11,13,7,9,46</stuans>
+<correct>1,7,9,11,13,46</correct>
+<time_taken>94.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" Followsstar="1" Nextstar="1" Parent="1" SuchThat="3" With="1" CondNum="9" RelNum="4" comment="Query testing interchangeability of and and specific clauses part 1">24</id><querystr><![CDATA[stmt s, s1, s2; variable v, v1; assign a, a1; procedure p, q; if ifs; while w; read r; print pr, pr1; call c; Select s such that Follows*(1, 48) such that Calls("call", q) with q.procName = "procedure" such that Next*(1, s) and Parent(s, r)]]></querystr>
+<stuans>9,24,2,21,20,18,55</stuans>
+<correct>2,9,18,20,21,24,55</correct>
+<time_taken>96.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" Followsstar="1" Nextstar="1" Parent="1" SuchThat="2" With="1" CondNum="8" RelNum="4" comment="Query testing interchangeability of and and specific clauses part 2">25</id><querystr><![CDATA[stmt s, s1, s2; variable v, v1; assign a, a1; procedure p, q; if ifs; while w; read r; print pr, pr1; call c; Select s such that Follows*(1, 48) and Calls("call", q) with q.procName = "procedure" such that Next*(1, s) and Parent(s, r)]]></querystr>
+<stuans>9,24,2,21,20,18,55</stuans>
+<correct>2,9,18,20,21,24,55</correct>
+<time_taken>95.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" SuchThat="1" With="1" CondNum="4" RelNum="1" comment="Tuple, procedure ifs, with clause">26</id><querystr><![CDATA[stmt s, s1, s2; variable v, v1; assign a, a1; procedure p, q; if ifs; while w; read r; print pr, pr1; call c; Select <p, ifs> such that Next*(1, ifs) with "procedure" = p.procName]]></querystr>
+<stuans>procedure 11,procedure 18,procedure 22,procedure 55,procedure 9</stuans>
+<correct>procedure 9,procedure 11,procedure 18,procedure 22,procedure 55</correct>
+<time_taken>87.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" CondNum="1" RelNum="0" comment="Tuple">27</id><querystr><![CDATA[stmt s, s1, s2; variable v, v1; assign a, a1; procedure p, q; if ifs; while w; read r; print pr, pr1; call c; Select <p, p, p>]]></querystr>
+<stuans>anotherProc anotherProc anotherProc,call call call,finalFinalProc finalFinalProc finalFinalProc,finalProc finalProc finalProc,lastProc lastProc lastProc,moreProc moreProc moreProc,procedure procedure procedure,procedure2 procedure2 procedure2,procedure3 procedure3 procedure3,procedure4 procedure4 procedure4,procedure5 procedure5 procedure5,raymarch raymarch raymarch</stuans>
+<correct>procedure procedure procedure,raymarch raymarch raymarch,moreProc moreProc moreProc,anotherProc anotherProc anotherProc,procedure2 procedure2 procedure2,call call call,procedure3 procedure3 procedure3,procedure4 procedure4 procedure4,procedure5 procedure5 procedure5,lastProc lastProc lastProc,finalProc finalProc finalProc,finalFinalProc finalFinalProc finalFinalProc</correct>
+<time_taken>93.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" With="1" CondNum="2" RelNum="0" comment="Tuple">28</id><querystr><![CDATA[stmt s, s1, s2; variable v, v1; assign a, a1; procedure p, q; if ifs; while w; read r; print pr, pr1; call c; Select <p, p, p> with "call" = p.procName]]></querystr>
+<stuans>call call call</stuans>
+<correct>call call call</correct>
+<time_taken>85.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Uses="1" SuchThat="1" With="1" CondNum="4" RelNum="1" comment="Tuple, multiple with clauses">29</id><querystr><![CDATA[stmt s, s1, s2; variable v, v1; assign a, a1; procedure p, q; if ifs; while w; read r; print pr, pr1; call c; Select <p, p, p> such that Uses(p, v) with p.procName = v.varName]]></querystr>
+<stuans>anotherProc anotherProc anotherProc,call call call,moreProc moreProc moreProc,procedure procedure procedure</stuans>
+<correct>call call call,procedure procedure procedure,moreProc moreProc moreProc,anotherProc anotherProc anotherProc</correct>
+<time_taken>87.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" Follows="1" Uses="1" SuchThat="2" With="2" CondNum="8" RelNum="3" comment="Tuple, lengthy clauses">30</id><querystr><![CDATA[stmt s, s1, s2; variable v, v1; assign a, a1; procedure p, q; if ifs; while w; read r; print pr, pr1; call c; Select <s, s1, v, p, q> such that Follows(s, s1) and Uses(s1, v) with v.varName = p.procName such that Calls(p, q) with "procedure3" = q.procName]]></querystr>
+<stuans>54 55 procedure procedure procedure3,61 62 procedure procedure procedure3,62 63 procedure procedure procedure3,68 69 procedure procedure procedure3,74 77 procedure procedure procedure3,77 79 procedure procedure procedure3,79 80 procedure procedure procedure3,81 84 procedure procedure procedure3,87 88 procedure procedure procedure3,90 91 procedure procedure procedure3</stuans>
+<correct>54 55 procedure procedure procedure3,61 62 procedure procedure procedure3,62 63 procedure procedure procedure3,68 69 procedure procedure procedure3,74 77 procedure procedure procedure3,77 79 procedure procedure procedure3,79 80 procedure procedure procedure3,81 84 procedure procedure procedure3,87 88 procedure procedure procedure3,90 91 procedure procedure procedure3</correct>
+<time_taken>99.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Uses="1" SuchThat="1" With="1" CondNum="4" RelNum="1" comment="Tuple, all variables in stmt">31</id><querystr><![CDATA[stmt s, s1, s2; variable v, v1; assign a, a1; procedure p, q; if ifs; while w; read r; print pr, pr1; call c; Select <s, v> such that Uses(s, v) with 45 = s.stmt#]]></querystr>
+<stuans>45 a,45 d,45 f,45 h,45 i,45 j,45 k,45 m</stuans>
+<correct>45 j,45 h,45 i,45 k,45 f,45 a,45 d,45 m</correct>
+<time_taken>85.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" SuchThat="1" CondNum="3" RelNum="1" comment="Simple Affects">32</id><querystr><![CDATA[stmt s, s1, s2; variable v, v1; assign a, a1; procedure p, q; if ifs; while w; read r; print pr, pr1; call c; Select s such that Affects(s, a)]]></querystr>
+<stuans>43,27,25,33,44,45,53</stuans>
+<correct>1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99</correct>
+<time_taken>106.000000</time_taken>
+<failed>
+<missing>1,10,11,12,13,14,15,16,17,18,19,2,20,21,22,23,24,26,28,29,3,30,31,32,34,35,36,37,38,39,4,40,41,42,46,47,48,49,5,50,51,52,54,55,56,57,58,59,6,60,61,62,63,64,65,66,67,68,69,7,70,71,72,73,74,75,76,77,78,79,8,80,81,82,83,84,85,86,87,88,89,9,90,91,92,93,94,95,96,97,98,99</missing>
+<additional></additional>
+<summary>
+<expected>99</expected>
+<matched>7</matched>
+<missing>92</missing>
+<additional>0</additional>
+</summary>
+</failed>
+</query>
+<query>
+<id ReturnTuple="1" Affectsstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="Simple Affects*">33</id><querystr><![CDATA[stmt s, s1, s2; variable v, v1; assign a, a1; procedure p, q; if ifs; while w; read r; print pr, pr1; call c; Select s such that Affects*(s, a)]]></querystr>
+<stuans>43,25,27,33,44,45,53</stuans>
+<correct>1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99</correct>
+<time_taken>101.000000</time_taken>
+<failed>
+<missing>1,10,11,12,13,14,15,16,17,18,19,2,20,21,22,23,24,26,28,29,3,30,31,32,34,35,36,37,38,39,4,40,41,42,46,47,48,49,5,50,51,52,54,55,56,57,58,59,6,60,61,62,63,64,65,66,67,68,69,7,70,71,72,73,74,75,76,77,78,79,8,80,81,82,83,84,85,86,87,88,89,9,90,91,92,93,94,95,96,97,98,99</missing>
+<additional></additional>
+<summary>
+<expected>99</expected>
+<matched>7</matched>
+<missing>92</missing>
+<additional>0</additional>
+</summary>
+</failed>
+</query>
+<query>
+<id ReturnTuple="1" Affectsstar="1" Modifies="1" Parentstar="2" Uses="1" SuchThat="1" CondNum="7" RelNum="5" comment="Affects* Lengthy Query">34</id><querystr><![CDATA[stmt s, s1, s2; variable v, v1; assign a, a1; procedure p, q; if ifs; while w; read r; print pr, pr1; call c; Select <s, a> such that Affects*(s, a) and Parent*(ifs, w) and Uses(a, v) and Parent*(w, s) and Modifies(s, v)]]></querystr>
+<stuans>43 17,27 25,25 27,33 36,43 42,43 45,44 45,45 45,43 51,27 57,27 59</stuans>
+<correct>33 36</correct>
+<time_taken>889.000000</time_taken>
+<failed>
+<missing></missing>
+<additional>25 27,27 25,27 57,27 59,43 17,43 42,43 45,43 51,44 45,45 45</additional>
+<summary>
+<expected>1</expected>
+<matched>1</matched>
+<missing>0</missing>
+<additional>10</additional>
+</summary>
+</failed>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" Followsstar="1" Modifies="1" Nextstar="1" Uses="2" SuchThat="1" With="1" CondNum="9" RelNum="6" comment="Stress Test Tuple Query with members scattered, procName = varName">35</id><querystr><![CDATA[stmt s, s1, s2; variable v, v1; assign a, a1; procedure p, q; if ifs; while w; read r; print pr, pr1; call c; Select <p, v, s, ifs, q> such that Uses(p, v) and Modifies(s, "read") and Uses(ifs, v) and Follows*(1, s) and Calls(p, q) and Next*(s, ifs) with q.procName = v.varName]]></querystr>
+<stuans>call procedure 49 55 procedure,procedure procedure3 49 55 procedure3,procedure2 call 49 55 call</stuans>
+<correct>procedure2 call 49 55 call,call procedure 49 55 procedure,procedure procedure3 49 55 procedure3</correct>
+<time_taken>158.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" Followsstar="1" Modifies="1" Nextstar="1" Uses="2" SuchThat="1" With="1" CondNum="9" RelNum="6" comment="Stress Test Tuple Query with members scattered, procName = varName, one unused synonym in select">36</id><querystr><![CDATA[stmt s, s1, s2; variable v, v1; assign a, a1; procedure p, q; if ifs; while w; read r; print pr, pr1; call c; Select <p, v, s, ifs, q, w> such that Uses(p, v) and Modifies(s, "read") and Uses(ifs, v) and Follows*(1, s) and Calls(p, q) and Next*(s, ifs) with q.procName = v.varName]]></querystr>
+<stuans>call procedure 49 55 procedure 13,call procedure 49 55 procedure 15,call procedure 49 55 procedure 19,call procedure 49 55 procedure 2,call procedure 49 55 procedure 20,call procedure 49 55 procedure 21,call procedure 49 55 procedure 24,call procedure 49 55 procedure 4,call procedure 49 55 procedure 46,call procedure 49 55 procedure 63,call procedure 49 55 procedure 7,call procedure 49 55 procedure 77,procedure procedure3 49 55 procedure3 13,procedure procedure3 49 55 procedure3 15,procedure procedure3 49 55 procedure3 19,procedure procedure3 49 55 procedure3 2,procedure procedure3 49 55 procedure3 20,procedure procedure3 49 55 procedure3 21,procedure procedure3 49 55 procedure3 24,procedure procedure3 49 55 procedure3 4,procedure procedure3 49 55 procedure3 46,procedure procedure3 49 55 procedure3 63,procedure procedure3 49 55 procedure3 7,procedure procedure3 49 55 procedure3 77,procedure2 call 49 55 call 13,procedure2 call 49 55 call 15,procedure2 call 49 55 call 19,procedure2 call 49 55 call 2,procedure2 call 49 55 call 20,procedure2 call 49 55 call 21,procedure2 call 49 55 call 24,procedure2 call 49 55 call 4,procedure2 call 49 55 call 46,procedure2 call 49 55 call 63,procedure2 call 49 55 call 7,procedure2 call 49 55 call 77</stuans>
+<correct>procedure2 call 49 55 call 2,procedure2 call 49 55 call 4,procedure2 call 49 55 call 7,procedure2 call 49 55 call 13,procedure2 call 49 55 call 15,procedure2 call 49 55 call 19,procedure2 call 49 55 call 20,procedure2 call 49 55 call 21,procedure2 call 49 55 call 24,procedure2 call 49 55 call 46,procedure2 call 49 55 call 63,procedure2 call 49 55 call 77,call procedure 49 55 procedure 2,call procedure 49 55 procedure 4,call procedure 49 55 procedure 7,call procedure 49 55 procedure 13,call procedure 49 55 procedure 15,call procedure 49 55 procedure 19,call procedure 49 55 procedure 20,call procedure 49 55 procedure 21,call procedure 49 55 procedure 24,call procedure 49 55 procedure 46,call procedure 49 55 procedure 63,call procedure 49 55 procedure 77,procedure procedure3 49 55 procedure3 2,procedure procedure3 49 55 procedure3 4,procedure procedure3 49 55 procedure3 7,procedure procedure3 49 55 procedure3 13,procedure procedure3 49 55 procedure3 15,procedure procedure3 49 55 procedure3 19,procedure procedure3 49 55 procedure3 20,procedure procedure3 49 55 procedure3 21,procedure procedure3 49 55 procedure3 24,procedure procedure3 49 55 procedure3 46,procedure procedure3 49 55 procedure3 63,procedure procedure3 49 55 procedure3 77</correct>
+<time_taken>158.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" With="1" CondNum="2" RelNum="0" comment="Tuple with reference">37</id><querystr><![CDATA[stmt s, s1, s2; variable v, v1; assign a, a1; procedure p, q; if ifs; while w; read r; print pr, pr1; call c; Select <p, p.procName, p> with "call" = p.procName]]></querystr>
+<stuans>call call call</stuans>
+<correct>call call call</correct>
+<time_taken>81.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Followsstar="2" Parentstar="1" Uses="1" SuchThat="1" With="1" CondNum="7" RelNum="4" comment="Tuples with references">38</id><querystr><![CDATA[stmt s, s1, s2; variable v, v1; procedure p; assign a, a1; Select < s.stmt# ,  s1 > such that Follows*(1, s) and Follows*(s, s1) and Parent*(s1, a) and Uses(s1, v) with v.varName = "call"]]></querystr>
+<stuans>48 55,49 55,50 55,51 55,52 55,53 55,54 55</stuans>
+<correct>48 55,49 55,50 55,51 55,52 55,53 55,54 55</correct>
+<time_taken>241.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Followsstar="2" Parentstar="1" Uses="1" SuchThat="1" With="1" CondNum="7" RelNum="4" comment="Single synonym with reference">39</id><querystr><![CDATA[stmt s, s1, s2; variable v, v1; procedure p; assign a, a1, a2; Select s2.stmt# such that Follows*(1, s) and Follows*(s, s1) and Parent*(s1, a2) and Uses(s1, v) with v.varName = "call"]]></querystr>
+<stuans>1,10,11,12,13,14,15,16,17,18,19,2,20,21,22,23,24,25,26,27,28,29,3,30,31,32,33,34,35,36,37,38,39,4,40,41,42,43,44,45,46,47,48,49,5,50,51,52,53,54,55,56,57,58,59,6,60,61,62,63,64,65,66,67,68,69,7,70,71,72,73,74,75,76,77,78,79,8,80,81,82,83,84,85,86,87,88,89,9,90,91,92,93,94,95,96,97,98,99</stuans>
+<correct>1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99</correct>
+<time_taken>362.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Parentstar="1" Uses="2" SuchThat="1" With="1" CondNum="6" RelNum="3" comment="Single synonym with reference">40</id><querystr><![CDATA[stmt s, s1, s2; variable v, v1; assign a, a1; procedure p, q; if ifs; while w; read r; print pr, pr1; call c; Select v.varName such that Parent*(s, pr) and Uses(pr, v) and Uses(a, v) with v.varName = "d"]]></querystr>
+<stuans>d</stuans>
+<correct>d</correct>
+<time_taken>97.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Parentstar="1" Uses="2" SuchThat="1" With="1" CondNum="6" RelNum="3" comment="tuple with references">41</id><querystr><![CDATA[stmt s, s1, s2; variable v, v1; assign a, a1; procedure p, q; if ifs; while w; read r; print pr, pr1; call c; Select < v.varName , s.stmt# > such that Parent*(s, pr) and Uses(pr, v) and Uses(a, v) with v.varName = "d"]]></querystr>
+<stuans>d 1,d 11,d 13,d 7,d 9,d 46</stuans>
+<correct>d 1,d 7,d 9,d 11,d 13,d 46</correct>
+<time_taken>105.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Parentstar="1" Uses="2" SuchThat="1" With="1" CondNum="6" RelNum="3" comment="Semantic error in parent relation">42</id><querystr><![CDATA[stmt s, s1, s2; variable v, v1; assign a, a1; procedure p, q; if ifs; while w; read r; print pr, pr1; call c; Select < v.varName , s.stmt# > such that Parent*(v, pr) and Uses(pr, v) and Uses(a, v) with v.varName = "d"]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>88.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Parentstar="1" Uses="2" SuchThat="1" With="1" CondNum="6" RelNum="3" comment="Select BOOLEAN with semantic error in parent relation">43</id><querystr><![CDATA[stmt s, s1, s2; variable v, v1; assign a, a1; procedure p, q; if ifs; while w; read r; print pr, pr1; call c; Select BOOLEAN such that Parent*(v, pr) and Uses(pr, v) and Uses(a, v) with v.varName = "d"]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>90.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Parentstar="1" Uses="2" SuchThat="1" With="1" CondNum="6" RelNum="3" comment="Select BOOLEAN with semantic error in with clause">44</id><querystr><![CDATA[stmt s, s1, s2; variable v, v1; assign a, a1; procedure p, q; if ifs; while w; read r; print pr, pr1; call c; Select BOOLEAN such that Parent*(v, pr) and Uses(pr, v) and Uses(a, v) with v.procName = "d"]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>87.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Parentstar="1" Uses="2" SuchThat="1" With="1" CondNum="6" RelNum="3" comment="Select BOOLEAN with semantic error in with clause">45</id><querystr><![CDATA[stmt s, s1, s2; variable v, v1; assign a, a1; procedure p, q; if ifs; while w; read r; print pr, pr1; call c; Select BOOLEAN such that Parent*(s, pr) and Uses(pr, v) and Uses(a, v) with "blah" = "d"]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>90.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Parentstar="1" Uses="2" SuchThat="1" With="1" CondNum="6" RelNum="3" comment="Select BOOLEAN with semantic error in with clause">46</id><querystr><![CDATA[stmt s, s1, s2; variable v, v1; assign a, a1; procedure p, q; if ifs; while w; read r; print pr, pr1; call c; Select BOOLEAN such that Parent*(s, pr) and Uses(pr, v) and Uses(a, v) with "blah" = "d"]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>99.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Parentstar="1" Uses="2" SuchThat="1" With="1" CondNum="6" RelNum="3" comment="Select BOOLEAN with semantic error with non-matching data types in with clause">47</id><querystr><![CDATA[stmt s, s1, s2; variable v, v1; assign a, a1; procedure p, q; if ifs; while w; read r; print pr, pr1; call c; Select BOOLEAN such that Parent*(s, pr) and Uses(pr, v) and Uses(a, v) with 93 = "d"]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>95.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Calls="1" Parent="1" UnnamedVar="1" Uses="2" Pattern="1" SuchThat="1" CondNum="8" RelNum="4" comment="Select BOOLEAN with semantic error in pattern clause">48</id><querystr><![CDATA[stmt s, s1, s2; variable v, v1; assign a, a1; procedure p, q; if ifs; while w; read r; print pr, pr1; call c; Select BOOLEAN such that Uses(p,v) and Calls(p,q) and Uses(q,v) and Parent(w,a) pattern a(c, _)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>83.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Calls="1" Parent="1" UnnamedVar="1" Uses="2" Pattern="1" SuchThat="1" CondNum="8" RelNum="4" comment="Select BOOLEAN with semantic error in pattern clause">49</id><querystr><![CDATA[stmt s, s1, s2; variable v, v1; assign a, a1; procedure p, q; if ifs; while w; read r; print pr, pr1; call c; Select BOOLEAN such that Uses(p,v) and Calls(p,q) and Uses(q,v) and Parent(w,a) pattern p(v, _)]]></querystr>
+<stuans></stuans>
+<correct>FALSE</correct>
+<time_taken>87.000000</time_taken>
+<failed>
+<missing>FALSE</missing>
+<additional></additional>
+<summary>
+<expected>1</expected>
+<matched>0</matched>
+<missing>1</missing>
+<additional>0</additional>
+</summary>
+</failed>
+</query>
+<query>
+<id ReturnBoolean="1" Calls="1" Parent="1" UnnamedVar="1" Uses="2" Pattern="1" SuchThat="1" CondNum="8" RelNum="4" comment="Select BOOLEAN with semantic error in suchThat clause">50</id><querystr><![CDATA[stmt s, s1, s2; variable v, v1; assign a, a1; procedure p, q; if ifs; while w; read r; print pr, pr1; call c; Select BOOLEAN such that Uses(p,v) and Calls(a,q) and Uses(q,v) and Parent(w,a) pattern p(v, _)]]></querystr>
+<stuans></stuans>
+<correct>FALSE</correct>
+<time_taken>85.000000</time_taken>
+<failed>
+<missing>FALSE</missing>
+<additional></additional>
+<summary>
+<expected>1</expected>
+<matched>0</matched>
+<missing>1</missing>
+<additional>0</additional>
+</summary>
+</failed>
+</query>
+<query>
+<id ReturnBoolean="1" Calls="1" Parent="1" UnnamedVar="1" Uses="2" Pattern="1" SuchThat="1" CondNum="8" RelNum="4" comment="Select BOOLEAN with semantic error in suchThat clause">51</id><querystr><![CDATA[stmt s, s1, s2; variable v, v1; assign a, a1; procedure p, q; if ifs; while w; read r; print pr, pr1; call c; Select BOOLEAN such that Uses(p,v) and Calls(p,q) and Uses(v1,v) and Parent(w,a) pattern p(v, _)]]></querystr>
+<stuans></stuans>
+<correct>FALSE</correct>
+<time_taken>87.000000</time_taken>
+<failed>
+<missing>FALSE</missing>
+<additional></additional>
+<summary>
+<expected>1</expected>
+<matched>0</matched>
+<missing>1</missing>
+<additional>0</additional>
+</summary>
+</failed>
+</query>
+<query>
+<id ReturnBoolean="1" Calls="1" Parent="1" UnnamedVar="1" Uses="2" Pattern="1" SuchThat="1" CondNum="8" RelNum="4" comment="Select BOOLEAN with semantic error in suchThat parent clause with same inputs">52</id><querystr><![CDATA[stmt s, s1, s2; variable v, v1; assign a, a1; procedure p, q; if ifs; while w; read r; print pr, pr1; call c; Select BOOLEAN such that Uses(p,v) and Calls(p,q) and Uses(v1,v) and Parent(w,w) pattern p(v, _)]]></querystr>
+<stuans></stuans>
+<correct>FALSE</correct>
+<time_taken>87.000000</time_taken>
+<failed>
+<missing>FALSE</missing>
+<additional></additional>
+<summary>
+<expected>1</expected>
+<matched>0</matched>
+<missing>1</missing>
+<additional>0</additional>
+</summary>
+</failed>
+</query>
+<query>
+<id ReturnBoolean="1" Modifies="3" SuchThat="1" CondNum="5" RelNum="3" comment="synonym declared as BOOLEAN">53</id><querystr><![CDATA[stmt BOOLEAN, s1, s2; variable v, v1; assign a, a1; procedure p, q; if ifs; while w; read r; print pr, pr1; call c; Select BOOLEAN such that Modifies(BOOLEAN, "a") and Modifies(BOOLEAN, "read") and Modifies(BOOLEAN, "call")]]></querystr>
+<stuans>1,11,18,19,20,21,62,63,64,69,7,70,77,78,79,80,84,88,9,91</stuans>
+<correct>1,7,9,11,18,19,20,21,62,63,64,69,70,77,78,79,80,84,88,91</correct>
+<time_taken>95.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Calls="1" Parent="1" UnnamedVar="1" Uses="2" Pattern="1" SuchThat="1" CondNum="8" RelNum="4" comment="Select BOOLEAN with semantic error undeclared synonym">54</id><querystr><![CDATA[stmt s, s1, s2; variable v1; assign a, a1; procedure p, q; if ifs; while w; read r; print pr, pr1; call c; Select BOOLEAN such that Uses(p,v) and Calls(p,q) and Uses(v1,v) and Parent(w,a) pattern p(v, _)]]></querystr>
+<stuans></stuans>
+<correct>FALSE</correct>
+<time_taken>86.000000</time_taken>
+<failed>
+<missing>FALSE</missing>
+<additional></additional>
+<summary>
+<expected>1</expected>
+<matched>0</matched>
+<missing>1</missing>
+<additional>0</additional>
+</summary>
+</failed>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" Parent="1" UnnamedVar="1" Uses="2" Pattern="1" SuchThat="1" CondNum="8" RelNum="4" comment="Select tuple with undeclared synonym">55</id><querystr><![CDATA[stmt s, s1, s2; variable v, v1; assign a, a1; procedure p, q; if ifs; while w; read r; print pr, pr1; call c; Select <    s5, s11, wr.stmt# >  such that Uses(p,v) and Calls(p,q) and Uses(v1,v) and Parent(w,a) pattern p(v, _)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>83.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" Parent="1" UnnamedVar="1" Uses="2" Pattern="1" SuchThat="1" CondNum="8" RelNum="4" comment="Select undeclared synonyms">56</id><querystr><![CDATA[stmt s, s1, s2; variable v, v1; assign a, a1; procedure p, q; if ifs; while w; read r; print pr, pr1; call c; Select    wr.stmt#   such that Uses(p,v) and Calls(p,q) and Uses(v1,v) and Parent(w,a) pattern p(v, _)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>87.000000</time_taken>
+<passed/>
+</query>
+</queries>
+</test_results>

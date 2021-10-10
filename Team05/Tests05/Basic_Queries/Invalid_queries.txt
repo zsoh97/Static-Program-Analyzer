@@ -1,0 +1,305 @@
+1 - wrong 'Select' spelling
+stmt s;
+Sel s
+none
+5000
+2 - Selecting undeclared attribute
+stmt s;
+Select s1;
+none
+5000
+3 - Wrong spelling of attribute
+stmt s; asign a;
+Select s
+none
+5000
+4 - Pattern attribute not declared
+variable v; assign a;
+Select a pattern a1(v, _)
+none
+5000
+5 - Pattern left parameter is not variable
+assign a; stmt v; variable s;
+Select a pattern a (v, _)
+none
+5000
+6 - Pattern attribute is not assign
+assign a; while w;
+Select a pattern w(_, _)
+none
+5000
+7 - Incomplete Pattern partial expression
+assign a; variable v;
+Select a pattern a (v, _"x + 1")
+none
+5000
+8 - Missing quote in Pattern partial expression
+assign a; variable v;
+Select a pattern a (v, _"x + 1_)
+none
+5000
+9 - Missing quotes in Pattern partial expression
+assign a; variable v;
+Select a pattern a (v, _x + 1_)
+none
+5000
+10 - Missing quotes in Pattern partial expression
+assign a; variable v;
+Select a pattern a (v, x + 1)
+none
+5000
+11 - Uses Clause with underscore left parameter
+variable v;
+Select v such that Uses(_, v)
+none
+5000
+12 - Uses Clause right attribute is not assigned
+variable v; stmt s;
+Select s such that Uses  (s, vv)
+none
+5000
+13 - Uses Clause right attribute is not a variable
+stmt s; assign a;
+Select a such that Uses (s, a);
+none
+5000
+14 - Incomplete Quote for Uses variable
+while w;
+Select w such that Uses(w, x")
+none
+5000
+15 - Uses variable is not a proper var_name
+stmt s;
+Select s such that Uses(s, "x*")
+none
+5000
+16 - Uses variable is not a proper var_name
+stmt s;
+Select s such that Uses(s, "x + 1")
+none
+5000
+17 - Uses variable is not a proper var_name
+stmt s;
+Select s such that Uses(s, "88abc")
+none
+5000
+18 - Modifies Clause with underscore left parameter
+variable v;
+Select v such that Modifies(_, v)
+none
+5000
+19 - Modifies Clause left attribute is not assigned
+stmt s;
+Select s such that Modifies  (sa, _)
+none
+5000
+20 - Modifies Clause right attribute is not a variable
+stmt s; assign a;
+Select a such that Modifies (s, a);
+none
+5000
+21 - Incomplete Quote for Modifies variable
+while w;
+Select w such that Modifies(w, "x)
+none
+5000
+22 - Modifies variable is not a proper var_name
+stmt s;
+Select s such that Modifies(s, "x*")
+none
+5000
+23 - Modifies variable is not a proper var_name
+stmt s;
+Select s such that Modifies(s, "x + 1")
+none
+5000
+24 - Modifies variable is not a proper var_name
+stmt s;
+Select s such that Modifies(s, "88abc")
+none
+5000
+25 - Follows contains a variable
+stmt s;
+Select s such that Follows (s, "X")
+none
+5000
+26 - Follows* contains a variable
+stmt s;
+Select s such that Follows ("var", s)
+none
+5000
+27 - Follows uses undeclared attribute stmt
+stmt s;
+Select s such that Follows(s, s1)
+none
+5000
+28 - Follows* uses undeclared attribute stmt
+stmt s;
+Select s such that Follows*(s1, s)
+none
+5000
+29 - Follows contains declared attribute that is variable
+variable s;
+Select s such that Follows (s, _)
+none
+5000
+30 - Follows* contains declared attribute that is variable
+variable s;
+Select s such that Follows* (1, s)
+none
+5000
+31 - Parent contains a variable
+stmt s;
+Select s such that Parent (s, "X")
+none
+5000
+32 - Parent* contains a variable
+stmt s;
+Select s such that Parent ("var", s)
+none
+5000
+33 - Parent uses undeclared attribute stmt
+stmt s;
+Select s such that Parent(1, s1)
+none
+5000
+34 - Parent* uses undeclared attribute stmt
+stmt s1, s2;
+Select s such that Parent*(s1, s)
+none
+5000
+35 - Parent contains declared attribute that is variable
+variable s;
+Select s such that Parent (s, _)
+none
+5000
+36 - Parent* contains declared attribute that is variable
+variable s;
+Select s such that Parent* (1, s)
+none
+5000
+37 - Variable in pattern is not proper
+assign a;
+Select a pattern a("123x", _)
+none
+5000
+38 - Variable in pattern is not proper
+assign a;
+Select a pattern a("hi!", _)
+none
+5000
+39 - Incomplete Pattern clause // not sure how it reacts
+assign a;
+Select a pattern a
+none
+5000
+40 - Incomplete Parent* Clause // not sure how it reacts
+stmt s;
+Select s such that Parent* (s,
+none
+5000
+41 - Follows clause parameter is not number
+stmt s;
+Select s such that Follows(abc, s)
+none
+5000
+42 - Parent* clause parameter is not number
+stmt s;
+Select s such that Parent* (s, 1+1)
+none
+5000
+42 - Parent clause parameter is not number
+stmt s;
+Select s such that Parent (2s, 23)
+none
+5000
+43 - Follows* Clause with negative stmt number
+stmt s;
+Select s such that Follows* (-12, s)
+none
+5000
+44 - Uses Clause with negative stmt number
+variable v;
+Select v such that Uses (-9, v)
+none
+5000
+45 - Incomplete query, no select
+stmt s; assign a; while w; if ifs; variable v;
+
+none
+5000
+46 - Extra "and" between clauses
+assign a; stmt s; variable v;
+Select s such that Uses(s, v) and pattern a (v, _)
+none
+5000
+47 - Extra "and" between clauses
+assign a; stmt s; variable v;
+Select s such that  and pattern a (v, _)  Modifies(s, v)
+none
+5000
+48 - Incomplete query, no attributes declared
+
+Select s
+none
+5000
+49 - Incomplete Relationship
+stmt s;
+Select s Follows(10, s
+none
+5000
+50 - Extra Parameter in Relationship // not sure how it reacts but should be invalid
+stmt s1, s2;
+Select s1 such that Parent(8, s1, s2)
+none
+5000
+51 - Missing start bracket for one of the clauses // not sure how it reacts but should be invalid
+assign a; variable v;
+Select v pattern a v, _) such that Modifies    (a, v)
+none
+5000
+52 - Missing start bracket for one of the clauses // not sure how it reacts but should be invalid
+assign a; variable v;
+Select v pattern a (v, _ such that Modifies    (a, v)
+none
+5000
+53 - Using number as select attribute
+stmt s;
+Select 2 such that Follows* (s, 7)
+none
+5000
+54 - Non capitalised first letter of clause (F must be caps according to wiki)
+stmt s;
+Select s such that follows* (s, 7)
+none
+5000
+55 - Pattern clause is capitalised for first letter (pattern must not have caps according to wiki)
+assign a;
+Select a Pattern a (_, "x")
+none
+5000
+56 - Select is not capitalised for first letter
+if ifss;
+select ifss;
+none
+5000
+57 - Uses with read stmt
+variable v; read re;
+Select v such that Uses (re, v)
+none
+5000
+58 - Modifies with print stmt
+print pn;
+Select pn such that Modifies    (pn, _)
+none
+5000
+59 - incorrect initialisation of attributes
+assign s; var v;
+Select s
+none
+5000
+60 - incorrect initialisation of attributes
+assign a; stmt; variable v;
+Select v;
+none
+5000

@@ -1,0 +1,80 @@
+1 - Testing tuples and multiple synonyms and multiple and (next and parent)
+stmt s1; while w; assign a;
+Select s1 such that Parent(w, s1) and Next(s1, w) and Next(a, s1)
+19
+5000
+2 - Testing tuples with triangular Calls relationship
+procedure p1, p2, p3;
+Select <p1, p2, p3> such that Calls(p1, p2) and Calls(p2, p3) and Calls(p1, p3)
+procedure proc1 proc2, procedure proc1 proc3, procedure proc1 proc4, procedure proc1 proc5, procedure proc2 proc4, proc1 proc2 proc4, proc1 proc2 proc6, proc1 proc3 proc6
+5000
+3 - Testing multiple common synonyms and multiple and (next and parent)
+stmt s1; while w;
+Select s1 such that Parent(w, s1) and Next(s1, w) and Next(w, s1)
+29, 62, 63, 64
+5000
+4 - Testing multiple ands and whether parent of call stmts are updated with Uses
+while w; if ifs;
+Select ifs such that Parent(w, ifs) and Uses(ifs, "seventyfour")
+3, 7, 24, 36, 74
+5000
+5 - Testing multiple ands and whether parent of call stmts are updated with Modifies
+while w; if ifs;
+Select ifs such that Parent(w, ifs) and Modifies(ifs, "seventyeight")
+3, 7, 24, 36, 74
+5000
+6 - Testing combination of all such that and pattern clauses that are currently supported (excluding star)
+procedure p; variable v1, v2; assign a; while w; stmt s;
+Select a such that Calls("proc2", p) and Modifies(p, v1) and Uses(p, v2) and Follows(a, s) and Next*(a, a) and Parent(w, a) pattern a(v1, _)
+65
+5000
+7 - pattern in tuple with 1 common synonym
+assign a; variable v;
+Select <a, v> pattern a(_, _" 81 * 81"_) and a(v, _)
+81 eightyone, 83 eightythree, 84 eightyfour
+5000
+8 - Testing calls stmt and multiple relations
+procedure p; variable v;
+Select v such that Uses(p, v) and Modifies(p, v) and Calls("caller", p)
+if, while, read, procedure, assignment, call, print
+5000
+9 - Testing boolean and multiple synonyms and multiple and (next and parent)
+stmt s1; while w; assign a;
+Select BOOLEAN such that Parent(w, s1) and Next(s1, w) and Next(a, s1)
+TRUE
+5000
+10 - Testing boolean with triangular Calls relationship
+procedure p1, p2, p3;
+Select BOOLEAN such that Calls(p1, p2) and Calls(p2, p3) and Calls(p1, p3)
+TRUE
+5000
+11 - Testing multiple common synonyms and multiple and (next and parent) boolean
+stmt s1; while w;
+Select BOOLEAN such that Parent(w, s1) and Next(s1, w) and Next(w, s1)
+TRUE
+5000
+12 - Testing boolean multiple ands and whether parent of call stmts are updated with Uses
+while w; if ifs;
+Select BOOLEAN such that Parent(w, ifs) and Uses(ifs, "seventyfour")
+TRUE
+5000
+13 - Testing boolean multiple ands and whether parent of call stmts are updated with Modifies
+while w; if ifs;
+Select BOOLEAN such that Parent(w, ifs) and Modifies(ifs, "seventyeight")
+TRUE
+5000
+14 - Testing combination of all such that and pattern clauses that are currently supported (excluding star)
+procedure p; variable v1, v2; assign a; while w; stmt s;
+Select BOOLEAN such that Calls("proc2", p) and Modifies(p, v1) and Uses(p, v2) and Follows(a, s) and Next*(a, a) and Parent(w, a) pattern a(v1, _)
+TRUE
+5000
+15 - boolean pattern in tuple with 1 common synonym
+assign a; variable v;
+Select BOOLEAN pattern a(_, _" 81 * 81"_) and a(v, _)
+TRUE
+5000
+16 - Testing boolean with calls stmt and multiple relations
+procedure p; variable v;
+Select BOOLEAN such that Uses(p, v) and Modifies(p, v) and Calls("caller", p)
+TRUE
+5000

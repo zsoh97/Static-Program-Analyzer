@@ -1,0 +1,190 @@
+<?xml-stylesheet type="text/xsl" href="analysis.xsl"?>
+<test_results>
+<info>
+<name>iteration-3-tests</name><parsing_time_taken>50.000000</parsing_time_taken>
+</info>
+<queries>
+<query>
+<id ReturnBoolean="1" Nextstar="1" UnnamedVar="2" Pattern="1" SuchThat="1" With="1" CondNum="7" RelNum="1" comment="Valid. result-cl BOOLEAN, suchthat-cl Next*, pattern-cl while, with-cl procedure.procName">1105</id><querystr><![CDATA[procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2; Select BOOLEAN such that Next*(n1, n2) pattern w(v, _) with proc1.procName = "PR0C1"]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>74.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Nextstar="1" UnnamedVar="2" Pattern="1" SuchThat="1" With="1" CondNum="7" RelNum="1" comment="Valid. result-cl BOOLEAN, suchthat-cl Next*, pattern-cl while, with-cl call.procName">1106</id><querystr><![CDATA[procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2; Select BOOLEAN such that Next*(n1, n2) pattern w(v, _) with cl.procName = "procedure"]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>75.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Nextstar="1" UnnamedVar="2" Pattern="1" SuchThat="1" With="1" CondNum="7" RelNum="1" comment="Valid. result-cl BOOLEAN, suchthat-cl Next*, pattern-cl while, with-cl variable.varName">1107</id><querystr><![CDATA[procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2; Select BOOLEAN such that Next*(n1, n2) pattern w(v, _) with v.varName = "cc"]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>66.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Nextstar="1" UnnamedVar="2" Pattern="1" SuchThat="1" With="1" CondNum="7" RelNum="1" comment="Valid. result-cl BOOLEAN, suchthat-cl Next*, pattern-cl while, with-cl read.varName">1108</id><querystr><![CDATA[procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2; Select BOOLEAN such that Next*(n1, n2) pattern w(v, _) with r.varName = "aa"]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>66.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Nextstar="1" UnnamedVar="2" Pattern="1" SuchThat="1" With="1" CondNum="7" RelNum="1" comment="Valid. result-cl BOOLEAN, suchthat-cl Next*, pattern-cl while, with-cl print.varName">1109</id><querystr><![CDATA[procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2; Select BOOLEAN such that Next*(n1, n2) pattern w(v, _) with p.varName = "print"]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>63.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Nextstar="1" UnnamedVar="2" Pattern="1" SuchThat="1" With="1" CondNum="7" RelNum="1" comment="Valid. result-cl BOOLEAN, suchthat-cl Next*, pattern-cl while, with-cl call.varName">1110</id><querystr><![CDATA[procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2; Select BOOLEAN such that Next*(n1, n2) pattern w(v, _) with c.value = 33]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>69.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Nextstar="1" UnnamedVar="2" Pattern="1" SuchThat="1" With="1" CondNum="7" RelNum="1" comment="Valid. result-cl BOOLEAN, suchthat-cl Next*, pattern-cl while, with-cl stmt.stmt#">1111</id><querystr><![CDATA[procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2; Select BOOLEAN such that Next*(n1, n2) pattern w(v, _) with s.stmt# = 10]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>75.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Nextstar="1" UnnamedVar="2" Pattern="1" SuchThat="1" With="1" CondNum="7" RelNum="1" comment="Valid. result-cl BOOLEAN, suchthat-cl Next*, pattern-cl while, with-cl read.stmt#">1112</id><querystr><![CDATA[procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2; Select BOOLEAN such that Next*(n1, n2) pattern w(v, _) with r.stmt# = 10]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>62.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Nextstar="1" UnnamedVar="2" Pattern="1" SuchThat="1" With="1" CondNum="7" RelNum="1" comment="Valid. result-cl BOOLEAN, suchthat-cl Next*, pattern-cl while, with-cl print.stmt#">1113</id><querystr><![CDATA[procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2; Select BOOLEAN such that Next*(n1, n2) pattern w(v, _) with p.stmt# = 12]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>68.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Nextstar="1" UnnamedVar="2" Pattern="1" SuchThat="1" With="1" CondNum="7" RelNum="1" comment="Valid. result-cl BOOLEAN, suchthat-cl Next*, pattern-cl while, with-cl call.stmt#">1114</id><querystr><![CDATA[procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2; Select BOOLEAN such that Next*(n1, n2) pattern w(v, _) with cl.stmt# = 29]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>66.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Nextstar="1" UnnamedVar="2" Pattern="1" SuchThat="1" With="1" CondNum="7" RelNum="1" comment="Valid. result-cl BOOLEAN, suchthat-cl Next*, pattern-cl while, with-cl while.stmt#">1115</id><querystr><![CDATA[procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2; Select BOOLEAN such that Next*(n1, n2) pattern w(v, _) with w.stmt# = 5]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>72.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Nextstar="1" UnnamedVar="2" Pattern="1" SuchThat="1" With="1" CondNum="7" RelNum="1" comment="Valid. result-cl BOOLEAN, suchthat-cl Next*, pattern-cl while, with-cl if.stmt#">1116</id><querystr><![CDATA[procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2; Select BOOLEAN such that Next*(n1, n2) pattern w(v, _) with ifs.stmt# = 8]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>90.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Nextstar="1" UnnamedVar="2" Pattern="1" SuchThat="1" With="1" CondNum="7" RelNum="1" comment="Valid. result-cl BOOLEAN, suchthat-cl Next*, pattern-cl while, with-cl assign.stmt#">1117</id><querystr><![CDATA[procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2; Select BOOLEAN such that Next*(n1, n2) pattern w(v, _) with a.stmt# = 11]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>69.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Nextstar="1" UnnamedVar="3" Pattern="1" SuchThat="1" With="1" CondNum="8" RelNum="1" comment="Valid. result-cl BOOLEAN, suchthat-cl Next*, pattern-cl if, with-cl procedure.procName">1118</id><querystr><![CDATA[procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2; Select BOOLEAN such that Next*(n1, n2) pattern ifs(v, _, _) with proc1.procName = "PR0C1"]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>66.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Nextstar="1" UnnamedVar="3" Pattern="1" SuchThat="1" With="1" CondNum="8" RelNum="1" comment="Valid. result-cl BOOLEAN, suchthat-cl Next*, pattern-cl if, with-cl call.procName">1119</id><querystr><![CDATA[procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2; Select BOOLEAN such that Next*(n1, n2) pattern ifs(v, _, _) with cl.procName = "procedure"]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>74.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Nextstar="1" UnnamedVar="3" Pattern="1" SuchThat="1" With="1" CondNum="8" RelNum="1" comment="Valid. result-cl BOOLEAN, suchthat-cl Next*, pattern-cl if, with-cl variable.varName">1120</id><querystr><![CDATA[procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2; Select BOOLEAN such that Next*(n1, n2) pattern ifs(v, _, _) with v.varName = "aa"]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>76.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Nextstar="1" UnnamedVar="3" Pattern="1" SuchThat="1" With="1" CondNum="8" RelNum="1" comment="Valid. result-cl BOOLEAN, suchthat-cl Next*, pattern-cl if, with-cl read.varName">1121</id><querystr><![CDATA[procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2; Select BOOLEAN such that Next*(n1, n2) pattern ifs(v, _, _) with r.varName = "aa"]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>68.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Nextstar="1" UnnamedVar="3" Pattern="1" SuchThat="1" With="1" CondNum="8" RelNum="1" comment="Valid. result-cl BOOLEAN, suchthat-cl Next*, pattern-cl if, with-cl print.varName">1122</id><querystr><![CDATA[procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2; Select BOOLEAN such that Next*(n1, n2) pattern ifs(v, _, _) with p.varName = "call"]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>70.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Nextstar="1" UnnamedVar="3" Pattern="1" SuchThat="1" With="1" CondNum="8" RelNum="1" comment="Valid. result-cl BOOLEAN, suchthat-cl Next*, pattern-cl if, with-cl constant.value">1123</id><querystr><![CDATA[procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2; Select BOOLEAN such that Next*(n1, n2) pattern ifs(v, _, _) with c.value = 33]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>70.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Nextstar="1" UnnamedVar="3" Pattern="1" SuchThat="1" With="1" CondNum="8" RelNum="1" comment="Valid. result-cl BOOLEAN, suchthat-cl Next*, pattern-cl if, with-cl stmt.stmt#">1124</id><querystr><![CDATA[procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2; Select BOOLEAN such that Next*(n1, n2) pattern ifs(v, _, _) with s.stmt# = 11]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>68.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Nextstar="1" UnnamedVar="3" Pattern="1" SuchThat="1" With="1" CondNum="8" RelNum="1" comment="Valid. result-cl BOOLEAN, suchthat-cl Next*, pattern-cl if, with-cl read.stmt#">1125</id><querystr><![CDATA[procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2; Select BOOLEAN such that Next*(n1, n2) pattern ifs(v, _, _) with r.stmt# = 3]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>68.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Nextstar="1" UnnamedVar="3" Pattern="1" SuchThat="1" With="1" CondNum="8" RelNum="1" comment="Valid. result-cl BOOLEAN, suchthat-cl Next*, pattern-cl if, with-cl print.stmt#">1126</id><querystr><![CDATA[procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2; Select BOOLEAN such that Next*(n1, n2) pattern ifs(v, _, _) with p.stmt# = 1]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>70.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Nextstar="1" UnnamedVar="3" Pattern="1" SuchThat="1" With="1" CondNum="8" RelNum="1" comment="Valid. result-cl BOOLEAN, suchthat-cl Next*, pattern-cl if, with-cl call.stmt#">1127</id><querystr><![CDATA[procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2; Select BOOLEAN such that Next*(n1, n2) pattern ifs(v, _, _) with cl.stmt# = 16]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>73.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Nextstar="1" UnnamedVar="3" Pattern="1" SuchThat="1" With="1" CondNum="8" RelNum="1" comment="Valid. result-cl BOOLEAN, suchthat-cl Next*, pattern-cl if, with-cl while.stmt#">1128</id><querystr><![CDATA[procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2; Select BOOLEAN such that Next*(n1, n2) pattern ifs(v, _, _) with w.stmt# = 21]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>74.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Nextstar="1" UnnamedVar="3" Pattern="1" SuchThat="1" With="1" CondNum="8" RelNum="1" comment="Valid. result-cl BOOLEAN, suchthat-cl Next*, pattern-cl if, with-cl if.stmt#">1129</id><querystr><![CDATA[procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2; Select BOOLEAN such that Next*(n1, n2) pattern ifs(v, _, _) with ifs.stmt# = 2]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>68.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Nextstar="1" UnnamedVar="3" Pattern="1" SuchThat="1" With="1" CondNum="8" RelNum="1" comment="Valid. result-cl BOOLEAN, suchthat-cl Next*, pattern-cl if, with-cl assign.stmt#">1130</id><querystr><![CDATA[procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2; Select BOOLEAN such that Next*(n1, n2) pattern ifs(v, _, _) with a.stmt# = 4]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>71.000000</time_taken>
+<passed/>
+</query>
+</queries>
+</test_results>

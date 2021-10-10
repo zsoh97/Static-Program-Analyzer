@@ -1,0 +1,500 @@
+39 - Invalid Calls for stmt, stmt
+stmt s, s1;
+Select s such that Calls (s, s1)
+none
+5000
+40 - Invalid Calls for stmt, assign
+stmt s; assign s1;
+Select s such that Calls (s, s1)
+none
+5000
+41 - Invalid Calls for stmt, print
+stmt s; print s1;
+Select s such that Calls (s, s1)
+none
+5000
+42 - Invalid Calls for stmt, read
+stmt s; read s1;
+Select s such that Calls (s, s1)
+none
+5000
+43 - Invalid Calls for stmt, while
+stmt s; while s1;
+Select s such that Calls (s, s1)
+none
+5000
+44 - Invalid Calls for stmt, if
+stmt s; if s1;
+Select s such that Calls (s, s1)
+none
+5000
+45 - Invalid Calls for stmt, call
+stmt s; call s1;
+Select s such that Calls (s, s1)
+none
+5000
+46 - Invalid Calls for stmt, prog_line
+stmt s; prog_line s1;
+Select s such that Calls (s, s1)
+none
+5000
+47 - Invalid Calls for stmt, wildcard
+stmt s, s1;
+Select s such that Calls(s, _)
+none
+5000
+48 - Invalid Calls for wildcard, stmt
+stmt s, s1;
+Select s1 such that Calls(_, s1)
+none
+5000
+49 - Invalid Calls for assign, stmt
+assign s; stmt s1;
+Select s such that Calls (s, s1)
+none
+5000
+50 - Invalid Calls for assign, assign
+assign s, s1;
+Select s such that Calls (s, s1)
+none
+5000
+51 - Invalid Calls for assign, print
+assign s; print s1;
+Select s such that Calls (s, s1)
+none
+5000
+52 - Invalid Calls for assign, read
+assign s; read s1;
+Select s such that Calls (s, s1)
+none
+5000
+53 - Invalid Calls for assign, while
+assign s; while s1;
+Select s such that Calls (s, s1)
+none
+5000
+54 - Invalid Calls for assign, if
+assign s; if s1;
+Select s such that Calls (s, s1)
+none
+5000
+55 - Invalid Calls for assign, call
+assign s; call s1;
+Select s such that Calls (s, s1)
+none
+5000
+56 - Invalid Calls for assign, prog_line
+assign s; prog_line s1;
+Select s such that Calls (s, s1)
+none
+5000
+57 - Invalid Calls for assign, wildcard
+assign s, s1;
+Select s such that Calls(s, _)
+none
+5000
+58 - Invalid Calls for wildcard, assign
+assign s, s1;
+Select s1 such that Calls(_, s1)
+none
+5000
+59 - Invalid Calls for print, stmt
+print s; stmt s1;
+Select s such that Calls (s, s1)
+none
+5000
+60 - Invalid Calls for print, assign
+print s; assign s1;
+Select s such that Calls (s, s1)
+none
+5000
+61 - Invalid Calls for print, print
+print s, s1;
+Select s such that Calls (s, s1)
+none
+5000
+62 - Invalid Calls for print, read
+print s; read s1;
+Select s such that Calls (s, s1)
+none
+5000
+63 - Invalid Calls for print, while
+print s; while s1;
+Select s such that Calls (s, s1)
+none
+5000
+64 - Invalid Calls for print, if
+print s; if s1;
+Select s such that Calls (s, s1)
+none
+5000
+65 - Invalid Calls for print, call
+print s; call s1;
+Select s such that Calls (s, s1)
+none
+5000
+66 - Invalid Calls for print, prog_line
+print s; prog_line s1;
+Select s such that Calls (s, s1)
+none
+5000
+67 - Invalid Calls for print, wildcard
+print s, s1;
+Select s such that Calls(s, _)
+none
+5000
+68 - Invalid Calls for wildcard, print
+print s, s1;
+Select s1 such that Calls(_, s1)
+none
+5000
+69 - Invalid Calls for read, stmt
+read s; stmt s1;
+Select s such that Calls (s, s1)
+none
+5000
+70 - Invalid Calls for read, assign
+read s; assign s1;
+Select s such that Calls (s, s1)
+none
+5000
+71 - Invalid Calls for read, print
+read s; print s1;
+Select s such that Calls (s, s1)
+none
+5000
+72 - Invalid Calls for read, read
+read s, s1;
+Select s such that Calls (s, s1)
+none
+5000
+73 - Invalid Calls for read, while
+read s; while s1;
+Select s such that Calls (s, s1)
+none
+5000
+74 - Invalid Calls for read, if
+read s; if s1;
+Select s such that Calls (s, s1)
+none
+5000
+75 - Invalid Calls for read, call
+read s; call s1;
+Select s such that Calls (s, s1)
+none
+5000
+76 - Invalid Calls for read, prog_line
+read s; prog_line s1;
+Select s such that Calls (s, s1)
+none
+5000
+77 - Invalid Calls for read, wildcard
+read s, s1;
+Select s such that Calls(s, _)
+none
+5000
+78 - Invalid Calls for wilcard, read
+read s, s1;
+Select s1 such that Calls(_, s1)
+none
+5000
+79 - Invalid Calls for while, stmt
+while s; stmt s1;
+Select s such that Calls (s, s1)
+none
+5000
+80 - Invalid Calls for while, assign
+while s; assign s1;
+Select s such that Calls (s, s1)
+none
+5000
+81 - Invalid Calls for while, print
+while s; print s1;
+Select s such that Calls (s, s1)
+none
+5000
+82 - Invalid Calls for while, read
+while s; read s1;
+Select s such that Calls (s, s1)
+none
+5000
+83 - Invalid Calls for while, while
+while s, s1;
+Select s such that Calls (s, s1)
+none
+5000
+84 - Invalid Calls for while, if
+while s; if s1;
+Select s such that Calls (s, s1)
+none
+5000
+85 - Invalid Calls for while, call
+while s; call s1;
+Select s such that Calls (s, s1)
+none
+5000
+86 - Invalid Calls for while, prog_line
+while s; prog_line s1;
+Select s such that Calls (s, s1)
+none
+5000
+87 - Invalid Calls for while, wildcard
+while s, s1;
+Select s such that Calls(s, _)
+none
+5000
+88 - Invalid Calls for wildcard, while
+while s, s1;
+Select s1 such that Calls(_, s1)
+none
+5000
+89 - Invalid Calls for if, stmt
+if s; stmt s1;
+Select s such that Calls (s, s1)
+none
+5000
+90 - Invalid Calls for if, assign
+if s; assign s1;
+Select s such that Calls (s, s1)
+none
+5000
+91 - Invalid Calls for if, print
+if s; print s1;
+Select s such that Calls (s, s1)
+none
+5000
+92 - Invalid Calls for if, read
+if s; read s1;
+Select s such that Calls (s, s1)
+none
+5000
+93 - Invalid Calls for if, while
+if s; while s1;
+Select s such that Calls (s, s1)
+none
+5000
+94 - Invalid Calls for if, if
+if s, s1;
+Select s such that Calls (s, s1)
+none
+5000
+95 - Invalid Calls for if, call
+if s; call s1;
+Select s such that Calls (s, s1)
+none
+5000
+96 - Invalid Calls for if, prog_line
+if s; prog_line s1;
+Select s such that Calls (s, s1)
+none
+5000
+97 - Invalid Calls for if, wildcard
+if s, s1;
+Select s such that Calls(s, _)
+none
+5000
+98 - Invalid Calls for wildcard, if
+if s, s1;
+Select s1 such that Calls(_, s1)
+none
+5000
+99 - Invalid Calls for call, stmt
+call s; stmt s1;
+Select s such that Calls (s, s1)
+none
+5000
+100 - Invalid Calls for call, assign
+call s; assign s1;
+Select s such that Calls (s, s1)
+none
+5000
+101 - Invalid Calls for call, print
+call s; print s1;
+Select s such that Calls (s, s1)
+none
+5000
+102 - Invalid Calls for call, read
+call s; read s1;
+Select s such that Calls (s, s1)
+none
+5000
+103 - Invalid Calls for call, while
+call s; while s1;
+Select s such that Calls (s, s1)
+none
+5000
+104 - Invalid Calls for call, if
+call s; if s1;
+Select s such that Calls (s, s1)
+none
+5000
+105 - Invalid Calls for call, call
+call s, s1;
+Select s such that Calls (s, s1)
+none
+5000
+106 - Invalid Calls for call, prog_line
+call s; prog_line s1;
+Select s such that Calls (s, s1)
+none
+5000
+107 - Invalid Calls for call, wildcard
+call s, s1;
+Select s such that Calls(s, _)
+none
+5000
+108 - Invalid Calls for wildcard, call
+call s, s1;
+Select s1 such that Calls(_, s1)
+none
+5000
+109 - Invalid Calls for prog_line, stmt
+prog_line s; stmt s1;
+Select s such that Calls (s, s1)
+none
+5000
+110 - Invalid Calls for prog_line, assign
+prog_line s; assign s1;
+Select s such that Calls (s, s1)
+none
+5000
+111 - Invalid Calls for prog_line, print
+prog_line s; print s1;
+Select s such that Calls (s, s1)
+none
+5000
+112 - Invalid Calls for prog_line, read
+prog_line s; read s1;
+Select s such that Calls (s, s1)
+none
+5000
+113 - Invalid Calls for prog_line, while
+prog_line s; while s1;
+Select s such that Calls (s, s1)
+none
+5000
+114 - Invalid Calls for prog_line, if
+prog_line s; if s1;
+Select s such that Calls (s, s1)
+none
+5000
+115 - Invalid Calls for prog_line, call
+prog_line s; call s1;
+Select s such that Calls(s, s1)
+none
+5000
+116 - Invalid Calls for prog_line, prog_line
+prog_line s, s1;
+Select s such that Calls(s, s1)
+none
+5000
+117 - Invalid Calls for prog_line, wildcard
+prog_line s, s1;
+Select s such that Calls(s, _)
+none
+5000
+118 - Invalid Calls for wildcard, prog_line
+prog_line s, s1;
+Select s1 such that Calls(_, s1)
+none
+5000
+119 - Invalid Calls for variable, stmt
+variable s; stmt s1;
+Select s such that Calls (s, s1)
+none
+5000
+120 - Invalid Calls for variable, assign
+variable s; assign s1;
+Select s such that Calls (s, s1)
+none
+5000
+121 - Invalid Calls for variable, print
+variable s; print s1;
+Select s such that Calls (s, s1)
+none
+5000
+122 - Invalid Calls for variable, read
+variable s; read s1;
+Select s such that Calls (s, s1)
+none
+5000
+123 - Invalid Calls for variable, while
+variable s; while s1;
+Select s such that Calls (s, s1)
+none
+5000
+124 - Invalid Calls for variable, if
+variable s; if s1;
+Select s such that Calls (s, s1)
+none
+5000
+125 - Invalid Calls for variable, call
+variable s; call s1;
+Select s such that Calls (s, s1)
+none
+5000
+126 - Invalid Calls for variable, prog_line
+variable s; prog_line s1;
+Select s such that Calls (s, s1)
+none
+5000
+127 - Invalid Calls for variable, wildcard
+variable s, s1;
+Select s such that Calls (s, _)
+none
+5000
+128 - Invalid Calls for wildcard, variable
+variable s, s1;
+Select s1 such that Calls (_, s1)
+none
+5000
+129 - Invalid Calls for constant, stmt
+constant s; stmt s1;
+Select s such that Calls (s, s1)
+none
+5000
+130 - Invalid Calls for constant, assign
+constant s; assign s1;
+Select s such that Calls (s, s1)
+none
+5000
+131 - Invalid Calls for constant, print
+constant s; print s1;
+Select s such that Calls (s, s1)
+none
+5000
+132 - Invalid Calls for constant, read
+constant s; read s1;
+Select s such that Calls (s, s1)
+none
+5000
+133 - Invalid Calls for constant, while
+constant s; while s1;
+Select s such that Calls (s, s1)
+none
+5000
+134 - Invalid Calls for constant, if
+constant s; if s1;
+Select s such that Calls (s, s1)
+none
+5000
+135 - Invalid Calls for constant, call
+constant s; call s1;
+Select s such that Calls (s, s1)
+none
+5000
+136 - Invalid Calls for constant, prog_line
+constant s; prog_line s1;
+Select s such that Calls (s, s1)
+none
+5000
+137 - Invalid Calls for constant, wildcard
+constant s, s1;
+Select s such that Calls (s, _)
+none
+5000
+138 - Invalid Calls for wildcard, constant
+constant s, s1;
+Select s1 such that Calls (_, s1)
+none
+5000

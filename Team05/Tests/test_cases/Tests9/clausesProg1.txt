@@ -1,0 +1,135 @@
+1 - 7 Affects, tuple, related
+stmt s, s1, s2, s3; assign a, a1, a2, a3;
+Select <s, a, s1, a1, s2, a2, s3, a3> such that Affects(s, a) and Affects(a, s1) and Affects(s1, a1) and Affects(a1, s2) and Affects(s2, a2) and Affects(a2, s3) and Affects(s3, a3)
+8 9 8 9 8 9 8 9,9 8 9 8 9 8 9 8,33 35 36 37 38 40 41 42,35 36 37 38 40 41 42 43,36 37 38 40 41 42 43 44,36 37 38 40 41 42 43 35,37 38 40 41 42 43 35 36,38 40 41 42 43 35 36 37,40 41 42 43 35 36 37 38,41 42 43 35 36 37 38 40,42 43 35 36 37 38 40 41,43 35 36 37 38 40 41 42
+5000
+2 - 7 Affects, related
+stmt s, s1, s2, s3; assign a, a1, a2, a3;
+Select s such that Affects(s, a) and Affects(a, s1) and Affects(s1, a1) and Affects(a1, s2) and Affects(s2, a2) and Affects(a2, s3) and Affects(s3, a3)
+8,9,33,35,36,37,38,40,41,42,43
+5000
+3 - Scattered related Affects*, maximum three synonyms for Affects*, unrelated group** queries, stress test
+stmt s, s1, s2, s3; assign a, a1, a2, a3;
+Select s such that Affects*(s, s1) and Next*(a1, s2) and Affects*(a, s1) and Follows*(a1, s2) and Affects*(s, a)
+8,9,15,18,19,20,26,33,35,36,37,38,40,41,42,43
+5000
+4 - Scatter no synonym clauses, maximum three synonyms for Affects*, unrelated group** queries, stress test
+stmt s, s1, s2, s3; assign a, a1, a2, a3;
+Select s such that Affects*(s, s1) and Next(1, 2) and Affects*(a, s1) and Follows*(45, 47) and Affects*(s, a)
+8,9,15,18,19,20,26,33,35,36,37,38,40,41,42,43
+5000
+5 - Scatter no synonym clauses, maximum three synonyms for Affects*, unrelated group** queries, stress test, Next* instead of Next
+stmt s, s1, s2, s3; assign a, a1, a2, a3;
+Select s such that Affects*(s, s1) and Next*(1, 2) and Affects*(a, s1) and Follows*(45, 47) and Affects*(s, a)
+8,9,15,18,19,20,26,33,35,36,37,38,40,41,42,43
+5000
+6 - Next*
+stmt s, s1, s2, s3; assign a, a1, a2, a3;
+Select BOOLEAN such that Next*(1, 2) 
+TRUE
+5000
+7 - BOOLEAN, no synonym clauses
+stmt s;
+Select BOOLEAN such that Follows*(10,14) and Next(43,39) and Affects*(8,8)
+TRUE
+5000
+8 - BOOLEAN, synonym, with clauses
+stmt s; assign a;
+Select BOOLEAN such that Follows*(10,14) and Next(43,39) and Affects*(s,a) with s.stmt# = 8 and a.stmt# = 8 and 8 = 8
+TRUE
+5000
+9 - Scatter unrelated synonym clauses
+stmt s, s1, s2, s3; assign a, a1, a2, a3; while w;
+Select s such that Affects*(s, s1) and Next(w, s2) and Affects*(a, s1) and Follows*(a1, a2) and Affects*(s, a)
+8,9,15,18,19,20,26,33,35,36,37,38,40,41,42,43
+5000
+10 - Pattern clause part 1/ 9
+assign a;
+Select a pattern a("a", "b")
+6,13,23,26,33,43,45
+5000
+11 - BOOLEAN part 2 / 9
+stmt s, s1, s2, s3; assign a, a1, a2, a3; while w;
+Select BOOLEAN such that Modifies(43, "a")
+TRUE
+5000
+12 - BOOLEAN part 3 / 9
+stmt s, s1, s2, s3; assign a, a1, a2, a3; while w;
+Select BOOLEAN such that Affects*(s, a) pattern a("b", "a") with s.stmt# = 43 and a.stmt# = 44
+TRUE
+5000
+13 - BOOLEAN part 4 / 9
+stmt s, s1, s2, s3; assign a, a1, a2, a3; while w;
+Select BOOLEAN such that Follows*(a1, 44) pattern a1("a", "b") with a1.stmt# = 33
+TRUE
+5000
+14 - BOOLEAN part 5 / 9
+stmt s, s1, s2, s3; assign a, a1, a2, a3; while w;
+Select BOOLEAN such that Affects(a1,s1) with a1.stmt# = 33 and s1.stmt# = 35
+TRUE
+5000
+15 - BOOLEAN part 6 / 9
+stmt s, s1, s2, s3; assign a, a1, a2, a3; while w;
+Select BOOLEAN such that Parent(w, s1) with w.stmt# = 34 and s1.stmt# = 35
+TRUE
+5000
+16 - part 7 / 9, Grouped groups, all in procedure whileLoop (33-44), ans: s = 43, a = 44, s1 = 35, a1 = 33, w = 34
+stmt s, s1, s2, s3; assign a, a1, a2, a3; while w;
+Select s such that Modifies(s, "a") and Affects*(s, a) pattern a("b", "a") and Follows*(a1, a) pattern a1("a", "b") and Affects(a1,s1) and Parent(w, s1)
+43
+5000
+17 - part 8 / 8, Grouped groups, all in procedure whileLoop (33-44), ans: s = 43, a = 44, s1 = 35, a1 = 33, w = 34
+stmt s, s1, s2, s3; assign a, a1, a2, a3; while w;
+Select s such that Modifies(s, "a") and Affects*(s, a) and Follows*(a1, a) and Affects(a1,s1) and Parent(w, s1)
+8,33,43
+5000
+18 - part 9 / 9, Scatter groups, all in procedure whileLoop (33-44), ans: s = 43, a = 44, s1 = 35, a1 = 33, w = 34
+stmt s, s1, s2, s3; assign a, a1, a2, a3; while w;
+Select s such that Modifies(s, "a") and Affects(a1,s1) and Affects*(s, a) and Parent(w, s1) and Follows*(a1, a)
+8,33,43
+5000
+19 - part 1
+stmt s; assign a, a1; if ifs;
+Select BOOLEAN such that Parent(ifs, a1) with a1.stmt# = 31
+TRUE
+5000
+20 - part 2
+stmt s; assign a, a1; if ifs;
+Select BOOLEAN such that Uses(s, "b") with s.stmt# = 26
+TRUE
+5000
+21 - part 3
+stmt s; assign a, a1; if ifs;
+Select BOOLEAN such that Affects(s,a) with s.stmt# = 26 and a.stmt# = 32
+TRUE
+5000
+22 - part 4
+stmt s; assign a, a1; if ifs;
+Select BOOLEAN such that Affects*(s,a1) with a1.stmt# = 31 and s.stmt# = 26
+TRUE
+5000
+23 - Grouped groups, if else separation, ans s = 26, a = 32, a1 = 31, ifs = 27
+stmt s; assign a, a1; if ifs;
+Select s such that Uses(s, "b") and Affects(s,a) and Parent(ifs, a1) and Affects*(s,a1) with a1.stmt# = 31
+26
+5000
+24 - Scatter groups
+stmt s; assign a, a1; if ifs;
+Select s such that Uses(s, "b") and Parent(ifs, a1) and Affects(s,a) and Affects*(s,a1) with a1.stmt# = 31
+26
+5000
+25 - Step 2, one synonym per clause that requires reordering, ans s = 26, a = 32, 
+stmt s; assign a, a1; if ifs;
+Select s such that Follows*(s,32) and Affects(26,a) and Modifies(s,"a") and Uses(a,"b")
+26
+5000
+26 - Step 3, two synonyms in clause that requires reordering
+stmt s; assign a, a1; if ifs;
+Select s such that Follows*(s,a) and Affects(s,a) and Modifies(s,"a") and Uses(a,"b")
+26
+5000
+27 - dual pattern clause (taken from wiki so verified 100% valid)
+assign a1, a2; while w, w1;
+Select a2 pattern a1 ("x", _) and a2 ("x",_"x"_) such that Affects(a1, a2) and Parent* (w2, a2) and Parent* (w1, w2)
+51
+5000

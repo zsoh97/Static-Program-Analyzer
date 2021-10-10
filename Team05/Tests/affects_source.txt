@@ -1,0 +1,118 @@
+procedure control {
+    one = one;
+}
+
+procedure whileOnly {
+    one = two;
+    while (x == 3) {
+        four = one * two - five * four;
+        five =  five + four + 2;
+        read four;
+        seven = five + four * seven;
+        five = one * two + four * five;
+        call nonest;
+    }
+    ten = five * seven;
+    eleven = ten * two + one;
+    read eleven;
+    thirteen = eleven * one;
+    call ifOnly;
+    thirteen = thirteen + one + ten;
+}
+
+procedure ifOnly {
+    thirteen = zero;
+    seventeen = 17;
+    if (x == 18) then {
+        seventeen = seventeen + nineteen * twenty5;
+        twenty = seventeen + five + twenty;
+        read seventeen;
+        one = twentytwo;
+        twenty3 = seventeen +  thirteen * one;
+        call control;
+        twenty5 = twenty3 + one;
+    } else {
+        twenty5 = twenty6 + thirteen + twenty5 + thirty1;
+        read thirteen;
+        read twenty5;
+        twentynine = thirteen + twentynine * one + twenty5;
+        call nonest;
+        thirty1 = twenty3 * four + one * twentynine + twenty5;
+        print seventeen;
+    }
+
+    thirty3 = thirteen + twenty3;
+    thirty4 = thirty3 + twenty3 + one * thirty1;
+    call secondcontrol;
+    thirty6 = one;
+}
+
+procedure secondcontrol {
+    two = one;
+}
+
+procedure complex {
+    read thirtyeight;
+    thirtynine = 39;
+    while (x == 40) {
+        print thirtyeight;
+        forty2 = thirtynine + thirtyeight;
+        while (x == 43) {
+            thirtyeight = fortyfive * two + thirtynine;
+            fortyfive = fortyfive / 2;
+            call secondcontrol;
+            thirtynine = fortyfive * thirtyeight - thirtynine;
+            if (x == forty8) then {
+                fortynine = five + seventeen;
+                call ifOnly;
+                call control;
+                five = fortynine + one * fifty2;
+                if (x == 53) then {
+                    fiftyfour = thirtynine * five - fortynine;
+                    call whileOnly;
+                    fiftyfour = fiftyfour * five;
+                    while (x == 57) {
+                        read thirtynine;
+                        read ten;
+                        print fortyfive;
+                        sixtyone = fortyfive+ ten + thirtynine + sixtyone;
+                        seventeen = seventeen + thirtynine;
+                    }
+                } else {
+                    two = fortynine / two;
+                    call secondcontrol;
+                    sixty5 = two + sixty5;
+                }
+            } else {
+                four = 4;
+                call ifOnly;
+                sixty9 = four + seventeen + sixty9;
+            }
+        }
+        forty2 = sixty5 + sixty9;
+    }
+    seventyone = thirtynine;
+}
+
+procedure nonest {
+    seventytwo = seventyone;
+    seventythree = seventytwo;
+    five = four;
+    twentynine = seventyfour;
+}
+
+procedure callAll {
+one = one;
+call control;
+one = one;
+call secondcontrol;
+one = one;
+call whileOnly;
+one = one;
+call ifOnly;
+one = one;
+call complex;
+one = one;
+call nonest;
+one = one;
+}

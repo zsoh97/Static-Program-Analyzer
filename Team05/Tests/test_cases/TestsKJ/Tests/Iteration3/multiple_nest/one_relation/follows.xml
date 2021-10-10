@@ -1,0 +1,71 @@
+<?xml-stylesheet type="text/xsl" href="analysis.xsl"?>
+<test_results>
+<info>
+<name>tests</name><parsing_time_taken>358.000000</parsing_time_taken>
+</info>
+<queries>
+<query>
+<id ReturnTuple="1" Followsstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="Select stmt that is followed within while container">1</id><querystr><![CDATA[stmt s; Select s such that Follows* (25, s)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>57.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Follows="1" SuchThat="1" CondNum="3" RelNum="1" comment="Select stmt follows while stmt">2</id><querystr><![CDATA[stmt s; while w; Select s such that Follows (w, s)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>50.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Followsstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="Select stmt that is followed within if container">3</id><querystr><![CDATA[stmt s; Select s such that Follows* (s, 14)]]></querystr>
+<stuans>12,13</stuans>
+<correct>12,13</correct>
+<time_taken>52.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Followsstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="Select stmt followed by if statement">4</id><querystr><![CDATA[if ifs; stmt s; Select s such that Follows* (s, ifs)]]></querystr>
+<stuans>6,7,8,9,12,13,30</stuans>
+<correct>12,13,30,6,7,8,9</correct>
+<time_taken>54.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Followsstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="Select all stmts if the given clause is false">5</id><querystr><![CDATA[stmt s; Select s such that Follows* (1, 6)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>64.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Followsstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="Select all stmts if the given clause is true">6</id><querystr><![CDATA[stmt s; Select s such that Follows* (12, 13)]]></querystr>
+<stuans>1,10,11,12,13,14,15,16,17,18,19,2,20,21,22,23,24,25,26,27,28,29,3,30,31,32,33,34,35,36,37,38,39,4,40,5,6,7,8,9</stuans>
+<correct>1,10,11,12,13,14,15,16,17,18,19,2,20,21,22,23,24,25,26,27,28,29,3,30,31,32,33,34,35,36,37,38,39,4,40,5,6,7,8,9</correct>
+<time_taken>57.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Followsstar="1" UnnamedVar="1" Pattern="1" SuchThat="1" CondNum="5" RelNum="1" comment="Select assign inside while container with pattern">7</id><querystr><![CDATA[assign a; Select a such that Follows* (26, a) pattern a ("a", _"c"_) ]]></querystr>
+<stuans>27</stuans>
+<correct>27</correct>
+<time_taken>56.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Followsstar="1" SuchThat="1" With="1" CondNum="4" RelNum="1" comment="Select assign after if container with condition">8</id><querystr><![CDATA[assign a; if ifs; Select a such that Follows* (ifs, a) with ifs.stmt# = 31]]></querystr>
+<stuans>38,39</stuans>
+<correct>38,39</correct>
+<time_taken>72.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Followsstar="1" UnnamedVar="2" Pattern="1" SuchThat="1" With="1" CondNum="7" RelNum="1" comment="Select assign after if container with condition and pattern">8</id><querystr><![CDATA[assign a; if ifs; Select a such that Follows* (ifs, a) with ifs.stmt# = 31 pattern  a (_, _"x+a"_)]]></querystr>
+<stuans>39</stuans>
+<correct>39</correct>
+<time_taken>58.000000</time_taken>
+<passed/>
+</query>
+</queries>
+</test_results>

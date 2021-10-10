@@ -1,0 +1,82 @@
+procedure proc1 {
+    if ((x + y + z >= 5) && (y < 3)) then {
+        call proc2;
+    } else {
+        read x;
+        print z;
+        y = a * y + z - c;
+        call proc3;
+    }
+
+    b = a * y - z / b;
+    call proc7;
+}
+
+procedure proc2 {
+    print x;
+    print y;
+    print a;
+    call proc3;
+
+    while ((a > b + 3) || (a - b > c)) {
+        call proc4;
+        a = 1;
+        b = 2;
+    }
+
+    c = 100;
+    call proc5;
+    call proc8;
+}
+
+procedure proc3 {
+    read b;
+    read z;
+    call proc4;
+}
+
+procedure proc4 {
+    while (z + a == a + b) {
+        read c;
+        read d;
+        call proc7;
+    }
+
+    if (a > 1) then {
+        d = 100;
+    } else {
+        c = 1 + 6;
+    }
+}
+
+procedure proc5 {
+    a = x + y % z;
+    b = a - b / d * 100;
+
+    if (a > 1) then {
+        a = a * 100;
+    } else {
+        a = a / 100;
+        while (z + a == a + b) {
+            print a;
+        }
+    }
+}
+
+procedure proc6 {
+    b = 10 * b % c;
+    read a;
+}
+
+procedure proc7 {
+    call proc5;
+    print z;
+    z = 50;
+    x = z - 100;
+}
+
+procedure proc8 {
+    read y;
+    call proc5;
+    y = 100 / y;
+}

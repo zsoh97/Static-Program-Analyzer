@@ -1,0 +1,10 @@
+1 - All variables used by switch statement
+variable v; switch sw;
+Select v such that Uses (sw, v)
+x, y, z, a, b, c
+5000
+2 - Specific variable used by switch statement
+switch sw;
+Select sw such that Uses (sw, "c")
+2
+5000

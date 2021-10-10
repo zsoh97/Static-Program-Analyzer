@@ -1,0 +1,330 @@
+1 - v no clause
+variable v;
+Select v
+sE1sfun, x, y, ananascafe, bzbzbee, iLovecs3203YaY, w223hyyyIsThisSOFun, Ananascafe
+5000
+2 - c no clause
+constant c;
+Select c
+2512, 5, 513, 9
+5000
+3 - uses clause
+variable v; stmt s;
+Select s such that Uses (s, "ananascafe")
+4, 5, 8, 11, 13
+5000
+4 - Modifies clause
+variable v; stmt s;
+Select s such that Modifies (s, "w223hyyyIsThisSOFun")
+8, 9
+5000
+5 - same query with spaces
+variable v; stmt s;
+Select   s  such that Modifies (   s , "w223hyyyIsThisSOFun")
+8, 9
+5000
+6 - same query with spaces inside the varname
+variable v; stmt s, s1;
+Select   s  such that Modifies (   s, "  w22  3h     y y y Is Th is SOFun")
+none
+5000
+7 - Uses clause with spaces inside varname
+variable v; stmt s;
+Select s such that Uses (s, " ana n  ascafe   "   )
+none
+5000
+8 - follows star correct example
+variable v; stmt s;
+Select s such that Follows* (s, 13)
+1, 2, 3, 4, 5, 6, 7, 8, 11, 12
+5000
+9 - follows star syntax wrong (space b/w int)
+variable v; stmt s;
+Select s such that Follows* (s, 1 3)
+none
+5000
+10 - follows star syntax wrong (int wrapped in quotes)
+variable v; stmt s;
+Select s such that Follows* (s, "13")
+none
+5000
+11 - follows star syntax wrong (int wrapped in quotes)
+variable v; stmt s;
+Select s such that Follows* (s, "13)
+none
+5000
+12 - follows star syntax wrong (int wrapped in quotes)
+variable v; stmt s;
+Select s such that Follows* (s, 13")
+none
+5000
+13 - follows star syntax wrong (syn wrapped in quotes)
+variable v; stmt s;
+Select s such that Follows* ("s", 13)
+none
+5000
+14 - follows star syntax wrong (syn wrapped in quotes)
+variable v; stmt s;
+Select s such that Follows* ('s', 13)
+none
+5000
+15 - follows star syntax wrong (syn wrapped in quotes)
+variable v; stmt s;
+Select s such that Follows*' (s, 13)
+none
+5000
+16 - follows star syntax wrong (no brakcet))
+variable v; stmt s;
+Select s such that Follows*' (s, 13
+none
+5000
+17 - complex pattern
+variable v; stmt s; assign a;
+Select v pattern a (v, _"y*x/y"_)
+x
+5000
+18 - complex pattern (wrong)
+variable v; stmt s; assign a;
+Select v pattern a (v, _"y%5"_)
+none
+5000
+19 - complex pattern with bracket
+variable v; stmt s; assign a;
+Select v pattern a (v, _"(y*x)"_)
+x
+5000
+20 - complex pattern with bracket
+variable v; stmt s; assign a;
+Select v pattern a (v, _"(y*x)/y%5"_)
+x
+5000
+21 - complex pattern with bracket and spaces
+variable v; assign a;
+Select v pattern a (v, _"(y *x )/y%5"_)
+x
+5000
+22 - complex pattern with bracket and spaces
+variable v; assign a;
+Select v pattern a (v, _"(y*x) /y%5"_)
+x
+5000
+23 - complex pattern with bracket and spaces
+variable v; assign a;
+Select v pattern a (v, _"(y* x ) /y% 5"_)
+x
+5000
+24 - complex pattern with bracket and spaces
+variable v; assign a;
+Select v pattern a (v, _"(y*x)/y%5  "_)
+x
+5000
+25 - assign pattern (_, _)
+assign a;
+Select a pattern a (_, _)
+5, 6
+5000
+26 - assign pattern (_, _const_)
+variable v; assign a;
+Select v pattern a (v, _"5"_)
+ananascafe, x
+5000
+27 - assign pattern (_, _var_)
+variable v; assign a;
+Select v pattern a (v, _"ananascafe"_)
+ananascafe
+5000
+28 - assign pattern (v, _)
+variable v; assign a;
+Select v pattern a (v, _)
+x, ananascafe
+5000
+29 - assign pattern (v, _const_)
+variable v; assign a;
+Select v pattern a (v, _"2512"_)
+ananascafe
+5000
+30 - assign pattern (v, _var_)
+variable v; assign a;
+Select v pattern a (v, _"y"_)
+x
+5000
+31 - assign pattern (var, _)
+variable v; assign a;
+Select v pattern a ("x", _)
+sE1sfun, x, y, ananascafe, bzbzbee, w223hyyyIsThisSOFun, iLovecs3203YaY, Ananascafe
+5000
+32 - assign pattern (var, _const_)
+variable v; assign a;
+Select v pattern a ("x", _"9"_)
+none
+5000
+33 - assign pattern (var, _var_)
+variable v; assign a;
+Select v pattern a ("ananascafe", _"x"_)
+none
+5000
+34 - assign pattern (_, var)
+variable v; assign a;
+Select v pattern a (_, "ananascafe")
+none
+5000
+35 - assign pattern (v, var)
+variable v; assign a;
+Select v pattern a (v, "bzbzbee")
+none
+5000
+36 - assign pattern (var, var)
+variable v; assign a;
+Select v pattern a ("ananascafe", "x")
+none
+5000
+37 - assign pattern (_, exact expr)
+variable v; assign a;
+Select a pattern a (_, "ananascafe + 2512 * 5 + (ananascafe - 513)/9")
+5
+5000
+38 - assign pattern (v, exact expr)
+variable v; assign a;
+Select v pattern a (v, "y + x - (y * x) / y % 5")
+x
+5000
+39 - assign pattern (var, exact expr)
+variable v; assign a;
+Select BOOLEAN pattern a ("ananascafe", "ananascafe + 2512 * 5 + (ananascafe - 513)/9")
+TRUE
+5000
+40 - assign pattern (_, partial expr)
+variable v; assign a;
+Select a pattern a (_, _"y%5"_)
+none
+5000
+41 - assign pattern (_, partial expr)
+variable v; assign a;
+Select a pattern a (_, _"x/y%5"_)
+none
+5000
+42 - assign pattern (v, partial expr)
+variable v; assign a;
+Select v pattern a (v, _"2512 * 5"_)
+ananascafe
+5000
+43 - assign pattern (v, partial expr)
+variable v; assign a;
+Select v pattern a (v, _"ananascafe+2512"_)
+none
+5000
+44 - assign pattern (v, partial expr)
+variable v; assign a;
+Select v pattern a (v, _"ananascafe + 2512*5 + ananascafe"_)
+none
+5000
+45 - assign pattern (v, partial expr)
+variable v; assign a;
+Select v pattern a (v, _"ananascafe + 2512 * 5 + (ananascafe - 513)"_)
+none
+5000
+46 - assign pattern (v, partial expr)
+variable v; assign a;
+Select v pattern a (v, _"2512 * 5 + (ananascafe - 513)/9"_)
+none
+5000
+47 - assign pattern (v, partial expr)
+variable v; assign a;
+Select v pattern a (v, _"(ananascafe - 513)/9"_)
+ananascafe
+5000
+48 - assign pattern (var, partial expr)
+variable v; assign a;
+Select BOOLEAN pattern a ("x", _"y + x - (y * x) / y % 5"_)
+TRUE
+5000
+49 - assign pattern (var, partial expr)
+variable v; assign a;
+Select BOOLEAN pattern a ("x", _"x / y % 5"_)
+FALSE
+5000
+50 - assign pattern (var, partial expr)
+variable v; assign a;
+Select BOOLEAN pattern a ("x", _"y + x - (y * x)"_)
+FALSE
+5000
+51 - unrelated syn, var not in program
+stmt s;
+Select s such that Modifies (1, "abcde")
+none
+5000
+52 - unrelated syn, var in
+stmt s;
+Select s such that Modifies (1, "sE1sfun")
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13
+5000
+53 - unrelated syns
+stmt s; variable v;
+Select s such that Modifies (1, v)
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13
+5000
+54 - unrelated syns
+stmt s; variable v;
+Select s such that Modifies (1, _)
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13
+5000
+55 - unrelated syns
+stmt s; variable v;
+Select s such that Modifies (s, "w223hyyyIsThisSOFun")
+8, 9
+5000
+56 - unrelated syns
+stmt s; variable v;
+Select s such that Modifies (s, _)
+1, 2, 3, 5, 6, 7, 8, 9
+5000
+57 - unrelated syns
+stmt s; variable v;
+Select s such that Uses (5, "ananascafe")
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13
+5000
+58 - unrelated syns
+stmt s; variable v;
+Select s such that Uses (5, v)
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13
+5000
+59 - unrelated syns
+stmt s; variable v;
+Select s such that Uses (5, _)
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13
+5000
+60 - unrelated syns
+stmt s; variable v;
+Select s such that Uses (s, "ananascafe")
+4, 5, 8, 11, 13
+5000
+61 - unrelated syns
+stmt s; variable v;
+Select v such that Uses (s, v)
+ananascafe, y, x, bzbzbee, iLovecs3203YaY, Ananascafe
+5000
+62 - unrelated syns
+stmt s; variable v;
+Select s such that Modifies (s, s)
+none
+5000
+63 - BOOLEAN as stmt
+stmt BOOLEAN;
+Select BOOLEAN such that Follows (1,2)
+1,2,3,4,5,6,7,8,9,10,11,12,13
+5000
+64 - BOOLEAN as read
+read BOOLEAN;
+Select <BOOLEAN.varName> such that Follows(1,2)
+sE1sfun, x, y, w223hyyyIsThisSOFun, bzbzbee
+5000
+65 - BOOLEAN as const
+stmt s; constant BOOLEAN;
+Select BOOLEAN with BOOLEAN.value = s.stmt#
+5, 9
+5000
+66 - Uses as var, Modifies as stmt
+assign Modifies; variable Uses;
+Select <Modifies, Uses> pattern Modifies (Uses, _)
+5 ananascafe, 6 x
+5000

@@ -1,0 +1,1011 @@
+<?xml-stylesheet type="text/xsl" href="analysis.xsl"?>
+<test_results>
+<info>
+<name>iteration-2-tests</name><parsing_time_taken>263.000000</parsing_time_taken>
+</info>
+<queries>
+<query>
+<id ReturnBoolean="1" UnnamedVar="1" SuchThat="1" CondNum="3" RelNum="0" comment="Invalid. Case sensitive, suchthat-cl Calls">2001</id><querystr><![CDATA[procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that calls(proc1, proc2)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>66.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Calls="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid. Wrong argument, suchthat-cl Calls">2002</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Calls(proc, s)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>74.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Calls="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid. Wrong argument, suchthat-cl Calls">2003</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Calls(proc, cl)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>80.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Calls="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid. Wrong argument, suchthat-cl Calls">2004</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Calls(proc, v)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>77.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Calls="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid. Wrong argument, suchthat-cl Calls">2005</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Calls(proc, r)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>63.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Calls="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid. Wrong argument, suchthat-cl Calls">2006</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Calls(proc, p)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>77.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Calls="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid. Wrong argument, suchthat-cl Calls">2007</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Calls(proc, c)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>91.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Calls="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid. Wrong argument, suchthat-cl Calls">2008</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Calls(proc, w)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>74.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Calls="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid. Wrong argument, suchthat-cl Calls">2009</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Calls(proc, ifs)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>64.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Calls="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid. Wrong argument, suchthat-cl Calls">2010</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Calls(proc, a)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>60.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Calls="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid. Wrong argument, suchthat-cl Calls">2011</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Calls(proc, n)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>73.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Calls="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid. Wrong argument, suchthat-cl Calls">2012</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Calls(s, proc)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>74.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Calls="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid. Wrong argument, suchthat-cl Calls">2013</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Calls(cl, proc)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>66.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Calls="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid. Wrong argument, suchthat-cl Calls">2014</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Calls(v, proc)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>62.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Calls="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid. Wrong argument, suchthat-cl Calls">2015</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Calls(r, proc)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>67.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Calls="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid. Wrong argument, suchthat-cl Calls">2016</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Calls(p, proc)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>71.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Calls="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid. Wrong argument, suchthat-cl Calls">2017</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Calls(c, proc)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>72.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Calls="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid. Wrong argument, suchthat-cl Calls">2018</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Calls(w, proc)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>71.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Calls="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid. Wrong argument, suchthat-cl Calls">2019</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Calls(ifs, proc)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>67.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Calls="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid. Wrong argument, suchthat-cl Calls">2020</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Calls(a, proc)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>75.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Calls="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid. Wrong argument, suchthat-cl Calls">2021</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Calls(n, proc)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>66.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Calls="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid. Same synonym, suchthat-cl Calls">2022</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Calls (proc, proc)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>69.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Calls="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid. Same constant, suchthat-cl Calls">2023</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Calls ("proc3", "proc3")]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>61.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Calls="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Valid. Extra space, suchthat-cl Calls">2024</id><querystr><![CDATA[procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Calls (proc1, proc2)]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>61.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Calls="1" UnnamedVar="3" SuchThat="1" CondNum="6" RelNum="1" comment="Valid. 2 wildcards, suchthat-cl Calls">2025</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Calls(_, _)]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>61.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Calls="1" UnnamedVar="2" SuchThat="1" CondNum="5" RelNum="1" comment="Valid. 1 wildcard 1 synonym, suchthat-cl Calls">2026</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Calls(_, proc)]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>62.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Calls="1" UnnamedVar="2" SuchThat="1" CondNum="5" RelNum="1" comment="Valid. 1 wildcard 1 constant, suchthat-cl Calls">2027</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Calls(_, "proc3")]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>67.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Calls="1" UnnamedVar="2" SuchThat="1" CondNum="5" RelNum="1" comment="Valid. 1 synonym 1 wildcard, suchthat-cl Calls">2028</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Calls(proc, _)]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>76.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Calls="1" UnnamedVar="2" SuchThat="1" CondNum="5" RelNum="1" comment="Valid. 1 constant 1 wildcard, suchthat-cl Calls">2029</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Calls("proc3", _)]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>78.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Calls="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Valid. 2 synonyms, suchthat-cl Calls">2030</id><querystr><![CDATA[procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Calls(proc1, proc2)]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>72.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Calls="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Valid. 1 synonym 1 constant, suchthat-cl Calls">2031</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Calls(proc, "proc1")]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>62.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Calls="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Valid. 1 constant 1 synonym, suchthat-cl Calls">2032</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Calls("proc3", proc)]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>64.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Calls="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Valid. 2 constants, suchthat-cl Calls">2033</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Calls("proc3", "proc1")]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>62.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" UnnamedVar="1" SuchThat="1" CondNum="3" RelNum="0" comment="Invalid. Case sensitive, suchthat-cl Calls*">2034</id><querystr><![CDATA[procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that calls*(proc1, proc2)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>60.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Calls="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid. Space between Calls and *, suchthat-cl Calls*">2035</id><querystr><![CDATA[procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Calls *(proc1, proc2)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>62.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Callsstar="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid. Wrong argument, suchthat-cl Calls*">2036</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Calls*(proc, s)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>66.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Callsstar="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid. Wrong argument, suchthat-cl Calls*">2037</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Calls*(proc, cl)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>61.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Callsstar="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid. Wrong argument, suchthat-cl Calls*">2038</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Calls*(proc, v)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>61.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Callsstar="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid. Wrong argument, suchthat-cl Calls*">2039</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Calls*(proc, r)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>65.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Callsstar="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid. Wrong argument, suchthat-cl Calls*">2040</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Calls*(proc, p)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>67.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Callsstar="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid. Wrong argument, suchthat-cl Calls*">2041</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Calls*(proc, c)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>85.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Callsstar="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid. Wrong argument, suchthat-cl Calls*">2042</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Calls*(proc, w)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>72.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Callsstar="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid. Wrong argument, suchthat-cl Calls*">2043</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Calls*(proc, ifs)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>66.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Callsstar="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid. Wrong argument, suchthat-cl Calls*">2044</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Calls*(proc, a)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>62.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Callsstar="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid. Wrong argument, suchthat-cl Calls*">2045</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Calls*(proc, n)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>66.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Callsstar="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid. Wrong argument, suchthat-cl Calls*">2046</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Calls*(s, proc)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>65.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Callsstar="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid. Wrong argument, suchthat-cl Calls*">2047</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Calls*(cl, proc)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>78.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Callsstar="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid. Wrong argument, suchthat-cl Calls*">2048</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Calls*(v, proc)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>74.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Callsstar="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid. Wrong argument, suchthat-cl Calls*">2049</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Calls*(r, proc)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>63.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Callsstar="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid. Wrong argument, suchthat-cl Calls*">2050</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Calls*(p, proc)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>63.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Callsstar="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid. Wrong argument, suchthat-cl Calls*">2051</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Calls*(c, proc)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>69.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Callsstar="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid. Wrong argument, suchthat-cl Calls*">2052</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Calls*(w, proc)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>66.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Callsstar="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid. Wrong argument, suchthat-cl Calls*">2053</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Calls*(ifs, proc)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>65.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Callsstar="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid. Wrong argument, suchthat-cl Calls*">2054</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Calls*(a, proc)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>62.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Callsstar="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid. Wrong argument, suchthat-cl Calls*">2055</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Calls*(n, proc)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>68.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Callsstar="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid. Same synonym, suchthat-cl Calls*">2056</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Calls* (proc, proc)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>63.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Callsstar="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid. Same constant, suchthat-cl Calls*">2057</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Calls* ("proc3", "proc3")]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>63.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Callsstar="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Valid. Extra space, suchthat-cl Calls*">2058</id><querystr><![CDATA[procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Calls* (proc1, proc2)]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>67.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Callsstar="1" UnnamedVar="3" SuchThat="1" CondNum="6" RelNum="1" comment="Valid. 2 wildcards, suchthat-cl Calls*">2059</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Calls*(_, _)]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>71.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Callsstar="1" UnnamedVar="2" SuchThat="1" CondNum="5" RelNum="1" comment="Valid. 1 wildcard 1 synonym, suchthat-cl Calls*">2060</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Calls*(_, proc)]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>66.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Callsstar="1" UnnamedVar="2" SuchThat="1" CondNum="5" RelNum="1" comment="Valid. 1 wildcard 1 constant, suchthat-cl Calls*">2061</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Calls*(_, "proc3")]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>96.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Callsstar="1" UnnamedVar="2" SuchThat="1" CondNum="5" RelNum="1" comment="Valid. 1 synonym 1 wildcard, suchthat-cl Calls*">2062</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Calls*(proc, _)]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>89.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Callsstar="1" UnnamedVar="2" SuchThat="1" CondNum="5" RelNum="1" comment="Valid. 1 constant 1 wildcard, suchthat-cl Calls*">2063</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Calls*("proc3", _)]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>61.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Callsstar="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Valid. 2 synonyms, suchthat-cl Calls*">2064</id><querystr><![CDATA[procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Calls*(proc1, proc2)]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>72.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Callsstar="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Valid. 1 synonym 1 constant, suchthat-cl Calls*">2065</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Calls*(proc, "proc1")]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>67.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Callsstar="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Valid. 1 constant 1 synonym, suchthat-cl Calls*">2066</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Calls*("proc3", proc)]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>63.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Callsstar="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Valid. 2 constants, suchthat-cl Calls*">2067</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Calls*("proc3", "proc1")]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>73.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" UnnamedVar="1" SuchThat="1" CondNum="3" RelNum="0" comment="Invalid. Case sensitive, suchthat-cl UsesP">2068</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that uses(proc, v)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>67.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" UnnamedVar="1" Uses="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid. Wrong argument, suchthat-cl UsesP">2069</id><querystr><![CDATA[procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Uses(proc1, proc2)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>64.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" UnnamedVar="1" Uses="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid. Wrong argument, suchthat-cl UsesP">2070</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Uses(proc, s)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>66.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" UnnamedVar="1" Uses="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid. Wrong argument, suchthat-cl UsesP">2071</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Uses(proc, cl)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>74.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" UnnamedVar="1" Uses="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid. Wrong argument, suchthat-cl UsesP">2072</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Uses(proc, r)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>63.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" UnnamedVar="1" Uses="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid. Wrong argument, suchthat-cl UsesP">2073</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Uses(proc, p)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>65.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" UnnamedVar="1" Uses="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid. Wrong argument, suchthat-cl UsesP">2074</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Uses(proc, c)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>63.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" UnnamedVar="1" Uses="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid. Wrong argument, suchthat-cl UsesP">2075</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Uses(proc, w)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>77.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" UnnamedVar="1" Uses="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid. Wrong argument, suchthat-cl UsesP">2076</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Uses(proc, ifs)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>70.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" UnnamedVar="1" Uses="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid. Wrong argument, suchthat-cl UsesP">2077</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Uses(proc, a)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>66.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" UnnamedVar="1" Uses="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid. Wrong argument, suchthat-cl UsesP">2078</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Uses(proc, n)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>66.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" UnnamedVar="1" Uses="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid. Wrong argument, suchthat-cl UsesP">2079</id><querystr><![CDATA[procedure proc; call cl; variable v1, v2; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Uses(v1, v2)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>78.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" UnnamedVar="1" Uses="1" SuchThat="1" CondNum="4" RelNum="1" comment="Valid. Wrong argument for UsesP, but correct argument for UsesS, suchthat-cl UsesP">2080</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Uses(s, v)]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>85.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" UnnamedVar="1" Uses="1" SuchThat="1" CondNum="4" RelNum="1" comment="Valid. Wrong argument for UsesP, but correct argument for UsesS, suchthat-cl UsesP">2081</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Uses(cl, v)]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>86.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" UnnamedVar="1" Uses="1" SuchThat="1" CondNum="4" RelNum="1" comment="Valid. Wrong argument for UsesP, but correct argument for UsesS, suchthat-cl UsesP">2082</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Uses(r, v)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>86.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" UnnamedVar="1" Uses="1" SuchThat="1" CondNum="4" RelNum="1" comment="Valid. Wrong argument for UsesP, but correct argument for UsesS, suchthat-cl UsesP">2083</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Uses(p, v)]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>82.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" UnnamedVar="1" Uses="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid. Wrong argument, suchthat-cl UsesP">2084</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Uses(c, v)]]></querystr>
+<stuans>TRUE</stuans>
+<correct>FALSE</correct>
+<time_taken>93.000000</time_taken>
+<failed>
+<missing>FALSE</missing>
+<additional>TRUE</additional>
+<summary>
+<expected>1</expected>
+<matched>0</matched>
+<missing>1</missing>
+<additional>1</additional>
+</summary>
+</failed>
+</query>
+<query>
+<id ReturnBoolean="1" UnnamedVar="1" Uses="1" SuchThat="1" CondNum="4" RelNum="1" comment="Valid. Wrong argument for UsesP, but correct argument for UsesS, suchthat-cl UsesP">2085</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Uses(w, v)]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>84.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" UnnamedVar="1" Uses="1" SuchThat="1" CondNum="4" RelNum="1" comment="Valid. Wrong argument for UsesP, but correct argument for UsesS, suchthat-cl UsesP">2086</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Uses(ifs, v)]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>80.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" UnnamedVar="1" Uses="1" SuchThat="1" CondNum="4" RelNum="1" comment="Valid. Wrong argument for UsesP, but correct argument for UsesS, suchthat-cl UsesP">2087</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Uses(a, v)]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>72.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" UnnamedVar="1" Uses="1" SuchThat="1" CondNum="4" RelNum="1" comment="Valid. Wrong argument for UsesP, but correct argument for UsesS, suchthat-cl UsesP">2088</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Uses(n, v)]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>76.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" UnnamedVar="1" Uses="1" SuchThat="1" CondNum="4" RelNum="1" comment="Valid. Extra space, suchthat-cl UsesP">2089</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Uses (proc, v)]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>62.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" UnnamedVar="3" Uses="1" SuchThat="1" CondNum="6" RelNum="1" comment="Invalid. 2 wildcards, suchthat-cl UsesP">2090</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Uses(_, _)]]></querystr>
+<stuans>FALSE</stuans>
+<correct></correct>
+<time_taken>57.000000</time_taken>
+<failed>
+<missing></missing>
+<additional>FALSE</additional>
+<summary>
+<expected>0</expected>
+<matched>0</matched>
+<missing>0</missing>
+<additional>1</additional>
+</summary>
+</failed>
+</query>
+<query>
+<id ReturnBoolean="1" UnnamedVar="2" Uses="1" SuchThat="1" CondNum="5" RelNum="1" comment="Invalid. 1 wildcard 1 synonym, suchthat-cl UsesP">2091</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Uses(_, v)]]></querystr>
+<stuans>FALSE</stuans>
+<correct></correct>
+<time_taken>68.000000</time_taken>
+<failed>
+<missing></missing>
+<additional>FALSE</additional>
+<summary>
+<expected>0</expected>
+<matched>0</matched>
+<missing>0</missing>
+<additional>1</additional>
+</summary>
+</failed>
+</query>
+<query>
+<id ReturnBoolean="1" UnnamedVar="2" Uses="1" SuchThat="1" CondNum="5" RelNum="1" comment="Invalid. 1 wildcard 1 constant, suchthat-cl UsesP">2092</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Uses(_, "ee")]]></querystr>
+<stuans>FALSE</stuans>
+<correct></correct>
+<time_taken>61.000000</time_taken>
+<failed>
+<missing></missing>
+<additional>FALSE</additional>
+<summary>
+<expected>0</expected>
+<matched>0</matched>
+<missing>0</missing>
+<additional>1</additional>
+</summary>
+</failed>
+</query>
+<query>
+<id ReturnBoolean="1" UnnamedVar="2" Uses="1" SuchThat="1" CondNum="5" RelNum="1" comment="Valid. 1 synonym 1 wildcard, suchthat-cl UsesP">2093</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Uses(proc, _)]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>58.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" UnnamedVar="2" Uses="1" SuchThat="1" CondNum="5" RelNum="1" comment="Valid. 1 constant 1 wildcard, suchthat-cl UsesP">2094</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Uses("proc3", _)]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>58.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" UnnamedVar="2" Uses="1" SuchThat="1" CondNum="5" RelNum="1" comment="Valid. 1 constant 1 wildcard, suchthat-cl UsesP">2095</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Uses("proc100", _)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>60.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" UnnamedVar="1" Uses="1" SuchThat="1" CondNum="4" RelNum="1" comment="Valid. 2 synonyms, suchthat-cl UsesP">2096</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Uses(proc, v)]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>64.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" UnnamedVar="1" Uses="1" SuchThat="1" CondNum="4" RelNum="1" comment="Valid. 1 synonym 1 constant, suchthat-cl UsesP">2097</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Uses(proc, "ee")]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>70.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" UnnamedVar="1" Uses="1" SuchThat="1" CondNum="4" RelNum="1" comment="Valid. 1 constant 1 synonym, suchthat-cl UsesP">2098</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Uses("proc3", v)]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>69.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" UnnamedVar="1" Uses="1" SuchThat="1" CondNum="4" RelNum="1" comment="Valid. 2 constants, suchthat-cl UsesP">2099</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Uses("proc3", "ee")]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>62.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" UnnamedVar="1" Uses="1" SuchThat="1" CondNum="4" RelNum="1" comment="Valid. 2 constants, suchthat-cl UsesP">2100</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Uses("proc100", "zz")]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>62.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" UnnamedVar="1" SuchThat="1" CondNum="3" RelNum="0" comment="Invalid. Case sensitive, suchthat-cl ModifiesP">2101</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that modifies(proc, v)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>62.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Modifies="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid. Wrong argument, suchthat-cl ModifiesP">2102</id><querystr><![CDATA[procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Modifies(proc1, proc2)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>63.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Modifies="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid. Wrong argument, suchthat-cl ModifiesP">2103</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Modifies(proc, s)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>65.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Modifies="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid. Wrong argument, suchthat-cl ModifiesP">2104</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Modifies(proc, cl)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>63.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Modifies="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid. Wrong argument, suchthat-cl ModifiesP">2105</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Modifies(proc, r)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>61.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Modifies="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid. Wrong argument, suchthat-cl ModifiesP">2106</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Modifies(proc, p)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>61.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Modifies="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid. Wrong argument, suchthat-cl ModifiesP">2107</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Modifies(proc, c)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>59.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Modifies="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid. Wrong argument, suchthat-cl ModifiesP">2108</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Modifies(proc, w)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>59.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Modifies="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid. Wrong argument, suchthat-cl ModifiesP">2109</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Modifies(proc, ifs)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>58.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Modifies="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid. Wrong argument, suchthat-cl ModifiesP">2110</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Modifies(proc, a)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>64.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Modifies="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid. Wrong argument, suchthat-cl ModifiesP">2111</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Modifies(proc, n)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>61.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Modifies="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid. Wrong argument, suchthat-cl ModifiesP">2112</id><querystr><![CDATA[procedure proc; call cl; variable v1, v2; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Modifies(v1, v2)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>61.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Modifies="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Valid. Wrong argument for ModifiesP, but correct argument for ModifiesS, suchthat-cl ModifiesP">2113</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Modifies(s, v)]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>71.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Modifies="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Valid. Wrong argument for ModifiesP, but correct argument for ModifiesS, suchthat-cl ModifiesP">2114</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Modifies(cl, v)]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>64.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Modifies="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Valid. Wrong argument for ModifiesP, but correct argument for ModifiesS,, suchthat-cl ModifiesP">2115</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Modifies(r, v)]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>62.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Modifies="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Valid. Wrong argument for ModifiesP, but correct argument for ModifiesS, suchthat-cl ModifiesP">2116</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Modifies(p, v)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>60.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Modifies="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid. Wrong argument, suchthat-cl ModifiesP">2117</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Modifies(c, v)]]></querystr>
+<stuans>TRUE</stuans>
+<correct>FALSE</correct>
+<time_taken>62.000000</time_taken>
+<failed>
+<missing>FALSE</missing>
+<additional>TRUE</additional>
+<summary>
+<expected>1</expected>
+<matched>0</matched>
+<missing>1</missing>
+<additional>1</additional>
+</summary>
+</failed>
+</query>
+<query>
+<id ReturnBoolean="1" Modifies="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Valid. Wrong argument for ModifiesP, but correct argument for ModifiesS, suchthat-cl ModifiesP">2118</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Modifies(w, v)]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>60.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Modifies="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Valid. Wrong argument for ModifiesP, but correct argument for ModifiesS, suchthat-cl ModifiesP">2119</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Modifies(ifs, v)]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>62.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Modifies="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Valid. Wrong argument for ModifiesP, but correct argument for ModifiesS,, suchthat-cl ModifiesP">2120</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Modifies(a, v)]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>61.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Modifies="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Valid. Wrong argument for ModifiesP, but correct argument for ModifiesS, suchthat-cl ModifiesP">2121</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Modifies(n, v)]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>69.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Modifies="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Valid. Extra space, suchthat-cl ModifiesP">2122</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Modifies (proc, v)]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>70.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Modifies="1" UnnamedVar="3" SuchThat="1" CondNum="6" RelNum="1" comment="Invalid. 2 wildcards, suchthat-cl ModifiesP">2123</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Modifies(_, _)]]></querystr>
+<stuans>FALSE</stuans>
+<correct></correct>
+<time_taken>62.000000</time_taken>
+<failed>
+<missing></missing>
+<additional>FALSE</additional>
+<summary>
+<expected>0</expected>
+<matched>0</matched>
+<missing>0</missing>
+<additional>1</additional>
+</summary>
+</failed>
+</query>
+<query>
+<id ReturnBoolean="1" Modifies="1" UnnamedVar="2" SuchThat="1" CondNum="5" RelNum="1" comment="Invalid. 1 wildcard 1 synonym, suchthat-cl ModifiesP">2124</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Modifies(_, v)]]></querystr>
+<stuans>FALSE</stuans>
+<correct></correct>
+<time_taken>59.000000</time_taken>
+<failed>
+<missing></missing>
+<additional>FALSE</additional>
+<summary>
+<expected>0</expected>
+<matched>0</matched>
+<missing>0</missing>
+<additional>1</additional>
+</summary>
+</failed>
+</query>
+<query>
+<id ReturnBoolean="1" Modifies="1" UnnamedVar="2" SuchThat="1" CondNum="5" RelNum="1" comment="Invalid. 1 wildcard 1 constant, suchthat-cl ModifiesP">2125</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Modifies(_, "ee")]]></querystr>
+<stuans>FALSE</stuans>
+<correct></correct>
+<time_taken>58.000000</time_taken>
+<failed>
+<missing></missing>
+<additional>FALSE</additional>
+<summary>
+<expected>0</expected>
+<matched>0</matched>
+<missing>0</missing>
+<additional>1</additional>
+</summary>
+</failed>
+</query>
+<query>
+<id ReturnBoolean="1" Modifies="1" UnnamedVar="2" SuchThat="1" CondNum="5" RelNum="1" comment="Valid. 1 synonym 1 wildcard, suchthat-cl ModifiesP">2126</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Modifies(proc, _)]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>61.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Modifies="1" UnnamedVar="2" SuchThat="1" CondNum="5" RelNum="1" comment="Valid. 1 constant 1 wildcard, suchthat-cl ModifiesP">2127</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Modifies("proc3", _)]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>60.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Modifies="1" UnnamedVar="2" SuchThat="1" CondNum="5" RelNum="1" comment="Valid. 1 constant 1 wildcard, suchthat-cl ModifiesP">2128</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Modifies("proc100", _)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>59.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Modifies="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Valid. 2 synonyms, suchthat-cl ModifiesP">2129</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Modifies(proc, v)]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>62.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Modifies="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Valid. 1 synonym 1 constant, suchthat-cl ModifiesP">2130</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Modifies(proc, "cc")]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>59.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Modifies="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Valid. 1 constant 1 synonym, suchthat-cl ModifiesP">2131</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Modifies("proc3", v)]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>64.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Modifies="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Valid. 2 constants, suchthat-cl ModifiesP">2132</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Modifies("proc3", "cc")]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>66.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Modifies="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Valid. 2 constants, suchthat-cl ModifiesP">2133</id><querystr><![CDATA[procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n; Select BOOLEAN such that Modifies("proc100", "zz")]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>67.000000</time_taken>
+<passed/>
+</query>
+</queries>
+</test_results>

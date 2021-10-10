@@ -1,0 +1,675 @@
+procedure chengyi {
+    one = 1;
+    two = 2;
+    three = 3;
+    four = 4;
+    five = 5;
+    if (six == 6) then {
+        seven = one + two + four;
+        eight = one + (two + five);
+        nine = two + three + four;
+    } else {
+        ten = nine + one – two;
+        eleven = ten + one;
+        twelve = eleven + one;
+        while (thirteen == 13) {
+        while (fourteen == 14) {
+        read eleven;
+        sixteen = fifteen - eleven + four - eight + fifteen;
+        seventeen = seventeen;
+    }
+    eighteen = 18;
+    while (nineteen == 19) {
+        twenty = 20 / 10 + eighteen;
+        twentyone = twentytwo - one;
+        twentytwo = twentyone + one;
+    }
+        twentythree = twentythree / one;
+    twentyfour = twentynine - five;
+                    if (twentyfive == 25) then {
+        if (twentysix == 26) then {
+                twentyseven = twentyfour + five;
+        } else {
+                                twentyeight = twentysix + two;
+        twentynine = 29;
+        }
+    } else {
+        thirty = 30;
+}
+}
+}
+}
+
+
+procedure chengyi2 {
+    call chengyi;
+    thirtytwo = twentynine + two;
+    thirtythree = forty - seven;
+    thirtyfour = gender;
+    thirtyfive = height;
+    thirtysix = covid;
+    thirtyseven = age;
+    thirtyeight = weight;
+    call covid;
+    forty = two + life;
+            if (fortyone == sar) {
+        fortytwo = sar;
+        read fortythree;
+        fortyfour = fortythree + one;
+    } else {
+        fortyfive = 45;
+        fortyfive = 46;
+        fortyseven = fortyfive + 2;
+        fortyfive = 48;
+        fortynine = fortyfive + 4;
+        fifty = fortyfive + 5;
+        while (fiftyone == 51) {
+            fiftytwo = 52;
+            fiftytwo = 53;
+            fiftytwo = 54;
+            fiftyfive = fiftytwo + three;
+            fiftysix = fiftyeight - 2;
+            fiftyseven = fiftytwo + 5;
+            fiftyeight = fiftysix + 2;
+            fiftynine = fiftynine + 0;
+            call chengyi;
+        }
+    }
+}
+
+procedure Bel {
+    gender = 1;
+    height = 150 + one + two + three + four;
+    age = 22;
+    weight = 50;
+    year = 2020;
+    iq = 200;
+    while (vaccine == 0) {
+    call    covid;
+    }
+    print age;
+    print weight; //70
+    print iq;
+    call chengyi2;
+}
+
+procedure covid {
+    if (vaccine == 1) then {
+        year = year + 1;
+        age = age + 1;
+    } else {
+        while ((weight < 70) && ( iq > 100)) {
+        call vaccine;
+        weight = weight + 1;
+            iq = (iq / 2) + age;
+        }
+	}
+}
+
+procedure vaccine {
+    while (iq >= 180) { //80
+        iq = iq – 1;
+        if (iq == iq) then {
+            iq = iq – 5;
+        } else {
+            iq = iq;
+        }
+    }
+    if (iq / 3 == 0) {
+        vaccine = 1;
+        print vaccine;
+        print iq;
+        } else {
+        iq = iq + gender * age;
+        vaccine = 0; //90
+    }
+    }
+
+
+
+Procedure jeunhoe {
+    if (testing == hard) then {
+        give = chance;
+        call zeke;
+        Response = None;
+    } else {
+    source = 500;
+    if (x = a + b + c + d) then {
+        b = a + b + c;
+        v = d + (a + b + c) ;
+        if (query == slow) then {
+            call grant; // 100
+
+            if (query = too_fast) then {
+                call grant;
+                while (not_enough == tests) {
+                pattern = 23 – x;
+                tests = tests + 1;
+                    while (damn == sian) {
+                        pattern = x – 23;
+                            pattern = x – 23 / 2;
+                            pattern = y / x – 23;
+                            read pattern; //110
+                            pattern =  x / x – 23 / y;
+                            pattern = x / (x – 23) / y;
+                            pattern = x – o – 23;
+                            pattern = pattern;
+                            pattern = x – x – 23 – x – x – x – 23;
+                            pattern = (x - (23 – x));
+                            pattern = x – 2;
+                        }
+                        tessellation = pattern;
+                        call Pattern1;
+                        call Pattern2; //120
+                    }
+                } else {
+                    read query;
+                }
+            } else {
+                print money;
+                print IHADENOUGH;
+            }
+        } else {
+            c = 1;
+        }
+    }
+    2020 = trump;
+    years = years + 4;
+    print trumpPLS;
+}
+
+procedure jeunhoe2 {
+    call grant;
+    call jeunhoe;
+    call zeke; //130
+}
+
+procedure bubbletea {
+    while (sugar == low) {
+        sugar = sugar + 1;
+        while(low == pearls) {
+            pearls = pearls + 1;
+            while(straw == plastic) {
+                read straw;
+                while(weight == high)
+                    print drink;
+                    while(trash == bin) {
+                        read trump; //140
+                        while(covid == around) {
+                            call vaccine;
+                            while (coffee >= bubbletea) {
+                                read milk;
+                                while (bubbletea = best) {
+                                    print yay;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+procedure grant {
+    presenter = me;
+    slides_maker = me;
+    me = grant;
+    leader = me; // 150
+    QueryEvaluator = me;
+    QueryOptimiser = me;
+}
+
+procedure Zeke {
+    call bubbletea;
+    if ((x < x) || (x > x)) then {
+        pattern = money + IHADENOUGH;
+        print  money;
+        why = am + i + testing+ ic;
+        call vaccine;
+        while ((why == not + sucks) && (to + be * me)) {
+            am = pattern + ic; // 160
+            read i;
+            while (i + want == 4) {
+                if ((gender < 1) && (gender < 3)) then {
+                    trump = 2020 ;
+                    print pattern;
+                    if ((gender == age) < height) != weight) == iq ) then {
+                        gender = studies + age – iq * gender % why;
+                        read  why;
+                        age = 5 + btw + one - fortytwo;
+                        call pattern2; // 170
+                    } else {
+                        thirtyone  = trump + twentysix;
+                        trump = iq / 0 * 200000000 /thirteen;
+                        seventh = pattern + one;
+                        call pattern1;
+                    }
+                    while (twentyone(why <=(eighth >= (me != (first < (pattern > (five == 7) )))))){
+                        seventh = someone + get + me + out + height + seventh;
+                        read  me;
+                        read  height;
+                    }
+                    tenth = me + a – v + d + eighth - twentytwo;
+                } else {
+                    tests =  tests; //180
+                    read patten;
+                    help = notFound + help;
+                    call chengyi1;
+                    while ((((help == 9) < 10) > 11) < 12) {
+                        while(10 == 11) {
+                            while(twentyone < twentytwo) {
+                                hi = hello;
+                            }
+                            if (x < xd + y)  then {
+                                call covid;
+                            } else {
+                                call chengyi2; //190
+                            }
+                        }
+                    }
+                }
+                print = call;
+                call pattern2;
+                print this;
+                read = procedure * print - four;
+                if (((x <= x) && (x >= x)) || (x <= x)) && (((x <= x) || (x >= x)) && (x <= x)))then {
+                    hello = trump + money +chance + hello;
+                } else {
+                    send = help + fourth;
+                }
+            }
+        }
+    } else {
+        call vaccine;
+        pattern = one + two + three;
+        sixth = print + read + procedure + if + while + else; //200
+        if (pattern == pattern) then {
+            call bubbletea;
+            print read;
+            call pattern2;
+            sixth = 6;
+        } else {
+            read print;
+            second = pattern + pattern1 + pattern2;
+            while(team == (grant + ( zeke + ( jeun + (chengyi + (bel + (ee + ter + (jon))))))) {
+                done  = pattern + next + follow + parent + next +affects + extension  + modifies + uses;
+            }
+        }
+    }
+}
+
+procedure Pattern1 {
+    first = ( (2436543 % 123) / (5 + 81)) * 81 - (8 * 9); //210
+    second = first % 23;
+    third = (second - 2) * (first % 23);
+    forth = second - 2 * first;
+    fifth = third * second - 2;
+}
+
+procedure Pattern2 {
+    sixth = fifth + (forth - (third * second));
+    seventh = fifth;
+    eighth = 8 * (9 + (sixth - seventh) / (first % 23));
+    ninth = 8 * (9 + eighth) + second - 2;
+    tenth = ninth * 10;
+}
+
+procedure Example {
+  x = 2; //220
+  z = 3;
+  i = 5;
+  while ((8-D) > ( Y )) {
+    x = x - 1;
+    if ( (8-D) > ( Y ) ) then {
+      o = o - 1; }
+    else {
+      y = z + x; }
+    z = z + x + i;
+    call q; //230
+    i = i - 1; }
+  call p; }
+
+procedure p {
+  if (x<0) then {
+    while (i>0) {
+      x = z * 3 + 2 * y;
+      call q;
+      i = i - 1; }
+    x = x + 1;
+    z = x + z; }
+  else {
+    z = 1; } //240
+  z = z + x + i; }
+
+procedure q {
+  if (x==1) then {
+    z = x + 1; }
+  else {
+    x = z + x; } } 
+procedure AssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfter AssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfter AssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfter {
+    A = 1; 
+    B = 2; 
+    C = 3; 
+    D = 4; 
+    E = 5; 
+    F = 6; 
+    G = 7; //250
+    H = 8; 
+    I = 9; 
+    J = 10; 
+    K = 11; 
+    L = 12; 
+    M = 13; 
+    N = 14; 
+    O = 15; 
+    P = 16; 
+    Q = 17; //260 
+    R = 18; 
+    S = 19; 
+    T = 20; 
+    U = 21; 
+    V = 22; 
+    W = 23; 
+    X = 24; 
+    Y = 25; 
+    Z = 26; 
+    now = I;// 270 
+    know = my; 
+    A = B + C; 
+    next = time; 
+    won = T; 
+    U = sing; 
+    W = I; 
+    T = H; 
+    me = weeeeee; 
+} 
+
+ 
+
+procedure BohemianRhapsody { 
+    while (is == this + the + real + life) { 
+        if (is == this + just + fantasy) then { //280
+            call d; 
+            in = a; 
+            land = slide; 
+            while (no * escape < from * reality) { 
+                open = your + eyes; 
+                look = up + to * (the % skies + (and / see)); 
+                if (im != just) then { 
+                    a = poor * boy; 
+                    i      = need; 
+                    no = sympathy; //290
+                    call AssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfter; 
+                } else { 
+                    Be = cause; 
+                    im = (easy + come) / (easy + go); 
+                } 
+                Little = high; 
+                Little = low; 
+            } 
+        } else { 
+            Any = way + the + wind + blows / doesnt + (matter * to) + me;  
+        } 
+    } 
+    to = me; 
+} 
+
+procedure patternWhile {
+    while (x == 1) {
+        a = 2; 
+    } 
+    while (3 == 3) { //300
+        a = 4; 
+    } 
+    while (v == x + 5) { 
+        while (x == 6) { 
+            while (v == 7) { 
+                while (c == 8) { 
+                    y = 9; 
+                    call BohemianRhapsody; 
+                } 
+            } 
+        }        
+        while (v == 10) { 
+            print x; 
+        } 
+    } 
+} 
+
+procedure patternIf { 
+    if (x == 1) then { //310
+        a = 2; 
+    } else { 
+        a = 3; 
+    } 
+    if (4 == 4) then { 
+        a = 5; 
+    } else {
+        a = 6; 
+    } 
+    if (x == 7) then {  
+        c = 8;  
+        if (c == 9) then {      
+            v = 10; 
+        } else {    
+            if (v == 11) then { //320
+                a = 12; 
+            } else {    
+                v = 13; 
+                if (c == 14) then { 
+                    c = 15; 
+                } else {        
+                    x = 16;     
+                }   
+            }   
+        }   
+    } else {    
+        v = 17; 
+        if (x == a) then { 
+            a = 19;     
+        } else {    
+            if (x == a + 20) then { 
+                x = 21;     //330
+            } else { 
+                v = 22;    
+                call BohemianRhapsody;    
+            }
+        }
+    }    
+} 
+    
+ 
+
+procedure while { 
+    while (first == second) {
+        while = if;     
+    }   
+    while (second == third) {       
+        if = procedure; 
+    }   
+    while ((((((((((third == fourth))))))))))) { 
+        procedure = print; 
+    } 
+    while (fourth == fifth) { 
+        print = if; //340
+    } 
+    while (fifth == sixth) { 
+        if = read; 
+    } 
+    while (sixth == seventh) { 
+        read = assign; 
+    }
+} 
+
+ 
+
+procedure Bill { 
+    x = 5;
+    call Mary; 
+    y = x + 6;
+    x = 5;
+    z = x * y + 2; 
+    call BohemianRhapsody; //350
+} 
+
+procedure Mary { 
+    y = x * 3; 
+    call John; 
+    z = x + y;  
+} 
+
+procedure John { 
+    if (i > 0) then { 
+        x = x + z; }  
+    else { 
+        y = x * y; }  
+    } 
+
+
+procedure B { 
+    call Bill; 
+    call Mary; 
+    call John;  
+} 
+
+ 
+
+procedure C { 
+    d = ae; //360
+    a = bf; 
+    b = cg; 
+    c = d;  
+} 
+
+procedure FreddieMercury {
+    call mAmA;
+    Just = killed;
+    A = man;
+    Put = a;
+    Gun = against;
+    His = head; 
+    Pulled = my; //370 
+    Trigger = now;
+    He = is + dead;
+}
+
+
+
+procedure mAmA {
+    call = your + father la;
+    Dun = disturb / me;
+    call pApA;
+    call pApA;
+    call pApA;
+    call pApA;
+    call pApA; 
+    call pApA; //380
+    call pApA;
+    call pApA;
+    call pApA;
+    call pApA;
+    call pApA;
+    call pApA;
+    call pApA;
+    call pApA;
+    call pApA; 
+    call pApA; //390
+    call pApA;
+}
+
+
+
+procedure pApA {
+    Ask = me * for * what * sia;
+    Go = be;
+    Good = boy + and;
+    read = your * book;
+    while (you == obedient) {
+        read yourbook;
+    }
+    Eh = ah + boy + ah;
+    Can = help * me; 
+    print = this + cpfForm; //400
+    Wait = la;
+    I = damn + busy / now;
+    Later = can;
+    You = better;
+    print = now;
+    If = not;
+    I = smack + you;
+    You = hear % me;
+    I = said; 
+    print now; //400
+    if (father == angry) then {
+        print cpfForm;
+    } else {
+        Continue = playing;
+        Computer = game;
+        And = dun;
+        read book;
+    }
+}
+
+procedure OneDirection {
+    you = are;
+    insecure = dont;
+    know = what; 
+    print for; //420
+    you = are;
+    turning = heads;
+    when = you;
+    walk = through;
+    the = door;
+    if (oor = oor) then {
+        dont = need;
+        make = up;
+        to = cover; 
+        up = being; //430
+        the = way;
+        that = you;
+        are = is;
+        print enough;
+    } else {
+        everyone = else;
+        in = the;
+        print room;
+        print can;
+        print see; 
+        print it; //440
+        read everyone;
+        read else;
+        read but;
+        read you;
+    }
+    baby = you;
+    light = up;
+    my = world;
+    like = nobody;
+    else = the; 
+    way = that; //450
+    you = flip;
+    your = hair;
+    gets = me;
+    overwhelmed = the;
+    way = you;
+    smile = at;
+    the = crowd;
+    it = aint;
+    hard = to; 
+    tell = you; //460
+    dont = know;
+    you = dont;
+    know = youre;
+    print BEAUTIFUL;
+    oh = oh * oh;
+    thats = what;
+    makes = you;
+    call BEAUTIFUL;
+}
+
+procedure BEAUTIFUL {
+    no = one; 
+    print Bye; //470
+}
+

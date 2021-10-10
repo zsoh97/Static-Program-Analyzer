@@ -1,0 +1,98 @@
+procedure proc1 {
+  ff = 00;  #01
+  read gg;  #02
+  while (ff != aa) {  #03
+    dd = 00;  #04
+    while (dd >= aa) {  #05
+      dd = dd / 33;  #06
+      if (gg < 22) then {  #07
+        while (ff < dd) {  #08
+          if (ff < dd / 55) then {  #09
+            call proc6;  #10
+          } else {
+            call proc4;   #11
+	        }
+        }
+        while (dd > ff) {  #12
+          print gg;  #13
+        }
+        aa = 22;  #14
+      } else {
+        dd = 33 + dd;  #15
+      }
+      aa = bb * dd;  #16
+    }
+    ff = ff + 33;  #17
+  }
+  print ff;  #18
+}
+
+procedure proc2 {
+  read aa;  #19
+  aa = aa + bb;  #20
+  call proc4;  #21
+  while (ee >= 00) {  #22
+    if (aa > 00) then {  #23
+      cc = cc % bb;  #24
+    } else {
+      cc = cc / dd;  #25
+    }
+    call proc1;  #26
+  }
+  ee = 66;  #27
+}
+
+procedure proc3 {
+  cc = ee + 44;  #28
+  if (cc > 44) then {  #29
+    call proc1;  #30
+  } else {
+    call proc2;  #31
+  }
+  print bb;  #32
+}
+
+procedure proc4 {
+  if (cc % 55 == 00) then {  #33
+    call proc7;  #34
+  } else {
+    call proc8;  #35
+  }
+}
+
+procedure proc5 {
+  call proc3;  #36
+  if (aa == 33) then {  #37
+    call proc7;  #38
+    aa = cc + 22;  #39
+  } else {
+    call proc1;  #40
+    ee = 00;  #41
+  }
+  cc = 00;  #42
+}
+
+procedure proc6 {
+  print cc;  #43
+  while (cc == 22) {  #44
+    call proc7;  #45
+    ff = ee * 55;  #46
+  }
+  call proc4;  #47
+}
+
+procedure proc7 {
+  cc = 33 % (cc + 44) * 55;  #48
+  call proc8;  #49
+}
+
+procedure proc8 {
+  print aa;  #50
+  read aa;  #51
+  print bb;  #52
+  read bb;  #53
+  print cc;  #54
+  read cc;  #55
+  print dd;  #56
+  read dd;  #57
+}

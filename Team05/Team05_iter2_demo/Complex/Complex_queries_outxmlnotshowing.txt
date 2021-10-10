@@ -1,0 +1,20 @@
+1 - Testing one common synonym and multiple "and" and Uses
+stmt s1, s2; variable v;
+Select <s1, v> such that Uses("proc1", v) and Uses("proc2", v) and Uses(s1, v) and Uses(s2, v)
+12 fortyfour, 12 fortyone, 12 fortysix, 12 fortytwo, 12 sixtyfour, 12 sixtyone, 12 sixtythree, 12 sixtytwo, 17 sixtyfour, 17 sixtyone, 17 sixtythree, 17 sixtytwo, 2 fortyfour, 2 fortyone, 2 fortysix, 2 fortytwo, 2 sixtyfour, 2 sixtyone, 2 sixtythree, 2 sixtytwo, 22 fortyfour, 22 fortyone, 22 fortytwo, 22 sixtyfour, 22 sixtyone, 22 sixtythree, 22 sixtytwo, 23 fortyfour, 23 fortyone, 23 fortysix, 23 fortytwo, 23 sixtyfour, 23 sixtyone, 23 sixtythree, 24 sixtyfour, 24 sixtyone, 24 sixtythree, 24 sixtytwo, 26 sixtyfour, 26 sixtyone, 26 sixtythree, 22 fortysix, 26 sixtytwo, 3 fortyfour, 3 fortyone, 3 fortysix, 3 fortytwo, 3 sixtyfour, 3 sixtyone, 3 sixtythree, 3 sixtytwo, 41 fortyfour, 41 fortyone, 41 sixtyfour, 41 sixtyone, 41 sixtythree, 41 sixtytwo, 42 fortyfour, 42 fortysix, 42 fortytwo, 42 sixtyfour, 42 sixtyone, 42 sixtythree, 43 sixtyfour, 43 sixtyone, 23 sixtytwo, 41 fortysix, 41 fortytwo, 42 sixtytwo, 43 sixtythree, 43 sixtytwo, 44 fortyfour, 44 fortysix, 46 fortysix, 49 sixtyfour, 49 sixtyone, 49 sixtythree, 49 sixtytwo, 5 fortyfour, 5 fortyone, 5 fortysix, 5 fortytwo, 5 sixtyfour, 5 sixtyone, 5 sixtythree, 5 sixtytwo, 61 sixtyfour, 61 sixtyone, 61 sixtythree, 61 sixtytwo, 62 sixtyfour, 62 sixtythree, 62 sixtytwo, 63 sixtythree, 63 sixtyfour, 64 sixtyfour, 7 fortyfour, 7 fortyone, 7 fortysix, 7 fortytwo, 7 sixtyfour, 7 sixtyone, 7 sixtythree, 7 sixtytwo, 9 fortyfour, 9 fortyone, 9 fortysix, 9 fortytwo, 9 sixtyfour, 9 sixtyone, 9 sixtythree, 9 sixtytwo
+5000
+2 - Testing NO common synonym and multiple "and" and Uses
+stmt s1, s2; variable v;
+Select s1 such that Uses("proc1", v) and Uses("proc2", v) and Uses(s1, v) and Uses(s2, v)
+2, 3, 5, 7, 9, 12, 17, 22, 23, 24, 26, 41, 42, 43, 44, 46, 49, 61, 62, 63, 64
+5000
+3 - Testing one common synonym and multiple "and" and Uses boolean
+stmt s1, s2; variable v;
+Select BOOLEAN such that Uses("proc1", v) and Uses("proc2", v) and Uses(s1, v) and Uses(s2, v)
+TRUE
+5000
+4 - Testing boolean NO common synonym and multiple "and" and Uses
+stmt s1, s2; variable v;
+Select BOOLEAN such that Uses("proc1", v) and Uses("proc2", v) and Uses(s1, v) and Uses(s2, v)
+TRUE
+5000

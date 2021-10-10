@@ -1,0 +1,78 @@
+<?xml-stylesheet type="text/xsl" href="analysis.xsl"?>
+<test_results>
+<info>
+<name>tests</name><parsing_time_taken>496.000000</parsing_time_taken>
+</info>
+<queries>
+<query>
+<id ReturnBoolean="1" With="1" CondNum="2" RelNum="0" comment="Find procedure with given name">1</id><querystr><![CDATA[procedure p; Select BOOLEAN with p.procName = "R"]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>64.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" With="1" CondNum="2" RelNum="0" comment="Find procedure with given name">2</id><querystr><![CDATA[procedure p; Select p with p.procName = "P"]]></querystr>
+<stuans>P</stuans>
+<correct>P</correct>
+<time_taken>102.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" With="1" CondNum="2" RelNum="0" comment="Find variable with given name">3</id><querystr><![CDATA[variable v; read r; Select r with v.varName = "a"]]></querystr>
+<stuans>1,2,3,30</stuans>
+<correct>1,2,3,30</correct>
+<time_taken>233.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" With="1" CondNum="2" RelNum="0" comment="Find variable with given name">4</id><querystr><![CDATA[variable v; print pt; Select pt with v.varName = "y"]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>104.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" With="1" CondNum="2" RelNum="0" comment="Find call-variable tuple with given name and stmt number">5</id><querystr><![CDATA[variable v; call cl; Select <cl, v> with v.varName = "a" and cl.stmt# = 4]]></querystr>
+<stuans>4 a</stuans>
+<correct>4 a</correct>
+<time_taken>98.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" With="1" CondNum="2" RelNum="0" comment="Find stmt with given number that does not exist">6</id><querystr><![CDATA[stmt s; Select s with s.stmt# = 13 and s.stmt# = 14]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>82.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" With="1" CondNum="2" RelNum="0" comment="Find constant with value">7</id><querystr><![CDATA[constant c; Select c with c.value = 15]]></querystr>
+<stuans>15</stuans>
+<correct>15</correct>
+<time_taken>76.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" With="1" CondNum="2" RelNum="0" comment="Find invalid constant with value">8</id><querystr><![CDATA[constant c; Select c with c.value = "a"]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>78.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" With="1" CondNum="2" RelNum="0" comment="Select stmt by constant value">9</id><querystr><![CDATA[constant c; stmt s; Select s with s.stmt#=c.value]]></querystr>
+<stuans>1,15,16,5,7</stuans>
+<correct>1,15,16,5,7</correct>
+<time_taken>95.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" With="1" CondNum="2" RelNum="0" comment="Select boolean by assignment stmt number">10</id><querystr><![CDATA[assign a; Select BOOLEAN with a.stmt# = 6]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>174.000000</time_taken>
+<passed/>
+</query>
+</queries>
+</test_results>

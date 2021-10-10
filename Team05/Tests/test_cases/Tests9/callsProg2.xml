@@ -1,0 +1,274 @@
+<?xml-stylesheet type="text/xsl" href="analysis.xsl"?>
+<test_results>
+<info>
+<name>tests9</name><parsing_time_taken>361.000000</parsing_time_taken>
+</info>
+<queries>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="All Calls">1</id><querystr><![CDATA[procedure p, q; Select p such that Calls(p, q)]]></querystr>
+<stuans>anotherProc,call,moreProc,procedure,procedure2,procedure4,procedure5,raymarch</stuans>
+<correct>procedure,raymarch,moreProc,anotherProc,procedure2,procedure4,procedure5,call</correct>
+<time_taken>78.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="All Called">2</id><querystr><![CDATA[procedure p, q; Select q such that Calls(p, q)]]></querystr>
+<stuans>finalFinalProc,procedure2,procedure,anotherProc,procedure3,call,lastProc,procedure5,moreProc</stuans>
+<correct>procedure,moreProc,anotherProc,procedure2,procedure3,procedure5,call,lastProc,finalFinalProc</correct>
+<time_taken>79.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" With="1" CondNum="4" RelNum="1" comment="Call, with procName clause">3</id><querystr><![CDATA[procedure p, q; Select p such that Calls(p, q) with q.procName = "procedure2"]]></querystr>
+<stuans>anotherProc,moreProc,raymarch</stuans>
+<correct>anotherProc,raymarch,moreProc</correct>
+<time_taken>80.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="Call check for finalProc, called">4</id><querystr><![CDATA[procedure p, q; Select p such that Calls(p, "finalProc")]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>86.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="Call check for finalProc, call">5</id><querystr><![CDATA[procedure p, q; Select q such that Calls("finalProc", q)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>81.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="Call check for finalFinalProc, called">6</id><querystr><![CDATA[procedure p, q; Select p such that Calls(p, "finalFinalProc")]]></querystr>
+<stuans>anotherProc</stuans>
+<correct>anotherProc</correct>
+<time_taken>85.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="Call check for finalFinalProc, call">7</id><querystr><![CDATA[procedure p, q; Select q such that Calls("finalFinalProc", q)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>99.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="Call check for raymarch, called">8</id><querystr><![CDATA[procedure p, q; Select p such that Calls(p, "raymarch")]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>118.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="Call check for raymarch, call">9</id><querystr><![CDATA[procedure p, q; Select q such that Calls("raymarch", q)]]></querystr>
+<stuans>moreProc,procedure2</stuans>
+<correct>procedure2,moreProc</correct>
+<time_taken>154.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="Call check for procedure2, called">10</id><querystr><![CDATA[procedure p, q; Select p such that Calls(p, "procedure2")]]></querystr>
+<stuans>anotherProc,moreProc,raymarch</stuans>
+<correct>raymarch,anotherProc,moreProc</correct>
+<time_taken>110.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="Call check for procedure2, call">11</id><querystr><![CDATA[procedure p, q; Select q such that Calls("procedure2", q)]]></querystr>
+<stuans>call</stuans>
+<correct>call</correct>
+<time_taken>134.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="Call check for moreProc, called">12</id><querystr><![CDATA[procedure p, q; Select p such that Calls(p, "moreProc")]]></querystr>
+<stuans>raymarch</stuans>
+<correct>raymarch</correct>
+<time_taken>196.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="Call check for moreProc, call">13</id><querystr><![CDATA[procedure p, q; Select q such that Calls("moreProc", q)]]></querystr>
+<stuans>anotherProc,procedure2</stuans>
+<correct>anotherProc,procedure2</correct>
+<time_taken>114.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="Call check for anotherProc, called">14</id><querystr><![CDATA[procedure p, q; Select p such that Calls(p, "anotherProc")]]></querystr>
+<stuans>moreProc</stuans>
+<correct>moreProc</correct>
+<time_taken>74.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="Call check for anotherProc, call">15</id><querystr><![CDATA[procedure p, q; Select q such that Calls("anotherProc", q)]]></querystr>
+<stuans>finalFinalProc,procedure2</stuans>
+<correct>finalFinalProc,procedure2</correct>
+<time_taken>83.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="Call check for call, called">16</id><querystr><![CDATA[procedure p, q; Select p such that Calls(p, "call")]]></querystr>
+<stuans>procedure2</stuans>
+<correct>procedure2</correct>
+<time_taken>85.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="Call check for call, call">17</id><querystr><![CDATA[procedure p, q; Select q such that Calls("call", q)]]></querystr>
+<stuans>procedure</stuans>
+<correct>procedure</correct>
+<time_taken>94.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="Call check for procedure, called">18</id><querystr><![CDATA[procedure p, q; Select p such that Calls(p, "procedure")]]></querystr>
+<stuans>call</stuans>
+<correct>call</correct>
+<time_taken>78.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="Call check for procedure, call">19</id><querystr><![CDATA[procedure p, q; Select q such that Calls("procedure", q)]]></querystr>
+<stuans>procedure3</stuans>
+<correct>procedure3</correct>
+<time_taken>79.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="Call check for procedure3, called">20</id><querystr><![CDATA[procedure p, q; Select p such that Calls(p, "procedure3")]]></querystr>
+<stuans>procedure</stuans>
+<correct>procedure</correct>
+<time_taken>78.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="Call check for procedure3, call">21</id><querystr><![CDATA[procedure p, q; Select q such that Calls("procedure3", q)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>83.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="Call check for procedure4, called">22</id><querystr><![CDATA[procedure p, q; Select p such that Calls(p, "procedure4")]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>83.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="Call check for procedure4, call">23</id><querystr><![CDATA[procedure p, q; Select q such that Calls("procedure4", q)]]></querystr>
+<stuans>lastProc,procedure5</stuans>
+<correct>procedure5,lastProc</correct>
+<time_taken>79.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="Call check for procedure5, called">24</id><querystr><![CDATA[procedure p, q; Select p such that Calls(p, "procedure5")]]></querystr>
+<stuans>procedure4</stuans>
+<correct>procedure4</correct>
+<time_taken>89.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="Call check for procedure5, call">25</id><querystr><![CDATA[procedure p, q; Select q such that Calls("procedure5", q)]]></querystr>
+<stuans>lastProc</stuans>
+<correct>lastProc</correct>
+<time_taken>77.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="Call check for lastProc, called">26</id><querystr><![CDATA[procedure p, q; Select p such that Calls(p, "lastProc")]]></querystr>
+<stuans>procedure4,procedure5</stuans>
+<correct>procedure5,procedure4</correct>
+<time_taken>80.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="Call check for lastProc, call">27</id><querystr><![CDATA[procedure p, q; Select q such that Calls("lastProc", q)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>79.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="Call check, BOOLEAN">28</id><querystr><![CDATA[procedure p, q; Select BOOLEAN such that Calls("procedure4", "procedure5")]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>78.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="Call check, BOOLEAN, synonym second">29</id><querystr><![CDATA[procedure p, q; Select BOOLEAN such that Calls("procedure4", q)]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>79.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="Called check, BOOLEAN, synonym first">30</id><querystr><![CDATA[procedure p, q; Select BOOLEAN such that Calls(p, "procedure5")]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>78.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Calls="1" UnnamedVar="2" SuchThat="1" CondNum="5" RelNum="1" comment="Call check, BOOLEAN, wildcard both">31</id><querystr><![CDATA[procedure p, q; Select BOOLEAN such that Calls(_, _)]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>82.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Calls="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Call check, BOOLEAN, wildcard second">32</id><querystr><![CDATA[procedure p, q; Select BOOLEAN such that Calls("procedure4", _)]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>81.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Calls="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Called check, BOOLEAN, wildcard first">33</id><querystr><![CDATA[procedure p, q; Select BOOLEAN such that Calls(_, "procedure5")]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>81.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="2" CondNum="4" RelNum="1" comment="Invalid version of 3, such that clause">34</id><querystr><![CDATA[procedure p, q; Select p such that Calls(p, q) such that q.procName = "procedure3"]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>79.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" With="1" CondNum="4" RelNum="1" comment="Invalid version of 3, with varName clause">35</id><querystr><![CDATA[procedure p, q; Select p such that Calls(p, q) with q.varName = "procedure3"]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>81.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" With="1" CondNum="4" RelNum="1" comment="Invalid version of 3, with value clause">36</id><querystr><![CDATA[procedure p, q; Select p such that Calls(p, q) with q.value = "procedure3"]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>81.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" With="1" CondNum="4" RelNum="1" comment="Invalid version of 3, with stmt# clause">37</id><querystr><![CDATA[procedure p, q; Select p such that Calls(p, q) with q.stmt# = "procedure3"]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>84.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" With="1" CondNum="4" RelNum="1" comment="Invalid version of 3, with stmt# clause">38</id><querystr><![CDATA[procedure p, q; Select p such that Calls(p, q) with q.stmt# = 1]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>81.000000</time_taken>
+<passed/>
+</query>
+</queries>
+</test_results>

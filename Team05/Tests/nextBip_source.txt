@@ -1,0 +1,159 @@
+procedure control {
+    x = 1;
+    read two;
+    print three;
+}
+
+procedure whileNoStmtAfter {
+    x = 4;
+    while (x == 5) {
+        call whileStmtAfter;
+        read seven;
+        print eight;
+    }
+}
+
+procedure whileStmtAfter {
+    while (x == 9) {
+        x = 10;
+        call ifNoStmtAfter;
+        x = 12;
+    }
+    read thirteen;
+    call ifNoStmtAfter;
+}
+
+
+procedure ifNoStmtAfter {
+    if (x == 15) then {
+        call control;
+        print seventeen;
+    } else {
+        call control;
+    }
+}
+
+procedure ifStmtAfter {
+    if (x == 19) then {
+        call ifNestedInWhileSameProcCalled;
+    } else {
+        call whileStmtAfter;
+    }
+    call whileNoStmtAfter;
+    x = 23;
+}
+
+procedure ifNestedInWhileSameProcCalled {
+    while (x == 24) {
+        read twenty5;
+        if (x == 26) then {
+            call whileStmtAfter;
+            print twentyeight;
+        } else {
+            read twentynine;
+            call whileStmtAfter;
+        }
+        print thirty1;
+    }
+}
+
+procedure ifNestedInWhileDiffProcCalled {
+    while (x == 32) {
+        if (x == 33) then {
+            x = 34;
+            call ifThenWhile;
+        } else {
+            x = 36;
+            call ifNoStmtAfter;
+        }
+    }
+    x = 38;
+}
+
+procedure whileNestedInWhile {
+    read thirtynine;
+    x =  forty;
+    while (x == 41) {
+        while (x == 42) {
+            x = 43;
+            read forty4;
+            call ifNestedInWhileDiffProcCalled;
+        }
+        call ifNestedInWhileSameProcCalled;
+
+    }
+}
+
+procedure ifThenWhile {
+    if (x == 47) then {
+        print forty8;
+        call whileStmtAfter;
+    } else {
+        call ifStmtAfter;
+        print fifty1;
+    }
+    print fifty2;
+    while (x == 53) {
+        call ifNoStmtAfter;
+        x = 55;
+    }
+}
+
+procedure whileThenIf {
+    while (x == 56) {
+        call ifNestedInWhileSameProcCalled;
+    }
+
+    if (x == 58) then {
+        call ifNestedInWhileDiffProcCalled;
+    } else {
+        call whileNoStmtAfter;
+    }
+}
+
+procedure complex {
+    print sixty1;
+    if (x == 62) then {
+        if (x == 63) then {
+            call whileThenIf;
+            x = 65;
+        } else {
+            read sixtysix;
+        }
+        x = 67;
+        read sixtyeight;
+        call whileNestedInWhile;
+    } else {
+        call ifStmtAfter;
+        while (x == 71) {
+            if (x == 72) then {
+                call ifThenWhile;
+                read seventyfour;
+                while (x == 75) {
+                    call whileNoStmtAfter;
+                    while (x == 77) {
+                        read seventyeight;
+                    }
+                }
+            } else {
+                print seventynine;
+            }
+        }
+        call whileStmtAfter;
+    }
+    call ifNestedInWhileDiffProcCalled;
+}
+
+procedure callAll {
+    call control;
+    call whileNoStmtAfter;
+    call whileStmtAfter;
+    call ifNoStmtAfter;
+    call ifStmtAfter;
+    call ifNestedInWhileSameProcCalled;
+    call ifNestedInWhileDiffProcCalled;
+    call whileNestedInWhile;
+    call ifThenWhile;
+    call whileThenIf;
+    call complex;
+}

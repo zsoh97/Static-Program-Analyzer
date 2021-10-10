@@ -1,0 +1,85 @@
+procedure pr0c0n3 {
+1     read x;
+2     print y;
+3     read x;
+4     print y;
+5     read x;
+6     print y;
+7     read x;
+8     print y;
+9     call pr0ctw0;
+}
+
+procedure pr0ctw0 {
+10    read x;
+11    print y;
+12    if (((x + y == 0) && (x > y + 1)) || ((z - 1 > y) && (y + 2 > x))) then {
+13        if (!(x < y)) then {
+14            if (((x > 1) && (y > 2)) || (y == z)) then {
+15                read x;
+16                print y;
+              } else {
+17                read z;
+              }
+          } else {
+18            while (((x == y) && (x > y + 1)) || ((z - 1 > y) && (y + 2 > x))) {
+19                read x;
+              }
+          }
+20        read x;
+21        print y;
+22        read z;
+      } else {
+23        read x;
+24        print y;
+25        read z;
+      }
+  }
+
+procedure pr0cThr33 {
+26    read a1;
+27    read a2;
+28    while (((!(a > b)) && (c == d)) || (e - f * g < h)) {
+29        if (i + (j - k) * 1 > l % m / n) then {
+30            print a3;
+31            while (a % 2 == 1) {
+32                print a4;
+33                print a5;
+34                call pr0c0n3;
+              }
+35            call pr0c0n3;
+36            read a6;
+          } else {
+37            call pr0c0n3;
+38            read a7;
+39            while (a != x * x + y) {
+40                print a8;
+41                if (c * d * (e / f) > 0) then {
+42                    print a9;
+43                    while (1 > 2) {
+44                        read a10;
+                      }
+45                    print a11;
+                  } else {
+46                    read a12;
+                  }
+              }
+          }
+47        call pr0c0n3;
+      }
+48    print a13;
+49    if (x > 1) then {
+50        print a;
+51        print b;
+52        print c;
+53        print d;
+54        print e;
+      } else {
+55        read a;
+56        read b;
+57        read c;
+58        read d;
+59        read e;
+      }
+60    read a14;
+  }

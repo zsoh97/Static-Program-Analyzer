@@ -1,0 +1,25 @@
+procedure System {
+  x = 2;
+  while (i>0) {
+      i = i - 1; 
+      while (x < 0) {
+          x = x + 1;
+      }
+  }
+}
+
+procedure Test {
+  read x;
+  print y;
+  call Iteration;
+  if (x < 0) then {
+    y = 1;
+  } else {
+    y = 2;
+  }
+}
+
+procedure Iteration {
+   a = b * c;
+   v = x + y - 1;
+}

@@ -1,0 +1,135 @@
+procedure procedure {
+    if(a == a) then {
+        while (a > 0) { 
+	read a; }
+    while (b < 0) {
+       a = b;
+    }
+    } else {
+        read a;
+        while (a != 0) {
+        print a;
+        	if (b>c) then {
+        		read print;
+		        if ( (b == c) && (b>=9) ) then {
+		            call procedure3;
+		            while ( (d < a) || (c != a) ) {
+			            print d;
+			            while (!(c == 4)) {
+				            print a;
+				    }
+			    }
+		            a = d + c / 9;
+	                } else {
+	              		if (f != g) then {
+			             while (g >= (a + b * k)) {
+			                while ((c * g / d % f - c) != a) {
+			                  while ((b- a)==(a -b)) {
+				                  if (i < j) then {
+				                       call procedure3;
+				                     } else { 
+				                       while (1 == 1) {
+				 			read = call;
+				                        print j;
+				                        call = read;
+				                        read print;
+				 			print print; 
+				 			read read; 
+				 			print read;   
+				                        read print; 
+				 			print = read; 
+						        print i;
+						        print a;
+ 							read = print; 
+						     }
+				                   print a;}
+                            read a;}
+                            read print;}}
+            	} else {
+              read p; 
+ 		print q;}}
+          } else {
+            a=b+c-d*e/f%g;
+            d = b * ((g*k)/f);
+            a = ((k * e)+h) / e;
+            m = j + (h - (i* (j - k)/(f % a)-k)+m) * d;
+            while (m != j) {
+            print d;
+            }}}}
+    read f;
+    read read;
+    print l;
+    a = h*k + d *(k);
+    print x;
+    j = while*1;
+    procedure = 341242 * if + 8248;
+    if((!((procedure > statement)||((read < print )&&(procedure3 >= call)))) && (while <= ((if - (k) % (7)) * 0)) )then{
+        then = read;
+        print = call * k +h-h%j;
+    } else{
+        read print;}
+ 	  print = call * 3;}
+procedure raymarch { 
+ 	print depth; 
+ 	read steps;
+    call moreProc;
+    while (b < 0) {
+        call procedure2;
+    }
+    if (a != b) then {
+        a = b;
+    } else {
+        print anotherProc;
+    }
+    print anotherProc;
+ 	call moreProc;
+    }
+procedure moreProc { 
+ 	call anotherProc; 
+    if ((c < d) || (moreProc > anotherProc)) then {
+        read moreProc;
+    } else {
+        moreProc = 8 * anotherProc;
+    }
+    if (a != b) then {
+        a = b;
+    } else {
+        print anotherProc;
+    }
+    while (b < 0) {
+        call procedure2;
+    }
+	call procedure2;            
+    	call procedure2;}
+procedure anotherProc { 
+    if (procedure2 != anotherProc) then {
+        print procedure2;
+    } else {
+        call = call + procedure2;
+    }
+ 	call procedure2;
+    call = call * 3;
+    call finalFinalProc;
+    }
+procedure procedure2 {
+    variable = call + read + print - statement; 
+    call call;
+    print call;}
+procedure call {
+    read = call + print + 5;
+    call procedure;
+    read procedure;} 
+procedure procedure3 { 
+read = print * 7;}
+procedure procedure4 {
+    call procedure5;
+    call lastProc;}
+procedure procedure5{
+    call lastProc;}
+procedure lastProc {
+    call = call * 2;}
+procedure finalProc {
+    print = print * read;}
+procedure finalFinalProc {
+    a = b + c + d+e+f+g+h+i+j+k+l;
+}

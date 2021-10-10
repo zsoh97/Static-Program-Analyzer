@@ -1,0 +1,245 @@
+1 - Pattern assign (_, _)
+stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn;
+Select a pattern a (_, _)
+1,3,4,5,6,7,10,11,12,13,14,16,23,24,25,26,28,30,31,32,33
+5000
+2 - Pattern assign (_, partial expr)
+stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn;
+Select a pattern a (_, _"5"_)
+6
+5000
+3 - Pattern assign (_, partial expr)
+stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn;
+Select a pattern a (_, _"a"_)
+4,6,7,11,12,14,16,24,25,30
+5000
+4 - Pattern assign (v, _)
+stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn;
+Select a pattern a (v, _)
+1,3,4,5,6,7,10,11,12,13,14,16,23,24,25,26,28,30,31,32,33
+5000
+5 - Pattern assign (v, partial expr)
+stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn;
+Select v pattern a (v, _"1"_)
+a,z,y,c
+5000
+6 - Pattern assign (v, partial expr)
+stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn;
+Select a pattern a (v, _"x"_)
+3,5
+5000
+7 - Pattern assign (var, _)
+stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn;
+Select a pattern a ("a", _)
+1,3,12,16,23,24,28
+5000
+8 - Pattern assign (var, partial expr)
+stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn;
+Select a pattern a ("y", _"10"_)
+5
+5000
+9 - Pattern assign (var, partial expr)
+assign a;
+Select a pattern a ("a", _"a + b"_)
+24
+5000
+10 - Pattern assign (_, exact expr)
+stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn;
+Select a pattern a (_, "1")
+1, 23
+5000
+11 - Pattern assign (v, exact expr)
+stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn;
+Select v pattern a (v, "c")
+none
+5000
+12 - Pattern assign (_, exact expr)
+stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn;
+Select a.stmt# pattern a (_, "(a * b / c) - d * ((g - h) + i % j)")
+7
+5000
+13 - Pattern assign (v, exact expr)
+stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn;
+Select v pattern a (v, "b * b + c")
+d
+5000
+14 - Pattern assign (var, exact expr)
+stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn;
+Select v pattern a ("a", "a+b")
+none
+5000
+15 - Pattern assign (_, partial expr) - partial subtree
+stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn;
+Select v pattern a (_, _"x * 4"_)
+a,b,c,d,e,f,g,h,i,j,x,y,z
+5000
+16 - Pattern assign (v, partial expr) - full subtree
+stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn;
+Select v pattern a (v, _"1 + y / (x * 4 % z)"_)
+y
+5000
+17 - Pattern assign (var, partial expr) - full subtree moved brackets
+stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn;
+Select v pattern a ("z", _"(a * b) / c"_)
+a,b,c,d,e,f,g,h,i,j,x,y,z
+5000
+18 - Pattern assign (_, partial expr) - non-subtree
+stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn;
+Select a pattern a (_, _"1 + y"_)
+none
+5000
+19 - Pattern assign (v, partial expr) - non-subtree
+stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn;
+Select v pattern a (v, _"a * b / c - d"_)
+none
+5000
+20 - Pattern assign (var, partial expr) - removed brackets
+stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn;
+Select BOOLEAN pattern a ("y", _"1 + y / x * 4 % z"_)
+FALSE
+5000
+21 - Affects single clause (num, num) - MUU
+stmt s;
+Select BOOLEAN such that Affects (1, 6)
+TRUE
+5000
+22 - Affects single clause (num, s) - if container (1 blocked, 1 not) then M again
+stmt s;
+Select s such that Affects (1, s)
+4,6,7
+5000
+23 - Affects single clause (_, num) - need while loop
+
+Select BOOLEAN such that Affects (_, 10)
+TRUE
+5000
+24 - Affects single clause (s, _)
+assign a;
+Select a such that Affects (a, _)
+1,3,4,11,12,13,14,23,24,25,26,28,30,31,32
+5000
+25 - Affects single clause (_, _)
+variable v;
+Select v such that Affects (_, _)
+a, b, c, d, e, f, g, h, i, j, x, y, z
+5000
+26 - Affects single clause (s, s) - need while loop
+stmt s;
+Select s such that Affects (s, s)
+12
+5000
+27 - No while loops, or if else
+stmt s; assign a1, a2; print pn; while w;
+Select BOOLEAN such that Affects(26, 28) and Affects(23, 24)
+TRUE
+5000
+28 - If else with one blocked path
+stmt s; assign a1, a2; print pn; while w;
+Select BOOLEAN such that Affects(1, 7)
+TRUE
+5000
+29 - Within while statement (Assignment affects self)
+stmt s; assign a1, a2; print pn; while w;
+Select a1 such that Affects(a1, a1) and Parent(w, a1)
+12
+5000
+30 - Assignment affects self
+stmt s; assign a1, a2; print pn; while w;
+Select BOOLEAN such that Affects(12, 12)
+TRUE
+5000
+31 - Assignment mod & uses self, but cannot reach cuz no while loop
+stmt s; assign a1, a2; print pn; while w;
+Select BOOLEAN such that Affects(33, 33)
+FALSE
+5000
+32 - All paths blocked
+stmt s; assign a1, a2; print pn; while w;
+Select BOOLEAN such that Affects(14, 14)
+FALSE
+5000
+33 - Call statement blocks path
+stmt s; assign a1, a2; print pn; while w;
+Select BOOLEAN such that Affects(5, 16)
+FALSE
+5000
+34 - Call statement does not block path
+stmt s; assign a1, a2; print pn; while w;
+Select BOOLEAN such that Affects(28, 30)
+TRUE
+5000
+35 - Affects* single clause (num, s)
+stmt s;
+Select s such that Affects* (12, s)
+14, 10, 11, 12, 13, 16
+5000
+36 - Affects* single clause (_, _)
+
+Select BOOLEAN such that Affects* (_, _)
+TRUE
+5000
+37 - Affects* single clause (s, s)
+stmt s;
+Select s such that Affects* (s, s)
+12
+5000
+38 - Affects* single clause (_, s)
+stmt s;
+Select s such that Affects* (_, s)
+4,5,6,7,10,11,12,13,14,16,24,25,26,28,30,31,32,33
+5000
+39 - Affects* single clause (num, _)
+variable v;
+Select v such that Affects* (30, _)
+a,b,c,d,e,f,g,h,i,j,x,y,z
+5000
+40 - Affects* single clause (num, num)
+stmt s;
+Select s such that Affects* (23, 33)
+1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33
+5000
+41 - Affects* multi clause
+prog_line n; assign a;
+Select n pattern a (_, "a + b + c") such that Affects*(n, a)
+23, 24
+5000
+42 - No while loops, or if else
+stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn;
+Select BOOLEAN such that Affects*(26, 30)
+TRUE
+5000
+43 - If else with one blocked path (same as Affects ans)
+stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn;
+Select BOOLEAN such that Affects*(1, 7)
+TRUE
+5000
+44 - Within while statement (Assignment affects self)
+stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn;
+Select a1 such that Affects*(a1, a1) and Parent(w, a1)
+12
+5000
+45 - Another variable within same procedure
+stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn;
+Select BOOLEAN such that Affects*(24, 26)
+TRUE
+5000
+46 - Two paths, one path blocked (same as Affects ans)
+stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn;
+Select BOOLEAN such that Affects*(1, 7)
+TRUE
+5000
+47 - All paths blocked
+stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn;
+Select BOOLEAN such that Affects*(3, 12)
+FALSE
+5000
+48 - Call statement blocks path
+stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn;
+Select BOOLEAN such that Affects*(5, 16)
+FALSE
+5000
+49 - Call statement does not block path
+stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn;
+Select BOOLEAN such that Affects*(28, 33)
+TRUE
+5000

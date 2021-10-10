@@ -1,0 +1,51 @@
+procedure assignment {
+    read cc;
+    print cc;
+    while (!(cc < 6)) {
+        cc = bb % 7;
+        aa = cc / aa;
+        if ((cc + 6) == 7) then {
+            aa = bb;
+            bb = cc;
+            cc = dd;
+            dd = ee;
+            ee = ff;
+            ff = gg;
+            gg = hh; 
+            hh = ii;
+            ii = jj;
+            jj = kk;
+            kk = ll;
+            ll = mm;
+            mm = nn;
+            nn = oo;
+            oo = pp;
+            cc = aa + bb % aa;
+        } else {
+            bb = aa / 0;
+            aa = aa * cc - aa;
+            cc = aa;
+            aa = cc;
+            bb = cc;
+            aa = bb;
+            read cc;
+            print aa;
+            while (cc == aa) {
+                cc = 7 + 6;
+                aa = cc;
+            }
+            print v1;
+        }
+        aa = aa;
+        cc = aa;
+        if (aa == 7) then {
+            print aa;
+            aa = aa % 6 + aa;
+        } else {
+            read aa;
+        }
+        aa = aa / aa;
+        print aa;
+    }
+    print aa;
+}

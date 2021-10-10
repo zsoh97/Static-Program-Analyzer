@@ -1,0 +1,1895 @@
+2341 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(proc, proc)
+FALSE
+5000
+2342 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(proc, cl)
+FALSE
+5000
+2343 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(proc, v)
+FALSE
+5000
+2344 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(proc, r)
+FALSE
+5000
+2345 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(proc, p)
+FALSE
+5000
+2346 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(proc, c)
+FALSE
+5000
+2347 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(proc, s)
+FALSE
+5000
+2348 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(proc, w)
+FALSE
+5000
+2349 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(proc, ifs)
+FALSE
+5000
+2350 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(proc, a)
+FALSE
+5000
+2351 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(proc, n)
+FALSE
+5000
+2352 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(proc, _)
+FALSE
+5000
+2353 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(proc1, proc2)
+FALSE
+5000
+2354 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(cl, proc)
+FALSE
+5000
+2355 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(cl, cl)
+FALSE
+5000
+2356 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(cl, v)
+FALSE
+5000
+2357 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(cl, r)
+FALSE
+5000
+2358 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(cl, p)
+FALSE
+5000
+2359 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(cl, c)
+FALSE
+5000
+2360 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(cl, s)
+FALSE
+5000
+2361 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(cl, w)
+FALSE
+5000
+2362 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(cl, ifs)
+FALSE
+5000
+2363 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(cl, a)
+FALSE
+5000
+2364 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(cl, n)
+FALSE
+5000
+2365 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(cl, _)
+FALSE
+5000
+2366 - Valid. suchthat-cl Affects
+procedure proc; call cl1, cl2; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(cl1, cl2)
+FALSE
+5000
+2367 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(v, proc)
+FALSE
+5000
+2368 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(v, cl)
+FALSE
+5000
+2369 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(v, v)
+FALSE
+5000
+2370 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(v, r)
+FALSE
+5000
+2371 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(v, p)
+FALSE
+5000
+2372 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(v, c)
+FALSE
+5000
+2373 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(v, s)
+FALSE
+5000
+2374 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(v, w)
+FALSE
+5000
+2375 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(v, ifs)
+FALSE
+5000
+2376 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(v, a)
+FALSE
+5000
+2377 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(v, n)
+FALSE
+5000
+2378 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(v, _)
+FALSE
+5000
+2379 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects
+procedure proc; call cl; variable v1, v2; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(v1, v2)
+FALSE
+5000
+2380 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(r, proc)
+FALSE
+5000
+2381 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(r, cl)
+FALSE
+5000
+2382 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(r, v)
+FALSE
+5000
+2383 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(r, r)
+FALSE
+5000
+2384 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(r, p)
+FALSE
+5000
+2385 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(r, c)
+FALSE
+5000
+2386 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(r, s)
+FALSE
+5000
+2387 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(r, w)
+FALSE
+5000
+2388 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(r, ifs)
+FALSE
+5000
+2389 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(r, a)
+FALSE
+5000
+2390 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(r, n)
+FALSE
+5000
+2391 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(r, _)
+FALSE
+5000
+2392 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r1, r2; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(r1, r2)
+FALSE
+5000
+2393 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(p, proc)
+FALSE
+5000
+2394 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(p, cl)
+FALSE
+5000
+2395 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(p, v)
+FALSE
+5000
+2396 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(p, r)
+FALSE
+5000
+2397 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(p, p)
+FALSE
+5000
+2398 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(p, c)
+FALSE
+5000
+2399 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(p, s)
+FALSE
+5000
+2400 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(p, w)
+FALSE
+5000
+2401 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(p, ifs)
+FALSE
+5000
+2402 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(p, a)
+FALSE
+5000
+2403 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(p, n)
+FALSE
+5000
+2404 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(p, _)
+FALSE
+5000
+2405 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p1, p2; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(p1, p2)
+FALSE
+5000
+2406 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(c, proc)
+FALSE
+5000
+2407 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(c, cl)
+FALSE
+5000
+2408 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(c, v)
+FALSE
+5000
+2409 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(c, r)
+FALSE
+5000
+2410 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(c, p)
+FALSE
+5000
+2411 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(c, c)
+FALSE
+5000
+2412 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(c, s)
+FALSE
+5000
+2413 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(c, w)
+FALSE
+5000
+2414 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(c, ifs)
+FALSE
+5000
+2415 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(c, a)
+FALSE
+5000
+2416 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(c, n)
+FALSE
+5000
+2417 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(c, _)
+FALSE
+5000
+2418 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c1, c2; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(c1, c2)
+FALSE
+5000
+2419 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(s, proc)
+FALSE
+5000
+2420 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(s, cl)
+FALSE
+5000
+2421 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(s, v)
+FALSE
+5000
+2422 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(s, r)
+FALSE
+5000
+2423 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(s, p)
+FALSE
+5000
+2424 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(s, c)
+FALSE
+5000
+2425 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(s, s)
+TRUE
+5000
+2426 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(s, w)
+FALSE
+5000
+2427 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(s, ifs)
+FALSE
+5000
+2428 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(s, a)
+TRUE
+5000
+2429 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(s, n)
+TRUE
+5000
+2430 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(s, _)
+TRUE
+5000
+2431 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(s1, s2)
+TRUE
+5000
+2432 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(w, proc)
+FALSE
+5000
+2433 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(w, cl)
+FALSE
+5000
+2434 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(w, v)
+FALSE
+5000
+2435 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(w, r)
+FALSE
+5000
+2436 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(w, p)
+FALSE
+5000
+2437 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(w, c)
+FALSE
+5000
+2438 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(w, s)
+FALSE
+5000
+2439 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(w, w)
+FALSE
+5000
+2440 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(w, ifs)
+FALSE
+5000
+2441 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(w, a)
+FALSE
+5000
+2442 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(w, n)
+FALSE
+5000
+2443 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(w, _)
+FALSE
+5000
+2444 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w1, w2; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(w1, w2)
+FALSE
+5000
+2445 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(ifs, proc)
+FALSE
+5000
+2446 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(ifs, cl)
+FALSE
+5000
+2447 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(ifs, v)
+FALSE
+5000
+2448 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(ifs, r)
+FALSE
+5000
+2449 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(ifs, p)
+FALSE
+5000
+2450 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(ifs, c)
+FALSE
+5000
+2451 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(ifs, s)
+FALSE
+5000
+2452 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(ifs, w)
+FALSE
+5000
+2453 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(ifs, ifs)
+FALSE
+5000
+2454 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(ifs, a)
+FALSE
+5000
+2455 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(ifs, n)
+FALSE
+5000
+2456 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(ifs, _)
+FALSE
+5000
+2457 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs1, ifs2; assign a; prog_line n;
+Select BOOLEAN such that Affects(ifs1, ifs2)
+FALSE
+5000
+2458 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(a, proc)
+FALSE
+5000
+2459 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(a, cl)
+FALSE
+5000
+2460 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(a, v)
+FALSE
+5000
+2461 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(a, r)
+FALSE
+5000
+2462 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(a, p)
+FALSE
+5000
+2463 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(a, c)
+FALSE
+5000
+2464 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(a, s)
+TRUE
+5000
+2465 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(a, w)
+FALSE
+5000
+2466 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(a, ifs)
+FALSE
+5000
+2467 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(a, a)
+TRUE
+5000
+2468 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(a, n)
+TRUE
+5000
+2469 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(a, _)
+TRUE
+5000
+2470 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a1, a2; prog_line n;
+Select BOOLEAN such that Affects(a1, a2)
+TRUE
+5000
+2471 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(n, proc)
+FALSE
+5000
+2472 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(n, cl)
+FALSE
+5000
+2473 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(n, v)
+FALSE
+5000
+2474 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(n, r)
+FALSE
+5000
+2475 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(n, p)
+FALSE
+5000
+2476 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(n, c)
+FALSE
+5000
+2477 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(n, s)
+TRUE
+5000
+2478 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(n, w)
+FALSE
+5000
+2479 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(n, ifs)
+FALSE
+5000
+2480 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(n, a)
+TRUE
+5000
+2481 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(n, n)
+TRUE
+5000
+2482 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(n, _)
+TRUE
+5000
+2483 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select BOOLEAN such that Affects(n1, n2)
+TRUE
+5000
+2484 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(_, proc)
+FALSE
+5000
+2485 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(_, cl)
+FALSE
+5000
+2486 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(_, v)
+FALSE
+5000
+2487 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(_, r)
+FALSE
+5000
+2488 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(_, p)
+FALSE
+5000
+2489 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(_, c)
+FALSE
+5000
+2490 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(_, s)
+TRUE
+5000
+2491 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(_, w)
+FALSE
+5000
+2492 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(_, ifs)
+FALSE
+5000
+2493 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(_, a)
+TRUE
+5000
+2494 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(_, n)
+TRUE
+5000
+2495 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(_, _)
+TRUE
+5000
+2496 - Invalid. Case sensitive, suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a1, a2; prog_line n;
+Select BOOLEAN such that affects(a1, a2)
+
+5000
+2497 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(9, 9)
+FALSE
+5000
+2498 - Valid. Extra space, suchthat-cl Affects
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a1, a2; prog_line n;
+Select BOOLEAN such that Affects (a1, a2)
+TRUE
+5000
+2499 - Valid. 2 wildcards, suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(_, _)
+TRUE
+5000
+2500 - Valid. 1 wildcard 1 synonym, suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(_, a)
+TRUE
+5000
+2501 - Valid. 1 wildcard 1 constant, suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(_, 12)
+TRUE
+5000
+2502 - Valid. 1 synonym 1 wildcard, suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(a, _)
+TRUE
+5000
+2503 - Valid. 1 constant 1 wildcard, suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(19, _)
+TRUE
+5000
+2504 - Valid. 2 synonyms, suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a1, a2; prog_line n;
+Select BOOLEAN such that Affects(a1, a2)
+TRUE
+5000
+2505 - Valid. 1 synonym 1 constant, suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(a, 58)
+TRUE
+5000
+2506 - Valid. 1 constant 1 synonym, suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(68, a)
+TRUE
+5000
+2507 - Valid. 2 constants, suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(5, 15)
+TRUE
+5000
+2508 - Valid. 2 constants, suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects(5, 22)
+FALSE
+5000
+2509 - Valid. Inside while, suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select a such that Affects(54, a)
+55, 58, 74
+5000
+2510 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select a such that Affects(54, a)
+55, 58, 74
+5000
+2511 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select a such that Affects(55, a)
+73, 74
+5000
+2512 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select a such that Affects(57, a)
+72, 85
+5000
+2513 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select a such that Affects(58, a)
+54, 57, 72
+5000
+2514 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select a such that Affects(59, a)
+
+5000
+2515 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select a such that Affects(72, a)
+
+5000
+2516 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select a such that Affects(73, a)
+
+5000
+2517 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select a such that Affects(74, a)
+75
+5000
+2518 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select a such that Affects(75, a)
+76, 77
+5000
+2519 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select a such that Affects(76, a)
+
+5000
+2520 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select a such that Affects(77, a)
+54, 57, 78
+5000
+2521 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select a such that Affects(78, a)
+85
+5000
+2522 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select a such that Affects(82, a)
+83
+5000
+2523 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select a such that Affects(83, a)
+85
+5000
+2524 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select a such that Affects(85, a)
+86, 89
+5000
+2525 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select a such that Affects(86, a)
+
+5000
+2526 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select a such that Affects(89, a)
+91
+5000
+2527 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select a such that Affects(91, a)
+55
+5000
+2528 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select a such that Affects(a, 54)
+58, 77
+5000
+2529 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select a such that Affects(a, 55)
+54, 91
+5000
+2530 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select a such that Affects(a, 57)
+58, 77
+5000
+2531 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select a such that Affects(a, 58)
+54
+5000
+2532 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select a such that Affects(a, 59)
+60
+5000
+2533 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select a such that Affects(a, 72)
+57, 58
+5000
+2534 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select a such that Affects(a, 73)
+55
+5000
+2535 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select a such that Affects(a, 74)
+54, 55
+5000
+2536 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select a such that Affects(a, 75)
+74
+5000
+2537 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select a such that Affects(a, 76)
+75
+5000
+2538 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select a such that Affects(a, 77)
+75
+5000
+2539 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select a such that Affects(a, 78)
+77
+5000
+2540 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select a such that Affects(a, 82)
+
+5000
+2541 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select a such that Affects(a, 83)
+82
+5000
+2542 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select a such that Affects(a, 85)
+57, 78, 83
+5000
+2543 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select a such that Affects(a, 86)
+85
+5000
+2544 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select a such that Affects(a, 89)
+85
+5000
+2545 - Valid. suchthat-cl Affects
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select a such that Affects(a, 91)
+89
+5000
+2546 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(proc, proc)
+FALSE
+5000
+2547 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(proc, cl)
+FALSE
+5000
+2548 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(proc, v)
+FALSE
+5000
+2549 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(proc, r)
+FALSE
+5000
+2550 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(proc, p)
+FALSE
+5000
+2551 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(proc, c)
+FALSE
+5000
+2552 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(proc, s)
+FALSE
+5000
+2553 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(proc, w)
+FALSE
+5000
+2554 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(proc, ifs)
+FALSE
+5000
+2555 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(proc, a)
+FALSE
+5000
+2556 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(proc, n)
+FALSE
+5000
+2557 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(proc, _)
+FALSE
+5000
+2558 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects*
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(proc1, proc2)
+FALSE
+5000
+2559 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(cl, proc)
+FALSE
+5000
+2560 - Valid. suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(cl, cl)
+FALSE
+5000
+2561 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(cl, v)
+FALSE
+5000
+2562 - Valid. suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(cl, r)
+FALSE
+5000
+2563 - Valid. suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(cl, p)
+FALSE
+5000
+2564 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(cl, c)
+FALSE
+5000
+2565 - Valid. suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(cl, s)
+FALSE
+5000
+2566 - Valid. suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(cl, w)
+FALSE
+5000
+2567 - Valid. suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(cl, ifs)
+FALSE
+5000
+2568 - Valid. suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(cl, a)
+FALSE
+5000
+2569 - Valid. suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(cl, n)
+FALSE
+5000
+2570 - Valid. suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(cl, _)
+FALSE
+5000
+2571 - Valid. suchthat-cl Affects*
+procedure proc; call cl1, cl2; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(cl1, cl2)
+FALSE
+5000
+2572 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(v, proc)
+FALSE
+5000
+2573 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(v, cl)
+FALSE
+5000
+2574 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(v, v)
+FALSE
+5000
+2575 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(v, r)
+FALSE
+5000
+2576 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(v, p)
+FALSE
+5000
+2577 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(v, c)
+FALSE
+5000
+2578 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(v, s)
+FALSE
+5000
+2579 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(v, w)
+FALSE
+5000
+2580 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(v, ifs)
+FALSE
+5000
+2581 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(v, a)
+FALSE
+5000
+2582 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(v, n)
+FALSE
+5000
+2583 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(v, _)
+FALSE
+5000
+2584 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects*
+procedure proc; call cl; variable v1, v2; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(v1, v2)
+FALSE
+5000
+2585 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(r, proc)
+FALSE
+5000
+2586 - Valid. suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(r, cl)
+FALSE
+5000
+2587 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(r, v)
+FALSE
+5000
+2588 - Valid. suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(r, r)
+FALSE
+5000
+2589 - Valid. suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(r, p)
+FALSE
+5000
+2590 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(r, c)
+FALSE
+5000
+2591 - Valid. suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(r, s)
+FALSE
+5000
+2592 - Valid. suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(r, w)
+FALSE
+5000
+2593 - Valid. suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(r, ifs)
+FALSE
+5000
+2594 - Valid. suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(r, a)
+FALSE
+5000
+2595 - Valid. suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(r, n)
+FALSE
+5000
+2596 - Valid. suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(r, _)
+FALSE
+5000
+2597 - Valid. suchthat-cl Affects*
+procedure proc; call cl; variable v; read r1, r2; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(r1, r2)
+FALSE
+5000
+2598 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(p, proc)
+FALSE
+5000
+2599 - Valid. suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(p, cl)
+FALSE
+5000
+2600 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(p, v)
+FALSE
+5000
+2601 - Valid. suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(p, r)
+FALSE
+5000
+2602 - Valid. suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(p, p)
+FALSE
+5000
+2603 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(p, c)
+FALSE
+5000
+2604 - Valid. suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(p, s)
+FALSE
+5000
+2605 - Valid. suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(p, w)
+FALSE
+5000
+2606 - Valid. suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(p, ifs)
+FALSE
+5000
+2607 - Valid. suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(p, a)
+FALSE
+5000
+2608 - Valid. suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(p, n)
+FALSE
+5000
+2609 - Valid. suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(p, _)
+FALSE
+5000
+2610 - Valid. suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p1, p2; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(p1, p2)
+FALSE
+5000
+2611 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(c, proc)
+FALSE
+5000
+2612 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(c, cl)
+FALSE
+5000
+2613 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(c, v)
+FALSE
+5000
+2614 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(c, r)
+FALSE
+5000
+2615 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(c, p)
+FALSE
+5000
+2616 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(c, c)
+FALSE
+5000
+2617 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(c, s)
+FALSE
+5000
+2618 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(c, w)
+FALSE
+5000
+2619 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(c, ifs)
+FALSE
+5000
+2620 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(c, a)
+FALSE
+5000
+2621 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(c, n)
+FALSE
+5000
+2622 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(c, _)
+FALSE
+5000
+2623 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c1, c2; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(c1, c2)
+FALSE
+5000
+2624 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(s, proc)
+FALSE
+5000
+2625 - Valid. suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(s, cl)
+FALSE
+5000
+2626 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(s, v)
+FALSE
+5000
+2627 - Valid. suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(s, r)
+FALSE
+5000
+2628 - Valid. suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(s, p)
+FALSE
+5000
+2629 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(s, c)
+FALSE
+5000
+2630 - Valid. suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(s, s)
+TRUE
+5000
+2631 - Valid. suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(s, w)
+FALSE
+5000
+2632 - Valid. suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(s, ifs)
+FALSE
+5000
+2633 - Valid. suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(s, a)
+TRUE
+5000
+2634 - Valid. suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(s, n)
+TRUE
+5000
+2635 - Valid. suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(s, _)
+TRUE
+5000
+2636 - Valid. suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(s1, s2)
+TRUE
+5000
+2637 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(w, proc)
+FALSE
+5000
+2638 - Valid. suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(w, cl)
+FALSE
+5000
+2639 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(w, v)
+FALSE
+5000
+2640 - Valid. suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(w, r)
+FALSE
+5000
+2641 - Valid. suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(w, p)
+FALSE
+5000
+2642 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(w, c)
+FALSE
+5000
+2643 - Valid. suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(w, s)
+FALSE
+5000
+2644 - Valid. suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(w, w)
+FALSE
+5000
+2645 - Valid. suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(w, ifs)
+FALSE
+5000
+2646 - Valid. suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(w, a)
+FALSE
+5000
+2647 - Valid. suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(w, n)
+FALSE
+5000
+2648 - Valid. suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(w, _)
+FALSE
+5000
+2649 - Valid. suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w1, w2; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(w1, w2)
+FALSE
+5000
+2650 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(ifs, proc)
+FALSE
+5000
+2651 - Valid. suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(ifs, cl)
+FALSE
+5000
+2652 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(ifs, v)
+FALSE
+5000
+2653 - Valid. suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(ifs, r)
+FALSE
+5000
+2654 - Valid. suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(ifs, p)
+FALSE
+5000
+2655 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(ifs, c)
+FALSE
+5000
+2656 - Valid. suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(ifs, s)
+FALSE
+5000
+2657 - Valid. suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(ifs, w)
+FALSE
+5000
+2658 - Valid. suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(ifs, ifs)
+FALSE
+5000
+2659 - Valid. suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(ifs, a)
+FALSE
+5000
+2660 - Valid. suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(ifs, n)
+FALSE
+5000
+2661 - Valid. suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(ifs, _)
+FALSE
+5000
+2662 - Valid. suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs1, ifs2; assign a; prog_line n;
+Select BOOLEAN such that Affects*(ifs1, ifs2)
+FALSE
+5000
+2663 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(a, proc)
+FALSE
+5000
+2664 - Valid. suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(a, cl)
+FALSE
+5000
+2665 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(a, v)
+FALSE
+5000
+2666 - Valid. suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(a, r)
+FALSE
+5000
+2667 - Valid. suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(a, p)
+FALSE
+5000
+2668 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(a, c)
+FALSE
+5000
+2669 - Valid. suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(a, s)
+TRUE
+5000
+2670 - Valid. suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(a, w)
+FALSE
+5000
+2671 - Valid. suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(a, ifs)
+FALSE
+5000
+2672 - Valid. suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(a, a)
+TRUE
+5000
+2673 - Valid. suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(a, n)
+TRUE
+5000
+2674 - Valid. suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(a, _)
+TRUE
+5000
+2675 - Valid. suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a1, a2; prog_line n;
+Select BOOLEAN such that Affects*(a1, a2)
+TRUE
+5000
+2676 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(n, proc)
+FALSE
+5000
+2677 - Valid. suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(n, cl)
+FALSE
+5000
+2678 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(n, v)
+FALSE
+5000
+2679 - Valid. suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(n, r)
+FALSE
+5000
+2680 - Valid. suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(n, p)
+FALSE
+5000
+2681 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(n, c)
+FALSE
+5000
+2682 - Valid. suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(n, s)
+TRUE
+5000
+2683 - Valid. suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(n, w)
+FALSE
+5000
+2684 - Valid. suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(n, ifs)
+FALSE
+5000
+2685 - Valid. suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(n, a)
+TRUE
+5000
+2686 - Valid. suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(n, n)
+TRUE
+5000
+2687 - Valid. suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(n, _)
+TRUE
+5000
+2688 - Valid. suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select BOOLEAN such that Affects*(n1, n2)
+TRUE
+5000
+2689 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(_, proc)
+FALSE
+5000
+2690 - Valid. suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(_, cl)
+FALSE
+5000
+2691 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(_, v)
+FALSE
+5000
+2692 - Valid. suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(_, r)
+FALSE
+5000
+2693 - Valid. suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(_, p)
+FALSE
+5000
+2694 - Invalid. Args must be (stmtRef, stmtRef) suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(_, c)
+FALSE
+5000
+2695 - Valid. suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(_, s)
+TRUE
+5000
+2696 - Valid. suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(_, w)
+FALSE
+5000
+2697 - Valid. suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(_, ifs)
+FALSE
+5000
+2698 - Valid. suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(_, a)
+TRUE
+5000
+2699 - Valid. suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(_, n)
+TRUE
+5000
+2700 - Valid. suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(_, _)
+TRUE
+5000
+2701 - Invalid. Case sensitive, suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a1, a2; prog_line n;
+Select BOOLEAN such that affects*(a1, a2)
+
+5000
+2702 - Valid. suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(9, 9)
+FALSE
+5000
+2703 - Valid. Extra space, suchthat-cl Affects*
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a1, a2; prog_line n;
+Select BOOLEAN such that Affects* (a1, a2)
+TRUE
+5000
+2704 - Valid. 2 wildcards, suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(_, _)
+TRUE
+5000
+2705 - Valid. 1 wildcard 1 synonym, suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(_, a)
+TRUE
+5000
+2706 - Valid. 1 wildcard 1 constant, suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(_, 12)
+TRUE
+5000
+2707 - Valid. 1 synonym 1 wildcard, suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(a, _)
+TRUE
+5000
+2708 - Valid. 1 constant 1 wildcard, suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(19, _)
+TRUE
+5000
+2709 - Valid. 2 synonyms, suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a1, a2; prog_line n;
+Select BOOLEAN such that Affects*(a1, a2)
+TRUE
+5000
+2710 - Valid. 1 synonym 1 constant, suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(a, 58)
+TRUE
+5000
+2711 - Valid. 1 constant 1 synonym, suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(54, a)
+TRUE
+5000
+2712 - Valid. 2 constants, suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(74, 77)
+TRUE
+5000
+2713 - Valid. 2 constants, suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Affects*(73, 86)
+FALSE
+5000
+2714 - Valid. suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select a such that Affects*(54, a)
+54, 55, 57, 58, 72, 73, 74, 75, 76, 77, 78, 85, 86, 89, 91
+5000
+2715 - Valid. Inside if, suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select a such that Affects*(57, a)
+54, 55, 57, 58, 72, 73, 74, 75, 76, 77, 78, 85, 86, 89, 91
+5000
+2716 - Valid. Inside else, suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select a such that Affects*(74, a)
+54, 55, 57, 58, 72, 73, 74, 75, 76, 77, 78, 85, 86, 89, 91
+5000
+2717 - Valid. suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select a such that Affects*(a, 91)
+54, 55, 57, 58, 74, 75, 77, 78, 82, 83, 85, 89, 91
+5000
+2718 - Valid. Inside if, suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select a such that Affects*(a, 89)
+54, 55, 57, 58, 74, 75, 77, 78, 82, 83, 85, 89, 91
+5000
+2719 - Valid. Inside else, suchthat-cl Affects*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select a such that Affects*(a, 78)
+54, 55, 57, 58, 74, 75, 77, 78, 82, 83, 85, 89, 91
+5000

@@ -1,0 +1,310 @@
+1 - follows with container in between
+variable v; stmt s;
+Select v such that Follows (1,2)
+x, y
+5000
+2 - follows with container in between
+variable v; stmt s;
+Select v such that Follows (2,6)
+x, y
+5000
+3 - follows with container in between
+variable v; stmt s;
+Select v such that Follows (7,10)
+x, y
+5000
+4 - follows with container in between
+variable v; stmt s;
+Select s such that Follows (s,6)
+2
+5000
+5 - follows with container in between
+variable v; stmt s;
+Select s such that Follows (s,10)
+7
+5000
+6 - follows with container in between
+variable v; stmt s;
+Select s such that Follows (7,s)
+10
+5000
+7 - follows with nesting level
+variable v; stmt s;
+Select v such that Follows (2,3)
+none
+5000
+8 - follows with container in between
+variable v; stmt s;
+Select v such that Follows (5,6)
+none
+5000
+9 - follows star between container
+variable v; stmt s;
+Select v such that Follows* (5,8)
+none
+5000
+10 - follows star through containers
+variable v; stmt s;
+Select s such that Follows* (s,10)
+1, 2, 6, 7
+5000
+11 - follows star within container
+variable v; stmt s;
+Select s such that Follows* (s,5)
+3, 4
+5000
+12 - follows star within container
+variable v; stmt s;
+Select s such that Follows* (8,9)
+none
+5000
+13 - follows star wildcard
+variable v; stmt s;
+Select s such that Follows* (s,_)
+1, 2, 3, 4, 6, 7
+5000
+14 - follows star wildcard
+variable v; stmt s;
+Select s such that Follows* (_,s)
+2, 4, 5, 6, 7, 10
+5000
+15 - follows star wildcard
+variable v; stmt s;
+Select s such that Follows* (_,s)
+2, 4, 5, 6, 7, 10
+5000
+16 - Uses in container
+variable v; stmt s;
+Select v such that Uses (2,v)
+x
+5000
+17 - Uses in container
+variable v; stmt s;
+Select v such that Uses (7,v)
+x, y
+5000
+18 - Uses in container
+variable v; stmt s;
+Select s such that Uses (s,"x")
+2, 3, 5, 7, 9
+5000
+19 - Uses in container
+variable v; stmt s;
+Select s such that Uses (s,"y")
+6, 7
+5000
+20 - Modifies in container
+variable v; stmt s;
+Select v such that Modifies (2,v)
+y
+5000
+21 - Modifies in container
+variable v; stmt s;
+Select v such that Modifies (7,v)
+x, y
+5000
+22 - Modifies in container
+variable v; stmt s;
+Select s such that Modifies (s,"x")
+1, 7, 8
+5000
+23 - Modifies in container
+variable v; stmt s;
+Select s such that Modifies (s,"y")
+2, 4, 5, 7, 9, 10
+5000
+24 - Modifies in container
+variable v; stmt s;
+Select v such that Modifies (9,v)
+y
+5000
+25 - Modifies wildcard
+variable v; stmt s;
+Select v such that Modifies (7,_)
+x, y
+5000
+26 - Modifies wildcard
+variable v; stmt s;
+Select v such that Modifies (2,_)
+x, y
+5000
+27 - Uses wildcard
+variable v; stmt s;
+Select v such that Uses (2,_)
+x, y
+5000
+28 - Parent container
+variable v; stmt s;
+Select s such that Parent (2,s)
+3, 4, 5
+5000
+29 - Parent container
+variable v; stmt s;
+Select s such that Parent (7,s)
+8, 9
+5000
+30 - Parent container wildcard
+variable v; stmt s;
+Select s such that Parent (2,_)
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+5000
+31 - Parent container wildcard
+variable v; stmt s;
+Select s such that Parent (7,_)
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+5000
+32 - Parent container
+variable v; stmt s;
+Select s such that Parent (1,s)
+none
+5000
+33 - Parent container
+variable v; stmt s;
+Select s such that Parent (s,_)
+2, 7
+5000
+34 - Parent container
+variable v; stmt s, s1;
+Select s such that Parent (s,s1)
+2, 7
+5000
+35 - Parent container
+variable v; stmt s;
+Select s such that Parent* (2,s)
+3, 4, 5
+5000
+36 - Parent container
+variable v; stmt s;
+Select s such that Parent* (7,s)
+8, 9
+5000
+37 - Parent container wildcard
+variable v; stmt s;
+Select s such that Parent* (2,_)
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+5000
+38 - Parent container wildcard
+variable v; stmt s;
+Select s such that Parent* (7,_)
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+5000
+39 - Parent container
+variable v; stmt s;
+Select s such that Parent* (1,s)
+none
+5000
+40 - Parent container
+variable v; stmt s;
+Select s such that Parent* (s,_)
+2, 7
+5000
+41 - Parent container
+variable v; stmt s, s1;
+Select s such that Parent* (s,s1)
+2, 7
+5000
+42 - Parent container
+variable v; stmt s;
+Select s such that Parent* (_,s)
+3, 4, 5, 8, 9
+5000
+43 - Parent container
+variable v; stmt s;
+Select s such that Parent (_,s)
+3, 4, 5, 8, 9
+5000
+44 - Pattern
+variable v; stmt s; assign a;
+Select a pattern a (_,"x+2")
+5
+5000
+45 - Pattern
+variable v; stmt s; assign a;
+Select a pattern a (_,_"x"_)
+5, 9
+5000
+46 - Pattern
+variable v; stmt s; assign a;
+Select v pattern a (v,_"x"_)
+y
+5000
+47 - Pattern
+variable v; stmt s; assign a;
+Select a pattern a (_,_"x"_)
+5, 9
+5000
+48 - double clause
+variable v; stmt s; assign a;
+Select v such that Modifies(7, v) pattern a (v,_"x"_)
+y
+5000
+49 - double clause
+variable v; stmt s; assign a;
+Select a such that Parent(2, a) pattern a (v,_"x"_)
+5
+5000
+50 - double clause
+variable v; stmt s; assign a;
+Select a such that Parent(s, a) pattern a (v,_"x"_)
+5, 9
+5000
+51 - double clause
+variable v; stmt s; assign a;
+Select a such that Parent(2, a) pattern a (v,_"x"_)
+5
+5000
+52 - double clause
+variable v; stmt s; assign a;
+Select a such that Follows*(3, a) pattern a (v,_"x"_)
+5
+5000
+53 - double clause
+variable v; stmt s; assign a;
+Select a such that Parent*(_, a) pattern a ("y",_"x"_)
+5, 9
+5000
+54 - double clause (rev order)
+variable v; stmt s; assign a;
+Select a pattern a (v,_"x"_) such that Parent(s, a)
+5, 9
+5000
+55 - double clause (rev order)
+variable v; stmt s; assign a;
+Select a pattern a (v,_"x"_) such that Parent(2, a)
+5
+5000
+56 - double clause (rev order)
+variable v; stmt s; assign a;
+Select a pattern a (v,_"x"_) such that Follows*(3, a)
+5
+5000
+57 - double clause (rev order)
+variable v; stmt s; assign a;
+Select a pattern a ("y",_"x"_) such that Parent*(_, a)
+5, 9
+5000
+58 - double clause
+variable v; stmt s; assign a;
+Select v such that Modifies (s, v) pattern a (v, _)
+x, y
+5000
+59 - double clause
+variable v; stmt s; assign a;
+Select v such that Uses (s, v) pattern a (v, _)
+x, y
+5000
+60 - select w
+while w; variable v; stmt s; assign a;
+Select w such that Uses (w, v) pattern a (v, _)
+2
+5000
+61 - select w
+if ifs; variable v; stmt s; assign a;
+Select ifs such that Uses (ifs, v) pattern a (v, _)
+7
+5000
+62 - seman invalid Follows (s,s)
+if ifs; variable v; stmt s; assign a;
+Select s such that Follows (s,s)
+none
+5000

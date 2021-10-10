@@ -1,0 +1,9 @@
+procedure flat {
+1    a = hello + byebye;
+2    techhang0ut = com1 + com2;
+3    read x;
+4    y = 1 + y / (x * 4 % z) - 10;
+5    z = (a * b / c) - d * ((g - h) + i % j);
+6    print y;
+7    h = 1;
+}

@@ -1,0 +1,1300 @@
+1001 - Valid. result-cl BOOLEAN, suchthat-cl UsesP, pattern-cl while, with-cl procedure.procName
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select BOOLEAN such that Uses(proc, v) pattern w(v, _) with proc.procName = "PR0C1"
+TRUE
+5000
+1002 - Valid. result-cl BOOLEAN, suchthat-cl UsesP, pattern-cl while, with-cl call.procName
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select BOOLEAN such that Uses(proc, v) pattern w(v, _) with cl.procName = "procedure"
+TRUE
+5000
+1003 - Valid. result-cl BOOLEAN, suchthat-cl UsesP, pattern-cl while, with-cl variable.varName
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select BOOLEAN such that Uses(proc, v) pattern w(v, _) with v.varName = "cc"
+TRUE
+5000
+1004 - Valid. result-cl BOOLEAN, suchthat-cl UsesP, pattern-cl while, with-cl read.varName
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select BOOLEAN such that Uses(proc, v) pattern w(v, _) with r.varName = "aa"
+TRUE
+5000
+1005 - Valid. result-cl BOOLEAN, suchthat-cl UsesP, pattern-cl while, with-cl print.varName
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select BOOLEAN such that Uses(proc, v) pattern w(v, _) with p.varName = "bb"
+TRUE
+5000
+1006 - Valid. result-cl BOOLEAN, suchthat-cl UsesP, pattern-cl while, with-cl constant.value
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select BOOLEAN such that Uses(proc, v) pattern w(v, _) with c.value = 33
+TRUE
+5000
+1007 - Valid. result-cl BOOLEAN, suchthat-cl UsesP, pattern-cl while, with-cl stmt.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select BOOLEAN such that Uses(proc, v) pattern w(v, _) with s.stmt# = 10
+TRUE
+5000
+1008 - Valid. result-cl BOOLEAN, suchthat-cl UsesP, pattern-cl while, with-cl read.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select BOOLEAN such that Uses(proc, v) pattern w(v, _) with r.stmt# = 10
+TRUE
+5000
+1009 - Valid. result-cl BOOLEAN, suchthat-cl UsesP, pattern-cl while, with-cl print.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select BOOLEAN such that Uses(proc, v) pattern w(v, _) with p.stmt# = 12
+TRUE
+5000
+1010 - Valid. result-cl BOOLEAN, suchthat-cl UsesP, pattern-cl while, with-cl call.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select BOOLEAN such that Uses(proc, v) pattern w(v, _) with cl.stmt# = 29
+TRUE
+5000
+1011 - Valid. result-cl BOOLEAN, suchthat-cl UsesP, pattern-cl while, with-cl while.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select BOOLEAN such that Uses(proc, v) pattern w(v, _) with w.stmt# = 5
+TRUE
+5000
+1012 - Valid. result-cl BOOLEAN, suchthat-cl UsesP, pattern-cl while, with-cl if.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select BOOLEAN such that Uses(proc, v) pattern w(v, _) with ifs.stmt# = 8
+TRUE
+5000
+1013 - Valid. result-cl BOOLEAN, suchthat-cl UsesP, pattern-cl while, with-cl assign.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select BOOLEAN such that Uses(proc, v) pattern w(v, _) with a.stmt# = 11
+TRUE
+5000
+1014 - Valid. result-cl BOOLEAN, suchthat-cl UsesP, pattern-cl if, with-cl procedure.procName
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select BOOLEAN such that Uses(proc, v) pattern ifs(v, _, _) with proc.procName = "PR0C1"
+TRUE
+5000
+1015 - Valid. result-cl BOOLEAN, suchthat-cl UsesP, pattern-cl if, with-cl call.procName
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select BOOLEAN such that Uses(proc, v) pattern ifs(v, _, _) with cl.procName = "procedure"
+TRUE
+5000
+1016 - Valid. result-cl BOOLEAN, suchthat-cl UsesP, pattern-cl if, with-cl variable.varName
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select BOOLEAN such that Uses(proc, v) pattern ifs(v, _, _) with v.varName = "aa"
+TRUE
+5000
+1017 - Valid. result-cl BOOLEAN, suchthat-cl UsesP, pattern-cl if, with-cl read.varName
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select BOOLEAN such that Uses(proc, v) pattern ifs(v, _, _) with r.varName = "aa"
+TRUE
+5000
+1018 - Valid. result-cl BOOLEAN, suchthat-cl UsesP, pattern-cl if, with-cl print.varName
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select BOOLEAN such that Uses(proc, v) pattern ifs(v, _, _) with p.varName = "bb"
+TRUE
+5000
+1019 - Valid. result-cl BOOLEAN, suchthat-cl UsesP, pattern-cl if, with-cl constant.value
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select BOOLEAN such that Uses(proc, v) pattern ifs(v, _, _) with c.value = 33
+TRUE
+5000
+1020 - Valid. result-cl BOOLEAN, suchthat-cl UsesP, pattern-cl if, with-cl stmt.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select BOOLEAN such that Uses(proc, v) pattern ifs(v, _, _) with s.stmt# = 11
+TRUE
+5000
+1021 - Valid. result-cl BOOLEAN, suchthat-cl UsesP, pattern-cl if, with-cl read.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select BOOLEAN such that Uses(proc, v) pattern ifs(v, _, _) with r.stmt# = 3
+TRUE
+5000
+1022 - Valid. result-cl BOOLEAN, suchthat-cl UsesP, pattern-cl if, with-cl print.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select BOOLEAN such that Uses(proc, v) pattern ifs(v, _, _) with p.stmt# = 1
+TRUE
+5000
+1023 - Valid. result-cl BOOLEAN, suchthat-cl UsesP, pattern-cl if, with-cl call.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select BOOLEAN such that Uses(proc, v) pattern ifs(v, _, _) with cl.stmt# = 16
+TRUE
+5000
+1024 - Valid. result-cl BOOLEAN, suchthat-cl UsesP, pattern-cl if, with-cl while.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select BOOLEAN such that Uses(proc, v) pattern ifs(v, _, _) with w.stmt# = 21
+TRUE
+5000
+1025 - Valid. result-cl BOOLEAN, suchthat-cl UsesP, pattern-cl if, with-cl if.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select BOOLEAN such that Uses(proc, v) pattern ifs(v, _, _) with ifs.stmt# = 2
+TRUE
+5000
+1026 - Valid. result-cl BOOLEAN, suchthat-cl UsesP, pattern-cl if, with-cl assign.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select BOOLEAN such that Uses(proc, v) pattern ifs(v, _, _) with a.stmt# = 4
+TRUE
+5000
+1027 - Valid. result-cl BOOLEAN, suchthat-cl ModifiesP, pattern-cl while, with-cl procedure.procName
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select BOOLEAN such that Modifies(proc, v) pattern w(v, _) with proc.procName = "PR0C1"
+TRUE
+5000
+1028 - Valid. result-cl BOOLEAN, suchthat-cl ModifiesP, pattern-cl while, with-cl call.procName
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select BOOLEAN such that Modifies(proc, v) pattern w(v, _) with cl.procName = "procedure"
+TRUE
+5000
+1029 - Valid. result-cl BOOLEAN, suchthat-cl ModifiesP, pattern-cl while, with-cl variable.varName
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select BOOLEAN such that Modifies(proc, v) pattern w(v, _) with v.varName = "cc"
+TRUE
+5000
+1030 - Valid. result-cl BOOLEAN, suchthat-cl ModifiesP, pattern-cl while, with-cl read.varName
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select BOOLEAN such that Modifies(proc, v) pattern w(v, _) with r.varName = "aa"
+TRUE
+5000
+1031 - Valid. result-cl BOOLEAN, suchthat-cl ModifiesP, pattern-cl while, with-cl print.varName
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select BOOLEAN such that Modifies(proc, v) pattern w(v, _) with p.varName = "bb"
+TRUE
+5000
+1032 - Valid. result-cl BOOLEAN, suchthat-cl ModifiesP, pattern-cl while, with-cl constant.value
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select BOOLEAN such that Modifies(proc, v) pattern w(v, _) with c.value = 33
+TRUE
+5000
+1033 - Valid. result-cl BOOLEAN, suchthat-cl ModifiesP, pattern-cl while, with-cl stmt.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select BOOLEAN such that Modifies(proc, v) pattern w(v, _) with s.stmt# = 10
+TRUE
+5000
+1034 - Valid. result-cl BOOLEAN, suchthat-cl ModifiesP, pattern-cl while, with-cl read.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select BOOLEAN such that Modifies(proc, v) pattern w(v, _) with r.stmt# = 10
+TRUE
+5000
+1035 - Valid. result-cl BOOLEAN, suchthat-cl ModifiesP, pattern-cl while, with-cl print.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select BOOLEAN such that Modifies(proc, v) pattern w(v, _) with p.stmt# = 12
+TRUE
+5000
+1036 - Valid. result-cl BOOLEAN, suchthat-cl ModifiesP, pattern-cl while, with-cl call.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select BOOLEAN such that Modifies(proc, v) pattern w(v, _) with cl.stmt# = 29
+TRUE
+5000
+1037 - Valid. result-cl BOOLEAN, suchthat-cl ModifiesP, pattern-cl while, with-cl while.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select BOOLEAN such that Modifies(proc, v) pattern w(v, _) with w.stmt# = 5
+TRUE
+5000
+1038 - Valid. result-cl BOOLEAN, suchthat-cl ModifiesP, pattern-cl while, with-cl if.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select BOOLEAN such that Modifies(proc, v) pattern w(v, _) with ifs.stmt# = 8
+TRUE
+5000
+1039 - Valid. result-cl BOOLEAN, suchthat-cl ModifiesP, pattern-cl while, with-cl assign.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select BOOLEAN such that Modifies(proc, v) pattern w(v, _) with a.stmt# = 11
+TRUE
+5000
+1040 - Valid. result-cl BOOLEAN, suchthat-cl ModifiesP, pattern-cl if, with-cl procedure.procName
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select BOOLEAN such that Modifies(proc, v) pattern ifs(v, _, _) with proc.procName = "PR0C1"
+TRUE
+5000
+1041 - Valid. result-cl BOOLEAN, suchthat-cl ModifiesP, pattern-cl if, with-cl call.procName
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select BOOLEAN such that Modifies(proc, v) pattern ifs(v, _, _) with cl.procName = "procedure"
+TRUE
+5000
+1042 - Valid. result-cl BOOLEAN, suchthat-cl ModifiesP, pattern-cl if, with-cl variable.varName
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select BOOLEAN such that Modifies(proc, v) pattern ifs(v, _, _) with v.varName = "aa"
+TRUE
+5000
+1043 - Valid. result-cl BOOLEAN, suchthat-cl ModifiesP, pattern-cl if, with-cl read.varName
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select BOOLEAN such that Modifies(proc, v) pattern ifs(v, _, _) with r.varName = "aa"
+TRUE
+5000
+1044 - Valid. result-cl BOOLEAN, suchthat-cl ModifiesP, pattern-cl if, with-cl print.varName
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select BOOLEAN such that Modifies(proc, v) pattern ifs(v, _, _) with p.varName = "bb"
+TRUE
+5000
+1045 - Valid. result-cl BOOLEAN, suchthat-cl ModifiesP, pattern-cl if, with-cl constant.value
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select BOOLEAN such that Modifies(proc, v) pattern ifs(v, _, _) with c.value = 33
+TRUE
+5000
+1046 - Valid. result-cl BOOLEAN, suchthat-cl ModifiesP, pattern-cl if, with-cl stmt.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select BOOLEAN such that Modifies(proc, v) pattern ifs(v, _, _) with s.stmt# = 11
+TRUE
+5000
+1047 - Valid. result-cl BOOLEAN, suchthat-cl ModifiesP, pattern-cl if, with-cl read.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select BOOLEAN such that Modifies(proc, v) pattern ifs(v, _, _) with r.stmt# = 3
+TRUE
+5000
+1048 - Valid. result-cl BOOLEAN, suchthat-cl ModifiesP, pattern-cl if, with-cl print.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select BOOLEAN such that Modifies(proc, v) pattern ifs(v, _, _) with p.stmt# = 1
+TRUE
+5000
+1049 - Valid. result-cl BOOLEAN, suchthat-cl ModifiesP, pattern-cl if, with-cl call.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select BOOLEAN such that Modifies(proc, v) pattern ifs(v, _, _) with cl.stmt# = 16
+TRUE
+5000
+1050 - Valid. result-cl BOOLEAN, suchthat-cl ModifiesP, pattern-cl if, with-cl while.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select BOOLEAN such that Modifies(proc, v) pattern ifs(v, _, _) with w.stmt# = 21
+TRUE
+5000
+1051 - Valid. result-cl BOOLEAN, suchthat-cl ModifiesP, pattern-cl if, with-cl if.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select BOOLEAN such that Modifies(proc, v) pattern ifs(v, _, _) with ifs.stmt# = 2
+TRUE
+5000
+1052 - Valid. result-cl BOOLEAN, suchthat-cl ModifiesP, pattern-cl if, with-cl assign.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select BOOLEAN such that Modifies(proc, v) pattern ifs(v, _, _) with a.stmt# = 4
+TRUE
+5000
+1053 - Valid. result-cl BOOLEAN, suchthat-cl Calls, pattern-cl while, with-cl procedure.procName
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select BOOLEAN such that Calls(proc1, proc2) pattern w(v, _) with proc1.procName = "PR0C1"
+TRUE
+5000
+1054 - Valid. result-cl BOOLEAN, suchthat-cl Calls, pattern-cl while, with-cl call.procName
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select BOOLEAN such that Calls(proc1, proc2) pattern w(v, _) with cl.procName = "procedure"
+TRUE
+5000
+1055 - Valid. result-cl BOOLEAN, suchthat-cl Calls, pattern-cl while, with-cl variable.varName
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select BOOLEAN such that Calls(proc1, proc2) pattern w(v, _) with v.varName = "cc"
+TRUE
+5000
+1056 - Valid. result-cl BOOLEAN, suchthat-cl Calls, pattern-cl while, with-cl read.varName
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select BOOLEAN such that Calls(proc1, proc2) pattern w(v, _) with r.varName = "aa"
+TRUE
+5000
+1057 - Valid. result-cl BOOLEAN, suchthat-cl Calls, pattern-cl while, with-cl print.varName
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select BOOLEAN such that Calls(proc1, proc2) pattern w(v, _) with p.varName = "bb"
+TRUE
+5000
+1058 - Valid. result-cl BOOLEAN, suchthat-cl Calls, pattern-cl while, with-cl call.varName
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select BOOLEAN such that Calls(proc1, proc2) pattern w(v, _) with c.value = 33
+TRUE
+5000
+1059 - Valid. result-cl BOOLEAN, suchthat-cl Calls, pattern-cl while, with-cl stmt.stmt#
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select BOOLEAN such that Calls(proc1, proc2) pattern w(v, _) with s.stmt# = 10
+TRUE
+5000
+1060 - Valid. result-cl BOOLEAN, suchthat-cl Calls, pattern-cl while, with-cl read.stmt#
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select BOOLEAN such that Calls(proc1, proc2) pattern w(v, _) with r.stmt# = 10
+TRUE
+5000
+1061 - Valid. result-cl BOOLEAN, suchthat-cl Calls, pattern-cl while, with-cl print.stmt#
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select BOOLEAN such that Calls(proc1, proc2) pattern w(v, _) with p.stmt# = 12
+TRUE
+5000
+1062 - Valid. result-cl BOOLEAN, suchthat-cl Calls, pattern-cl while, with-cl call.stmt#
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select BOOLEAN such that Calls(proc1, proc2) pattern w(v, _) with cl.stmt# = 29
+TRUE
+5000
+1063 - Valid. result-cl BOOLEAN, suchthat-cl Calls, pattern-cl while, with-cl while.stmt#
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select BOOLEAN such that Calls(proc1, proc2) pattern w(v, _) with w.stmt# = 5
+TRUE
+5000
+1064 - Valid. result-cl BOOLEAN, suchthat-cl Calls, pattern-cl while, with-cl if.stmt#
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select BOOLEAN such that Calls(proc1, proc2) pattern w(v, _) with ifs.stmt# = 8
+TRUE
+5000
+1065 - Valid. result-cl BOOLEAN, suchthat-cl Calls, pattern-cl while, with-cl assign.stmt#
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select BOOLEAN such that Calls(proc1, proc2) pattern w(v, _) with a.stmt# = 11
+TRUE
+5000
+1066 - Valid. result-cl BOOLEAN, suchthat-cl Calls, pattern-cl if, with-cl procedure.procName
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select BOOLEAN such that Calls(proc1, proc2) pattern ifs(v, _, _) with proc1.procName = "PR0C1"
+TRUE
+5000
+1067 - Valid. result-cl BOOLEAN, suchthat-cl Calls, pattern-cl if, with-cl call.procName
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select BOOLEAN such that Calls(proc1, proc2) pattern ifs(v, _, _) with cl.procName = "procedure"
+TRUE
+5000
+1068 - Valid. result-cl BOOLEAN, suchthat-cl Calls, pattern-cl if, with-cl variable.varName
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select BOOLEAN such that Calls(proc1, proc2) pattern ifs(v, _, _) with v.varName = "aa"
+TRUE
+5000
+1069 - Valid. result-cl BOOLEAN, suchthat-cl Calls, pattern-cl if, with-cl read.varName
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select BOOLEAN such that Calls(proc1, proc2) pattern ifs(v, _, _) with r.varName = "aa"
+TRUE
+5000
+1070 - Valid. result-cl BOOLEAN, suchthat-cl Calls, pattern-cl if, with-cl print.varName
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select BOOLEAN such that Calls(proc1, proc2) pattern ifs(v, _, _) with p.varName = "bb"
+TRUE
+5000
+1071 - Valid. result-cl BOOLEAN, suchthat-cl Calls, pattern-cl if, with-cl constant.value
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select BOOLEAN such that Calls(proc1, proc2) pattern ifs(v, _, _) with c.value = 33
+TRUE
+5000
+1072 - Valid. result-cl BOOLEAN, suchthat-cl Calls, pattern-cl if, with-cl stmt.stmt#
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select BOOLEAN such that Calls(proc1, proc2) pattern ifs(v, _, _) with s.stmt# = 11
+TRUE
+5000
+1073 - Valid. result-cl BOOLEAN, suchthat-cl Calls, pattern-cl if, with-cl read.stmt#
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select BOOLEAN such that Calls(proc1, proc2) pattern ifs(v, _, _) with r.stmt# = 3
+TRUE
+5000
+1074 - Valid. result-cl BOOLEAN, suchthat-cl Calls, pattern-cl if, with-cl print.stmt#
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select BOOLEAN such that Calls(proc1, proc2) pattern ifs(v, _, _) with p.stmt# = 1
+TRUE
+5000
+1075 - Valid. result-cl BOOLEAN, suchthat-cl Calls, pattern-cl if, with-cl call.stmt#
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select BOOLEAN such that Calls(proc1, proc2) pattern ifs(v, _, _) with cl.stmt# = 16
+TRUE
+5000
+1076 - Valid. result-cl BOOLEAN, suchthat-cl Calls, pattern-cl if, with-cl while.stmt#
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select BOOLEAN such that Calls(proc1, proc2) pattern ifs(v, _, _) with w.stmt# = 21
+TRUE
+5000
+1077 - Valid. result-cl BOOLEAN, suchthat-cl Calls, pattern-cl if, with-cl if.stmt#
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select BOOLEAN such that Calls(proc1, proc2) pattern ifs(v, _, _) with ifs.stmt# = 2
+TRUE
+5000
+1078 - Valid. result-cl BOOLEAN, suchthat-cl Calls, pattern-cl if, with-cl assign.stmt#
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select BOOLEAN such that Calls(proc1, proc2) pattern ifs(v, _, _) with a.stmt# = 4
+TRUE
+5000
+1079 - Valid. result-cl BOOLEAN, suchthat-cl Calls*, pattern-cl while, with-cl procedure.procName
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select BOOLEAN such that Calls*(proc1, proc2) pattern w(v, _) with proc1.procName = "PR0C1"
+TRUE
+5000
+1080 - Valid. result-cl BOOLEAN, suchthat-cl Calls*, pattern-cl while, with-cl call.procName
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select BOOLEAN such that Calls*(proc1, proc2) pattern w(v, _) with cl.procName = "procedure"
+TRUE
+5000
+1081 - Valid. result-cl BOOLEAN, suchthat-cl Calls*, pattern-cl while, with-cl variable.varName
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select BOOLEAN such that Calls*(proc1, proc2) pattern w(v, _) with v.varName = "cc"
+TRUE
+5000
+1082 - Valid. result-cl BOOLEAN, suchthat-cl Calls*, pattern-cl while, with-cl read.varName
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select BOOLEAN such that Calls*(proc1, proc2) pattern w(v, _) with r.varName = "aa"
+TRUE
+5000
+1083 - Valid. result-cl BOOLEAN, suchthat-cl Calls*, pattern-cl while, with-cl print.varName
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select BOOLEAN such that Calls*(proc1, proc2) pattern w(v, _) with p.varName = "bb"
+TRUE
+5000
+1084 - Valid. result-cl BOOLEAN, suchthat-cl Calls*, pattern-cl while, with-cl call.varName
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select BOOLEAN such that Calls*(proc1, proc2) pattern w(v, _) with c.value = 33
+TRUE
+5000
+1085 - Valid. result-cl BOOLEAN, suchthat-cl Calls*, pattern-cl while, with-cl stmt.stmt#
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select BOOLEAN such that Calls*(proc1, proc2) pattern w(v, _) with s.stmt# = 10
+TRUE
+5000
+1086 - Valid. result-cl BOOLEAN, suchthat-cl Calls*, pattern-cl while, with-cl read.stmt#
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select BOOLEAN such that Calls*(proc1, proc2) pattern w(v, _) with r.stmt# = 10
+TRUE
+5000
+1087 - Valid. result-cl BOOLEAN, suchthat-cl Calls*, pattern-cl while, with-cl print.stmt#
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select BOOLEAN such that Calls*(proc1, proc2) pattern w(v, _) with p.stmt# = 12
+TRUE
+5000
+1088 - Valid. result-cl BOOLEAN, suchthat-cl Calls*, pattern-cl while, with-cl call.stmt#
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select BOOLEAN such that Calls*(proc1, proc2) pattern w(v, _) with cl.stmt# = 29
+TRUE
+5000
+1089 - Valid. result-cl BOOLEAN, suchthat-cl Calls*, pattern-cl while, with-cl while.stmt#
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select BOOLEAN such that Calls*(proc1, proc2) pattern w(v, _) with w.stmt# = 5
+TRUE
+5000
+1090 - Valid. result-cl BOOLEAN, suchthat-cl Calls*, pattern-cl while, with-cl if.stmt#
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select BOOLEAN such that Calls*(proc1, proc2) pattern w(v, _) with ifs.stmt# = 8
+TRUE
+5000
+1091 - Valid. result-cl BOOLEAN, suchthat-cl Calls*, pattern-cl while, with-cl assign.stmt#
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select BOOLEAN such that Calls*(proc1, proc2) pattern w(v, _) with a.stmt# = 11
+TRUE
+5000
+1092 - Valid. result-cl BOOLEAN, suchthat-cl Calls*, pattern-cl if, with-cl procedure.procName
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select BOOLEAN such that Calls*(proc1, proc2) pattern ifs(v, _, _) with proc1.procName = "PR0C1"
+TRUE
+5000
+1093 - Valid. result-cl BOOLEAN, suchthat-cl Calls*, pattern-cl if, with-cl call.procName
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select BOOLEAN such that Calls*(proc1, proc2) pattern ifs(v, _, _) with cl.procName = "procedure"
+TRUE
+5000
+1094 - Valid. result-cl BOOLEAN, suchthat-cl Calls*, pattern-cl if, with-cl variable.varName
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select BOOLEAN such that Calls*(proc1, proc2) pattern ifs(v, _, _) with v.varName = "aa"
+TRUE
+5000
+1095 - Valid. result-cl BOOLEAN, suchthat-cl Calls*, pattern-cl if, with-cl read.varName
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select BOOLEAN such that Calls*(proc1, proc2) pattern ifs(v, _, _) with r.varName = "aa"
+TRUE
+5000
+1096 - Valid. result-cl BOOLEAN, suchthat-cl Calls*, pattern-cl if, with-cl print.varName
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select BOOLEAN such that Calls*(proc1, proc2) pattern ifs(v, _, _) with p.varName = "bb"
+TRUE
+5000
+1097 - Valid. result-cl BOOLEAN, suchthat-cl Calls*, pattern-cl if, with-cl constant.value
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select BOOLEAN such that Calls*(proc1, proc2) pattern ifs(v, _, _) with c.value = 33
+TRUE
+5000
+1098 - Valid. result-cl BOOLEAN, suchthat-cl Calls*, pattern-cl if, with-cl stmt.stmt#
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select BOOLEAN such that Calls*(proc1, proc2) pattern ifs(v, _, _) with s.stmt# = 11
+TRUE
+5000
+1099 - Valid. result-cl BOOLEAN, suchthat-cl Calls*, pattern-cl if, with-cl read.stmt#
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select BOOLEAN such that Calls*(proc1, proc2) pattern ifs(v, _, _) with r.stmt# = 3
+TRUE
+5000
+1100 - Valid. result-cl BOOLEAN, suchthat-cl Calls*, pattern-cl if, with-cl print.stmt#
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select BOOLEAN such that Calls*(proc1, proc2) pattern ifs(v, _, _) with p.stmt# = 1
+TRUE
+5000
+1101 - Valid. result-cl BOOLEAN, suchthat-cl Calls*, pattern-cl if, with-cl call.stmt#
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select BOOLEAN such that Calls*(proc1, proc2) pattern ifs(v, _, _) with cl.stmt# = 16
+TRUE
+5000
+1102 - Valid. result-cl BOOLEAN, suchthat-cl Calls*, pattern-cl if, with-cl while.stmt#
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select BOOLEAN such that Calls*(proc1, proc2) pattern ifs(v, _, _) with w.stmt# = 21
+TRUE
+5000
+1103 - Valid. result-cl BOOLEAN, suchthat-cl Calls*, pattern-cl if, with-cl if.stmt#
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select BOOLEAN such that Calls*(proc1, proc2) pattern ifs(v, _, _) with ifs.stmt# = 2
+TRUE
+5000
+1104 - Valid. result-cl BOOLEAN, suchthat-cl Calls*, pattern-cl if, with-cl assign.stmt#
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select BOOLEAN such that Calls*(proc1, proc2) pattern ifs(v, _, _) with a.stmt# = 4
+TRUE
+5000
+1105 - Valid. result-cl BOOLEAN, suchthat-cl Next, pattern-cl while, with-cl procedure.procName
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select BOOLEAN such that Next(n1, n2) pattern w(v, _) with proc1.procName = "PR0C1"
+TRUE
+5000
+1106 - Valid. result-cl BOOLEAN, suchthat-cl Next, pattern-cl while, with-cl call.procName
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select BOOLEAN such that Next(n1, n2) pattern w(v, _) with cl.procName = "procedure"
+TRUE
+5000
+1107 - Valid. result-cl BOOLEAN, suchthat-cl Next, pattern-cl while, with-cl variable.varName
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select BOOLEAN such that Next(n1, n2) pattern w(v, _) with v.varName = "cc"
+TRUE
+5000
+1108 - Valid. result-cl BOOLEAN, suchthat-cl Next, pattern-cl while, with-cl read.varName
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select BOOLEAN such that Next(n1, n2) pattern w(v, _) with r.varName = "aa"
+TRUE
+5000
+1109 - Valid. result-cl BOOLEAN, suchthat-cl Next, pattern-cl while, with-cl print.varName
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select BOOLEAN such that Next(n1, n2) pattern w(v, _) with p.varName = "bb"
+TRUE
+5000
+1110 - Valid. result-cl BOOLEAN, suchthat-cl Next, pattern-cl while, with-cl call.varName
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select BOOLEAN such that Next(n1, n2) pattern w(v, _) with c.value = 33
+TRUE
+5000
+1111 - Valid. result-cl BOOLEAN, suchthat-cl Next, pattern-cl while, with-cl stmt.stmt#
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select BOOLEAN such that Next(n1, n2) pattern w(v, _) with s.stmt# = 10
+TRUE
+5000
+1112 - Valid. result-cl BOOLEAN, suchthat-cl Next, pattern-cl while, with-cl read.stmt#
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select BOOLEAN such that Next(n1, n2) pattern w(v, _) with r.stmt# = 10
+TRUE
+5000
+1113 - Valid. result-cl BOOLEAN, suchthat-cl Next, pattern-cl while, with-cl print.stmt#
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select BOOLEAN such that Next(n1, n2) pattern w(v, _) with p.stmt# = 12
+TRUE
+5000
+1114 - Valid. result-cl BOOLEAN, suchthat-cl Next, pattern-cl while, with-cl call.stmt#
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select BOOLEAN such that Next(n1, n2) pattern w(v, _) with cl.stmt# = 29
+TRUE
+5000
+1115 - Valid. result-cl BOOLEAN, suchthat-cl Next, pattern-cl while, with-cl while.stmt#
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select BOOLEAN such that Next(n1, n2) pattern w(v, _) with w.stmt# = 5
+TRUE
+5000
+1116 - Valid. result-cl BOOLEAN, suchthat-cl Next, pattern-cl while, with-cl if.stmt#
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select BOOLEAN such that Next(n1, n2) pattern w(v, _) with ifs.stmt# = 8
+TRUE
+5000
+1117 - Valid. result-cl BOOLEAN, suchthat-cl Next, pattern-cl while, with-cl assign.stmt#
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select BOOLEAN such that Next(n1, n2) pattern w(v, _) with a.stmt# = 11
+TRUE
+5000
+1118 - Valid. result-cl BOOLEAN, suchthat-cl Next, pattern-cl if, with-cl procedure.procName
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select BOOLEAN such that Next(n1, n2) pattern ifs(v, _, _) with proc1.procName = "PR0C1"
+TRUE
+5000
+1119 - Valid. result-cl BOOLEAN, suchthat-cl Next, pattern-cl if, with-cl call.procName
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select BOOLEAN such that Next(n1, n2) pattern ifs(v, _, _) with cl.procName = "procedure"
+TRUE
+5000
+1120 - Valid. result-cl BOOLEAN, suchthat-cl Next, pattern-cl if, with-cl variable.varName
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select BOOLEAN such that Next(n1, n2) pattern ifs(v, _, _) with v.varName = "aa"
+TRUE
+5000
+1121 - Valid. result-cl BOOLEAN, suchthat-cl Next, pattern-cl if, with-cl read.varName
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select BOOLEAN such that Next(n1, n2) pattern ifs(v, _, _) with r.varName = "aa"
+TRUE
+5000
+1122 - Valid. result-cl BOOLEAN, suchthat-cl Next, pattern-cl if, with-cl print.varName
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select BOOLEAN such that Next(n1, n2) pattern ifs(v, _, _) with p.varName = "bb"
+TRUE
+5000
+1123 - Valid. result-cl BOOLEAN, suchthat-cl Next, pattern-cl if, with-cl constant.value
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select BOOLEAN such that Next(n1, n2) pattern ifs(v, _, _) with c.value = 33
+TRUE
+5000
+1124 - Valid. result-cl BOOLEAN, suchthat-cl Next, pattern-cl if, with-cl stmt.stmt#
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select BOOLEAN such that Next(n1, n2) pattern ifs(v, _, _) with s.stmt# = 11
+TRUE
+5000
+1125 - Valid. result-cl BOOLEAN, suchthat-cl Next, pattern-cl if, with-cl read.stmt#
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select BOOLEAN such that Next(n1, n2) pattern ifs(v, _, _) with r.stmt# = 3
+TRUE
+5000
+1126 - Valid. result-cl BOOLEAN, suchthat-cl Next, pattern-cl if, with-cl print.stmt#
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select BOOLEAN such that Next(n1, n2) pattern ifs(v, _, _) with p.stmt# = 1
+TRUE
+5000
+1127 - Valid. result-cl BOOLEAN, suchthat-cl Next, pattern-cl if, with-cl call.stmt#
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select BOOLEAN such that Next(n1, n2) pattern ifs(v, _, _) with cl.stmt# = 16
+TRUE
+5000
+1128 - Valid. result-cl BOOLEAN, suchthat-cl Next, pattern-cl if, with-cl while.stmt#
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select BOOLEAN such that Next(n1, n2) pattern ifs(v, _, _) with w.stmt# = 21
+TRUE
+5000
+1129 - Valid. result-cl BOOLEAN, suchthat-cl Next, pattern-cl if, with-cl if.stmt#
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select BOOLEAN such that Next(n1, n2) pattern ifs(v, _, _) with ifs.stmt# = 2
+TRUE
+5000
+1130 - Valid. result-cl BOOLEAN, suchthat-cl Next, pattern-cl if, with-cl assign.stmt#
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select BOOLEAN such that Next(n1, n2) pattern ifs(v, _, _) with a.stmt# = 4
+TRUE
+5000
+1131 - Valid. result-cl tuple, suchthat-cl UsesP, pattern-cl while, with-cl procedure.procName
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select <proc, v> such that Uses(proc, v) pattern w(v, _) with proc.procName = "PR0C1"
+PR0C1 cc, PR0C1 constant, PR0C1 if, PR0C1 print, PR0C1 read, PR0C1 stmt, PR0C1 while
+5000
+1132 - Valid. result-cl tuple, suchthat-cl UsesP, pattern-cl while, with-cl call.procName
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select <proc, v> such that Uses(proc, v) pattern w(v, _) with cl.procName = "procedure"
+PR0C1 cc, PR0C1 constant, PR0C1 if, PR0C1 print, PR0C1 read, PR0C1 stmt, PR0C1 while, call cc, call constant, call if, call print, call read, call stmt, call while, procedure cc, procedure constant, procedure if, procedure print, procedure read, procedure stmt, procedure while
+5000
+1133 - Valid. result-cl tuple, suchthat-cl UsesP, pattern-cl while, with-cl variable.varName
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select <proc, v> such that Uses(proc, v) pattern w(v, _) with v.varName = "cc"
+PR0C1 cc, call cc, procedure cc
+5000
+1134 - Valid. result-cl tuple, suchthat-cl UsesP, pattern-cl while, with-cl read.varName
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select <proc, v> such that Uses(proc, v) pattern w(v, _) with r.varName = "aa"
+PR0C1 cc,PR0C1 constant,PR0C1 if,PR0C1 print,PR0C1 read,PR0C1 stmt,PR0C1 while,call cc,call constant,call if,call print,call read,call stmt,call while,procedure cc,procedure constant,procedure if,procedure print,procedure read,procedure stmt,procedure while
+5000
+1135 - Valid. result-cl tuple, suchthat-cl UsesP, pattern-cl while, with-cl print.varName
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select <proc, v> such that Uses(proc, v) pattern w(v, _) with p.varName = "aa"
+
+5000
+1136 - Valid. result-cl tuple, suchthat-cl UsesP, pattern-cl while, with-cl constant.value
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select <proc, v> such that Uses(proc, v) pattern w(v, _) with c.value = 33
+PR0C1 cc, PR0C1 constant, PR0C1 if, PR0C1 print, PR0C1 read, PR0C1 stmt, PR0C1 while, call cc, call constant, call if, call print, call read, call stmt, call while, procedure cc, procedure constant, procedure if, procedure print, procedure read, procedure stmt, procedure while
+5000
+1137 - Valid. result-cl tuple, suchthat-cl UsesP, pattern-cl while, with-cl stmt.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select <proc, v> such that Uses(proc, v) pattern w(v, _) with s.stmt# = 10
+PR0C1 cc, PR0C1 constant, PR0C1 if, PR0C1 print, PR0C1 read, PR0C1 stmt, PR0C1 while, call cc, call constant, call if, call print, call read, call stmt, call while, procedure cc, procedure constant, procedure if, procedure print, procedure read, procedure stmt, procedure while
+5000
+1138 - Valid. result-cl tuple, suchthat-cl UsesP, pattern-cl while, with-cl read.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select <proc, v> such that Uses(proc, v) pattern w(v, _) with r.stmt# = 10
+PR0C1 cc, PR0C1 constant, PR0C1 if, PR0C1 print, PR0C1 read, PR0C1 stmt, PR0C1 while, call cc, call constant, call if, call print, call read, call stmt, call while, procedure cc, procedure constant, procedure if, procedure print, procedure read, procedure stmt, procedure while
+5000
+1139 - Valid. result-cl tuple, suchthat-cl UsesP, pattern-cl while, with-cl print.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select <proc, v> such that Uses(proc, v) pattern w(v, _) with p.stmt# = 12
+PR0C1 cc, PR0C1 constant, PR0C1 if, PR0C1 print, PR0C1 read, PR0C1 stmt, PR0C1 while, call cc, call constant, call if, call print, call read, call stmt, call while, procedure cc, procedure constant, procedure if, procedure print, procedure read, procedure stmt, procedure while
+5000
+1140 - Valid. result-cl tuple, suchthat-cl UsesP, pattern-cl while, with-cl call.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select <proc, v> such that Uses(proc, v) pattern w(v, _) with cl.stmt# = 29
+PR0C1 cc, PR0C1 constant, PR0C1 if, PR0C1 print, PR0C1 read, PR0C1 stmt, PR0C1 while, call cc, call constant, call if, call print, call read, call stmt, call while, procedure cc, procedure constant, procedure if, procedure print, procedure read, procedure stmt, procedure while
+5000
+1141 - Valid. result-cl tuple, suchthat-cl UsesP, pattern-cl while, with-cl while.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select <proc, v> such that Uses(proc, v) pattern w(v, _) with w.stmt# = 5
+PR0C1 cc, call cc, procedure cc
+5000
+1142 - Valid. result-cl tuple, suchthat-cl UsesP, pattern-cl while, with-cl if.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select <proc, v> such that Uses(proc, v) pattern w(v, _) with ifs.stmt# = 8
+PR0C1 cc, PR0C1 constant, PR0C1 if, PR0C1 print, PR0C1 read, PR0C1 stmt, PR0C1 while, call cc, call constant, call if, call print, call read, call stmt, call while, procedure cc, procedure constant, procedure if, procedure print, procedure read, procedure stmt, procedure while
+5000
+1143 - Valid. result-cl tuple, suchthat-cl UsesP, pattern-cl while, with-cl assign.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select <proc, v> such that Uses(proc, v) pattern w(v, _) with a.stmt# = 11
+PR0C1 cc, PR0C1 constant, PR0C1 if, PR0C1 print, PR0C1 read, PR0C1 stmt, PR0C1 while, call cc, call constant, call if, call print, call read, call stmt, call while, procedure cc, procedure constant, procedure if, procedure print, procedure read, procedure stmt, procedure while
+5000
+1144 - Valid. result-cl tuple, suchthat-cl UsesP, pattern-cl if, with-cl procedure.procName
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select <proc, v> such that Uses(proc, v) pattern ifs(v, _, _) with proc.procName = "PR0C1"
+PR0C1 aa, PR0C1 assign, PR0C1 bb, PR0C1 call, PR0C1 cc, PR0C1 constant, PR0C1 if, PR0C1 print, PR0C1 read, PR0C1 stmt, PR0C1 variable, PR0C1 while
+5000
+1145 - Valid. result-cl tuple, suchthat-cl UsesP, pattern-cl if, with-cl call.procName
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select <proc, v> such that Uses(proc, v) pattern ifs(v, _, _) with cl.procName = "procedure"
+PR0C1 aa, PR0C1 assign, PR0C1 bb, PR0C1 call, PR0C1 cc, PR0C1 constant, PR0C1 if, PR0C1 print, PR0C1 read, PR0C1 stmt, PR0C1 variable, PR0C1 while, procedure stmt, procedure read, procedure print, procedure call, procedure while, procedure if, procedure assign, procedure variable, procedure constant, procedure aa, procedure bb, procedure cc, call stmt, call read, call print, call call, call while, call if, call assign, call variable, call constant, call aa, call bb, call cc
+5000
+1146 - Valid. result-cl tuple, suchthat-cl UsesP, pattern-cl if, with-cl variable.varName
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select <proc, v> such that Uses(proc, v) pattern ifs(v, _, _) with v.varName = "aa"
+PR0C1 aa, call aa, procedure aa
+5000
+1147 - Valid. result-cl tuple, suchthat-cl UsesP, pattern-cl if, with-cl read.varName
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select <proc, v> such that Uses(proc, v) pattern ifs(v, _, _) with r.varName = "aa"
+PR0C1 aa, PR0C1 assign, PR0C1 bb, PR0C1 call, PR0C1 cc, PR0C1 constant, PR0C1 if, PR0C1 print, PR0C1 read, PR0C1 stmt, PR0C1 variable, PR0C1 while, procedure stmt, procedure read, procedure print, procedure call, procedure while, procedure if, procedure assign, procedure variable, procedure constant, procedure aa, procedure bb, procedure cc, call stmt, call read, call print, call call, call while, call if, call assign, call variable, call constant, call aa, call bb, call cc
+5000
+1148 - Valid. result-cl tuple, suchthat-cl UsesP, pattern-cl if, with-cl print.varName
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select <proc, v> such that Uses(proc, v) pattern ifs(v, _, _) with p.varName = "aa"
+
+5000
+1149 - Valid. result-cl tuple, suchthat-cl UsesP, pattern-cl if, with-cl constant.value
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select <proc, v> such that Uses(proc, v) pattern ifs(v, _, _) with c.value = 33
+PR0C1 aa, PR0C1 assign, PR0C1 bb, PR0C1 call, PR0C1 cc, PR0C1 constant, PR0C1 if, PR0C1 print, PR0C1 read, PR0C1 stmt, PR0C1 variable, PR0C1 while, procedure stmt, procedure read, procedure print, procedure call, procedure while, procedure if, procedure assign, procedure variable, procedure constant, procedure aa, procedure bb, procedure cc, call stmt, call read, call print, call call, call while, call if, call assign, call variable, call constant, call aa, call bb, call cc
+5000
+1150 - Valid. result-cl tuple, suchthat-cl UsesP, pattern-cl if, with-cl stmt.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select <proc, v> such that Uses(proc, v) pattern ifs(v, _, _) with s.stmt# = 11
+PR0C1 aa, PR0C1 assign, PR0C1 bb, PR0C1 call, PR0C1 cc, PR0C1 constant, PR0C1 if, PR0C1 print, PR0C1 read, PR0C1 stmt, PR0C1 variable, PR0C1 while, procedure stmt, procedure read, procedure print, procedure call, procedure while, procedure if, procedure assign, procedure variable, procedure constant, procedure aa, procedure bb, procedure cc, call stmt, call read, call print, call call, call while, call if, call assign, call variable, call constant, call aa, call bb, call cc
+5000
+1151 - Valid. result-cl tuple, suchthat-cl UsesP, pattern-cl if, with-cl read.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select <proc, v> such that Uses(proc, v) pattern ifs(v, _, _) with r.stmt# = 3
+PR0C1 aa, PR0C1 assign, PR0C1 bb, PR0C1 call, PR0C1 cc, PR0C1 constant, PR0C1 if, PR0C1 print, PR0C1 read, PR0C1 stmt, PR0C1 variable, PR0C1 while, procedure stmt, procedure read, procedure print, procedure call, procedure while, procedure if, procedure assign, procedure variable, procedure constant, procedure aa, procedure bb, procedure cc, call stmt, call read, call print, call call, call while, call if, call assign, call variable, call constant, call aa, call bb, call cc
+5000
+1152 - Valid. result-cl tuple, suchthat-cl UsesP, pattern-cl if, with-cl print.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select <proc, v> such that Uses(proc, v) pattern ifs(v, _, _) with p.stmt# = 1
+PR0C1 aa, PR0C1 assign, PR0C1 bb, PR0C1 call, PR0C1 cc, PR0C1 constant, PR0C1 if, PR0C1 print, PR0C1 read, PR0C1 stmt, PR0C1 variable, PR0C1 while, procedure stmt, procedure read, procedure print, procedure call, procedure while, procedure if, procedure assign, procedure variable, procedure constant, procedure aa, procedure bb, procedure cc, call stmt, call read, call print, call call, call while, call if, call assign, call variable, call constant, call aa, call bb, call cc
+5000
+1153 - Valid. result-cl tuple, suchthat-cl UsesP, pattern-cl if, with-cl call.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select <proc, v> such that Uses(proc, v) pattern ifs(v, _, _) with cl.stmt# = 16
+PR0C1 aa, PR0C1 assign, PR0C1 bb, PR0C1 call, PR0C1 cc, PR0C1 constant, PR0C1 if, PR0C1 print, PR0C1 read, PR0C1 stmt, PR0C1 variable, PR0C1 while, procedure stmt, procedure read, procedure print, procedure call, procedure while, procedure if, procedure assign, procedure variable, procedure constant, procedure aa, procedure bb, procedure cc, call stmt, call read, call print, call call, call while, call if, call assign, call variable, call constant, call aa, call bb, call cc
+5000
+1154 - Valid. result-cl tuple, suchthat-cl UsesP, pattern-cl if, with-cl while.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select <proc, v> such that Uses(proc, v) pattern ifs(v, _, _) with w.stmt# = 21
+PR0C1 aa, PR0C1 assign, PR0C1 bb, PR0C1 call, PR0C1 cc, PR0C1 constant, PR0C1 if, PR0C1 print, PR0C1 read, PR0C1 stmt, PR0C1 variable, PR0C1 while, procedure stmt, procedure read, procedure print, procedure call, procedure while, procedure if, procedure assign, procedure variable, procedure constant, procedure aa, procedure bb, procedure cc, call stmt, call read, call print, call call, call while, call if, call assign, call variable, call constant, call aa, call bb, call cc
+5000
+1155 - Valid. result-cl tuple, suchthat-cl UsesP, pattern-cl if, with-cl if.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select <proc, v> such that Uses(proc, v) pattern ifs(v, _, _) with ifs.stmt# = 2
+PR0C1 aa, PR0C1 cc, PR0C1 if, PR0C1 variable, call aa, call cc, call if, call variable, procedure aa, procedure cc, procedure if, procedure variable
+5000
+1156 - Valid. result-cl tuple, suchthat-cl UsesP, pattern-cl if, with-cl assign.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select <proc, v> such that Uses(proc, v) pattern ifs(v, _, _) with a.stmt# = 4
+PR0C1 aa, PR0C1 assign, PR0C1 bb, PR0C1 call, PR0C1 cc, PR0C1 constant, PR0C1 if, PR0C1 print, PR0C1 read, PR0C1 stmt, PR0C1 variable, PR0C1 while, procedure aa, procedure assign, procedure bb, procedure call, procedure cc, procedure constant, procedure if, procedure print, procedure read, procedure stmt, procedure variable, procedure while, call aa, call assign, call bb, call call, call cc, call constant, call if, call print, call read, call stmt, call variable, call while
+5000
+1157 - Valid. result-cl tuple, suchthat-cl ModifiesP, pattern-cl while, with-cl procedure.procName
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select <proc, v> such that Modifies(proc, v) pattern w(v, _) with proc.procName = "PR0C1"
+PR0C1 cc, PR0C1 read, PR0C1 stmt, PR0C1 while, PR0C1 constant
+5000
+1158 - Valid. result-cl tuple, suchthat-cl ModifiesP, pattern-cl while, with-cl call.procName
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select <proc, v> such that Modifies(proc, v) pattern w(v, _) with cl.procName = "procedure"
+PR0C1 cc, PR0C1 constant, PR0C1 read, PR0C1 stmt, PR0C1 while, call constant, call read, call stmt, call while, procedure read, procedure stmt
+5000
+1159 - Valid. result-cl tuple, suchthat-cl ModifiesP, pattern-cl while, with-cl variable.varName
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select <proc, v> such that Modifies(proc, v) pattern w(v, _) with v.varName = "cc"
+PR0C1 cc
+5000
+1160 - Valid. result-cl tuple, suchthat-cl ModifiesP, pattern-cl while, with-cl read.varName
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select <proc, v> such that Modifies(proc, v) pattern w(v, _) with r.varName = "aa"
+PR0C1 cc, PR0C1 constant, PR0C1 read, PR0C1 stmt, PR0C1 while, call constant, call read, call stmt, call while, procedure read, procedure stmt
+5000
+1161 - Valid. result-cl tuple, suchthat-cl ModifiesP, pattern-cl while, with-cl print.varName
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select <proc, v> such that Modifies(proc, v) pattern w(v, _) with p.varName = "aa"
+
+5000
+1162 - Valid. result-cl tuple, suchthat-cl ModifiesP, pattern-cl while, with-cl constant.value
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select <proc, v> such that Modifies(proc, v) pattern w(v, _) with c.value = 33
+PR0C1 cc, PR0C1 constant, PR0C1 read, PR0C1 stmt, PR0C1 while, call constant, call read, call stmt, call while, procedure read, procedure stmt
+5000
+1163 - Valid. result-cl tuple, suchthat-cl ModifiesP, pattern-cl while, with-cl stmt.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select <proc, v> such that Modifies(proc, v) pattern w(v, _) with s.stmt# = 10
+PR0C1 cc, PR0C1 constant, PR0C1 read, PR0C1 stmt, PR0C1 while, call constant, call read, call stmt, call while, procedure read, procedure stmt
+5000
+1164 - Valid. result-cl tuple, suchthat-cl ModifiesP, pattern-cl while, with-cl read.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select <proc, v> such that Modifies(proc, v) pattern w(v, _) with r.stmt# = 10
+PR0C1 cc, PR0C1 constant, PR0C1 read, PR0C1 stmt, PR0C1 while, call constant, call read, call stmt, call while, procedure read, procedure stmt
+5000
+1165 - Valid. result-cl tuple, suchthat-cl ModifiesP, pattern-cl while, with-cl print.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select <proc, v> such that Modifies(proc, v) pattern w(v, _) with p.stmt# = 12
+PR0C1 cc, PR0C1 constant, PR0C1 read, PR0C1 stmt, PR0C1 while, call constant, call read, call stmt, call while, procedure read, procedure stmt
+5000
+1166 - Valid. result-cl tuple, suchthat-cl ModifiesP, pattern-cl while, with-cl call.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select <proc, v> such that Modifies(proc, v) pattern w(v, _) with cl.stmt# = 29
+PR0C1 cc, PR0C1 constant, PR0C1 read, PR0C1 stmt, PR0C1 while, call constant, call read, call stmt, call while, procedure read, procedure stmt
+5000
+1167 - Valid. result-cl tuple, suchthat-cl ModifiesP, pattern-cl while, with-cl while.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select <proc, v> such that Modifies(proc, v) pattern w(v, _) with w.stmt# = 5
+PR0C1 cc
+5000
+1168 - Valid. result-cl tuple, suchthat-cl ModifiesP, pattern-cl while, with-cl if.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select <proc, v> such that Modifies(proc, v) pattern w(v, _) with ifs.stmt# = 8
+PR0C1 cc, PR0C1 constant, PR0C1 read, PR0C1 stmt, PR0C1 while, call constant, call read, call stmt, call while, procedure read, procedure stmt
+5000
+1169 - Valid. result-cl tuple, suchthat-cl ModifiesP, pattern-cl while, with-cl assign.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select <proc, v> such that Modifies(proc, v) pattern w(v, _) with a.stmt# = 11
+PR0C1 cc, PR0C1 constant, PR0C1 read, PR0C1 stmt, PR0C1 while, call constant, call read, call stmt, call while, procedure read, procedure stmt
+5000
+1170 - Valid. result-cl tuple, suchthat-cl ModifiesP, pattern-cl if, with-cl procedure.procName
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select <proc, v> such that Modifies(proc, v) pattern ifs(v, _, _) with proc.procName = "PR0C1"
+PR0C1 aa, PR0C1 bb, PR0C1 assign, PR0C1 constant, PR0C1 cc, PR0C1 stmt, PR0C1 read, PR0C1 call, PR0C1 while, PR0C1 variable
+5000
+1171 - Valid. result-cl tuple, suchthat-cl ModifiesP, pattern-cl if, with-cl call.procName
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select <proc, v> such that Modifies(proc, v) pattern ifs(v, _, _) with cl.procName = "procedure"
+PR0C1 aa, PR0C1 bb, PR0C1 assign, PR0C1 constant, PR0C1 cc, PR0C1 stmt, PR0C1 read, PR0C1 call, PR0C1 while, PR0C1 variable, call bb, call constant, call read, call stmt, call variable, call while, procedure bb, procedure read, procedure stmt
+5000
+1172 - Valid. result-cl tuple, suchthat-cl ModifiesP, pattern-cl if, with-cl variable.varName
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select <proc, v> such that Modifies(proc, v) pattern ifs(v, _, _) with v.varName = "aa"
+PR0C1 aa
+5000
+1173 - Valid. result-cl tuple, suchthat-cl ModifiesP, pattern-cl if, with-cl read.varName
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select <proc, v> such that Modifies(proc, v) pattern ifs(v, _, _) with r.varName = "aa"
+PR0C1 aa, PR0C1 bb, PR0C1 assign, PR0C1 constant, PR0C1 cc, PR0C1 stmt, PR0C1 read, PR0C1 call, PR0C1 while, PR0C1 variable, call bb, call constant, call read, call stmt, call variable, call while, procedure bb, procedure read, procedure stmt
+5000
+1174 - Valid. result-cl tuple, suchthat-cl ModifiesP, pattern-cl if, with-cl print.varName
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select <proc, v> such that Modifies(proc, v) pattern ifs(v, _, _) with p.varName = "aa"
+
+5000
+1175 - Valid. result-cl tuple, suchthat-cl ModifiesP, pattern-cl if, with-cl constant.value
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select <proc, v> such that Modifies(proc, v) pattern ifs(v, _, _) with c.value = 33
+PR0C1 aa, PR0C1 bb, PR0C1 assign, PR0C1 constant, PR0C1 cc, PR0C1 stmt, PR0C1 read, PR0C1 call, PR0C1 while, PR0C1 variable, call bb, call constant, call read, call stmt, call variable, call while, procedure bb, procedure read, procedure stmt
+5000
+1176 - Valid. result-cl tuple, suchthat-cl ModifiesP, pattern-cl if, with-cl stmt.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select <proc, v> such that Modifies(proc, v) pattern ifs(v, _, _) with s.stmt# = 11
+PR0C1 aa, PR0C1 bb, PR0C1 assign, PR0C1 constant, PR0C1 cc, PR0C1 stmt, PR0C1 read, PR0C1 call, PR0C1 while, PR0C1 variable, call bb, call constant, call read, call stmt, call variable, call while, procedure bb, procedure read, procedure stmt
+5000
+1177 - Valid. result-cl tuple, suchthat-cl ModifiesP, pattern-cl if, with-cl read.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select <proc, v> such that Modifies(proc, v) pattern ifs(v, _, _) with r.stmt# = 3
+PR0C1 aa, PR0C1 bb, PR0C1 assign, PR0C1 constant, PR0C1 cc, PR0C1 stmt, PR0C1 read, PR0C1 call, PR0C1 while, PR0C1 variable, call bb, call constant, call read, call stmt, call variable, call while, procedure bb, procedure read, procedure stmt
+5000
+1178 - Valid. result-cl tuple, suchthat-cl ModifiesP, pattern-cl if, with-cl print.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select <proc, v> such that Modifies(proc, v) pattern ifs(v, _, _) with p.stmt# = 1
+PR0C1 aa, PR0C1 bb, PR0C1 assign, PR0C1 constant, PR0C1 cc, PR0C1 stmt, PR0C1 read, PR0C1 call, PR0C1 while, PR0C1 variable, call bb, call constant, call read, call stmt, call variable, call while, procedure bb, procedure read, procedure stmt
+5000
+1179 - Valid. result-cl tuple, suchthat-cl ModifiesP, pattern-cl if, with-cl call.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select <proc, v> such that Modifies(proc, v) pattern ifs(v, _, _) with cl.stmt# = 16
+PR0C1 aa, PR0C1 bb, PR0C1 assign, PR0C1 constant, PR0C1 cc, PR0C1 stmt, PR0C1 read, PR0C1 call, PR0C1 while, PR0C1 variable, call bb, call constant, call read, call stmt, call variable, call while, procedure bb, procedure read, procedure stmt
+5000
+1180 - Valid. result-cl tuple, suchthat-cl ModifiesP, pattern-cl if, with-cl while.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select <proc, v> such that Modifies(proc, v) pattern ifs(v, _, _) with w.stmt# = 21
+PR0C1 aa, PR0C1 bb, PR0C1 assign, PR0C1 constant, PR0C1 cc, PR0C1 stmt, PR0C1 read, PR0C1 call, PR0C1 while, PR0C1 variable, call bb, call constant, call read, call stmt, call variable, call while, procedure bb, procedure read, procedure stmt
+5000
+1181 - Valid. result-cl tuple, suchthat-cl ModifiesP, pattern-cl if, with-cl if.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select <proc, v> such that Modifies(proc, v) pattern ifs(v, _, _) with ifs.stmt# = 2
+PR0C1 aa, PR0C1 cc, PR0C1 variable, call variable
+5000
+1182 - Valid. result-cl tuple, suchthat-cl ModifiesP, pattern-cl if, with-cl assign.stmt#
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select <proc, v> such that Modifies(proc, v) pattern ifs(v, _, _) with a.stmt# = 4
+PR0C1 aa, PR0C1 bb, PR0C1 assign, PR0C1 constant, PR0C1 cc, PR0C1 stmt, PR0C1 read, PR0C1 call, PR0C1 while, PR0C1 variable, call bb, call constant, call read, call stmt, call variable, call while, procedure bb, procedure read, procedure stmt
+5000
+1183 - Valid. result-cl tuple, suchthat-cl Calls, pattern-cl while, with-cl procedure.procName
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select <proc1, proc2, v> such that Calls(proc1, proc2) pattern w(v, _) with proc1.procName = "PR0C1"
+PR0C1 call cc, PR0C1 call constant, PR0C1 call if, PR0C1 call print, PR0C1 call read, PR0C1 call stmt, PR0C1 call while, PR0C1 procedure cc, PR0C1 procedure constant, PR0C1 procedure if, PR0C1 procedure print, PR0C1 procedure read, PR0C1 procedure stmt, PR0C1 procedure while
+5000
+1184 - Valid. result-cl tuple, suchthat-cl Calls, pattern-cl while, with-cl call.procName
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select <proc1, proc2, v> such that Calls(proc1, proc2) pattern w(v, _) with cl.procName = "procedure"
+PR0C1 call cc, PR0C1 call constant, PR0C1 call if, PR0C1 call print, PR0C1 call read, PR0C1 call stmt, PR0C1 call while, PR0C1 procedure cc, PR0C1 procedure constant, PR0C1 procedure if, PR0C1 procedure print, PR0C1 procedure read, PR0C1 procedure stmt, PR0C1 procedure while, call procedure cc, call procedure constant, call procedure if, call procedure print, call procedure read, call procedure stmt, call procedure while
+5000
+1185 - Valid. result-cl tuple, suchthat-cl Calls, pattern-cl while, with-cl variable.varName
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select <proc1, proc2, v> such that Calls(proc1, proc2) pattern w(v, _) with v.varName = "cc"
+PR0C1 call cc, PR0C1 procedure cc, call procedure cc
+5000
+1186 - Valid. result-cl tuple, suchthat-cl Calls, pattern-cl while, with-cl read.varName
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select <proc1, proc2, v> such that Calls(proc1, proc2) pattern w(v, _) with r.varName = "aa"
+PR0C1 call cc, PR0C1 call constant, PR0C1 call if, PR0C1 call print, PR0C1 call read, PR0C1 call stmt, PR0C1 call while, PR0C1 procedure cc, PR0C1 procedure constant, PR0C1 procedure if, PR0C1 procedure print, PR0C1 procedure read, PR0C1 procedure stmt, PR0C1 procedure while, call procedure cc, call procedure constant, call procedure if, call procedure print, call procedure read, call procedure stmt, call procedure while
+5000
+1187 - Valid. result-cl tuple, suchthat-cl Calls, pattern-cl while, with-cl print.varName
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select <proc1, proc2, v> such that Calls(proc1, proc2) pattern w(v, _) with p.varName = "aa"
+
+5000
+1188 - Valid. result-cl tuple, suchthat-cl Calls, pattern-cl while, with-cl call.varName
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select <proc1, proc2, v> such that Calls(proc1, proc2) pattern w(v, _) with c.value = 33
+PR0C1 call cc, PR0C1 call constant, PR0C1 call if, PR0C1 call print, PR0C1 call read, PR0C1 call stmt, PR0C1 call while, PR0C1 procedure cc, PR0C1 procedure constant, PR0C1 procedure if, PR0C1 procedure print, PR0C1 procedure read, PR0C1 procedure stmt, PR0C1 procedure while, call procedure cc, call procedure constant, call procedure if, call procedure print, call procedure read, call procedure stmt, call procedure while
+5000
+1189 - Valid. result-cl tuple, suchthat-cl Calls, pattern-cl while, with-cl stmt.stmt#
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select <proc1, proc2, v> such that Calls(proc1, proc2) pattern w(v, _) with s.stmt# = 10
+PR0C1 call cc, PR0C1 call constant, PR0C1 call if, PR0C1 call print, PR0C1 call read, PR0C1 call stmt, PR0C1 call while, PR0C1 procedure cc, PR0C1 procedure constant, PR0C1 procedure if, PR0C1 procedure print, PR0C1 procedure read, PR0C1 procedure stmt, PR0C1 procedure while, call procedure cc, call procedure constant, call procedure if, call procedure print, call procedure read, call procedure stmt, call procedure while
+5000
+1190 - Valid. result-cl tuple, suchthat-cl Calls, pattern-cl while, with-cl read.stmt#
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select <proc1, proc2, v> such that Calls(proc1, proc2) pattern w(v, _) with r.stmt# = 10
+PR0C1 call cc, PR0C1 call constant, PR0C1 call if, PR0C1 call print, PR0C1 call read, PR0C1 call stmt, PR0C1 call while, PR0C1 procedure cc, PR0C1 procedure constant, PR0C1 procedure if, PR0C1 procedure print, PR0C1 procedure read, PR0C1 procedure stmt, PR0C1 procedure while, call procedure cc, call procedure constant, call procedure if, call procedure print, call procedure read, call procedure stmt, call procedure while
+5000
+1191 - Valid. result-cl tuple, suchthat-cl Calls, pattern-cl while, with-cl print.stmt#
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select <proc1, proc2, v> such that Calls(proc1, proc2) pattern w(v, _) with p.stmt# = 12
+PR0C1 call cc, PR0C1 call constant, PR0C1 call if, PR0C1 call print, PR0C1 call read, PR0C1 call stmt, PR0C1 call while, PR0C1 procedure cc, PR0C1 procedure constant, PR0C1 procedure if, PR0C1 procedure print, PR0C1 procedure read, PR0C1 procedure stmt, PR0C1 procedure while, call procedure cc, call procedure constant, call procedure if, call procedure print, call procedure read, call procedure stmt, call procedure while
+5000
+1192 - Valid. result-cl tuple, suchthat-cl Calls, pattern-cl while, with-cl call.stmt#
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select <proc1, proc2, v> such that Calls(proc1, proc2) pattern w(v, _) with cl.stmt# = 29
+PR0C1 call cc, PR0C1 call constant, PR0C1 call if, PR0C1 call print, PR0C1 call read, PR0C1 call stmt, PR0C1 call while, PR0C1 procedure cc, PR0C1 procedure constant, PR0C1 procedure if, PR0C1 procedure print, PR0C1 procedure read, PR0C1 procedure stmt, PR0C1 procedure while, call procedure cc, call procedure constant, call procedure if, call procedure print, call procedure read, call procedure stmt, call procedure while
+5000
+1193 - Valid. result-cl tuple, suchthat-cl Calls, pattern-cl while, with-cl while.stmt#
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select <proc1, proc2, v> such that Calls(proc1, proc2) pattern w(v, _) with w.stmt# = 5
+PR0C1 call cc, PR0C1 procedure cc, call procedure cc
+5000
+1194 - Valid. result-cl tuple, suchthat-cl Calls, pattern-cl while, with-cl if.stmt#
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select <proc1, proc2, v> such that Calls(proc1, proc2) pattern w(v, _) with ifs.stmt# = 8
+PR0C1 call cc, PR0C1 call constant, PR0C1 call if, PR0C1 call print, PR0C1 call read, PR0C1 call stmt, PR0C1 call while, PR0C1 procedure cc, PR0C1 procedure constant, PR0C1 procedure if, PR0C1 procedure print, PR0C1 procedure read, PR0C1 procedure stmt, PR0C1 procedure while, call procedure cc, call procedure constant, call procedure if, call procedure print, call procedure read, call procedure stmt, call procedure while
+5000
+1195 - Valid. result-cl tuple, suchthat-cl Calls, pattern-cl while, with-cl assign.stmt#
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select <proc1, proc2, v> such that Calls(proc1, proc2) pattern w(v, _) with a.stmt# = 11
+PR0C1 call cc, PR0C1 call constant, PR0C1 call if, PR0C1 call print, PR0C1 call read, PR0C1 call stmt, PR0C1 call while, PR0C1 procedure cc, PR0C1 procedure constant, PR0C1 procedure if, PR0C1 procedure print, PR0C1 procedure read, PR0C1 procedure stmt, PR0C1 procedure while, call procedure cc, call procedure constant, call procedure if, call procedure print, call procedure read, call procedure stmt, call procedure while
+5000
+1196 - Valid. result-cl tuple, suchthat-cl Calls, pattern-cl if, with-cl procedure.procName
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select <proc1, proc2, v> such that Calls(proc1, proc2) pattern ifs(v, _, _) with proc1.procName = "PR0C1"
+PR0C1 call aa, PR0C1 call assign, PR0C1 call bb, PR0C1 call call, PR0C1 call cc, PR0C1 call constant, PR0C1 call if, PR0C1 call print, PR0C1 call read, PR0C1 call stmt, PR0C1 call variable, PR0C1 call while, PR0C1 procedure aa, PR0C1 procedure assign, PR0C1 procedure bb, PR0C1 procedure call, PR0C1 procedure cc, PR0C1 procedure constant, PR0C1 procedure if, PR0C1 procedure print, PR0C1 procedure read, PR0C1 procedure stmt, PR0C1 procedure variable, PR0C1 procedure while
+5000
+1197 - Valid. result-cl tuple, suchthat-cl Calls, pattern-cl if, with-cl call.procName
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select <proc1, proc2, v> such that Calls(proc1, proc2) pattern ifs(v, _, _) with cl.procName = "procedure"
+PR0C1 call aa, PR0C1 call assign, PR0C1 call bb, PR0C1 call call, PR0C1 call cc, PR0C1 call constant, PR0C1 call if, PR0C1 call print, PR0C1 call read, PR0C1 call stmt, PR0C1 call variable, PR0C1 call while, PR0C1 procedure aa, PR0C1 procedure assign, PR0C1 procedure bb, PR0C1 procedure call, PR0C1 procedure cc, PR0C1 procedure constant, PR0C1 procedure if, PR0C1 procedure print, PR0C1 procedure read, PR0C1 procedure stmt, PR0C1 procedure variable, PR0C1 procedure while, call procedure aa, call procedure assign, call procedure bb, call procedure call, call procedure cc, call procedure constant, call procedure if, call procedure print, call procedure read, call procedure stmt, call procedure variable, call procedure while
+5000
+1198 - Valid. result-cl tuple, suchthat-cl Calls, pattern-cl if, with-cl variable.varName
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select <proc1, proc2, v> such that Calls(proc1, proc2) pattern ifs(v, _, _) with v.varName = "aa"
+PR0C1 call aa, PR0C1 procedure aa, call procedure aa
+5000
+1199 - Valid. result-cl tuple, suchthat-cl Calls, pattern-cl if, with-cl read.varName
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select <proc1, proc2, v> such that Calls(proc1, proc2) pattern ifs(v, _, _) with r.varName = "aa"
+PR0C1 call aa, PR0C1 call assign, PR0C1 call bb, PR0C1 call call, PR0C1 call cc, PR0C1 call constant, PR0C1 call if, PR0C1 call print, PR0C1 call read, PR0C1 call stmt, PR0C1 call variable, PR0C1 call while, PR0C1 procedure aa, PR0C1 procedure assign, PR0C1 procedure bb, PR0C1 procedure call, PR0C1 procedure cc, PR0C1 procedure constant, PR0C1 procedure if, PR0C1 procedure print, PR0C1 procedure read, PR0C1 procedure stmt, PR0C1 procedure variable, PR0C1 procedure while, call procedure aa, call procedure assign, call procedure bb, call procedure call, call procedure cc, call procedure constant, call procedure if, call procedure print, call procedure read, call procedure stmt, call procedure variable, call procedure while
+5000
+1200 - Valid. result-cl tuple, suchthat-cl Calls, pattern-cl if, with-cl print.varName
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select <proc1, proc2, v> such that Calls(proc1, proc2) pattern ifs(v, _, _) with p.varName = "aa"
+
+5000
+1201 - Valid. result-cl tuple, suchthat-cl Calls, pattern-cl if, with-cl constant.value
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select <proc1, proc2, v> such that Calls(proc1, proc2) pattern ifs(v, _, _) with c.value = 33
+PR0C1 call aa, PR0C1 call assign, PR0C1 call bb, PR0C1 call call, PR0C1 call cc, PR0C1 call constant, PR0C1 call if, PR0C1 call print, PR0C1 call read, PR0C1 call stmt, PR0C1 call variable, PR0C1 call while, PR0C1 procedure aa, PR0C1 procedure assign, PR0C1 procedure bb, PR0C1 procedure call, PR0C1 procedure cc, PR0C1 procedure constant, PR0C1 procedure if, PR0C1 procedure print, PR0C1 procedure read, PR0C1 procedure stmt, PR0C1 procedure variable, PR0C1 procedure while, call procedure aa, call procedure assign, call procedure bb, call procedure call, call procedure cc, call procedure constant, call procedure if, call procedure print, call procedure read, call procedure stmt, call procedure variable, call procedure while
+5000
+1202 - Valid. result-cl tuple, suchthat-cl Calls, pattern-cl if, with-cl stmt.stmt#
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select <proc1, proc2, v> such that Calls(proc1, proc2) pattern ifs(v, _, _) with s.stmt# = 11
+PR0C1 call aa, PR0C1 call assign, PR0C1 call bb, PR0C1 call call, PR0C1 call cc, PR0C1 call constant, PR0C1 call if, PR0C1 call print, PR0C1 call read, PR0C1 call stmt, PR0C1 call variable, PR0C1 call while, PR0C1 procedure aa, PR0C1 procedure assign, PR0C1 procedure bb, PR0C1 procedure call, PR0C1 procedure cc, PR0C1 procedure constant, PR0C1 procedure if, PR0C1 procedure print, PR0C1 procedure read, PR0C1 procedure stmt, PR0C1 procedure variable, PR0C1 procedure while, call procedure aa, call procedure assign, call procedure bb, call procedure call, call procedure cc, call procedure constant, call procedure if, call procedure print, call procedure read, call procedure stmt, call procedure variable, call procedure while
+5000
+1203 - Valid. result-cl tuple, suchthat-cl Calls, pattern-cl if, with-cl read.stmt#
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select <proc1, proc2, v> such that Calls(proc1, proc2) pattern ifs(v, _, _) with r.stmt# = 3
+PR0C1 call aa, PR0C1 call assign, PR0C1 call bb, PR0C1 call call, PR0C1 call cc, PR0C1 call constant, PR0C1 call if, PR0C1 call print, PR0C1 call read, PR0C1 call stmt, PR0C1 call variable, PR0C1 call while, PR0C1 procedure aa, PR0C1 procedure assign, PR0C1 procedure bb, PR0C1 procedure call, PR0C1 procedure cc, PR0C1 procedure constant, PR0C1 procedure if, PR0C1 procedure print, PR0C1 procedure read, PR0C1 procedure stmt, PR0C1 procedure variable, PR0C1 procedure while, call procedure aa, call procedure assign, call procedure bb, call procedure call, call procedure cc, call procedure constant, call procedure if, call procedure print, call procedure read, call procedure stmt, call procedure variable, call procedure while
+5000
+1204 - Valid. result-cl tuple, suchthat-cl Calls, pattern-cl if, with-cl print.stmt#
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select <proc1, proc2, v> such that Calls(proc1, proc2) pattern ifs(v, _, _) with p.stmt# = 1
+PR0C1 call aa, PR0C1 call assign, PR0C1 call bb, PR0C1 call call, PR0C1 call cc, PR0C1 call constant, PR0C1 call if, PR0C1 call print, PR0C1 call read, PR0C1 call stmt, PR0C1 call variable, PR0C1 call while, PR0C1 procedure aa, PR0C1 procedure assign, PR0C1 procedure bb, PR0C1 procedure call, PR0C1 procedure cc, PR0C1 procedure constant, PR0C1 procedure if, PR0C1 procedure print, PR0C1 procedure read, PR0C1 procedure stmt, PR0C1 procedure variable, PR0C1 procedure while, call procedure aa, call procedure assign, call procedure bb, call procedure call, call procedure cc, call procedure constant, call procedure if, call procedure print, call procedure read, call procedure stmt, call procedure variable, call procedure while
+5000
+1205 - Valid. result-cl tuple, suchthat-cl Calls, pattern-cl if, with-cl call.stmt#
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select <proc1, proc2, v> such that Calls(proc1, proc2) pattern ifs(v, _, _) with cl.stmt# = 16
+PR0C1 call aa, PR0C1 call assign, PR0C1 call bb, PR0C1 call call, PR0C1 call cc, PR0C1 call constant, PR0C1 call if, PR0C1 call print, PR0C1 call read, PR0C1 call stmt, PR0C1 call variable, PR0C1 call while, PR0C1 procedure aa, PR0C1 procedure assign, PR0C1 procedure bb, PR0C1 procedure call, PR0C1 procedure cc, PR0C1 procedure constant, PR0C1 procedure if, PR0C1 procedure print, PR0C1 procedure read, PR0C1 procedure stmt, PR0C1 procedure variable, PR0C1 procedure while, call procedure aa, call procedure assign, call procedure bb, call procedure call, call procedure cc, call procedure constant, call procedure if, call procedure print, call procedure read, call procedure stmt, call procedure variable, call procedure while
+5000
+1206 - Valid. result-cl tuple, suchthat-cl Calls, pattern-cl if, with-cl while.stmt#
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select <proc1, proc2, v> such that Calls(proc1, proc2) pattern ifs(v, _, _) with w.stmt# = 21
+PR0C1 call aa, PR0C1 call assign, PR0C1 call bb, PR0C1 call call, PR0C1 call cc, PR0C1 call constant, PR0C1 call if, PR0C1 call print, PR0C1 call read, PR0C1 call stmt, PR0C1 call variable, PR0C1 call while, PR0C1 procedure aa, PR0C1 procedure assign, PR0C1 procedure bb, PR0C1 procedure call, PR0C1 procedure cc, PR0C1 procedure constant, PR0C1 procedure if, PR0C1 procedure print, PR0C1 procedure read, PR0C1 procedure stmt, PR0C1 procedure variable, PR0C1 procedure while, call procedure aa, call procedure assign, call procedure bb, call procedure call, call procedure cc, call procedure constant, call procedure if, call procedure print, call procedure read, call procedure stmt, call procedure variable, call procedure while
+5000
+1207 - Valid. result-cl tuple, suchthat-cl Calls, pattern-cl if, with-cl if.stmt#
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select <proc1, proc2, v> such that Calls(proc1, proc2) pattern ifs(v, _, _) with ifs.stmt# = 2
+PR0C1 call aa, PR0C1 call cc, PR0C1 call if, PR0C1 call variable, PR0C1 procedure aa, PR0C1 procedure cc, PR0C1 procedure if, PR0C1 procedure variable, call procedure aa, call procedure cc, call procedure if, call procedure variable
+5000
+1208 - Valid. result-cl tuple, suchthat-cl Calls, pattern-cl if, with-cl assign.stmt#
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select <proc1, proc2, v> such that Calls(proc1, proc2) pattern ifs(v, _, _) with a.stmt# = 4
+PR0C1 call aa, PR0C1 call assign, PR0C1 call bb, PR0C1 call call, PR0C1 call cc, PR0C1 call constant, PR0C1 call if, PR0C1 call print, PR0C1 call read, PR0C1 call stmt, PR0C1 call variable, PR0C1 call while, PR0C1 procedure aa, PR0C1 procedure assign, PR0C1 procedure bb, PR0C1 procedure call, PR0C1 procedure cc, PR0C1 procedure constant, PR0C1 procedure if, PR0C1 procedure print, PR0C1 procedure read, PR0C1 procedure stmt, PR0C1 procedure variable, PR0C1 procedure while, call procedure aa, call procedure assign, call procedure bb, call procedure call, call procedure cc, call procedure constant, call procedure if, call procedure print, call procedure read, call procedure stmt, call procedure variable, call procedure while
+5000
+1209 - Valid. result-cl tuple, suchthat-cl Calls*, pattern-cl while, with-cl procedure.procName
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select <proc1, proc2, v> such that Calls*(proc1, proc2) pattern w(v, _) with proc1.procName = "PR0C1"
+PR0C1 call cc, PR0C1 call constant, PR0C1 call if, PR0C1 call print, PR0C1 call read, PR0C1 call stmt, PR0C1 call while, PR0C1 procedure cc, PR0C1 procedure constant, PR0C1 procedure if, PR0C1 procedure print, PR0C1 procedure read, PR0C1 procedure stmt, PR0C1 procedure while
+5000
+1210 - Valid. result-cl tuple, suchthat-cl Calls*, pattern-cl while, with-cl call.procName
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select <proc1, proc2, v> such that Calls*(proc1, proc2) pattern w(v, _) with cl.procName = "procedure"
+PR0C1 call cc, PR0C1 call constant, PR0C1 call if, PR0C1 call print, PR0C1 call read, PR0C1 call stmt, PR0C1 call while, PR0C1 procedure cc, PR0C1 procedure constant, PR0C1 procedure if, PR0C1 procedure print, PR0C1 procedure read, PR0C1 procedure stmt, PR0C1 procedure while, call procedure cc, call procedure constant, call procedure if, call procedure print, call procedure read, call procedure stmt, call procedure while
+5000
+1211 - Valid. result-cl tuple, suchthat-cl Calls*, pattern-cl while, with-cl variable.varName
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select <proc1, proc2, v> such that Calls*(proc1, proc2) pattern w(v, _) with v.varName = "cc"
+PR0C1 call cc, PR0C1 procedure cc, call procedure cc
+5000
+1212 - Valid. result-cl tuple, suchthat-cl Calls*, pattern-cl while, with-cl read.varName
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select <proc1, proc2, v> such that Calls*(proc1, proc2) pattern w(v, _) with r.varName = "aa"
+PR0C1 call cc, PR0C1 call constant, PR0C1 call if, PR0C1 call print, PR0C1 call read, PR0C1 call stmt, PR0C1 call while, PR0C1 procedure cc, PR0C1 procedure constant, PR0C1 procedure if, PR0C1 procedure print, PR0C1 procedure read, PR0C1 procedure stmt, PR0C1 procedure while, call procedure cc, call procedure constant, call procedure if, call procedure print, call procedure read, call procedure stmt, call procedure while
+5000
+1213 - Valid. result-cl tuple, suchthat-cl Calls*, pattern-cl while, with-cl print.varName
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select <proc1, proc2, v> such that Calls*(proc1, proc2) pattern w(v, _) with p.varName = "bb"
+PR0C1 call cc, PR0C1 call constant, PR0C1 call if, PR0C1 call print, PR0C1 call read, PR0C1 call stmt, PR0C1 call while, PR0C1 procedure cc, PR0C1 procedure constant, PR0C1 procedure if, PR0C1 procedure print, PR0C1 procedure read, PR0C1 procedure stmt, PR0C1 procedure while, call procedure cc, call procedure constant, call procedure if, call procedure print, call procedure read, call procedure stmt, call procedure while
+5000
+1214 - Valid. result-cl tuple, suchthat-cl Calls*, pattern-cl while, with-cl call.varName
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select <proc1, proc2, v> such that Calls*(proc1, proc2) pattern w(v, _) with c.value = 33
+PR0C1 call cc, PR0C1 call constant, PR0C1 call if, PR0C1 call print, PR0C1 call read, PR0C1 call stmt, PR0C1 call while, PR0C1 procedure cc, PR0C1 procedure constant, PR0C1 procedure if, PR0C1 procedure print, PR0C1 procedure read, PR0C1 procedure stmt, PR0C1 procedure while, call procedure cc, call procedure constant, call procedure if, call procedure print, call procedure read, call procedure stmt, call procedure while
+5000
+1215 - Valid. result-cl tuple, suchthat-cl Calls*, pattern-cl while, with-cl stmt.stmt#
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select <proc1, proc2, v> such that Calls*(proc1, proc2) pattern w(v, _) with s.stmt# = 10
+PR0C1 call cc, PR0C1 call constant, PR0C1 call if, PR0C1 call print, PR0C1 call read, PR0C1 call stmt, PR0C1 call while, PR0C1 procedure cc, PR0C1 procedure constant, PR0C1 procedure if, PR0C1 procedure print, PR0C1 procedure read, PR0C1 procedure stmt, PR0C1 procedure while, call procedure cc, call procedure constant, call procedure if, call procedure print, call procedure read, call procedure stmt, call procedure while
+5000
+1216 - Valid. result-cl tuple, suchthat-cl Calls*, pattern-cl while, with-cl read.stmt#
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select <proc1, proc2, v> such that Calls*(proc1, proc2) pattern w(v, _) with r.stmt# = 10
+PR0C1 call cc, PR0C1 call constant, PR0C1 call if, PR0C1 call print, PR0C1 call read, PR0C1 call stmt, PR0C1 call while, PR0C1 procedure cc, PR0C1 procedure constant, PR0C1 procedure if, PR0C1 procedure print, PR0C1 procedure read, PR0C1 procedure stmt, PR0C1 procedure while, call procedure cc, call procedure constant, call procedure if, call procedure print, call procedure read, call procedure stmt, call procedure while
+5000
+1217 - Valid. result-cl tuple, suchthat-cl Calls*, pattern-cl while, with-cl print.stmt#
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select <proc1, proc2, v> such that Calls*(proc1, proc2) pattern w(v, _) with p.stmt# = 12
+PR0C1 call cc, PR0C1 call constant, PR0C1 call if, PR0C1 call print, PR0C1 call read, PR0C1 call stmt, PR0C1 call while, PR0C1 procedure cc, PR0C1 procedure constant, PR0C1 procedure if, PR0C1 procedure print, PR0C1 procedure read, PR0C1 procedure stmt, PR0C1 procedure while, call procedure cc, call procedure constant, call procedure if, call procedure print, call procedure read, call procedure stmt, call procedure while
+5000
+1218 - Valid. result-cl tuple, suchthat-cl Calls*, pattern-cl while, with-cl call.stmt#
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select <proc1, proc2, v> such that Calls*(proc1, proc2) pattern w(v, _) with cl.stmt# = 29
+PR0C1 call cc, PR0C1 call constant, PR0C1 call if, PR0C1 call print, PR0C1 call read, PR0C1 call stmt, PR0C1 call while, PR0C1 procedure cc, PR0C1 procedure constant, PR0C1 procedure if, PR0C1 procedure print, PR0C1 procedure read, PR0C1 procedure stmt, PR0C1 procedure while, call procedure cc, call procedure constant, call procedure if, call procedure print, call procedure read, call procedure stmt, call procedure while
+5000
+1219 - Valid. result-cl tuple, suchthat-cl Calls*, pattern-cl while, with-cl while.stmt#
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select <proc1, proc2, v> such that Calls*(proc1, proc2) pattern w(v, _) with w.stmt# = 5
+PR0C1 call cc, PR0C1 procedure cc, call procedure cc
+5000
+1220 - Valid. result-cl tuple, suchthat-cl Calls*, pattern-cl while, with-cl if.stmt#
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select <proc1, proc2, v> such that Calls*(proc1, proc2) pattern w(v, _) with ifs.stmt# = 8
+PR0C1 call cc, PR0C1 call constant, PR0C1 call if, PR0C1 call print, PR0C1 call read, PR0C1 call stmt, PR0C1 call while, PR0C1 procedure cc, PR0C1 procedure constant, PR0C1 procedure if, PR0C1 procedure print, PR0C1 procedure read, PR0C1 procedure stmt, PR0C1 procedure while, call procedure cc, call procedure constant, call procedure if, call procedure print, call procedure read, call procedure stmt, call procedure while
+5000
+1221 - Valid. result-cl tuple, suchthat-cl Calls*, pattern-cl while, with-cl assign.stmt#
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select <proc1, proc2, v> such that Calls*(proc1, proc2) pattern w(v, _) with a.stmt# = 11
+PR0C1 call cc, PR0C1 call constant, PR0C1 call if, PR0C1 call print, PR0C1 call read, PR0C1 call stmt, PR0C1 call while, PR0C1 procedure cc, PR0C1 procedure constant, PR0C1 procedure if, PR0C1 procedure print, PR0C1 procedure read, PR0C1 procedure stmt, PR0C1 procedure while, call procedure cc, call procedure constant, call procedure if, call procedure print, call procedure read, call procedure stmt, call procedure while
+5000
+1222 - Valid. result-cl tuple, suchthat-cl Calls*, pattern-cl if, with-cl procedure.procName
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select <proc1, proc2, v> such that Calls*(proc1, proc2) pattern ifs(v, _, _) with proc1.procName = "PR0C1"
+PR0C1 call aa, PR0C1 call assign, PR0C1 call bb, PR0C1 call call, PR0C1 call cc, PR0C1 call constant, PR0C1 call if, PR0C1 call print, PR0C1 call read, PR0C1 call stmt, PR0C1 call variable, PR0C1 call while, PR0C1 procedure aa, PR0C1 procedure assign, PR0C1 procedure bb, PR0C1 procedure call, PR0C1 procedure cc, PR0C1 procedure constant, PR0C1 procedure if, PR0C1 procedure print, PR0C1 procedure read, PR0C1 procedure stmt, PR0C1 procedure variable, PR0C1 procedure while
+5000
+1223 - Valid. result-cl tuple, suchthat-cl Calls*, pattern-cl if, with-cl call.procName
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select <proc1, proc2, v> such that Calls*(proc1, proc2) pattern ifs(v, _, _) with cl.procName = "procedure"
+PR0C1 call aa, PR0C1 call assign, PR0C1 call bb, PR0C1 call call, PR0C1 call cc, PR0C1 call constant, PR0C1 call if, PR0C1 call print, PR0C1 call read, PR0C1 call stmt, PR0C1 call variable, PR0C1 call while, PR0C1 procedure aa, PR0C1 procedure assign, PR0C1 procedure bb, PR0C1 procedure call, PR0C1 procedure cc, PR0C1 procedure constant, PR0C1 procedure if, PR0C1 procedure print, PR0C1 procedure read, PR0C1 procedure stmt, PR0C1 procedure variable, PR0C1 procedure while, call procedure aa, call procedure assign, call procedure bb, call procedure call, call procedure cc, call procedure constant, call procedure if, call procedure print, call procedure read, call procedure stmt, call procedure variable, call procedure while
+5000
+1224 - Valid. result-cl tuple, suchthat-cl Calls*, pattern-cl if, with-cl variable.varName
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select <proc1, proc2, v> such that Calls*(proc1, proc2) pattern ifs(v, _, _) with v.varName = "aa"
+PR0C1 call aa, PR0C1 procedure aa, call procedure aa
+5000
+1225 - Valid. result-cl tuple, suchthat-cl Calls*, pattern-cl if, with-cl read.varName
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select <proc1, proc2, v> such that Calls*(proc1, proc2) pattern ifs(v, _, _) with r.varName = "aa"
+PR0C1 call aa, PR0C1 call assign, PR0C1 call bb, PR0C1 call call, PR0C1 call cc, PR0C1 call constant, PR0C1 call if, PR0C1 call print, PR0C1 call read, PR0C1 call stmt, PR0C1 call variable, PR0C1 call while, PR0C1 procedure aa, PR0C1 procedure assign, PR0C1 procedure bb, PR0C1 procedure call, PR0C1 procedure cc, PR0C1 procedure constant, PR0C1 procedure if, PR0C1 procedure print, PR0C1 procedure read, PR0C1 procedure stmt, PR0C1 procedure variable, PR0C1 procedure while, call procedure aa, call procedure assign, call procedure bb, call procedure call, call procedure cc, call procedure constant, call procedure if, call procedure print, call procedure read, call procedure stmt, call procedure variable, call procedure while
+5000
+1226 - Valid. result-cl tuple, suchthat-cl Calls*, pattern-cl if, with-cl print.varName
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select <proc1, proc2, v> such that Calls*(proc1, proc2) pattern ifs(v, _, _) with p.varName = "bb"
+PR0C1 call aa, PR0C1 call assign, PR0C1 call bb, PR0C1 call call, PR0C1 call cc, PR0C1 call constant, PR0C1 call if, PR0C1 call print, PR0C1 call read, PR0C1 call stmt, PR0C1 call variable, PR0C1 call while, PR0C1 procedure aa, PR0C1 procedure assign, PR0C1 procedure bb, PR0C1 procedure call, PR0C1 procedure cc, PR0C1 procedure constant, PR0C1 procedure if, PR0C1 procedure print, PR0C1 procedure read, PR0C1 procedure stmt, PR0C1 procedure variable, PR0C1 procedure while, call procedure aa, call procedure assign, call procedure bb, call procedure call, call procedure cc, call procedure constant, call procedure if, call procedure print, call procedure read, call procedure stmt, call procedure variable, call procedure while
+5000
+1227 - Valid. result-cl tuple, suchthat-cl Calls*, pattern-cl if, with-cl constant.value
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select <proc1, proc2, v> such that Calls*(proc1, proc2) pattern ifs(v, _, _) with c.value = 33
+PR0C1 call aa, PR0C1 call assign, PR0C1 call bb, PR0C1 call call, PR0C1 call cc, PR0C1 call constant, PR0C1 call if, PR0C1 call print, PR0C1 call read, PR0C1 call stmt, PR0C1 call variable, PR0C1 call while, PR0C1 procedure aa, PR0C1 procedure assign, PR0C1 procedure bb, PR0C1 procedure call, PR0C1 procedure cc, PR0C1 procedure constant, PR0C1 procedure if, PR0C1 procedure print, PR0C1 procedure read, PR0C1 procedure stmt, PR0C1 procedure variable, PR0C1 procedure while, call procedure aa, call procedure assign, call procedure bb, call procedure call, call procedure cc, call procedure constant, call procedure if, call procedure print, call procedure read, call procedure stmt, call procedure variable, call procedure while
+5000
+1228 - Valid. result-cl tuple, suchthat-cl Calls*, pattern-cl if, with-cl stmt.stmt#
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select <proc1, proc2, v> such that Calls*(proc1, proc2) pattern ifs(v, _, _) with s.stmt# = 11
+PR0C1 call aa, PR0C1 call assign, PR0C1 call bb, PR0C1 call call, PR0C1 call cc, PR0C1 call constant, PR0C1 call if, PR0C1 call print, PR0C1 call read, PR0C1 call stmt, PR0C1 call variable, PR0C1 call while, PR0C1 procedure aa, PR0C1 procedure assign, PR0C1 procedure bb, PR0C1 procedure call, PR0C1 procedure cc, PR0C1 procedure constant, PR0C1 procedure if, PR0C1 procedure print, PR0C1 procedure read, PR0C1 procedure stmt, PR0C1 procedure variable, PR0C1 procedure while, call procedure aa, call procedure assign, call procedure bb, call procedure call, call procedure cc, call procedure constant, call procedure if, call procedure print, call procedure read, call procedure stmt, call procedure variable, call procedure while
+5000
+1229 - Valid. result-cl tuple, suchthat-cl Calls*, pattern-cl if, with-cl read.stmt#
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select <proc1, proc2, v> such that Calls*(proc1, proc2) pattern ifs(v, _, _) with r.stmt# = 3
+PR0C1 call aa, PR0C1 call assign, PR0C1 call bb, PR0C1 call call, PR0C1 call cc, PR0C1 call constant, PR0C1 call if, PR0C1 call print, PR0C1 call read, PR0C1 call stmt, PR0C1 call variable, PR0C1 call while, PR0C1 procedure aa, PR0C1 procedure assign, PR0C1 procedure bb, PR0C1 procedure call, PR0C1 procedure cc, PR0C1 procedure constant, PR0C1 procedure if, PR0C1 procedure print, PR0C1 procedure read, PR0C1 procedure stmt, PR0C1 procedure variable, PR0C1 procedure while, call procedure aa, call procedure assign, call procedure bb, call procedure call, call procedure cc, call procedure constant, call procedure if, call procedure print, call procedure read, call procedure stmt, call procedure variable, call procedure while
+5000
+1230 - Valid. result-cl tuple, suchthat-cl Calls*, pattern-cl if, with-cl print.stmt#
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select <proc1, proc2, v> such that Calls*(proc1, proc2) pattern ifs(v, _, _) with p.stmt# = 1
+PR0C1 call aa, PR0C1 call assign, PR0C1 call bb, PR0C1 call call, PR0C1 call cc, PR0C1 call constant, PR0C1 call if, PR0C1 call print, PR0C1 call read, PR0C1 call stmt, PR0C1 call variable, PR0C1 call while, PR0C1 procedure aa, PR0C1 procedure assign, PR0C1 procedure bb, PR0C1 procedure call, PR0C1 procedure cc, PR0C1 procedure constant, PR0C1 procedure if, PR0C1 procedure print, PR0C1 procedure read, PR0C1 procedure stmt, PR0C1 procedure variable, PR0C1 procedure while, call procedure aa, call procedure assign, call procedure bb, call procedure call, call procedure cc, call procedure constant, call procedure if, call procedure print, call procedure read, call procedure stmt, call procedure variable, call procedure while
+5000
+1231 - Valid. result-cl tuple, suchthat-cl Calls*, pattern-cl if, with-cl call.stmt#
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select <proc1, proc2, v> such that Calls*(proc1, proc2) pattern ifs(v, _, _) with cl.stmt# = 16
+PR0C1 call aa, PR0C1 call assign, PR0C1 call bb, PR0C1 call call, PR0C1 call cc, PR0C1 call constant, PR0C1 call if, PR0C1 call print, PR0C1 call read, PR0C1 call stmt, PR0C1 call variable, PR0C1 call while, PR0C1 procedure aa, PR0C1 procedure assign, PR0C1 procedure bb, PR0C1 procedure call, PR0C1 procedure cc, PR0C1 procedure constant, PR0C1 procedure if, PR0C1 procedure print, PR0C1 procedure read, PR0C1 procedure stmt, PR0C1 procedure variable, PR0C1 procedure while, call procedure aa, call procedure assign, call procedure bb, call procedure call, call procedure cc, call procedure constant, call procedure if, call procedure print, call procedure read, call procedure stmt, call procedure variable, call procedure while
+5000
+1232 - Valid. result-cl tuple, suchthat-cl Calls*, pattern-cl if, with-cl while.stmt#
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select <proc1, proc2, v> such that Calls*(proc1, proc2) pattern ifs(v, _, _) with w.stmt# = 21
+PR0C1 call aa, PR0C1 call assign, PR0C1 call bb, PR0C1 call call, PR0C1 call cc, PR0C1 call constant, PR0C1 call if, PR0C1 call print, PR0C1 call read, PR0C1 call stmt, PR0C1 call variable, PR0C1 call while, PR0C1 procedure aa, PR0C1 procedure assign, PR0C1 procedure bb, PR0C1 procedure call, PR0C1 procedure cc, PR0C1 procedure constant, PR0C1 procedure if, PR0C1 procedure print, PR0C1 procedure read, PR0C1 procedure stmt, PR0C1 procedure variable, PR0C1 procedure while, call procedure aa, call procedure assign, call procedure bb, call procedure call, call procedure cc, call procedure constant, call procedure if, call procedure print, call procedure read, call procedure stmt, call procedure variable, call procedure while
+5000
+1233 - Valid. result-cl tuple, suchthat-cl Calls*, pattern-cl if, with-cl if.stmt#
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select <proc1, proc2, v> such that Calls*(proc1, proc2) pattern ifs(v, _, _) with ifs.stmt# = 2
+PR0C1 call aa, PR0C1 call cc, PR0C1 call if, PR0C1 call variable, PR0C1 procedure aa, PR0C1 procedure cc, PR0C1 procedure if, PR0C1 procedure variable, call procedure aa, call procedure cc, call procedure if, call procedure variable
+5000
+1234 - Valid. result-cl tuple, suchthat-cl Calls*, pattern-cl if, with-cl assign.stmt#
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a;
+Select <proc1, proc2, v> such that Calls*(proc1, proc2) pattern ifs(v, _, _) with a.stmt# = 4
+PR0C1 call aa, PR0C1 call assign, PR0C1 call bb, PR0C1 call call, PR0C1 call cc, PR0C1 call constant, PR0C1 call if, PR0C1 call print, PR0C1 call read, PR0C1 call stmt, PR0C1 call variable, PR0C1 call while, PR0C1 procedure aa, PR0C1 procedure assign, PR0C1 procedure bb, PR0C1 procedure call, PR0C1 procedure cc, PR0C1 procedure constant, PR0C1 procedure if, PR0C1 procedure print, PR0C1 procedure read, PR0C1 procedure stmt, PR0C1 procedure variable, PR0C1 procedure while, call procedure aa, call procedure assign, call procedure bb, call procedure call, call procedure cc, call procedure constant, call procedure if, call procedure print, call procedure read, call procedure stmt, call procedure variable, call procedure while
+5000
+1235 - Valid. result-cl tuple, suchthat-cl Next, pattern-cl while, with-cl procedure.procName
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select <n1, n2, v> such that Next(n1, n2) pattern w(v, _) with proc1.procName = "PR0C1"
+1 2 cc, 1 2 constant, 1 2 if, 1 2 print, 1 2 read, 1 2 stmt, 1 2 while, 11 12 cc, 11 12 constant, 11 12 if, 11 12 print, 11 12 read, 11 12 stmt, 11 12 while, 12 5 cc, 12 5 constant, 12 5 if, 12 5 print, 12 5 read, 12 5 stmt, 12 5 while, 13 14 cc, 13 14 constant, 13 14 if, 13 14 print, 13 14 read, 13 14 stmt, 13 14 while, 14 15 cc, 14 15 constant, 14 15 if, 14 15 print, 14 15 read, 14 15 stmt, 14 15 while, 14 16 cc, 14 16 constant, 14 16 if, 14 16 print, 14 16 read, 14 16 stmt, 14 16 while, 15 17 cc, 15 17 constant, 15 17 if, 15 17 print, 15 17 read, 15 17 stmt, 15 17 while, 16 17 cc, 16 17 constant, 16 17 if, 16 17 print, 16 17 read, 16 17 stmt, 16 17 while, 18 19 cc, 18 19 constant, 18 19 if, 18 19 print, 18 19 read, 18 19 stmt, 18 19 while, 18 21 cc, 18 21 constant, 18 21 if, 18 21 print, 18 21 read, 18 21 stmt, 18 21 while, 19 20 cc, 19 20 constant, 19 20 if, 19 20 print, 19 20 read, 19 20 stmt, 19 20 while, 2 3 cc, 2 3 constant, 2 3 if, 2 3 print, 2 3 read, 2 3 stmt, 2 3 while, 2 4 cc, 2 4 constant, 2 4 if, 2 4 print, 2 4 read, 2 4 stmt, 2 4 while, 20 24 cc, 20 24 constant, 20 24 if, 20 24 print, 20 24 read, 20 24 stmt, 20 24 while, 21 22 cc, 21 22 constant, 21 22 if, 21 22 print, 21 22 read, 21 22 stmt, 21 22 while, 22 23 cc, 22 23 constant, 22 23 if, 22 23 print, 22 23 read, 22 23 stmt, 22 23 while, 23 21 cc, 23 21 constant, 23 21 if, 23 21 print, 23 21 read, 23 21 stmt, 23 21 while, 21 24 cc, 21 24 constant, 21 24 if, 21 24 print, 21 24 read, 21 24 stmt, 21 24 while, 25 26 cc, 25 26 constant, 25 26 if, 25 26 print, 25 26 read, 25 26 stmt, 25 26 while, 26 27 cc, 26 27 constant, 26 27 if, 26 27 print, 26 27 read, 26 27 stmt, 26 27 while, 26 30 cc, 26 30 constant, 26 30 if, 26 30 print, 26 30 read, 26 30 stmt, 26 30 while, 27 28 cc, 27 28 constant, 27 28 if, 27 28 print, 27 28 read, 27 28 stmt, 27 28 while, 28 29 cc, 28 29 constant, 28 29 if, 28 29 print, 28 29 read, 28 29 stmt, 28 29 while, 29 26 cc, 29 26 constant, 29 26 if, 29 26 print, 29 26 read, 29 26 stmt, 29 26 while, 3 5 cc, 3 5 constant, 3 5 if, 3 5 print, 3 5 read, 3 5 stmt, 3 5 while, 30 31 cc, 30 31 constant, 30 31 if, 30 31 print, 30 31 read, 30 31 stmt, 30 31 while, 4 5 cc, 4 5 constant, 4 5 if, 4 5 print, 4 5 read, 4 5 stmt, 4 5 while, 5 13 cc, 5 13 constant, 5 13 if, 5 13 print, 5 13 read, 5 13 stmt, 5 13 while, 5 6 cc, 5 6 constant, 5 6 if, 5 6 print, 5 6 read, 5 6 stmt, 5 6 while, 6 7 cc, 6 7 constant, 6 7 if, 6 7 print, 6 7 read, 6 7 stmt, 6 7 while, 7 8 cc, 7 8 constant, 7 8 if, 7 8 print, 7 8 read, 7 8 stmt, 7 8 while, 8 11 cc, 8 11 constant, 8 11 if, 8 11 print, 8 11 read, 8 11 stmt, 8 11 while, 8 9 cc, 8 9 constant, 8 9 if, 8 9 print, 8 9 read, 8 9 stmt, 8 9 while, 9 10 cc, 9 10 constant, 9 10 if, 9 10 print, 9 10 read, 9 10 stmt, 9 10 while, 10 5 cc, 10 5 constant, 10 5 if, 10 5 print, 10 5 read, 10 5 stmt, 10 5 while
+5000
+1236 - Valid. result-cl tuple, suchthat-cl Next, pattern-cl while, with-cl call.procName
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select <n1, n2, v> such that Next(n1, n2) pattern w(v, _) with cl.procName = "procedure"
+1 2 cc, 1 2 constant, 1 2 if, 1 2 print, 1 2 read, 1 2 stmt, 1 2 while, 11 12 cc, 11 12 constant, 11 12 if, 11 12 print, 11 12 read, 11 12 stmt, 11 12 while, 12 5 cc, 12 5 constant, 12 5 if, 12 5 print, 12 5 read, 12 5 stmt, 12 5 while, 13 14 cc, 13 14 constant, 13 14 if, 13 14 print, 13 14 read, 13 14 stmt, 13 14 while, 14 15 cc, 14 15 constant, 14 15 if, 14 15 print, 14 15 read, 14 15 stmt, 14 15 while, 14 16 cc, 14 16 constant, 14 16 if, 14 16 print, 14 16 read, 14 16 stmt, 14 16 while, 15 17 cc, 15 17 constant, 15 17 if, 15 17 print, 15 17 read, 15 17 stmt, 15 17 while, 16 17 cc, 16 17 constant, 16 17 if, 16 17 print, 16 17 read, 16 17 stmt, 16 17 while, 18 19 cc, 18 19 constant, 18 19 if, 18 19 print, 18 19 read, 18 19 stmt, 18 19 while, 18 21 cc, 18 21 constant, 18 21 if, 18 21 print, 18 21 read, 18 21 stmt, 18 21 while, 19 20 cc, 19 20 constant, 19 20 if, 19 20 print, 19 20 read, 19 20 stmt, 19 20 while, 2 3 cc, 2 3 constant, 2 3 if, 2 3 print, 2 3 read, 2 3 stmt, 2 3 while, 2 4 cc, 2 4 constant, 2 4 if, 2 4 print, 2 4 read, 2 4 stmt, 2 4 while, 20 24 cc, 20 24 constant, 20 24 if, 20 24 print, 20 24 read, 20 24 stmt, 20 24 while, 21 22 cc, 21 22 constant, 21 22 if, 21 22 print, 21 22 read, 21 22 stmt, 21 22 while, 22 23 cc, 22 23 constant, 22 23 if, 22 23 print, 22 23 read, 22 23 stmt, 22 23 while, 23 21 cc, 23 21 constant, 23 21 if, 23 21 print, 23 21 read, 23 21 stmt, 23 21 while, 21 24 cc, 21 24 constant, 21 24 if, 21 24 print, 21 24 read, 21 24 stmt, 21 24 while, 25 26 cc, 25 26 constant, 25 26 if, 25 26 print, 25 26 read, 25 26 stmt, 25 26 while, 26 27 cc, 26 27 constant, 26 27 if, 26 27 print, 26 27 read, 26 27 stmt, 26 27 while, 26 30 cc, 26 30 constant, 26 30 if, 26 30 print, 26 30 read, 26 30 stmt, 26 30 while, 27 28 cc, 27 28 constant, 27 28 if, 27 28 print, 27 28 read, 27 28 stmt, 27 28 while, 28 29 cc, 28 29 constant, 28 29 if, 28 29 print, 28 29 read, 28 29 stmt, 28 29 while, 29 26 cc, 29 26 constant, 29 26 if, 29 26 print, 29 26 read, 29 26 stmt, 29 26 while, 3 5 cc, 3 5 constant, 3 5 if, 3 5 print, 3 5 read, 3 5 stmt, 3 5 while, 30 31 cc, 30 31 constant, 30 31 if, 30 31 print, 30 31 read, 30 31 stmt, 30 31 while, 4 5 cc, 4 5 constant, 4 5 if, 4 5 print, 4 5 read, 4 5 stmt, 4 5 while, 5 13 cc, 5 13 constant, 5 13 if, 5 13 print, 5 13 read, 5 13 stmt, 5 13 while, 5 6 cc, 5 6 constant, 5 6 if, 5 6 print, 5 6 read, 5 6 stmt, 5 6 while, 6 7 cc, 6 7 constant, 6 7 if, 6 7 print, 6 7 read, 6 7 stmt, 6 7 while, 7 8 cc, 7 8 constant, 7 8 if, 7 8 print, 7 8 read, 7 8 stmt, 7 8 while, 8 11 cc, 8 11 constant, 8 11 if, 8 11 print, 8 11 read, 8 11 stmt, 8 11 while, 8 9 cc, 8 9 constant, 8 9 if, 8 9 print, 8 9 read, 8 9 stmt, 8 9 while, 9 10 cc, 9 10 constant, 9 10 if, 9 10 print, 9 10 read, 9 10 stmt, 9 10 while, 10 5 cc, 10 5 constant, 10 5 if, 10 5 print, 10 5 read, 10 5 stmt, 10 5 while
+5000
+1237 - Valid. result-cl tuple, suchthat-cl Next, pattern-cl while, with-cl variable.varName
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select <n1, n2, v> such that Next(n1, n2) pattern w(v, _) with v.varName = "cc"
+1 2 cc, 11 12 cc, 12 5 cc, 13 14 cc, 14 15 cc, 14 16 cc, 15 17 cc, 16 17 cc, 18 19 cc, 18 21 cc, 19 20 cc, 2 3 cc, 2 4 cc, 20 24 cc, 21 22 cc, 22 23 cc, 23 21 cc, 21 24 cc, 25 26 cc, 26 27 cc, 26 30 cc, 27 28 cc, 28 29 cc, 29 26 cc, 3 5 cc, 30 31 cc, 4 5 cc, 5 13 cc, 5 6 cc, 6 7 cc, 7 8 cc, 8 11 cc, 8 9 cc, 9 10 cc, 10 5 cc
+5000
+1238 - Valid. result-cl tuple, suchthat-cl Next, pattern-cl while, with-cl read.varName
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select <n1, n2, v> such that Next(n1, n2) pattern w(v, _) with r.varName = "aa"
+1 2 cc, 1 2 constant, 1 2 if, 1 2 print, 1 2 read, 1 2 stmt, 1 2 while, 11 12 cc, 11 12 constant, 11 12 if, 11 12 print, 11 12 read, 11 12 stmt, 11 12 while, 12 5 cc, 12 5 constant, 12 5 if, 12 5 print, 12 5 read, 12 5 stmt, 12 5 while, 13 14 cc, 13 14 constant, 13 14 if, 13 14 print, 13 14 read, 13 14 stmt, 13 14 while, 14 15 cc, 14 15 constant, 14 15 if, 14 15 print, 14 15 read, 14 15 stmt, 14 15 while, 14 16 cc, 14 16 constant, 14 16 if, 14 16 print, 14 16 read, 14 16 stmt, 14 16 while, 15 17 cc, 15 17 constant, 15 17 if, 15 17 print, 15 17 read, 15 17 stmt, 15 17 while, 16 17 cc, 16 17 constant, 16 17 if, 16 17 print, 16 17 read, 16 17 stmt, 16 17 while, 18 19 cc, 18 19 constant, 18 19 if, 18 19 print, 18 19 read, 18 19 stmt, 18 19 while, 18 21 cc, 18 21 constant, 18 21 if, 18 21 print, 18 21 read, 18 21 stmt, 18 21 while, 19 20 cc, 19 20 constant, 19 20 if, 19 20 print, 19 20 read, 19 20 stmt, 19 20 while, 2 3 cc, 2 3 constant, 2 3 if, 2 3 print, 2 3 read, 2 3 stmt, 2 3 while, 2 4 cc, 2 4 constant, 2 4 if, 2 4 print, 2 4 read, 2 4 stmt, 2 4 while, 20 24 cc, 20 24 constant, 20 24 if, 20 24 print, 20 24 read, 20 24 stmt, 20 24 while, 21 22 cc, 21 22 constant, 21 22 if, 21 22 print, 21 22 read, 21 22 stmt, 21 22 while, 22 23 cc, 22 23 constant, 22 23 if, 22 23 print, 22 23 read, 22 23 stmt, 22 23 while, 23 21 cc, 23 21 constant, 23 21 if, 23 21 print, 23 21 read, 23 21 stmt, 23 21 while, 21 24 cc, 21 24 constant, 21 24 if, 21 24 print, 21 24 read, 21 24 stmt, 21 24 while, 25 26 cc, 25 26 constant, 25 26 if, 25 26 print, 25 26 read, 25 26 stmt, 25 26 while, 26 27 cc, 26 27 constant, 26 27 if, 26 27 print, 26 27 read, 26 27 stmt, 26 27 while, 26 30 cc, 26 30 constant, 26 30 if, 26 30 print, 26 30 read, 26 30 stmt, 26 30 while, 27 28 cc, 27 28 constant, 27 28 if, 27 28 print, 27 28 read, 27 28 stmt, 27 28 while, 28 29 cc, 28 29 constant, 28 29 if, 28 29 print, 28 29 read, 28 29 stmt, 28 29 while, 29 26 cc, 29 26 constant, 29 26 if, 29 26 print, 29 26 read, 29 26 stmt, 29 26 while, 3 5 cc, 3 5 constant, 3 5 if, 3 5 print, 3 5 read, 3 5 stmt, 3 5 while, 30 31 cc, 30 31 constant, 30 31 if, 30 31 print, 30 31 read, 30 31 stmt, 30 31 while, 4 5 cc, 4 5 constant, 4 5 if, 4 5 print, 4 5 read, 4 5 stmt, 4 5 while, 5 13 cc, 5 13 constant, 5 13 if, 5 13 print, 5 13 read, 5 13 stmt, 5 13 while, 5 6 cc, 5 6 constant, 5 6 if, 5 6 print, 5 6 read, 5 6 stmt, 5 6 while, 6 7 cc, 6 7 constant, 6 7 if, 6 7 print, 6 7 read, 6 7 stmt, 6 7 while, 7 8 cc, 7 8 constant, 7 8 if, 7 8 print, 7 8 read, 7 8 stmt, 7 8 while, 8 11 cc, 8 11 constant, 8 11 if, 8 11 print, 8 11 read, 8 11 stmt, 8 11 while, 8 9 cc, 8 9 constant, 8 9 if, 8 9 print, 8 9 read, 8 9 stmt, 8 9 while, 9 10 cc, 9 10 constant, 9 10 if, 9 10 print, 9 10 read, 9 10 stmt, 9 10 while, 10 5 cc, 10 5 constant, 10 5 if, 10 5 print, 10 5 read, 10 5 stmt, 10 5 while
+5000
+1239 - Valid. result-cl tuple, suchthat-cl Next, pattern-cl while, with-cl print.varName
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select <n1, n2, v> such that Next(n1, n2) pattern w(v, _) with p.varName = "bb"
+1 2 cc, 1 2 constant, 1 2 if, 1 2 print, 1 2 read, 1 2 stmt, 1 2 while, 11 12 cc, 11 12 constant, 11 12 if, 11 12 print, 11 12 read, 11 12 stmt, 11 12 while, 12 5 cc, 12 5 constant, 12 5 if, 12 5 print, 12 5 read, 12 5 stmt, 12 5 while, 13 14 cc, 13 14 constant, 13 14 if, 13 14 print, 13 14 read, 13 14 stmt, 13 14 while, 14 15 cc, 14 15 constant, 14 15 if, 14 15 print, 14 15 read, 14 15 stmt, 14 15 while, 14 16 cc, 14 16 constant, 14 16 if, 14 16 print, 14 16 read, 14 16 stmt, 14 16 while, 15 17 cc, 15 17 constant, 15 17 if, 15 17 print, 15 17 read, 15 17 stmt, 15 17 while, 16 17 cc, 16 17 constant, 16 17 if, 16 17 print, 16 17 read, 16 17 stmt, 16 17 while, 18 19 cc, 18 19 constant, 18 19 if, 18 19 print, 18 19 read, 18 19 stmt, 18 19 while, 18 21 cc, 18 21 constant, 18 21 if, 18 21 print, 18 21 read, 18 21 stmt, 18 21 while, 19 20 cc, 19 20 constant, 19 20 if, 19 20 print, 19 20 read, 19 20 stmt, 19 20 while, 2 3 cc, 2 3 constant, 2 3 if, 2 3 print, 2 3 read, 2 3 stmt, 2 3 while, 2 4 cc, 2 4 constant, 2 4 if, 2 4 print, 2 4 read, 2 4 stmt, 2 4 while, 20 24 cc, 20 24 constant, 20 24 if, 20 24 print, 20 24 read, 20 24 stmt, 20 24 while, 21 22 cc, 21 22 constant, 21 22 if, 21 22 print, 21 22 read, 21 22 stmt, 21 22 while, 22 23 cc, 22 23 constant, 22 23 if, 22 23 print, 22 23 read, 22 23 stmt, 22 23 while, 23 21 cc, 23 21 constant, 23 21 if, 23 21 print, 23 21 read, 23 21 stmt, 23 21 while, 21 24 cc, 21 24 constant, 21 24 if, 21 24 print, 21 24 read, 21 24 stmt, 21 24 while, 25 26 cc, 25 26 constant, 25 26 if, 25 26 print, 25 26 read, 25 26 stmt, 25 26 while, 26 27 cc, 26 27 constant, 26 27 if, 26 27 print, 26 27 read, 26 27 stmt, 26 27 while, 26 30 cc, 26 30 constant, 26 30 if, 26 30 print, 26 30 read, 26 30 stmt, 26 30 while, 27 28 cc, 27 28 constant, 27 28 if, 27 28 print, 27 28 read, 27 28 stmt, 27 28 while, 28 29 cc, 28 29 constant, 28 29 if, 28 29 print, 28 29 read, 28 29 stmt, 28 29 while, 29 26 cc, 29 26 constant, 29 26 if, 29 26 print, 29 26 read, 29 26 stmt, 29 26 while, 3 5 cc, 3 5 constant, 3 5 if, 3 5 print, 3 5 read, 3 5 stmt, 3 5 while, 30 31 cc, 30 31 constant, 30 31 if, 30 31 print, 30 31 read, 30 31 stmt, 30 31 while, 4 5 cc, 4 5 constant, 4 5 if, 4 5 print, 4 5 read, 4 5 stmt, 4 5 while, 5 13 cc, 5 13 constant, 5 13 if, 5 13 print, 5 13 read, 5 13 stmt, 5 13 while, 5 6 cc, 5 6 constant, 5 6 if, 5 6 print, 5 6 read, 5 6 stmt, 5 6 while, 6 7 cc, 6 7 constant, 6 7 if, 6 7 print, 6 7 read, 6 7 stmt, 6 7 while, 7 8 cc, 7 8 constant, 7 8 if, 7 8 print, 7 8 read, 7 8 stmt, 7 8 while, 8 11 cc, 8 11 constant, 8 11 if, 8 11 print, 8 11 read, 8 11 stmt, 8 11 while, 8 9 cc, 8 9 constant, 8 9 if, 8 9 print, 8 9 read, 8 9 stmt, 8 9 while, 9 10 cc, 9 10 constant, 9 10 if, 9 10 print, 9 10 read, 9 10 stmt, 9 10 while, 10 5 cc, 10 5 constant, 10 5 if, 10 5 print, 10 5 read, 10 5 stmt, 10 5 while
+5000
+1240 - Valid. result-cl tuple, suchthat-cl Next, pattern-cl while, with-cl call.varName
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select <n1, n2, v> such that Next(n1, n2) pattern w(v, _) with c.value = 33
+1 2 cc, 1 2 constant, 1 2 if, 1 2 print, 1 2 read, 1 2 stmt, 1 2 while, 11 12 cc, 11 12 constant, 11 12 if, 11 12 print, 11 12 read, 11 12 stmt, 11 12 while, 12 5 cc, 12 5 constant, 12 5 if, 12 5 print, 12 5 read, 12 5 stmt, 12 5 while, 13 14 cc, 13 14 constant, 13 14 if, 13 14 print, 13 14 read, 13 14 stmt, 13 14 while, 14 15 cc, 14 15 constant, 14 15 if, 14 15 print, 14 15 read, 14 15 stmt, 14 15 while, 14 16 cc, 14 16 constant, 14 16 if, 14 16 print, 14 16 read, 14 16 stmt, 14 16 while, 15 17 cc, 15 17 constant, 15 17 if, 15 17 print, 15 17 read, 15 17 stmt, 15 17 while, 16 17 cc, 16 17 constant, 16 17 if, 16 17 print, 16 17 read, 16 17 stmt, 16 17 while, 18 19 cc, 18 19 constant, 18 19 if, 18 19 print, 18 19 read, 18 19 stmt, 18 19 while, 18 21 cc, 18 21 constant, 18 21 if, 18 21 print, 18 21 read, 18 21 stmt, 18 21 while, 19 20 cc, 19 20 constant, 19 20 if, 19 20 print, 19 20 read, 19 20 stmt, 19 20 while, 2 3 cc, 2 3 constant, 2 3 if, 2 3 print, 2 3 read, 2 3 stmt, 2 3 while, 2 4 cc, 2 4 constant, 2 4 if, 2 4 print, 2 4 read, 2 4 stmt, 2 4 while, 20 24 cc, 20 24 constant, 20 24 if, 20 24 print, 20 24 read, 20 24 stmt, 20 24 while, 21 22 cc, 21 22 constant, 21 22 if, 21 22 print, 21 22 read, 21 22 stmt, 21 22 while, 22 23 cc, 22 23 constant, 22 23 if, 22 23 print, 22 23 read, 22 23 stmt, 22 23 while, 23 21 cc, 23 21 constant, 23 21 if, 23 21 print, 23 21 read, 23 21 stmt, 23 21 while, 21 24 cc, 21 24 constant, 21 24 if, 21 24 print, 21 24 read, 21 24 stmt, 21 24 while, 25 26 cc, 25 26 constant, 25 26 if, 25 26 print, 25 26 read, 25 26 stmt, 25 26 while, 26 27 cc, 26 27 constant, 26 27 if, 26 27 print, 26 27 read, 26 27 stmt, 26 27 while, 26 30 cc, 26 30 constant, 26 30 if, 26 30 print, 26 30 read, 26 30 stmt, 26 30 while, 27 28 cc, 27 28 constant, 27 28 if, 27 28 print, 27 28 read, 27 28 stmt, 27 28 while, 28 29 cc, 28 29 constant, 28 29 if, 28 29 print, 28 29 read, 28 29 stmt, 28 29 while, 29 26 cc, 29 26 constant, 29 26 if, 29 26 print, 29 26 read, 29 26 stmt, 29 26 while, 3 5 cc, 3 5 constant, 3 5 if, 3 5 print, 3 5 read, 3 5 stmt, 3 5 while, 30 31 cc, 30 31 constant, 30 31 if, 30 31 print, 30 31 read, 30 31 stmt, 30 31 while, 4 5 cc, 4 5 constant, 4 5 if, 4 5 print, 4 5 read, 4 5 stmt, 4 5 while, 5 13 cc, 5 13 constant, 5 13 if, 5 13 print, 5 13 read, 5 13 stmt, 5 13 while, 5 6 cc, 5 6 constant, 5 6 if, 5 6 print, 5 6 read, 5 6 stmt, 5 6 while, 6 7 cc, 6 7 constant, 6 7 if, 6 7 print, 6 7 read, 6 7 stmt, 6 7 while, 7 8 cc, 7 8 constant, 7 8 if, 7 8 print, 7 8 read, 7 8 stmt, 7 8 while, 8 11 cc, 8 11 constant, 8 11 if, 8 11 print, 8 11 read, 8 11 stmt, 8 11 while, 8 9 cc, 8 9 constant, 8 9 if, 8 9 print, 8 9 read, 8 9 stmt, 8 9 while, 9 10 cc, 9 10 constant, 9 10 if, 9 10 print, 9 10 read, 9 10 stmt, 9 10 while, 10 5 cc, 10 5 constant, 10 5 if, 10 5 print, 10 5 read, 10 5 stmt, 10 5 while
+5000
+1241 - Valid. result-cl tuple, suchthat-cl Next, pattern-cl while, with-cl stmt.stmt#
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select <n1, n2, v> such that Next(n1, n2) pattern w(v, _) with s.stmt# = 10
+1 2 cc, 1 2 constant, 1 2 if, 1 2 print, 1 2 read, 1 2 stmt, 1 2 while, 11 12 cc, 11 12 constant, 11 12 if, 11 12 print, 11 12 read, 11 12 stmt, 11 12 while, 12 5 cc, 12 5 constant, 12 5 if, 12 5 print, 12 5 read, 12 5 stmt, 12 5 while, 13 14 cc, 13 14 constant, 13 14 if, 13 14 print, 13 14 read, 13 14 stmt, 13 14 while, 14 15 cc, 14 15 constant, 14 15 if, 14 15 print, 14 15 read, 14 15 stmt, 14 15 while, 14 16 cc, 14 16 constant, 14 16 if, 14 16 print, 14 16 read, 14 16 stmt, 14 16 while, 15 17 cc, 15 17 constant, 15 17 if, 15 17 print, 15 17 read, 15 17 stmt, 15 17 while, 16 17 cc, 16 17 constant, 16 17 if, 16 17 print, 16 17 read, 16 17 stmt, 16 17 while, 18 19 cc, 18 19 constant, 18 19 if, 18 19 print, 18 19 read, 18 19 stmt, 18 19 while, 18 21 cc, 18 21 constant, 18 21 if, 18 21 print, 18 21 read, 18 21 stmt, 18 21 while, 19 20 cc, 19 20 constant, 19 20 if, 19 20 print, 19 20 read, 19 20 stmt, 19 20 while, 2 3 cc, 2 3 constant, 2 3 if, 2 3 print, 2 3 read, 2 3 stmt, 2 3 while, 2 4 cc, 2 4 constant, 2 4 if, 2 4 print, 2 4 read, 2 4 stmt, 2 4 while, 20 24 cc, 20 24 constant, 20 24 if, 20 24 print, 20 24 read, 20 24 stmt, 20 24 while, 21 22 cc, 21 22 constant, 21 22 if, 21 22 print, 21 22 read, 21 22 stmt, 21 22 while, 22 23 cc, 22 23 constant, 22 23 if, 22 23 print, 22 23 read, 22 23 stmt, 22 23 while, 23 21 cc, 23 21 constant, 23 21 if, 23 21 print, 23 21 read, 23 21 stmt, 23 21 while, 21 24 cc, 21 24 constant, 21 24 if, 21 24 print, 21 24 read, 21 24 stmt, 21 24 while, 25 26 cc, 25 26 constant, 25 26 if, 25 26 print, 25 26 read, 25 26 stmt, 25 26 while, 26 27 cc, 26 27 constant, 26 27 if, 26 27 print, 26 27 read, 26 27 stmt, 26 27 while, 26 30 cc, 26 30 constant, 26 30 if, 26 30 print, 26 30 read, 26 30 stmt, 26 30 while, 27 28 cc, 27 28 constant, 27 28 if, 27 28 print, 27 28 read, 27 28 stmt, 27 28 while, 28 29 cc, 28 29 constant, 28 29 if, 28 29 print, 28 29 read, 28 29 stmt, 28 29 while, 29 26 cc, 29 26 constant, 29 26 if, 29 26 print, 29 26 read, 29 26 stmt, 29 26 while, 3 5 cc, 3 5 constant, 3 5 if, 3 5 print, 3 5 read, 3 5 stmt, 3 5 while, 30 31 cc, 30 31 constant, 30 31 if, 30 31 print, 30 31 read, 30 31 stmt, 30 31 while, 4 5 cc, 4 5 constant, 4 5 if, 4 5 print, 4 5 read, 4 5 stmt, 4 5 while, 5 13 cc, 5 13 constant, 5 13 if, 5 13 print, 5 13 read, 5 13 stmt, 5 13 while, 5 6 cc, 5 6 constant, 5 6 if, 5 6 print, 5 6 read, 5 6 stmt, 5 6 while, 6 7 cc, 6 7 constant, 6 7 if, 6 7 print, 6 7 read, 6 7 stmt, 6 7 while, 7 8 cc, 7 8 constant, 7 8 if, 7 8 print, 7 8 read, 7 8 stmt, 7 8 while, 8 11 cc, 8 11 constant, 8 11 if, 8 11 print, 8 11 read, 8 11 stmt, 8 11 while, 8 9 cc, 8 9 constant, 8 9 if, 8 9 print, 8 9 read, 8 9 stmt, 8 9 while, 9 10 cc, 9 10 constant, 9 10 if, 9 10 print, 9 10 read, 9 10 stmt, 9 10 while, 10 5 cc, 10 5 constant, 10 5 if, 10 5 print, 10 5 read, 10 5 stmt, 10 5 while
+5000
+1242 - Valid. result-cl tuple, suchthat-cl Next, pattern-cl while, with-cl read.stmt#
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select <n1, n2, v> such that Next(n1, n2) pattern w(v, _) with r.stmt# = 10
+1 2 cc, 1 2 constant, 1 2 if, 1 2 print, 1 2 read, 1 2 stmt, 1 2 while, 11 12 cc, 11 12 constant, 11 12 if, 11 12 print, 11 12 read, 11 12 stmt, 11 12 while, 12 5 cc, 12 5 constant, 12 5 if, 12 5 print, 12 5 read, 12 5 stmt, 12 5 while, 13 14 cc, 13 14 constant, 13 14 if, 13 14 print, 13 14 read, 13 14 stmt, 13 14 while, 14 15 cc, 14 15 constant, 14 15 if, 14 15 print, 14 15 read, 14 15 stmt, 14 15 while, 14 16 cc, 14 16 constant, 14 16 if, 14 16 print, 14 16 read, 14 16 stmt, 14 16 while, 15 17 cc, 15 17 constant, 15 17 if, 15 17 print, 15 17 read, 15 17 stmt, 15 17 while, 16 17 cc, 16 17 constant, 16 17 if, 16 17 print, 16 17 read, 16 17 stmt, 16 17 while, 18 19 cc, 18 19 constant, 18 19 if, 18 19 print, 18 19 read, 18 19 stmt, 18 19 while, 18 21 cc, 18 21 constant, 18 21 if, 18 21 print, 18 21 read, 18 21 stmt, 18 21 while, 19 20 cc, 19 20 constant, 19 20 if, 19 20 print, 19 20 read, 19 20 stmt, 19 20 while, 2 3 cc, 2 3 constant, 2 3 if, 2 3 print, 2 3 read, 2 3 stmt, 2 3 while, 2 4 cc, 2 4 constant, 2 4 if, 2 4 print, 2 4 read, 2 4 stmt, 2 4 while, 20 24 cc, 20 24 constant, 20 24 if, 20 24 print, 20 24 read, 20 24 stmt, 20 24 while, 21 22 cc, 21 22 constant, 21 22 if, 21 22 print, 21 22 read, 21 22 stmt, 21 22 while, 22 23 cc, 22 23 constant, 22 23 if, 22 23 print, 22 23 read, 22 23 stmt, 22 23 while, 23 21 cc, 23 21 constant, 23 21 if, 23 21 print, 23 21 read, 23 21 stmt, 23 21 while, 21 24 cc, 21 24 constant, 21 24 if, 21 24 print, 21 24 read, 21 24 stmt, 21 24 while, 25 26 cc, 25 26 constant, 25 26 if, 25 26 print, 25 26 read, 25 26 stmt, 25 26 while, 26 27 cc, 26 27 constant, 26 27 if, 26 27 print, 26 27 read, 26 27 stmt, 26 27 while, 26 30 cc, 26 30 constant, 26 30 if, 26 30 print, 26 30 read, 26 30 stmt, 26 30 while, 27 28 cc, 27 28 constant, 27 28 if, 27 28 print, 27 28 read, 27 28 stmt, 27 28 while, 28 29 cc, 28 29 constant, 28 29 if, 28 29 print, 28 29 read, 28 29 stmt, 28 29 while, 29 26 cc, 29 26 constant, 29 26 if, 29 26 print, 29 26 read, 29 26 stmt, 29 26 while, 3 5 cc, 3 5 constant, 3 5 if, 3 5 print, 3 5 read, 3 5 stmt, 3 5 while, 30 31 cc, 30 31 constant, 30 31 if, 30 31 print, 30 31 read, 30 31 stmt, 30 31 while, 4 5 cc, 4 5 constant, 4 5 if, 4 5 print, 4 5 read, 4 5 stmt, 4 5 while, 5 13 cc, 5 13 constant, 5 13 if, 5 13 print, 5 13 read, 5 13 stmt, 5 13 while, 5 6 cc, 5 6 constant, 5 6 if, 5 6 print, 5 6 read, 5 6 stmt, 5 6 while, 6 7 cc, 6 7 constant, 6 7 if, 6 7 print, 6 7 read, 6 7 stmt, 6 7 while, 7 8 cc, 7 8 constant, 7 8 if, 7 8 print, 7 8 read, 7 8 stmt, 7 8 while, 8 11 cc, 8 11 constant, 8 11 if, 8 11 print, 8 11 read, 8 11 stmt, 8 11 while, 8 9 cc, 8 9 constant, 8 9 if, 8 9 print, 8 9 read, 8 9 stmt, 8 9 while, 9 10 cc, 9 10 constant, 9 10 if, 9 10 print, 9 10 read, 9 10 stmt, 9 10 while, 10 5 cc, 10 5 constant, 10 5 if, 10 5 print, 10 5 read, 10 5 stmt, 10 5 while
+5000
+1243 - Valid. result-cl tuple, suchthat-cl Next, pattern-cl while, with-cl print.stmt#
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select <n1, n2, v> such that Next(n1, n2) pattern w(v, _) with p.stmt# = 12
+1 2 cc, 1 2 constant, 1 2 if, 1 2 print, 1 2 read, 1 2 stmt, 1 2 while, 11 12 cc, 11 12 constant, 11 12 if, 11 12 print, 11 12 read, 11 12 stmt, 11 12 while, 12 5 cc, 12 5 constant, 12 5 if, 12 5 print, 12 5 read, 12 5 stmt, 12 5 while, 13 14 cc, 13 14 constant, 13 14 if, 13 14 print, 13 14 read, 13 14 stmt, 13 14 while, 14 15 cc, 14 15 constant, 14 15 if, 14 15 print, 14 15 read, 14 15 stmt, 14 15 while, 14 16 cc, 14 16 constant, 14 16 if, 14 16 print, 14 16 read, 14 16 stmt, 14 16 while, 15 17 cc, 15 17 constant, 15 17 if, 15 17 print, 15 17 read, 15 17 stmt, 15 17 while, 16 17 cc, 16 17 constant, 16 17 if, 16 17 print, 16 17 read, 16 17 stmt, 16 17 while, 18 19 cc, 18 19 constant, 18 19 if, 18 19 print, 18 19 read, 18 19 stmt, 18 19 while, 18 21 cc, 18 21 constant, 18 21 if, 18 21 print, 18 21 read, 18 21 stmt, 18 21 while, 19 20 cc, 19 20 constant, 19 20 if, 19 20 print, 19 20 read, 19 20 stmt, 19 20 while, 2 3 cc, 2 3 constant, 2 3 if, 2 3 print, 2 3 read, 2 3 stmt, 2 3 while, 2 4 cc, 2 4 constant, 2 4 if, 2 4 print, 2 4 read, 2 4 stmt, 2 4 while, 20 24 cc, 20 24 constant, 20 24 if, 20 24 print, 20 24 read, 20 24 stmt, 20 24 while, 21 22 cc, 21 22 constant, 21 22 if, 21 22 print, 21 22 read, 21 22 stmt, 21 22 while, 22 23 cc, 22 23 constant, 22 23 if, 22 23 print, 22 23 read, 22 23 stmt, 22 23 while, 23 21 cc, 23 21 constant, 23 21 if, 23 21 print, 23 21 read, 23 21 stmt, 23 21 while, 21 24 cc, 21 24 constant, 21 24 if, 21 24 print, 21 24 read, 21 24 stmt, 21 24 while, 25 26 cc, 25 26 constant, 25 26 if, 25 26 print, 25 26 read, 25 26 stmt, 25 26 while, 26 27 cc, 26 27 constant, 26 27 if, 26 27 print, 26 27 read, 26 27 stmt, 26 27 while, 26 30 cc, 26 30 constant, 26 30 if, 26 30 print, 26 30 read, 26 30 stmt, 26 30 while, 27 28 cc, 27 28 constant, 27 28 if, 27 28 print, 27 28 read, 27 28 stmt, 27 28 while, 28 29 cc, 28 29 constant, 28 29 if, 28 29 print, 28 29 read, 28 29 stmt, 28 29 while, 29 26 cc, 29 26 constant, 29 26 if, 29 26 print, 29 26 read, 29 26 stmt, 29 26 while, 3 5 cc, 3 5 constant, 3 5 if, 3 5 print, 3 5 read, 3 5 stmt, 3 5 while, 30 31 cc, 30 31 constant, 30 31 if, 30 31 print, 30 31 read, 30 31 stmt, 30 31 while, 4 5 cc, 4 5 constant, 4 5 if, 4 5 print, 4 5 read, 4 5 stmt, 4 5 while, 5 13 cc, 5 13 constant, 5 13 if, 5 13 print, 5 13 read, 5 13 stmt, 5 13 while, 5 6 cc, 5 6 constant, 5 6 if, 5 6 print, 5 6 read, 5 6 stmt, 5 6 while, 6 7 cc, 6 7 constant, 6 7 if, 6 7 print, 6 7 read, 6 7 stmt, 6 7 while, 7 8 cc, 7 8 constant, 7 8 if, 7 8 print, 7 8 read, 7 8 stmt, 7 8 while, 8 11 cc, 8 11 constant, 8 11 if, 8 11 print, 8 11 read, 8 11 stmt, 8 11 while, 8 9 cc, 8 9 constant, 8 9 if, 8 9 print, 8 9 read, 8 9 stmt, 8 9 while, 9 10 cc, 9 10 constant, 9 10 if, 9 10 print, 9 10 read, 9 10 stmt, 9 10 while, 10 5 cc, 10 5 constant, 10 5 if, 10 5 print, 10 5 read, 10 5 stmt, 10 5 while
+5000
+1244 - Valid. result-cl tuple, suchthat-cl Next, pattern-cl while, with-cl call.stmt#
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select <n1, n2, v> such that Next(n1, n2) pattern w(v, _) with cl.stmt# = 29
+1 2 cc, 1 2 constant, 1 2 if, 1 2 print, 1 2 read, 1 2 stmt, 1 2 while, 11 12 cc, 11 12 constant, 11 12 if, 11 12 print, 11 12 read, 11 12 stmt, 11 12 while, 12 5 cc, 12 5 constant, 12 5 if, 12 5 print, 12 5 read, 12 5 stmt, 12 5 while, 13 14 cc, 13 14 constant, 13 14 if, 13 14 print, 13 14 read, 13 14 stmt, 13 14 while, 14 15 cc, 14 15 constant, 14 15 if, 14 15 print, 14 15 read, 14 15 stmt, 14 15 while, 14 16 cc, 14 16 constant, 14 16 if, 14 16 print, 14 16 read, 14 16 stmt, 14 16 while, 15 17 cc, 15 17 constant, 15 17 if, 15 17 print, 15 17 read, 15 17 stmt, 15 17 while, 16 17 cc, 16 17 constant, 16 17 if, 16 17 print, 16 17 read, 16 17 stmt, 16 17 while, 18 19 cc, 18 19 constant, 18 19 if, 18 19 print, 18 19 read, 18 19 stmt, 18 19 while, 18 21 cc, 18 21 constant, 18 21 if, 18 21 print, 18 21 read, 18 21 stmt, 18 21 while, 19 20 cc, 19 20 constant, 19 20 if, 19 20 print, 19 20 read, 19 20 stmt, 19 20 while, 2 3 cc, 2 3 constant, 2 3 if, 2 3 print, 2 3 read, 2 3 stmt, 2 3 while, 2 4 cc, 2 4 constant, 2 4 if, 2 4 print, 2 4 read, 2 4 stmt, 2 4 while, 20 24 cc, 20 24 constant, 20 24 if, 20 24 print, 20 24 read, 20 24 stmt, 20 24 while, 21 22 cc, 21 22 constant, 21 22 if, 21 22 print, 21 22 read, 21 22 stmt, 21 22 while, 22 23 cc, 22 23 constant, 22 23 if, 22 23 print, 22 23 read, 22 23 stmt, 22 23 while, 23 21 cc, 23 21 constant, 23 21 if, 23 21 print, 23 21 read, 23 21 stmt, 23 21 while, 21 24 cc, 21 24 constant, 21 24 if, 21 24 print, 21 24 read, 21 24 stmt, 21 24 while, 25 26 cc, 25 26 constant, 25 26 if, 25 26 print, 25 26 read, 25 26 stmt, 25 26 while, 26 27 cc, 26 27 constant, 26 27 if, 26 27 print, 26 27 read, 26 27 stmt, 26 27 while, 26 30 cc, 26 30 constant, 26 30 if, 26 30 print, 26 30 read, 26 30 stmt, 26 30 while, 27 28 cc, 27 28 constant, 27 28 if, 27 28 print, 27 28 read, 27 28 stmt, 27 28 while, 28 29 cc, 28 29 constant, 28 29 if, 28 29 print, 28 29 read, 28 29 stmt, 28 29 while, 29 26 cc, 29 26 constant, 29 26 if, 29 26 print, 29 26 read, 29 26 stmt, 29 26 while, 3 5 cc, 3 5 constant, 3 5 if, 3 5 print, 3 5 read, 3 5 stmt, 3 5 while, 30 31 cc, 30 31 constant, 30 31 if, 30 31 print, 30 31 read, 30 31 stmt, 30 31 while, 4 5 cc, 4 5 constant, 4 5 if, 4 5 print, 4 5 read, 4 5 stmt, 4 5 while, 5 13 cc, 5 13 constant, 5 13 if, 5 13 print, 5 13 read, 5 13 stmt, 5 13 while, 5 6 cc, 5 6 constant, 5 6 if, 5 6 print, 5 6 read, 5 6 stmt, 5 6 while, 6 7 cc, 6 7 constant, 6 7 if, 6 7 print, 6 7 read, 6 7 stmt, 6 7 while, 7 8 cc, 7 8 constant, 7 8 if, 7 8 print, 7 8 read, 7 8 stmt, 7 8 while, 8 11 cc, 8 11 constant, 8 11 if, 8 11 print, 8 11 read, 8 11 stmt, 8 11 while, 8 9 cc, 8 9 constant, 8 9 if, 8 9 print, 8 9 read, 8 9 stmt, 8 9 while, 9 10 cc, 9 10 constant, 9 10 if, 9 10 print, 9 10 read, 9 10 stmt, 9 10 while, 10 5 cc, 10 5 constant, 10 5 if, 10 5 print, 10 5 read, 10 5 stmt, 10 5 while
+5000
+1245 - Valid. result-cl tuple, suchthat-cl Next, pattern-cl while, with-cl while.stmt#
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select <n1, n2, v> such that Next(n1, n2) pattern w(v, _) with w.stmt# = 5
+1 2 cc, 11 12 cc, 12 5 cc, 13 14 cc, 14 15 cc, 14 16 cc, 15 17 cc, 16 17 cc, 18 19 cc, 18 21 cc, 19 20 cc, 2 3 cc, 2 4 cc, 20 24 cc, 21 22 cc, 22 23 cc, 23 21 cc, 21 24 cc, 25 26 cc, 26 27 cc, 26 30 cc, 27 28 cc, 28 29 cc, 29 26 cc, 3 5 cc, 30 31 cc, 4 5 cc, 5 13 cc, 5 6 cc, 6 7 cc, 7 8 cc, 8 11 cc, 8 9 cc, 9 10 cc, 10 5 cc
+5000
+1246 - Valid. result-cl tuple, suchthat-cl Next, pattern-cl while, with-cl if.stmt#
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select <n1, n2, v> such that Next(n1, n2) pattern w(v, _) with ifs.stmt# = 8
+1 2 cc, 1 2 constant, 1 2 if, 1 2 print, 1 2 read, 1 2 stmt, 1 2 while, 11 12 cc, 11 12 constant, 11 12 if, 11 12 print, 11 12 read, 11 12 stmt, 11 12 while, 12 5 cc, 12 5 constant, 12 5 if, 12 5 print, 12 5 read, 12 5 stmt, 12 5 while, 13 14 cc, 13 14 constant, 13 14 if, 13 14 print, 13 14 read, 13 14 stmt, 13 14 while, 14 15 cc, 14 15 constant, 14 15 if, 14 15 print, 14 15 read, 14 15 stmt, 14 15 while, 14 16 cc, 14 16 constant, 14 16 if, 14 16 print, 14 16 read, 14 16 stmt, 14 16 while, 15 17 cc, 15 17 constant, 15 17 if, 15 17 print, 15 17 read, 15 17 stmt, 15 17 while, 16 17 cc, 16 17 constant, 16 17 if, 16 17 print, 16 17 read, 16 17 stmt, 16 17 while, 18 19 cc, 18 19 constant, 18 19 if, 18 19 print, 18 19 read, 18 19 stmt, 18 19 while, 18 21 cc, 18 21 constant, 18 21 if, 18 21 print, 18 21 read, 18 21 stmt, 18 21 while, 19 20 cc, 19 20 constant, 19 20 if, 19 20 print, 19 20 read, 19 20 stmt, 19 20 while, 2 3 cc, 2 3 constant, 2 3 if, 2 3 print, 2 3 read, 2 3 stmt, 2 3 while, 2 4 cc, 2 4 constant, 2 4 if, 2 4 print, 2 4 read, 2 4 stmt, 2 4 while, 20 24 cc, 20 24 constant, 20 24 if, 20 24 print, 20 24 read, 20 24 stmt, 20 24 while, 21 22 cc, 21 22 constant, 21 22 if, 21 22 print, 21 22 read, 21 22 stmt, 21 22 while, 22 23 cc, 22 23 constant, 22 23 if, 22 23 print, 22 23 read, 22 23 stmt, 22 23 while, 23 21 cc, 23 21 constant, 23 21 if, 23 21 print, 23 21 read, 23 21 stmt, 23 21 while, 21 24 cc, 21 24 constant, 21 24 if, 21 24 print, 21 24 read, 21 24 stmt, 21 24 while, 25 26 cc, 25 26 constant, 25 26 if, 25 26 print, 25 26 read, 25 26 stmt, 25 26 while, 26 27 cc, 26 27 constant, 26 27 if, 26 27 print, 26 27 read, 26 27 stmt, 26 27 while, 26 30 cc, 26 30 constant, 26 30 if, 26 30 print, 26 30 read, 26 30 stmt, 26 30 while, 27 28 cc, 27 28 constant, 27 28 if, 27 28 print, 27 28 read, 27 28 stmt, 27 28 while, 28 29 cc, 28 29 constant, 28 29 if, 28 29 print, 28 29 read, 28 29 stmt, 28 29 while, 29 26 cc, 29 26 constant, 29 26 if, 29 26 print, 29 26 read, 29 26 stmt, 29 26 while, 3 5 cc, 3 5 constant, 3 5 if, 3 5 print, 3 5 read, 3 5 stmt, 3 5 while, 30 31 cc, 30 31 constant, 30 31 if, 30 31 print, 30 31 read, 30 31 stmt, 30 31 while, 4 5 cc, 4 5 constant, 4 5 if, 4 5 print, 4 5 read, 4 5 stmt, 4 5 while, 5 13 cc, 5 13 constant, 5 13 if, 5 13 print, 5 13 read, 5 13 stmt, 5 13 while, 5 6 cc, 5 6 constant, 5 6 if, 5 6 print, 5 6 read, 5 6 stmt, 5 6 while, 6 7 cc, 6 7 constant, 6 7 if, 6 7 print, 6 7 read, 6 7 stmt, 6 7 while, 7 8 cc, 7 8 constant, 7 8 if, 7 8 print, 7 8 read, 7 8 stmt, 7 8 while, 8 11 cc, 8 11 constant, 8 11 if, 8 11 print, 8 11 read, 8 11 stmt, 8 11 while, 8 9 cc, 8 9 constant, 8 9 if, 8 9 print, 8 9 read, 8 9 stmt, 8 9 while, 9 10 cc, 9 10 constant, 9 10 if, 9 10 print, 9 10 read, 9 10 stmt, 9 10 while, 10 5 cc, 10 5 constant, 10 5 if, 10 5 print, 10 5 read, 10 5 stmt, 10 5 while
+5000
+1247 - Valid. result-cl tuple, suchthat-cl Next, pattern-cl while, with-cl assign.stmt#
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select <n1, n2, v> such that Next(n1, n2) pattern w(v, _) with a.stmt# = 11
+1 2 cc, 1 2 constant, 1 2 if, 1 2 print, 1 2 read, 1 2 stmt, 1 2 while, 11 12 cc, 11 12 constant, 11 12 if, 11 12 print, 11 12 read, 11 12 stmt, 11 12 while, 12 5 cc, 12 5 constant, 12 5 if, 12 5 print, 12 5 read, 12 5 stmt, 12 5 while, 13 14 cc, 13 14 constant, 13 14 if, 13 14 print, 13 14 read, 13 14 stmt, 13 14 while, 14 15 cc, 14 15 constant, 14 15 if, 14 15 print, 14 15 read, 14 15 stmt, 14 15 while, 14 16 cc, 14 16 constant, 14 16 if, 14 16 print, 14 16 read, 14 16 stmt, 14 16 while, 15 17 cc, 15 17 constant, 15 17 if, 15 17 print, 15 17 read, 15 17 stmt, 15 17 while, 16 17 cc, 16 17 constant, 16 17 if, 16 17 print, 16 17 read, 16 17 stmt, 16 17 while, 18 19 cc, 18 19 constant, 18 19 if, 18 19 print, 18 19 read, 18 19 stmt, 18 19 while, 18 21 cc, 18 21 constant, 18 21 if, 18 21 print, 18 21 read, 18 21 stmt, 18 21 while, 19 20 cc, 19 20 constant, 19 20 if, 19 20 print, 19 20 read, 19 20 stmt, 19 20 while, 2 3 cc, 2 3 constant, 2 3 if, 2 3 print, 2 3 read, 2 3 stmt, 2 3 while, 2 4 cc, 2 4 constant, 2 4 if, 2 4 print, 2 4 read, 2 4 stmt, 2 4 while, 20 24 cc, 20 24 constant, 20 24 if, 20 24 print, 20 24 read, 20 24 stmt, 20 24 while, 21 22 cc, 21 22 constant, 21 22 if, 21 22 print, 21 22 read, 21 22 stmt, 21 22 while, 22 23 cc, 22 23 constant, 22 23 if, 22 23 print, 22 23 read, 22 23 stmt, 22 23 while, 23 21 cc, 23 21 constant, 23 21 if, 23 21 print, 23 21 read, 23 21 stmt, 23 21 while, 21 24 cc, 21 24 constant, 21 24 if, 21 24 print, 21 24 read, 21 24 stmt, 21 24 while, 25 26 cc, 25 26 constant, 25 26 if, 25 26 print, 25 26 read, 25 26 stmt, 25 26 while, 26 27 cc, 26 27 constant, 26 27 if, 26 27 print, 26 27 read, 26 27 stmt, 26 27 while, 26 30 cc, 26 30 constant, 26 30 if, 26 30 print, 26 30 read, 26 30 stmt, 26 30 while, 27 28 cc, 27 28 constant, 27 28 if, 27 28 print, 27 28 read, 27 28 stmt, 27 28 while, 28 29 cc, 28 29 constant, 28 29 if, 28 29 print, 28 29 read, 28 29 stmt, 28 29 while, 29 26 cc, 29 26 constant, 29 26 if, 29 26 print, 29 26 read, 29 26 stmt, 29 26 while, 3 5 cc, 3 5 constant, 3 5 if, 3 5 print, 3 5 read, 3 5 stmt, 3 5 while, 30 31 cc, 30 31 constant, 30 31 if, 30 31 print, 30 31 read, 30 31 stmt, 30 31 while, 4 5 cc, 4 5 constant, 4 5 if, 4 5 print, 4 5 read, 4 5 stmt, 4 5 while, 5 13 cc, 5 13 constant, 5 13 if, 5 13 print, 5 13 read, 5 13 stmt, 5 13 while, 5 6 cc, 5 6 constant, 5 6 if, 5 6 print, 5 6 read, 5 6 stmt, 5 6 while, 6 7 cc, 6 7 constant, 6 7 if, 6 7 print, 6 7 read, 6 7 stmt, 6 7 while, 7 8 cc, 7 8 constant, 7 8 if, 7 8 print, 7 8 read, 7 8 stmt, 7 8 while, 8 11 cc, 8 11 constant, 8 11 if, 8 11 print, 8 11 read, 8 11 stmt, 8 11 while, 8 9 cc, 8 9 constant, 8 9 if, 8 9 print, 8 9 read, 8 9 stmt, 8 9 while, 9 10 cc, 9 10 constant, 9 10 if, 9 10 print, 9 10 read, 9 10 stmt, 9 10 while, 10 5 cc, 10 5 constant, 10 5 if, 10 5 print, 10 5 read, 10 5 stmt, 10 5 while
+5000
+1248 - Valid. result-cl tuple, suchthat-cl Next, pattern-cl if, with-cl procedure.procName
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select <n1, n2, v> such that Next(n1, n2) pattern ifs(v, _, _) with proc1.procName = "PR0C1"
+1 2 aa, 1 2 assign, 1 2 bb, 1 2 call, 1 2 cc, 1 2 constant, 1 2 if, 1 2 print, 1 2 read, 1 2 stmt, 1 2 variable, 1 2 while, 11 12 aa, 11 12 assign, 11 12 bb, 11 12 call, 11 12 cc, 11 12 constant, 11 12 if, 11 12 print, 11 12 read, 11 12 stmt, 11 12 variable, 11 12 while, 12 5 aa, 12 5 assign, 12 5 bb, 12 5 call, 12 5 cc, 12 5 constant, 12 5 if, 12 5 print, 12 5 read, 12 5 stmt, 12 5 variable, 12 5 while, 13 14 aa, 13 14 assign, 13 14 bb, 13 14 call, 13 14 cc, 13 14 constant, 13 14 if, 13 14 print, 13 14 read, 13 14 stmt, 13 14 variable, 13 14 while, 14 15 aa, 14 15 assign, 14 15 bb, 14 15 call, 14 15 cc, 14 15 constant, 14 15 if, 14 15 print, 14 15 read, 14 15 stmt, 14 15 variable, 14 15 while, 14 16 aa, 14 16 assign, 14 16 bb, 14 16 call, 14 16 cc, 14 16 constant, 14 16 if, 14 16 print, 14 16 read, 14 16 stmt, 14 16 variable, 14 16 while, 15 17 aa, 15 17 assign, 15 17 bb, 15 17 call, 15 17 cc, 15 17 constant, 15 17 if, 15 17 print, 15 17 read, 15 17 stmt, 15 17 variable, 15 17 while, 16 17 aa, 16 17 assign, 16 17 bb, 16 17 call, 16 17 cc, 16 17 constant, 16 17 if, 16 17 print, 16 17 read, 16 17 stmt, 16 17 variable, 16 17 while, 18 19 aa, 18 19 assign, 18 19 bb, 18 19 call, 18 19 cc, 18 19 constant, 18 19 if, 18 19 print, 18 19 read, 18 19 stmt, 18 19 variable, 18 19 while, 18 21 aa, 18 21 assign, 18 21 bb, 18 21 call, 18 21 cc, 18 21 constant, 18 21 if, 18 21 print, 18 21 read, 18 21 stmt, 18 21 variable, 18 21 while, 19 20 aa, 19 20 assign, 19 20 bb, 19 20 call, 19 20 cc, 19 20 constant, 19 20 if, 19 20 print, 19 20 read, 19 20 stmt, 19 20 variable, 19 20 while, 2 3 aa, 2 3 assign, 2 3 bb, 2 3 call, 2 3 cc, 2 3 constant, 2 3 if, 2 3 print, 2 3 read, 2 3 stmt, 2 3 variable, 2 3 while, 2 4 aa, 2 4 assign, 2 4 bb, 2 4 call, 2 4 cc, 2 4 constant, 2 4 if, 2 4 print, 2 4 read, 2 4 stmt, 2 4 variable, 2 4 while, 20 24 aa, 20 24 assign, 20 24 bb, 20 24 call, 20 24 cc, 20 24 constant, 20 24 if, 20 24 print, 20 24 read, 20 24 stmt, 20 24 variable, 20 24 while, 21 22 aa, 21 22 assign, 21 22 bb, 21 22 call, 21 22 cc, 21 22 constant, 21 22 if, 21 22 print, 21 22 read, 21 22 stmt, 21 22 variable, 21 22 while, 22 23 aa, 22 23 assign, 22 23 bb, 22 23 call, 22 23 cc, 22 23 constant, 22 23 if, 22 23 print, 22 23 read, 22 23 stmt, 22 23 variable, 22 23 while, 23 21 aa, 23 21 assign, 23 21 bb, 23 21 call, 23 21 cc, 23 21 constant, 23 21 if, 23 21 print, 23 21 read, 23 21 stmt, 23 21 variable, 23 21 while, 21 24 aa, 21 24 assign, 21 24 bb, 21 24 call, 21 24 cc, 21 24 constant, 21 24 if, 21 24 print, 21 24 read, 21 24 stmt, 21 24 variable, 21 24 while, 25 26 aa, 25 26 assign, 25 26 bb, 25 26 call, 25 26 cc, 25 26 constant, 25 26 if, 25 26 print, 25 26 read, 25 26 stmt, 25 26 variable, 25 26 while, 26 27 aa, 26 27 assign, 26 27 bb, 26 27 call, 26 27 cc, 26 27 constant, 26 27 if, 26 27 print, 26 27 read, 26 27 stmt, 26 27 variable, 26 27 while, 26 30 aa, 26 30 assign, 26 30 bb, 26 30 call, 26 30 cc, 26 30 constant, 26 30 if, 26 30 print, 26 30 read, 26 30 stmt, 26 30 variable, 26 30 while, 27 28 aa, 27 28 assign, 27 28 bb, 27 28 call, 27 28 cc, 27 28 constant, 27 28 if, 27 28 print, 27 28 read, 27 28 stmt, 27 28 variable, 27 28 while, 28 29 aa, 28 29 assign, 28 29 bb, 28 29 call, 28 29 cc, 28 29 constant, 28 29 if, 28 29 print, 28 29 read, 28 29 stmt, 28 29 variable, 28 29 while, 29 26 aa, 29 26 assign, 29 26 bb, 29 26 call, 29 26 cc, 29 26 constant, 29 26 if, 29 26 print, 29 26 read, 29 26 stmt, 29 26 variable, 29 26 while, 3 5 aa, 3 5 assign, 3 5 bb, 3 5 call, 3 5 cc, 3 5 constant, 3 5 if, 3 5 print, 3 5 read, 3 5 stmt, 3 5 variable, 3 5 while, 30 31 aa, 30 31 assign, 30 31 bb, 30 31 call, 30 31 cc, 30 31 constant, 30 31 if, 30 31 print, 30 31 read, 30 31 stmt, 30 31 variable, 30 31 while, 4 5 aa, 4 5 assign, 4 5 bb, 4 5 call, 4 5 cc, 4 5 constant, 4 5 if, 4 5 print, 4 5 read, 4 5 stmt, 4 5 variable, 4 5 while, 5 13 aa, 5 13 assign, 5 13 bb, 5 13 call, 5 13 cc, 5 13 constant, 5 13 if, 5 13 print, 5 13 read, 5 13 stmt, 5 13 variable, 5 13 while, 5 6 aa, 5 6 assign, 5 6 bb, 5 6 call, 5 6 cc, 5 6 constant, 5 6 if, 5 6 print, 5 6 read, 5 6 stmt, 5 6 variable, 5 6 while, 6 7 aa, 6 7 assign, 6 7 bb, 6 7 call, 6 7 cc, 6 7 constant, 6 7 if, 6 7 print, 6 7 read, 6 7 stmt, 6 7 variable, 6 7 while, 7 8 aa, 7 8 assign, 7 8 bb, 7 8 call, 7 8 cc, 7 8 constant, 7 8 if, 7 8 print, 7 8 read, 7 8 stmt, 7 8 variable, 7 8 while, 8 11 aa, 8 11 assign, 8 11 bb, 8 11 call, 8 11 cc, 8 11 constant, 8 11 if, 8 11 print, 8 11 read, 8 11 stmt, 8 11 variable, 8 11 while, 8 9 aa, 8 9 assign, 8 9 bb, 8 9 call, 8 9 cc, 8 9 constant, 8 9 if, 8 9 print, 8 9 read, 8 9 stmt, 8 9 variable, 8 9 while, 9 10 aa, 9 10 assign, 9 10 bb, 9 10 call, 9 10 cc, 9 10 constant, 9 10 if, 9 10 print, 9 10 read, 9 10 stmt, 9 10 variable, 9 10 while, 10 5 aa, 10 5 assign, 10 5 bb, 10 5 call, 10 5 cc, 10 5 constant, 10 5 if, 10 5 print, 10 5 read, 10 5 stmt, 10 5 variable, 10 5 while
+5000
+1249 - Valid. result-cl tuple, suchthat-cl Next, pattern-cl if, with-cl call.procName
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select <n1, n2, v> such that Next(n1, n2) pattern ifs(v, _, _) with cl.procName = "procedure"
+1 2 aa, 1 2 assign, 1 2 bb, 1 2 call, 1 2 cc, 1 2 constant, 1 2 if, 1 2 print, 1 2 read, 1 2 stmt, 1 2 variable, 1 2 while, 11 12 aa, 11 12 assign, 11 12 bb, 11 12 call, 11 12 cc, 11 12 constant, 11 12 if, 11 12 print, 11 12 read, 11 12 stmt, 11 12 variable, 11 12 while, 12 5 aa, 12 5 assign, 12 5 bb, 12 5 call, 12 5 cc, 12 5 constant, 12 5 if, 12 5 print, 12 5 read, 12 5 stmt, 12 5 variable, 12 5 while, 13 14 aa, 13 14 assign, 13 14 bb, 13 14 call, 13 14 cc, 13 14 constant, 13 14 if, 13 14 print, 13 14 read, 13 14 stmt, 13 14 variable, 13 14 while, 14 15 aa, 14 15 assign, 14 15 bb, 14 15 call, 14 15 cc, 14 15 constant, 14 15 if, 14 15 print, 14 15 read, 14 15 stmt, 14 15 variable, 14 15 while, 14 16 aa, 14 16 assign, 14 16 bb, 14 16 call, 14 16 cc, 14 16 constant, 14 16 if, 14 16 print, 14 16 read, 14 16 stmt, 14 16 variable, 14 16 while, 15 17 aa, 15 17 assign, 15 17 bb, 15 17 call, 15 17 cc, 15 17 constant, 15 17 if, 15 17 print, 15 17 read, 15 17 stmt, 15 17 variable, 15 17 while, 16 17 aa, 16 17 assign, 16 17 bb, 16 17 call, 16 17 cc, 16 17 constant, 16 17 if, 16 17 print, 16 17 read, 16 17 stmt, 16 17 variable, 16 17 while, 18 19 aa, 18 19 assign, 18 19 bb, 18 19 call, 18 19 cc, 18 19 constant, 18 19 if, 18 19 print, 18 19 read, 18 19 stmt, 18 19 variable, 18 19 while, 18 21 aa, 18 21 assign, 18 21 bb, 18 21 call, 18 21 cc, 18 21 constant, 18 21 if, 18 21 print, 18 21 read, 18 21 stmt, 18 21 variable, 18 21 while, 19 20 aa, 19 20 assign, 19 20 bb, 19 20 call, 19 20 cc, 19 20 constant, 19 20 if, 19 20 print, 19 20 read, 19 20 stmt, 19 20 variable, 19 20 while, 2 3 aa, 2 3 assign, 2 3 bb, 2 3 call, 2 3 cc, 2 3 constant, 2 3 if, 2 3 print, 2 3 read, 2 3 stmt, 2 3 variable, 2 3 while, 2 4 aa, 2 4 assign, 2 4 bb, 2 4 call, 2 4 cc, 2 4 constant, 2 4 if, 2 4 print, 2 4 read, 2 4 stmt, 2 4 variable, 2 4 while, 20 24 aa, 20 24 assign, 20 24 bb, 20 24 call, 20 24 cc, 20 24 constant, 20 24 if, 20 24 print, 20 24 read, 20 24 stmt, 20 24 variable, 20 24 while, 21 22 aa, 21 22 assign, 21 22 bb, 21 22 call, 21 22 cc, 21 22 constant, 21 22 if, 21 22 print, 21 22 read, 21 22 stmt, 21 22 variable, 21 22 while, 22 23 aa, 22 23 assign, 22 23 bb, 22 23 call, 22 23 cc, 22 23 constant, 22 23 if, 22 23 print, 22 23 read, 22 23 stmt, 22 23 variable, 22 23 while, 23 21 aa, 23 21 assign, 23 21 bb, 23 21 call, 23 21 cc, 23 21 constant, 23 21 if, 23 21 print, 23 21 read, 23 21 stmt, 23 21 variable, 23 21 while, 21 24 aa, 21 24 assign, 21 24 bb, 21 24 call, 21 24 cc, 21 24 constant, 21 24 if, 21 24 print, 21 24 read, 21 24 stmt, 21 24 variable, 21 24 while, 25 26 aa, 25 26 assign, 25 26 bb, 25 26 call, 25 26 cc, 25 26 constant, 25 26 if, 25 26 print, 25 26 read, 25 26 stmt, 25 26 variable, 25 26 while, 26 27 aa, 26 27 assign, 26 27 bb, 26 27 call, 26 27 cc, 26 27 constant, 26 27 if, 26 27 print, 26 27 read, 26 27 stmt, 26 27 variable, 26 27 while, 26 30 aa, 26 30 assign, 26 30 bb, 26 30 call, 26 30 cc, 26 30 constant, 26 30 if, 26 30 print, 26 30 read, 26 30 stmt, 26 30 variable, 26 30 while, 27 28 aa, 27 28 assign, 27 28 bb, 27 28 call, 27 28 cc, 27 28 constant, 27 28 if, 27 28 print, 27 28 read, 27 28 stmt, 27 28 variable, 27 28 while, 28 29 aa, 28 29 assign, 28 29 bb, 28 29 call, 28 29 cc, 28 29 constant, 28 29 if, 28 29 print, 28 29 read, 28 29 stmt, 28 29 variable, 28 29 while, 29 26 aa, 29 26 assign, 29 26 bb, 29 26 call, 29 26 cc, 29 26 constant, 29 26 if, 29 26 print, 29 26 read, 29 26 stmt, 29 26 variable, 29 26 while, 3 5 aa, 3 5 assign, 3 5 bb, 3 5 call, 3 5 cc, 3 5 constant, 3 5 if, 3 5 print, 3 5 read, 3 5 stmt, 3 5 variable, 3 5 while, 30 31 aa, 30 31 assign, 30 31 bb, 30 31 call, 30 31 cc, 30 31 constant, 30 31 if, 30 31 print, 30 31 read, 30 31 stmt, 30 31 variable, 30 31 while, 4 5 aa, 4 5 assign, 4 5 bb, 4 5 call, 4 5 cc, 4 5 constant, 4 5 if, 4 5 print, 4 5 read, 4 5 stmt, 4 5 variable, 4 5 while, 5 13 aa, 5 13 assign, 5 13 bb, 5 13 call, 5 13 cc, 5 13 constant, 5 13 if, 5 13 print, 5 13 read, 5 13 stmt, 5 13 variable, 5 13 while, 5 6 aa, 5 6 assign, 5 6 bb, 5 6 call, 5 6 cc, 5 6 constant, 5 6 if, 5 6 print, 5 6 read, 5 6 stmt, 5 6 variable, 5 6 while, 6 7 aa, 6 7 assign, 6 7 bb, 6 7 call, 6 7 cc, 6 7 constant, 6 7 if, 6 7 print, 6 7 read, 6 7 stmt, 6 7 variable, 6 7 while, 7 8 aa, 7 8 assign, 7 8 bb, 7 8 call, 7 8 cc, 7 8 constant, 7 8 if, 7 8 print, 7 8 read, 7 8 stmt, 7 8 variable, 7 8 while, 8 11 aa, 8 11 assign, 8 11 bb, 8 11 call, 8 11 cc, 8 11 constant, 8 11 if, 8 11 print, 8 11 read, 8 11 stmt, 8 11 variable, 8 11 while, 8 9 aa, 8 9 assign, 8 9 bb, 8 9 call, 8 9 cc, 8 9 constant, 8 9 if, 8 9 print, 8 9 read, 8 9 stmt, 8 9 variable, 8 9 while, 9 10 aa, 9 10 assign, 9 10 bb, 9 10 call, 9 10 cc, 9 10 constant, 9 10 if, 9 10 print, 9 10 read, 9 10 stmt, 9 10 variable, 9 10 while, 10 5 aa, 10 5 assign, 10 5 bb, 10 5 call, 10 5 cc, 10 5 constant, 10 5 if, 10 5 print, 10 5 read, 10 5 stmt, 10 5 variable, 10 5 while
+5000
+1250 - Valid. result-cl tuple, suchthat-cl Next, pattern-cl if, with-cl variable.varName
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select <n1, n2, v> such that Next(n1, n2) pattern ifs(v, _, _) with v.varName = "aa"
+1 2 aa, 11 12 aa, 12 5 aa, 13 14 aa, 14 15 aa, 14 16 aa, 15 17 aa, 16 17 aa, 18 19 aa, 18 21 aa, 19 20 aa, 2 3 aa, 2 4 aa, 20 24 aa, 21 22 aa, 22 23 aa, 23 21 aa, 21 24 aa, 25 26 aa, 26 27 aa, 26 30 aa, 27 28 aa, 28 29 aa, 29 26 aa, 3 5 aa, 30 31 aa, 4 5 aa, 5 13 aa, 5 6 aa, 6 7 aa, 7 8 aa, 8 11 aa, 8 9 aa, 9 10 aa, 10 5 aa
+5000
+1251 - Valid. result-cl tuple, suchthat-cl Next, pattern-cl if, with-cl read.varName
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select <n1, n2, v> such that Next(n1, n2) pattern ifs(v, _, _) with r.varName = "aa"
+1 2 aa, 1 2 assign, 1 2 bb, 1 2 call, 1 2 cc, 1 2 constant, 1 2 if, 1 2 print, 1 2 read, 1 2 stmt, 1 2 variable, 1 2 while, 11 12 aa, 11 12 assign, 11 12 bb, 11 12 call, 11 12 cc, 11 12 constant, 11 12 if, 11 12 print, 11 12 read, 11 12 stmt, 11 12 variable, 11 12 while, 12 5 aa, 12 5 assign, 12 5 bb, 12 5 call, 12 5 cc, 12 5 constant, 12 5 if, 12 5 print, 12 5 read, 12 5 stmt, 12 5 variable, 12 5 while, 13 14 aa, 13 14 assign, 13 14 bb, 13 14 call, 13 14 cc, 13 14 constant, 13 14 if, 13 14 print, 13 14 read, 13 14 stmt, 13 14 variable, 13 14 while, 14 15 aa, 14 15 assign, 14 15 bb, 14 15 call, 14 15 cc, 14 15 constant, 14 15 if, 14 15 print, 14 15 read, 14 15 stmt, 14 15 variable, 14 15 while, 14 16 aa, 14 16 assign, 14 16 bb, 14 16 call, 14 16 cc, 14 16 constant, 14 16 if, 14 16 print, 14 16 read, 14 16 stmt, 14 16 variable, 14 16 while, 15 17 aa, 15 17 assign, 15 17 bb, 15 17 call, 15 17 cc, 15 17 constant, 15 17 if, 15 17 print, 15 17 read, 15 17 stmt, 15 17 variable, 15 17 while, 16 17 aa, 16 17 assign, 16 17 bb, 16 17 call, 16 17 cc, 16 17 constant, 16 17 if, 16 17 print, 16 17 read, 16 17 stmt, 16 17 variable, 16 17 while, 18 19 aa, 18 19 assign, 18 19 bb, 18 19 call, 18 19 cc, 18 19 constant, 18 19 if, 18 19 print, 18 19 read, 18 19 stmt, 18 19 variable, 18 19 while, 18 21 aa, 18 21 assign, 18 21 bb, 18 21 call, 18 21 cc, 18 21 constant, 18 21 if, 18 21 print, 18 21 read, 18 21 stmt, 18 21 variable, 18 21 while, 19 20 aa, 19 20 assign, 19 20 bb, 19 20 call, 19 20 cc, 19 20 constant, 19 20 if, 19 20 print, 19 20 read, 19 20 stmt, 19 20 variable, 19 20 while, 2 3 aa, 2 3 assign, 2 3 bb, 2 3 call, 2 3 cc, 2 3 constant, 2 3 if, 2 3 print, 2 3 read, 2 3 stmt, 2 3 variable, 2 3 while, 2 4 aa, 2 4 assign, 2 4 bb, 2 4 call, 2 4 cc, 2 4 constant, 2 4 if, 2 4 print, 2 4 read, 2 4 stmt, 2 4 variable, 2 4 while, 20 24 aa, 20 24 assign, 20 24 bb, 20 24 call, 20 24 cc, 20 24 constant, 20 24 if, 20 24 print, 20 24 read, 20 24 stmt, 20 24 variable, 20 24 while, 21 22 aa, 21 22 assign, 21 22 bb, 21 22 call, 21 22 cc, 21 22 constant, 21 22 if, 21 22 print, 21 22 read, 21 22 stmt, 21 22 variable, 21 22 while, 22 23 aa, 22 23 assign, 22 23 bb, 22 23 call, 22 23 cc, 22 23 constant, 22 23 if, 22 23 print, 22 23 read, 22 23 stmt, 22 23 variable, 22 23 while, 23 21 aa, 23 21 assign, 23 21 bb, 23 21 call, 23 21 cc, 23 21 constant, 23 21 if, 23 21 print, 23 21 read, 23 21 stmt, 23 21 variable, 23 21 while, 21 24 aa, 21 24 assign, 21 24 bb, 21 24 call, 21 24 cc, 21 24 constant, 21 24 if, 21 24 print, 21 24 read, 21 24 stmt, 21 24 variable, 21 24 while, 25 26 aa, 25 26 assign, 25 26 bb, 25 26 call, 25 26 cc, 25 26 constant, 25 26 if, 25 26 print, 25 26 read, 25 26 stmt, 25 26 variable, 25 26 while, 26 27 aa, 26 27 assign, 26 27 bb, 26 27 call, 26 27 cc, 26 27 constant, 26 27 if, 26 27 print, 26 27 read, 26 27 stmt, 26 27 variable, 26 27 while, 26 30 aa, 26 30 assign, 26 30 bb, 26 30 call, 26 30 cc, 26 30 constant, 26 30 if, 26 30 print, 26 30 read, 26 30 stmt, 26 30 variable, 26 30 while, 27 28 aa, 27 28 assign, 27 28 bb, 27 28 call, 27 28 cc, 27 28 constant, 27 28 if, 27 28 print, 27 28 read, 27 28 stmt, 27 28 variable, 27 28 while, 28 29 aa, 28 29 assign, 28 29 bb, 28 29 call, 28 29 cc, 28 29 constant, 28 29 if, 28 29 print, 28 29 read, 28 29 stmt, 28 29 variable, 28 29 while, 29 26 aa, 29 26 assign, 29 26 bb, 29 26 call, 29 26 cc, 29 26 constant, 29 26 if, 29 26 print, 29 26 read, 29 26 stmt, 29 26 variable, 29 26 while, 3 5 aa, 3 5 assign, 3 5 bb, 3 5 call, 3 5 cc, 3 5 constant, 3 5 if, 3 5 print, 3 5 read, 3 5 stmt, 3 5 variable, 3 5 while, 30 31 aa, 30 31 assign, 30 31 bb, 30 31 call, 30 31 cc, 30 31 constant, 30 31 if, 30 31 print, 30 31 read, 30 31 stmt, 30 31 variable, 30 31 while, 4 5 aa, 4 5 assign, 4 5 bb, 4 5 call, 4 5 cc, 4 5 constant, 4 5 if, 4 5 print, 4 5 read, 4 5 stmt, 4 5 variable, 4 5 while, 5 13 aa, 5 13 assign, 5 13 bb, 5 13 call, 5 13 cc, 5 13 constant, 5 13 if, 5 13 print, 5 13 read, 5 13 stmt, 5 13 variable, 5 13 while, 5 6 aa, 5 6 assign, 5 6 bb, 5 6 call, 5 6 cc, 5 6 constant, 5 6 if, 5 6 print, 5 6 read, 5 6 stmt, 5 6 variable, 5 6 while, 6 7 aa, 6 7 assign, 6 7 bb, 6 7 call, 6 7 cc, 6 7 constant, 6 7 if, 6 7 print, 6 7 read, 6 7 stmt, 6 7 variable, 6 7 while, 7 8 aa, 7 8 assign, 7 8 bb, 7 8 call, 7 8 cc, 7 8 constant, 7 8 if, 7 8 print, 7 8 read, 7 8 stmt, 7 8 variable, 7 8 while, 8 11 aa, 8 11 assign, 8 11 bb, 8 11 call, 8 11 cc, 8 11 constant, 8 11 if, 8 11 print, 8 11 read, 8 11 stmt, 8 11 variable, 8 11 while, 8 9 aa, 8 9 assign, 8 9 bb, 8 9 call, 8 9 cc, 8 9 constant, 8 9 if, 8 9 print, 8 9 read, 8 9 stmt, 8 9 variable, 8 9 while, 9 10 aa, 9 10 assign, 9 10 bb, 9 10 call, 9 10 cc, 9 10 constant, 9 10 if, 9 10 print, 9 10 read, 9 10 stmt, 9 10 variable, 9 10 while, 10 5 aa, 10 5 assign, 10 5 bb, 10 5 call, 10 5 cc, 10 5 constant, 10 5 if, 10 5 print, 10 5 read, 10 5 stmt, 10 5 variable, 10 5 while
+5000
+1252 - Valid. result-cl tuple, suchthat-cl Next, pattern-cl if, with-cl print.varName
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select <n1, n2, v> such that Next(n1, n2) pattern ifs(v, _, _) with p.varName = "bb"
+1 2 aa, 1 2 assign, 1 2 bb, 1 2 call, 1 2 cc, 1 2 constant, 1 2 if, 1 2 print, 1 2 read, 1 2 stmt, 1 2 variable, 1 2 while, 11 12 aa, 11 12 assign, 11 12 bb, 11 12 call, 11 12 cc, 11 12 constant, 11 12 if, 11 12 print, 11 12 read, 11 12 stmt, 11 12 variable, 11 12 while, 12 5 aa, 12 5 assign, 12 5 bb, 12 5 call, 12 5 cc, 12 5 constant, 12 5 if, 12 5 print, 12 5 read, 12 5 stmt, 12 5 variable, 12 5 while, 13 14 aa, 13 14 assign, 13 14 bb, 13 14 call, 13 14 cc, 13 14 constant, 13 14 if, 13 14 print, 13 14 read, 13 14 stmt, 13 14 variable, 13 14 while, 14 15 aa, 14 15 assign, 14 15 bb, 14 15 call, 14 15 cc, 14 15 constant, 14 15 if, 14 15 print, 14 15 read, 14 15 stmt, 14 15 variable, 14 15 while, 14 16 aa, 14 16 assign, 14 16 bb, 14 16 call, 14 16 cc, 14 16 constant, 14 16 if, 14 16 print, 14 16 read, 14 16 stmt, 14 16 variable, 14 16 while, 15 17 aa, 15 17 assign, 15 17 bb, 15 17 call, 15 17 cc, 15 17 constant, 15 17 if, 15 17 print, 15 17 read, 15 17 stmt, 15 17 variable, 15 17 while, 16 17 aa, 16 17 assign, 16 17 bb, 16 17 call, 16 17 cc, 16 17 constant, 16 17 if, 16 17 print, 16 17 read, 16 17 stmt, 16 17 variable, 16 17 while, 18 19 aa, 18 19 assign, 18 19 bb, 18 19 call, 18 19 cc, 18 19 constant, 18 19 if, 18 19 print, 18 19 read, 18 19 stmt, 18 19 variable, 18 19 while, 18 21 aa, 18 21 assign, 18 21 bb, 18 21 call, 18 21 cc, 18 21 constant, 18 21 if, 18 21 print, 18 21 read, 18 21 stmt, 18 21 variable, 18 21 while, 19 20 aa, 19 20 assign, 19 20 bb, 19 20 call, 19 20 cc, 19 20 constant, 19 20 if, 19 20 print, 19 20 read, 19 20 stmt, 19 20 variable, 19 20 while, 2 3 aa, 2 3 assign, 2 3 bb, 2 3 call, 2 3 cc, 2 3 constant, 2 3 if, 2 3 print, 2 3 read, 2 3 stmt, 2 3 variable, 2 3 while, 2 4 aa, 2 4 assign, 2 4 bb, 2 4 call, 2 4 cc, 2 4 constant, 2 4 if, 2 4 print, 2 4 read, 2 4 stmt, 2 4 variable, 2 4 while, 20 24 aa, 20 24 assign, 20 24 bb, 20 24 call, 20 24 cc, 20 24 constant, 20 24 if, 20 24 print, 20 24 read, 20 24 stmt, 20 24 variable, 20 24 while, 21 22 aa, 21 22 assign, 21 22 bb, 21 22 call, 21 22 cc, 21 22 constant, 21 22 if, 21 22 print, 21 22 read, 21 22 stmt, 21 22 variable, 21 22 while, 22 23 aa, 22 23 assign, 22 23 bb, 22 23 call, 22 23 cc, 22 23 constant, 22 23 if, 22 23 print, 22 23 read, 22 23 stmt, 22 23 variable, 22 23 while, 23 21 aa, 23 21 assign, 23 21 bb, 23 21 call, 23 21 cc, 23 21 constant, 23 21 if, 23 21 print, 23 21 read, 23 21 stmt, 23 21 variable, 23 21 while, 21 24 aa, 21 24 assign, 21 24 bb, 21 24 call, 21 24 cc, 21 24 constant, 21 24 if, 21 24 print, 21 24 read, 21 24 stmt, 21 24 variable, 21 24 while, 25 26 aa, 25 26 assign, 25 26 bb, 25 26 call, 25 26 cc, 25 26 constant, 25 26 if, 25 26 print, 25 26 read, 25 26 stmt, 25 26 variable, 25 26 while, 26 27 aa, 26 27 assign, 26 27 bb, 26 27 call, 26 27 cc, 26 27 constant, 26 27 if, 26 27 print, 26 27 read, 26 27 stmt, 26 27 variable, 26 27 while, 26 30 aa, 26 30 assign, 26 30 bb, 26 30 call, 26 30 cc, 26 30 constant, 26 30 if, 26 30 print, 26 30 read, 26 30 stmt, 26 30 variable, 26 30 while, 27 28 aa, 27 28 assign, 27 28 bb, 27 28 call, 27 28 cc, 27 28 constant, 27 28 if, 27 28 print, 27 28 read, 27 28 stmt, 27 28 variable, 27 28 while, 28 29 aa, 28 29 assign, 28 29 bb, 28 29 call, 28 29 cc, 28 29 constant, 28 29 if, 28 29 print, 28 29 read, 28 29 stmt, 28 29 variable, 28 29 while, 29 26 aa, 29 26 assign, 29 26 bb, 29 26 call, 29 26 cc, 29 26 constant, 29 26 if, 29 26 print, 29 26 read, 29 26 stmt, 29 26 variable, 29 26 while, 3 5 aa, 3 5 assign, 3 5 bb, 3 5 call, 3 5 cc, 3 5 constant, 3 5 if, 3 5 print, 3 5 read, 3 5 stmt, 3 5 variable, 3 5 while, 30 31 aa, 30 31 assign, 30 31 bb, 30 31 call, 30 31 cc, 30 31 constant, 30 31 if, 30 31 print, 30 31 read, 30 31 stmt, 30 31 variable, 30 31 while, 4 5 aa, 4 5 assign, 4 5 bb, 4 5 call, 4 5 cc, 4 5 constant, 4 5 if, 4 5 print, 4 5 read, 4 5 stmt, 4 5 variable, 4 5 while, 5 13 aa, 5 13 assign, 5 13 bb, 5 13 call, 5 13 cc, 5 13 constant, 5 13 if, 5 13 print, 5 13 read, 5 13 stmt, 5 13 variable, 5 13 while, 5 6 aa, 5 6 assign, 5 6 bb, 5 6 call, 5 6 cc, 5 6 constant, 5 6 if, 5 6 print, 5 6 read, 5 6 stmt, 5 6 variable, 5 6 while, 6 7 aa, 6 7 assign, 6 7 bb, 6 7 call, 6 7 cc, 6 7 constant, 6 7 if, 6 7 print, 6 7 read, 6 7 stmt, 6 7 variable, 6 7 while, 7 8 aa, 7 8 assign, 7 8 bb, 7 8 call, 7 8 cc, 7 8 constant, 7 8 if, 7 8 print, 7 8 read, 7 8 stmt, 7 8 variable, 7 8 while, 8 11 aa, 8 11 assign, 8 11 bb, 8 11 call, 8 11 cc, 8 11 constant, 8 11 if, 8 11 print, 8 11 read, 8 11 stmt, 8 11 variable, 8 11 while, 8 9 aa, 8 9 assign, 8 9 bb, 8 9 call, 8 9 cc, 8 9 constant, 8 9 if, 8 9 print, 8 9 read, 8 9 stmt, 8 9 variable, 8 9 while, 9 10 aa, 9 10 assign, 9 10 bb, 9 10 call, 9 10 cc, 9 10 constant, 9 10 if, 9 10 print, 9 10 read, 9 10 stmt, 9 10 variable, 9 10 while, 10 5 aa, 10 5 assign, 10 5 bb, 10 5 call, 10 5 cc, 10 5 constant, 10 5 if, 10 5 print, 10 5 read, 10 5 stmt, 10 5 variable, 10 5 while
+5000
+1253 - Valid. result-cl tuple, suchthat-cl Next, pattern-cl if, with-cl constant.value
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select <n1, n2, v> such that Next(n1, n2) pattern ifs(v, _, _) with c.value = 33
+1 2 aa, 1 2 assign, 1 2 bb, 1 2 call, 1 2 cc, 1 2 constant, 1 2 if, 1 2 print, 1 2 read, 1 2 stmt, 1 2 variable, 1 2 while, 11 12 aa, 11 12 assign, 11 12 bb, 11 12 call, 11 12 cc, 11 12 constant, 11 12 if, 11 12 print, 11 12 read, 11 12 stmt, 11 12 variable, 11 12 while, 12 5 aa, 12 5 assign, 12 5 bb, 12 5 call, 12 5 cc, 12 5 constant, 12 5 if, 12 5 print, 12 5 read, 12 5 stmt, 12 5 variable, 12 5 while, 13 14 aa, 13 14 assign, 13 14 bb, 13 14 call, 13 14 cc, 13 14 constant, 13 14 if, 13 14 print, 13 14 read, 13 14 stmt, 13 14 variable, 13 14 while, 14 15 aa, 14 15 assign, 14 15 bb, 14 15 call, 14 15 cc, 14 15 constant, 14 15 if, 14 15 print, 14 15 read, 14 15 stmt, 14 15 variable, 14 15 while, 14 16 aa, 14 16 assign, 14 16 bb, 14 16 call, 14 16 cc, 14 16 constant, 14 16 if, 14 16 print, 14 16 read, 14 16 stmt, 14 16 variable, 14 16 while, 15 17 aa, 15 17 assign, 15 17 bb, 15 17 call, 15 17 cc, 15 17 constant, 15 17 if, 15 17 print, 15 17 read, 15 17 stmt, 15 17 variable, 15 17 while, 16 17 aa, 16 17 assign, 16 17 bb, 16 17 call, 16 17 cc, 16 17 constant, 16 17 if, 16 17 print, 16 17 read, 16 17 stmt, 16 17 variable, 16 17 while, 18 19 aa, 18 19 assign, 18 19 bb, 18 19 call, 18 19 cc, 18 19 constant, 18 19 if, 18 19 print, 18 19 read, 18 19 stmt, 18 19 variable, 18 19 while, 18 21 aa, 18 21 assign, 18 21 bb, 18 21 call, 18 21 cc, 18 21 constant, 18 21 if, 18 21 print, 18 21 read, 18 21 stmt, 18 21 variable, 18 21 while, 19 20 aa, 19 20 assign, 19 20 bb, 19 20 call, 19 20 cc, 19 20 constant, 19 20 if, 19 20 print, 19 20 read, 19 20 stmt, 19 20 variable, 19 20 while, 2 3 aa, 2 3 assign, 2 3 bb, 2 3 call, 2 3 cc, 2 3 constant, 2 3 if, 2 3 print, 2 3 read, 2 3 stmt, 2 3 variable, 2 3 while, 2 4 aa, 2 4 assign, 2 4 bb, 2 4 call, 2 4 cc, 2 4 constant, 2 4 if, 2 4 print, 2 4 read, 2 4 stmt, 2 4 variable, 2 4 while, 20 24 aa, 20 24 assign, 20 24 bb, 20 24 call, 20 24 cc, 20 24 constant, 20 24 if, 20 24 print, 20 24 read, 20 24 stmt, 20 24 variable, 20 24 while, 21 22 aa, 21 22 assign, 21 22 bb, 21 22 call, 21 22 cc, 21 22 constant, 21 22 if, 21 22 print, 21 22 read, 21 22 stmt, 21 22 variable, 21 22 while, 22 23 aa, 22 23 assign, 22 23 bb, 22 23 call, 22 23 cc, 22 23 constant, 22 23 if, 22 23 print, 22 23 read, 22 23 stmt, 22 23 variable, 22 23 while, 23 21 aa, 23 21 assign, 23 21 bb, 23 21 call, 23 21 cc, 23 21 constant, 23 21 if, 23 21 print, 23 21 read, 23 21 stmt, 23 21 variable, 23 21 while, 21 24 aa, 21 24 assign, 21 24 bb, 21 24 call, 21 24 cc, 21 24 constant, 21 24 if, 21 24 print, 21 24 read, 21 24 stmt, 21 24 variable, 21 24 while, 25 26 aa, 25 26 assign, 25 26 bb, 25 26 call, 25 26 cc, 25 26 constant, 25 26 if, 25 26 print, 25 26 read, 25 26 stmt, 25 26 variable, 25 26 while, 26 27 aa, 26 27 assign, 26 27 bb, 26 27 call, 26 27 cc, 26 27 constant, 26 27 if, 26 27 print, 26 27 read, 26 27 stmt, 26 27 variable, 26 27 while, 26 30 aa, 26 30 assign, 26 30 bb, 26 30 call, 26 30 cc, 26 30 constant, 26 30 if, 26 30 print, 26 30 read, 26 30 stmt, 26 30 variable, 26 30 while, 27 28 aa, 27 28 assign, 27 28 bb, 27 28 call, 27 28 cc, 27 28 constant, 27 28 if, 27 28 print, 27 28 read, 27 28 stmt, 27 28 variable, 27 28 while, 28 29 aa, 28 29 assign, 28 29 bb, 28 29 call, 28 29 cc, 28 29 constant, 28 29 if, 28 29 print, 28 29 read, 28 29 stmt, 28 29 variable, 28 29 while, 29 26 aa, 29 26 assign, 29 26 bb, 29 26 call, 29 26 cc, 29 26 constant, 29 26 if, 29 26 print, 29 26 read, 29 26 stmt, 29 26 variable, 29 26 while, 3 5 aa, 3 5 assign, 3 5 bb, 3 5 call, 3 5 cc, 3 5 constant, 3 5 if, 3 5 print, 3 5 read, 3 5 stmt, 3 5 variable, 3 5 while, 30 31 aa, 30 31 assign, 30 31 bb, 30 31 call, 30 31 cc, 30 31 constant, 30 31 if, 30 31 print, 30 31 read, 30 31 stmt, 30 31 variable, 30 31 while, 4 5 aa, 4 5 assign, 4 5 bb, 4 5 call, 4 5 cc, 4 5 constant, 4 5 if, 4 5 print, 4 5 read, 4 5 stmt, 4 5 variable, 4 5 while, 5 13 aa, 5 13 assign, 5 13 bb, 5 13 call, 5 13 cc, 5 13 constant, 5 13 if, 5 13 print, 5 13 read, 5 13 stmt, 5 13 variable, 5 13 while, 5 6 aa, 5 6 assign, 5 6 bb, 5 6 call, 5 6 cc, 5 6 constant, 5 6 if, 5 6 print, 5 6 read, 5 6 stmt, 5 6 variable, 5 6 while, 6 7 aa, 6 7 assign, 6 7 bb, 6 7 call, 6 7 cc, 6 7 constant, 6 7 if, 6 7 print, 6 7 read, 6 7 stmt, 6 7 variable, 6 7 while, 7 8 aa, 7 8 assign, 7 8 bb, 7 8 call, 7 8 cc, 7 8 constant, 7 8 if, 7 8 print, 7 8 read, 7 8 stmt, 7 8 variable, 7 8 while, 8 11 aa, 8 11 assign, 8 11 bb, 8 11 call, 8 11 cc, 8 11 constant, 8 11 if, 8 11 print, 8 11 read, 8 11 stmt, 8 11 variable, 8 11 while, 8 9 aa, 8 9 assign, 8 9 bb, 8 9 call, 8 9 cc, 8 9 constant, 8 9 if, 8 9 print, 8 9 read, 8 9 stmt, 8 9 variable, 8 9 while, 9 10 aa, 9 10 assign, 9 10 bb, 9 10 call, 9 10 cc, 9 10 constant, 9 10 if, 9 10 print, 9 10 read, 9 10 stmt, 9 10 variable, 9 10 while, 10 5 aa, 10 5 assign, 10 5 bb, 10 5 call, 10 5 cc, 10 5 constant, 10 5 if, 10 5 print, 10 5 read, 10 5 stmt, 10 5 variable, 10 5 while
+5000
+1254 - Valid. result-cl tuple, suchthat-cl Next, pattern-cl if, with-cl stmt.stmt#
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select <n1, n2, v> such that Next(n1, n2) pattern ifs(v, _, _) with s.stmt# = 11
+1 2 aa, 1 2 assign, 1 2 bb, 1 2 call, 1 2 cc, 1 2 constant, 1 2 if, 1 2 print, 1 2 read, 1 2 stmt, 1 2 variable, 1 2 while, 11 12 aa, 11 12 assign, 11 12 bb, 11 12 call, 11 12 cc, 11 12 constant, 11 12 if, 11 12 print, 11 12 read, 11 12 stmt, 11 12 variable, 11 12 while, 12 5 aa, 12 5 assign, 12 5 bb, 12 5 call, 12 5 cc, 12 5 constant, 12 5 if, 12 5 print, 12 5 read, 12 5 stmt, 12 5 variable, 12 5 while, 13 14 aa, 13 14 assign, 13 14 bb, 13 14 call, 13 14 cc, 13 14 constant, 13 14 if, 13 14 print, 13 14 read, 13 14 stmt, 13 14 variable, 13 14 while, 14 15 aa, 14 15 assign, 14 15 bb, 14 15 call, 14 15 cc, 14 15 constant, 14 15 if, 14 15 print, 14 15 read, 14 15 stmt, 14 15 variable, 14 15 while, 14 16 aa, 14 16 assign, 14 16 bb, 14 16 call, 14 16 cc, 14 16 constant, 14 16 if, 14 16 print, 14 16 read, 14 16 stmt, 14 16 variable, 14 16 while, 15 17 aa, 15 17 assign, 15 17 bb, 15 17 call, 15 17 cc, 15 17 constant, 15 17 if, 15 17 print, 15 17 read, 15 17 stmt, 15 17 variable, 15 17 while, 16 17 aa, 16 17 assign, 16 17 bb, 16 17 call, 16 17 cc, 16 17 constant, 16 17 if, 16 17 print, 16 17 read, 16 17 stmt, 16 17 variable, 16 17 while, 18 19 aa, 18 19 assign, 18 19 bb, 18 19 call, 18 19 cc, 18 19 constant, 18 19 if, 18 19 print, 18 19 read, 18 19 stmt, 18 19 variable, 18 19 while, 18 21 aa, 18 21 assign, 18 21 bb, 18 21 call, 18 21 cc, 18 21 constant, 18 21 if, 18 21 print, 18 21 read, 18 21 stmt, 18 21 variable, 18 21 while, 19 20 aa, 19 20 assign, 19 20 bb, 19 20 call, 19 20 cc, 19 20 constant, 19 20 if, 19 20 print, 19 20 read, 19 20 stmt, 19 20 variable, 19 20 while, 2 3 aa, 2 3 assign, 2 3 bb, 2 3 call, 2 3 cc, 2 3 constant, 2 3 if, 2 3 print, 2 3 read, 2 3 stmt, 2 3 variable, 2 3 while, 2 4 aa, 2 4 assign, 2 4 bb, 2 4 call, 2 4 cc, 2 4 constant, 2 4 if, 2 4 print, 2 4 read, 2 4 stmt, 2 4 variable, 2 4 while, 20 24 aa, 20 24 assign, 20 24 bb, 20 24 call, 20 24 cc, 20 24 constant, 20 24 if, 20 24 print, 20 24 read, 20 24 stmt, 20 24 variable, 20 24 while, 21 22 aa, 21 22 assign, 21 22 bb, 21 22 call, 21 22 cc, 21 22 constant, 21 22 if, 21 22 print, 21 22 read, 21 22 stmt, 21 22 variable, 21 22 while, 22 23 aa, 22 23 assign, 22 23 bb, 22 23 call, 22 23 cc, 22 23 constant, 22 23 if, 22 23 print, 22 23 read, 22 23 stmt, 22 23 variable, 22 23 while, 23 21 aa, 23 21 assign, 23 21 bb, 23 21 call, 23 21 cc, 23 21 constant, 23 21 if, 23 21 print, 23 21 read, 23 21 stmt, 23 21 variable, 23 21 while, 21 24 aa, 21 24 assign, 21 24 bb, 21 24 call, 21 24 cc, 21 24 constant, 21 24 if, 21 24 print, 21 24 read, 21 24 stmt, 21 24 variable, 21 24 while, 25 26 aa, 25 26 assign, 25 26 bb, 25 26 call, 25 26 cc, 25 26 constant, 25 26 if, 25 26 print, 25 26 read, 25 26 stmt, 25 26 variable, 25 26 while, 26 27 aa, 26 27 assign, 26 27 bb, 26 27 call, 26 27 cc, 26 27 constant, 26 27 if, 26 27 print, 26 27 read, 26 27 stmt, 26 27 variable, 26 27 while, 26 30 aa, 26 30 assign, 26 30 bb, 26 30 call, 26 30 cc, 26 30 constant, 26 30 if, 26 30 print, 26 30 read, 26 30 stmt, 26 30 variable, 26 30 while, 27 28 aa, 27 28 assign, 27 28 bb, 27 28 call, 27 28 cc, 27 28 constant, 27 28 if, 27 28 print, 27 28 read, 27 28 stmt, 27 28 variable, 27 28 while, 28 29 aa, 28 29 assign, 28 29 bb, 28 29 call, 28 29 cc, 28 29 constant, 28 29 if, 28 29 print, 28 29 read, 28 29 stmt, 28 29 variable, 28 29 while, 29 26 aa, 29 26 assign, 29 26 bb, 29 26 call, 29 26 cc, 29 26 constant, 29 26 if, 29 26 print, 29 26 read, 29 26 stmt, 29 26 variable, 29 26 while, 3 5 aa, 3 5 assign, 3 5 bb, 3 5 call, 3 5 cc, 3 5 constant, 3 5 if, 3 5 print, 3 5 read, 3 5 stmt, 3 5 variable, 3 5 while, 30 31 aa, 30 31 assign, 30 31 bb, 30 31 call, 30 31 cc, 30 31 constant, 30 31 if, 30 31 print, 30 31 read, 30 31 stmt, 30 31 variable, 30 31 while, 4 5 aa, 4 5 assign, 4 5 bb, 4 5 call, 4 5 cc, 4 5 constant, 4 5 if, 4 5 print, 4 5 read, 4 5 stmt, 4 5 variable, 4 5 while, 5 13 aa, 5 13 assign, 5 13 bb, 5 13 call, 5 13 cc, 5 13 constant, 5 13 if, 5 13 print, 5 13 read, 5 13 stmt, 5 13 variable, 5 13 while, 5 6 aa, 5 6 assign, 5 6 bb, 5 6 call, 5 6 cc, 5 6 constant, 5 6 if, 5 6 print, 5 6 read, 5 6 stmt, 5 6 variable, 5 6 while, 6 7 aa, 6 7 assign, 6 7 bb, 6 7 call, 6 7 cc, 6 7 constant, 6 7 if, 6 7 print, 6 7 read, 6 7 stmt, 6 7 variable, 6 7 while, 7 8 aa, 7 8 assign, 7 8 bb, 7 8 call, 7 8 cc, 7 8 constant, 7 8 if, 7 8 print, 7 8 read, 7 8 stmt, 7 8 variable, 7 8 while, 8 11 aa, 8 11 assign, 8 11 bb, 8 11 call, 8 11 cc, 8 11 constant, 8 11 if, 8 11 print, 8 11 read, 8 11 stmt, 8 11 variable, 8 11 while, 8 9 aa, 8 9 assign, 8 9 bb, 8 9 call, 8 9 cc, 8 9 constant, 8 9 if, 8 9 print, 8 9 read, 8 9 stmt, 8 9 variable, 8 9 while, 9 10 aa, 9 10 assign, 9 10 bb, 9 10 call, 9 10 cc, 9 10 constant, 9 10 if, 9 10 print, 9 10 read, 9 10 stmt, 9 10 variable, 9 10 while, 10 5 aa, 10 5 assign, 10 5 bb, 10 5 call, 10 5 cc, 10 5 constant, 10 5 if, 10 5 print, 10 5 read, 10 5 stmt, 10 5 variable, 10 5 while
+5000
+1255 - Valid. result-cl tuple, suchthat-cl Next, pattern-cl if, with-cl read.stmt#
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select <n1, n2, v> such that Next(n1, n2) pattern ifs(v, _, _) with r.stmt# = 3
+1 2 aa, 1 2 assign, 1 2 bb, 1 2 call, 1 2 cc, 1 2 constant, 1 2 if, 1 2 print, 1 2 read, 1 2 stmt, 1 2 variable, 1 2 while, 11 12 aa, 11 12 assign, 11 12 bb, 11 12 call, 11 12 cc, 11 12 constant, 11 12 if, 11 12 print, 11 12 read, 11 12 stmt, 11 12 variable, 11 12 while, 12 5 aa, 12 5 assign, 12 5 bb, 12 5 call, 12 5 cc, 12 5 constant, 12 5 if, 12 5 print, 12 5 read, 12 5 stmt, 12 5 variable, 12 5 while, 13 14 aa, 13 14 assign, 13 14 bb, 13 14 call, 13 14 cc, 13 14 constant, 13 14 if, 13 14 print, 13 14 read, 13 14 stmt, 13 14 variable, 13 14 while, 14 15 aa, 14 15 assign, 14 15 bb, 14 15 call, 14 15 cc, 14 15 constant, 14 15 if, 14 15 print, 14 15 read, 14 15 stmt, 14 15 variable, 14 15 while, 14 16 aa, 14 16 assign, 14 16 bb, 14 16 call, 14 16 cc, 14 16 constant, 14 16 if, 14 16 print, 14 16 read, 14 16 stmt, 14 16 variable, 14 16 while, 15 17 aa, 15 17 assign, 15 17 bb, 15 17 call, 15 17 cc, 15 17 constant, 15 17 if, 15 17 print, 15 17 read, 15 17 stmt, 15 17 variable, 15 17 while, 16 17 aa, 16 17 assign, 16 17 bb, 16 17 call, 16 17 cc, 16 17 constant, 16 17 if, 16 17 print, 16 17 read, 16 17 stmt, 16 17 variable, 16 17 while, 18 19 aa, 18 19 assign, 18 19 bb, 18 19 call, 18 19 cc, 18 19 constant, 18 19 if, 18 19 print, 18 19 read, 18 19 stmt, 18 19 variable, 18 19 while, 18 21 aa, 18 21 assign, 18 21 bb, 18 21 call, 18 21 cc, 18 21 constant, 18 21 if, 18 21 print, 18 21 read, 18 21 stmt, 18 21 variable, 18 21 while, 19 20 aa, 19 20 assign, 19 20 bb, 19 20 call, 19 20 cc, 19 20 constant, 19 20 if, 19 20 print, 19 20 read, 19 20 stmt, 19 20 variable, 19 20 while, 2 3 aa, 2 3 assign, 2 3 bb, 2 3 call, 2 3 cc, 2 3 constant, 2 3 if, 2 3 print, 2 3 read, 2 3 stmt, 2 3 variable, 2 3 while, 2 4 aa, 2 4 assign, 2 4 bb, 2 4 call, 2 4 cc, 2 4 constant, 2 4 if, 2 4 print, 2 4 read, 2 4 stmt, 2 4 variable, 2 4 while, 20 24 aa, 20 24 assign, 20 24 bb, 20 24 call, 20 24 cc, 20 24 constant, 20 24 if, 20 24 print, 20 24 read, 20 24 stmt, 20 24 variable, 20 24 while, 21 22 aa, 21 22 assign, 21 22 bb, 21 22 call, 21 22 cc, 21 22 constant, 21 22 if, 21 22 print, 21 22 read, 21 22 stmt, 21 22 variable, 21 22 while, 22 23 aa, 22 23 assign, 22 23 bb, 22 23 call, 22 23 cc, 22 23 constant, 22 23 if, 22 23 print, 22 23 read, 22 23 stmt, 22 23 variable, 22 23 while, 23 21 aa, 23 21 assign, 23 21 bb, 23 21 call, 23 21 cc, 23 21 constant, 23 21 if, 23 21 print, 23 21 read, 23 21 stmt, 23 21 variable, 23 21 while, 21 24 aa, 21 24 assign, 21 24 bb, 21 24 call, 21 24 cc, 21 24 constant, 21 24 if, 21 24 print, 21 24 read, 21 24 stmt, 21 24 variable, 21 24 while, 25 26 aa, 25 26 assign, 25 26 bb, 25 26 call, 25 26 cc, 25 26 constant, 25 26 if, 25 26 print, 25 26 read, 25 26 stmt, 25 26 variable, 25 26 while, 26 27 aa, 26 27 assign, 26 27 bb, 26 27 call, 26 27 cc, 26 27 constant, 26 27 if, 26 27 print, 26 27 read, 26 27 stmt, 26 27 variable, 26 27 while, 26 30 aa, 26 30 assign, 26 30 bb, 26 30 call, 26 30 cc, 26 30 constant, 26 30 if, 26 30 print, 26 30 read, 26 30 stmt, 26 30 variable, 26 30 while, 27 28 aa, 27 28 assign, 27 28 bb, 27 28 call, 27 28 cc, 27 28 constant, 27 28 if, 27 28 print, 27 28 read, 27 28 stmt, 27 28 variable, 27 28 while, 28 29 aa, 28 29 assign, 28 29 bb, 28 29 call, 28 29 cc, 28 29 constant, 28 29 if, 28 29 print, 28 29 read, 28 29 stmt, 28 29 variable, 28 29 while, 29 26 aa, 29 26 assign, 29 26 bb, 29 26 call, 29 26 cc, 29 26 constant, 29 26 if, 29 26 print, 29 26 read, 29 26 stmt, 29 26 variable, 29 26 while, 3 5 aa, 3 5 assign, 3 5 bb, 3 5 call, 3 5 cc, 3 5 constant, 3 5 if, 3 5 print, 3 5 read, 3 5 stmt, 3 5 variable, 3 5 while, 30 31 aa, 30 31 assign, 30 31 bb, 30 31 call, 30 31 cc, 30 31 constant, 30 31 if, 30 31 print, 30 31 read, 30 31 stmt, 30 31 variable, 30 31 while, 4 5 aa, 4 5 assign, 4 5 bb, 4 5 call, 4 5 cc, 4 5 constant, 4 5 if, 4 5 print, 4 5 read, 4 5 stmt, 4 5 variable, 4 5 while, 5 13 aa, 5 13 assign, 5 13 bb, 5 13 call, 5 13 cc, 5 13 constant, 5 13 if, 5 13 print, 5 13 read, 5 13 stmt, 5 13 variable, 5 13 while, 5 6 aa, 5 6 assign, 5 6 bb, 5 6 call, 5 6 cc, 5 6 constant, 5 6 if, 5 6 print, 5 6 read, 5 6 stmt, 5 6 variable, 5 6 while, 6 7 aa, 6 7 assign, 6 7 bb, 6 7 call, 6 7 cc, 6 7 constant, 6 7 if, 6 7 print, 6 7 read, 6 7 stmt, 6 7 variable, 6 7 while, 7 8 aa, 7 8 assign, 7 8 bb, 7 8 call, 7 8 cc, 7 8 constant, 7 8 if, 7 8 print, 7 8 read, 7 8 stmt, 7 8 variable, 7 8 while, 8 11 aa, 8 11 assign, 8 11 bb, 8 11 call, 8 11 cc, 8 11 constant, 8 11 if, 8 11 print, 8 11 read, 8 11 stmt, 8 11 variable, 8 11 while, 8 9 aa, 8 9 assign, 8 9 bb, 8 9 call, 8 9 cc, 8 9 constant, 8 9 if, 8 9 print, 8 9 read, 8 9 stmt, 8 9 variable, 8 9 while, 9 10 aa, 9 10 assign, 9 10 bb, 9 10 call, 9 10 cc, 9 10 constant, 9 10 if, 9 10 print, 9 10 read, 9 10 stmt, 9 10 variable, 9 10 while, 10 5 aa, 10 5 assign, 10 5 bb, 10 5 call, 10 5 cc, 10 5 constant, 10 5 if, 10 5 print, 10 5 read, 10 5 stmt, 10 5 variable, 10 5 while
+5000
+1256 - Valid. result-cl tuple, suchthat-cl Next, pattern-cl if, with-cl print.stmt#
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select <n1, n2, v> such that Next(n1, n2) pattern ifs(v, _, _) with p.stmt# = 1
+1 2 aa, 1 2 assign, 1 2 bb, 1 2 call, 1 2 cc, 1 2 constant, 1 2 if, 1 2 print, 1 2 read, 1 2 stmt, 1 2 variable, 1 2 while, 11 12 aa, 11 12 assign, 11 12 bb, 11 12 call, 11 12 cc, 11 12 constant, 11 12 if, 11 12 print, 11 12 read, 11 12 stmt, 11 12 variable, 11 12 while, 12 5 aa, 12 5 assign, 12 5 bb, 12 5 call, 12 5 cc, 12 5 constant, 12 5 if, 12 5 print, 12 5 read, 12 5 stmt, 12 5 variable, 12 5 while, 13 14 aa, 13 14 assign, 13 14 bb, 13 14 call, 13 14 cc, 13 14 constant, 13 14 if, 13 14 print, 13 14 read, 13 14 stmt, 13 14 variable, 13 14 while, 14 15 aa, 14 15 assign, 14 15 bb, 14 15 call, 14 15 cc, 14 15 constant, 14 15 if, 14 15 print, 14 15 read, 14 15 stmt, 14 15 variable, 14 15 while, 14 16 aa, 14 16 assign, 14 16 bb, 14 16 call, 14 16 cc, 14 16 constant, 14 16 if, 14 16 print, 14 16 read, 14 16 stmt, 14 16 variable, 14 16 while, 15 17 aa, 15 17 assign, 15 17 bb, 15 17 call, 15 17 cc, 15 17 constant, 15 17 if, 15 17 print, 15 17 read, 15 17 stmt, 15 17 variable, 15 17 while, 16 17 aa, 16 17 assign, 16 17 bb, 16 17 call, 16 17 cc, 16 17 constant, 16 17 if, 16 17 print, 16 17 read, 16 17 stmt, 16 17 variable, 16 17 while, 18 19 aa, 18 19 assign, 18 19 bb, 18 19 call, 18 19 cc, 18 19 constant, 18 19 if, 18 19 print, 18 19 read, 18 19 stmt, 18 19 variable, 18 19 while, 18 21 aa, 18 21 assign, 18 21 bb, 18 21 call, 18 21 cc, 18 21 constant, 18 21 if, 18 21 print, 18 21 read, 18 21 stmt, 18 21 variable, 18 21 while, 19 20 aa, 19 20 assign, 19 20 bb, 19 20 call, 19 20 cc, 19 20 constant, 19 20 if, 19 20 print, 19 20 read, 19 20 stmt, 19 20 variable, 19 20 while, 2 3 aa, 2 3 assign, 2 3 bb, 2 3 call, 2 3 cc, 2 3 constant, 2 3 if, 2 3 print, 2 3 read, 2 3 stmt, 2 3 variable, 2 3 while, 2 4 aa, 2 4 assign, 2 4 bb, 2 4 call, 2 4 cc, 2 4 constant, 2 4 if, 2 4 print, 2 4 read, 2 4 stmt, 2 4 variable, 2 4 while, 20 24 aa, 20 24 assign, 20 24 bb, 20 24 call, 20 24 cc, 20 24 constant, 20 24 if, 20 24 print, 20 24 read, 20 24 stmt, 20 24 variable, 20 24 while, 21 22 aa, 21 22 assign, 21 22 bb, 21 22 call, 21 22 cc, 21 22 constant, 21 22 if, 21 22 print, 21 22 read, 21 22 stmt, 21 22 variable, 21 22 while, 22 23 aa, 22 23 assign, 22 23 bb, 22 23 call, 22 23 cc, 22 23 constant, 22 23 if, 22 23 print, 22 23 read, 22 23 stmt, 22 23 variable, 22 23 while, 23 21 aa, 23 21 assign, 23 21 bb, 23 21 call, 23 21 cc, 23 21 constant, 23 21 if, 23 21 print, 23 21 read, 23 21 stmt, 23 21 variable, 23 21 while, 21 24 aa, 21 24 assign, 21 24 bb, 21 24 call, 21 24 cc, 21 24 constant, 21 24 if, 21 24 print, 21 24 read, 21 24 stmt, 21 24 variable, 21 24 while, 25 26 aa, 25 26 assign, 25 26 bb, 25 26 call, 25 26 cc, 25 26 constant, 25 26 if, 25 26 print, 25 26 read, 25 26 stmt, 25 26 variable, 25 26 while, 26 27 aa, 26 27 assign, 26 27 bb, 26 27 call, 26 27 cc, 26 27 constant, 26 27 if, 26 27 print, 26 27 read, 26 27 stmt, 26 27 variable, 26 27 while, 26 30 aa, 26 30 assign, 26 30 bb, 26 30 call, 26 30 cc, 26 30 constant, 26 30 if, 26 30 print, 26 30 read, 26 30 stmt, 26 30 variable, 26 30 while, 27 28 aa, 27 28 assign, 27 28 bb, 27 28 call, 27 28 cc, 27 28 constant, 27 28 if, 27 28 print, 27 28 read, 27 28 stmt, 27 28 variable, 27 28 while, 28 29 aa, 28 29 assign, 28 29 bb, 28 29 call, 28 29 cc, 28 29 constant, 28 29 if, 28 29 print, 28 29 read, 28 29 stmt, 28 29 variable, 28 29 while, 29 26 aa, 29 26 assign, 29 26 bb, 29 26 call, 29 26 cc, 29 26 constant, 29 26 if, 29 26 print, 29 26 read, 29 26 stmt, 29 26 variable, 29 26 while, 3 5 aa, 3 5 assign, 3 5 bb, 3 5 call, 3 5 cc, 3 5 constant, 3 5 if, 3 5 print, 3 5 read, 3 5 stmt, 3 5 variable, 3 5 while, 30 31 aa, 30 31 assign, 30 31 bb, 30 31 call, 30 31 cc, 30 31 constant, 30 31 if, 30 31 print, 30 31 read, 30 31 stmt, 30 31 variable, 30 31 while, 4 5 aa, 4 5 assign, 4 5 bb, 4 5 call, 4 5 cc, 4 5 constant, 4 5 if, 4 5 print, 4 5 read, 4 5 stmt, 4 5 variable, 4 5 while, 5 13 aa, 5 13 assign, 5 13 bb, 5 13 call, 5 13 cc, 5 13 constant, 5 13 if, 5 13 print, 5 13 read, 5 13 stmt, 5 13 variable, 5 13 while, 5 6 aa, 5 6 assign, 5 6 bb, 5 6 call, 5 6 cc, 5 6 constant, 5 6 if, 5 6 print, 5 6 read, 5 6 stmt, 5 6 variable, 5 6 while, 6 7 aa, 6 7 assign, 6 7 bb, 6 7 call, 6 7 cc, 6 7 constant, 6 7 if, 6 7 print, 6 7 read, 6 7 stmt, 6 7 variable, 6 7 while, 7 8 aa, 7 8 assign, 7 8 bb, 7 8 call, 7 8 cc, 7 8 constant, 7 8 if, 7 8 print, 7 8 read, 7 8 stmt, 7 8 variable, 7 8 while, 8 11 aa, 8 11 assign, 8 11 bb, 8 11 call, 8 11 cc, 8 11 constant, 8 11 if, 8 11 print, 8 11 read, 8 11 stmt, 8 11 variable, 8 11 while, 8 9 aa, 8 9 assign, 8 9 bb, 8 9 call, 8 9 cc, 8 9 constant, 8 9 if, 8 9 print, 8 9 read, 8 9 stmt, 8 9 variable, 8 9 while, 9 10 aa, 9 10 assign, 9 10 bb, 9 10 call, 9 10 cc, 9 10 constant, 9 10 if, 9 10 print, 9 10 read, 9 10 stmt, 9 10 variable, 9 10 while, 10 5 aa, 10 5 assign, 10 5 bb, 10 5 call, 10 5 cc, 10 5 constant, 10 5 if, 10 5 print, 10 5 read, 10 5 stmt, 10 5 variable, 10 5 while
+5000
+1257 - Valid. result-cl tuple, suchthat-cl Next, pattern-cl if, with-cl call.stmt#
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select <n1, n2, v> such that Next(n1, n2) pattern ifs(v, _, _) with cl.stmt# = 16
+1 2 aa, 1 2 assign, 1 2 bb, 1 2 call, 1 2 cc, 1 2 constant, 1 2 if, 1 2 print, 1 2 read, 1 2 stmt, 1 2 variable, 1 2 while, 11 12 aa, 11 12 assign, 11 12 bb, 11 12 call, 11 12 cc, 11 12 constant, 11 12 if, 11 12 print, 11 12 read, 11 12 stmt, 11 12 variable, 11 12 while, 12 5 aa, 12 5 assign, 12 5 bb, 12 5 call, 12 5 cc, 12 5 constant, 12 5 if, 12 5 print, 12 5 read, 12 5 stmt, 12 5 variable, 12 5 while, 13 14 aa, 13 14 assign, 13 14 bb, 13 14 call, 13 14 cc, 13 14 constant, 13 14 if, 13 14 print, 13 14 read, 13 14 stmt, 13 14 variable, 13 14 while, 14 15 aa, 14 15 assign, 14 15 bb, 14 15 call, 14 15 cc, 14 15 constant, 14 15 if, 14 15 print, 14 15 read, 14 15 stmt, 14 15 variable, 14 15 while, 14 16 aa, 14 16 assign, 14 16 bb, 14 16 call, 14 16 cc, 14 16 constant, 14 16 if, 14 16 print, 14 16 read, 14 16 stmt, 14 16 variable, 14 16 while, 15 17 aa, 15 17 assign, 15 17 bb, 15 17 call, 15 17 cc, 15 17 constant, 15 17 if, 15 17 print, 15 17 read, 15 17 stmt, 15 17 variable, 15 17 while, 16 17 aa, 16 17 assign, 16 17 bb, 16 17 call, 16 17 cc, 16 17 constant, 16 17 if, 16 17 print, 16 17 read, 16 17 stmt, 16 17 variable, 16 17 while, 18 19 aa, 18 19 assign, 18 19 bb, 18 19 call, 18 19 cc, 18 19 constant, 18 19 if, 18 19 print, 18 19 read, 18 19 stmt, 18 19 variable, 18 19 while, 18 21 aa, 18 21 assign, 18 21 bb, 18 21 call, 18 21 cc, 18 21 constant, 18 21 if, 18 21 print, 18 21 read, 18 21 stmt, 18 21 variable, 18 21 while, 19 20 aa, 19 20 assign, 19 20 bb, 19 20 call, 19 20 cc, 19 20 constant, 19 20 if, 19 20 print, 19 20 read, 19 20 stmt, 19 20 variable, 19 20 while, 2 3 aa, 2 3 assign, 2 3 bb, 2 3 call, 2 3 cc, 2 3 constant, 2 3 if, 2 3 print, 2 3 read, 2 3 stmt, 2 3 variable, 2 3 while, 2 4 aa, 2 4 assign, 2 4 bb, 2 4 call, 2 4 cc, 2 4 constant, 2 4 if, 2 4 print, 2 4 read, 2 4 stmt, 2 4 variable, 2 4 while, 20 24 aa, 20 24 assign, 20 24 bb, 20 24 call, 20 24 cc, 20 24 constant, 20 24 if, 20 24 print, 20 24 read, 20 24 stmt, 20 24 variable, 20 24 while, 21 22 aa, 21 22 assign, 21 22 bb, 21 22 call, 21 22 cc, 21 22 constant, 21 22 if, 21 22 print, 21 22 read, 21 22 stmt, 21 22 variable, 21 22 while, 22 23 aa, 22 23 assign, 22 23 bb, 22 23 call, 22 23 cc, 22 23 constant, 22 23 if, 22 23 print, 22 23 read, 22 23 stmt, 22 23 variable, 22 23 while, 23 21 aa, 23 21 assign, 23 21 bb, 23 21 call, 23 21 cc, 23 21 constant, 23 21 if, 23 21 print, 23 21 read, 23 21 stmt, 23 21 variable, 23 21 while, 21 24 aa, 21 24 assign, 21 24 bb, 21 24 call, 21 24 cc, 21 24 constant, 21 24 if, 21 24 print, 21 24 read, 21 24 stmt, 21 24 variable, 21 24 while, 25 26 aa, 25 26 assign, 25 26 bb, 25 26 call, 25 26 cc, 25 26 constant, 25 26 if, 25 26 print, 25 26 read, 25 26 stmt, 25 26 variable, 25 26 while, 26 27 aa, 26 27 assign, 26 27 bb, 26 27 call, 26 27 cc, 26 27 constant, 26 27 if, 26 27 print, 26 27 read, 26 27 stmt, 26 27 variable, 26 27 while, 26 30 aa, 26 30 assign, 26 30 bb, 26 30 call, 26 30 cc, 26 30 constant, 26 30 if, 26 30 print, 26 30 read, 26 30 stmt, 26 30 variable, 26 30 while, 27 28 aa, 27 28 assign, 27 28 bb, 27 28 call, 27 28 cc, 27 28 constant, 27 28 if, 27 28 print, 27 28 read, 27 28 stmt, 27 28 variable, 27 28 while, 28 29 aa, 28 29 assign, 28 29 bb, 28 29 call, 28 29 cc, 28 29 constant, 28 29 if, 28 29 print, 28 29 read, 28 29 stmt, 28 29 variable, 28 29 while, 29 26 aa, 29 26 assign, 29 26 bb, 29 26 call, 29 26 cc, 29 26 constant, 29 26 if, 29 26 print, 29 26 read, 29 26 stmt, 29 26 variable, 29 26 while, 3 5 aa, 3 5 assign, 3 5 bb, 3 5 call, 3 5 cc, 3 5 constant, 3 5 if, 3 5 print, 3 5 read, 3 5 stmt, 3 5 variable, 3 5 while, 30 31 aa, 30 31 assign, 30 31 bb, 30 31 call, 30 31 cc, 30 31 constant, 30 31 if, 30 31 print, 30 31 read, 30 31 stmt, 30 31 variable, 30 31 while, 4 5 aa, 4 5 assign, 4 5 bb, 4 5 call, 4 5 cc, 4 5 constant, 4 5 if, 4 5 print, 4 5 read, 4 5 stmt, 4 5 variable, 4 5 while, 5 13 aa, 5 13 assign, 5 13 bb, 5 13 call, 5 13 cc, 5 13 constant, 5 13 if, 5 13 print, 5 13 read, 5 13 stmt, 5 13 variable, 5 13 while, 5 6 aa, 5 6 assign, 5 6 bb, 5 6 call, 5 6 cc, 5 6 constant, 5 6 if, 5 6 print, 5 6 read, 5 6 stmt, 5 6 variable, 5 6 while, 6 7 aa, 6 7 assign, 6 7 bb, 6 7 call, 6 7 cc, 6 7 constant, 6 7 if, 6 7 print, 6 7 read, 6 7 stmt, 6 7 variable, 6 7 while, 7 8 aa, 7 8 assign, 7 8 bb, 7 8 call, 7 8 cc, 7 8 constant, 7 8 if, 7 8 print, 7 8 read, 7 8 stmt, 7 8 variable, 7 8 while, 8 11 aa, 8 11 assign, 8 11 bb, 8 11 call, 8 11 cc, 8 11 constant, 8 11 if, 8 11 print, 8 11 read, 8 11 stmt, 8 11 variable, 8 11 while, 8 9 aa, 8 9 assign, 8 9 bb, 8 9 call, 8 9 cc, 8 9 constant, 8 9 if, 8 9 print, 8 9 read, 8 9 stmt, 8 9 variable, 8 9 while, 9 10 aa, 9 10 assign, 9 10 bb, 9 10 call, 9 10 cc, 9 10 constant, 9 10 if, 9 10 print, 9 10 read, 9 10 stmt, 9 10 variable, 9 10 while, 10 5 aa, 10 5 assign, 10 5 bb, 10 5 call, 10 5 cc, 10 5 constant, 10 5 if, 10 5 print, 10 5 read, 10 5 stmt, 10 5 variable, 10 5 while
+5000
+1258 - Valid. result-cl tuple, suchthat-cl Next, pattern-cl if, with-cl while.stmt#
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select <n1, n2, v> such that Next(n1, n2) pattern ifs(v, _, _) with w.stmt# = 21
+1 2 aa, 1 2 assign, 1 2 bb, 1 2 call, 1 2 cc, 1 2 constant, 1 2 if, 1 2 print, 1 2 read, 1 2 stmt, 1 2 variable, 1 2 while, 11 12 aa, 11 12 assign, 11 12 bb, 11 12 call, 11 12 cc, 11 12 constant, 11 12 if, 11 12 print, 11 12 read, 11 12 stmt, 11 12 variable, 11 12 while, 12 5 aa, 12 5 assign, 12 5 bb, 12 5 call, 12 5 cc, 12 5 constant, 12 5 if, 12 5 print, 12 5 read, 12 5 stmt, 12 5 variable, 12 5 while, 13 14 aa, 13 14 assign, 13 14 bb, 13 14 call, 13 14 cc, 13 14 constant, 13 14 if, 13 14 print, 13 14 read, 13 14 stmt, 13 14 variable, 13 14 while, 14 15 aa, 14 15 assign, 14 15 bb, 14 15 call, 14 15 cc, 14 15 constant, 14 15 if, 14 15 print, 14 15 read, 14 15 stmt, 14 15 variable, 14 15 while, 14 16 aa, 14 16 assign, 14 16 bb, 14 16 call, 14 16 cc, 14 16 constant, 14 16 if, 14 16 print, 14 16 read, 14 16 stmt, 14 16 variable, 14 16 while, 15 17 aa, 15 17 assign, 15 17 bb, 15 17 call, 15 17 cc, 15 17 constant, 15 17 if, 15 17 print, 15 17 read, 15 17 stmt, 15 17 variable, 15 17 while, 16 17 aa, 16 17 assign, 16 17 bb, 16 17 call, 16 17 cc, 16 17 constant, 16 17 if, 16 17 print, 16 17 read, 16 17 stmt, 16 17 variable, 16 17 while, 18 19 aa, 18 19 assign, 18 19 bb, 18 19 call, 18 19 cc, 18 19 constant, 18 19 if, 18 19 print, 18 19 read, 18 19 stmt, 18 19 variable, 18 19 while, 18 21 aa, 18 21 assign, 18 21 bb, 18 21 call, 18 21 cc, 18 21 constant, 18 21 if, 18 21 print, 18 21 read, 18 21 stmt, 18 21 variable, 18 21 while, 19 20 aa, 19 20 assign, 19 20 bb, 19 20 call, 19 20 cc, 19 20 constant, 19 20 if, 19 20 print, 19 20 read, 19 20 stmt, 19 20 variable, 19 20 while, 2 3 aa, 2 3 assign, 2 3 bb, 2 3 call, 2 3 cc, 2 3 constant, 2 3 if, 2 3 print, 2 3 read, 2 3 stmt, 2 3 variable, 2 3 while, 2 4 aa, 2 4 assign, 2 4 bb, 2 4 call, 2 4 cc, 2 4 constant, 2 4 if, 2 4 print, 2 4 read, 2 4 stmt, 2 4 variable, 2 4 while, 20 24 aa, 20 24 assign, 20 24 bb, 20 24 call, 20 24 cc, 20 24 constant, 20 24 if, 20 24 print, 20 24 read, 20 24 stmt, 20 24 variable, 20 24 while, 21 22 aa, 21 22 assign, 21 22 bb, 21 22 call, 21 22 cc, 21 22 constant, 21 22 if, 21 22 print, 21 22 read, 21 22 stmt, 21 22 variable, 21 22 while, 22 23 aa, 22 23 assign, 22 23 bb, 22 23 call, 22 23 cc, 22 23 constant, 22 23 if, 22 23 print, 22 23 read, 22 23 stmt, 22 23 variable, 22 23 while, 23 21 aa, 23 21 assign, 23 21 bb, 23 21 call, 23 21 cc, 23 21 constant, 23 21 if, 23 21 print, 23 21 read, 23 21 stmt, 23 21 variable, 23 21 while, 21 24 aa, 21 24 assign, 21 24 bb, 21 24 call, 21 24 cc, 21 24 constant, 21 24 if, 21 24 print, 21 24 read, 21 24 stmt, 21 24 variable, 21 24 while, 25 26 aa, 25 26 assign, 25 26 bb, 25 26 call, 25 26 cc, 25 26 constant, 25 26 if, 25 26 print, 25 26 read, 25 26 stmt, 25 26 variable, 25 26 while, 26 27 aa, 26 27 assign, 26 27 bb, 26 27 call, 26 27 cc, 26 27 constant, 26 27 if, 26 27 print, 26 27 read, 26 27 stmt, 26 27 variable, 26 27 while, 26 30 aa, 26 30 assign, 26 30 bb, 26 30 call, 26 30 cc, 26 30 constant, 26 30 if, 26 30 print, 26 30 read, 26 30 stmt, 26 30 variable, 26 30 while, 27 28 aa, 27 28 assign, 27 28 bb, 27 28 call, 27 28 cc, 27 28 constant, 27 28 if, 27 28 print, 27 28 read, 27 28 stmt, 27 28 variable, 27 28 while, 28 29 aa, 28 29 assign, 28 29 bb, 28 29 call, 28 29 cc, 28 29 constant, 28 29 if, 28 29 print, 28 29 read, 28 29 stmt, 28 29 variable, 28 29 while, 29 26 aa, 29 26 assign, 29 26 bb, 29 26 call, 29 26 cc, 29 26 constant, 29 26 if, 29 26 print, 29 26 read, 29 26 stmt, 29 26 variable, 29 26 while, 3 5 aa, 3 5 assign, 3 5 bb, 3 5 call, 3 5 cc, 3 5 constant, 3 5 if, 3 5 print, 3 5 read, 3 5 stmt, 3 5 variable, 3 5 while, 30 31 aa, 30 31 assign, 30 31 bb, 30 31 call, 30 31 cc, 30 31 constant, 30 31 if, 30 31 print, 30 31 read, 30 31 stmt, 30 31 variable, 30 31 while, 4 5 aa, 4 5 assign, 4 5 bb, 4 5 call, 4 5 cc, 4 5 constant, 4 5 if, 4 5 print, 4 5 read, 4 5 stmt, 4 5 variable, 4 5 while, 5 13 aa, 5 13 assign, 5 13 bb, 5 13 call, 5 13 cc, 5 13 constant, 5 13 if, 5 13 print, 5 13 read, 5 13 stmt, 5 13 variable, 5 13 while, 5 6 aa, 5 6 assign, 5 6 bb, 5 6 call, 5 6 cc, 5 6 constant, 5 6 if, 5 6 print, 5 6 read, 5 6 stmt, 5 6 variable, 5 6 while, 6 7 aa, 6 7 assign, 6 7 bb, 6 7 call, 6 7 cc, 6 7 constant, 6 7 if, 6 7 print, 6 7 read, 6 7 stmt, 6 7 variable, 6 7 while, 7 8 aa, 7 8 assign, 7 8 bb, 7 8 call, 7 8 cc, 7 8 constant, 7 8 if, 7 8 print, 7 8 read, 7 8 stmt, 7 8 variable, 7 8 while, 8 11 aa, 8 11 assign, 8 11 bb, 8 11 call, 8 11 cc, 8 11 constant, 8 11 if, 8 11 print, 8 11 read, 8 11 stmt, 8 11 variable, 8 11 while, 8 9 aa, 8 9 assign, 8 9 bb, 8 9 call, 8 9 cc, 8 9 constant, 8 9 if, 8 9 print, 8 9 read, 8 9 stmt, 8 9 variable, 8 9 while, 9 10 aa, 9 10 assign, 9 10 bb, 9 10 call, 9 10 cc, 9 10 constant, 9 10 if, 9 10 print, 9 10 read, 9 10 stmt, 9 10 variable, 9 10 while, 10 5 aa, 10 5 assign, 10 5 bb, 10 5 call, 10 5 cc, 10 5 constant, 10 5 if, 10 5 print, 10 5 read, 10 5 stmt, 10 5 variable, 10 5 while
+5000
+1259 - Valid. result-cl tuple, suchthat-cl Next, pattern-cl if, with-cl if.stmt#
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select <n1, n2, v> such that Next(n1, n2) pattern ifs(v, _, _) with ifs.stmt# = 2
+1 2 aa, 1 2 cc, 1 2 if, 1 2 variable, 11 12 aa, 11 12 cc, 11 12 if, 11 12 variable, 12 5 aa, 12 5 cc, 12 5 if, 12 5 variable, 13 14 aa, 13 14 cc, 13 14 if, 13 14 variable, 14 15 aa, 14 15 cc, 14 15 if, 14 15 variable, 14 16 aa, 14 16 cc, 14 16 if, 14 16 variable, 15 17 aa, 15 17 cc, 15 17 if, 15 17 variable, 16 17 aa, 16 17 cc, 16 17 if, 16 17 variable, 18 19 aa, 18 19 cc, 18 19 if, 18 19 variable, 18 21 aa, 18 21 cc, 18 21 if, 18 21 variable, 19 20 aa, 19 20 cc, 19 20 if, 19 20 variable, 2 3 aa, 2 3 cc, 2 3 if, 2 3 variable, 2 4 aa, 2 4 cc, 2 4 if, 2 4 variable, 20 24 aa, 20 24 cc, 20 24 if, 20 24 variable, 21 22 aa, 21 22 cc, 21 22 if, 21 22 variable, 22 23 aa, 22 23 cc, 22 23 if, 22 23 variable, 23 21 aa, 23 21 cc, 23 21 if, 23 21 variable, 21 24 aa, 21 24 cc, 21 24 if, 21 24 variable, 25 26 aa, 25 26 cc, 25 26 if, 25 26 variable, 26 27 aa, 26 27 cc, 26 27 if, 26 27 variable, 26 30 aa, 26 30 cc, 26 30 if, 26 30 variable, 27 28 aa, 27 28 cc, 27 28 if, 27 28 variable, 28 29 aa, 28 29 cc, 28 29 if, 28 29 variable, 29 26 aa, 29 26 cc, 29 26 if, 29 26 variable, 3 5 aa, 3 5 cc, 3 5 if, 3 5 variable, 30 31 aa, 30 31 cc, 30 31 if, 30 31 variable, 4 5 aa, 4 5 cc, 4 5 if, 4 5 variable, 5 13 aa, 5 13 cc, 5 13 if, 5 13 variable, 5 6 aa, 5 6 cc, 5 6 if, 5 6 variable, 6 7 aa, 6 7 cc, 6 7 if, 6 7 variable, 7 8 aa, 7 8 cc, 7 8 if, 7 8 variable, 8 11 aa, 8 11 cc, 8 11 if, 8 11 variable, 8 9 aa, 8 9 cc, 8 9 if, 8 9 variable, 9 10 aa, 9 10 cc, 9 10 if, 9 10 variable, 10 5 aa, 10 5 cc, 10 5 if, 10 5 variable
+5000
+1260 - Valid. result-cl tuple, suchthat-cl Next, pattern-cl if, with-cl assign.stmt#
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select <n1, n2, v> such that Next(n1, n2) pattern ifs(v, _, _) with a.stmt# = 4
+1 2 aa, 1 2 assign, 1 2 bb, 1 2 call, 1 2 cc, 1 2 constant, 1 2 if, 1 2 print, 1 2 read, 1 2 stmt, 1 2 variable, 1 2 while, 11 12 aa, 11 12 assign, 11 12 bb, 11 12 call, 11 12 cc, 11 12 constant, 11 12 if, 11 12 print, 11 12 read, 11 12 stmt, 11 12 variable, 11 12 while, 12 5 aa, 12 5 assign, 12 5 bb, 12 5 call, 12 5 cc, 12 5 constant, 12 5 if, 12 5 print, 12 5 read, 12 5 stmt, 12 5 variable, 12 5 while, 13 14 aa, 13 14 assign, 13 14 bb, 13 14 call, 13 14 cc, 13 14 constant, 13 14 if, 13 14 print, 13 14 read, 13 14 stmt, 13 14 variable, 13 14 while, 14 15 aa, 14 15 assign, 14 15 bb, 14 15 call, 14 15 cc, 14 15 constant, 14 15 if, 14 15 print, 14 15 read, 14 15 stmt, 14 15 variable, 14 15 while, 14 16 aa, 14 16 assign, 14 16 bb, 14 16 call, 14 16 cc, 14 16 constant, 14 16 if, 14 16 print, 14 16 read, 14 16 stmt, 14 16 variable, 14 16 while, 15 17 aa, 15 17 assign, 15 17 bb, 15 17 call, 15 17 cc, 15 17 constant, 15 17 if, 15 17 print, 15 17 read, 15 17 stmt, 15 17 variable, 15 17 while, 16 17 aa, 16 17 assign, 16 17 bb, 16 17 call, 16 17 cc, 16 17 constant, 16 17 if, 16 17 print, 16 17 read, 16 17 stmt, 16 17 variable, 16 17 while, 18 19 aa, 18 19 assign, 18 19 bb, 18 19 call, 18 19 cc, 18 19 constant, 18 19 if, 18 19 print, 18 19 read, 18 19 stmt, 18 19 variable, 18 19 while, 18 21 aa, 18 21 assign, 18 21 bb, 18 21 call, 18 21 cc, 18 21 constant, 18 21 if, 18 21 print, 18 21 read, 18 21 stmt, 18 21 variable, 18 21 while, 19 20 aa, 19 20 assign, 19 20 bb, 19 20 call, 19 20 cc, 19 20 constant, 19 20 if, 19 20 print, 19 20 read, 19 20 stmt, 19 20 variable, 19 20 while, 2 3 aa, 2 3 assign, 2 3 bb, 2 3 call, 2 3 cc, 2 3 constant, 2 3 if, 2 3 print, 2 3 read, 2 3 stmt, 2 3 variable, 2 3 while, 2 4 aa, 2 4 assign, 2 4 bb, 2 4 call, 2 4 cc, 2 4 constant, 2 4 if, 2 4 print, 2 4 read, 2 4 stmt, 2 4 variable, 2 4 while, 20 24 aa, 20 24 assign, 20 24 bb, 20 24 call, 20 24 cc, 20 24 constant, 20 24 if, 20 24 print, 20 24 read, 20 24 stmt, 20 24 variable, 20 24 while, 21 22 aa, 21 22 assign, 21 22 bb, 21 22 call, 21 22 cc, 21 22 constant, 21 22 if, 21 22 print, 21 22 read, 21 22 stmt, 21 22 variable, 21 22 while, 22 23 aa, 22 23 assign, 22 23 bb, 22 23 call, 22 23 cc, 22 23 constant, 22 23 if, 22 23 print, 22 23 read, 22 23 stmt, 22 23 variable, 22 23 while, 23 21 aa, 23 21 assign, 23 21 bb, 23 21 call, 23 21 cc, 23 21 constant, 23 21 if, 23 21 print, 23 21 read, 23 21 stmt, 23 21 variable, 23 21 while, 21 24 aa, 21 24 assign, 21 24 bb, 21 24 call, 21 24 cc, 21 24 constant, 21 24 if, 21 24 print, 21 24 read, 21 24 stmt, 21 24 variable, 21 24 while, 25 26 aa, 25 26 assign, 25 26 bb, 25 26 call, 25 26 cc, 25 26 constant, 25 26 if, 25 26 print, 25 26 read, 25 26 stmt, 25 26 variable, 25 26 while, 26 27 aa, 26 27 assign, 26 27 bb, 26 27 call, 26 27 cc, 26 27 constant, 26 27 if, 26 27 print, 26 27 read, 26 27 stmt, 26 27 variable, 26 27 while, 26 30 aa, 26 30 assign, 26 30 bb, 26 30 call, 26 30 cc, 26 30 constant, 26 30 if, 26 30 print, 26 30 read, 26 30 stmt, 26 30 variable, 26 30 while, 27 28 aa, 27 28 assign, 27 28 bb, 27 28 call, 27 28 cc, 27 28 constant, 27 28 if, 27 28 print, 27 28 read, 27 28 stmt, 27 28 variable, 27 28 while, 28 29 aa, 28 29 assign, 28 29 bb, 28 29 call, 28 29 cc, 28 29 constant, 28 29 if, 28 29 print, 28 29 read, 28 29 stmt, 28 29 variable, 28 29 while, 29 26 aa, 29 26 assign, 29 26 bb, 29 26 call, 29 26 cc, 29 26 constant, 29 26 if, 29 26 print, 29 26 read, 29 26 stmt, 29 26 variable, 29 26 while, 3 5 aa, 3 5 assign, 3 5 bb, 3 5 call, 3 5 cc, 3 5 constant, 3 5 if, 3 5 print, 3 5 read, 3 5 stmt, 3 5 variable, 3 5 while, 30 31 aa, 30 31 assign, 30 31 bb, 30 31 call, 30 31 cc, 30 31 constant, 30 31 if, 30 31 print, 30 31 read, 30 31 stmt, 30 31 variable, 30 31 while, 4 5 aa, 4 5 assign, 4 5 bb, 4 5 call, 4 5 cc, 4 5 constant, 4 5 if, 4 5 print, 4 5 read, 4 5 stmt, 4 5 variable, 4 5 while, 5 13 aa, 5 13 assign, 5 13 bb, 5 13 call, 5 13 cc, 5 13 constant, 5 13 if, 5 13 print, 5 13 read, 5 13 stmt, 5 13 variable, 5 13 while, 5 6 aa, 5 6 assign, 5 6 bb, 5 6 call, 5 6 cc, 5 6 constant, 5 6 if, 5 6 print, 5 6 read, 5 6 stmt, 5 6 variable, 5 6 while, 6 7 aa, 6 7 assign, 6 7 bb, 6 7 call, 6 7 cc, 6 7 constant, 6 7 if, 6 7 print, 6 7 read, 6 7 stmt, 6 7 variable, 6 7 while, 7 8 aa, 7 8 assign, 7 8 bb, 7 8 call, 7 8 cc, 7 8 constant, 7 8 if, 7 8 print, 7 8 read, 7 8 stmt, 7 8 variable, 7 8 while, 8 11 aa, 8 11 assign, 8 11 bb, 8 11 call, 8 11 cc, 8 11 constant, 8 11 if, 8 11 print, 8 11 read, 8 11 stmt, 8 11 variable, 8 11 while, 8 9 aa, 8 9 assign, 8 9 bb, 8 9 call, 8 9 cc, 8 9 constant, 8 9 if, 8 9 print, 8 9 read, 8 9 stmt, 8 9 variable, 8 9 while, 9 10 aa, 9 10 assign, 9 10 bb, 9 10 call, 9 10 cc, 9 10 constant, 9 10 if, 9 10 print, 9 10 read, 9 10 stmt, 9 10 variable, 9 10 while, 10 5 aa, 10 5 assign, 10 5 bb, 10 5 call, 10 5 cc, 10 5 constant, 10 5 if, 10 5 print, 10 5 read, 10 5 stmt, 10 5 variable, 10 5 while
+5000

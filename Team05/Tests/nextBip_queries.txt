@@ -1,0 +1,420 @@
+1 - simple NextBip query with statement as 1st param and 2nd param INTEGER
+stmt s; assign a; procedure p;
+Select s such that NextBip(s, 2)
+1
+5000
+2 - simple NextBip query with assign as 1st param and 2nd param INTEGER
+stmt s; assign a; procedure p;
+Select a such that NextBip(a, 11)
+10
+5000
+3 - semantically invalid, simple NextBip query with procedure as 1st param and 2nd param INTEGER
+stmt s; assign a; procedure p;
+Select p such that NextBip(p, 2)
+
+5000
+4 - simple NextBip query with read as 1st param and 2nd param INTEGER
+stmt s; assign a; procedure p; read re;
+Select re such that NextBip(re, 3)
+2
+5000
+5 - simple NextBip query with print as 1st param and 2nd param INTEGER
+stmt s; assign a; procedure p; print pr;
+Select pr such that NextBip(pr, 5)
+8
+5000
+6 - simple NextBip query with ifs as 1st param and 2nd param first line of if stmt block
+stmt s; assign a; procedure p; if ifs;
+Select ifs such that NextBip(ifs, 16)
+15
+5000
+7 - simple NextBip query with ifs as 1st param and 2nd param first line of else stmt block
+stmt s; assign a; procedure p; if ifs;
+Select ifs such that NextBip(ifs, 18)
+15
+5000
+8 - simple NextBip query with while as 1st param and 2nd param INTEGER
+stmt s; assign a; procedure p; while w;
+Select w such that NextBip(w, 6)
+5
+5000
+9 - simple NextBip query with call as 1st param and 2nd param INTEGER
+stmt s; assign a; procedure p; call c;
+Select c such that NextBip(c, 7)
+6
+5000
+10 - invalid, simple NextBip query with constant as 1st param and 2nd param INTEGER
+stmt s; assign a; procedure p; constant c;
+Select c such that NextBip(c, 2)
+
+5000
+11 - simple NextBip query with both param INTEGER in same block
+stmt s; assign a; procedure p; if ifs;
+Select BOOLEAN such that NextBip(4, 8)
+TRUE
+5000
+12 - simple NextBip query with _ as 1st param and 2nd param INTEGER first stmt of procedure that is not called
+stmt s; assign a; procedure p; if ifs;
+Select BOOLEAN such that NextBip(_, 82)
+FALSE
+5000
+13 - simple NextBip query with _ as 1st param and 2nd param INTEGER first stmt of procedure that is called
+stmt s; assign a; procedure p; if ifs;
+Select BOOLEAN such that NextBip(_, 9)
+TRUE
+5000
+14 - simple NextBip query with statement as 2nd param and 1st param non-call INTEGER
+stmt s; assign a; procedure p;
+Select s such that NextBip(1, s)
+2
+5000
+15 - simple NextBip query with statement as 2nd param and 1st param call stmt number
+stmt s; assign a; procedure p;
+Select s such that NextBip(6, s)
+9
+5000
+16 - simple NextBip query with assign as 2nd param and 1st param non-call INTEGER
+stmt s; assign a; procedure p;
+Select a such that NextBip(9, a)
+10
+5000
+17 - simple NextBip query with assign as 2nd param and 1st param call stmt INTEGER
+stmt s; assign a; procedure p;
+Select a such that NextBip(17, a)
+1
+5000
+18 - semantically invalid, simple NextBip query with procedure as 2nd param and 1st param non-call INTEGER
+stmt s; assign a; procedure p;
+Select p such that NextBip(1, p)
+
+5000
+19 - semantically invalid, simple NextBip query with procedure as 2nd param and 1st param call stmt INTEGER
+stmt s; assign a; procedure p;
+Select p such that NextBip(22, p)
+
+5000
+20 - simple NextBip query with read as 2nd param and 1st param non-call INTEGER
+stmt s; assign a; procedure p; read re;
+Select re such that NextBip(1, re)
+2
+5000
+21 - simple NextBip query with read as 2nd param and 1st param call stmt INTEGER
+stmt s; assign a; procedure p; read re;
+Select re such that NextBip(69, re)
+39
+5000
+22 - simple NextBip query with print as 2nd param and 1st param INTEGER
+stmt s; assign a; procedure p; print pr;
+Select pr such that NextBip(2, pr)
+3
+5000
+23 - simple NextBip query with print as 2nd param and 1st param call stmt INTEGER
+stmt s; assign a; procedure p; print pr;
+Select pr such that NextBip(92, pr)
+61
+5000
+24 - simple NextBip query with ifs as 2nd param and 1st param non-call INTEGER
+stmt s; assign a; procedure p; if ifs;
+Select ifs such that NextBip(25, ifs)
+26
+5000
+25 - simple NextBip query with ifs as 2nd param and 1st param call stmt number
+stmt s; assign a; procedure p; if ifs;
+Select ifs such that NextBip(11, ifs)
+16
+5000
+26 - simple NextBip query with while as 2nd param and 1st param non-call INTEGER
+stmt s; assign a; procedure p; while w;
+Select w such that NextBip(40, w)
+41
+5000
+27 - simple NextBip query with while as 2nd param and 1st param call stmt INTEGER
+stmt s; assign a; procedure p; while w;
+Select w such that NextBip(20, w)
+23
+5000
+28 - simple NextBip query with wildcard as 2nd param and 1st param INTEGER not a call stmt
+stmt s; assign a; procedure p; if ifs;
+Select BOOLEAN such that NextBip(1, _)
+TRUE
+5000
+29 - simple NextBip query with wildcard as 2nd param and 1st param INTEGER a call stmt
+stmt s; assign a; procedure p; if ifs;
+Select BOOLEAN such that NextBip(22, _)
+TRUE
+5000
+30 - simple NextBip query with wildcard as 2nd param and 1st param INTEGER last statement of proc and not call stmt
+stmt s; assign a; procedure p; if ifs;
+Select BOOLEAN such that NextBip(3, _)
+FALSE
+5000
+31 - simple NextBip query with call as 1st param and 2nd param INTEGER
+stmt s; assign a; procedure p; call c;
+Select c such that NextBip(c, 23)
+20
+5000
+32 - invalid, simple NextBip query with constant as 1st param and 2nd param INTEGER
+stmt s; assign a; procedure p; constant c;
+Select c such that NextBip(c, 24)
+
+5000
+33 - both param INTEGER, 1st param smaller 2nd param in procedure stmt block
+stmt s; assign a; procedure p;
+Select BOOLEAN such that NextBip(13, 14)
+TRUE
+5000
+34 - both param INTEGER, 1st param greater 2nd param in procedure stmt block
+stmt s; assign a; procedure p;
+Select BOOLEAN such that NextBip(25, 23)
+FALSE
+5000
+35 - both param INTEGER, both param 0, semantically invalid
+stmt s; assign a; procedure p;
+Select s such that NextBip(0, 0)
+
+5000
+36 - both param INTEGER, 1st param 0, semantically invalid
+stmt s; assign a; procedure p;
+Select s such that NextBip(0, 1)
+
+5000
+37 - both param INTEGER, 2nd param 0, semantically invalid
+stmt s; assign a; procedure p;
+Select s such that NextBip(1, 0)
+
+5000
+38 - both param INTEGER, 1st param INTEGER out of index
+stmt s; assign a; procedure p;
+Select s such that NextBip(99, 2)
+
+5000
+39 - both param INTEGER, 2nd param INTEGER out of index
+stmt s; assign a; procedure p;
+Select s such that NextBip(2, 99)
+
+5000
+40 - 1st param INTEGER out of index, 2nd param wildcard
+stmt s; assign a; procedure p;
+Select s such that NextBip(99, _)
+
+5000
+41 - 2nd param INTEGER out of index, 1st param wildcard
+stmt s; assign a; procedure p;
+Select s such that NextBip(_, 99)
+
+5000
+42 - 1st param INTEGER out of index, 2nd param synonym
+stmt s; assign a; procedure p;
+Select s such that NextBip(99, s)
+
+5000
+43 - 2nd param INTEGER out of index, 1st param synonym
+stmt s; assign a; procedure p;
+Select s such that NextBip(s, 99)
+
+5000
+44 - 1st param last line of procedure not call stmt and not in while stmt block, 2nd param prog_line
+prog_line n; assign a; procedure p;
+Select n such that NextBip(3, n)
+7, 12, 17, 22, 28, 31, 32, 52, 55, 77, 81, 83, 85, 86
+5000
+45 - 1st param last line of procedure call stmt and not in while stmt block, 2nd param prog_line
+prog_line n; assign a; procedure p;
+Select n such that NextBip(84, n)
+9
+5000
+46 - 1st param last line of procedure not call stmt and in while stmt block, 2nd param prog_line
+prog_line n; assign a; procedure p;
+Select n such that NextBip(12, n)
+9
+5000
+47 - 1st param last line of procedure call stmt and in while stmt block, 2nd param prog_line
+prog_line n; assign a; procedure p;
+Select n such that NextBip(46, n)
+23
+5000
+48 - both param INTEGER, 1st param greater than 2nd param, not in while stmt block, 2nd param not call stmt
+stmt s; assign a; procedure p;
+Select BOOLEAN such that NextBip(14, 13)
+FALSE
+5000
+49 - both param INTEGER, 1st param greater than 2nd param, not in while stmt block, 2nd param call stmt
+stmt s; assign a; procedure p;
+Select BOOLEAN such that NextBip(82, 1)
+TRUE
+5000
+50 - both param INTEGER, 1st param > 2nd param, in while stmt block
+stmt s; assign a; procedure p;
+Select BOOLEAN such that NextBip(12, 10)
+TRUE
+5000
+51 - both param INTEGER, 1st param > 2nd param, in if stmt block only, 1st param not call stmt
+stmt s; assign a; procedure p;
+Select BOOLEAN such that NextBip(65, 61)
+FALSE
+5000
+52 - both param INTEGER, 1st param > 2nd param, in if stmt block only, 1st param call stmt
+stmt s; assign a; procedure p;
+Select BOOLEAN such that NextBip(64, 56)
+TRUE
+5000
+53 - both param INTEGER, 1st param > 2nd param, in else stmt block only, 1st param not call stmt
+stmt s; assign a; procedure p;
+Select BOOLEAN such that NextBip(50, 47)
+FALSE
+5000
+54 - both param INTEGER, 1st param > 2nd param, in else stmt block only, 1st param call stmt
+stmt s; assign a; procedure p;
+Select BOOLEAN such that NextBip(50, 19)
+TRUE
+5000
+55 - both param _
+prog_line n; assign a; procedure p;
+Select BOOLEAN such that NextBip(_, _)
+TRUE
+5000
+56 - 2nd param synonym with 1st param last line of execution in if block with no statements after and not call stmt
+prog_line n; assign a; procedure p;
+Select n such that NextBip(17, n)
+
+5000
+57 - 2nd param synonym with 1st param last line of execution in if block and call stmt
+prog_line n; assign a; procedure p;
+Select n such that NextBip(20, n)
+24
+5000
+58 - 2nd param synonym with 1st param last line of execution in if block with statements after
+prog_line n; assign a; procedure p;
+Select n such that NextBip(65, n)
+67
+5000
+59 - 2nd param statement synonym with 1st param last line of execution in else block with no statements after and call stmt
+prog_line n; assign a; procedure p;
+Select n such that NextBip(18, n)
+1
+5000
+60 - 2nd param statement synonym with 1st param last line of execution in else block with statements after
+prog_line n; assign a; procedure p;
+Select n such that NextBip(66, n)
+67
+5000
+61 - both param INTEGER from different procedures where 1st param has no path to 2nd param
+
+Select BOOLEAN such that NextBip(1, 15)
+FALSE
+5000
+62 - both param INTEGER from different procedures where first param has a path to 2nd param
+
+Select BOOLEAN such that NextBip(20, 25)
+TRUE
+5000
+63 - tuple with both param statement synonym
+stmt s1, s2;
+Select <s1, s2> such that NextBip(s1, s2)
+1 2, 2 3, 4 5, 5 6, 7 8, 8 5, 9 10, 10 11, 9 13, 13 14, 15 16, 15 16, 16 1, 18 1, 11 15, 14 15, 16 1, 18 1, 3 17, 6 9, 17 12, 3 12, 12 9, 19 20, 20 24, 21 9, 22 4, 19 9, 24 22, 17 22, 3 22, 5 23, 24 25, 25 26, 26 27, 27 9, 26 29, 29 30, 30 9, 28 31, 31 24, 17 28, 3 28, 17 31, 3 31, 32 33, 33 34, 34 35, 33 36, 35 47, 36 37, 37 15, 3 32, 17 32, 53 32, 32 38, 39 40, 40 41, 41 42, 42 43, 43 44, 44 45, 45 32, 38 42, 24 41, 42 46, 46 24, 47 48, 48 49, 49 9, 47 50, 51 52, 50 19, 52 53, 53 54, 54 15, 55 53, 3 52, 17 52, 23 51, 3 55, 17 55, 56 57, 57 24, 24 56, 58 59, 59 32, 58 60, 60 4, 61 62, 62 63, 63 64, 64 56, 65 67, 66 67, 67 68, 68 69, 69 39, 38 65, 5 65, 41 81, 62 70, 70 71, 71 72, 72 73, 73 47, 53 74, 74 75, 75 76, 76 4, 5 77, 77 78, 78 77, 77 75, 75 71, 79 71, 71 80, 80 9, 3 81, 17 81, 82 1, 3 83, 83 4, 5 84, 84 9, 3 85, 17 85, 85 15, 3 86, 17 86, 86 19, 23 87, 87 24, 24 88, 88 32, 28 89, 89 39, 41 90, 90 47, 53 91, 91 56, 5 92, 38 92, 92 61
+5000
+64 - tuple with both param progline synonym
+prog_line n1, n2;
+Select <n1, n2> such that NextBip(n1, n2)
+1 2, 2 3, 4 5, 5 6, 7 8, 8 5, 9 10, 10 11, 9 13, 13 14, 15 16, 15 16, 16 1, 18 1, 11 15, 14 15, 16 1, 18 1, 3 17, 6 9, 17 12, 3 12, 12 9, 19 20, 20 24, 21 9, 22 4, 19 9, 24 22, 17 22, 3 22, 5 23, 24 25, 25 26, 26 27, 27 9, 26 29, 29 30, 30 9, 28 31, 31 24, 17 28, 3 28, 17 31, 3 31, 32 33, 33 34, 34 35, 33 36, 35 47, 36 37, 37 15, 3 32, 17 32, 53 32, 32 38, 39 40, 40 41, 41 42, 42 43, 43 44, 44 45, 45 32, 38 42, 24 41, 42 46, 46 24, 47 48, 48 49, 49 9, 47 50, 50 51, 51 19, 47 52, 52 53, 53 54, 54 15, 55 53, 3 52, 17 52, 23 52, 3 55, 17 55, 56 57, 57 24, 24 56, 58 59, 59 32, 58 60, 60 4, 61 62, 62 63, 63 64, 64 56, 65 67, 66 67, 67 68, 68 69, 69 39, 38 65, 5 65, 41 81, 62 70, 70 71, 71 72, 72 73, 73 47, 53 74, 74 75, 75 76, 76 4, 5 77, 77 78, 78 77, 77 75, 75 71, 79 71, 71 80, 80 9, 3 81, 17 81, 82 1, 3 83, 83 4, 5 84, 84 9, 3 85, 17 85, 85 15, 3 86, 17 86, 86 19, 23 87, 87 24, 24 88, 88 32, 28 89, 89 39, 41 90, 90 47, 53 91, 91 56, 5 92, 38 92, 92 61
+5000
+65 - tuple with both param assign synonym
+assign a1, a2;
+Select <a1, a2> such that NextBip(a1, a2)
+66 67
+5000
+66 - tuple with both param procedure synonym
+procedure p1, p2;
+Select <p1, p2> such that NextBip(p1, p2)
+
+5000
+67 - tuple with both param ifs synonym
+if ifs1, ifs2;
+Select <ifs1, ifs2> such that NextBip(ifs1, ifs2)
+62 63,
+5000
+68 - tuple with both param while synonym
+while w1, w2;
+Select <w1, w2> such that NextBip(w1, w2)
+41 42,
+5000
+69 - no results tuple with both param call synonym
+call c1, c2;
+Select <c1, c2> such that NextBip(c1, c2)
+
+5000
+70 - invalid, tuple with both param constant synonym
+constant c1, c2;
+Select <c1, c2> such that NextBip(c1, c2)
+
+5000
+71 - tuple with both param read synonym
+read re1, re2;
+Select <re1, re2> such that NextBip(re1, re2)
+
+5000
+72 - tuple with both param print synonym
+print p1, p2;
+Select <p1, p2> such that NextBip(p1, p2)
+51 52
+5000
+73 - both param same synonym, semantically invalid
+prog_line n;
+Select n such that NextBip(n, n)
+
+5000
+74 - stmts executed before returning to while block
+stmt s; while w;
+Select s such that NextBip(s, w)
+4, 8, 12, 31, 3, 17, 53, 38, 24, 55, 5, 75, 79
+5000
+75 - 1st param last stmt of procedure that was called, 2nd param synonym
+prog_line n;
+Select n such that NextBip(3, s)
+12, 17, 32, 55, 82, 86
+5000
+76 - 1st param last stmt of procedure that was called, 2nd param synonym
+prog_line n;
+Select n such that NextBip(5, s)
+23, 65, 77, 84, 92
+5000
+77 - 1st param last stmt of procedure that was called, 2nd param synonym
+prog_line n;
+Select n such that NextBip(17, s)
+12, 32, 55, 86,
+5000
+78 - 1st param last stmt of procedure that was called, 2nd param synonym
+prog_line n;
+Select n such that NextBip(23, s)
+50, 71, 87
+5000
+79 - 1st param last stmt of procedure that was called, 2nd param synonym
+prog_line n;
+Select n such that NextBip(24, s)
+22, 41, 56, 88
+5000
+80 - 1st param last stmt of procedure that was called, 2nd param synonym
+prog_line n;
+Select n such that NextBip(38, s)
+42, 65, 89, 92
+5000
+81 - 1st param last stmt of procedure that was called, 2nd param synonym
+prog_line n;
+Select n such that NextBip(41, s)
+81, 90
+5000
+82 - 1st param last stmt of procedure that was called, 2nd param synonym
+prog_line n;
+Select n such that NextBip(53, s)
+74, 91, 32,
+5000
+83 - tuple with both param while synonym
+while w; if ifs;
+Select <w, ifs> such that NextBip(w, ifs)
+32 33,
+5000
+84 - tuple with both param while synonym
+while w; if ifs;
+Select <ifs, w> such that NextBip(ifs, w)
+
+5000

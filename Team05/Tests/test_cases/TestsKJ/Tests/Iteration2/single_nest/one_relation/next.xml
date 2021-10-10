@@ -1,0 +1,29 @@
+<?xml-stylesheet type="text/xsl" href="analysis.xsl"?>
+<test_results>
+<info>
+<name>tests</name><parsing_time_taken>52.000000</parsing_time_taken>
+</info>
+<queries>
+<query>
+<id ReturnTuple="1" Nextstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="Select stmt next to given stmt number">1</id><querystr><![CDATA[stmt s; Select s such that Next* (9, s)]]></querystr>
+<stuans>10,11,12,13,14,15,16</stuans>
+<correct>10,11,12,13,14,15,16</correct>
+<time_taken>36.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Next="1" SuchThat="1" CondNum="3" RelNum="1" comment="Select stmt next inside while loop">2</id><querystr><![CDATA[stmt s; Select s such that Next (25, s)]]></querystr>
+<stuans>23</stuans>
+<correct>23</correct>
+<time_taken>46.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="Select stmt next inside while loop">3</id><querystr><![CDATA[stmt s; Select s such that Next* (15, s)]]></querystr>
+<stuans>13,14,15,16</stuans>
+<correct>13,14,15,16</correct>
+<time_taken>39.000000</time_taken>
+<passed/>
+</query>
+</queries>
+</test_results>

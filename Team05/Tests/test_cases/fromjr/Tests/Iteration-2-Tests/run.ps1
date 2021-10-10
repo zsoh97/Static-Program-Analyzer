@@ -1,0 +1,5 @@
+#Invoke-Expression -Command "autotester.exe 1_source_advanced.txt 1_queries_advanced_1.txt 1_advanced1.xml"
+#Invoke-Expression -Command "autotester.exe 1_source_advanced.txt 1_queries_advanced_2.txt 1_advanced2.xml"
+#Invoke-Expression -Command "autotester.exe 2_source_procedure.txt 2_queries_procedure.txt 2_queries_procedure.xml"
+Invoke-Expression -Command "autotester.exe 3_source_nesting.txt 3_queries_nesting.txt 2_queries_nesting.xml"
+Invoke-Expression -Command "autotester.exe 3_source_nesting.txt 3_queries_nesting_trunc.txt 2_queries_nestingT.xml"

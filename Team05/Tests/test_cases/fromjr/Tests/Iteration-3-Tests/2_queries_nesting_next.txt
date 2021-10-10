@@ -1,0 +1,1700 @@
+2001 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(proc, proc)
+FALSE
+5000
+2002 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(proc, cl)
+FALSE
+5000
+2003 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(proc, v)
+FALSE
+5000
+2004 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(proc, r)
+FALSE
+5000
+2005 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(proc, p)
+FALSE
+5000
+2006 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(proc, c)
+FALSE
+5000
+2007 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(proc, s)
+FALSE
+5000
+2008 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(proc, w)
+FALSE
+5000
+2009 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(proc, ifs)
+FALSE
+5000
+2010 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(proc, a)
+FALSE
+5000
+2011 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(proc, n)
+FALSE
+5000
+2012 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(proc, _)
+FALSE
+5000
+2013 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(proc1, proc2)
+FALSE
+5000
+2014 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(cl, proc)
+FALSE
+5000
+2015 - Valid. suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(cl, cl)
+FALSE
+5000
+2016 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(cl, v)
+FALSE
+5000
+2017 - Valid. suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(cl, r)
+FALSE
+5000
+2018 - Valid. suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(cl, p)
+FALSE
+5000
+2019 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(cl, c)
+FALSE
+5000
+2020 - Valid. suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(cl, s)
+TRUE
+5000
+2021 - Valid. suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(cl, w)
+TRUE
+5000
+2022 - Valid. suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(cl, ifs)
+FALSE
+5000
+2023 - Valid. suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(cl, a)
+FALSE
+5000
+2024 - Valid. suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(cl, n)
+TRUE
+5000
+2025 - Valid. suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(cl, _)
+TRUE
+5000
+2026 - Valid. suchthat-cl Next
+procedure proc; call cl1, cl2; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(cl1, cl2)
+FALSE
+5000
+2027 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(v, proc)
+FALSE
+5000
+2028 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(v, cl)
+FALSE
+5000
+2029 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(v, v)
+FALSE
+5000
+2030 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(v, r)
+FALSE
+5000
+2031 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(v, p)
+FALSE
+5000
+2032 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(v, c)
+FALSE
+5000
+2033 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(v, s)
+FALSE
+5000
+2034 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(v, w)
+FALSE
+5000
+2035 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(v, ifs)
+FALSE
+5000
+2036 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(v, a)
+FALSE
+5000
+2037 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(v, n)
+FALSE
+5000
+2038 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(v, _)
+FALSE
+5000
+2039 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next
+procedure proc; call cl; variable v1, v2; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(v1, v2)
+FALSE
+5000
+2040 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(r, proc)
+FALSE
+5000
+2041 - Valid. suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(r, cl)
+FALSE
+5000
+2042 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(r, v)
+FALSE
+5000
+2043 - Valid. suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(r, r)
+FALSE
+5000
+2044 - Valid. suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(r, p)
+TRUE
+5000
+2045 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(r, c)
+FALSE
+5000
+2046 - Valid. suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(r, s)
+TRUE
+5000
+2047 - Valid. suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(r, w)
+TRUE
+5000
+2048 - Valid. suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(r, ifs)
+FALSE
+5000
+2049 - Valid. suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(r, a)
+TRUE
+5000
+2050 - Valid. suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(r, n)
+TRUE
+5000
+2051 - Valid. suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(r, _)
+TRUE
+5000
+2052 - Valid. suchthat-cl Next
+procedure proc; call cl; variable v; read r1, r2; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(r1, r2)
+FALSE
+5000
+2053 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(p, proc)
+FALSE
+5000
+2054 - Valid. suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(p, cl)
+FALSE
+5000
+2055 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(p, v)
+FALSE
+5000
+2056 - Valid. suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(p, r)
+FALSE
+5000
+2057 - Valid. suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(p, p)
+FALSE
+5000
+2058 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(p, c)
+FALSE
+5000
+2059 - Valid. suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(p, s)
+TRUE
+5000
+2060 - Valid. suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(p, w)
+TRUE
+5000
+2061 - Valid. suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(p, ifs)
+TRUE
+5000
+2062 - Valid. suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(p, a)
+TRUE
+5000
+2063 - Valid. suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(p, n)
+TRUE
+5000
+2064 - Valid. suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(p, _)
+TRUE
+5000
+2065 - Valid. suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p1, p2; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(p1, p2)
+FALSE
+5000
+2066 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(c, proc)
+FALSE
+5000
+2067 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(c, cl)
+FALSE
+5000
+2068 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(c, v)
+FALSE
+5000
+2069 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(c, r)
+FALSE
+5000
+2070 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(c, p)
+FALSE
+5000
+2071 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(c, c)
+FALSE
+5000
+2072 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(c, s)
+FALSE
+5000
+2073 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(c, w)
+FALSE
+5000
+2074 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(c, ifs)
+FALSE
+5000
+2075 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(c, a)
+FALSE
+5000
+2076 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(c, n)
+FALSE
+5000
+2077 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(c, _)
+FALSE
+5000
+2078 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c1, c2; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(c1, c2)
+FALSE
+5000
+2079 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(s, proc)
+FALSE
+5000
+2080 - Valid. suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(s, cl)
+TRUE
+5000
+2081 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(s, v)
+FALSE
+5000
+2082 - Valid. suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(s, r)
+TRUE
+5000
+2083 - Valid. suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(s, p)
+TRUE
+5000
+2084 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(s, c)
+FALSE
+5000
+2085 - Valid. suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(s, s)
+FALSE
+5000
+2086 - Valid. suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(s, w)
+TRUE
+5000
+2087 - Valid. suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(s, ifs)
+TRUE
+5000
+2088 - Valid. suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(s, a)
+TRUE
+5000
+2089 - Valid. suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(s, n)
+TRUE
+5000
+2090 - Valid. suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(s, _)
+TRUE
+5000
+2091 - Valid. suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(s1, s2)
+TRUE
+5000
+2092 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(w, proc)
+FALSE
+5000
+2093 - Valid. suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(w, cl)
+TRUE
+5000
+2094 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(w, v)
+FALSE
+5000
+2095 - Valid. suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(w, r)
+TRUE
+5000
+2096 - Valid. suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(w, p)
+TRUE
+5000
+2097 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(w, c)
+FALSE
+5000
+2098 - Valid. suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(w, s)
+TRUE
+5000
+2099 - Valid. suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(w, w)
+FALSE
+5000
+2100 - Valid. suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(w, ifs)
+TRUE
+5000
+2101 - Valid. suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(w, a)
+TRUE
+5000
+2102 - Valid. suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(w, n)
+TRUE
+5000
+2103 - Valid. suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(w, _)
+TRUE
+5000
+2104 - Valid. suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w1, w2; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(w1, w2)
+TRUE
+5000
+2105 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(ifs, proc)
+FALSE
+5000
+2106 - Valid. suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(ifs, cl)
+FALSE
+5000
+2107 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(ifs, v)
+FALSE
+5000
+2108 - Valid. suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(ifs, r)
+TRUE
+5000
+2109 - Valid. suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(ifs, p)
+TRUE
+5000
+2110 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(ifs, c)
+FALSE
+5000
+2111 - Valid. suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(ifs, s)
+TRUE
+5000
+2112 - Valid. suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(ifs, w)
+TRUE
+5000
+2113 - Valid. suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(ifs, ifs)
+FALSE
+5000
+2114 - Valid. suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(ifs, a)
+TRUE
+5000
+2115 - Valid. suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(ifs, n)
+TRUE
+5000
+2116 - Valid. suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(ifs, _)
+TRUE
+5000
+2117 - Valid. suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs1, ifs2; assign a; prog_line n;
+Select BOOLEAN such that Next(ifs1, ifs2)
+TRUE
+5000
+2118 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(a, proc)
+FALSE
+5000
+2119 - Valid. suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(a, cl)
+TRUE
+5000
+2120 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(a, v)
+FALSE
+5000
+2121 - Valid. suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(a, r)
+TRUE
+5000
+2122 - Valid. suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(a, p)
+TRUE
+5000
+2123 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(a, c)
+FALSE
+5000
+2124 - Valid. suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(a, s)
+TRUE
+5000
+2125 - Valid. suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(a, w)
+TRUE
+5000
+2126 - Valid. suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(a, ifs)
+TRUE
+5000
+2127 - Valid. suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(a, a)
+FALSE
+5000
+2128 - Valid. suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(a, n)
+TRUE
+5000
+2129 - Valid. suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(a, _)
+TRUE
+5000
+2130 - Valid. suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a1, a2; prog_line n;
+Select BOOLEAN such that Next(a1, a2)
+TRUE
+5000
+2131 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(n, proc)
+FALSE
+5000
+2132 - Valid. suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(n, cl)
+TRUE
+5000
+2133 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(n, v)
+FALSE
+5000
+2134 - Valid. suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(n, r)
+TRUE
+5000
+2135 - Valid. suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(n, p)
+TRUE
+5000
+2136 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(n, c)
+FALSE
+5000
+2137 - Valid. suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(n, s)
+TRUE
+5000
+2138 - Valid. suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(n, w)
+TRUE
+5000
+2139 - Valid. suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(n, ifs)
+TRUE
+5000
+2140 - Valid. suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(n, a)
+TRUE
+5000
+2141 - Valid. suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(n, n)
+FALSE
+5000
+2142 - Valid. suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(n, _)
+TRUE
+5000
+2143 - Valid. suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select BOOLEAN such that Next(n1, n2)
+TRUE
+5000
+2144 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(_, proc)
+FALSE
+5000
+2145 - Valid. suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(_, cl)
+TRUE
+5000
+2146 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(_, v)
+FALSE
+5000
+2147 - Valid. suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(_, r)
+TRUE
+5000
+2148 - Valid. suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(_, p)
+TRUE
+5000
+2149 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(_, c)
+FALSE
+5000
+2150 - Valid. suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(_, s)
+TRUE
+5000
+2151 - Valid. suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(_, w)
+TRUE
+5000
+2152 - Valid. suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(_, ifs)
+TRUE
+5000
+2153 - Valid. suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(_, a)
+TRUE
+5000
+2154 - Valid. suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(_, n)
+TRUE
+5000
+2155 - Valid. suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next(_, _)
+TRUE
+5000
+2156 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(proc, proc)
+FALSE
+5000
+2157 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(proc, cl)
+FALSE
+5000
+2158 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(proc, v)
+FALSE
+5000
+2159 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(proc, r)
+FALSE
+5000
+2160 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(proc, p)
+FALSE
+5000
+2161 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(proc, c)
+FALSE
+5000
+2162 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(proc, s)
+FALSE
+5000
+2163 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(proc, w)
+FALSE
+5000
+2164 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(proc, ifs)
+FALSE
+5000
+2165 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(proc, a)
+FALSE
+5000
+2166 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(proc, n)
+FALSE
+5000
+2167 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(proc, _)
+FALSE
+5000
+2168 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next*
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(proc1, proc2)
+FALSE
+5000
+2169 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(cl, proc)
+FALSE
+5000
+2170 - Valid. suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(cl, cl)
+TRUE
+5000
+2171 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(cl, v)
+FALSE
+5000
+2172 - Valid. suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(cl, r)
+TRUE
+5000
+2173 - Valid. suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(cl, p)
+TRUE
+5000
+2174 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(cl, c)
+FALSE
+5000
+2175 - Valid. suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(cl, s)
+TRUE
+5000
+2176 - Valid. suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(cl, w)
+TRUE
+5000
+2177 - Valid. suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(cl, ifs)
+TRUE
+5000
+2178 - Valid. suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(cl, a)
+TRUE
+5000
+2179 - Valid. suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(cl, n)
+TRUE
+5000
+2180 - Valid. suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(cl, _)
+TRUE
+5000
+2181 - Valid. suchthat-cl Next*
+procedure proc; call cl1, cl2; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(cl1, cl2)
+TRUE
+5000
+2182 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(v, proc)
+FALSE
+5000
+2183 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(v, cl)
+FALSE
+5000
+2184 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(v, v)
+FALSE
+5000
+2185 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(v, r)
+FALSE
+5000
+2186 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(v, p)
+FALSE
+5000
+2187 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(v, c)
+FALSE
+5000
+2188 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(v, s)
+FALSE
+5000
+2189 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(v, w)
+FALSE
+5000
+2190 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(v, ifs)
+FALSE
+5000
+2191 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(v, a)
+FALSE
+5000
+2192 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(v, n)
+FALSE
+5000
+2193 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(v, _)
+FALSE
+5000
+2194 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next*
+procedure proc; call cl; variable v1, v2; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(v1, v2)
+FALSE
+5000
+2195 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(r, proc)
+FALSE
+5000
+2196 - Valid. suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(r, cl)
+TRUE
+5000
+2197 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(r, v)
+FALSE
+5000
+2198 - Valid. suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(r, r)
+TRUE
+5000
+2199 - Valid. suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(r, p)
+TRUE
+5000
+2200 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(r, c)
+FALSE
+5000
+2201 - Valid. suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(r, s)
+TRUE
+5000
+2202 - Valid. suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(r, w)
+TRUE
+5000
+2203 - Valid. suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(r, ifs)
+TRUE
+5000
+2204 - Valid. suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(r, a)
+TRUE
+5000
+2205 - Valid. suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(r, n)
+TRUE
+5000
+2206 - Valid. suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(r, _)
+TRUE
+5000
+2207 - Valid. suchthat-cl Next*
+procedure proc; call cl; variable v; read r1, r2; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(r1, r2)
+TRUE
+5000
+2208 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(p, proc)
+FALSE
+5000
+2209 - Valid. suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(p, cl)
+TRUE
+5000
+2210 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(p, v)
+FALSE
+5000
+2211 - Valid. suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(p, r)
+TRUE
+5000
+2212 - Valid. suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(p, p)
+TRUE
+5000
+2213 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(p, c)
+FALSE
+5000
+2214 - Valid. suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(p, s)
+TRUE
+5000
+2215 - Valid. suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(p, w)
+TRUE
+5000
+2216 - Valid. suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(p, ifs)
+TRUE
+5000
+2217 - Valid. suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(p, a)
+TRUE
+5000
+2218 - Valid. suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(p, n)
+TRUE
+5000
+2219 - Valid. suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(p, _)
+TRUE
+5000
+2220 - Valid. suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p1, p2; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(p1, p2)
+TRUE
+5000
+2221 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(c, proc)
+FALSE
+5000
+2222 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(c, cl)
+FALSE
+5000
+2223 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(c, v)
+FALSE
+5000
+2224 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(c, r)
+FALSE
+5000
+2225 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(c, p)
+FALSE
+5000
+2226 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(c, c)
+FALSE
+5000
+2227 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(c, s)
+FALSE
+5000
+2228 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(c, w)
+FALSE
+5000
+2229 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(c, ifs)
+FALSE
+5000
+2230 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(c, a)
+FALSE
+5000
+2231 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(c, n)
+FALSE
+5000
+2232 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(c, _)
+FALSE
+5000
+2233 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c1, c2; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(c1, c2)
+FALSE
+5000
+2234 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(s, proc)
+FALSE
+5000
+2235 - Valid. suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(s, cl)
+TRUE
+5000
+2236 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(s, v)
+FALSE
+5000
+2237 - Valid. suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(s, r)
+TRUE
+5000
+2238 - Valid. suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(s, p)
+TRUE
+5000
+2239 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(s, c)
+FALSE
+5000
+2240 - Valid. suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(s, s)
+TRUE
+5000
+2241 - Valid. suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(s, w)
+TRUE
+5000
+2242 - Valid. suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(s, ifs)
+TRUE
+5000
+2243 - Valid. suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(s, a)
+TRUE
+5000
+2244 - Valid. suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(s, n)
+TRUE
+5000
+2245 - Valid. suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(s, _)
+TRUE
+5000
+2246 - Valid. suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s1, s2; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(s1, s2)
+TRUE
+5000
+2247 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(w, proc)
+FALSE
+5000
+2248 - Valid. suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(w, cl)
+TRUE
+5000
+2249 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(w, v)
+FALSE
+5000
+2250 - Valid. suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(w, r)
+TRUE
+5000
+2251 - Valid. suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(w, p)
+TRUE
+5000
+2252 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(w, c)
+FALSE
+5000
+2253 - Valid. suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(w, s)
+TRUE
+5000
+2254 - Valid. suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(w, w)
+TRUE
+5000
+2255 - Valid. suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(w, ifs)
+TRUE
+5000
+2256 - Valid. suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(w, a)
+TRUE
+5000
+2257 - Valid. suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(w, n)
+TRUE
+5000
+2258 - Valid. suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(w, _)
+TRUE
+5000
+2259 - Valid. suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w1, w2; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(w1, w2)
+TRUE
+5000
+2260 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(ifs, proc)
+FALSE
+5000
+2261 - Valid. suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(ifs, cl)
+TRUE
+5000
+2262 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(ifs, v)
+FALSE
+5000
+2263 - Valid. suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(ifs, r)
+TRUE
+5000
+2264 - Valid. suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(ifs, p)
+TRUE
+5000
+2265 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(ifs, c)
+FALSE
+5000
+2266 - Valid. suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(ifs, s)
+TRUE
+5000
+2267 - Valid. suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(ifs, w)
+TRUE
+5000
+2268 - Valid. suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(ifs, ifs)
+TRUE
+5000
+2269 - Valid. suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(ifs, a)
+TRUE
+5000
+2270 - Valid. suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(ifs, n)
+TRUE
+5000
+2271 - Valid. suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(ifs, _)
+TRUE
+5000
+2272 - Valid. suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs1, ifs2; assign a; prog_line n;
+Select BOOLEAN such that Next*(ifs1, ifs2)
+TRUE
+5000
+2273 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(a, proc)
+FALSE
+5000
+2274 - Valid. suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(a, cl)
+TRUE
+5000
+2275 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(a, v)
+FALSE
+5000
+2276 - Valid. suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(a, r)
+TRUE
+5000
+2277 - Valid. suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(a, p)
+TRUE
+5000
+2278 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(a, c)
+FALSE
+5000
+2279 - Valid. suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(a, s)
+TRUE
+5000
+2280 - Valid. suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(a, w)
+TRUE
+5000
+2281 - Valid. suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(a, ifs)
+TRUE
+5000
+2282 - Valid. suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(a, a)
+TRUE
+5000
+2283 - Valid. suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(a, n)
+TRUE
+5000
+2284 - Valid. suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(a, _)
+TRUE
+5000
+2285 - Valid. suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a1, a2; prog_line n;
+Select BOOLEAN such that Next*(a1, a2)
+TRUE
+5000
+2286 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(n, proc)
+FALSE
+5000
+2287 - Valid. suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(n, cl)
+TRUE
+5000
+2288 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(n, v)
+FALSE
+5000
+2289 - Valid. suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(n, r)
+TRUE
+5000
+2290 - Valid. suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(n, p)
+TRUE
+5000
+2291 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(n, c)
+FALSE
+5000
+2292 - Valid. suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(n, s)
+TRUE
+5000
+2293 - Valid. suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(n, w)
+TRUE
+5000
+2294 - Valid. suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(n, ifs)
+TRUE
+5000
+2295 - Valid. suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(n, a)
+TRUE
+5000
+2296 - Valid. suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(n, n)
+TRUE
+5000
+2297 - Valid. suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(n, _)
+TRUE
+5000
+2298 - Valid. suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select BOOLEAN such that Next*(n1, n2)
+TRUE
+5000
+2299 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(_, proc)
+FALSE
+5000
+2300 - Valid. suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(_, cl)
+TRUE
+5000
+2301 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(_, v)
+FALSE
+5000
+2302 - Valid. suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(_, r)
+TRUE
+5000
+2303 - Valid. suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(_, p)
+TRUE
+5000
+2304 - Invalid. Args must be (lineRef, lineRef) suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(_, c)
+FALSE
+5000
+2305 - Valid. suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(_, s)
+TRUE
+5000
+2306 - Valid. suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(_, w)
+TRUE
+5000
+2307 - Valid. suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(_, ifs)
+TRUE
+5000
+2308 - Valid. suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(_, a)
+TRUE
+5000
+2309 - Valid. suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(_, n)
+TRUE
+5000
+2310 - Valid. suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(_, _)
+TRUE
+5000
+2311 - Invalid. Case sensitive, suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select BOOLEAN such that next*(n1, n2)
+
+5000
+2312 - Valid. suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next* (10, 10)
+TRUE
+5000
+2313 - Valid. Extra space, suchthat-cl Next*
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select BOOLEAN such that Next* (n1, n2)
+TRUE
+5000
+2314 - Valid. 2 wildcards, suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(_, _)
+TRUE
+5000
+2315 - Valid. 1 wildcard 1 synonym, suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(_, n)
+TRUE
+5000
+2316 - Valid. 1 wildcard 1 constant, suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(_, 10)
+TRUE
+5000
+2317 - Valid. 1 synonym 1 wildcard, suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(n, _)
+TRUE
+5000
+2318 - Valid. 1 constant 1 wildcard, suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(10, _)
+TRUE
+5000
+2319 - Valid. 2 synonyms, suchthat-cl Next*
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select BOOLEAN such that Next*(n1, n2)
+TRUE
+5000
+2320 - Valid. 1 synonym 1 constant, suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(n, 27)
+TRUE
+5000
+2321 - Valid. 1 constant 1 synonym, suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(2, n)
+TRUE
+5000
+2322 - Valid. 2 constants, suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(2, 27)
+TRUE
+5000
+2323 - Valid. 2 constants, suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select BOOLEAN such that Next*(10, 1)
+FALSE
+5000
+2324 - Valid. non-container-stmt, non-container-stmt, suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select n such that Next*(51, n)
+52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93
+5000
+2325 - Valid. non-container-stmt, while-parent, suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select n such that Next*(52, n)
+53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93
+5000
+2326 - Valid. non-container-stmt, if-parent, suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select n such that Next*(55, n)
+53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93
+5000
+2327 - Valid. while-parent, after-while-container or while-child, suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select n such that Next*(53, n)
+53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93
+5000
+2328 - Valid. while-parent, after-while-container or while-parent, suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select n such that Next*(13, n)
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36
+5000
+2329 - Valid. while-parent, after-while-container or if-parent, suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select n such that Next*(1, n)
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36
+5000
+2330 - Valid. if-parent, if-child or else-child, suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select n such that Next*(37, n)
+38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50
+5000
+2331 - Valid. if-parent, if-parent or else-child, suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select n such that Next*(27, n)
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36
+5000
+2332 - Valid. if-parent, while-parent or else-child, suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select n such that Next*(28, n)
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36
+5000
+2333 - Valid. while-child, while child, suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select n such that Next*(30, n)
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36
+5000
+2334 - Valid. while-child, while-parent, suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select n such that Next*(31, n)
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36
+5000
+2335 - Valid. if-child, if-child, suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select n such that Next*(57, n)
+53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93
+5000
+2336 - Valid. if-child, after-if-container, suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select n such that Next*(47, n)
+44, 45, 46, 47, 48, 49, 50
+5000
+2337 - Valid. if-child, while-parent, suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select n such that Next*(38, n)
+39, 40, 41, 42, 44, 45, 46, 47, 48, 49, 50
+5000
+2338 - Valid. else-child, else-child, suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select n such that Next*(73, n)
+53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93
+5000
+2339 - Valid. else-child, after-if-container, suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select n such that Next*(48, n)
+44, 45, 46, 47, 48, 49, 50
+5000
+2340 - Valid. else-child, while-parent, suchthat-cl Next*
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select n such that Next*(22, n)
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36
+5000

@@ -1,0 +1,103 @@
+procedure whileAndIfWithNoStmtAfter {
+    while (x == one) {
+        if ( x == two) then {
+            x = three;
+        } else {
+            x = four;
+        }
+    }
+}
+
+procedure whileWithNoStmtAfterIfWithStmtAfter {
+    while (x == five) {
+        if ( x == six) then {
+            x = seven;
+        } else {
+            x = eight;
+        }
+        x = 9;
+    }
+}
+
+procedure whileWithStmtAfter {
+    while (x == ten) {
+        if ( x == eleven) then {
+            x = twelve;
+        } else {
+            x = thirteen;
+        }
+    }
+    x = fourteen;
+}
+
+procedure ifWithNoStatementAfter {
+    if ( x == 15) then{
+        x = sixteen;
+    } else {
+        x = seventeen;
+    }
+}
+
+procedure ifWithStatementAfter {
+    if ( x == 18) then {
+            x = nineteen;
+        } else {
+            x = 20;}
+            x = twentyone;
+
+}
+
+procedure main {
+    x = 22;
+    while (x == twenty3) {
+        call whileWithStmtAfter;}
+    if (x == 25) then {
+        print twentysix;
+    } else {
+        read twentyseven;
+    }
+    x = 28;
+}
+
+procedure tuple {
+    call main;
+    call main;
+    print thirtyone;
+    print thirtytwo;
+    read thirtythree;
+    read thirtyfour;
+    x = 35;
+    x = 36;
+}
+
+procedure whileWhile {
+    while (x == 37) {
+        while (x == thirty8) {
+            x = thirtynine;
+        }
+    }
+}
+
+procedure ifIfs {
+    if (x == forty) then {
+        if (x == forty1) then {
+            x = 42;
+        } else {
+            x = 43;
+        }
+    } else {
+        x = 44;
+    }
+}
+
+procedure ifElse {
+    if (x == fortyfive) then {
+        x = 46;
+    } else {
+        if (x == 47) then {
+            x = 48;
+        } else {
+            x = 49;
+        }
+    }
+}

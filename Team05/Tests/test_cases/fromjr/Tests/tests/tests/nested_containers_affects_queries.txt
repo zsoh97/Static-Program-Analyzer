@@ -1,0 +1,110 @@
+45 - Affects single clause (num, num)
+stmt s;
+Select BOOLEAN such that Affects (22, 39)
+FALSE
+5000
+46 - Affects single clause (num, s)
+stmt s;
+Select s such that Affects (2, s)
+18,10,11,57,61
+5000
+47 - Affects single clause (_, num)
+
+Select BOOLEAN such that Affects (_, 1)
+FALSE
+5000
+48 - Affects single clause (s, _)
+assign a;
+Select a such that Affects (a, _)
+21,18,10,9,36,1,35,2,16,19,20,57,22,27,32,33,38,39,43,45,58,59,66
+5000
+49 - Affects single clause (_, _)
+variable v;
+Select v such that Affects (_, _)
+a, b, c, d, e, i, x, y, z
+5000
+50 - Affects single clause (s, s)
+stmt s;
+Select s such that Affects (s, s)
+20,32
+5000
+51 - Affects multi clause (_, s)
+stmt s;
+Select s such that Affects (_, s) and Follows* (s, 68)
+67
+5000
+52 - Affects multi clause (n, s)
+prog_line n; assign a;
+Select <n, a> such that Affects(n, a) with n = a.stmt#
+32 32,20 20
+5000
+53 - Affects multi clause (with, such that, pattern) (s, s)
+assign a; variable v; stmt s1, s2;
+Select s1 such that Affects (s1, s2) and Uses(s1, v) with v.varName = "x" pattern a (v, _"a + b"_)
+none
+5000
+54 - Affects multi clause (with, such that, pattern) (s, s)
+print pn; assign a; variable v; if ifs; stmt s;
+Select <s, pn> such that Affects (s1, s2) and Uses(s2, v) and Uses (pn, v)
+none
+5000
+55 - Affects multi clause (multi with) (_, s)
+read re; variable v; stmt s;
+Select v such that Affects (_, s) with v.varName = re.varName and s.stmt# = re.stmt#
+none
+5000
+56 - Affects multi clause (multi pattern)
+while w; if ifs; assign a; variable v;
+Select <w.stmt#, ifs.stmt#> such that Affects (a, a) pattern a (v, _) and pattern w (v, _) pattern ifs (v, _, _)
+none
+5000
+57 - Affects* single clause (num, s)
+stmt s;
+Select s such that Affects* (61, s)
+none
+5000
+58 - Affects* single clause (_, _)
+
+Select BOOLEAN such that Affects* (_, _)
+TRUE
+5000
+59 - Affects* single clause (s, s)
+stmt s;
+Select s such that Affects* (s, s)
+20,32,33,35
+5000
+60 - Affects* single clause (_, s)
+stmt s;
+Select s such that Affects* (_, s)
+18,21,10,19,20,11,16,32,33,35,36,46,48,57,58,59,61,67
+5000
+61 - Affects* single clause (num, _)
+variable v;
+Select v such that Affects* (30, _)
+none
+5000
+62 - Affects* single clause (num, num)
+stmt s;
+Select s such that Affects* (16, 61)
+36,1,35,2,34,3,33,4,5,32,6,31,7,30,8,64,9,10,29,11,28,12,13,14,58,15,59,16,17,18,21,54,19,20,55,22,57,23,56,24,51,25,50,26,53,27,52,37,38,63,39,62,40,41,42,43,44,45,46,47,48,49,60,61,65,66,67,68,69,70,71,72,73,74
+5000
+63 - Affects* multi clause
+prog_line n; assign a;
+Select n pattern a (_, "a + b + c") such that Affects*(n, a)
+21,18,36,1,22,35,2,16,19,20,27,33,39
+5000
+64 - Affects* multi clause (with, such that, pattern)
+assign a; stmt s; if ifs; variable v;
+Select s pattern ifs (v, _, _) such that Affects* (a, s) and Uses (s, v) with s.stmt# = a.stmt#
+20,33,32
+5000
+65 - Affects* multi clause (multi with)
+read re; prog_line n; variable v; constant c;
+Select <re.stmt#, v.varName, c.value> such that Affects* (_, 15) with re.varName = v.varName with c.value = re.stmt#
+none
+5000
+66 - Affects* multi clause (multi pattern)
+while w; if ifs; assign a; variable v;
+Select a such that Affects* (a, a) pattern a (v, _) and ifs (v, _, _) and w (v, _)
+35,32
+5000

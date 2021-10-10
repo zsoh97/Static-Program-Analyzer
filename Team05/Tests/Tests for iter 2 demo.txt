@@ -1,0 +1,95 @@
+Basic Source 1 Procedure with all statement types:
+
+procedure ABC {
+    a = 1;
+    while (b == 2) {
+        read c;}
+    if (d == 4) then {
+        print e;
+    } else {
+        f = 6;
+    }
+}
+
+Testing basic functionality of Next(*), BOOLEAN with each clause, TUPLE
+Basic multi-clause functionality
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Medium Source 3 Procedures:
+- 2 levels of nesting
+- nesting calls within conditional blocks
+- medium complexity of conditional statements, include at least 2 !/||/&& per conditional
+- conditional variables include identifier keywords and procedure names.
+- vary position of if and while to achieve different posssible Next results
+	- nesting at the start
+	- nesting at the middle
+	- nesting at the end
+- medium complexity assignment on RHS.
+Testing Uses_procedure/call, Modifies_procedure/call, Next(*), Calls(*)
+*possible to test multi-clause functionality with the involved design abstraction. e.g. s.t. Uses and Modifies and Next (Permutations or include with other earlier functionality)
+procedure ABC {
+    call GHI;
+    while ((b == 2) && (!(b >= 2))) {
+        if ( !((c <= 3) || (c != 3)))  then {
+            call DEF;
+        } else {
+            d = 4;
+        }
+        read e;
+    }
+}
+
+procedure DEF {
+    if (((f > 6) && (f < 6)) || (f >= 6)) then {
+        g = 7;
+        while ((h > 8) && ((h < 8) || (h >= 8))) {
+            call GHI;
+        }   
+    } else {
+        print j;
+    } 
+    call GHI;
+}
+
+procedure GHI {
+    if (!(((l > 12) && (l < 12)) || (l >= 12))) then {
+        m = 13;
+    } else {
+        n = 14;
+        while (((o > 15) && (o < 15)) || (!(o >= 15))){
+            read p;
+        }   
+        q = 16;
+    }
+    r = 17; 
+}
+* vary the assignment based on what different assignment statements the pql team had trouble with
+Thinking we do the showcasing of basic multiple clause with 1 and here; i.e. 2 s.t. 2 pattern, 2s.t + 1 pattern, 2 pattern + 1 s.t
+Mix of common and no common
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Complex Source, The source we wrote:
+- currently only has 1 4 level nesting, I would like to increase to at least 4 (while-if-while-then, while-then-if-while, if-while-while-then, while-while-then-if)
+	- vary calls in these nesting levels as well
+	- also consider placing the nested conditional in the middle/at the start/at the end of parent conditional block
+- increase complexity of conditionals, as difficult as oyu can write
+
+If the source changes, the answer to the results we wrote will also change for most relationships
+
+**More focus on the multiple clause testing as well varying the common and no common synonyms
+
+2 s.t. 1 pattern
+2 pattern 1 s.t.
+For the purpose of the demo, maybe the s.t will be between Calls/Next/Modifies/Uses?
+Next tests should target conditional statements/ before and after conditional statements
+2 ands tested in unit testing
+
+Extracted some tests from jon's cases: some of them are more specific to when they are incorrect, can implement in the medium
+General Additional cases we can consider: Variable dont exist, synonym does not use/modifiy such v
+stmt s,cs(container stmt); procedure p; variable v; constant c;call cl;print pn;while w;if ifs; assign a; read r;prog_line n;
+Uses(cl,v)
+Modifies(p,v) procedure which dont call other procedure
+Modifies(p,v)  procedure which call other procedure
+Modifies(p,v) procedure which dont call other procedure and dont modify such v
+Modifies(p,v)  procedure which call other procedure but dont modify such v

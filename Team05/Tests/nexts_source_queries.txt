@@ -1,0 +1,245 @@
+1- 1st param INTEGER stmt in if stmt block nested in while stmt block 2nd param INTEGER else block in same while stmt block
+
+Select BOOLEAN such that Next*(3, 4)
+TRUE
+5000
+2 - 1st param synonym in
+prog_line n; stmt s; if ifs;
+Select s such that Next(ifs, n) and Next*(n, s)
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 21, 22, 23, 24, 25, 26, 29, 30, 32, 33, 34, 35, 49, 50, 51, 52, 53, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66
+5000
+3 - Next* both param wildcard
+prog_line n;
+Select BOOLEAN such that Next*(_, _)
+TRUE
+5000
+4 - 1st param in while stmt nested in if stmt block nested in while stmt block 2nd param in matching else stmt block
+
+Select BOOLEAN such that Next*(25, 26)
+TRUE
+5000
+5 - both param same statement synonym
+stmt s;
+Select s such that Next*(s, s)
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 19, 20, 22, 23, 24, 25, 26, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45,  55, 56, 57, 58, 59, 60 ,61, 62, 63, 64
+5000
+6 - both param same progline synonym
+prog_line n;
+Select n such that Next*(n, n)
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 19, 20, 22, 23, 24, 25, 26, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 55, 56, 57, 58, 59, 60 ,61, 62, 63, 64
+5000
+7 - both param same procedure synonym
+procedure p;
+Select p such that Next*(p, p)
+
+5000
+8 - both param same while synonym
+while w;
+Select w such that Next*(w, w)
+1, 5, 10, 22, 24, 36, 37, 55, 60, 62
+5000
+9 - both param same ifs synonym
+if ifs;
+Select ifs such that Next*(ifs, ifs)
+2, 6, 11, 23, 59
+5000
+10 - both param same print synonym
+print p;
+Select p such that Next*(p, p)
+38, 42, 63, 64
+5000
+11 - both param same read synonym
+read re;
+Select re such that Next*(re, re)
+39, 43
+5000
+12 - both param same const synonym
+constant c;
+Select c such that Next*(c, c)
+
+5000
+13 - simple Next* 2 in sequence stmts, both param INTEGER
+
+Select BOOLEAN such that Next*(38, 39)
+TRUE
+5000
+14 - simple Next* from if stmt block to else stmt block, both param INTEGER
+
+Select BOOLEAN such that Next*(16, 17)
+FALSE
+5000
+15 - simple Next* from while stmt to stmt after while stmt block, both param INTEGER
+
+Select BOOLEAN such that Next*(10, 14)
+TRUE
+5000
+16 - both param INTEGER, 1st param last stmt in nested while loop, second param parent while stmt
+
+Select BOOLEAN such that Next*(41, 36)
+TRUE
+5000
+17 - stmts executed before returning to while block
+stmt s; while w;
+Select s such that Next*(s, w)
+1, 2,3, 4,5, 6, 7, 8, 9, 10, 11, 12, 13, 22, 23, 24, 25,26,36, 37, 38, 39, 40, 41, 42, 43, 44, 45,46, 47, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64
+5000
+18 - both param Integer, 1st param in else block, 2nd param in procedure stmt block with complex nesting
+
+Select BOOLEAN such that Next*(60, 66)
+TRUE
+5000
+19 - 1st param last stmt of nested if stmt block, 2nd param procedure stmt block
+
+Select BOOLEAN such that Next*(51, 66)
+TRUE
+5000
+20 -1st param last stmt of nested else stmt block, 2nd param procedure stmt block
+
+Select BOOLEAN such that Next*(53, 66)
+TRUE
+5000
+21 - 1st param complex nesting last stmt in last nest, 2nd param outermost while stmt
+
+Select BOOLEAN such that Next*(63, 55)
+TRUE
+5000
+22 - nested while stmt reaching nesting while statements, both param while synonym
+while w1, w2;
+Select <w1, w2> such that Next*(w1, w2)
+1 1, 5 5, 10 10, 22 22, 22 24, 24 24, 24 22, 36 36, 36 37, 37 36, 37 37, 55 55, 55 60, 60 55, 60 62, 62 60, 55 62, 62 55, 60 60, 62 62
+5000
+23 - valid query Next* (2 synonym)
+stmt s2; assign a;
+Select a such that Next*(a, s2)
+3, 4,7,8 ,9, 12, 13, 19, 20, 25, 26, 40, 44, 48, 54, 56, 57, 65
+5000
+24 - valid query Next* (2 synonym)
+stmt s1; while w;
+Select w such that Next*(s1, w)
+1, 5, 10, 22, 24, 36, 37, 55, 60, 62
+5000
+25 - valid query Next* (2 synonym)
+stmt s2; while w;
+Select w such that Next*(w, s2)
+1, 5, 10, 22, 24, 36, 37, 55, 60, 62
+5000
+26 - valid query Next* (2 synonym)
+stmt s1; if ifs;
+Select ifs such that Next*(s1, ifs)
+2, 6, 11, 23, 28, 31, 33, 47, 49, 59
+5000
+27 - valid query Next* (2 synonym)
+stmt s2; if ifs;
+Select ifs such that Next*(ifs, s2)
+2, 6, 11, 15, 18, 23, 27, 28, 31, 33, 47, 49, 59
+5000
+28 - valid query Next* (2 synonym)
+if ifs; assign a;
+Select ifs such that Next*(ifs, a)
+2, 6, 11, 15, 18, 23, 27, 28, 31, 33, 47, 59
+5000
+29 - valid query Next* (2 synonym)
+if ifs; read r;
+Select ifs such that Next*(ifs, r)
+47, 49
+5000
+30 - valid query Next* (2 synonym)
+if ifs; print pr;
+Select ifs such that Next*(ifs, pr)
+47, 49, 59
+5000
+31 - valid query Next* (2 synonym)
+while w; assign a;
+Select w such that Next*(w, a)
+1, 5, 10, 22, 24, 36, 37, 55, 60, 62
+5000
+32 - valid query Next* (2 synonym)
+while w; read r;
+Select w such that Next*(w, r)
+36, 37
+5000
+33 - valid query Next* (2 synonym)
+while w; print pr;
+Select w such that Next*(w, pr)
+36, 37, 55, 60, 62
+5000
+34 - valid query Next* (2 synonym)
+while w; if ifs;
+Select w such that Next*(w, ifs)
+1, 5, 10, 22, 24, 55, 60, 62
+5000
+35 - valid query Next* (2 synonym)
+while w; if ifs;
+Select ifs such that Next*(w, ifs)
+2, 6, 11, 23, 59
+5000
+36 - valid query Next* (2 synonym)
+while w; if ifs;
+Select ifs such that Next*(ifs, w)
+2, 6, 11, 23, 47, 59
+5000
+37 - valid query Next* (2 synonym)
+while w; if ifs;
+Select w such that Next*(ifs, w)
+1, 5, 10, 22, 24, 55, 60, 62
+5000
+38 - valid query Next* (2 synonym)
+assign a1, a2;
+Select a1 such that Next*(a1, a2)
+3, 4, 7, 8, 9, 12, 13, 19, 20, 25, 26, 40, 44, 54, 56, 57
+5000
+39 - valid query Next* (2 synonym)
+call c; stmt s1;
+Select s1 such that Next*(s1, c)
+36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65
+5000
+40 - valid query Next* (2 synonym)
+stmt s1; prog_line n;
+Select s1 such that Next*(s1, n)
+1,2,3,4,5,6,7,8,9,10,11,12,13,15,18,19,20,22,23,24,25,26,27,28,31,33,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65
+5000
+41 - tuple with both param statement synonym
+stmt s1, s2;
+Select BOOLEAN such that Next*(s1, s2)
+TRUE
+5000
+42 - tuple with both param progline synonym
+prog_line n1, n2;
+Select BOOLEAN such that Next*(n1, n2)
+TRUE
+5000
+43 - tuple with both param assign synonym
+assign a1, a2;
+Select <a1, a2> such that Next*(a1, a2)
+3 3, 4 4, 3 4, 4 3, 7 7, 7 8, 8 7, 8 8, 7 9, 9 7, 9 8, 8 9, 9 9, 12 12, 12 13, 12 14, 13 12, 13 13, 13 14, 19 21, 20 21, 25 25, 25 26, 26 25, 26 26, 40 40, 44 44, 40 44, 44 40, 54 56, 54 57, 56 57, 56 56, 57 57, 57 56, 54 65, 56 65, 57 65
+5000
+44 - tuple with both param procedure synonym
+procedure p1, p2;
+Select <p1, p2> such that Next*(p1, p2)
+
+5000
+45 - tuple with both param ifs synonym
+if ifs1, ifs2;
+Select <ifs1, ifs2> such that Next*(ifs1, ifs2)
+2 2, 6 6, 11 11, 23 23, 47 49, 27 28, 27 31, 27 33, 31 33, 47 59, 59 59
+5000
+46 - tuple with both param call synonym
+call c1, c2;
+Select <c1, c2> such that Next*(c1, c2)
+41 41, 41 45, 45 41, 45 45, 50 66, 52 66, 58 66, 58 61, 61 58, 58 58, 61 61, 61 66
+5000
+47 - invalid, tuple with both param constant synonym
+constant c1, c2;
+Select <c1, c2> such that Next*(c1, c2)
+
+5000
+48 - tuple with both param read synonym
+read re1, re2;
+Select <re1, re2> such that Next*(re1, re2)
+39 39, 39 43, 43 39, 43 43
+5000
+49 - tuple with both param print synonym
+print p1, p2;
+Select <p1, p2> such that Next*(p1, p2)
+38 42, 42 38, 38 38, 42 42, 46 53, 63 63, 64 64, 63 64, 64 63, 46 63, 46 64
+5000

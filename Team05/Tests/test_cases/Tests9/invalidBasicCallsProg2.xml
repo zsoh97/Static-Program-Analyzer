@@ -1,0 +1,708 @@
+<?xml-stylesheet type="text/xsl" href="analysis.xsl"?>
+<test_results>
+<info>
+<name>tests9</name><parsing_time_taken>357.000000</parsing_time_taken>
+</info>
+<queries>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="Invalid Calls for stmt, stmt">39</id><querystr><![CDATA[stmt s, s1; Select s such that Calls (s, s1)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>77.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="Invalid Calls for stmt, assign">40</id><querystr><![CDATA[stmt s; assign s1; Select s such that Calls (s, s1)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>84.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="Invalid Calls for stmt, print">41</id><querystr><![CDATA[stmt s; print s1; Select s such that Calls (s, s1)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>101.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="Invalid Calls for stmt, read">42</id><querystr><![CDATA[stmt s; read s1; Select s such that Calls (s, s1)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>80.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="Invalid Calls for stmt, while">43</id><querystr><![CDATA[stmt s; while s1; Select s such that Calls (s, s1)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>79.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="Invalid Calls for stmt, if">44</id><querystr><![CDATA[stmt s; if s1; Select s such that Calls (s, s1)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>78.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="Invalid Calls for stmt, call">45</id><querystr><![CDATA[stmt s; call s1; Select s such that Calls (s, s1)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>83.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid Calls for stmt, prog_line">46</id><querystr><![CDATA[stmt s; prog_line s1; Select s such that Calls (s, s1)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>82.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid Calls for stmt, wildcard">47</id><querystr><![CDATA[stmt s, s1; Select s such that Calls(s, _)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>78.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid Calls for wildcard, stmt">48</id><querystr><![CDATA[stmt s, s1; Select s1 such that Calls(_, s1)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>79.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="Invalid Calls for assign, stmt">49</id><querystr><![CDATA[assign s; stmt s1; Select s such that Calls (s, s1)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>96.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="Invalid Calls for assign, assign">50</id><querystr><![CDATA[assign s, s1; Select s such that Calls (s, s1)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>100.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="Invalid Calls for assign, print">51</id><querystr><![CDATA[assign s; print s1; Select s such that Calls (s, s1)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>101.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="Invalid Calls for assign, read">52</id><querystr><![CDATA[assign s; read s1; Select s such that Calls (s, s1)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>87.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="Invalid Calls for assign, while">53</id><querystr><![CDATA[assign s; while s1; Select s such that Calls (s, s1)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>77.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="Invalid Calls for assign, if">54</id><querystr><![CDATA[assign s; if s1; Select s such that Calls (s, s1)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>80.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="Invalid Calls for assign, call">55</id><querystr><![CDATA[assign s; call s1; Select s such that Calls (s, s1)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>78.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid Calls for assign, prog_line">56</id><querystr><![CDATA[assign s; prog_line s1; Select s such that Calls (s, s1)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>84.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid Calls for assign, wildcard">57</id><querystr><![CDATA[assign s, s1; Select s such that Calls(s, _)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>79.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid Calls for wildcard, assign">58</id><querystr><![CDATA[assign s, s1; Select s1 such that Calls(_, s1)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>81.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="Invalid Calls for print, stmt">59</id><querystr><![CDATA[print s; stmt s1; Select s such that Calls (s, s1)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>80.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="Invalid Calls for print, assign">60</id><querystr><![CDATA[print s; assign s1; Select s such that Calls (s, s1)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>81.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="Invalid Calls for print, print">61</id><querystr><![CDATA[print s, s1; Select s such that Calls (s, s1)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>79.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="Invalid Calls for print, read">62</id><querystr><![CDATA[print s; read s1; Select s such that Calls (s, s1)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>83.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="Invalid Calls for print, while">63</id><querystr><![CDATA[print s; while s1; Select s such that Calls (s, s1)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>76.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="Invalid Calls for print, if">64</id><querystr><![CDATA[print s; if s1; Select s such that Calls (s, s1)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>84.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="Invalid Calls for print, call">65</id><querystr><![CDATA[print s; call s1; Select s such that Calls (s, s1)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>80.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid Calls for print, prog_line">66</id><querystr><![CDATA[print s; prog_line s1; Select s such that Calls (s, s1)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>83.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid Calls for print, wildcard">67</id><querystr><![CDATA[print s, s1; Select s such that Calls(s, _)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>79.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid Calls for wildcard, print">68</id><querystr><![CDATA[print s, s1; Select s1 such that Calls(_, s1)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>79.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="Invalid Calls for read, stmt">69</id><querystr><![CDATA[read s; stmt s1; Select s such that Calls (s, s1)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>80.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="Invalid Calls for read, assign">70</id><querystr><![CDATA[read s; assign s1; Select s such that Calls (s, s1)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>82.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="Invalid Calls for read, print">71</id><querystr><![CDATA[read s; print s1; Select s such that Calls (s, s1)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>83.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="Invalid Calls for read, read">72</id><querystr><![CDATA[read s, s1; Select s such that Calls (s, s1)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>85.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="Invalid Calls for read, while">73</id><querystr><![CDATA[read s; while s1; Select s such that Calls (s, s1)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>88.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="Invalid Calls for read, if">74</id><querystr><![CDATA[read s; if s1; Select s such that Calls (s, s1)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>81.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="Invalid Calls for read, call">75</id><querystr><![CDATA[read s; call s1; Select s such that Calls (s, s1)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>82.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid Calls for read, prog_line">76</id><querystr><![CDATA[read s; prog_line s1; Select s such that Calls (s, s1)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>81.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid Calls for read, wildcard">77</id><querystr><![CDATA[read s, s1; Select s such that Calls(s, _)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>83.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid Calls for wilcard, read">78</id><querystr><![CDATA[read s, s1; Select s1 such that Calls(_, s1)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>94.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="Invalid Calls for while, stmt">79</id><querystr><![CDATA[while s; stmt s1; Select s such that Calls (s, s1)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>79.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="Invalid Calls for while, assign">80</id><querystr><![CDATA[while s; assign s1; Select s such that Calls (s, s1)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>79.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="Invalid Calls for while, print">81</id><querystr><![CDATA[while s; print s1; Select s such that Calls (s, s1)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>81.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="Invalid Calls for while, read">82</id><querystr><![CDATA[while s; read s1; Select s such that Calls (s, s1)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>82.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="Invalid Calls for while, while">83</id><querystr><![CDATA[while s, s1; Select s such that Calls (s, s1)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>95.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="Invalid Calls for while, if">84</id><querystr><![CDATA[while s; if s1; Select s such that Calls (s, s1)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>86.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="Invalid Calls for while, call">85</id><querystr><![CDATA[while s; call s1; Select s such that Calls (s, s1)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>90.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid Calls for while, prog_line">86</id><querystr><![CDATA[while s; prog_line s1; Select s such that Calls (s, s1)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>81.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid Calls for while, wildcard">87</id><querystr><![CDATA[while s, s1; Select s such that Calls(s, _)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>81.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid Calls for wildcard, while">88</id><querystr><![CDATA[while s, s1; Select s1 such that Calls(_, s1)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>80.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="Invalid Calls for if, stmt">89</id><querystr><![CDATA[if s; stmt s1; Select s such that Calls (s, s1)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>80.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="Invalid Calls for if, assign">90</id><querystr><![CDATA[if s; assign s1; Select s such that Calls (s, s1)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>79.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="Invalid Calls for if, print">91</id><querystr><![CDATA[if s; print s1; Select s such that Calls (s, s1)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>81.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="Invalid Calls for if, read">92</id><querystr><![CDATA[if s; read s1; Select s such that Calls (s, s1)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>84.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="Invalid Calls for if, while">93</id><querystr><![CDATA[if s; while s1; Select s such that Calls (s, s1)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>82.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="Invalid Calls for if, if">94</id><querystr><![CDATA[if s, s1; Select s such that Calls (s, s1)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>79.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="Invalid Calls for if, call">95</id><querystr><![CDATA[if s; call s1; Select s such that Calls (s, s1)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>85.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid Calls for if, prog_line">96</id><querystr><![CDATA[if s; prog_line s1; Select s such that Calls (s, s1)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>92.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid Calls for if, wildcard">97</id><querystr><![CDATA[if s, s1; Select s such that Calls(s, _)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>80.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid Calls for wildcard, if">98</id><querystr><![CDATA[if s, s1; Select s1 such that Calls(_, s1)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>81.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="Invalid Calls for call, stmt">99</id><querystr><![CDATA[call s; stmt s1; Select s such that Calls (s, s1)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>80.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="Invalid Calls for call, assign">100</id><querystr><![CDATA[call s; assign s1; Select s such that Calls (s, s1)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>81.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="Invalid Calls for call, print">101</id><querystr><![CDATA[call s; print s1; Select s such that Calls (s, s1)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>80.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="Invalid Calls for call, read">102</id><querystr><![CDATA[call s; read s1; Select s such that Calls (s, s1)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>81.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="Invalid Calls for call, while">103</id><querystr><![CDATA[call s; while s1; Select s such that Calls (s, s1)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>104.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="Invalid Calls for call, if">104</id><querystr><![CDATA[call s; if s1; Select s such that Calls (s, s1)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>95.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="Invalid Calls for call, call">105</id><querystr><![CDATA[call s, s1; Select s such that Calls (s, s1)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>96.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid Calls for call, prog_line">106</id><querystr><![CDATA[call s; prog_line s1; Select s such that Calls (s, s1)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>78.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid Calls for call, wildcard">107</id><querystr><![CDATA[call s, s1; Select s such that Calls(s, _)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>138.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid Calls for wildcard, call">108</id><querystr><![CDATA[call s, s1; Select s1 such that Calls(_, s1)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>80.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid Calls for prog_line, stmt">109</id><querystr><![CDATA[prog_line s; stmt s1; Select s such that Calls (s, s1)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>80.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid Calls for prog_line, assign">110</id><querystr><![CDATA[prog_line s; assign s1; Select s such that Calls (s, s1)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>80.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid Calls for prog_line, print">111</id><querystr><![CDATA[prog_line s; print s1; Select s such that Calls (s, s1)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>87.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid Calls for prog_line, read">112</id><querystr><![CDATA[prog_line s; read s1; Select s such that Calls (s, s1)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>84.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid Calls for prog_line, while">113</id><querystr><![CDATA[prog_line s; while s1; Select s such that Calls (s, s1)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>77.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid Calls for prog_line, if">114</id><querystr><![CDATA[prog_line s; if s1; Select s such that Calls (s, s1)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>81.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid Calls for prog_line, call">115</id><querystr><![CDATA[prog_line s; call s1; Select s such that Calls(s, s1)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>78.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid Calls for prog_line, prog_line">116</id><querystr><![CDATA[prog_line s, s1; Select s such that Calls(s, s1)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>82.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" UnnamedVar="2" SuchThat="1" CondNum="5" RelNum="1" comment="Invalid Calls for prog_line, wildcard">117</id><querystr><![CDATA[prog_line s, s1; Select s such that Calls(s, _)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>79.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" UnnamedVar="2" SuchThat="1" CondNum="5" RelNum="1" comment="Invalid Calls for wildcard, prog_line">118</id><querystr><![CDATA[prog_line s, s1; Select s1 such that Calls(_, s1)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>91.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="Invalid Calls for variable, stmt">119</id><querystr><![CDATA[variable s; stmt s1; Select s such that Calls (s, s1)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>79.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="Invalid Calls for variable, assign">120</id><querystr><![CDATA[variable s; assign s1; Select s such that Calls (s, s1)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>76.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="Invalid Calls for variable, print">121</id><querystr><![CDATA[variable s; print s1; Select s such that Calls (s, s1)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>83.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="Invalid Calls for variable, read">122</id><querystr><![CDATA[variable s; read s1; Select s such that Calls (s, s1)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>82.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="Invalid Calls for variable, while">123</id><querystr><![CDATA[variable s; while s1; Select s such that Calls (s, s1)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>79.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="Invalid Calls for variable, if">124</id><querystr><![CDATA[variable s; if s1; Select s such that Calls (s, s1)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>86.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="Invalid Calls for variable, call">125</id><querystr><![CDATA[variable s; call s1; Select s such that Calls (s, s1)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>80.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid Calls for variable, prog_line">126</id><querystr><![CDATA[variable s; prog_line s1; Select s such that Calls (s, s1)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>78.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid Calls for variable, wildcard">127</id><querystr><![CDATA[variable s, s1; Select s such that Calls (s, _)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>81.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid Calls for wildcard, variable">128</id><querystr><![CDATA[variable s, s1; Select s1 such that Calls (_, s1)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>79.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="Invalid Calls for constant, stmt">129</id><querystr><![CDATA[constant s; stmt s1; Select s such that Calls (s, s1)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>78.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="Invalid Calls for constant, assign">130</id><querystr><![CDATA[constant s; assign s1; Select s such that Calls (s, s1)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>85.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="Invalid Calls for constant, print">131</id><querystr><![CDATA[constant s; print s1; Select s such that Calls (s, s1)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>79.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="Invalid Calls for constant, read">132</id><querystr><![CDATA[constant s; read s1; Select s such that Calls (s, s1)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>81.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="Invalid Calls for constant, while">133</id><querystr><![CDATA[constant s; while s1; Select s such that Calls (s, s1)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>82.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="Invalid Calls for constant, if">134</id><querystr><![CDATA[constant s; if s1; Select s such that Calls (s, s1)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>79.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="Invalid Calls for constant, call">135</id><querystr><![CDATA[constant s; call s1; Select s such that Calls (s, s1)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>79.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid Calls for constant, prog_line">136</id><querystr><![CDATA[constant s; prog_line s1; Select s such that Calls (s, s1)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>83.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid Calls for constant, wildcard">137</id><querystr><![CDATA[constant s, s1; Select s such that Calls (s, _)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>82.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid Calls for wildcard, constant">138</id><querystr><![CDATA[constant s, s1; Select s1 such that Calls (_, s1)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>79.000000</time_taken>
+<passed/>
+</query>
+</queries>
+</test_results>

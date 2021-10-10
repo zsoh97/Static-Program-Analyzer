@@ -1,0 +1,55 @@
+procedure nesting {
+    while (cc < 0) {
+        if ((aa == bb) || (0 != 22)) then {
+            if ((cc != (8 + (11 * 11))) && (22 == (bb - 22))) then {
+                if (aa > 22) then {
+                    cc = cc % bb + aa * bb;
+                    while (cc >= aa) {
+                        bb = bb + 44;
+                        if (cc > aa) then {
+                            aa = bb * 33;
+                            while (aa != aa) {
+                                print bb;
+                                aa = aa * (bb + 11);
+                            }
+                        } else {
+                            while (bb == (cc + aa) ) {
+                                while ((cc + (aa + bb)) == 44) {
+                                    cc = cc + aa;
+                                    while (bb < (cc + (aa % 11))) {
+                                        bb = bb + 33;
+                                    }
+                                    aa = bb;
+                                    bb = aa;
+                                }
+                                read cc;
+                            }
+                            cc = aa % bb;
+                        }
+                    }
+                    aa = cc / 11;
+                } else {
+                    cc = cc;
+                }
+            } else {
+                cc = bb - (cc + 11);
+            }
+            bb = aa * bb * cc * aa;
+        } else {
+            if (0 > 0) then {
+                if ((bb != (cc + aa)) || (bb != (cc + aa))) then {
+                    while ((aa == cc) && (aa != cc)) {
+                        aa = 44 + (aa - cc) % 11 / aa;
+                        print aa;
+                    }
+                } else {
+                    aa = aa + cc;
+                }
+            } else {
+                bb = (bb - bb);
+            }
+        }
+        read cc;
+        print bb;
+    }
+}

@@ -1,0 +1,639 @@
+<?xml-stylesheet type="text/xsl" href="analysis.xsl"?>
+<test_results>
+<info>
+<name>tests</name><parsing_time_taken>237.000000</parsing_time_taken>
+</info>
+<queries>
+<query>
+<id ReturnTuple="1" SuchThat="1" CondNum="2" RelNum="0" comment="simple NextBip query with statement as 1st param and 2nd param INTEGER">1</id><querystr><![CDATA[stmt s; assign a; procedure p; Select s such that NextBip(s, 2)]]></querystr>
+<stuans>1</stuans>
+<correct>1</correct>
+<time_taken>78.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" SuchThat="1" CondNum="2" RelNum="0" comment="simple NextBip query with assign as 1st param and 2nd param INTEGER">2</id><querystr><![CDATA[stmt s; assign a; procedure p; Select a such that NextBip(a, 11)]]></querystr>
+<stuans>10</stuans>
+<correct>10</correct>
+<time_taken>85.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" SuchThat="1" CondNum="2" RelNum="0" comment="semantically invalid, simple NextBip query with procedure as 1st param and 2nd param INTEGER">3</id><querystr><![CDATA[stmt s; assign a; procedure p; Select p such that NextBip(p, 2)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>73.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" SuchThat="1" CondNum="2" RelNum="0" comment="simple NextBip query with read as 1st param and 2nd param INTEGER">4</id><querystr><![CDATA[stmt s; assign a; procedure p; read re; Select re such that NextBip(re, 3)]]></querystr>
+<stuans>2</stuans>
+<correct>2</correct>
+<time_taken>75.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" SuchThat="1" CondNum="2" RelNum="0" comment="simple NextBip query with print as 1st param and 2nd param INTEGER">5</id><querystr><![CDATA[stmt s; assign a; procedure p; print pr; Select pr such that NextBip(pr, 5)]]></querystr>
+<stuans>8</stuans>
+<correct>8</correct>
+<time_taken>75.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" SuchThat="1" CondNum="2" RelNum="0" comment="simple NextBip query with ifs as 1st param and 2nd param first line of if stmt block">6</id><querystr><![CDATA[stmt s; assign a; procedure p; if ifs; Select ifs such that NextBip(ifs, 17)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>74.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" SuchThat="1" CondNum="2" RelNum="0" comment="simple NextBip query with ifs as 1st param and 2nd param first line of else stmt block">7</id><querystr><![CDATA[stmt s; assign a; procedure p; if ifs; Select ifs such that NextBip(ifs, 18)]]></querystr>
+<stuans>15</stuans>
+<correct>15</correct>
+<time_taken>76.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" SuchThat="1" CondNum="2" RelNum="0" comment="simple NextBip query with while as 1st param and 2nd param INTEGER">8</id><querystr><![CDATA[stmt s; assign a; procedure p; while w; Select w such that NextBip(w, 6)]]></querystr>
+<stuans>5</stuans>
+<correct>5</correct>
+<time_taken>79.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" SuchThat="1" CondNum="2" RelNum="0" comment="simple NextBip query with call as 1st param and 2nd param INTEGER">9</id><querystr><![CDATA[stmt s; assign a; procedure p; call c; Select c such that NextBip(c, 7)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>78.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" SuchThat="1" CondNum="2" RelNum="0" comment="invalid, simple NextBip query with constant as 1st param and 2nd param INTEGER">10</id><querystr><![CDATA[stmt s; assign a; procedure p; constant c; Select c such that NextBip(c, 2)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>82.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" SuchThat="1" CondNum="2" RelNum="0" comment="simple NextBip query with both param INTEGER in same block">11</id><querystr><![CDATA[stmt s; assign a; procedure p; if ifs; Select BOOLEAN such that NextBip(4, 8)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>84.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" UnnamedVar="1" SuchThat="1" CondNum="3" RelNum="0" comment="simple NextBip query with _ as 1st param and 2nd param INTEGER first stmt of procedure that is not called">12</id><querystr><![CDATA[stmt s; assign a; procedure p; if ifs; Select BOOLEAN such that NextBip(_, 82)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>80.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" UnnamedVar="1" SuchThat="1" CondNum="3" RelNum="0" comment="simple NextBip query with _ as 1st param and 2nd param INTEGER first stmt of procedure that is called">13</id><querystr><![CDATA[stmt s; assign a; procedure p; if ifs; Select BOOLEAN such that NextBip(_, 9)]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>80.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" SuchThat="1" CondNum="2" RelNum="0" comment="simple NextBip query with statement as 2nd param and 1st param non-call INTEGER">14</id><querystr><![CDATA[stmt s; assign a; procedure p; Select s such that NextBip(1, s)]]></querystr>
+<stuans>2</stuans>
+<correct>2</correct>
+<time_taken>76.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" SuchThat="1" CondNum="2" RelNum="0" comment="simple NextBip query with statement as 2nd param and 1st param call stmt number">15</id><querystr><![CDATA[stmt s; assign a; procedure p; Select s such that NextBip(6, s)]]></querystr>
+<stuans>9</stuans>
+<correct>9</correct>
+<time_taken>78.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" SuchThat="1" CondNum="2" RelNum="0" comment="simple NextBip query with assign as 2nd param and 1st param non-call INTEGER">16</id><querystr><![CDATA[stmt s; assign a; procedure p; Select a such that NextBip(9, a)]]></querystr>
+<stuans>10</stuans>
+<correct>10</correct>
+<time_taken>80.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" SuchThat="1" CondNum="2" RelNum="0" comment="simple NextBip query with assign as 2nd param and 1st param call stmt INTEGER">17</id><querystr><![CDATA[stmt s; assign a; procedure p; Select a such that NextBip(18, a)]]></querystr>
+<stuans>1</stuans>
+<correct>1</correct>
+<time_taken>84.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" SuchThat="1" CondNum="2" RelNum="0" comment="semantically invalid, simple NextBip query with procedure as 2nd param and 1st param non-call INTEGER">18</id><querystr><![CDATA[stmt s; assign a; procedure p; Select p such that NextBip(1, p)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>80.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" SuchThat="1" CondNum="2" RelNum="0" comment="semantically invalid, simple NextBip query with procedure as 2nd param and 1st param call stmt INTEGER">19</id><querystr><![CDATA[stmt s; assign a; procedure p; Select p such that NextBip(22, p)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>79.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" SuchThat="1" CondNum="2" RelNum="0" comment="simple NextBip query with read as 2nd param and 1st param non-call INTEGER">20</id><querystr><![CDATA[stmt s; assign a; procedure p; read re; Select re such that NextBip(1, re)]]></querystr>
+<stuans>2</stuans>
+<correct>2</correct>
+<time_taken>76.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" SuchThat="1" CondNum="2" RelNum="0" comment="simple NextBip query with read as 2nd param and 1st param call stmt INTEGER">21</id><querystr><![CDATA[stmt s; assign a; procedure p; read re; Select re such that NextBip(69, re)]]></querystr>
+<stuans>39</stuans>
+<correct>39</correct>
+<time_taken>78.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" SuchThat="1" CondNum="2" RelNum="0" comment="simple NextBip query with print as 2nd param and 1st param INTEGER">22</id><querystr><![CDATA[stmt s; assign a; procedure p; print pr; Select pr such that NextBip(2, pr)]]></querystr>
+<stuans>3</stuans>
+<correct>3</correct>
+<time_taken>78.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" SuchThat="1" CondNum="2" RelNum="0" comment="simple NextBip query with print as 2nd param and 1st param call stmt INTEGER">23</id><querystr><![CDATA[stmt s; assign a; procedure p; print pr; Select pr such that NextBip(92, pr)]]></querystr>
+<stuans>61</stuans>
+<correct>61</correct>
+<time_taken>76.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" SuchThat="1" CondNum="2" RelNum="0" comment="simple NextBip query with ifs as 2nd param and 1st param non-call INTEGER">24</id><querystr><![CDATA[stmt s; assign a; procedure p; if ifs; Select ifs such that NextBip(25, ifs)]]></querystr>
+<stuans>26</stuans>
+<correct>26</correct>
+<time_taken>77.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" SuchThat="1" CondNum="2" RelNum="0" comment="simple NextBip query with ifs as 2nd param and 1st param call stmt number">25</id><querystr><![CDATA[stmt s; assign a; procedure p; if ifs; Select ifs such that NextBip(11, ifs)]]></querystr>
+<stuans>15</stuans>
+<correct>15</correct>
+<time_taken>82.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" SuchThat="1" CondNum="2" RelNum="0" comment="simple NextBip query with while as 2nd param and 1st param non-call INTEGER">26</id><querystr><![CDATA[stmt s; assign a; procedure p; while w; Select w such that NextBip(40, w)]]></querystr>
+<stuans>41</stuans>
+<correct>41</correct>
+<time_taken>75.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" SuchThat="1" CondNum="2" RelNum="0" comment="simple NextBip query with while as 2nd param and 1st param call stmt INTEGER">27</id><querystr><![CDATA[stmt s; assign a; procedure p; while w; Select w such that NextBip(20, w)]]></querystr>
+<stuans>24</stuans>
+<correct>24</correct>
+<time_taken>77.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" UnnamedVar="1" SuchThat="1" CondNum="3" RelNum="0" comment="simple NextBip query with wildcard as 2nd param and 1st param INTEGER not a call stmt">28</id><querystr><![CDATA[stmt s; assign a; procedure p; if ifs; Select BOOLEAN such that NextBip(1, _)]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>77.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" UnnamedVar="1" SuchThat="1" CondNum="3" RelNum="0" comment="simple NextBip query with wildcard as 2nd param and 1st param INTEGER a call stmt">29</id><querystr><![CDATA[stmt s; assign a; procedure p; if ifs; Select BOOLEAN such that NextBip(22, _)]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>78.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" UnnamedVar="1" SuchThat="1" CondNum="3" RelNum="0" comment="simple NextBip query with wildcard as 2nd param and 1st param INTEGER last statement of proc and not call stmt">30</id><querystr><![CDATA[stmt s; assign a; procedure p; if ifs; Select BOOLEAN such that NextBip(3, _)]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>77.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" SuchThat="1" CondNum="2" RelNum="0" comment="simple NextBip query with call as 1st param and 2nd param INTEGER">31</id><querystr><![CDATA[stmt s; assign a; procedure p; call c; Select c such that NextBip(c, 23)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>78.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" SuchThat="1" CondNum="2" RelNum="0" comment="invalid, simple NextBip query with constant as 1st param and 2nd param INTEGER">32</id><querystr><![CDATA[stmt s; assign a; procedure p; constant c; Select c such that NextBip(c, 24)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>77.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" SuchThat="1" CondNum="2" RelNum="0" comment="both param INTEGER, 1st param smaller 2nd param in procedure stmt block">33</id><querystr><![CDATA[stmt s; assign a; procedure p; Select BOOLEAN such that NextBip(13, 14)]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>76.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" SuchThat="1" CondNum="2" RelNum="0" comment="both param INTEGER, 1st param greater 2nd param in procedure stmt block">34</id><querystr><![CDATA[stmt s; assign a; procedure p; Select BOOLEAN such that NextBip(25, 23)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>77.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" SuchThat="1" CondNum="2" RelNum="0" comment="both param INTEGER, both param 0, semantically invalid">35</id><querystr><![CDATA[stmt s; assign a; procedure p; Select s such that NextBip(0, 0)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>78.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" SuchThat="1" CondNum="2" RelNum="0" comment="both param INTEGER, 1st param 0, semantically invalid">36</id><querystr><![CDATA[stmt s; assign a; procedure p; Select s such that NextBip(0, 1)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>79.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" SuchThat="1" CondNum="2" RelNum="0" comment="both param INTEGER, 2nd param 0, semantically invalid">37</id><querystr><![CDATA[stmt s; assign a; procedure p; Select s such that NextBip(1, 0)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>77.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" SuchThat="1" CondNum="2" RelNum="0" comment="both param INTEGER, 1st param INTEGER out of index">38</id><querystr><![CDATA[stmt s; assign a; procedure p; Select s such that NextBip(99, 2)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>76.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" SuchThat="1" CondNum="2" RelNum="0" comment="both param INTEGER, 2nd param INTEGER out of index">39</id><querystr><![CDATA[stmt s; assign a; procedure p; Select s such that NextBip(2, 99)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>89.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" SuchThat="1" CondNum="3" RelNum="0" comment="1st param INTEGER out of index, 2nd param wildcard">40</id><querystr><![CDATA[stmt s; assign a; procedure p; Select s such that NextBip(99, _)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>76.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" SuchThat="1" CondNum="3" RelNum="0" comment="2nd param INTEGER out of index, 1st param wildcard">41</id><querystr><![CDATA[stmt s; assign a; procedure p; Select s such that NextBip(_, 99)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>77.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" SuchThat="1" CondNum="2" RelNum="0" comment="1st param INTEGER out of index, 2nd param synonym">42</id><querystr><![CDATA[stmt s; assign a; procedure p; Select s such that NextBip(99, s)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>76.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" SuchThat="1" CondNum="2" RelNum="0" comment="2nd param INTEGER out of index, 1st param synonym">43</id><querystr><![CDATA[stmt s; assign a; procedure p; Select s such that NextBip(s, 99)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>76.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" SuchThat="1" CondNum="3" RelNum="0" comment="1st param last line of procedure not call stmt and not in while stmt block, 2nd param prog_line">44</id><querystr><![CDATA[prog_line n; assign a; procedure p; Select n such that NextBip(3, n)]]></querystr>
+<stuans>12,17,22,28,31,32,52,55,7,81,83,85,86</stuans>
+<correct>7,12,17,22,28,31,32,52,55,81,83,85,86</correct>
+<time_taken>81.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" SuchThat="1" CondNum="3" RelNum="0" comment="1st param last line of procedure call stmt and not in while stmt block, 2nd param prog_line">45</id><querystr><![CDATA[prog_line n; assign a; procedure p; Select n such that NextBip(84, n)]]></querystr>
+<stuans>9</stuans>
+<correct>9</correct>
+<time_taken>78.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" SuchThat="1" CondNum="3" RelNum="0" comment="1st param last line of procedure not call stmt and in while stmt block, 2nd param prog_line">46</id><querystr><![CDATA[prog_line n; assign a; procedure p; Select n such that NextBip(12, n)]]></querystr>
+<stuans>9</stuans>
+<correct>9</correct>
+<time_taken>77.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" SuchThat="1" CondNum="3" RelNum="0" comment="1st param last line of procedure call stmt and in while stmt block, 2nd param prog_line">47</id><querystr><![CDATA[prog_line n; assign a; procedure p; Select n such that NextBip(46, n)]]></querystr>
+<stuans>24</stuans>
+<correct>24</correct>
+<time_taken>76.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" SuchThat="1" CondNum="2" RelNum="0" comment="both param INTEGER, 1st param greater than 2nd param, not in while stmt block, 2nd param not call stmt">48</id><querystr><![CDATA[stmt s; assign a; procedure p; Select BOOLEAN such that NextBip(14, 13)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>79.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" SuchThat="1" CondNum="2" RelNum="0" comment="both param INTEGER, 1st param greater than 2nd param, not in while stmt block, 2nd param call stmt">49</id><querystr><![CDATA[stmt s; assign a; procedure p; Select BOOLEAN such that NextBip(82, 1)]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>78.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" SuchThat="1" CondNum="2" RelNum="0" comment="both param INTEGER, 1st param > 2nd param, in while stmt block">50</id><querystr><![CDATA[stmt s; assign a; procedure p; Select BOOLEAN such that NextBip(12, 10)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>77.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" SuchThat="1" CondNum="2" RelNum="0" comment="both param INTEGER, 1st param > 2nd param, in if stmt block only, 1st param not call stmt">51</id><querystr><![CDATA[stmt s; assign a; procedure p; Select BOOLEAN such that NextBip(65, 61)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>78.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" SuchThat="1" CondNum="2" RelNum="0" comment="both param INTEGER, 1st param > 2nd param, in if stmt block only, 1st param call stmt">52</id><querystr><![CDATA[stmt s; assign a; procedure p; Select BOOLEAN such that NextBip(64, 56)]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>76.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" SuchThat="1" CondNum="2" RelNum="0" comment="both param INTEGER, 1st param > 2nd param, in else stmt block only, 1st param not call stmt">53</id><querystr><![CDATA[stmt s; assign a; procedure p; Select BOOLEAN such that NextBip(50, 47)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>75.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" SuchThat="1" CondNum="2" RelNum="0" comment="both param INTEGER, 1st param > 2nd param, in else stmt block only, 1st param call stmt">54</id><querystr><![CDATA[stmt s; assign a; procedure p; Select BOOLEAN such that NextBip(50, 19)]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>74.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" UnnamedVar="3" SuchThat="1" CondNum="5" RelNum="0" comment="both param _">55</id><querystr><![CDATA[prog_line n; assign a; procedure p; Select BOOLEAN such that NextBip(_, _)]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>98.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" SuchThat="1" CondNum="3" RelNum="0" comment="2nd param synonym with 1st param last line of execution in if block with no statements after and not call stmt">56</id><querystr><![CDATA[prog_line n; assign a; procedure p; Select n such that NextBip(17, n)]]></querystr>
+<stuans>12,22,28,31,32,52,55,7,81,85,86</stuans>
+<correct>7,12,22,28,31,32,52,55,81,85,86</correct>
+<time_taken>85.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" SuchThat="1" CondNum="3" RelNum="0" comment="2nd param synonym with 1st param last line of execution in if block and call stmt">57</id><querystr><![CDATA[prog_line n; assign a; procedure p; Select n such that NextBip(20, n)]]></querystr>
+<stuans>24</stuans>
+<correct>24</correct>
+<time_taken>79.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" SuchThat="1" CondNum="3" RelNum="0" comment="2nd param synonym with 1st param last line of execution in if block with statements after">58</id><querystr><![CDATA[prog_line n; assign a; procedure p; Select n such that NextBip(65, n)]]></querystr>
+<stuans>67</stuans>
+<correct>67</correct>
+<time_taken>78.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" SuchThat="1" CondNum="3" RelNum="0" comment="2nd param statement synonym with 1st param last line of execution in else block with no statements after and call stmt">59</id><querystr><![CDATA[prog_line n; assign a; procedure p; Select n such that NextBip(18, n)]]></querystr>
+<stuans>1</stuans>
+<correct>1</correct>
+<time_taken>78.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" SuchThat="1" CondNum="3" RelNum="0" comment="2nd param statement synonym with 1st param last line of execution in else block with statements after">60</id><querystr><![CDATA[prog_line n; assign a; procedure p; Select n such that NextBip(66, n)]]></querystr>
+<stuans>67</stuans>
+<correct>67</correct>
+<time_taken>77.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" SuchThat="1" CondNum="2" RelNum="0" comment="both param INTEGER from different procedures where 1st param has no path to 2nd param">61</id><querystr><![CDATA[ Select BOOLEAN such that NextBip(1, 15)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>79.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" SuchThat="1" CondNum="2" RelNum="0" comment="both param INTEGER from different procedures where first param has a path to 2nd param">62</id><querystr><![CDATA[ Select BOOLEAN such that NextBip(20, 24)]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>79.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" SuchThat="1" CondNum="2" RelNum="0" comment="tuple with both param statement synonym">63</id><querystr><![CDATA[stmt s1, s2; Select <s1, s2> such that NextBip(s1, s2)]]></querystr>
+<stuans>1 2,10 11,11 15,12 9,13 14,14 15,15 16,15 18,16 1,17 12,17 22,17 28,17 31,17 32,17 52,17 55,17 7,17 81,17 85,17 86,18 1,19 20,19 21,2 3,20 24,21 9,22 4,23 51,23 71,23 87,24 22,24 25,24 41,24 56,24 88,25 26,26 27,26 29,27 9,28 31,29 30,3 12,3 17,3 22,3 28,3 31,3 32,3 52,3 55,3 7,3 81,3 83,3 85,3 86,30 9,31 24,32 33,32 38,33 34,33 36,34 35,35 47,36 37,37 15,38 42,38 65,38 89,38 92,39 40,4 5,40 41,41 42,41 81,41 90,42 43,42 46,43 44,44 45,45 32,46 24,47 48,47 50,48 49,49 9,5 23,5 6,5 65,5 77,5 84,5 92,50 19,51 52,52 53,53 32,53 54,53 74,53 91,54 15,55 53,56 57,56 58,57 24,58 59,58 60,59 32,6 9,60 4,61 62,62 63,62 70,63 64,63 66,64 56,65 67,66 67,67 68,68 69,69 39,7 8,70 19,71 72,71 80,72 73,72 79,73 47,74 75,75 71,75 76,76 4,77 75,77 78,78 77,79 71,8 5,80 9,81 32,82 1,83 4,84 9,85 15,86 19,87 24,88 32,89 39,9 10,9 13,90 47,91 56,92 61</stuans>
+<correct>1 2,2 3,4 5,5 6,7 8,8 5,9 10,10 11,9 13,13 14,15 16,11 15,14 15,16 1,18 1,3 17,6 9,17 12,3 12,12 9,19 20,20 24,21 9,22 4,19 9,24 22,17 22,3 22,5 23,24 25,25 26,26 27,27 9,26 29,29 30,30 9,28 31,31 24,17 28,3 28,17 31,3 31,32 33,33 34,34 35,33 36,35 47,36 37,37 15,3 32,17 32,53 32,32 38,39 40,40 41,41 42,42 43,43 44,44 45,45 32,38 42,24 41,42 46,46 24,47 48,48 49,49 9,47 50,51 52,50 19,52 53,53 54,54 15,55 53,3 52,17 52,23 51,3 55,17 55,56 57,57 24,24 56,58 59,59 32,58 60,60 4,61 62,62 63,63 64,64 56,65 67,66 67,67 68,68 69,69 39,38 65,5 65,41 81,62 70,70 71,71 72,72 73,73 47,53 74,74 75,75 76,76 4,5 77,77 78,78 77,77 75,75 71,79 71,71 80,80 9,3 81,17 81,82 1,3 83,83 4,5 84,84 9,3 85,17 85,85 15,3 86,17 86,86 19,23 87,87 24,24 88,88 32,28 89,89 39,41 90,90 47,53 91,91 56,5 92,38 92,92 61</correct>
+<time_taken>115.000000</time_taken>
+<failed>
+<missing>19 9,28 89,70 71</missing>
+<additional>15 18,17 7,19 21,23 71,3 7,38 89,56 58,63 66,70 19,72 79,81 32</additional>
+<summary>
+<expected>141</expected>
+<matched>138</matched>
+<missing>3</missing>
+<additional>11</additional>
+</summary>
+</failed>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" SuchThat="1" CondNum="3" RelNum="0" comment="tuple with both param progline synonym">64</id><querystr><![CDATA[prog_line n1, n2; Select <n1, n2> such that NextBip(n1, n2)]]></querystr>
+<stuans>1 2,10 11,11 15,12 9,13 14,14 15,15 16,15 18,16 1,17 12,17 22,17 28,17 31,17 32,17 52,17 55,17 7,17 81,17 85,17 86,18 1,19 20,19 21,2 3,20 24,21 9,22 4,23 51,23 71,23 87,24 22,24 25,24 41,24 56,24 88,25 26,26 27,26 29,27 9,28 31,29 30,3 12,3 17,3 22,3 28,3 31,3 32,3 52,3 55,3 7,3 81,3 83,3 85,3 86,30 9,31 24,32 33,32 38,33 34,33 36,34 35,35 47,36 37,37 15,38 42,38 65,38 89,38 92,39 40,4 5,40 41,41 42,41 81,41 90,42 43,42 46,43 44,44 45,45 32,46 24,47 48,47 50,48 49,49 9,5 23,5 6,5 65,5 77,5 84,5 92,50 19,51 52,52 53,53 32,53 54,53 74,53 91,54 15,55 53,56 57,56 58,57 24,58 59,58 60,59 32,6 9,60 4,61 62,62 63,62 70,63 64,63 66,64 56,65 67,66 67,67 68,68 69,69 39,7 8,70 19,71 72,71 80,72 73,72 79,73 47,74 75,75 71,75 76,76 4,77 75,77 78,78 77,79 71,8 5,80 9,81 32,82 1,83 4,84 9,85 15,86 19,87 24,88 32,89 39,9 10,9 13,90 47,91 56,92 61</stuans>
+<correct>1 2,2 3,4 5,5 6,7 8,8 5,9 10,10 11,9 13,13 14,15 16,11 15,14 15,16 1,18 1,3 17,6 9,17 12,3 12,12 9,19 20,20 24,21 9,22 4,19 9,24 22,17 22,3 22,5 23,24 25,25 26,26 27,27 9,26 29,29 30,30 9,28 31,31 24,17 28,3 28,17 31,3 31,32 33,33 34,34 35,33 36,35 47,36 37,37 15,3 32,17 32,53 32,32 38,39 40,40 41,41 42,42 43,43 44,44 45,45 32,38 42,24 41,42 46,46 24,47 48,48 49,49 9,47 50,50 51,51 19,47 52,52 53,53 54,54 15,55 53,3 52,17 52,23 52,3 55,17 55,56 57,57 24,24 56,58 59,59 32,58 60,60 4,61 62,62 63,63 64,64 56,65 67,66 67,67 68,68 69,69 39,38 65,5 65,41 81,62 70,70 71,71 72,72 73,73 47,53 74,74 75,75 76,76 4,5 77,77 78,78 77,77 75,75 71,79 71,71 80,80 9,3 81,17 81,82 1,3 83,83 4,5 84,84 9,3 85,17 85,85 15,3 86,17 86,86 19,23 87,87 24,24 88,88 32,28 89,89 39,41 90,90 47,53 91,91 56,5 92,38 92,92 61</correct>
+<time_taken>121.000000</time_taken>
+<failed>
+<missing>19 9,23 52,28 89,47 52,50 51,51 19,70 71</missing>
+<additional>15 18,17 7,19 21,23 51,23 71,3 7,38 89,50 19,51 52,56 58,63 66,70 19,72 79,81 32</additional>
+<summary>
+<expected>142</expected>
+<matched>135</matched>
+<missing>7</missing>
+<additional>14</additional>
+</summary>
+</failed>
+</query>
+<query>
+<id ReturnTuple="1" SuchThat="1" CondNum="2" RelNum="0" comment="tuple with both param assign synonym">65</id><querystr><![CDATA[assign a1, a2; Select <a1, a2> such that NextBip(a1, a2)]]></querystr>
+<stuans>38 65,65 67</stuans>
+<correct>38 65,65 67</correct>
+<time_taken>82.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" SuchThat="1" CondNum="2" RelNum="0" comment="tuple with both param procedure synonym">66</id><querystr><![CDATA[procedure p1, p2; Select <p1, p2> such that NextBip(p1, p2)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>76.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" SuchThat="1" CondNum="2" RelNum="0" comment="tuple with both param ifs synonym">67</id><querystr><![CDATA[if ifs1, ifs2; Select <ifs1, ifs2> such that NextBip(ifs1, ifs2)]]></querystr>
+<stuans>62 63</stuans>
+<correct>62 63</correct>
+<time_taken>80.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" SuchThat="1" CondNum="2" RelNum="0" comment="tuple with both param while synonym">68</id><querystr><![CDATA[while w1, w2; Select <w1, w2> such that NextBip(w1, w2)]]></querystr>
+<stuans>24 41,24 56,41 42,5 77,53 32,75 71,77 75</stuans>
+<correct>41 42</correct>
+<time_taken>85.000000</time_taken>
+<failed>
+<missing></missing>
+<additional>24 41,24 56,5 77,53 32,75 71,77 75</additional>
+<summary>
+<expected>1</expected>
+<matched>1</matched>
+<missing>0</missing>
+<additional>6</additional>
+</summary>
+</failed>
+</query>
+<query>
+<id ReturnTuple="1" SuchThat="1" CondNum="2" RelNum="0" comment="no results tuple with both param call synonym">69</id><querystr><![CDATA[call c1, c2; Select <c1, c2> such that NextBip(c1, c2)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>80.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" SuchThat="1" CondNum="2" RelNum="0" comment="invalid, tuple with both param constant synonym">70</id><querystr><![CDATA[constant c1, c2; Select <c1, c2> such that NextBip(c1, c2)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>80.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" SuchThat="1" CondNum="2" RelNum="0" comment="tuple with both param read synonym">71</id><querystr><![CDATA[read re1, re2; Select <re1, re2> such that NextBip(re1, re2)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>76.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" SuchThat="1" CondNum="2" RelNum="0" comment="tuple with both param print synonym">72</id><querystr><![CDATA[print p1, p2; Select <p1, p2> such that NextBip(p1, p2)]]></querystr>
+<stuans>17 28,17 31,17 52,28 31,3 17,3 28,3 31,3 52,51 52</stuans>
+<correct>17 28,17 31,17 52,28 31,3 17,3 28,3 31,3 52,51 52</correct>
+<time_taken>82.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" SuchThat="1" CondNum="3" RelNum="0" comment="both param same synonym, semantically invalid">73</id><querystr><![CDATA[prog_line n; Select n such that NextBip(n, n)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>93.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" SuchThat="1" CondNum="2" RelNum="0" comment="stmts executed before returning to while block">74</id><querystr><![CDATA[stmt s; while w; Select s such that NextBip(s, w)]]></querystr>
+<stuans>12,17,20,21,23,24,27,3,30,31,38,4,40,41,45,46,49,5,52,53,55,57,59,6,64,74,75,77,78,79,8,80,81,84,87,88,91</stuans>
+<correct>4,8,12,31,3,17,53,38,24,55,5,75,79</correct>
+<time_taken>89.000000</time_taken>
+<failed>
+<missing></missing>
+<additional>20,21,23,27,30,40,41,45,46,49,52,57,59,6,64,74,77,78,80,81,84,87,88,91</additional>
+<summary>
+<expected>13</expected>
+<matched>13</matched>
+<missing>0</missing>
+<additional>24</additional>
+</summary>
+</failed>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" SuchThat="1" CondNum="3" RelNum="0" comment="1st param last stmt of procedure that was called, 2nd param synonym">75</id><querystr><![CDATA[prog_line n; Select n such that NextBip(3, n)]]></querystr>
+<stuans>12,17,22,28,31,32,52,55,7,81,83,85,86</stuans>
+<correct>7,12,17,22,28,31,32,52,55,81,83,85,86</correct>
+<time_taken>82.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" SuchThat="1" CondNum="3" RelNum="0" comment="1st param last stmt of procedure that was called, 2nd param synonym">76</id><querystr><![CDATA[prog_line n; Select n such that NextBip(5, n)]]></querystr>
+<stuans>23,6,65,77,84,92</stuans>
+<correct>6,23,65,77,84,92</correct>
+<time_taken>82.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" SuchThat="1" CondNum="3" RelNum="0" comment="1st param last stmt of procedure that was called, 2nd param synonym">77</id><querystr><![CDATA[prog_line n; Select n such that NextBip(17, n)]]></querystr>
+<stuans>12,22,28,31,32,52,55,7,81,85,86</stuans>
+<correct>7,12,22,28,31,32,52,55,81,85,86</correct>
+<time_taken>84.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" SuchThat="1" CondNum="3" RelNum="0" comment="1st param last stmt of procedure that was called, 2nd param synonym">78</id><querystr><![CDATA[prog_line n; Select n such that NextBip(23, n)]]></querystr>
+<stuans>51,71,87</stuans>
+<correct>51,71,87</correct>
+<time_taken>87.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" SuchThat="1" CondNum="3" RelNum="0" comment="1st param last stmt of procedure that was called, 2nd param synonym">79</id><querystr><![CDATA[prog_line n; Select n such that NextBip(24, n)]]></querystr>
+<stuans>22,25,41,56,88</stuans>
+<correct>22,25,41,56,88</correct>
+<time_taken>83.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" SuchThat="1" CondNum="3" RelNum="0" comment="1st param last stmt of procedure that was called, 2nd param synonym">80</id><querystr><![CDATA[prog_line n; Select n such that NextBip(38, n)]]></querystr>
+<stuans>42,65,89,92</stuans>
+<correct>42,65,89,92</correct>
+<time_taken>81.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" SuchThat="1" CondNum="3" RelNum="0" comment="1st param last stmt of procedure that was called, 2nd param synonym">81</id><querystr><![CDATA[prog_line n; Select n such that NextBip(41, n)]]></querystr>
+<stuans>42,81,90</stuans>
+<correct>42,81,90</correct>
+<time_taken>83.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" SuchThat="1" CondNum="3" RelNum="0" comment="1st param last stmt of procedure that was called, 2nd param synonym">82</id><querystr><![CDATA[prog_line n; Select n such that NextBip(53, n)]]></querystr>
+<stuans>32,54,74,91</stuans>
+<correct>74,91,32,54</correct>
+<time_taken>82.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" SuchThat="1" CondNum="2" RelNum="0" comment="tuple with both param while synonym">83</id><querystr><![CDATA[while w; if ifs; Select <w, ifs> such that NextBip(w, ifs)]]></querystr>
+<stuans>32 33,56 58,71 72</stuans>
+<correct>32 33,56 58,71 72</correct>
+<time_taken>83.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" SuchThat="1" CondNum="2" RelNum="0" comment="tuple with both param while synonym">84</id><querystr><![CDATA[while w; if ifs; Select <ifs, w> such that NextBip(ifs, w)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>79.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" SuchThat="1" CondNum="2" RelNum="0" comment="simple NextBip query to test last stmt of procedure is call">85</id><querystr><![CDATA[stmt s; assign a; procedure p; call c; Select s such that NextBip(s, 7)]]></querystr>
+<stuans>17,3</stuans>
+<correct>3,17</correct>
+<time_taken>80.000000</time_taken>
+<passed/>
+</query>
+</queries>
+</test_results>

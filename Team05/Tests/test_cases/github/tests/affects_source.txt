@@ -1,0 +1,339 @@
+procedure A {
+	print x;
+
+	if (x == 1) then {
+		read y;
+	} else {
+		read z;
+	}
+
+	while (x == 0) {
+		read a;
+	}
+
+	if (x == 0) then {
+		while (x == 0) {
+			read b;
+		}
+	} else {
+		read c;
+	}
+
+	if (x == 0) then {
+		read c;
+	} else {
+		while (x == 0) {
+			read b;
+		}
+	}
+
+	while (x == 1) {
+		if (y == 2) then {
+			z = 3 + 2 - x;
+		} else {
+			x = 5;
+		}
+	}
+
+	while (x == 0) {
+		if (x == 0) then {
+			read x;
+		} else {
+			read d;
+		}
+		print k;
+	}
+
+	if (x == 0) then {
+		if (x == 0) then {
+			read y;
+		} else {
+			read z;
+		}
+	} else {
+		read z;
+	}
+
+	if (x == 0) then {
+		read x;
+	} else {
+		if (x == 0) then {
+			read y;
+		} else {
+			read z;
+		}
+	}
+
+	if (x == 0) then {
+		if (q == 213) then {
+			read y;
+		} else {
+			read z;
+		}
+	} else {
+		if (r == 22) then {
+			print y;
+		} else {
+			read z;
+		}
+	}
+
+	if (x == 0) then {
+		if (x == 0) then {
+			read y;
+		} else {
+			read z;
+		}
+		print xyz;
+	} else {
+		read z;
+	}
+
+	if (x == 0) then {
+		read x;
+	} else {
+		if (x == 0) then {
+			read y;
+		} else {
+			read z;
+		}
+		print xyz;
+	}
+
+	if (x == 0) then {
+		if (x == 0) then {
+			read y;
+		} else {
+			read z;
+		}
+		print xyz;
+	} else {
+		if (x == 0) then {
+			read y;
+		} else {
+			read z;
+		}
+		print xyz;
+	}
+
+	while (p == (10 + l)) {
+		if ((o == 0) && (b == 6)) then {
+			if (k == 1) then {
+				fas = 0;
+			} else {
+				fass = 1;
+			}
+		} else {
+			if (q == 2) then {
+				foo = 2;
+			} else {
+				bar = 3;
+			}
+		}
+	}
+
+	if (x == h) then {
+		while (w == 3) {
+			while (f != 3243) {
+				read s;
+			}
+		}
+	} else {
+		print k;
+	}
+
+	if (c == d) then {
+		if (v == u) then {
+			while (t == g) {
+				if (d == 2) then {
+					print x;
+				} else {
+					read y;
+				}
+			}
+		} else {
+			a = b;
+		}
+	} else {
+		x = 5;
+	}
+
+	while (((((ss < 0) && (rr > tt)) || (mm == 12)) && (nn != (bb - aa))) || (kk <= (pp + 1))) {
+		m =  (n - p) / 2  +  n;
+		p = 9;
+		k = j;
+		j = k;
+		if (p >=  9)  then {
+			p = n;
+			while (k >= n) {
+				aa = aa + 1;
+				aa = aa + 3;
+				while (jj == 11) {
+					f = j;
+					if (j > 10) then {
+						f = n + f;
+					}
+					else {
+						n = n + f;
+					}
+					f = n;
+					while (p == n) {
+						m = aa + p;
+						p = m * m;
+						while (m == 0) {
+							j = j + k;
+						}
+					}
+					n = k;
+				}
+				j = f;
+				j = n;
+			}
+			p = aa;
+		}
+		else {
+			p = n;
+		}
+		p = aa + n;
+		n = m + 1;
+	}
+	print m;
+	q = m + p;
+	m = n - p / 2 + n;
+	if  ((q == 11) && (m > 22)) then {
+		p = m;
+	} else {
+		m = p;
+		n = p;
+	}
+	aa = m - p + n + aa;
+	x = (a / b) + (a % b) - (a * b);
+	n = (o + p - (q + r)) / s - t % (u * v - w) % (x * y / z);
+
+
+	be = 500;
+	be2 = 501;
+	while (x == 0) {
+		is = be + 1;
+		in1 = 2;
+		out1 = in1+ 2;
+		out2 = in2 + 3;
+		in2 = 1;
+	}
+	af = be2 - 1;
+	af2 = is + 1;
+
+
+	be3 = 500;
+	be4 = 501;
+	if  ((q == 11) && (m > 22)) then {
+		is2 = be3 - 1;
+	} else {
+		is3 = be4 + 1;
+	}
+	af3 = be3 - 1;
+	af4 = is2 + 1;
+
+
+	be5 = 500;
+	while(x == 0) {
+		if(x == 0) then {
+			is4 = be5 - 1;
+		} else {
+			x = 0;
+		}
+	}
+
+	while(x == 0) {
+		be6 = 500;
+		if(x == 0) then {
+			is5 = be6 - 1;
+		} else {
+			x = 0;
+		}
+	}
+
+	while(x == 0) {
+		if(x == 0) then {
+			be7 = 500;
+		} else {
+			x = 0;
+		}
+		is6 = be7 + 1;
+	}
+
+	while(x == 0) {
+		if(x == 0) then {
+			be8 = 500;
+		} else {
+			is7 = be8 + 1;
+		}
+	}
+
+
+	be9 = 500;
+	if (x == 9) then {
+		while (x == 0) {
+			is8 = be9 + 1;
+		}
+	} else {
+		x = 1;
+	}
+
+	be10 = 500;
+	if (x == 9) then {
+		while (x == 0) {
+			x = 0;
+		}
+		is9 = be10 + 1;
+	} else {
+		x = 1;
+	}
+
+	if (x == 9) then {
+		while (x == 0) {
+			be11 = 500;
+		}
+		is10 = be11 + 1;
+	} else {
+		x = 1;
+	}
+
+	if (x == 9) then {
+		while (x == 0) {
+			be12 = 500;
+		}
+	} else {
+		x = 1;
+	}
+	is11 = be12 + 1;
+
+
+	while (x == 0) {
+		be13 = 500;
+		while(x == 0) {
+			is12 = be13 + 1;
+		}
+	}
+
+	while (x == 0) {
+		is13 = be14 + 1;
+		while(x == 0) {
+			be14 = 500;
+		}
+	}
+
+	while (x == 0) {
+		while(x == 0) {
+			be15 = 500;
+			is14 = be15 + 1;
+		}
+	}
+
+	while (x == 0) {
+		while(x == 0) {
+			is15 = be16 + 1;
+			be16 = 500;
+		}
+	}
+}

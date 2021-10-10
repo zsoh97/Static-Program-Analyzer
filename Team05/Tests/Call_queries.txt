@@ -1,0 +1,30 @@
+Calls:
+- both param _, _ 
+- first param _
+- second param _
+- synonym, synonym
+- procname; i.e. Calls(p, "b")
+- procname; i.e. Calls("b", p)
+- procname, procname
+- case sensitivity Calls(p, P)
+- cyclic calls; i.e. Calls(p, p)
+	- procname, procname
+- BOOLEAN
+- tuple
+- use of synonym/select clause declaration in query
+	- Select p such that Calls("BOOLEAN", p)
+	- Select p such that Calls(<p1,p2>, p)
+	- Select p such that Calls("procedure", p), unless there is a procedure by that name
+- invalid
+	- unknown char as param
+	- mispelled synonym ref; i.e. Calls(p, "prcname")
+- incorrect
+	- no such procedure
+		1st param, 2nd param
+	- procedure block given in first param has no call statement
+	- 1st param procedure block makes no such call to 2nd param
+* not yet implemented:
+- p.procname
+- c.procname
+
+

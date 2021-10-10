@@ -1,0 +1,470 @@
+<?xml-stylesheet type="text/xsl" href="analysis.xsl"?>
+<test_results>
+<info>
+<name>tests</name><parsing_time_taken>10.000000</parsing_time_taken>
+</info>
+<queries>
+<query>
+<id ReturnTuple="1" CondNum="1" RelNum="0" comment="v no clause">1</id><querystr><![CDATA[variable v; Select v]]></querystr>
+<stuans>Ananascafe,ananascafe,bzbzbee,iLovecs3203YaY,sE1sfun,w223hyyyIsThisSOFun,x,y</stuans>
+<correct>sE1sfun,x,y,ananascafe,bzbzbee,iLovecs3203YaY,w223hyyyIsThisSOFun,Ananascafe</correct>
+<time_taken>42.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" CondNum="1" RelNum="0" comment="c no clause">2</id><querystr><![CDATA[constant c; Select c]]></querystr>
+<stuans>2512,5,513,9</stuans>
+<correct>2512,5,513,9</correct>
+<time_taken>53.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Uses="1" SuchThat="1" CondNum="3" RelNum="1" comment="uses clause">3</id><querystr><![CDATA[variable v; stmt s; Select s such that Uses (s, "ananascafe")]]></querystr>
+<stuans>11,13,4,5,8</stuans>
+<correct>4,5,8,11,13</correct>
+<time_taken>46.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Modifies="1" SuchThat="1" CondNum="3" RelNum="1" comment="Modifies clause">4</id><querystr><![CDATA[variable v; stmt s; Select s such that Modifies (s, "w223hyyyIsThisSOFun")]]></querystr>
+<stuans>8,9</stuans>
+<correct>8,9</correct>
+<time_taken>43.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Modifies="1" SuchThat="1" CondNum="3" RelNum="1" comment="same query with spaces">5</id><querystr><![CDATA[variable v; stmt s; Select   s  such that Modifies (   s , "w223hyyyIsThisSOFun")]]></querystr>
+<stuans>8,9</stuans>
+<correct>8,9</correct>
+<time_taken>59.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Modifies="1" SuchThat="1" CondNum="3" RelNum="1" comment="same query with spaces inside the varname">6</id><querystr><![CDATA[variable v; stmt s, s1; Select   s  such that Modifies (   s, "  w22  3h     y y y Is Th is SOFun")]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>46.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Uses="1" SuchThat="1" CondNum="3" RelNum="1" comment="Uses clause with spaces inside varname">7</id><querystr><![CDATA[variable v; stmt s; Select s such that Uses (s, " ana n  ascafe   "   )]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>44.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Followsstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="follows star correct example">8</id><querystr><![CDATA[variable v; stmt s; Select s such that Follows* (s, 13)]]></querystr>
+<stuans>1,11,12,2,3,4,5,6,7,8</stuans>
+<correct>1,2,3,4,5,6,7,8,11,12</correct>
+<time_taken>58.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Followsstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="follows star syntax wrong (space b/w int)">9</id><querystr><![CDATA[variable v; stmt s; Select s such that Follows* (s, 1 3)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>45.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Followsstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="follows star syntax wrong (int wrapped in quotes)">10</id><querystr><![CDATA[variable v; stmt s; Select s such that Follows* (s, "13")]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>47.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Followsstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="follows star syntax wrong (int wrapped in quotes)">11</id><querystr><![CDATA[variable v; stmt s; Select s such that Follows* (s, "13)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>49.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Followsstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="follows star syntax wrong (int wrapped in quotes)">12</id><querystr><![CDATA[variable v; stmt s; Select s such that Follows* (s, 13")]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>48.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Followsstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="follows star syntax wrong (syn wrapped in quotes)">13</id><querystr><![CDATA[variable v; stmt s; Select s such that Follows* ("s", 13)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>46.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Followsstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="follows star syntax wrong (syn wrapped in quotes)">14</id><querystr><![CDATA[variable v; stmt s; Select s such that Follows* ('s', 13)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>45.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" SuchThat="1" CondNum="2" RelNum="0" comment="follows star syntax wrong (syn wrapped in quotes)">15</id><querystr><![CDATA[variable v; stmt s; Select s such that Follows*' (s, 13)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>44.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" SuchThat="1" CondNum="2" RelNum="0" comment="follows star syntax wrong (no brakcet))">16</id><querystr><![CDATA[variable v; stmt s; Select s such that Follows*' (s, 13]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>43.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" Pattern="1" CondNum="3" RelNum="0" comment="complex pattern">17</id><querystr><![CDATA[variable v; stmt s; assign a; Select v pattern a (v, _"y*x/y"_)]]></querystr>
+<stuans>x</stuans>
+<correct>x</correct>
+<time_taken>46.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" Pattern="1" CondNum="3" RelNum="0" comment="complex pattern (wrong)">18</id><querystr><![CDATA[variable v; stmt s; assign a; Select v pattern a (v, _"y%5"_)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>44.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="2" Pattern="1" CondNum="4" RelNum="0" comment="complex pattern with bracket">19</id><querystr><![CDATA[variable v; stmt s; assign a; Select v pattern a (v, _"(y*x)"_)]]></querystr>
+<stuans>x</stuans>
+<correct>x</correct>
+<time_taken>46.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="2" Pattern="1" CondNum="4" RelNum="0" comment="complex pattern with bracket">20</id><querystr><![CDATA[variable v; stmt s; assign a; Select v pattern a (v, _"(y*x)/y%5"_)]]></querystr>
+<stuans>x</stuans>
+<correct>x</correct>
+<time_taken>49.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="2" Pattern="1" CondNum="4" RelNum="0" comment="complex pattern with bracket and spaces">21</id><querystr><![CDATA[variable v; assign a; Select v pattern a (v, _"(y *x )/y%5"_)]]></querystr>
+<stuans>x</stuans>
+<correct>x</correct>
+<time_taken>46.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="2" Pattern="1" CondNum="4" RelNum="0" comment="complex pattern with bracket and spaces">22</id><querystr><![CDATA[variable v; assign a; Select v pattern a (v, _"(y*x) /y%5"_)]]></querystr>
+<stuans>x</stuans>
+<correct>x</correct>
+<time_taken>51.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="2" Pattern="1" CondNum="4" RelNum="0" comment="complex pattern with bracket and spaces">23</id><querystr><![CDATA[variable v; assign a; Select v pattern a (v, _"(y* x ) /y% 5"_)]]></querystr>
+<stuans>x</stuans>
+<correct>x</correct>
+<time_taken>46.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="2" Pattern="1" CondNum="4" RelNum="0" comment="complex pattern with bracket and spaces">24</id><querystr><![CDATA[variable v; assign a; Select v pattern a (v, _"(y*x)/y%5  "_)]]></querystr>
+<stuans>x</stuans>
+<correct>x</correct>
+<time_taken>44.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="2" Pattern="1" CondNum="4" RelNum="0" comment="assign pattern (_, _)">25</id><querystr><![CDATA[assign a; Select a pattern a (_, _)]]></querystr>
+<stuans>5,6</stuans>
+<correct>5,6</correct>
+<time_taken>48.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" Pattern="1" CondNum="3" RelNum="0" comment="assign pattern (_, _const_)">26</id><querystr><![CDATA[variable v; assign a; Select v pattern a (v, _"5"_)]]></querystr>
+<stuans>ananascafe,x</stuans>
+<correct>ananascafe,x</correct>
+<time_taken>49.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" Pattern="1" CondNum="3" RelNum="0" comment="assign pattern (_, _var_)">27</id><querystr><![CDATA[variable v; assign a; Select v pattern a (v, _"ananascafe"_)]]></querystr>
+<stuans>ananascafe</stuans>
+<correct>ananascafe</correct>
+<time_taken>47.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" Pattern="1" CondNum="3" RelNum="0" comment="assign pattern (v, _)">28</id><querystr><![CDATA[variable v; assign a; Select v pattern a (v, _)]]></querystr>
+<stuans>ananascafe,x</stuans>
+<correct>x,ananascafe</correct>
+<time_taken>48.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" Pattern="1" CondNum="3" RelNum="0" comment="assign pattern (v, _const_)">29</id><querystr><![CDATA[variable v; assign a; Select v pattern a (v, _"2512"_)]]></querystr>
+<stuans>ananascafe</stuans>
+<correct>ananascafe</correct>
+<time_taken>46.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" Pattern="1" CondNum="3" RelNum="0" comment="assign pattern (v, _var_)">30</id><querystr><![CDATA[variable v; assign a; Select v pattern a (v, _"y"_)]]></querystr>
+<stuans>x</stuans>
+<correct>x</correct>
+<time_taken>46.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" Pattern="1" CondNum="3" RelNum="0" comment="assign pattern (var, _)">31</id><querystr><![CDATA[variable v; assign a; Select v pattern a ("x", _)]]></querystr>
+<stuans>Ananascafe,ananascafe,bzbzbee,iLovecs3203YaY,sE1sfun,w223hyyyIsThisSOFun,x,y</stuans>
+<correct>sE1sfun,x,y,ananascafe,bzbzbee,w223hyyyIsThisSOFun,iLovecs3203YaY,Ananascafe</correct>
+<time_taken>48.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" Pattern="1" CondNum="3" RelNum="0" comment="assign pattern (var, _const_)">32</id><querystr><![CDATA[variable v; assign a; Select v pattern a ("x", _"9"_)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>46.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" Pattern="1" CondNum="3" RelNum="0" comment="assign pattern (var, _var_)">33</id><querystr><![CDATA[variable v; assign a; Select v pattern a ("ananascafe", _"x"_)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>46.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" Pattern="1" CondNum="3" RelNum="0" comment="assign pattern (_, var)">34</id><querystr><![CDATA[variable v; assign a; Select v pattern a (_, "ananascafe")]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>47.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Pattern="1" CondNum="2" RelNum="0" comment="assign pattern (v, var)">35</id><querystr><![CDATA[variable v; assign a; Select v pattern a (v, "bzbzbee")]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>48.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Pattern="1" CondNum="2" RelNum="0" comment="assign pattern (var, var)">36</id><querystr><![CDATA[variable v; assign a; Select v pattern a ("ananascafe", "x")]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>46.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" Pattern="1" CondNum="3" RelNum="0" comment="assign pattern (_, exact expr)">37</id><querystr><![CDATA[variable v; assign a; Select a pattern a (_, "ananascafe + 2512 * 5 + (ananascafe - 513)/9")]]></querystr>
+<stuans>5</stuans>
+<correct>5</correct>
+<time_taken>48.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Pattern="1" CondNum="2" RelNum="0" comment="assign pattern (v, exact expr)">38</id><querystr><![CDATA[variable v; assign a; Select v pattern a (v, "y + x - (y * x) / y % 5")]]></querystr>
+<stuans>x</stuans>
+<correct>x</correct>
+<time_taken>47.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Pattern="1" CondNum="2" RelNum="0" comment="assign pattern (var, exact expr)">39</id><querystr><![CDATA[variable v; assign a; Select BOOLEAN pattern a ("ananascafe", "ananascafe + 2512 * 5 + (ananascafe - 513)/9")]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>46.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="2" Pattern="1" CondNum="4" RelNum="0" comment="assign pattern (_, partial expr)">40</id><querystr><![CDATA[variable v; assign a; Select a pattern a (_, _"y%5"_)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>48.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="2" Pattern="1" CondNum="4" RelNum="0" comment="assign pattern (_, partial expr)">41</id><querystr><![CDATA[variable v; assign a; Select a pattern a (_, _"x/y%5"_)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>55.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="2" Pattern="1" CondNum="4" RelNum="0" comment="assign pattern (v, partial expr)">42</id><querystr><![CDATA[variable v; assign a; Select v pattern a (v, _"2512 * 5"_)]]></querystr>
+<stuans>ananascafe</stuans>
+<correct>ananascafe</correct>
+<time_taken>55.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" Pattern="1" CondNum="3" RelNum="0" comment="assign pattern (v, partial expr)">43</id><querystr><![CDATA[variable v; assign a; Select v pattern a (v, _"ananascafe+2512"_)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>62.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="2" Pattern="1" CondNum="4" RelNum="0" comment="assign pattern (v, partial expr)">44</id><querystr><![CDATA[variable v; assign a; Select v pattern a (v, _"ananascafe + 2512*5 + ananascafe"_)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>63.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="2" Pattern="1" CondNum="4" RelNum="0" comment="assign pattern (v, partial expr)">45</id><querystr><![CDATA[variable v; assign a; Select v pattern a (v, _"ananascafe + 2512 * 5 + (ananascafe - 513)"_)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>65.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="2" Pattern="1" CondNum="4" RelNum="0" comment="assign pattern (v, partial expr)">46</id><querystr><![CDATA[variable v; assign a; Select v pattern a (v, _"2512 * 5 + (ananascafe - 513)/9"_)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>68.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="2" Pattern="1" CondNum="4" RelNum="0" comment="assign pattern (v, partial expr)">47</id><querystr><![CDATA[variable v; assign a; Select v pattern a (v, _"(ananascafe - 513)/9"_)]]></querystr>
+<stuans>ananascafe</stuans>
+<correct>ananascafe</correct>
+<time_taken>60.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" UnnamedVar="2" Pattern="1" CondNum="4" RelNum="0" comment="assign pattern (var, partial expr)">48</id><querystr><![CDATA[variable v; assign a; Select BOOLEAN pattern a ("x", _"y + x - (y * x) / y % 5"_)]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>51.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" UnnamedVar="2" Pattern="1" CondNum="4" RelNum="0" comment="assign pattern (var, partial expr)">49</id><querystr><![CDATA[variable v; assign a; Select BOOLEAN pattern a ("x", _"x / y % 5"_)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>61.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" UnnamedVar="2" Pattern="1" CondNum="4" RelNum="0" comment="assign pattern (var, partial expr)">50</id><querystr><![CDATA[variable v; assign a; Select BOOLEAN pattern a ("x", _"y + x - (y * x)"_)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>51.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Modifies="1" SuchThat="1" CondNum="3" RelNum="1" comment="unrelated syn, var not in program">51</id><querystr><![CDATA[stmt s; Select s such that Modifies (1, "abcde")]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>48.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Modifies="1" SuchThat="1" CondNum="3" RelNum="1" comment="unrelated syn, var in">52</id><querystr><![CDATA[stmt s; Select s such that Modifies (1, "sE1sfun")]]></querystr>
+<stuans>1,10,11,12,13,2,3,4,5,6,7,8,9</stuans>
+<correct>1,2,3,4,5,6,7,8,9,10,11,12,13</correct>
+<time_taken>49.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Modifies="1" SuchThat="1" CondNum="3" RelNum="1" comment="unrelated syns">53</id><querystr><![CDATA[stmt s; variable v; Select s such that Modifies (1, v)]]></querystr>
+<stuans>1,10,11,12,13,2,3,4,5,6,7,8,9</stuans>
+<correct>1,2,3,4,5,6,7,8,9,10,11,12,13</correct>
+<time_taken>55.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Modifies="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="unrelated syns">54</id><querystr><![CDATA[stmt s; variable v; Select s such that Modifies (1, _)]]></querystr>
+<stuans>1,10,11,12,13,2,3,4,5,6,7,8,9</stuans>
+<correct>1,2,3,4,5,6,7,8,9,10,11,12,13</correct>
+<time_taken>48.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Modifies="1" SuchThat="1" CondNum="3" RelNum="1" comment="unrelated syns">55</id><querystr><![CDATA[stmt s; variable v; Select s such that Modifies (s, "w223hyyyIsThisSOFun")]]></querystr>
+<stuans>8,9</stuans>
+<correct>8,9</correct>
+<time_taken>46.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Modifies="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="unrelated syns">56</id><querystr><![CDATA[stmt s; variable v; Select s such that Modifies (s, _)]]></querystr>
+<stuans>1,2,3,5,6,7,8,9</stuans>
+<correct>1,2,3,5,6,7,8,9</correct>
+<time_taken>49.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Uses="1" SuchThat="1" CondNum="3" RelNum="1" comment="unrelated syns">57</id><querystr><![CDATA[stmt s; variable v; Select s such that Uses (5, "ananascafe")]]></querystr>
+<stuans>1,10,11,12,13,2,3,4,5,6,7,8,9</stuans>
+<correct>1,2,3,4,5,6,7,8,9,10,11,12,13</correct>
+<time_taken>48.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Uses="1" SuchThat="1" CondNum="3" RelNum="1" comment="unrelated syns">58</id><querystr><![CDATA[stmt s; variable v; Select s such that Uses (5, v)]]></querystr>
+<stuans>1,10,11,12,13,2,3,4,5,6,7,8,9</stuans>
+<correct>1,2,3,4,5,6,7,8,9,10,11,12,13</correct>
+<time_taken>51.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" Uses="1" SuchThat="1" CondNum="4" RelNum="1" comment="unrelated syns">59</id><querystr><![CDATA[stmt s; variable v; Select s such that Uses (5, _)]]></querystr>
+<stuans>1,10,11,12,13,2,3,4,5,6,7,8,9</stuans>
+<correct>1,2,3,4,5,6,7,8,9,10,11,12,13</correct>
+<time_taken>49.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Uses="1" SuchThat="1" CondNum="3" RelNum="1" comment="unrelated syns">60</id><querystr><![CDATA[stmt s; variable v; Select s such that Uses (s, "ananascafe")]]></querystr>
+<stuans>11,13,4,5,8</stuans>
+<correct>4,5,8,11,13</correct>
+<time_taken>47.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Uses="1" SuchThat="1" CondNum="3" RelNum="1" comment="unrelated syns">61</id><querystr><![CDATA[stmt s; variable v; Select v such that Uses (s, v)]]></querystr>
+<stuans>iLovecs3203YaY,ananascafe,Ananascafe,x,y,bzbzbee</stuans>
+<correct>ananascafe,y,x,bzbzbee,iLovecs3203YaY,Ananascafe</correct>
+<time_taken>50.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Modifies="1" SuchThat="1" CondNum="3" RelNum="1" comment="unrelated syns">62</id><querystr><![CDATA[stmt s; variable v; Select s such that Modifies (s, s)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>46.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Follows="1" SuchThat="1" CondNum="3" RelNum="1" comment="BOOLEAN as stmt">63</id><querystr><![CDATA[stmt BOOLEAN; Select BOOLEAN such that Follows (1,2)]]></querystr>
+<stuans>1,10,11,12,13,2,3,4,5,6,7,8,9</stuans>
+<correct>1,2,3,4,5,6,7,8,9,10,11,12,13</correct>
+<time_taken>51.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Follows="1" SuchThat="1" CondNum="3" RelNum="1" comment="BOOLEAN as read">64</id><querystr><![CDATA[read BOOLEAN; Select <BOOLEAN.varName> such that Follows(1,2)]]></querystr>
+<stuans>sE1sfun,x,y,bzbzbee,w223hyyyIsThisSOFun</stuans>
+<correct>sE1sfun,x,y,w223hyyyIsThisSOFun,bzbzbee</correct>
+<time_taken>47.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" With="1" CondNum="2" RelNum="0" comment="BOOLEAN as const">65</id><querystr><![CDATA[stmt s; constant BOOLEAN; Select BOOLEAN with BOOLEAN.value = s.stmt#]]></querystr>
+<stuans>5,9</stuans>
+<correct>5,9</correct>
+<time_taken>45.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Modifies="1" UnnamedVar="1" Pattern="1" CondNum="4" RelNum="1" comment="Uses as var, Modifies as stmt">66</id><querystr><![CDATA[assign Modifies; variable Uses; Select <Modifies, Uses> pattern Modifies (Uses, _)]]></querystr>
+<stuans>5 ananascafe,6 x</stuans>
+<correct>5 ananascafe,6 x</correct>
+<time_taken>45.000000</time_taken>
+<passed/>
+</query>
+</queries>
+</test_results>

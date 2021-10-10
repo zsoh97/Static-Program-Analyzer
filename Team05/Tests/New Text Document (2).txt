@@ -1,0 +1,25 @@
+1. Identify components and interactions based on requirements
+	- create architectural diagram, what each component should do and their interactions.
+2. Ensure the components are independent
+3. there could be some component that is external to system. Need for API to encapsulate the changes.
+	- minimise changes to server.
+
+
+part 2:
+have an idea of conmponents and their iteractions
+Need to cover the architectural diagram.
+Study interactions
+understand what are the steps
+Create 1 or more API for each step.
+	- What would be the granularity of the answer?
+	- be mindful of the parameter when defining API
+	- break API into more granular method if it becomes too epic.
+	- we are defining abstract API, should not put concrete data type, put placeholder/ symbolic names.
+	- symbolic placeholder e.g. PROG_NAME
+
+part 3:
+architecture and work flow known. Translate all the info into sequence diagram.
+- take note of labelling of sequence diagram. What is being returned? Be specific. Consider the return type.
+- follow convention of using all caps to be ABSTRACT type. e.g. BOOLEAN/VOID/STRING
+- for arrays/list, can bind as LIST_OF_<abstract data type>
+- structure operations as call from one comopnent to another with a callback.

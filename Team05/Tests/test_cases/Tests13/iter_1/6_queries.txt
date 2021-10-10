@@ -1,0 +1,250 @@
+1 - query with no clause - statement
+stmt s; read re; print pr; call ca; while w; if ifs; assign a; variable v; constant c; procedure p;
+Select s
+1,2,3,4,5,6,7,8,9,10,11,12,13
+5000
+2 - query with no clause - read
+stmt s; read re; print pr; call ca; while w; if ifs; assign a; variable v; constant c; procedure p;
+Select re
+6
+5000
+3 - query with no clause - print
+stmt s; read re; print pr; call ca; while w; if ifs; assign a; variable v; constant c; procedure p;
+Select pr
+7
+5000
+4 - query with no clause - call
+stmt s; read re; print pr; call ca; while w; if ifs; assign a; variable v; constant c; procedure p;
+Select ca
+8
+5000
+5 - query with no clause - while 
+stmt s; read re; print pr; call ca; while w; if ifs; assign a; variable v; constant c; procedure p;
+Select w
+2,4
+5000
+6 - query with no clause - if
+stmt s; read re; print pr; call ca; while w; if ifs; assign a; variable v; constant c; procedure p;
+Select ifs
+9
+5000
+7 - query with no clause - assign
+stmt s; read re; print pr; call ca; while w; if ifs; assign a; variable v; constant c; procedure p;
+Select a
+1,3,5,10,11,12,13
+5000
+8 - query with no clause - variable
+stmt s; read re; print pr; call ca; while w; if ifs; assign a; variable v; constant c; procedure p;
+Select v
+x,i,y,a,b,c,v
+5000
+9 - query with no clause - constant
+stmt s; read re; print pr; call ca; while w; if ifs; assign a; variable v; constant c; procedure p;
+Select c
+0,1,2
+5000
+10 - query with no clause - procedure
+stmt s; read re; print pr; call ca; while w; if ifs; assign a; variable v; constant c; procedure p;
+Select p
+System,Test,Iteration
+5000
+11 - query with 1 such that clause - follows synonym-synonym
+stmt s1, s2;
+Select s1 such that Follows(s1, s2)
+1,3,6,7,8,12
+5000
+12 - query with 1 such that clause - follows synonym-wildcard
+stmt s1;
+Select s1 such that Follows(s1, _)
+1,3,6,7,8,12
+5000
+13 - query with 1 such that clause - follows wildcard-synonym
+stmt s1;
+Select s1 such that Follows(_, s1)
+2,4,7,8,9,13
+5000
+14 - query with 1 such that clause - follows wildcard-wildcard
+stmt s1;
+Select s1 such that Follows(_, _)
+1,2,3,4,5,6,7,8,9,10,11,12,13
+5000
+15 - query with 1 such that clause - follows idx-synonym
+stmt s1;
+Select s1 such that Follows(1, s1)
+2
+5000
+16 - query with 1 such that clause - follows idx-idx
+stmt s1;
+Select s1 such that Follows(1, 2)
+1,2,3,4,5,6,7,8,9,10,11,12,13
+5000
+17 - query with 1 such that clause - follows synonym-idx
+stmt s1;
+Select s1 such that Follows(s1, 2)
+1
+5000
+18 - query with 1 such that clause - follows wildcard-idx
+stmt s1;
+Select s1 such that Follows(1, _)
+1,2,3,4,5,6,7,8,9,10,11,12,13
+5000
+19 - query with 1 such that clause - follows idx-wildcard
+stmt s1;
+Select s1 such that Follows(_, 3)
+none
+5000
+20 - query with 1 such that clause - follows star idx-synonym
+stmt s1;
+Select s1 such that Follows*(6, s1)
+7,8,9
+5000
+21 - query with 1 such that clause - parent idx-synonym
+stmt s1;
+Select s1 such that Parent(2, s1)
+3,4
+5000
+22 - query with 1 such that clause - parent star idx-synonym
+stmt s1;
+Select s1 such that Parent*(2, s1)
+3,4,5
+5000
+23 - query with 1 such that clause - stmt modifies idx-synonym
+variable v;
+Select v such that Modifies(1, v)
+x
+5000
+24 - query with 1 such that clause - stmt modifies synonym-var
+stmt s;
+Select s such that Modifies(s, "x")
+1,2,4,5,6
+5000
+25 - query with 1 such that clause - proc modifies proc-synonym
+variable v;
+Select v such that Modifies("System", v)
+x,i
+5000
+26 - query with 1 such that clause - proc modifies synonym-var
+procedure p;
+Select p such that Modifies(p, "x")
+System,Test
+5000
+27 - query with 1 such that clause - stmt modifies synonym-wildcard
+stmt s;
+Select s such that Modifies(s, _)
+1,2,3,4,5,6,8,9,10,11,12,13
+5000
+28 - query with 1 such that clause - proc modifies synonym-wildcard
+procedure p;
+Select p such that Modifies(p, _)
+System,Test,Iteration
+5000
+29 - query with 1 such that clause - stmt uses idx-synonym
+variable v;
+Select v such that Uses(3, v)
+i
+5000
+30 - query with 1 such that clause - stmt uses synonym-var
+stmt s;
+Select s such that Uses(s, "x")
+2,4,5,8,9,13
+5000
+31 - query with 1 such that clause - proc uses proc-synonym
+variable v;
+Select v such that Uses("Iteration", v)
+b,c,x,y
+5000
+32 - query with 1 such that clause - proc uses synonym-var
+procedure p;
+Select p such that Uses(p, "c")
+Iteration, Test
+5000
+33 - query with 1 such that clause - stmt uses synonym-wildcard
+stmt s;
+Select s such that Uses(s, _)
+2,3,4,5,7,8,9,12,13
+5000
+34 - query with 1 such that clause - proc uses synonym-wildcard
+procedure p;
+Select p such that Uses(p, _)
+System,Test,Iteration
+5000
+35 - query with 1 pattern clause - wildcard-wildcard
+assign a;
+Select a pattern a(_, _)
+1,3,5,10,11,12,13
+5000
+36 - query with 1 pattern clause - wildcard-expr
+assign a;
+Select a pattern a(_, _"c"_)
+12
+5000
+37 - query with 1 pattern clause - variable-wildcard
+assign a;
+Select a pattern a("v", _)
+13
+5000
+38 - query with 1 pattern clause - variable-expr
+assign a;
+Select a pattern a("a", _"b"_)
+12
+5000
+39 - query with 1 such that and 1 pattern clause
+assign a;
+Select a such that Follows*(a,13) pattern a("a", _)
+12
+5000
+40 - query with 1 such that and 1 pattern clause
+assign a;
+Select a such that Parent*(2, a) pattern a("x", _)
+5
+5000
+41 - query with 1 such that and 1 pattern clause
+assign a;
+Select a such that Parent(2, a) pattern a("x", _)
+none
+5000
+42 - query with 1 such that and 1 pattern clause
+assign a;
+Select a such that Parent(9, a) pattern a(_, _"2"_)
+11
+5000
+43 - query with 1 such that and 1 pattern clause
+assign a;
+Select a such that Parent*(2, a) pattern a("x", "1")
+none
+5000
+44 - query with 1 such that and 1 pattern clause
+assign a;
+Select a such that Uses(a, "b") pattern a("a", _)
+12
+5000
+45 - query with 1 such that and 1 pattern clause
+assign a;
+Select a such that Uses(a, _) pattern a("y", _)
+none
+5000
+46 - query with 1 such that and 1 pattern clause
+assign a; stmt s;
+Select a such that Uses(s, "i") pattern a("v", _"y"_)
+13
+5000
+47- query with 1 such that and 1 pattern clause
+assign a;
+Select a such that Modifies(a, "v") pattern a("x", _)
+none
+5000
+48 - query with 1 such that and 1 pattern clause
+assign a; procedure p;
+Select p such that Modifies(p, "v") pattern a("i", _)
+Iteration, Test
+5000
+49- query with 1 such that and 1 pattern clause
+assign a;
+Select a such that Modifies(a, "x") pattern a("x", _)
+1, 5
+5000
+50- query with 1 such that and 1 pattern clause
+assign a;
+Select a such that Modifies(a, "v") pattern a(_, _"1"_)
+13
+5000

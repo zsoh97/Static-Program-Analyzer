@@ -1,0 +1,9 @@
+1 - single clause - select BOOLEAN
+stmt s1, s2;
+Select BOOLEAN such that Next*(s1, s2)
+TRUE
+5000
+2 - single clause - select BOOLEAN
+Select BOOLEAN such that Calls*(_, anothercaller)
+FALSE
+5000

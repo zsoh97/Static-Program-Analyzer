@@ -1,0 +1,22 @@
+procedure threeLevel {
+  while (x < 5) {
+    print x;
+    z = x;
+    read z;
+    while (x != 2) {
+      print z;
+      if (x == 4) then {
+        read y;
+        x = y;
+        print y;
+      } else {
+        read z;
+      }
+    }
+  }
+  if (x > 5) then {
+    z = z + x;
+  } else {
+    y = z + 1;
+  }
+}

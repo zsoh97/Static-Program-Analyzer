@@ -1,0 +1,15 @@
+1 - single clause - select tuple - two values
+stmt s1, s2;
+Select <s1, s2> such that Next(s1, s2)
+1 2, 2 3, 3 4, 4 5, 4 9, 5 6, 5 7, 6 4, 7 8, 8 4, 9 2, 10 11, 11 12, 11 13, 12 18, 13 14, 13 16, 14 15, 15 13, 16 17, 17 18, 18 19, 20 21, 21 22
+5000
+2 - single clause - select tuple - three values
+procedure p1, p2, p3
+Select <p1, p2, p3> such that Calls(p1, p2)
+iter2 callee iter, iter2 callee callee, iter2 callee goodgame, iter2 callee someguy, iter2 callee anothercaller,  callee goodgame iter2, callee goodgame callee, callee goodgame goodgame, callee goodgame someguy, callee goodgame anothercaller, goodgame someguy iter2, goodgame someguy callee, goodgame someguy goodgame, goodgame someguy someguy, goodgame someguy anothercaller, anothercallee goodgame iter2, anothercallee goodgame callee, anothercallee goodgame goodgame, anothercallee goodgame someguy, anothercallee goodgame anothercaller
+5000
+3 - single clause - select tuple - three values with no output
+procedure p1, p2, p3
+Select <p1, p2, p3> such that Calls*(_,"anothercaller")
+none
+5000

@@ -1,0 +1,36 @@
+<?xml-stylesheet type="text/xsl" href="analysis.xsl"?>
+<test_results>
+<info>
+<name>tests</name><parsing_time_taken>43.000000</parsing_time_taken>
+</info>
+<queries>
+<query>
+<id ReturnTuple="1" Parent="1" UnnamedVar="1" Pattern="1" SuchThat="1" CondNum="5" RelNum="1" comment="Select stmt that is parent of assign with pattern">1</id><querystr><![CDATA[stmt s; assign a; Select s such that Parent (s, a) pattern a ("a", _)]]></querystr>
+<stuans>9,6</stuans>
+<correct>6,9</correct>
+<time_taken>38.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Parentstar="1" UnnamedVar="1" Pattern="1" SuchThat="1" CondNum="5" RelNum="1" comment="Select stmt that is indirect parent of assign with pattern">2</id><querystr><![CDATA[stmt s; assign a; Select s such that Parent* (s, a) pattern a ("c", _)]]></querystr>
+<stuans>10,9,2,3,6</stuans>
+<correct>2,3,6,9,10</correct>
+<time_taken>55.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Parentstar="1" UnnamedVar="1" Pattern="1" SuchThat="1" CondNum="5" RelNum="1" comment="Select assign with pattern that indirectly has if as parent">3</id><querystr><![CDATA[assign a; if ifs; Select a such that Parent* (ifs, a) pattern a ("k", _)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>38.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Parentstar="1" UnnamedVar="1" Pattern="1" SuchThat="1" CondNum="5" RelNum="1" comment="Select assign with pattern that indirectly has specified stmt as parent">4</id><querystr><![CDATA[assign a; if ifs; Select a such that Parent* (2, a) pattern a ("c", _)]]></querystr>
+<stuans>5,7</stuans>
+<correct>5,7</correct>
+<time_taken>42.000000</time_taken>
+<passed/>
+</query>
+</queries>
+</test_results>

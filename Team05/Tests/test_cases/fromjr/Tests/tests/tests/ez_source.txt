@@ -1,0 +1,11 @@
+procedure ez {
+  x = 2 % 3;
+  print x;
+  read y;
+  y = x * y;
+  read x;
+  print y;
+  x = y / x;
+  y = x + 2;
+  y = 2 - x;
+}

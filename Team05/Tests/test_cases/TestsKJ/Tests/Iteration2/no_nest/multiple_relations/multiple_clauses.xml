@@ -1,0 +1,103 @@
+<?xml-stylesheet type="text/xsl" href="analysis.xsl"?>
+<test_results>
+<info>
+<name>tests</name><parsing_time_taken>31.000000</parsing_time_taken>
+</info>
+<queries>
+<query>
+<id ReturnTuple="1" Calls="1" Follows="1" Modifies="1" Uses="1" Pattern="1" SuchThat="1" CondNum="7" RelNum="4" comment="[Follows] [Modifies, Calls, Uses, Pattern]">1</id><querystr><![CDATA[assign a, a1; stmt s; procedure p, q; variable v; Select <a, p> such that Follows (a, s) and Modifies (p, "a") and Calls (p, q) and Uses (q, v) pattern a1 (v, "a+b")]]></querystr>
+<stuans>11 P,11 main,15 P,15 main,16 P,16 main,17 P,17 main,18 P,18 main,19 P,19 main,20 P,20 main,5 P,5 main,6 P,6 main,8 P,8 main,9 P,9 main</stuans>
+<correct>5 main,5 P,6 main,6 P,8 main,8 P,9 main,9 P,11 main,11 P,15 main,15 P,16 main,16 P,17 main,17 P,18 main,18 P,19 main,19 P,20 main,20 P</correct>
+<time_taken>83.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" Follows="1" Modifies="1" Uses="1" Pattern="1" SuchThat="1" CondNum="7" RelNum="4" comment="[Follows, Modifies] [Calls, Uses, Pattern]">2</id><querystr><![CDATA[assign a, a1; stmt s; procedure p, q; variable v; Select <a, v> such that Follows (a, s) and Modifies (a, "a") and Calls (p, q) and Uses (q, v) pattern a1 (v, "a+b")]]></querystr>
+<stuans>18 a,5 a,8 a</stuans>
+<correct>5 a,8 a,18 a</correct>
+<time_taken>50.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" Follows="1" Modifies="1" Uses="1" Pattern="1" SuchThat="1" CondNum="7" RelNum="4" comment="[Follows] [Modifies, Calls] [Uses, Pattern]">3</id><querystr><![CDATA[assign a, a1; stmt s; procedure p, q; variable v; Select <a, q, a1> such that Follows (a, s) and Modifies (p, "a") and Calls (p, q) and Uses (a1, "b") pattern a1 (v, "a+b")]]></querystr>
+<stuans>11 Q 5,11 P 5,15 Q 5,15 P 5,16 Q 5,16 P 5,17 Q 5,17 P 5,18 Q 5,18 P 5,19 Q 5,19 P 5,20 Q 5,20 P 5,5 Q 5,5 P 5,6 Q 5,6 P 5,8 Q 5,8 P 5,9 Q 5,9 P 5</stuans>
+<correct>5 P 5,6 P 5,8 P 5,9 P 5,11 P 5,15 P 5,16 P 5,17 P 5,18 P 5,19 P 5,20 P 5,5 Q 5,6 Q 5,8 Q 5,9 Q 5,11 Q 5,15 Q 5,16 Q 5,17 Q 5,18 Q 5,19 Q 5,20 Q 5</correct>
+<time_taken>60.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" Follows="1" Modifies="1" Uses="1" Pattern="1" SuchThat="1" CondNum="7" RelNum="4" comment="[Follows, Modifies] [Calls, Uses] [Pattern]">4</id><querystr><![CDATA[assign a, a1; stmt s; procedure p, q; variable v; Select <a, v, p> such that Follows (a, s) and Modifies (s, "a") and Calls (p, q) and Uses (p, "b") pattern a1 (v, "a+b")]]></querystr>
+<stuans>17 a P,17 a main,9 a P,9 a main</stuans>
+<correct>9 a main,17 a main,9 a P,17 a P</correct>
+<time_taken>50.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" Follows="1" Modifies="1" Uses="1" Pattern="1" SuchThat="1" CondNum="7" RelNum="4" comment="[Follows, Modifies, Calls, Uses, Pattern]">5</id><querystr><![CDATA[assign a, a1; stmt s; procedure p, q; variable v; Select <a, s, p, v> such that Follows (a, s) and Modifies (p, "a") and Calls (p, q) and Uses (s, "b") pattern a (v, "a+b")]]></querystr>
+<stuans>5 6 P a,5 6 main a</stuans>
+<correct>5 6 P a,5 6 main a</correct>
+<time_taken>49.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Callsstar="1" Followsstar="1" Modifies="1" Next="1" Nextstar="1" Uses="1" SuchThat="1" CondNum="8" RelNum="6" comment="[Next*] [Follows*, Modifies, Next, Calls*, Uses]">6</id><querystr><![CDATA[assign a, a1; stmt s; procedure p, q; variable v; Select <a, p> such that Next* (a, s) and Follows* (a1, 12) and Modifies (a1, v) and Next (5, a1) and Calls* (p, q) and Uses (q, v)]]></querystr>
+<stuans>11 P,11 main,15 P,15 main,16 P,16 main,17 P,17 main,18 P,18 main,19 P,19 main,20 P,20 main,5 P,5 main,6 P,6 main,8 P,8 main,9 P,9 main</stuans>
+<correct>5 main,5 P,6 main,6 P,8 main,8 P,9 main,9 P,11 main,11 P,15 main,15 P,16 main,16 P,17 main,17 P,18 main,18 P,19 main,19 P,20 main,20 P</correct>
+<time_taken>128.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Callsstar="1" Followsstar="1" Modifies="1" Next="1" Nextstar="1" Uses="1" SuchThat="1" CondNum="8" RelNum="6" comment="[Next*, Follows*] [Modifies, Next, Calls*, Uses]">7</id><querystr><![CDATA[assign a, a1; stmt s; procedure p, q; variable v; Select <a, v> such that Next* (a, s) and Follows* (a, 12) and Modifies (a1, v) and Next (5, a1) and Calls* (p, q) and Uses (q, v)]]></querystr>
+<stuans>11 b,5 b,6 b,8 b,9 b</stuans>
+<correct>5 b,6 b,8 b,9 b,11 b</correct>
+<time_taken>99.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Callsstar="1" Followsstar="1" Modifies="1" Next="1" Nextstar="1" Uses="1" SuchThat="1" CondNum="8" RelNum="6" comment="[Next*, Follows*, Modifies] [Next] [Calls*, Uses]">8</id><querystr><![CDATA[assign a, a1, a2; stmt s; procedure p, q; variable v; Select <a, a2, q> such that Next* (a, s) and Follows* (a1, s) and Modifies (a1, "a") and Next (5, a2) and Calls* (p, q) and Uses (q, v)]]></querystr>
+<stuans>11 6 Q,11 6 P,15 6 Q,15 6 P,16 6 Q,16 6 P,17 6 Q,17 6 P,18 6 Q,18 6 P,19 6 Q,19 6 P,20 6 Q,20 6 P,5 6 Q,5 6 P,6 6 Q,6 6 P,8 6 Q,8 6 P,9 6 Q,9 6 P</stuans>
+<correct>5 6 P,6 6 P,8 6 P,9 6 P,11 6 P,15 6 P,16 6 P,17 6 P,18 6 P,19 6 P,20 6 P,5 6 Q,6 6 Q,8 6 Q,9 6 Q,11 6 Q,15 6 Q,16 6 Q,17 6 Q,18 6 Q,19 6 Q,20 6 Q</correct>
+<time_taken>188.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Callsstar="1" Followsstar="1" Modifies="1" Next="1" Nextstar="1" Uses="1" SuchThat="1" CondNum="8" RelNum="6" comment="[Next*, Follows* Modifies, Next] [Calls*, Uses]">9</id><querystr><![CDATA[assign a, a1, a2; stmt s; procedure p, q; variable v; Select <a, p> such that Next* (a, s) and Follows* (a1, s) and Modifies (a1, "a") and Next (7, a) and Calls* (p, q) and Uses (q, v)]]></querystr>
+<stuans>8 P,8 main</stuans>
+<correct>8 main,8 P</correct>
+<time_taken>92.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Callsstar="1" Followsstar="1" Modifies="1" Next="1" Nextstar="1" Uses="1" SuchThat="1" CondNum="8" RelNum="6" comment="[Next*, Follows* Modifies, Next, Calls*] [Uses]">10</id><querystr><![CDATA[assign a, a1, a2; stmt s; procedure p, q; variable v; Select <a, p, v> such that Next* (a, s) and Follows* (a1, s) and Modifies (p, "a") and Next (5, a1) and Calls* (p, "P") and Uses (a2, v)]]></querystr>
+<stuans>11 main a,11 main x,11 main b,11 main c,5 main a,5 main x,5 main b,5 main c,6 main a,6 main x,6 main b,6 main c,8 main a,8 main x,8 main b,8 main c,9 main a,9 main x,9 main b,9 main c</stuans>
+<correct>5 main a,6 main a,8 main a,9 main a,11 main a,5 main b,6 main b,8 main b,9 main b,11 main b,5 main c,6 main c,8 main c,9 main c,11 main c,5 main x,6 main x,8 main x,9 main x,11 main x</correct>
+<time_taken>151.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Callsstar="1" Followsstar="1" Modifies="1" Next="1" Nextstar="1" Uses="1" SuchThat="1" CondNum="8" RelNum="6" comment="[Next*, Follows* Modifies, Next, Calls*, Uses]">11</id><querystr><![CDATA[assign a, a1, a2; stmt s; procedure p, q; variable v; Select <a, p> such that Next* (a, s) and Follows* (a1, s) and Modifies (p, "a") and Next (5, a) and Calls* (p, q) and Uses (a, v)]]></querystr>
+<stuans>6 P,6 main</stuans>
+<correct>6 main,6 P</correct>
+<time_taken>130.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="3" SuchThat="1" CondNum="5" RelNum="3" comment="Multiple Next*">12</id><querystr><![CDATA[stmt s, s1, s2, s3, s4, s5; Select s such that Next* (s, s1) and Next* (s2, s3) and Next* (s4, s5)]]></querystr>
+<timeout/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="2" SuchThat="1" CondNum="4" RelNum="2" comment="Multiple Next*">13</id><querystr><![CDATA[stmt s, s1, s2, s3, s4, s5; Select s such that Next* (s, s1) and Next* (s1, s2)]]></querystr>
+<stuans>1,10,11,14,15,16,17,18,19,2,5,6,7,8,9</stuans>
+<correct>1,2,5,6,7,8,9,10,11,14,15,16,17,18,19</correct>
+<time_taken>75.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="3" SuchThat="1" CondNum="5" RelNum="3" comment="Multiple Next*">14</id><querystr><![CDATA[stmt s, s1, s2, s3, s4, s5; Select s such that Next* (s, s1) and Next* (s1, s2) and Next* (s1, s3)]]></querystr>
+<stuans>1,10,11,14,15,16,17,18,19,2,5,6,7,8,9</stuans>
+<correct>1,2,5,6,7,8,9,10,11,14,15,16,17,18,19</correct>
+<time_taken>139.000000</time_taken>
+<passed/>
+</query>
+</queries>
+</test_results>

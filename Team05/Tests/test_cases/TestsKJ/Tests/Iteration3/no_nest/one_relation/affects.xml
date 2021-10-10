@@ -1,0 +1,862 @@
+<?xml-stylesheet type="text/xsl" href="analysis.xsl"?>
+<test_results>
+<info>
+<name>tests</name><parsing_time_taken>34.000000</parsing_time_taken>
+</info>
+<queries>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Find statements that with stmt and stmt (same)">1</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select s such that Affects (s, s)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>56.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Find statements that with stmt and stmt (diff)">2</id><querystr><![CDATA[stmt s, s1; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select s such that Affects (s, s1)]]></querystr>
+<stuans>17,18,19,5,6,8</stuans>
+<correct>5,6,8,17,18,19</correct>
+<time_taken>59.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Find statements that with stmt and assign">3</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select s such that Affects (s, a)]]></querystr>
+<stuans>17,18,19,5,6,8</stuans>
+<correct>5,6,8,17,18,19</correct>
+<time_taken>46.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Find statements that with stmt and call">4</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select s such that Affects (s, cl)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>55.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Find statements that with stmt and print">5</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select s such that Affects (s, p)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>52.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Find statements that with stmt and read">6</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select s such that Affects (s, r)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>51.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Find statements that with stmt and progline">7</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select s such that Affects (s, n)]]></querystr>
+<stuans>17,18,19,5,6,8</stuans>
+<correct>5,6,8,17,18,19</correct>
+<time_taken>50.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Find statements that with stmt and while">8</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select s such that Affects (s, w)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>49.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Find statements that with stmt and if">9</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select s such that Affects (s, ifs)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>50.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Find statements that with assign and stmt">10</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select s such that Affects (a, s)]]></querystr>
+<stuans>18,19,20,6,8,9</stuans>
+<correct>6,8,9,18,19,20</correct>
+<time_taken>57.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Find statements that with assign and assign (same)">11</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select a such that Affects (a, a)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>52.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Find statements that with assign and assign (diff)">12</id><querystr><![CDATA[stmt s; assign a, a1; call cl; print p; read r; prog_line n; while w; if ifs; Select a such that Affects (a, a1)]]></querystr>
+<stuans>17,18,19,5,6,8</stuans>
+<correct>5,6,8,17,18,19</correct>
+<time_taken>52.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Find statements that with assign and call">13</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select a such that Affects (a, cl)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>59.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Find statements that with assign and print">14</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select a such that Affects (a, p)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>49.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Find statements that with assign and read">15</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select a such that Affects (a, r)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>49.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Find statements that with assign and progline">16</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select a such that Affects (a, n)]]></querystr>
+<stuans>17,18,19,5,6,8</stuans>
+<correct>5,6,8,17,18,19</correct>
+<time_taken>52.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Find statements that with assign and while">17</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select a such that Affects (a, w)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>52.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Find statements that with assign and if">18</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select a such that Affects (a, ifs)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>52.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Find statements that with call and stmt">19</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select cl such that Affects (cl, s)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>51.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Find statements that with call and assign">20</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select cl such that Affects (cl, a)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>49.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Find statements that with call and call (same)">21</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select cl such that Affects (cl, cl)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>255.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Find statements that with call and call (diff)">22</id><querystr><![CDATA[stmt s; assign a; call cl, cl1; print p; read r; prog_line n; while w; if ifs; Select cl such that Affects (cl, cl1)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>69.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Find statements that with call and print">23</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select cl such that Affects (cl, p)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>71.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Find statements that with call and read">24</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select cl such that Affects (cl, r)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>101.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Find statements that with call and progline">25</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select cl such that Affects (cl, n)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>60.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Find statements that with call and while">26</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select cl such that Affects (cl, w)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>56.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Find statements that with call and ifs">27</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select cl such that Affects (cl, ifs)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>56.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Find statements that with print and stmt">28</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select p such that Affects (p, s)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>62.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Find statements that with print and assign">29</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select p such that Affects (p, a)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>60.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Find statements that with print and call">30</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select p such that Affects (p, cl)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>62.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Find statements that with print and print (same)">31</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select p such that Affects (p, p)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>55.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Find statements that with print and print (diff)">32</id><querystr><![CDATA[stmt s; assign a; call cl; print p, p1; read r; prog_line n; while w; if ifs; Select p such that Affects (p, p1)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>52.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Find statements that with print and read">33</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select p such that Affects (p, r)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>55.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Find statements that with print and progline">34</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select p such that Affects (p, n)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>48.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Find statements that with print and while">35</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select p such that Affects (p, w)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>51.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Find statements that with print and ifs">36</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select p such that Affects (p, ifs)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>50.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Find statements that with read and stmt">37</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select r such that Affects (r, s)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>51.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Find statements that with read and assign">38</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select r such that Affects (r, a)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>51.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Find statements that with read and call">39</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select r such that Affects (r, cl)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>51.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Find statements that with read and print">40</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select r such that Affects (r, p)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>50.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Find statements that with read and read (same)">41</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select r such that Affects (r, r)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>53.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Find statements that with read and read (diff)">42</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r,r1; prog_line n; while w; if ifs; Select r such that Affects (r, r1)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>48.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Find statements that with read and progline">43</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select r such that Affects (r, n)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>51.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Find statements that with read and while">44</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select r such that Affects (r, w)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>50.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Find statements that with read and if">45</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select r such that Affects (r, ifs)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>50.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Find statements that with progline and stmt">46</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select n such that Affects (n, s)]]></querystr>
+<stuans>17,18,19,5,6,8</stuans>
+<correct>5,6,8,17,18,19</correct>
+<time_taken>55.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Find statements that with progline and assign">47</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select a such that Affects (n, a)]]></querystr>
+<stuans>18,19,20,6,8,9</stuans>
+<correct>6,8,9,18,19,20</correct>
+<time_taken>53.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Find statements that with progline and call">48</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select n such that Affects (n, cl)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>56.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Find statements that with progline and print">49</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select n such that Affects (n, p)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>48.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Find statements that with progline and read">50</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select n such that Affects (n, r)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>55.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Find statements that with progline and progline (same)">51</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select n such that Affects (n, n)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>50.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Find statements that with progline and progline (diff)">52</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n,n1; while w; if ifs; Select n such that Affects (n, n1)]]></querystr>
+<stuans>17,18,19,5,6,8</stuans>
+<correct>5,6,8,17,18,19</correct>
+<time_taken>54.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Find statements that with while and stmt">53</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select w such that Affects (w, s)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>52.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Find statements that with ifs and assign">54</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select ifs such that Affects (ifs, a)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>47.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="2" SuchThat="1" CondNum="5" RelNum="1" comment="Find statements that with stmt and underscore">55</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select s such that Affects (s, _)]]></querystr>
+<stuans>17,18,19,5,6,8</stuans>
+<correct>5,6,8,17,18,19</correct>
+<time_taken>53.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="2" SuchThat="1" CondNum="5" RelNum="1" comment="Find statements that with assign and underscore">56</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select a such that Affects (a, _)]]></querystr>
+<stuans>17,18,19,5,6,8</stuans>
+<correct>5,6,8,17,18,19</correct>
+<time_taken>56.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="2" SuchThat="1" CondNum="5" RelNum="1" comment="Find statements that with call and underscore">57</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select cl such that Affects (cl, _)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>58.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="2" SuchThat="1" CondNum="5" RelNum="1" comment="Find statements that with print and underscore">58</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select p such that Affects (p, _)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>58.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="2" SuchThat="1" CondNum="5" RelNum="1" comment="Find statements that with read and underscore">59</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select r such that Affects (r, _)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>59.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="2" SuchThat="1" CondNum="5" RelNum="1" comment="Find statements that with progline and underscore">60</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select n such that Affects (n, _)]]></querystr>
+<stuans>17,18,19,5,6,8</stuans>
+<correct>5,6,8,17,18,19</correct>
+<time_taken>57.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="2" SuchThat="1" CondNum="5" RelNum="1" comment="Find statements that with while and underscore">61</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select w such that Affects (w, _)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>50.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="2" SuchThat="1" CondNum="5" RelNum="1" comment="Find statements that with if and underscore">62</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select ifs such that Affects (ifs, _)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>52.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Find statements that with stmt and fixed">63</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select s such that Affects (s, 9)]]></querystr>
+<stuans>6,8</stuans>
+<correct>6,8</correct>
+<time_taken>52.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Find statements that with assign and fixed">64</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select a such that Affects (a, 11)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>55.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Find statements that with call and fixed">65</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select cl such that Affects (cl, 11)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>46.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Find statements that with print and fixed">66</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select p such that Affects (p, 8)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>55.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Find statements that with read and fixed">67</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select r such that Affects (r, 4)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>53.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Find statements that with progline and fixed">68</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select n such that Affects (n, 20)]]></querystr>
+<stuans>18,19</stuans>
+<correct>18,19</correct>
+<time_taken>51.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="2" SuchThat="1" CondNum="5" RelNum="1" comment="Find statements that with underscore and stmt">69</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select s such that Affects (_, s)]]></querystr>
+<stuans>18,19,20,6,8,9</stuans>
+<correct>6,8,9,18,19,20</correct>
+<time_taken>50.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="2" SuchThat="1" CondNum="5" RelNum="1" comment="Find statements that with underscore and assign">70</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select a such that Affects (_, a)]]></querystr>
+<stuans>18,19,20,6,8,9</stuans>
+<correct>6,8,9,18,19,20</correct>
+<time_taken>52.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="2" SuchThat="1" CondNum="5" RelNum="1" comment="Find statements that with underscore and call">71</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select cl such that Affects (_, cl)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>47.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="2" SuchThat="1" CondNum="5" RelNum="1" comment="Find statements that with underscore and print">72</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select p such that Affects (_, p)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>49.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="2" SuchThat="1" CondNum="5" RelNum="1" comment="Find statements that with underscore and read">73</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select r such that Affects (_, r)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>56.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="2" SuchThat="1" CondNum="5" RelNum="1" comment="Find statements that with underscore and progline">74</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select n such that Affects (_, n)]]></querystr>
+<stuans>18,19,20,6,8,9</stuans>
+<correct>6,8,9,18,19,20</correct>
+<time_taken>55.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="2" SuchThat="1" CondNum="5" RelNum="1" comment="Find statements that with underscore and while">75</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select s such that Affects (_, w)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>51.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="2" SuchThat="1" CondNum="5" RelNum="1" comment="Find statements that with underscore and if">76</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select s such that Affects (_, ifs)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>58.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id Affects="1" ReturnBoolean="1" UnnamedVar="3" SuchThat="1" CondNum="6" RelNum="1" comment="Find statements that with underscore and underscore">77</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select BOOLEAN such that Affects (_, _)]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>66.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="2" SuchThat="1" CondNum="5" RelNum="1" comment="Find statements that with underscore and fixed (wrong type)">78</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select r such that Affects (_, 7)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>58.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="2" SuchThat="1" CondNum="5" RelNum="1" comment="Find statements that with underscore and fixed (correct type)">79</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select r such that Affects (_, 19)]]></querystr>
+<stuans>1,14,2,3</stuans>
+<correct>1,2,3,14</correct>
+<time_taken>63.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Find statements that with fixed and stmt (wrong type)">80</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select s such that Affects (14, s)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>61.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Find statements that with fixed and stmt (correct type)">81</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select s such that Affects (6, s)]]></querystr>
+<stuans>8,9</stuans>
+<correct>8,9</correct>
+<time_taken>78.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Find statements that with fixed and assign">82</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select a such that Affects (8, a)]]></querystr>
+<stuans>9</stuans>
+<correct>9</correct>
+<time_taken>66.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Find statements that with fixed and call">83</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select cl such that Affects (9, cl)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>52.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Find statements that with fixed and print">84</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select p such that Affects (6, p)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>56.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Find statements that with fixed and read">85</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select r such that Affects (2, r)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>58.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Find statements that with fixed and progline">86</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select n such that Affects (11, n)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>56.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Find statements that with fixed and while">87</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select w such that Affects (8, w)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>50.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Find statements that with fixed and if">88</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select ifs such that Affects (8, ifs)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>49.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="2" SuchThat="1" CondNum="5" RelNum="1" comment="Find statements that with fixed and underscore">89</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select r such that Affects (15, _)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>48.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Find statements that with fixed and fixed (same)">90</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select r such that Affects (8, 8)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>49.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Find statements that with fixed and fixed (read and call)">91</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select r such that Affects (1, 4)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>51.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Find statements that with fixed and fixed (cross procedure)">92</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select r such that Affects (1, 5)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>56.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id Affects="1" ReturnBoolean="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Find statements that with fixed and fixed">93</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select BOOLEAN such that Affects (5, 6)]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>50.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id Affects="1" ReturnBoolean="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Find statements that with fixed and fixed">94</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select BOOLEAN such that Affects (5, 8)]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>57.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id Affects="1" ReturnBoolean="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Find statements that with fixed and fixed">95</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select BOOLEAN such that Affects (5, 9)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>50.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id Affects="1" ReturnBoolean="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Find statements that with fixed and fixed">96</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select BOOLEAN such that Affects (5, 11)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>49.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id Affects="1" ReturnBoolean="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Find statements that with fixed and fixed">97</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select BOOLEAN such that Affects (5, 15)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>49.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id Affects="1" ReturnBoolean="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Find statements that with fixed and fixed">98</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select BOOLEAN such that Affects (6, 7)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>57.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id Affects="1" ReturnBoolean="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Find statements that with fixed and fixed">99</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select BOOLEAN such that Affects (6, 8)]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>51.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id Affects="1" ReturnBoolean="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Find statements that with fixed and fixed">100</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select BOOLEAN such that Affects (6, 9)]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>49.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id Affects="1" ReturnBoolean="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Find statements that with fixed and fixed">101</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select BOOLEAN such that Affects (6, 10)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>49.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id Affects="1" ReturnBoolean="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Find statements that with fixed and fixed">102</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select BOOLEAN such that Affects (6, 11)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>56.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id Affects="1" ReturnBoolean="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Find statements that with fixed and fixed">103</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select BOOLEAN such that Affects (8, 9)]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>65.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id Affects="1" ReturnBoolean="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Find statements that with fixed and fixed">104</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select BOOLEAN such that Affects (8, 10)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>53.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id Affects="1" ReturnBoolean="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Find statements that with fixed and fixed">105</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select BOOLEAN such that Affects (8, 11)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>56.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id Affects="1" ReturnBoolean="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Find statements that with fixed and fixed">106</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select BOOLEAN such that Affects (10, 11)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>56.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id Affects="1" ReturnBoolean="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Find statements that with fixed and fixed">107</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select BOOLEAN such that Affects (11, 12)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>61.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id Affects="1" ReturnBoolean="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Find statements that with fixed and fixed">108</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select BOOLEAN such that Affects (11, 13)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>58.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id Affects="1" ReturnBoolean="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Find statements that with fixed and fixed">109</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select BOOLEAN such that Affects (11, 17)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>68.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id Affects="1" ReturnBoolean="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Find statements that with fixed and fixed">110</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select BOOLEAN such that Affects (14, 15)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>51.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id Affects="1" ReturnBoolean="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Find statements that with fixed and fixed">111</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select BOOLEAN such that Affects (15, 15)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>52.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id Affects="1" ReturnBoolean="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Find statements that with fixed and fixed">112</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select BOOLEAN such that Affects (15, 16)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>51.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id Affects="1" ReturnBoolean="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Find statements that with fixed and fixed">113</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select BOOLEAN such that Affects (15, 20)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>48.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id Affects="1" ReturnBoolean="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Find statements that with fixed and fixed">114</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select BOOLEAN such that Affects (16, 18)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>54.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id Affects="1" ReturnBoolean="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Find statements that with fixed and fixed">115</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select BOOLEAN such that Affects (16, 21)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>52.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id Affects="1" ReturnBoolean="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Find statements that with fixed and fixed">116</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select BOOLEAN such that Affects (17, 18)]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>50.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id Affects="1" ReturnBoolean="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Find statements that with fixed and fixed">117</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select BOOLEAN such that Affects (17, 19)]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>47.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id Affects="1" ReturnBoolean="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Find statements that with fixed and fixed">118</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select BOOLEAN such that Affects (18, 20)]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>57.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id Affects="1" ReturnBoolean="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Find statements that with fixed and fixed">119</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select BOOLEAN such that Affects (19, 20)]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>53.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id Affects="1" ReturnBoolean="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Find statements that with fixed and fixed">120</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select BOOLEAN such that Affects (20, 21)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>46.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id Affects="1" ReturnBoolean="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Find statements that with fixed and fixed (opposite)">121</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select BOOLEAN such that Affects (6, 5)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>57.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id Affects="1" ReturnBoolean="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Find statements that with fixed and fixed (opposite)">122</id><querystr><![CDATA[stmt s; assign a; call cl; print p; read r; prog_line n; while w; if ifs; Select BOOLEAN such that Affects (19, 15)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>52.000000</time_taken>
+<passed/>
+</query>
+</queries>
+</test_results>

@@ -1,0 +1,265 @@
+<?xml-stylesheet type="text/xsl" href="analysis.xsl"?>
+<test_results>
+<info>
+<name>tests</name><parsing_time_taken>880.000000</parsing_time_taken>
+</info>
+<queries>
+<query>
+<id ReturnTuple="1" Parent="1" UnnamedVar="4" Pattern="1" SuchThat="1" CondNum="8" RelNum="1" comment="select v that is used as a control in while nested in if and assigned within the if stmt block">1</id><querystr><![CDATA[if ifs; while w; variable v; assign a; Select ifs such that Parent(ifs, a) pattern w(v, _) and ifs(v, _, _) and a(v, _)]]></querystr>
+<stuans>82,96,85,241,323,232,320,329</stuans>
+<correct>82,85,96,232,241,320,329,323</correct>
+<time_taken>457.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Parent="1" UnnamedVar="4" Pattern="2" SuchThat="1" CondNum="9" RelNum="1" comment="select v that is used as a control in while nested in if and assigned within the if stmt block">2</id><querystr><![CDATA[if ifs; while w; variable v; assign a; Select a pattern w(v, _) and ifs(v, _, _)  such that Parent(ifs, a) pattern a(v, _)]]></querystr>
+<stuans>83,324,322,330,84,243,237,89,124</stuans>
+<correct>83,84,89,98,237,243,322,330,324</correct>
+<time_taken>386.000000</time_taken>
+<failed>
+<missing>98</missing>
+<additional>124</additional>
+<summary>
+<expected>9</expected>
+<matched>8</matched>
+<missing>1</missing>
+<additional>1</additional>
+</summary>
+</failed>
+</query>
+<query>
+<id ReturnTuple="1" Affectsstar="1" Followsstar="1" Nextstar="1" UnnamedVar="2" SuchThat="1" CondNum="7" RelNum="3" comment="comment">3</id><querystr><![CDATA[stmt s,s1, s2; Select <s1,s2> such that Affects*(104, s1) and Next*(s2, _) and Follows*(_,s2)]]></querystr>
+<stuans>118 346,118 11,118 358,118 222,118 424,118 66,118 194,118 389,118 208,118 2,118 129,118 262,118 154,118 428,118 323,118 464,118 385,118 257,118 467,118 25,118 386,118 254,118 139,118 283,118 399,118 343,118 400,118 211,118 213,118 402,118 396,118 443,118 16,118 300,118 337,118 401,118 393,118 289,118 65,118 135,118 258,118 184,118 96,118 362,118 238,118 267,118 237,118 94,118 265,118 162,118 387,118 24,118 466,118 384,118 199,118 465,118 256,118 349,118 46,118 448,118 461,118 23,118 380,118 441,118 36,118 276,118 82,118 295,118 19,118 161,118 266,118 421,118 63,118 374,118 13,118 48,118 446,118 49,118 447,118 419,118 105,118 5,118 423,118 369,118 212,118 403,118 70,118 37,118 32,118 56,118 454,118 348,118 408,118 85,118 429,118 151,118 287,118 87,118 69,118 425,118 67,118 436,118 347,118 101,118 51,118 453,118 33,118 141,118 4,118 3,118 361,118 117,118 143,118 6,118 165,118 17,118 341,118 157,118 433,118 200,118 111,118 284,118 119,118 116,118 217,118 406,118 98,118 145,118 439,118 55,118 457,118 383,118 462,118 431,118 8,118 375,118 110,118 381,118 460,118 22,118 440,118 260,118 133,118 263,118 34,118 245,118 418,118 12,118 175,118 149,118 390,118 251,118 248,118 352,118 294,118 29,118 57,118 455,118 437,118 204,118 236,118 18,118 252,118 223,118 264,118 404,118 228,118 38,118 449,118 47,118 168,118 410,118 103,118 35,118 463,118 21,118 382,118 192,118 291,118 113,118 438,118 365,118 269,118 376,118 274,118 41,118 39,118 193,118 290,118 225,118 218,118 409,118 43,118 62,118 420,118 158,118 367,118 40,118 286,118 456,118 54,118 235,118 411,118 169,118 71,118 316,118 415,118 327,118 229,118 405,118 216,118 407,118 271,118 188,118 395,118 275,118 451,118 53,118 452,118 50,118 58,118 59,118 422,118 60,118 166,118 150,118 450,118 339,118 159,118 156,118 426,118 64,118 78,118 93,118 79,118 125,118 414,118 230,118 388,118 195,118 249,118 247,118 126,118 366,118 307,118 261,118 379,118 99,118 394,118 255,118 398,118 282,118 114,118 106,118 118,118 458,118 120,118 108,118 459,118 109,118 112,118 207,118 148,118 434,118 115,118 335,118 268,118 123,118 137,118 203,118 430,118 313,118 302,118 272,118 432,118 201,118 308,118 191,118 318,118 179,118 170,118 172,118 173,118 174,118 177,118 178,118 181,118 182,118 183,118 273,118 370,118 221,118 368,118 378,118 270,118 246,118 250,118 253,118 259,118 277,118 293,118 371,118 442,118 377,118 445,118 444</stuans>
+<correct></correct>
+<time_taken>1718.000000</time_taken>
+<failed>
+<missing></missing>
+<additional>118 101,118 103,118 105,118 106,118 108,118 109,118 11,118 110,118 111,118 112,118 113,118 114,118 115,118 116,118 117,118 118,118 119,118 12,118 120,118 123,118 125,118 126,118 129,118 13,118 133,118 135,118 137,118 139,118 141,118 143,118 145,118 148,118 149,118 150,118 151,118 154,118 156,118 157,118 158,118 159,118 16,118 161,118 162,118 165,118 166,118 168,118 169,118 17,118 170,118 172,118 173,118 174,118 175,118 177,118 178,118 179,118 18,118 181,118 182,118 183,118 184,118 188,118 19,118 191,118 192,118 193,118 194,118 195,118 199,118 2,118 200,118 201,118 203,118 204,118 207,118 208,118 21,118 211,118 212,118 213,118 216,118 217,118 218,118 22,118 221,118 222,118 223,118 225,118 228,118 229,118 23,118 230,118 235,118 236,118 237,118 238,118 24,118 245,118 246,118 247,118 248,118 249,118 25,118 250,118 251,118 252,118 253,118 254,118 255,118 256,118 257,118 258,118 259,118 260,118 261,118 262,118 263,118 264,118 265,118 266,118 267,118 268,118 269,118 270,118 271,118 272,118 273,118 274,118 275,118 276,118 277,118 282,118 283,118 284,118 286,118 287,118 289,118 29,118 290,118 291,118 293,118 294,118 295,118 3,118 300,118 302,118 307,118 308,118 313,118 316,118 318,118 32,118 323,118 327,118 33,118 335,118 337,118 339,118 34,118 341,118 343,118 346,118 347,118 348,118 349,118 35,118 352,118 358,118 36,118 361,118 362,118 365,118 366,118 367,118 368,118 369,118 37,118 370,118 371,118 374,118 375,118 376,118 377,118 378,118 379,118 38,118 380,118 381,118 382,118 383,118 384,118 385,118 386,118 387,118 388,118 389,118 39,118 390,118 393,118 394,118 395,118 396,118 398,118 399,118 4,118 40,118 400,118 401,118 402,118 403,118 404,118 405,118 406,118 407,118 408,118 409,118 41,118 410,118 411,118 414,118 415,118 418,118 419,118 420,118 421,118 422,118 423,118 424,118 425,118 426,118 428,118 429,118 43,118 430,118 431,118 432,118 433,118 434,118 436,118 437,118 438,118 439,118 440,118 441,118 442,118 443,118 444,118 445,118 446,118 447,118 448,118 449,118 450,118 451,118 452,118 453,118 454,118 455,118 456,118 457,118 458,118 459,118 46,118 460,118 461,118 462,118 463,118 464,118 465,118 466,118 467,118 47,118 48,118 49,118 5,118 50,118 51,118 53,118 54,118 55,118 56,118 57,118 58,118 59,118 6,118 60,118 62,118 63,118 64,118 65,118 66,118 67,118 69,118 70,118 71,118 78,118 79,118 8,118 82,118 85,118 87,118 93,118 94,118 96,118 98,118 99</additional>
+<summary>
+<expected>0</expected>
+<matched>0</matched>
+<missing>0</missing>
+<additional>306</additional>
+</summary>
+</failed>
+</query>
+<query>
+<id ReturnTuple="1" Follows="4" Parent="1" UnnamedVar="4" Uses="1" Pattern="1" SuchThat="5" With="3" CondNum="20" RelNum="6" comment="number of clauses in asc order (1 s1, 2 s2, 3 r3 p3 a3, 5 ifs5 v5)">4</id><querystr><![CDATA[stmt s1, s2, s5; if ifs2, ifs5; assign a3; while w3; variable v5; read r3; print p3; Select <s1, ifs2, a3, s5> with s1.stmt# = 185 such that Follows(ifs2, s2) with 202 = s2.stmt# such that Follows(r3, p3) and Follows(p3, a3) such that Follows(a3, w3) pattern ifs5("x", _, _) and ifs5("pattern", _, _) such that Uses(ifs5, v5) with "sian" = v5.varName such that Parent (s5, ifs5)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>72.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Follows="4" Parent="1" UnnamedVar="4" Uses="1" Pattern="2" SuchThat="6" With="3" CondNum="22" RelNum="6" comment="number of clauses in random order">5</id><querystr><![CDATA[stmt s1, s2, s5; if ifs2, ifs5; assign a3; while w3; variable v5; read r3; print p3; Select <s1, ifs2, a3, s5> with s1.stmt# = 185 such that Uses(ifs5, v5) with "money" = v5.varName such that Follows(a3, w3) pattern ifs5("x", _, _) such that Follows(r3, p3) such that Follows(ifs2, s2) with 201 = s2.stmt#  such that Follows(p3, a3) pattern ifs5("pattern", _, _) such that Parent (s5, ifs5)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>71.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Modifies="2" Uses="2" SuchThat="1" With="2" CondNum="8" RelNum="4" comment="with Modifies Uses Modifies Uses with">6</id><querystr><![CDATA[procedure p; stmt s; variable v; constant c; Select s with p.procName = "chengyi" such that Modifies(s, v) and Uses(s, v) and Modifies(p, v) and Uses(p, v) with s.stmt# = c.value]]></querystr>
+<stuans>51,13,14,17,6,19,23</stuans>
+<correct></correct>
+<time_taken>398.000000</time_taken>
+<failed>
+<missing></missing>
+<additional>13,14,17,19,23,51,6</additional>
+<summary>
+<expected>0</expected>
+<matched>0</matched>
+<missing>0</missing>
+<additional>7</additional>
+</summary>
+</failed>
+</query>
+<query>
+<id ReturnTuple="1" Parentstar="1" UnnamedVar="2" Pattern="1" SuchThat="1" CondNum="6" RelNum="1" comment="Find nested while with control variable v, such that v affects itself">7</id><querystr><![CDATA[while w; variable v; assign a; Select w such that Parent*(_, w) pattern w(v, _)]]></querystr>
+<stuans>76,19,145,304,133,308,51,233,141,305,208,159,106,13,284,143,162,14,103,184,303,135,137,186,139,175</stuans>
+<correct></correct>
+<time_taken>80.000000</time_taken>
+<failed>
+<missing></missing>
+<additional>103,106,13,133,135,137,139,14,141,143,145,159,162,175,184,186,19,208,233,284,303,304,305,308,51,76</additional>
+<summary>
+<expected>0</expected>
+<matched>0</matched>
+<missing>0</missing>
+<additional>26</additional>
+</summary>
+</failed>
+</query>
+<query>
+<id ReturnTuple="1" Parentstar="1" UnnamedVar="2" Pattern="1" SuchThat="1" CondNum="6" RelNum="1" comment="Find nested while with control variable v, such that v affects itself">8</id><querystr><![CDATA[while w; variable v; assign a; Select w.stmt# such that Parent*(_, w) pattern w(v, _)]]></querystr>
+<stuans>13,233,51,19,284,308,133,159,106,76,135,141,14,103,137,139,175,208,303,143,305,145,162,304,186,184</stuans>
+<correct></correct>
+<time_taken>80.000000</time_taken>
+<failed>
+<missing></missing>
+<additional>103,106,13,133,135,137,139,14,141,143,145,159,162,175,184,186,19,208,233,284,303,304,305,308,51,76</additional>
+<summary>
+<expected>0</expected>
+<matched>0</matched>
+<missing>0</missing>
+<additional>26</additional>
+</summary>
+</failed>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" Modifies="1" Parentstar="1" UnnamedVar="2" Pattern="1" SuchThat="2" CondNum="9" RelNum="3" comment="Find nested while with control variable v, such that v affects itself">9</id><querystr><![CDATA[while w; variable v; assign a; Select v such that Parent*(_, w) pattern w(v, _) such that Modifies(a, v) and Affects(a, a)]]></querystr>
+<stuans>i,weight,help,tests,pearls</stuans>
+<correct></correct>
+<time_taken>861.000000</time_taken>
+<failed>
+<missing></missing>
+<additional>help,i,pearls,tests,weight</additional>
+<summary>
+<expected>0</expected>
+<matched>0</matched>
+<missing>0</missing>
+<additional>5</additional>
+</summary>
+</failed>
+</query>
+<query>
+<id ReturnTuple="1" Modifies="1" Parentstar="1" UnnamedVar="1" SuchThat="1" CondNum="5" RelNum="2" comment="Find nested while with control variable v, such that v affects itself">10</id><querystr><![CDATA[while w; variable v; assign a; Select w such that Parent*(_, w) and Modifies(a, v)]]></querystr>
+<stuans>14,76,106,159,186,233,51,143,19,133,308,305,175,139,141,13,137,185,208,303,103,304,145,135,284,184,162</stuans>
+<correct></correct>
+<time_taken>67.000000</time_taken>
+<failed>
+<missing></missing>
+<additional>103,106,13,133,135,137,139,14,141,143,145,159,162,175,184,185,186,19,208,233,284,303,304,305,308,51,76</additional>
+<summary>
+<expected>0</expected>
+<matched>0</matched>
+<missing>0</missing>
+<additional>27</additional>
+</summary>
+</failed>
+</query>
+<query>
+<id ReturnTuple="1" Affects="3" SuchThat="1" CondNum="5" RelNum="3" comment="3 chain affects">33</id><querystr><![CDATA[assign a1, a2, a3, a4; Select a4 such that Affects(a1, a2) and Affects(a3, a4) and Affects(a3, a2)]]></querystr>
+<stuans>197,10,9,230,27,340,7,55,20,11,28,462,8,57,22,81,89,454,12,160,236,21,167,23,182,212,16,238,449,98,227,50,49,211,228,134,196,349,150,226,24,224,132,214,363,118,213,187,217,446,240,455,152,83,272,180,171,423,151,460,173,17,84,436,276,218,277,58,219,467,270,59,47,78,114,445,209,432,56,105,176,207,274,282,461,450,459</stuans>
+<correct></correct>
+<time_taken>941.000000</time_taken>
+<failed>
+<missing></missing>
+<additional>10,105,11,114,118,12,132,134,150,151,152,16,160,167,17,171,173,176,180,182,187,196,197,20,207,209,21,211,212,213,214,217,218,219,22,224,226,227,228,23,230,236,238,24,240,27,270,272,274,276,277,28,282,340,349,363,423,432,436,445,446,449,450,454,455,459,460,461,462,467,47,49,50,55,56,57,58,59,7,78,8,81,83,84,89,9,98</additional>
+<summary>
+<expected>0</expected>
+<matched>0</matched>
+<missing>0</missing>
+<additional>87</additional>
+</summary>
+</failed>
+</query>
+<query>
+<id ReturnTuple="1" Modifies="2" Nextstar="1" Parent="1" Uses="2" SuchThat="1" CondNum="8" RelNum="6" comment="comment">39</id><querystr><![CDATA[if ifs; while w; variable v; Select <w, ifs> such that Uses(w, v) and Uses(ifs, v) and Modifies(ifs, v) and Modifies(w, v) and Parent(w, ifs) and Next*(w, ifs)]]></querystr>
+<timeout/>
+</query>
+<query>
+<id ReturnTuple="1" Modifies="2" Nextstar="1" Parent="1" Uses="2" SuchThat="1" CondNum="8" RelNum="6" comment="comment">40</id><querystr><![CDATA[if ifs; while w; variable v; Select ifs.stmt# such that Uses(w, v) and Uses(ifs, v) and Modifies(ifs, v) and Modifies(w, v) and Parent(w, ifs) and Next*(w, ifs)]]></querystr>
+<timeout/>
+</query>
+<query>
+<id ReturnTuple="1" Modifies="2" Nextstar="1" Parent="1" Uses="2" SuchThat="1" CondNum="8" RelNum="6" comment="comment">41</id><querystr><![CDATA[if ifs; while w; variable v; Select v such that Uses(w, v) and Uses(ifs, v) and Modifies(ifs, v) and Modifies(w, v) and Parent(w, ifs) and Next*(w, ifs)]]></querystr>
+<timeout/>
+</query>
+<query>
+<id ReturnTuple="1" With="1" CondNum="2" RelNum="0" comment="comment">60</id><querystr><![CDATA[procedure p; while w; if ifs; read r; print p; assign a; call c; stmt s; Select v.varName with v.varName = "me"]]></querystr>
+<stuans></stuans>
+<correct>me</correct>
+<time_taken>47.000000</time_taken>
+<failed>
+<missing>me</missing>
+<additional></additional>
+<summary>
+<expected>1</expected>
+<matched>0</matched>
+<missing>1</missing>
+<additional>0</additional>
+</summary>
+</failed>
+</query>
+<query>
+<id ReturnTuple="1" Follows="2" SuchThat="1" With="1" CondNum="5" RelNum="2" comment="comment">62</id><querystr><![CDATA[assign a1, a3, a4, a5, a6; procedure p; Select p such that Follows(a1, a2) and Follows(a2, a3) with p.procName = "covid"]]></querystr>
+<stuans></stuans>
+<correct>covid</correct>
+<time_taken>46.000000</time_taken>
+<failed>
+<missing>covid</missing>
+<additional></additional>
+<summary>
+<expected>1</expected>
+<matched>0</matched>
+<missing>1</missing>
+<additional>0</additional>
+</summary>
+</failed>
+</query>
+<query>
+<id ReturnTuple="1" With="1" CondNum="2" RelNum="0" comment="comment">63</id><querystr><![CDATA[call cl; procedure p; Select <p.procName, p.procName> with cl.procName = p.procName]]></querystr>
+<stuans>covid covid,Pattern2 Pattern2,mAmA mAmA,vaccine vaccine,chengyi chengyi,p p,q q,pApA pApA,grant grant,John John,Mary Mary,zeke zeke,BEAUTIFUL BEAUTIFUL,jeunhoe jeunhoe,AssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfter AssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfter,bubbletea bubbletea,Bill Bill,Pattern1 Pattern1,BohemianRhapsody BohemianRhapsody,chengyi2 chengyi2</stuans>
+<correct>chengyi chengyi,covid covid,chengyi2 chengyi2,vaccine vaccine,zeke zeke,grant grant,Pattern1 Pattern1,Pattern2 Pattern2,jeunhoe jeunhoe,bubbletea bubbletea,pattern2 pattern2,pattern1 pattern1,chengyi1 chengyi1,q q,p p,d d,AssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfter AssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfterAssignAfter,BohemianRhapsody BohemianRhapsody,Mary Mary,John John,Bill Bill,mAmA mAmA,pApA pApA,BEAUTIFUL BEAUTIFUL</correct>
+<time_taken>106.000000</time_taken>
+<failed>
+<missing>chengyi1 chengyi1,d d,pattern1 pattern1,pattern2 pattern2</missing>
+<additional></additional>
+<summary>
+<expected>24</expected>
+<matched>20</matched>
+<missing>4</missing>
+<additional>0</additional>
+</summary>
+</failed>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="4" Pattern="1" With="1" CondNum="7" RelNum="0" comment="comment">64</id><querystr><![CDATA[while w; if ifs; assign a; variable v; Select <w, ifs> pattern w (v, _) and ifs(v, _, _) and a (v, _) with v.varName = "iq"]]></querystr>
+<stuans>76 85,76 82,80 85,80 82</stuans>
+<correct>76 82,76 85,76 166,80 82,80 85,80 166</correct>
+<time_taken>81.000000</time_taken>
+<failed>
+<missing>76 166,80 166</missing>
+<additional></additional>
+<summary>
+<expected>6</expected>
+<matched>4</matched>
+<missing>2</missing>
+<additional>0</additional>
+</summary>
+</failed>
+</query>
+<query>
+<id ReturnBoolean="1" UnnamedVar="1" Pattern="1" CondNum="3" RelNum="0" comment="Invaid pattern assignment, select boolean">70</id><querystr><![CDATA[assign a; Select BOOLEAN pattern a(_, "- 21 *")]]></querystr>
+<stuans></stuans>
+<correct>FALSE</correct>
+<time_taken>42.000000</time_taken>
+<failed>
+<missing>FALSE</missing>
+<additional></additional>
+<summary>
+<expected>1</expected>
+<matched>0</matched>
+<missing>1</missing>
+<additional>0</additional>
+</summary>
+</failed>
+</query>
+<query>
+<id ReturnTuple="1" Follows="1" Modifies="2" SuchThat="1" With="1" CondNum="6" RelNum="3" comment="Multiple clause, testing with">75</id><querystr><![CDATA[stmt a1, a2; variable v; Select <a1, a2> such that Follows(a1, a2) and Modifies(a1, v) and Modifies(a2, v) with v.varName = "pattern"]]></querystr>
+<stuans>107 108,116 117,108 109,111 112,113 114,110 111,114 115,109 110,129 130,112 113,115 116</stuans>
+<correct>107 108,108 109,111 112,112 113,115 116,116 117</correct>
+<time_taken>682.000000</time_taken>
+<failed>
+<missing></missing>
+<additional>109 110,110 111,113 114,114 115,129 130</additional>
+<summary>
+<expected>6</expected>
+<matched>6</matched>
+<missing>0</missing>
+<additional>5</additional>
+</summary>
+</failed>
+</query>
+</queries>
+</test_results>

@@ -1,0 +1,208 @@
+<?xml-stylesheet type="text/xsl" href="analysis.xsl"?>
+<test_results>
+<info>
+<name>additional</name><parsing_time_taken>42.000000</parsing_time_taken>
+</info>
+<queries>
+<query>
+<id ReturnTuple="1" Parent="2" SuchThat="1" CondNum="4" RelNum="2" comment="multiple clauses - such that">1</id><querystr><![CDATA[stmt s1, s2, s3; Select s3 such that Parent(s1, s2) and Parent(s2, s3)]]></querystr>
+<stuans>14,15,5,6,7,8</stuans>
+<correct>5</correct>
+<time_taken>47.000000</time_taken>
+<failed>
+<missing></missing>
+<additional>14,15,6,7,8</additional>
+<summary>
+<expected>1</expected>
+<matched>1</matched>
+<missing>0</missing>
+<additional>5</additional>
+</summary>
+</failed>
+</query>
+<query>
+<id ReturnTuple="1" Follows="1" Parentstar="1" Uses="1" SuchThat="1" CondNum="5" RelNum="3" comment="multiple clauses - such that">2</id><querystr><![CDATA[assign a; stmt s; call c; Select c such that Parent*(s, c) and Uses(a, j) and Follows(a, c)]]></querystr>
+<stuans></stuans>
+<correct>8</correct>
+<time_taken>46.000000</time_taken>
+<failed>
+<missing>8</missing>
+<additional></additional>
+<summary>
+<expected>1</expected>
+<matched>0</matched>
+<missing>1</missing>
+<additional>0</additional>
+</summary>
+</failed>
+</query>
+<query>
+<id ReturnTuple="1" Follows="1" Followsstar="1" Modifies="1" UnnamedVar="1" SuchThat="1" CondNum="6" RelNum="3" comment="multiple clauses - such that with attribute">3</id><querystr><![CDATA[assign a; call c; Select c.procName such that Follows*(a, c) and Follows(10, a) and Modifies(a, _)]]></querystr>
+<stuans></stuans>
+<correct>goodgame</correct>
+<time_taken>46.000000</time_taken>
+<failed>
+<missing>goodgame</missing>
+<additional></additional>
+<summary>
+<expected>1</expected>
+<matched>0</matched>
+<missing>1</missing>
+<additional>0</additional>
+</summary>
+</failed>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" Uses="1" SuchThat="1" CondNum="4" RelNum="2" comment="multiple clauses - such that">4</id><querystr><![CDATA[stmt s1, s2; Select s1 such that Uses(s2,"j") and Next*(s2, s1)]]></querystr>
+<stuans>2,3,4,5,6,7,8,9</stuans>
+<correct>4,5,6,7,8</correct>
+<time_taken>48.000000</time_taken>
+<failed>
+<missing></missing>
+<additional>2,3,9</additional>
+<summary>
+<expected>5</expected>
+<matched>5</matched>
+<missing>0</missing>
+<additional>3</additional>
+</summary>
+</failed>
+</query>
+<query>
+<id ReturnTuple="1" With="1" CondNum="2" RelNum="0" comment="multiple clauses - with">5</id><querystr><![CDATA[stmt s; constant c; Select c with s.stmt# = c.value and c.value = 4]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>41.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" With="1" CondNum="3" RelNum="0" comment="multiple clauses - with">6</id><querystr><![CDATA[assign a; prog_line n; Select a with a.stmt# = n and n = 14 and 12 = 12]]></querystr>
+<stuans>14</stuans>
+<correct>14</correct>
+<time_taken>46.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" With="1" CondNum="2" RelNum="0" comment="multiple clauses - with">7</id><querystr><![CDATA[assign a; print pr; Select pr with a.stmt# = 18 and pr.varName ="huh"]]></querystr>
+<stuans>17</stuans>
+<correct>17</correct>
+<time_taken>65.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="2" Pattern="1" CondNum="4" RelNum="0" comment="multiple clauses - pattern">8</id><querystr><![CDATA[assign a; Select a pattern a("modified", _) and a(_,"888")]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>46.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="3" Pattern="1" CondNum="5" RelNum="0" comment="multiple clauses - pattern">9</id><querystr><![CDATA[assign a; variable v; Select v pattern a(v, _) and a(_, _"j"_)]]></querystr>
+<stuans>j</stuans>
+<correct>j</correct>
+<time_taken>48.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="4" Pattern="1" CondNum="6" RelNum="0" comment="multiple clauses - pattern">10</id><querystr><![CDATA[assign a; variable v; Select a pattern a(v, _) and a(_, _"foo * baz"_)]]></querystr>
+<stuans>7</stuans>
+<correct>7</correct>
+<time_taken>65.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" UnnamedVar="4" Pattern="1" CondNum="6" RelNum="0" comment="multiple clauses - pattern">11</id><querystr><![CDATA[assign a; Select BOOLEAN pattern a("modified", _) and a(_, _"j + 3"_)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>52.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Follows="1" Parentstar="1" UnnamedVar="1" Uses="1" SuchThat="2" With="1" CondNum="8" RelNum="3" comment="multiple clauses - select tuple">12</id><querystr><![CDATA[stmt s1, s2, s3; prog_line n; Select <s1, s2> such that Parent*(s1, s2) and Uses(s1, j) with s3.stmt# = n and n = 8 such that Follows(s2, s3)]]></querystr>
+<stuans></stuans>
+<correct>4 7,5 7</correct>
+<time_taken>50.000000</time_taken>
+<failed>
+<missing>4 7,5 7</missing>
+<additional></additional>
+<summary>
+<expected>2</expected>
+<matched>0</matched>
+<missing>2</missing>
+<additional>0</additional>
+</summary>
+</failed>
+</query>
+<query>
+<id ReturnBoolean="1" Followsstar="1" Modifies="1" Parent="1" UnnamedVar="4" Pattern="1" SuchThat="1" CondNum="10" RelNum="3" comment="multiple clauses - select boolean">13</id><querystr><![CDATA[assign a; stmt s1, s2 Select BOOLEAN pattern a(_, _) and a(_, _"3"_) such that Follows*(1, 2) and Parent(s1, s2) and Modifies (a, "j")]]></querystr>
+<stuans></stuans>
+<correct>TRUE</correct>
+<time_taken>42.000000</time_taken>
+<failed>
+<missing>TRUE</missing>
+<additional></additional>
+<summary>
+<expected>1</expected>
+<matched>0</matched>
+<missing>1</missing>
+<additional>0</additional>
+</summary>
+</failed>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" Parent="1" SuchThat="1" With="1" CondNum="5" RelNum="2" comment="multiple clauses - p/s/w">14</id><querystr><![CDATA[procedure p; call c; while w; Select p such that Calls("iter2", p) and Parent (w, c) with c.procName = p. procName]]></querystr>
+<stuans></stuans>
+<correct>callee</correct>
+<time_taken>46.000000</time_taken>
+<failed>
+<missing>callee</missing>
+<additional></additional>
+<summary>
+<expected>1</expected>
+<matched>0</matched>
+<missing>1</missing>
+<additional>0</additional>
+</summary>
+</failed>
+</query>
+<query>
+<id ReturnTuple="1" Follows="1" Parent="1" UnnamedVar="1" Pattern="1" SuchThat="1" With="1" CondNum="7" RelNum="2" comment="multiple clauses - p/s/w">15</id><querystr><![CDATA[stmt s1, s2; Select <s1, s2, a, c, re> such that Follows(a, s1) and Parent(s2, a) with c.procName ="goodgame" pattern a(_"8"_)]]></querystr>
+<stuans></stuans>
+<correct>8 5 7 12 19,8 5 7 12 24,8 5 7 16 19,8 5 7 16 24</correct>
+<time_taken>48.000000</time_taken>
+<failed>
+<missing>8 5 7 12 19,8 5 7 12 24,8 5 7 16 19,8 5 7 16 24</missing>
+<additional></additional>
+<summary>
+<expected>4</expected>
+<matched>0</matched>
+<missing>4</missing>
+<additional>0</additional>
+</summary>
+</failed>
+</query>
+<query>
+<id ReturnTuple="1" Parent="2" UnnamedVar="2" Pattern="1" SuchThat="1" With="1" CondNum="8" RelNum="2" comment="multiple clauses - p/s/w">16</id><querystr><![CDATA[procedure p; stmt s1, s2, s3; prog_line n; assign a; Select p such that Parent(s1, s2) and Parent(s2, s3) with s3.stmt# = n pattern a("modified", _)]]></querystr>
+<stuans>anothercaller,callee,goodgame,iter2,someguy</stuans>
+<correct>iter2,callee,goodgame,someguy,anothercaller</correct>
+<time_taken>59.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Modifies="1" Parentstar="1" Uses="1" SuchThat="2" With="1" CondNum="7" RelNum="3" comment="multiple clauses - p/s/w">17</id><querystr><![CDATA[stmt s1; call s2; Select v.varName such that Uses(s1, v) and Modifies("iter2", v) with s2.procName ="callee" such that Parent*(s1, s2)]]></querystr>
+<stuans></stuans>
+<correct>i,j</correct>
+<time_taken>45.000000</time_taken>
+<failed>
+<missing>i,j</missing>
+<additional></additional>
+<summary>
+<expected>2</expected>
+<matched>0</matched>
+<missing>2</missing>
+<additional>0</additional>
+</summary>
+</failed>
+</query>
+</queries>
+</test_results>

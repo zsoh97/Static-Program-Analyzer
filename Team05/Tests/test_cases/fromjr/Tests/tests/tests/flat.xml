@@ -1,0 +1,736 @@
+<?xml-stylesheet type="text/xsl" href="analysis.xsl"?>
+<test_results>
+<info>
+<name>tests</name><parsing_time_taken>10.000000</parsing_time_taken>
+</info>
+<queries>
+<query>
+<id ReturnTuple="1" Parent="1" UnnamedVar="2" SuchThat="1" CondNum="5" RelNum="1" comment="Parent (_, num) (negative)">1</id><querystr><![CDATA[stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn; Select s such that Parent(_, 5)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>43.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Parent="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Parent* (num, s) (negative)">2</id><querystr><![CDATA[stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn; Select s such that Parent(3, s)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>50.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Follows="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Follows (s, s)">3</id><querystr><![CDATA[stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn; Select <s1, s2> such that Follows(s1, s2)]]></querystr>
+<stuans>1 2,2 3,3 4,4 5,5 6,6 7</stuans>
+<correct>1 2,2 3,3 4,4 5,5 6,6 7</correct>
+<time_taken>55.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Follows="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Follows (num, num)">4</id><querystr><![CDATA[stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn; Select BOOLEAN such that Follows(1, 2)]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>42.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Follows="1" UnnamedVar="3" SuchThat="1" CondNum="6" RelNum="1" comment="Follows (_, _)">5</id><querystr><![CDATA[stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn; Select re such that Follows(_, _)]]></querystr>
+<stuans>3</stuans>
+<correct>3</correct>
+<time_taken>44.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Follows="1" UnnamedVar="2" SuchThat="1" CondNum="5" RelNum="1" comment="Follows (_, s)">6</id><querystr><![CDATA[stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn; Select s such that Follows(_, s)]]></querystr>
+<stuans>2,3,4,5,6,7</stuans>
+<correct>2,3,4,5,6,7</correct>
+<time_taken>54.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Follows="1" UnnamedVar="2" SuchThat="1" CondNum="5" RelNum="1" comment="Follows (s, _)">7</id><querystr><![CDATA[stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn; Select n such that Follows(n, _)]]></querystr>
+<stuans>1,2,3,4,5,6</stuans>
+<correct>1,2,3,4,5,6</correct>
+<time_taken>48.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Follows="1" UnnamedVar="2" SuchThat="1" CondNum="5" RelNum="1" comment="Follows (_, num)">8</id><querystr><![CDATA[stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn; Select pn such that Follows(_, 6)]]></querystr>
+<stuans>6</stuans>
+<correct>6</correct>
+<time_taken>52.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Follows="1" UnnamedVar="2" SuchThat="1" CondNum="5" RelNum="1" comment="Follows (num, _)">9</id><querystr><![CDATA[stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn; Select c such that Follows(2, _)]]></querystr>
+<stuans>1,10,4</stuans>
+<correct>1,4,10</correct>
+<time_taken>54.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Follows="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Follows (num, s)">10</id><querystr><![CDATA[stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn; Select s such that Follows(1, s)]]></querystr>
+<stuans>2</stuans>
+<correct>2</correct>
+<time_taken>49.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Follows="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Follows (s, num)">11</id><querystr><![CDATA[stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn; Select n such that Follows(n, 4)]]></querystr>
+<stuans>3</stuans>
+<correct>3</correct>
+<time_taken>45.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Followsstar="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Follows* (s, s)">12</id><querystr><![CDATA[stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn; Select <re.varName, a.stmt#, c.value> such that Follows*(re, a)]]></querystr>
+<stuans>x 4 1,x 4 10,x 4 4,x 5 1,x 5 10,x 5 4,x 7 1,x 7 10,x 7 4</stuans>
+<correct>x 4 1,x 5 1,x 7 1,x 4 4,x 5 4,x 7 4,x 4 10,x 5 10,x 7 10</correct>
+<time_taken>48.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Followsstar="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Follows* (num, num)">13</id><querystr><![CDATA[stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn; Select p such that Follows*(1, 7)]]></querystr>
+<stuans>flat</stuans>
+<correct>flat</correct>
+<time_taken>48.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Followsstar="1" UnnamedVar="3" SuchThat="1" CondNum="6" RelNum="1" comment="Follows* (_, _)">14</id><querystr><![CDATA[stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn; Select v such that Follows*(_, _)]]></querystr>
+<stuans>a,b,byebye,c,com1,com2,d,g,h,hello,i,j,techhang0ut,x,y,z</stuans>
+<correct>x,y,z,h,i,j,a,b,c,d,g,hello,byebye,com1,com2,techhang0ut</correct>
+<time_taken>49.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Followsstar="1" UnnamedVar="2" SuchThat="1" CondNum="5" RelNum="1" comment="Follows* (_, s)">15</id><querystr><![CDATA[stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn; Select <re.varName, c.value> such that Follows*(_, pn)]]></querystr>
+<stuans>x 1,x 10,x 4</stuans>
+<correct>x 1,x 4,x 10</correct>
+<time_taken>49.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Followsstar="1" UnnamedVar="2" SuchThat="1" CondNum="5" RelNum="1" comment="Follows* (s, _)">16</id><querystr><![CDATA[stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn; Select a such that Follows*(a, _)]]></querystr>
+<stuans>1,2,4,5</stuans>
+<correct>1,2,4,5</correct>
+<time_taken>49.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Followsstar="1" UnnamedVar="2" SuchThat="1" CondNum="5" RelNum="1" comment="Follows* (_, num)">17</id><querystr><![CDATA[stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn; Select p.procName such that Follows*(_, 6)]]></querystr>
+<stuans>flat</stuans>
+<correct>flat</correct>
+<time_taken>47.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Followsstar="1" UnnamedVar="2" SuchThat="1" CondNum="5" RelNum="1" comment="Follows* (num, _)">18</id><querystr><![CDATA[stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn; Select re such that Follows*(7, _)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>45.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Followsstar="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Follows* (num, s)">19</id><querystr><![CDATA[stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn; Select s.stmt# such that Follows*(1, s)]]></querystr>
+<stuans>2,3,4,5,6,7</stuans>
+<correct>2,3,4,5,6,7</correct>
+<time_taken>50.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Followsstar="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Follows* (s, num)">20</id><querystr><![CDATA[stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn; Select s such that Follows*(s, 1)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>45.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" Uses="1" SuchThat="1" CondNum="4" RelNum="1" comment="Uses (num, var)">21</id><querystr><![CDATA[stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn; Select a.stmt# such that Uses(6, "y")]]></querystr>
+<stuans>1,2,4,5,7</stuans>
+<correct>1,2,4,5,7</correct>
+<time_taken>48.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" Uses="1" SuchThat="1" CondNum="4" RelNum="1" comment="Uses (num, v)">22</id><querystr><![CDATA[stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn; Select v such that Uses(5, v)]]></querystr>
+<stuans>a,b,c,d,g,h,i,j</stuans>
+<correct>a,b,c,d,g,h,i,j</correct>
+<time_taken>49.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="2" Uses="1" SuchThat="1" CondNum="5" RelNum="1" comment="Uses (num, _)">23</id><querystr><![CDATA[stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn; Select s such that Uses(3, _)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>47.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" Uses="1" SuchThat="1" CondNum="4" RelNum="1" comment="Uses (s, var)">24</id><querystr><![CDATA[stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn; Select a such that Uses(a, "x")]]></querystr>
+<stuans>4</stuans>
+<correct>4</correct>
+<time_taken>46.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" Uses="1" SuchThat="1" CondNum="4" RelNum="1" comment="Uses (s, v)">25</id><querystr><![CDATA[stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn; Select <s.stmt#, v.varName> such that Uses(s, v)]]></querystr>
+<stuans>1 byebye,1 hello,2 com1,2 com2,4 x,4 y,4 z,5 a,5 b,5 c,5 d,5 g,5 h,5 i,5 j,6 y</stuans>
+<correct>1 hello,1 byebye,2 com1,2 com2,4 x,4 y,4 z,5 a,5 b,5 c,5 d,5 g,5 h,5 i,5 j,6 y</correct>
+<time_taken>51.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" UnnamedVar="2" Uses="1" SuchThat="1" CondNum="5" RelNum="1" comment="Uses (s, _)">26</id><querystr><![CDATA[stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn; Select BOOLEAN such that Uses(pn, _)]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>47.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" Uses="1" SuchThat="1" CondNum="4" RelNum="1" comment="Uses (proc, var)">27</id><querystr><![CDATA[stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn; Select s such that Uses("flat", "a")]]></querystr>
+<stuans>1,2,3,4,5,6,7</stuans>
+<correct>1,2,3,4,5,6,7</correct>
+<time_taken>49.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" Uses="1" SuchThat="1" CondNum="4" RelNum="1" comment="Uses (proc, v)">28</id><querystr><![CDATA[stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn; Select v.varName such that Uses("flat", v)]]></querystr>
+<stuans>a,b,byebye,c,com1,com2,d,g,h,hello,i,j,x,y,z</stuans>
+<correct>x,y,z,h,i,j,a,b,c,d,g,hello,byebye,com1,com2</correct>
+<time_taken>49.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="2" Uses="1" SuchThat="1" CondNum="5" RelNum="1" comment="Uses (proc, _)">29</id><querystr><![CDATA[stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn; Select c such that Uses("hello", _)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>47.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" Uses="1" SuchThat="1" CondNum="4" RelNum="1" comment="Uses (p, var)">30</id><querystr><![CDATA[stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn; Select n such that Uses(p, "com1")]]></querystr>
+<stuans>1,2,3,4,5,6,7</stuans>
+<correct>1,2,3,4,5,6,7</correct>
+<time_taken>50.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" Uses="1" SuchThat="1" CondNum="4" RelNum="1" comment="Uses (p, v)">31</id><querystr><![CDATA[stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn; Select <re.stmt#, re.varName> such that Uses(p, v)]]></querystr>
+<stuans>3 x</stuans>
+<correct>3 x</correct>
+<time_taken>49.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="2" Uses="1" SuchThat="1" CondNum="5" RelNum="1" comment="Uses (p, _)">32</id><querystr><![CDATA[stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn; Select <c.value> such that Uses(p, _)]]></querystr>
+<stuans>1,10,4</stuans>
+<correct>1,4,10</correct>
+<time_taken>49.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Modifies="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Modifies (num, var)">33</id><querystr><![CDATA[stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn; Select pn.varName such that Modifies(2, "techhang0ut")]]></querystr>
+<stuans>y</stuans>
+<correct>y</correct>
+<time_taken>48.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Modifies="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Modifies (num, v)">34</id><querystr><![CDATA[stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn; Select v such that Modifies(1, v)]]></querystr>
+<stuans>a</stuans>
+<correct>a</correct>
+<time_taken>49.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Modifies="1" UnnamedVar="2" SuchThat="1" CondNum="5" RelNum="1" comment="Modifies (num, _)">35</id><querystr><![CDATA[stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn; Select s such that Modifies(3, _)]]></querystr>
+<stuans>1,2,3,4,5,6,7</stuans>
+<correct>1,2,3,4,5,6,7</correct>
+<time_taken>57.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Modifies="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Modifies (s, var)">36</id><querystr><![CDATA[stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn; Select a such that Modifies(a, "x")]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>50.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Modifies="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Modifies (s, v)">37</id><querystr><![CDATA[stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn; Select <s.stmt#, v.varName> such that Modifies(s, v)]]></querystr>
+<stuans>1 a,2 techhang0ut,3 x,4 y,5 z,7 h</stuans>
+<correct>1 a,2 techhang0ut,3 x,4 y,5 z,7 h</correct>
+<time_taken>50.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Modifies="1" UnnamedVar="2" SuchThat="1" CondNum="5" RelNum="1" comment="Modifies (s, _)">38</id><querystr><![CDATA[stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn; Select BOOLEAN such that Modifies(pn, _)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>51.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Modifies="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Modifies (proc, var)">39</id><querystr><![CDATA[stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn; Select <re.varName, pn.varName> such that Modifies("flat", "a")]]></querystr>
+<stuans>x y</stuans>
+<correct>x y</correct>
+<time_taken>49.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Modifies="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Modifies (proc, v)">40</id><querystr><![CDATA[stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn; Select v.varName such that Modifies("flat", v)]]></querystr>
+<stuans>a,h,techhang0ut,x,y,z</stuans>
+<correct>a,techhang0ut,x,y,z,h</correct>
+<time_taken>53.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Modifies="1" UnnamedVar="2" SuchThat="1" CondNum="5" RelNum="1" comment="Modifies (proc, _)">41</id><querystr><![CDATA[stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn; Select c such that Modifies("flat", _)]]></querystr>
+<stuans>1,10,4</stuans>
+<correct>1,4,10</correct>
+<time_taken>50.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Modifies="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Modifies (p, var)">42</id><querystr><![CDATA[stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn; Select p.procName such that Modifies(p, "com1")]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>46.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Modifies="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Modifies (p, v)">43</id><querystr><![CDATA[stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn; Select <pn.stmt#, pn.varName> such that Modifies(p, v)]]></querystr>
+<stuans>6 y</stuans>
+<correct>6 y</correct>
+<time_taken>48.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Modifies="1" UnnamedVar="2" SuchThat="1" CondNum="5" RelNum="1" comment="Modifies (p, _)">44</id><querystr><![CDATA[stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn; Select <c.value, pn.stmt#, re.varName> such that Modifies(p, _)]]></querystr>
+<stuans>1 6 x,10 6 x,4 6 x</stuans>
+<correct>1 6 x,4 6 x,10 6 x</correct>
+<time_taken>45.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Next="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Next (s, s)">47</id><querystr><![CDATA[stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn; Select <s1, s2> such that Next(s1, s2)]]></querystr>
+<stuans>1 2,2 3,3 4,4 5,5 6,6 7</stuans>
+<correct>1 2,2 3,3 4,4 5,5 6,6 7</correct>
+<time_taken>49.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Next="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Next (num, num)">48</id><querystr><![CDATA[stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn; Select BOOLEAN such that Next(1, 2)]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>48.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Next="1" UnnamedVar="3" SuchThat="1" CondNum="6" RelNum="1" comment="Next (_, _)">49</id><querystr><![CDATA[stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn; Select re such that Next(_, _)]]></querystr>
+<stuans>3</stuans>
+<correct>3</correct>
+<time_taken>48.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Next="1" UnnamedVar="2" SuchThat="1" CondNum="5" RelNum="1" comment="Next (_, s)">50</id><querystr><![CDATA[stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn; Select s such that Next(_, s)]]></querystr>
+<stuans>2,3,4,5,6,7</stuans>
+<correct>2,3,4,5,6,7</correct>
+<time_taken>46.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Next="1" UnnamedVar="2" SuchThat="1" CondNum="5" RelNum="1" comment="Next (s, _)">51</id><querystr><![CDATA[stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn; Select n such that Next(n, _)]]></querystr>
+<stuans>1,2,3,4,5,6</stuans>
+<correct>1,2,3,4,5,6</correct>
+<time_taken>49.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Next="1" UnnamedVar="2" SuchThat="1" CondNum="5" RelNum="1" comment="Next (_, num)">52</id><querystr><![CDATA[stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn; Select pn such that Next(_, 6)]]></querystr>
+<stuans>6</stuans>
+<correct>6</correct>
+<time_taken>44.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Next="1" UnnamedVar="2" SuchThat="1" CondNum="5" RelNum="1" comment="Next (num, _)">53</id><querystr><![CDATA[stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn; Select c such that Next(2, _)]]></querystr>
+<stuans>1,10,4</stuans>
+<correct>1,4,10</correct>
+<time_taken>48.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Next="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Next (num, s)">54</id><querystr><![CDATA[stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn; Select s such that Next(1, s)]]></querystr>
+<stuans>2</stuans>
+<correct>2</correct>
+<time_taken>48.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Next="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Next (s, num)">55</id><querystr><![CDATA[stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn; Select n such that Next(n, 4)]]></querystr>
+<stuans>3</stuans>
+<correct>3</correct>
+<time_taken>47.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Next* (s, s)">56</id><querystr><![CDATA[stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn; Select <re.varName, a.stmt#, c.value> such that Next*(re, a)]]></querystr>
+<stuans>x 4 1,x 4 10,x 4 4,x 5 1,x 5 10,x 5 4,x 7 1,x 7 10,x 7 4</stuans>
+<correct>x 4 1,x 5 1,x 7 1,x 4 4,x 5 4,x 7 4,x 4 10,x 5 10,x 7 10</correct>
+<time_taken>51.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Next* (num, num)">57</id><querystr><![CDATA[stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn; Select p such that Next*(1, 7)]]></querystr>
+<stuans>flat</stuans>
+<correct>flat</correct>
+<time_taken>50.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" UnnamedVar="3" SuchThat="1" CondNum="6" RelNum="1" comment="Next* (_, _)">58</id><querystr><![CDATA[stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn; Select v such that Next*(_, _)]]></querystr>
+<stuans>a,b,byebye,c,com1,com2,d,g,h,hello,i,j,techhang0ut,x,y,z</stuans>
+<correct>x,y,z,h,i,j,a,b,c,d,g,hello,byebye,com1,com2,techhang0ut</correct>
+<time_taken>59.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" UnnamedVar="2" SuchThat="1" CondNum="5" RelNum="1" comment="Next* (_, s)">59</id><querystr><![CDATA[stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn; Select <re.varName, c.value> such that Next*(_, pn)]]></querystr>
+<stuans>x 1,x 10,x 4</stuans>
+<correct>x 1,x 4,x 10</correct>
+<time_taken>48.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" UnnamedVar="2" SuchThat="1" CondNum="5" RelNum="1" comment="Next* (s, _)">60</id><querystr><![CDATA[stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn; Select a such that Next*(a, _)]]></querystr>
+<stuans>1,2,4,5</stuans>
+<correct>1,2,4,5</correct>
+<time_taken>50.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" UnnamedVar="2" SuchThat="1" CondNum="5" RelNum="1" comment="Next* (_, num)">61</id><querystr><![CDATA[stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn; Select p.procName such that Next*(_, 6)]]></querystr>
+<stuans>flat</stuans>
+<correct>flat</correct>
+<time_taken>48.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" UnnamedVar="2" SuchThat="1" CondNum="5" RelNum="1" comment="Next* (num, _)">62</id><querystr><![CDATA[stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn; Select re such that Next*(7, _)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>44.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Next* (num, s)">63</id><querystr><![CDATA[stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn; Select s.stmt# such that Next*(1, s)]]></querystr>
+<stuans>2,3,4,5,6,7</stuans>
+<correct>2,3,4,5,6,7</correct>
+<time_taken>49.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" >64</id><querystr><![CDATA[stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn; Select s such that Next*(s, 1)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>40.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Affects (s, s)">65</id><querystr><![CDATA[stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn; Select <s1, s2> such that Affects(s1, s2)]]></querystr>
+<stuans>1 5</stuans>
+<correct>1 5</correct>
+<time_taken>47.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id Affects="1" ReturnBoolean="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Affects (num, num)">66</id><querystr><![CDATA[stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn; Select BOOLEAN such that Affects(1, 2)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>46.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="3" SuchThat="1" CondNum="6" RelNum="1" comment="Affects (_, _)">67</id><querystr><![CDATA[stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn; Select pn.varName such that Affects(_, _)]]></querystr>
+<stuans>y</stuans>
+<correct>y</correct>
+<time_taken>46.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="2" SuchThat="1" CondNum="5" RelNum="1" comment="Affects (_, s)">68</id><querystr><![CDATA[stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn; Select s such that Affects(_, s)]]></querystr>
+<stuans>5</stuans>
+<correct>5</correct>
+<time_taken>53.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="2" SuchThat="1" CondNum="5" RelNum="1" comment="Affects (s, _)">69</id><querystr><![CDATA[stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn; Select n such that Affects(n, _)]]></querystr>
+<stuans>1</stuans>
+<correct>1</correct>
+<time_taken>48.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="2" SuchThat="1" CondNum="5" RelNum="1" comment="Affects (_, num)">70</id><querystr><![CDATA[stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn; Select pn such that Affects(_, 6)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>49.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="2" SuchThat="1" CondNum="5" RelNum="1" comment="Affects (num, _)">71</id><querystr><![CDATA[stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn; Select c such that Affects(2, _)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>50.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Affects (num, s)">72</id><querystr><![CDATA[stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn; Select s such that Affects(1, s)]]></querystr>
+<stuans>5</stuans>
+<correct>5</correct>
+<time_taken>48.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Affects (s, num)">73</id><querystr><![CDATA[stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn; Select n such that Affects(n, 4)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>50.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affectsstar="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Affects* (s, s)">74</id><querystr><![CDATA[stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn; Select <a1.stmt#, a2> such that Affects*(a1, a2)]]></querystr>
+<stuans>1 5</stuans>
+<correct>1 5</correct>
+<time_taken>59.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affectsstar="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Affects* (num, num)">75</id><querystr><![CDATA[stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn; Select p such that Affects*(1, 7)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>60.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affectsstar="1" UnnamedVar="3" SuchThat="1" CondNum="6" RelNum="1" comment="Affects* (_, _)">76</id><querystr><![CDATA[stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn; Select v such that Affects*(_, _)]]></querystr>
+<stuans>a,b,byebye,c,com1,com2,d,g,h,hello,i,j,techhang0ut,x,y,z</stuans>
+<correct>x,y,z,h,i,j,a,b,c,d,g,hello,byebye,com1,com2,techhang0ut</correct>
+<time_taken>63.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affectsstar="1" UnnamedVar="2" SuchThat="1" CondNum="5" RelNum="1" comment="Affects* (_, s)">77</id><querystr><![CDATA[stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn; Select <a> such that Affects*(_, a)]]></querystr>
+<stuans>5</stuans>
+<correct>5</correct>
+<time_taken>68.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affectsstar="1" UnnamedVar="2" SuchThat="1" CondNum="5" RelNum="1" comment="Affects* (s, _)">78</id><querystr><![CDATA[stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn; Select a such that Affects*(a, _)]]></querystr>
+<stuans>1</stuans>
+<correct>1</correct>
+<time_taken>56.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affectsstar="1" UnnamedVar="2" SuchThat="1" CondNum="5" RelNum="1" comment="Affects* (_, num)">79</id><querystr><![CDATA[stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn; Select p.procName such that Affects*(_, 2)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>51.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affectsstar="1" UnnamedVar="2" SuchThat="1" CondNum="5" RelNum="1" comment="Affects* (num, _)">80</id><querystr><![CDATA[stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn; Select re such that Affects*(7, _)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>50.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affectsstar="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Affects* (num, s)">81</id><querystr><![CDATA[stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn; Select s.stmt# such that Affects*(1, s)]]></querystr>
+<stuans>5</stuans>
+<correct>5</correct>
+<time_taken>48.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affectsstar="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Affects* (s, num)">82</id><querystr><![CDATA[stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn; Select s such that Affects*(s, 1)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>48.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Calls="1" UnnamedVar="2" SuchThat="1" CondNum="5" RelNum="1" comment="Calls (p, _) (negative)">83</id><querystr><![CDATA[stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn; Select BOOLEAN such that Calls ("flat", _)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>47.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Calls="1" UnnamedVar="2" SuchThat="1" CondNum="5" RelNum="1" comment="Calls (p, p) (negative)">84</id><querystr><![CDATA[stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn; Select BOOLEAN such that Calls ("flat", _)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>47.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Calls="1" UnnamedVar="2" SuchThat="1" CondNum="5" RelNum="1" comment="Calls (p, proc) (negative)">85</id><querystr><![CDATA[stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn; Select BOOLEAN such that Calls ("flat", _)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>47.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Calls="1" UnnamedVar="2" SuchThat="1" CondNum="5" RelNum="1" comment="Calls (proc, _) (negative)">86</id><querystr><![CDATA[stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn; Select BOOLEAN such that Calls ("flat", _)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>45.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Calls="1" UnnamedVar="2" SuchThat="1" CondNum="5" RelNum="1" comment="Calls (proc, p) (negative)">87</id><querystr><![CDATA[stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn; Select BOOLEAN such that Calls ("flat", _)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>47.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Calls="1" UnnamedVar="2" SuchThat="1" CondNum="5" RelNum="1" comment="Calls (proc, proc) (negative)">88</id><querystr><![CDATA[stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn; Select BOOLEAN such that Calls ("flat", _)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>47.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Calls="1" UnnamedVar="2" SuchThat="1" CondNum="5" RelNum="1" comment="Calls (_, _) (negative)">89</id><querystr><![CDATA[stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn; Select BOOLEAN such that Calls ("flat", _)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>47.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Calls="1" UnnamedVar="2" SuchThat="1" CondNum="5" RelNum="1" comment="Calls (_, p) (negative)">90</id><querystr><![CDATA[stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn; Select BOOLEAN such that Calls ("flat", _)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>46.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Calls="1" UnnamedVar="2" SuchThat="1" CondNum="5" RelNum="1" comment="Calls (_, proc) (negative)">91</id><querystr><![CDATA[stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn; Select BOOLEAN such that Calls ("flat", _)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>47.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" UnnamedVar="2" SuchThat="1" CondNum="5" RelNum="1" comment="Calls* (_, p) (negative)">92</id><querystr><![CDATA[stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn; Select s such that Calls (_, "flat")]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>48.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" UnnamedVar="2" SuchThat="1" CondNum="5" RelNum="1" comment="Calls* (_, proc) (negative)">93</id><querystr><![CDATA[stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn; Select s such that Calls (_, "flat")]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>47.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" UnnamedVar="2" SuchThat="1" CondNum="5" RelNum="1" comment="Calls* (_, _) (negative)">94</id><querystr><![CDATA[stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn; Select s such that Calls (_, "flat")]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>46.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" UnnamedVar="2" SuchThat="1" CondNum="5" RelNum="1" comment="Calls* (p, p) (negative)">95</id><querystr><![CDATA[stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn; Select s such that Calls (_, "flat")]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>46.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" UnnamedVar="2" SuchThat="1" CondNum="5" RelNum="1" comment="Calls* (p, proc) (negative)">96</id><querystr><![CDATA[stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn; Select s such that Calls (_, "flat")]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>45.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" UnnamedVar="2" SuchThat="1" CondNum="5" RelNum="1" comment="Calls* (p, _) (negative)">97</id><querystr><![CDATA[stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn; Select s such that Calls (_, "flat")]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>45.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" UnnamedVar="2" SuchThat="1" CondNum="5" RelNum="1" comment="Calls* (proc, p) (negative)">98</id><querystr><![CDATA[stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn; Select s such that Calls (_, "flat")]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>45.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" UnnamedVar="2" SuchThat="1" CondNum="5" RelNum="1" comment="Calls* (proc, proc) (negative)">99</id><querystr><![CDATA[stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn; Select s such that Calls (_, "flat")]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>54.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" UnnamedVar="2" SuchThat="1" CondNum="5" RelNum="1" comment="Calls* (proc, _) (negative)">100</id><querystr><![CDATA[stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn; Select s such that Calls (_, "flat")]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>48.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" UnnamedVar="2" SuchThat="1" CondNum="5" RelNum="1" comment="Pattern if (_, _, _) (negative)">101</id><querystr><![CDATA[stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn; Select s such that Calls (_, "flat")]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>45.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" UnnamedVar="2" SuchThat="1" CondNum="5" RelNum="1" comment="Pattern if (v, _, _) (negative)">102</id><querystr><![CDATA[stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn; Select s such that Calls (_, "flat")]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>45.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" UnnamedVar="2" SuchThat="1" CondNum="5" RelNum="1" comment="Pattern if (var, _, _) (negative)">103</id><querystr><![CDATA[stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn; Select s such that Calls (_, "flat")]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>46.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" UnnamedVar="2" SuchThat="1" CondNum="5" RelNum="1" comment="Pattern while (_, _) (negative)">104</id><querystr><![CDATA[stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn; Select s such that Calls (_, "flat")]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>47.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" UnnamedVar="2" SuchThat="1" CondNum="5" RelNum="1" comment="Pattern while (v, _) (negative)">105</id><querystr><![CDATA[stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn; Select s such that Calls (_, "flat")]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>46.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" UnnamedVar="2" SuchThat="1" CondNum="5" RelNum="1" comment="Pattern while (var, _) (negative)">106</id><querystr><![CDATA[stmt s, s1, s2, s3; assign a, a1, a2, a3; while w; if ifs; variable v, v1, v2, v3; procedure p, q; constant c; prog_line n; call cl; read re; print pn; Select s such that Calls (_, "flat")]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>48.000000</time_taken>
+<passed/>
+</query>
+</queries>
+</test_results>

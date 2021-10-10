@@ -1,0 +1,130 @@
+1105 - Valid. result-cl BOOLEAN, suchthat-cl Next*, pattern-cl while, with-cl procedure.procName
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select BOOLEAN such that Next*(n1, n2) pattern w(v, _) with proc1.procName = "PR0C1"
+TRUE
+5000
+1106 - Valid. result-cl BOOLEAN, suchthat-cl Next*, pattern-cl while, with-cl call.procName
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select BOOLEAN such that Next*(n1, n2) pattern w(v, _) with cl.procName = "procedure"
+TRUE
+5000
+1107 - Valid. result-cl BOOLEAN, suchthat-cl Next*, pattern-cl while, with-cl variable.varName
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select BOOLEAN such that Next*(n1, n2) pattern w(v, _) with v.varName = "cc"
+TRUE
+5000
+1108 - Valid. result-cl BOOLEAN, suchthat-cl Next*, pattern-cl while, with-cl read.varName
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select BOOLEAN such that Next*(n1, n2) pattern w(v, _) with r.varName = "aa"
+TRUE
+5000
+1109 - Valid. result-cl BOOLEAN, suchthat-cl Next*, pattern-cl while, with-cl print.varName
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select BOOLEAN such that Next*(n1, n2) pattern w(v, _) with p.varName = "print"
+TRUE
+5000
+1110 - Valid. result-cl BOOLEAN, suchthat-cl Next*, pattern-cl while, with-cl call.varName
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select BOOLEAN such that Next*(n1, n2) pattern w(v, _) with c.value = 33
+TRUE
+5000
+1111 - Valid. result-cl BOOLEAN, suchthat-cl Next*, pattern-cl while, with-cl stmt.stmt#
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select BOOLEAN such that Next*(n1, n2) pattern w(v, _) with s.stmt# = 10
+TRUE
+5000
+1112 - Valid. result-cl BOOLEAN, suchthat-cl Next*, pattern-cl while, with-cl read.stmt#
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select BOOLEAN such that Next*(n1, n2) pattern w(v, _) with r.stmt# = 10
+TRUE
+5000
+1113 - Valid. result-cl BOOLEAN, suchthat-cl Next*, pattern-cl while, with-cl print.stmt#
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select BOOLEAN such that Next*(n1, n2) pattern w(v, _) with p.stmt# = 12
+TRUE
+5000
+1114 - Valid. result-cl BOOLEAN, suchthat-cl Next*, pattern-cl while, with-cl call.stmt#
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select BOOLEAN such that Next*(n1, n2) pattern w(v, _) with cl.stmt# = 29
+TRUE
+5000
+1115 - Valid. result-cl BOOLEAN, suchthat-cl Next*, pattern-cl while, with-cl while.stmt#
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select BOOLEAN such that Next*(n1, n2) pattern w(v, _) with w.stmt# = 5
+TRUE
+5000
+1116 - Valid. result-cl BOOLEAN, suchthat-cl Next*, pattern-cl while, with-cl if.stmt#
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select BOOLEAN such that Next*(n1, n2) pattern w(v, _) with ifs.stmt# = 8
+TRUE
+5000
+1117 - Valid. result-cl BOOLEAN, suchthat-cl Next*, pattern-cl while, with-cl assign.stmt#
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select BOOLEAN such that Next*(n1, n2) pattern w(v, _) with a.stmt# = 11
+TRUE
+5000
+1118 - Valid. result-cl BOOLEAN, suchthat-cl Next*, pattern-cl if, with-cl procedure.procName
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select BOOLEAN such that Next*(n1, n2) pattern ifs(v, _, _) with proc1.procName = "PR0C1"
+TRUE
+5000
+1119 - Valid. result-cl BOOLEAN, suchthat-cl Next*, pattern-cl if, with-cl call.procName
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select BOOLEAN such that Next*(n1, n2) pattern ifs(v, _, _) with cl.procName = "procedure"
+TRUE
+5000
+1120 - Valid. result-cl BOOLEAN, suchthat-cl Next*, pattern-cl if, with-cl variable.varName
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select BOOLEAN such that Next*(n1, n2) pattern ifs(v, _, _) with v.varName = "aa"
+TRUE
+5000
+1121 - Valid. result-cl BOOLEAN, suchthat-cl Next*, pattern-cl if, with-cl read.varName
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select BOOLEAN such that Next*(n1, n2) pattern ifs(v, _, _) with r.varName = "aa"
+TRUE
+5000
+1122 - Valid. result-cl BOOLEAN, suchthat-cl Next*, pattern-cl if, with-cl print.varName
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select BOOLEAN such that Next*(n1, n2) pattern ifs(v, _, _) with p.varName = "call"
+TRUE
+5000
+1123 - Valid. result-cl BOOLEAN, suchthat-cl Next*, pattern-cl if, with-cl constant.value
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select BOOLEAN such that Next*(n1, n2) pattern ifs(v, _, _) with c.value = 33
+TRUE
+5000
+1124 - Valid. result-cl BOOLEAN, suchthat-cl Next*, pattern-cl if, with-cl stmt.stmt#
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select BOOLEAN such that Next*(n1, n2) pattern ifs(v, _, _) with s.stmt# = 11
+TRUE
+5000
+1125 - Valid. result-cl BOOLEAN, suchthat-cl Next*, pattern-cl if, with-cl read.stmt#
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select BOOLEAN such that Next*(n1, n2) pattern ifs(v, _, _) with r.stmt# = 3
+TRUE
+5000
+1126 - Valid. result-cl BOOLEAN, suchthat-cl Next*, pattern-cl if, with-cl print.stmt#
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select BOOLEAN such that Next*(n1, n2) pattern ifs(v, _, _) with p.stmt# = 1
+TRUE
+5000
+1127 - Valid. result-cl BOOLEAN, suchthat-cl Next*, pattern-cl if, with-cl call.stmt#
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select BOOLEAN such that Next*(n1, n2) pattern ifs(v, _, _) with cl.stmt# = 16
+TRUE
+5000
+1128 - Valid. result-cl BOOLEAN, suchthat-cl Next*, pattern-cl if, with-cl while.stmt#
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select BOOLEAN such that Next*(n1, n2) pattern ifs(v, _, _) with w.stmt# = 21
+TRUE
+5000
+1129 - Valid. result-cl BOOLEAN, suchthat-cl Next*, pattern-cl if, with-cl if.stmt#
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select BOOLEAN such that Next*(n1, n2) pattern ifs(v, _, _) with ifs.stmt# = 2
+TRUE
+5000
+1130 - Valid. result-cl BOOLEAN, suchthat-cl Next*, pattern-cl if, with-cl assign.stmt#
+procedure proc1, proc2; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n1, n2;
+Select BOOLEAN such that Next*(n1, n2) pattern ifs(v, _, _) with a.stmt# = 4
+TRUE
+5000

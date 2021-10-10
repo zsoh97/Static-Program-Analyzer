@@ -1,0 +1,19 @@
+Both param _, _
+Either param _, _
+Both param synonym
+Either param synonym
+Both param lineRef
+Either param lineRef
+i.e.(_, _), (_, a), (a, _), (_, 1), (1, _), (a, 1), (1, a), etc
+Boolean
+simple directly after; Next (1, 2) where 1 and 2 are call/assignment/read/print statements 
+Next(s1, s2) where s1 is a conditional stmt
+Next(s1, s2) where s1 is at the end of a conditional block
+To consider different levels of nesting and test whether Next is functioning correctly, especially while loops.
+
+Incorrect:
+	- Next(s1, s1) should not be possible as stmtlists cannot be empty (not sure if invalid or incorrect)
+Invalid: 
+	- too many params
+	- too little params
+	- unknown char inside param 

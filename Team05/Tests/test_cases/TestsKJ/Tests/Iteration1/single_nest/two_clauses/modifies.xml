@@ -1,0 +1,43 @@
+<?xml-stylesheet type="text/xsl" href="analysis.xsl"?>
+<test_results>
+<info>
+<name>tests</name><parsing_time_taken>27.000000</parsing_time_taken>
+</info>
+<queries>
+<query>
+<id ReturnTuple="1" Modifies="1" UnnamedVar="1" Pattern="1" SuchThat="1" CondNum="5" RelNum="1" comment="Select variable inside if container with certain assignment pattern">1</id><querystr><![CDATA[if ifs; assign a; variable v; Select v such that Modifies (ifs, v) pattern a (v, _"x"_)]]></querystr>
+<stuans>z,y</stuans>
+<correct>y,z</correct>
+<time_taken>46.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Modifies="1" UnnamedVar="1" Pattern="1" SuchThat="1" CondNum="5" RelNum="1" comment="Select assign with certain pattern inside if container that doesn't exist">2</id><querystr><![CDATA[if ifs; assign a; variable v; Select a such that Modifies (ifs, v) pattern a (v, _"x"_)]]></querystr>
+<stuans>10,7</stuans>
+<correct>7,10</correct>
+<time_taken>47.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Modifies="1" UnnamedVar="1" Pattern="1" SuchThat="1" CondNum="5" RelNum="1" comment="Select variable modified in while container with pattern">3</id><querystr><![CDATA[while w; assign a; variable v; Select v such that Modifies (w, v) pattern a (v, _"x"_)]]></querystr>
+<stuans>z,x</stuans>
+<correct>x,z</correct>
+<time_taken>40.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Modifies="1" UnnamedVar="1" Pattern="1" SuchThat="1" CondNum="5" RelNum="1" comment="Select variable modified in assign with pattern">4</id><querystr><![CDATA[assign a; variable v; Select v such that Modifies (a, v) pattern a (v, _"x"_)]]></querystr>
+<stuans>z,y,x</stuans>
+<correct>x,y,z</correct>
+<time_taken>44.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Modifies="1" UnnamedVar="3" Pattern="1" SuchThat="1" CondNum="7" RelNum="1" comment="Select while that modifies a variable if pattern is true">5</id><querystr><![CDATA[while w; assign a; Select w such that Modifies (w, _) pattern a (_, _"x"_)]]></querystr>
+<stuans>8</stuans>
+<correct>8</correct>
+<time_taken>39.000000</time_taken>
+<passed/>
+</query>
+</queries>
+</test_results>

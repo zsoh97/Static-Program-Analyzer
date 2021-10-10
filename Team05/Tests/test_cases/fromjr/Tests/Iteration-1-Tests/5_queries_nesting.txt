@@ -1,0 +1,250 @@
+5001 - Invalid. Parent, 2 constants, negative stmt index
+stmt s;
+Select s such that Parent(1, -1)
+
+5000
+5002 - Valid. Parent, 2 constants, inside lower bound stmt index
+stmt s;
+Select s such that Parent(1, 2)
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34
+5000
+5003 - Valid. Parent, 2 constants, inside upper bound stmt index
+stmt s;
+Select s such that Parent(33, 34)
+
+5000
+5004 - Invalid. Parent, 2 constants, outside lower bound stmt index
+stmt s;
+Select s such that Parent(0, 1)
+
+5000
+5005 - Invalid. Parent, 2 constants, outside upper bound stmt index
+stmt s;
+Select s such that Parent(33, 34)
+
+5000
+5006 - Invalid. Parent, misspelt Parent keyword
+stmt s;
+Select s such that parent(s, 4)
+
+5000
+5007 - Invalid. Parent, does not accept read
+stmt s; read r;
+Select r such that Parent(r, s)
+
+5000
+5008 - Invalid. Parent, does not accept print
+stmt s; print p;
+Select p such that Parent(p, s)
+
+5000
+5009 - Invalid. Parent, does not accept constant
+stmt s; constant c;
+Select c such that Parent(c, s)
+
+5000
+5010 - Invalid. Parent, does not accept variable
+stmt s; variable v;
+Select v such that Parent(v, s)
+
+5000
+5011 - Invalid. Parent, does not accept procedure
+stmt s; procedure p;
+Select p such that Parent(p, s)
+
+5000
+5012 - Valid. Parent, 2 constants
+print p;
+Select p such that Parent(8, 21)
+11, 30, 34
+5000
+5013 - Valid. Parent, 1 synonym 1 constant
+stmt s;
+Select s such that Parent(s, 25)
+2
+5000
+5014 - Valid. Parent, 1 constant 1 synonym statement
+stmt s;
+Select s such that Parent(2, s)
+3, 25, 26
+5000
+5015 - Valid. Parent, 1 constant 1 synonym while
+while w;
+Select w such that Parent(w, 17)
+16
+5000
+5016 - Valid. Parent, 1 constant 1 synonym if
+if ifs;
+Select ifs such that Parent(ifs, 23)
+4
+5000
+5017 - Valid. Parent, 1 constant 1 synonym assign
+if ifs; assign a;
+Select a such that Parent(ifs, 10)
+5, 7, 9, 12, 15, 17, 18, 19, 21, 22, 23, 24, 25, 29, 31, 32
+5000
+5018 - Valid. Parent, 2 synonyms while and if
+if ifs; while w;
+Select ifs such that Parent(w, ifs)
+2, 8
+5000
+5019 - Valid. Parent, 2 synonyms if and while
+if ifs; while w;
+Select w such that Parent(ifs, w)
+6, 10, 13, 28
+5000
+5020 - Valid. Parent, 1 wildcard 1 constant
+while w;
+Select w such that Parent(13, _)
+1, 6, 10, 13, 14, 16, 28
+5000
+5021 - Valid. Parent, 1 constant 1 wildcard
+if ifs;
+Select ifs such that Parent(27, _)
+2, 3, 4, 8, 26, 27
+5000
+5022 - Valid. Parent, 1 wildcard 1 synonym
+assign a;
+Select a such that Parent(_, a)
+5, 7, 9, 12, 15, 17, 18, 19, 21, 22, 23, 24, 25, 29, 31, 32
+5000
+5023 - Valid. Parent, 1 synonym 1 wildcard
+if ifs; read r;
+Select r such that Parent(ifs, _)
+20, 33
+5000
+5024 - Valid. Parent, 2 wildcards
+print p;
+Select p such that Parent(_, _)
+11, 30, 34
+5000
+5025 - Invalid. Parent*, 2 constants, negative stmt index
+stmt s;
+Select s such that Parent*(1, -1)
+
+5000
+5026 - Valid. Parent*, 2 constants, inside lower bound stmt index
+stmt s;
+Select s such that Parent*(1, 2)
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34
+5000
+5027 - Valid. Parent*, 2 constants, inside upper bound stmt index
+stmt s;
+Select s such that Parent*(33, 34)
+
+5000
+5028 - Invalid. Parent*, 2 constants, outside lower bound stmt index
+stmt s;
+Select s such that Parent*(0, 1)
+
+5000
+5029 - Invalid. Parent*, 2 constants, outside upper bound stmt index
+stmt s;
+Select s such that Parent*(33, 34)
+
+5000
+5030 - Invalid. Parent*, misspelt Parent* keyword
+stmt s;
+Select s such that parent*(s, 4)
+
+5000
+5031 - Invalid. Parent*, does not accept read
+stmt s; read r;
+Select r such that Parent*(r, s)
+
+5000
+5032 - Invalid. Parent*, does not accept print
+stmt s; print p;
+Select p such that Parent*(p, s)
+
+5000
+5033 - Invalid. Parent*, does not accept constant
+stmt s; constant c;
+Select c such that Parent*(c, s)
+
+5000
+5034 - Invalid. Parent*, does not accept variable
+stmt s; variable v;
+Select v such that Parent*(v, s)
+
+5000
+5035 - Invalid. Parent*, does not accept procedure
+stmt s; procedure p;
+Select p such that Parent*(p, s)
+
+5000
+5036 - Valid. Parent*, 2 constants
+print p;
+Select p such that Parent*(8, 21)
+11, 30, 34
+5000
+5037 - Valid. Parent*, 1 synonym 1 constant
+stmt s;
+Select s such that Parent*(s, 25)
+1, 2
+5000
+5038 - Valid. Parent*, 1 constant 1 synonym statement
+stmt s;
+Select s such that Parent*(8, s)
+9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21
+5000
+5039 - Valid. Parent*, 1 constant 1 synonym while
+while w;
+Select w such that Parent*(w, 17)
+1, 6, 13, 14, 16
+5000
+5040 - Valid. Parent*, 1 constant 1 synonym if
+if ifs;
+Select ifs such that Parent*(ifs, 23)
+2, 3, 4
+5000
+5041 - Valid. Parent*, 1 constant 1 synonym assign
+if ifs; assign a;
+Select a such that Parent*(ifs, 10)
+5, 7, 9, 12, 15, 17, 18, 19, 21, 22, 23, 24, 25, 29, 31, 32
+5000
+5042 - Valid. Parent*, 2 synonyms while and if
+if ifs; while w;
+Select ifs such that Parent*(w, ifs)
+2, 3, 4, 8, 26, 27
+5000
+5043 - Valid. Parent*, 2 synonyms if and while
+if ifs; while w;
+Select w such that Parent*(ifs, w)
+6, 10, 13, 14, 16, 28
+5000
+5044 - Valid. Parent*, 1 wildcard 1 constant
+while w;
+Select w such that Parent*(13, _)
+1, 6, 10, 13, 14, 16, 28
+5000
+5045 - Valid. Parent*, 1 constant 1 wildcard
+if ifs;
+Select ifs such that Parent*(27, _)
+2, 3, 4, 8, 26, 27
+5000
+5046 - Valid. Parent*, 1 wildcard 1 synonym
+assign a;
+Select a such that Parent*(_, a)
+5, 7, 9, 12, 15, 17, 18, 19, 21, 22, 23, 24, 25, 29, 31, 32
+5000
+5047 - Valid. Parent*, 1 synonym 1 wildcard
+if ifs; read r;
+Select r such that Parent*(ifs, _)
+20, 33
+5000
+5048 - Valid. Parent*, 2 wildcards
+print p;
+Select p such that Parent*(_, _)
+11, 30, 34
+5000
+5049 - Valid. Parent, 2 identical synonyms, select stmt
+stmt s;
+Select s such that Parent(s, s)
+
+5000
+5050 - Valid. Parent*, 2 identical synonyms, select stmt
+stmt s;
+Select s such that Parent*(s, s)
+
+5000

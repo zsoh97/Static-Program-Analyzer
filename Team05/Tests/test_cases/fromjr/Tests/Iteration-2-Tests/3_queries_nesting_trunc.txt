@@ -1,0 +1,10 @@
+3041 - Valid. if-parent, if-parent or else-child, suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select n such that Next(27, n)
+28, 34
+5000
+3050 - Valid. else-child, while-parent, suchthat-cl Next
+procedure proc; call cl; variable v; read r; print p; constant c; stmt s; while w; if ifs; assign a; prog_line n;
+Select n such that Next(22, n)
+6
+5000

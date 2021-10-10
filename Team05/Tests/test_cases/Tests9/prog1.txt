@@ -1,0 +1,97 @@
+procedure callOne {
+	x = 1;
+	call callTwo;
+	a = x; 
+}
+
+procedure callTwo {
+	if (i!=2) then {
+		x = a + 1;
+	} else {
+		a = b; 
+	}
+}
+
+procedure while {
+	while (a != b) {
+		a = b + c;
+		b = a + c;
+	}
+}
+
+procedure ifelse {
+	x = 1;
+	if (i!=2) then {
+		x = a + 1;
+	} else {
+		a = b; 
+	}
+	a = x; 
+}
+
+procedure basicAffectsStar {
+    x=a;
+    v=x;
+    z=v;
+}
+
+procedure moreAffectsStar {
+	x=a;
+	v=x;
+	z=v;
+	y=z;
+	p=y;
+}
+
+procedure crossProcedure {
+	a=b;
+	call crossProcedure2;
+}
+
+procedure crossProcedure2 {
+	b=a;
+}
+
+procedure ifElseSep {
+	a=b;
+	if (c == d) then {
+		c=a;
+		d=c;
+	} else {
+		e=d;
+		f=e;
+	}
+	b=a;
+}
+
+procedure whileLoop {
+	a=b;
+	while (c == d) {
+		b=a;
+		c=b;
+		d=c;
+		e=d;
+		while (d != c) {
+			d=e;
+			c=d;
+			b=c;
+			a=b;
+		}
+	}
+	b=a;
+}
+
+procedure read {
+	a=b;
+	read a;
+	b=a;
+}
+
+procedure dualPattern {
+	x = 3;
+	while (c != d) {
+		while (b != 6) {
+			x = x + 1;
+		}
+	}
+}

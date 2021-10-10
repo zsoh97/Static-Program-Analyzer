@@ -1,0 +1,30 @@
+No clauses needed
+attrRef:
+	- NAME = procedure.procName, call.procName, variable.varName, read.varName, print.varName:
+	- constant.value: INTEGER
+	- INTEGER: stmt.stmt#, read.stmt#, print.stmt#, call.stmt#, while.stmt#, if.stmt#, assign.stmt#
+Select clause synonym/attrRef/BOOLEAN/tuple(with attrRef and synonym variation)
+with-cl:
+ref : ‘”’ IDENT ‘”’ | INTEGER | attrRef | synonym
+Both param attrRef/IDENT/INTEGER/synonym
+Either param attrRef/IDENT/INTEGER/synonym
+no output:
+constant not in source
+procname not in source
+varname not in source
+integer out of index
+
+semantically invalid:
+if integer == 0
+
+syntactically invalid:
+refs on both side are of different types. i.e. IDENT = int
+wrong pairing of attrRef. i.e. print.procname
+use of wildcard as ref
+	- one side _
+	- both side _
+wrong identifier: e.g. ref == ref/ ref = ref = ref
+anymore that bel can add
+
+
+

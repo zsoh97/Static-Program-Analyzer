@@ -1,0 +1,211 @@
+<?xml-stylesheet type="text/xsl" href="analysis.xsl"?>
+<test_results>
+<info>
+<name>tests</name><parsing_time_taken>36.000000</parsing_time_taken>
+</info>
+<queries>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="Select procedures with params synonym and synonym">1</id><querystr><![CDATA[procedure p, q; Select q such that Calls (p, q)]]></querystr>
+<stuans>Q,P</stuans>
+<correct>P,Q</correct>
+<time_taken>47.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Select procedures with params synonym and underscore">2</id><querystr><![CDATA[procedure p, q; Select p such that Calls (p, _)]]></querystr>
+<stuans>P,main</stuans>
+<correct>main,P</correct>
+<time_taken>57.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="Select procedures with params synonym and fixed (exist)">3</id><querystr><![CDATA[procedure p, q; Select p such that Calls (p, "Q")]]></querystr>
+<stuans>P</stuans>
+<correct>P</correct>
+<time_taken>51.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="Select procedures with params synonym and fixed (does not exist)">4</id><querystr><![CDATA[procedure p, q; Select p such that Calls (p, "R")]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>54.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Select procedures with params underscore and synonym">5</id><querystr><![CDATA[procedure p, q; Select p such that Calls (_, p)]]></querystr>
+<stuans>P,Q</stuans>
+<correct>P,Q</correct>
+<time_taken>65.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" UnnamedVar="2" SuchThat="1" CondNum="5" RelNum="1" comment="Select procedures with params underscore and underscore">6</id><querystr><![CDATA[procedure p, q; Select p such that Calls (_, _)]]></querystr>
+<stuans>P,Q,main</stuans>
+<correct>main,P,Q</correct>
+<time_taken>58.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Select procedures with params underscore and fixed (exist)">7</id><querystr><![CDATA[procedure p, q; Select p such that Calls (_, "main")]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>66.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Select procedures with params underscore and fixed (does not exist)">8</id><querystr><![CDATA[procedure p, q; Select p such that Calls (_, "procedure")]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>57.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="Select procedures with params fixed and synonym">9</id><querystr><![CDATA[procedure p, q; Select p such that Calls ("P", p)]]></querystr>
+<stuans>Q</stuans>
+<correct>Q</correct>
+<time_taken>51.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Select procedures with params fixed and underscore">10</id><querystr><![CDATA[procedure p, q; Select p such that Calls ("main", _)]]></querystr>
+<stuans>P,Q,main</stuans>
+<correct>P,Q,main</correct>
+<time_taken>53.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="Select procedures with params fixed and fixed (exist)">11</id><querystr><![CDATA[procedure p, q; Select p such that Calls ("P", "Q")]]></querystr>
+<stuans>P,Q,main</stuans>
+<correct>main,P,Q</correct>
+<time_taken>49.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="Select procedures with params fixed and fixed (exist)">12</id><querystr><![CDATA[procedure p, q; Select p such that Calls ("P", "main")]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>49.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="Select procedures that calls itself">13</id><querystr><![CDATA[procedure p, q; Select p such that Calls (p, p)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>46.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Callsstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="Select procedures with params synonym and synonym">14</id><querystr><![CDATA[procedure p, q; Select q such that Calls* (p, q)]]></querystr>
+<stuans>Q,P</stuans>
+<correct>P,Q</correct>
+<time_taken>53.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Callsstar="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Select procedures with params synonym and underscore">15</id><querystr><![CDATA[procedure p, q; Select p such that Calls* (p, _)]]></querystr>
+<stuans>P,main</stuans>
+<correct>main,P</correct>
+<time_taken>62.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Callsstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="Select procedures with params synonym and fixed (exist)">16</id><querystr><![CDATA[procedure p, q; Select p such that Calls* (p, "Q")]]></querystr>
+<stuans>P,main</stuans>
+<correct>P,main</correct>
+<time_taken>49.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Callsstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="Select procedures with params synonym and fixed (does not exist)">17</id><querystr><![CDATA[procedure p, q; Select p such that Calls* (p, "R")]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>52.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Callsstar="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Select procedures with params underscore and synonym">18</id><querystr><![CDATA[procedure p, q; Select p such that Calls* (_, p)]]></querystr>
+<stuans>P,Q</stuans>
+<correct>P,Q</correct>
+<time_taken>48.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Callsstar="1" UnnamedVar="2" SuchThat="1" CondNum="5" RelNum="1" comment="Select procedures with params underscore and underscore">19</id><querystr><![CDATA[procedure p, q; Select p such that Calls* (_, _)]]></querystr>
+<stuans>P,Q,main</stuans>
+<correct>main,P,Q</correct>
+<time_taken>51.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Callsstar="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Select procedures with params underscore and fixed (exist)">20</id><querystr><![CDATA[procedure p, q; Select p such that Calls* (_, "main")]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>57.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Callsstar="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Select procedures with params underscore and fixed (does not exist)">21</id><querystr><![CDATA[procedure p, q; Select p such that Calls* (_, "procedure")]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>54.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Callsstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="Select procedures with params fixed and synonym">22</id><querystr><![CDATA[procedure p, q; Select p such that Calls* ("P", p)]]></querystr>
+<stuans>Q</stuans>
+<correct>Q</correct>
+<time_taken>48.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Callsstar="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Select procedures with params fixed and underscore">23</id><querystr><![CDATA[procedure p, q; Select p such that Calls* ("main", _)]]></querystr>
+<stuans>P,Q,main</stuans>
+<correct>P,Q,main</correct>
+<time_taken>52.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Callsstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="Select procedures with params fixed and fixed (exist)">24</id><querystr><![CDATA[procedure p, q; Select p such that Calls* ("P", "Q")]]></querystr>
+<stuans>P,Q,main</stuans>
+<correct>main,P,Q</correct>
+<time_taken>52.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Callsstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="Select procedures with params fixed and fixed (exist)">25</id><querystr><![CDATA[procedure p, q; Select p such that Calls* ("P", "main")]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>51.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Callsstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="Select procedures that calls itself">26</id><querystr><![CDATA[procedure p, q; Select p such that Calls* (p, p)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>48.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Callsstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="Select all procedures called by main">27</id><querystr><![CDATA[procedure p; Select p.procName such that Calls* ("main", p)]]></querystr>
+<stuans>P,Q</stuans>
+<correct>P,Q</correct>
+<time_taken>56.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Callsstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="Select procedure tuples that calls another procedure">28</id><querystr><![CDATA[procedure p, q; Select <p, q> such that Calls* (p, q)]]></querystr>
+<stuans>P Q,main P,main Q</stuans>
+<correct>main P,main Q,P Q</correct>
+<time_taken>56.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" Callsstar="1" SuchThat="1" CondNum="4" RelNum="2" comment="Select procedures that calls a procedure that calls Q">29</id><querystr><![CDATA[procedure p, q; Select p such that Calls* (p, q) and Calls (q, "Q")]]></querystr>
+<stuans>main</stuans>
+<correct>main</correct>
+<time_taken>50.000000</time_taken>
+<passed/>
+</query>
+</queries>
+</test_results>

@@ -1,0 +1,220 @@
+1 - parent* single clause
+stmt s;
+Select s such that Parent* (1, s)
+2, 3, 4, 5, 6, 7, 8, 9, 10, 11
+5000
+2 - parent single clause
+stmt s;
+Select s such that Parent (1, s)
+2, 3, 4, 5
+5000
+3 - parent* single clause
+stmt s;
+Select s such that Parent* (s, 9)
+1, 5, 7
+5000
+4 - parent single clause
+stmt s;
+Select s such that Parent (s, 9)
+7
+5000
+5 - wild card parent*
+stmt s;
+Select s such that Parent* (s, _)
+1, 5, 7, 12
+5000
+6 - wild card parent
+stmt s;
+Select s such that Parent (s, _)
+1, 5, 7, 12
+5000
+7 - wild card parent*
+stmt s;
+Select s such that Parent* (_, s)
+2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 14
+5000
+8 - wild card parent
+stmt s;
+Select s such that Parent (_, s)
+2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 14
+5000
+9 - such that parent and pattern
+stmt s; assign a;
+Select s such that Parent (1, s) pattern a ("x", _"y"_)
+2, 3, 4, 5
+5000
+10 - parent and pattern
+stmt s; assign a;
+Select s such that Parent* (1, s) pattern a ("x", _"y"_)
+2, 3, 4, 5, 6, 7, 8, 9, 10, 11
+5000
+11 - single follows clause
+stmt s;
+Select s such that Follows (1, s)
+12
+5000
+12 - single follows clause
+stmt s, s1;
+Select s such that Follows (s, s1)
+1, 2, 3, 4, 6, 8, 9
+5000
+13 - single follows clause
+stmt s;
+Select s such that Follows (s, 13)
+none
+5000
+14 - single Follows* clause
+stmt s;
+Select s such that Follows* (1, s)
+12
+5000
+15 - single Follows* clause
+stmt s, s1;
+Select s such that Follows* (s, s1)
+1, 2, 3, 4, 6, 8, 9
+5000
+16 - single Follows* clause
+stmt s;
+Select s such that Follows* (s, 10)
+8, 9
+5000
+17 - such that uses pattern, select partial shared synonym
+stmt s; variable v; assign a;
+Select v pattern a (v, _) such that Uses (a, v)
+z
+5000
+18 - such that uses
+stmt s; variable v;
+Select v such that Uses (s, v)
+z, y, x
+5000
+19 - pattern such that modifies, select shared synonym
+stmt s; variable v; assign a;
+Select a pattern a (v, _) such that Modifies (a, v)
+3, 9, 13, 14
+5000
+20 - pattern such that modifies, select partial shared synonym
+stmt s; variable v; assign a;
+Select a pattern a (v, _) such that Modifies (s, v)
+3, 9, 13, 14
+5000
+21 - pattern such that modifies, select partial shared synonym
+stmt s; variable v; assign a;
+Select s pattern a (v, _) such that Modifies (s, v)
+1, 3, 4, 5, 7, 8, 9, 11, 12, 13, 14
+5000
+22 - modifies single clause
+stmt s; variable v;
+Select s such that Modifies (s, "x")
+9, 7, 5, 1
+5000
+23 - such that uses pattern, select partial shared synonym
+stmt s; variable v; assign a;
+Select s pattern a (v, _"z + 1"_) such that Uses (s, v)
+9, 10, 7, 5, 1
+5000
+24 - such that uses pattern, select shared synonym
+stmt s; variable v; assign a;
+Select v such that Uses (5, v) pattern a (v, _"y"_)
+x
+5000
+25 - such that uses single clause
+stmt s; variable v;
+Select s such that Uses (s, _)
+1, 2, 3, 5, 6, 7, 9, 10, 12, 13, 14
+5000
+26 - such that uses single clause (semantic error)
+stmt s; variable v;
+Select s such that Uses (_, v)
+none
+5000
+27 - such that modifies single clause
+stmt s; variable v;
+Select v such that Modifies (5, v)
+x, y, z
+5000
+28 - such that modifies single clause (semantic error)
+stmt s; variable v;
+Select s such that Modifies (_, "x")
+none
+5000
+29 - such that parent* pattern, select shared synonym
+stmt s; variable v; assign a;
+Select a pattern a (v, _) such that Parent* (5, a)
+9
+5000
+30 - such that parent pattern, select partial shared synonym
+stmt s; variable v; assign a;
+Select v such that Parent (s, 6) pattern a (v, _"y"_)
+x
+5000
+31 - such that parent* pattern, select partial shared synonym
+stmt s; variable v; assign a;
+Select s such that Parent* (s, 6) pattern a (v, _"x"_)
+1, 5
+5000
+32 - such that parent* pattern
+stmt s; variable v; assign a;
+Select s such that Parent* (s, 9) pattern a ("x", _)
+1, 5, 7
+5000
+33 - such that parent* pattern, select partial shared synonym
+stmt s; variable v; assign a;
+Select a such that Parent (s, a) pattern a (_, _"x"_)
+3, 13
+5000
+34 - such that parent pattern, select partial shared synonym
+stmt s; variable v; assign a;
+Select a pattern a (v, _) such that Parent* (5, a)
+9
+5000
+35 - Parent* (s, s1)
+stmt s, s1; assign a;
+Select a such that Parent* (s, s1)
+3, 9, 13, 14
+5000
+36 - Follows, select shared other synonym
+stmt s; read re; print pn; variable v; assign a;
+Select re such that Follows (re, a) pattern a ("x", _)
+8
+5000
+37 - Follows*, select other synonym
+stmt s; read re; print pn; variable v; assign a;
+Select a such that Follows* (a, pn) pattern a (_, _)
+9
+5000
+38 - Follows, select other synonym
+stmt s; read re; constant c; assign a;
+Select s such that Follows (c, a)
+none
+5000
+39 - Follows*, select other synonym
+stmt s; read re; constant c;
+Select s such that Follows* (c, re)
+none
+5000
+40 - Follows, select other synonym
+stmt s; read re; variable v;
+Select v such that Follows (v, s)
+none
+5000
+41 - seman invalid Follows (s,s)
+if ifs; variable v; stmt s; assign a;
+Select s such that Follows (s,s)
+none
+5000
+42 - seman invalid Follows with space in between one integer
+if ifs; variable v; stmt s; assign a;
+Select s such that Follows (s,1 2)
+none
+5000
+43 - Next
+prog_line n;
+Select n such that Next (_, n)
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14
+5000
+44 - Next*
+prog_line n; stmt s;
+Select n such that Next* (n, s)
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12
+5000

@@ -1,0 +1,55 @@
+1 - Calls with 2 known procedures
+
+Select BOOLEAN such that Calls("DEF", "ABC")
+FALSE
+5000
+2 - Calls forward with 1 known procedure
+procedure p;
+Select p such that Calls("DEF", p)
+GHI
+5000
+3 - Calls backward with 1 known procedure
+procedure p;
+Select p such that Calls(p, "DEF")
+ABC
+5000
+4 - Calls with 2 unknown procedures
+procedure p1, p2;
+Select <p1, p2> such that Calls(p1, p2)
+ABC DEF, DEF GHI, ABC GHI
+5000
+5 - Calls* with 2 known procedures
+
+Select BOOLEAN such that Calls*("ABC", "GHI")
+TRUE
+5000
+6 - Calls* forward with 1 known procedure
+procedure p;
+Select BOOLEAN such that Calls*("GHI", p)
+FALSE
+5000
+7 - Calls* backward with 1 known procedure
+procedure p;
+Select p such that Calls*(p, "GHI")
+ABC, DEF
+5000
+8 - Calls* with 2 unknown procedures
+procedure p;
+Select p such that Calls*(p, _)
+ABC, DEF
+5000
+9 - Calls with 1 param, invalid
+stmt s;
+Select s such that Calls("DEF")
+
+5000
+10 - Calls with 3 param, invalid
+procedure p;
+Select p such that Calls*(p, "ABC", "GHI")
+
+5000
+11 - Calls with wrong param
+variable v; procedure p;
+Select p such that Calls(p, v)
+
+5000
